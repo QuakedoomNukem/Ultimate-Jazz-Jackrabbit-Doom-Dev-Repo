@@ -1,0 +1,47 @@
+Actor ZoonikBoss1 26561
+{
+  Tag "Zoonik"
+  Obituary "%o was destroyed by Zoonik."
+  Health 6000
+  Radius 12
+  Height 40
+  Mass 100000
+  Speed 25
+  PainChance 0
+  DamageFactor "MuckSnot", 0
+  DamageFactor "MuckSnot2", 0
+  Monster
+  +FloorClip
+  +NOBLOOD
+  +NOINFIGHTING
+  +Solid
+   +COUNTKILL
+ +DONTHARMCLASS
+  States
+  {
+  Spawn:
+    ZOON AB 4 A_Look
+    Loop
+  See:
+    ZOON ABCD 4 A_Chase
+    Loop
+  Missile:
+    ZOON E 10 A_FaceTarget
+    ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+	ZOON E 2 A_FaceTarget
+	ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+	ZOON E 2 A_FaceTarget
+	ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+	ZOON E 2 A_FaceTarget
+	ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+	ZOON E 2 A_FaceTarget
+	ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+    ZOON E 10
+    Goto See
+  Death:
+  TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",5000)
+	Stop
+  }
+}
