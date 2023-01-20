@@ -1,0 +1,67 @@
+Actor MuckBug 3799
+{
+  Tag "Muck Bug"
+  Obituary "%o had a close encounter with something from The Mist."
+  Health 50
+  Radius 8
+  Height 12
+  Mass 500000
+  Speed 10
+  PainChance 0
+  Scale 0.7
+  Damage 4
+  Monster
+  +FloorClip
+  +Float
+  +NoGravity
+  +DontFall
+  +FloatBob
+  +NOBLOOD
+  +DontHurtSpecies
+  +NOINFIGHTING
+    +COUNTKILL
+  SeeSound "BEEBUZZ"
+  AttackSound "BEEBUZZ"
+  DamageFactor "MuckSnot", 0
+  DamageFactor "MuckSnot2", 0
+  States
+  {
+  Spawn:
+    MKBG A 0
+    MKBG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    MKBG AAAAAABBBBBB 1 A_Look
+    Loop
+  See:
+    MKBG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    MKBG AABB 3 A_Chase
+    Loop
+  Missile:
+  MKBG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    MKBG AB 10 A_FaceTarget
+	MKBG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    MKBG B 2 A_SkullAttack
+    Goto See
+  Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+    Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	MKBG B 5 A_GenericFreezeDeath
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    MKBG B 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	 MKBG B 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}
