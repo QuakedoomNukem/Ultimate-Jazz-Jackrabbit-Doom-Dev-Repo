@@ -1,0 +1,65 @@
+Actor JetpackDoofus 3235
+{
+  Tag "Jetpack Doofus"
+  Health 150
+  Radius 12
+  Height 40
+  Mass 0x7fffffff
+  Speed 6
+  PainChance 0
+  Damagefactor "JZombie", 0
+  Monster
+  Obituary "%o was picked off by a Jetpack Doofus."
+  +FloorClip
+  +DontHurtSpecies
+  +Float
+  +NoGravity
+  +DontFall
+  +FloatBob
+   +NOBLOOD
+   +NOINFIGHTING
+   +COUNTKILL
+   SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtact"
+  States
+  {
+  Spawn:
+    JETT A 0
+    JETT A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    JETT A 1 A_Look
+    Loop
+  See:
+    JETT A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    JETT A 2 A_Chase
+    Loop
+	 JETT A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    JETT A 0 A_FaceTarget
+    JETT A 0 A_Stop
+    Goto See+2
+  Missile:
+    JETT AAA 20 A_FaceTarget
+     JETT A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    JETT C 6 Bright A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+    Goto See
+  Death:
+  TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	JETT A 5 A_GenericFreezeDeath
+    JETT A 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	JETT AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+   }
+}
