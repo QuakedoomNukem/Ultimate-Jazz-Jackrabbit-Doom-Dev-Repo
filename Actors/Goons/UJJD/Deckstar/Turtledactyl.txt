@@ -1,0 +1,61 @@
+Actor TurtleBat 3719
+{
+  Tag "Turtledactyl"
+  Health 30
+  Radius 10
+  Height 10
+  Mass 1000
+  Speed 15
+  Damage 4
+  PainChance 0
+    SeeSound "RVNSEE"
+  AttackSound "RVNATT"
+  ActiveSound "RWING"
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +MISSILEMORE
+  +DONTFALL
+  +NOICEDEATH
+   +NOBLOOD
+   +NOINFIGHTING
+    +DONTHARMSPECIES
+ +COUNTKILL
+  Obituary "%o was fanged by a Turtledactyl."
+  States
+  {
+  Spawn:
+    TLBT AB 3 A_Look
+	TNT1 A 0 A_PlaySoundEx("RWING", "SoundSlot7", 1)
+    Loop
+  See:
+    TLBT AB 3 A_Chase
+	TNT1 A 0 A_PlaySoundEx("RWING", "SoundSlot7", 1)
+    Loop
+  Missile:
+    TLBT C 10 A_FaceTarget
+    TLBT D 4 A_SkullAttack
+    TLBT CD 2
+    Goto Missile+2
+  Death:
+  TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+    Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TLBT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TLBT A 5 A_GenericFreezeDeath
+    TLBT A 1 A_FreezeDeathChunks
+    wait
+  }
+}
