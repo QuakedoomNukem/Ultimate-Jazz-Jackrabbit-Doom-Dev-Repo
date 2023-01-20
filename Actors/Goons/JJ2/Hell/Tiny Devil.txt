@@ -1,0 +1,50 @@
+actor Devil 3126
+{
+	Tag "Tiny Devil"
+	Radius 10
+	Height 44
+	Speed 10
+	Health 70
+	PainChance 0
+	Mass 400
+	Damage 5
+	Monster
+	+SOLID
+	+NOBLOOD
+	+NOINFIGHTING
+	+COUNTKILL
++DONTHARMSPECIES
+	Obituary "%o was pitchforked by a Tiny Devil."
+	States 
+   { 
+   Spawn: 
+      DEVL AB 8 A_Look 
+      Loop 
+   See: 
+      DEVL ABCD 2 A_Chase 
+      Loop 
+   Melee: 
+      DEVL C 2 A_FaceTarget 
+      DEVL D 5 A_SargAttack
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",150)
+	  Stop
+	  Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	DEVL D 5 A_GenericFreezeDeath
+    DEVL D 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	DEVL A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+   } 
+}
