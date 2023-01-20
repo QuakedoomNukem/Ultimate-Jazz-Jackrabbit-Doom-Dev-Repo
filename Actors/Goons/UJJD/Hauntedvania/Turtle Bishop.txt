@@ -1,0 +1,101 @@
+actor TurtleBishop 3293
+{
+  Tag "Turtle Bishop"
+  Health 1150
+  Radius 12
+  Height 52
+  Mass 10000
+  Speed 10
+  PainChance 0
+  Monster
+  +NOGRAVITY
+  +FLOAT
+  +FLOATBOB
+  +BOSSDEATH
+  +NOBLOOD
+  +DONTHARMSPECIES
+  +NOINFIGHTING
+ +COUNTKILL
+  Obituary "%o got turned to ash by a Turtle Bishop."
+  States
+  {
+  Spawn:
+    BISH ABCDE 3 A_Look
+    Goto See
+  See:
+    BISH ABCDE 3 A_Chase
+    Loop
+  Melee:
+  Missile:
+    BISH AB 2 A_Chase("","")
+	BISH A 0 BRIGHT A_PlaySound ("vile/firecrkl")
+    BISH ABCDE 3 Bright A_FaceTarget
+	BISH A 1 Bright A_CustomMissile ("BishopProj",0,0,0,0,0)
+	BISH A 10 Bright
+	goto see
+  Death:
+    BISH A 0 A_StopSound
+    BISH A 0 A_Scream
+    BISH A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    BISH A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    BISH A 2 A_NoBlocking
+    BISH A 2
+    BISH A 0 A_ChangeFlag("FloatBob", 0)
+    BISH A 0 
+    BISH A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BISH A 2
+    BISH A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BISH A 2
+    BISH A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BISH A 2
+    BISH A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BISH AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",1500)
+	Stop
+  }
+}
+
+ACTOR BishopProj
+{
+	Radius 8
+	Height 8
+	Speed 15
+	Damage 2
+	+RIPPER
+	+FLOORHUGGER
+	+BLOODLESSIMPACT
+	DONTHURTSHOOTER
+	Projectile
+	MissileType BishopFireD3
+	Missileheight 0
+	reactiontime 25
+	States
+	{
+	Spawn: 
+		TNT1 A 0 A_PlaySound ("vile/firecrkl")
+		TNT1 A 3 Bright A_SpawnItemEx("BishopFireD3",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_Explode(16,64,0)
+		TNT1 A 0 A_CountDown
+		Loop
+	Death:	
+		TNT1 A 6
+		Stop
+	}
+}
+
+actor BishopFireD3
+{
+  Radius 10
+  Height 78
+  Damage 4
+  RenderStyle Add
+  +NOCLIP
+  +FLOORHUGGER
+  DONTHURTSHOOTER
+  States
+  {
+  Spawn:
+    FLAM ABCDEFGH 4 Bright
+    Stop
+  }
+}
