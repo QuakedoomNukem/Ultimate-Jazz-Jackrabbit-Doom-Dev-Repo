@@ -1,0 +1,107 @@
+actor LizardGoon 3142
+{
+   Tag "Green Lizard Goon"
+   Health 150
+   PainChance 0 
+   Speed 15
+   Radius 8
+   Height 48 
+   Mass 4000
+   Damage 4
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   +SOLID
+   +NOINFIGHTING
+     +COUNTKILL
++DONTHARMSPECIES
+  SeeSound "LIZRDSEE"
+   PainSound "LIZRDPAI"
+  ActiveSound "LIZRDACT"
+   Obituary "%o got stomped on by a Green Lizard Goon."
+   States 
+   { 
+   Spawn: 
+      LIZZ C 10 A_Look 
+      Loop 
+   See: 
+      LIZZ ABCD 3 A_Chase 
+      Loop 
+   Melee: 
+      LIZZ B 8 A_FaceTarget 
+      LIZZ C 8 A_SargAttack 
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",150)
+	  Stop
+	  	Burn:
+		Death.JazzprojFire:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	LIZZ CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	LIZZ C 5 A_GenericFreezeDeath
+    LIZZ C 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+actor WalkingLizard 4032
+{
+   Tag "Yellow Lizard Goon"
+   Health 150
+   PainChance 0 
+   Speed 15
+   Radius 8
+   Height 48 
+   Mass 4000
+   Damage 4
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   +SOLID
+   +NOINFIGHTING
+    +COUNTKILL
+ +DONTHARMCLASS
+  SeeSound "LIZRDSEE"
+   PainSound "LIZRDPAI"
+  ActiveSound "LIZRDACT"
+   Obituary "%o got stomped on by a Yellow Lizard Goon."
+   States 
+   { 
+   Spawn: 
+      WLKL C 10 A_Look 
+      Loop 
+   See: 
+      WLKL ABCD 3 A_Chase 
+      Loop 
+   Melee: 
+      WLKL B 8 A_FaceTarget 
+      WLKL C 8 A_SargAttack 
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",150)
+	  Stop
+	  	Burn:
+		Death.JazzprojFire:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	WLKL CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	WLKL C 5 A_GenericFreezeDeath
+    WLKL C 1 A_FreezeDeathChunks
+    wait
+  }
+}
