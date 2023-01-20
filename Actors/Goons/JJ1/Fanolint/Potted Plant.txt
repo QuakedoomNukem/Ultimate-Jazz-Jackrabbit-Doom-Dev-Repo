@@ -1,0 +1,73 @@
+ACTOR Flower 32765
+{
+  Tag "Potted Plant"
+  Health 100
+  Radius 12
+  Height 50
+  Mass 10000
+  Speed 0
+  PainChance 0
+  Monster
+  +FLOORCLIP
+  +NOBLOOD
+  +NOINFIGHTING
+  +COUNTKILL
++DONTHARMSPECIES
+  Obituary "%o was plucked by a Potted Plant."
+  States
+  {
+  Spawn:
+    FLOE AB 10 A_Look
+    Loop
+  See:
+    FLOE AABBCC 3 A_Chase
+    Loop
+  Missile:
+    FLOE AB 8 A_FaceTarget
+    FLOE C 6 A_CustomMissile("FlowerBall",32,0,0,0,0)
+    Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",100)
+	Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	FLOE A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	FLOE F -1
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	FLOE A 5 A_GenericFreezeDeath
+    FLOE A 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+ACTOR FlowerBall
+{
+  Radius 5
+  Height 8
+  Speed 18
+  FastSpeed 25
+  Damage 4
+  Gravity 0.25
+  Projectile
+  +RANDOMIZE
+  -NOGRAVITY
+  RenderStyle Add
+  SeeSound ""
+  DeathSound "Tick"
+  States
+  {
+  Spawn:
+    PODD A 4 Bright
+    Loop
+  Death:
+    JBLS EFGH 4 Bright
+    Stop
+  }
+}
