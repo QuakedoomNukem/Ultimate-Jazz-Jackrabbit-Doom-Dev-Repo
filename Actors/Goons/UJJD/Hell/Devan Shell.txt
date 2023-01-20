@@ -1,0 +1,63 @@
+ACTOR DevanShell 32326
+{
+  Tag "Devan Shell"
+  Health 5000
+  Radius 12
+  Height 56
+  Mass 2000
+  Speed 25
+  PainChance 0
+  Monster
+  MinMissileChance 160
+  +BOSS
+  +FLOORCLIP
+  +NORADIUSDMG
+  +DONTMORPH
+  +BOSSDEATH
+  +NOINFIGHTING
+  +NOBLOOD
+  +COUNTKILL
++DONTHARMSPECIES
+  Obituary "%o was defeated by Devan Shell."
+  States
+  {
+  Spawn:
+    DEVT AB 10 A_Look
+    Loop
+  See:
+    DEVT A 3
+    DEVT ABBCC 3 A_Chase
+    DEVT D 3
+    DEVT D 3 A_Chase
+    Loop
+  Missile:
+    DEVT E 1 A_FaceTarget
+    DEVT F 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",33,0,359,0)
+    DEVT E 1 A_FaceTarget
+    DEVT F 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",33,0,359,0)
+    DEVT E 0 A_Jump(128,1) 
+    goto See 
+    DEVT E 0 A_CPosRefire
+    goto Missile 
+  Death:
+	DEVT g 0 A_StopSound
+    DEVT g 0 A_Scream
+    DEVT g 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    DEVT g 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    DEVT g 2 A_NoBlocking
+    DEVT G 2
+    DEVT g 0 A_ChangeFlag("FloatBob", 0)
+    DEVT g 0 A_StopSoundEx("JetpackZombie/Fly")
+    DEVT g 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    DEVT g 2
+    DEVT g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DEVT g 2
+    DEVT g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DEVT g 2
+    DEVT g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DEVT AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 0 A_SpawnItem("RedCard")
+    TNT1 A 0 A_GiveToTarget ("Points",10000)
+	Stop
+  }
+}

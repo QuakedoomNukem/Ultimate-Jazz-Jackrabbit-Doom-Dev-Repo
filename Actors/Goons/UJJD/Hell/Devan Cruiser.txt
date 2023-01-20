@@ -1,0 +1,60 @@
+ACTOR DevanCruiser 32325
+{
+  Tag "Devan Cruiser"
+  Health 4000
+  Radius 30
+  Height 54
+  Mass 4000
+  Speed 8
+  PainChance 0
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +BOSS
+  +NOBLOOD
+  +NOINFIGHTING
+  +COUNTKILL
++DONTHARMSPECIES
+  //SeeSound "jzrbtsee"
+  DropItem DevanShell
+  States
+  {
+  Spawn:
+	DEVC A 0
+	DEVC A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    DEVC A 10 A_Look
+    Loop
+  See:
+	DEVC A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    DEVC AABBCC 3 A_Chase
+    Loop
+  Missile:
+  DEVC A 0 A_PlaySoundEx("Hover2", "SoundSlot7", 1)
+    DEVC D 5 A_FaceTarget
+    DEVC E 5 A_SPOSAttack
+    DEVC D 5 Bright A_FaceTarget
+    DEVC F 0 Bright A_CustomMissile("DroneRocket", 32, 0, 0)
+	DEVC E 5 Bright A_SPOSAttack
+	DEVC F 5 A_SpidRefire
+    Goto See
+  Death:
+    TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    DEVC g 0 A_Scream
+    DEVC g 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    DEVC g 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    DEVC g 2 A_NoBlocking
+    DEVC G 2
+    DEVC g 0 A_ChangeFlag("FloatBob", 0)
+    DEVC g 0 A_StopSoundEx("JetpackZombie/Fly")
+    DEVC g 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    DEVC g 2
+    DEVC g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DEVC g 2
+    DEVC g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DEVC g 2
+    DEVC g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DEVC AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",5000)
+	Stop
+  }
+}
