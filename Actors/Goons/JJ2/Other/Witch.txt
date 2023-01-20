@@ -1,0 +1,76 @@
+ACTOR Witch 3782
+{
+  Tag "Witch"
+  Health 200
+  Radius 12
+  Height 48
+  Mass 5000
+  Speed 25
+  Damage 4
+  PainChance 256
+  Monster
+  Seesound	"witchsee"
+  +FLOAT
+  +NOGRAVITY
+  +MISSILEMORE
+  +NOINFIGHTING
+  +NOBLOOD
+   +COUNTKILL
+ +DONTHARMCLASS
+  Obituary "%o went poof."
+  States
+  {
+  Spawn:
+    HTWW A 3 A_Look
+    Loop
+  See:
+    HTWW A 3 A_Chase
+	Loop
+  Missile:
+	HTWW B 4 A_FaceTarget
+	HTWW C 10 A_CustomMissile("SpellProj",40,0,0,0,0)
+	Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",200)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	HTWW A 5 A_GenericFreezeDeath
+    HTWW A 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	HTWW AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 AAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	}
+}
+
+ACTOR SpellProj
+{
+  Radius 6
+  Height 8
+  Damage 3
+  Speed 25
+  FastSpeed 50
+  Projectile
+  DeathSound "BLSTRHIT"
+  +RANDOMIZE
+  RenderStyle Add
+  States
+  {
+  Spawn:
+	TNT1 A 0 A_PlaySound("witchMAG")
+    HTWP A 4
+    Loop
+  Death:
+    HTPD ABCD 3
+    Stop
+  }
+}
