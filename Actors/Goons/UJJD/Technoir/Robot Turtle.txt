@@ -1,0 +1,81 @@
+actor TurtleRobot 3124
+{
+	Tag "Robot Turtle"
+	Radius 24
+	Height 56
+	Speed 10
+	Health 300
+	PainChance 0
+	Mass 4000
+	Damage 5
+	Obituary "%o was terminated by a Robot Turtle."
+	Monster
+	FloatbobStrength 0.9
+	+FLOATBOB
+	+SOLID
+	+NOBLOOD
+	+FLOAT
+	+DONTHARMCLASS
+	+NOGRAVITY
+	+DONTFALL
+	+NOINFIGHTING
+	 +DONTHARMSPECIES
+ +COUNTKILL
+ +DONTHARMCLASS
+	SeeSound "ROBOTSEE"
+	Painsound "Dent"
+	States 
+   { 
+   Spawn: 
+      ROBT A 2 A_Look 
+      Loop 
+   See: 
+      ROBT A 2 A_Chase 
+      Loop 
+   Missile: 
+      ROBT B 8 A_FaceTarget 
+      ROBT C 8 Bright A_CustomMissile("ZombieTankMissile",40,32,359,0)
+	  ROBT B 2 A_FaceTarget 
+      ROBT C 8 Bright A_CustomMissile("ZombieTankMissile",40,-29,359,0) 
+      Goto See 
+	Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	ROBT J 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    ROBT j 2
+    ROBT j 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ROBT j 2
+    ROBT j 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ROBT j 2
+    ROBT j 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ROBT AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 A 0 A_GiveToTarget ("Points",600)
+		Stop
+   } 
+}
+
+ACTOR ZombieTankMissile 
+{
+   Radius 8
+   Height 11
+   Speed 18
+   Damage 8
+   PROJECTILE
+   DeathSound "SEEKXPLD"
+   +THRUGHOST
+   +SEEKERMISSILE
+   SeeSound "RFLAUNCH"
+   States
+   {
+   Spawn:
+      INDM A 1 Bright A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+	INDM A 4 Bright
+      Loop
+      Death:
+   SEKE AB 3 Bright
+      SEKE C 0 Bright A_SetTranslucent (0.67,1)
+      SEKE C 8 Bright A_Explode(50,76, 0)
+      SEKE DEFGHIJKL 3 bright
+      stop
+   }
+}
