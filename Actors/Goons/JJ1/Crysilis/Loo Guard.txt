@@ -1,0 +1,89 @@
+actor HoverSpitter 3227
+{
+  Tag "Loo Guard"
+  Health 150
+  Radius 16
+  Height 32
+  Mass 10000
+  Speed 5
+  PainChance 0
+  SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtactive"
+  Monster
+  Obituary "%o was spat on by a Loo Guard."
+  +FLOAT
+  +FLOATBOB
+  +NOGRAVITY
+  +MISSILEMORE
+  +DONTFALL
+   +NOBLOOD
+   +NOINFIGHTING
+   +LOOKALLAROUND
+   +COUNTKILL
++DONTHARMSPECIES
+  States
+  {
+  Spawn:
+    HSPT A 2 A_Look
+    Loop
+  See:
+    HSPT A 2 A_Chase
+    Loop
+  Missile:
+    HSPT A 5 A_FaceTarget
+    HSPT B 4 A_CustomMissile("HoverSpitterProj",32,0,0,0,0)
+    HSPT A 4
+    Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",250)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",250)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_ChangeFlag("FloatBob", False)
+	TNT1 A 0 A_ChangeFlag("Dontfall", False)
+	TNT1 A 0 A_ChangeFlag("Float", False)
+	TNT1 A 0 A_ChangeFlag("NoGravity", False)
+	 //TNT1 A 0 A_SpawnItemEx("Turthoverboard",0,0,0,0,0,-12)
+	HSPT B 5 A_GenericFreezeDeath
+    HSPT B 1 A_FreezeDeathChunks
+    Stop
+	Death.JazzprojFire:
+	 Burn:
+	 TNT1 A 0 A_Stopsound(CHAN_VOICE)
+//TNT1 A 0 A_SpawnItemEx("Turthoverboard",0,0,0,0,0,-12)
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",250)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	HSPT BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}
+
+ACTOR HoverSpitterProj
+{
+    Radius 13
+    Height 8
+    Speed 15
+    Damage 2
+	DamageType Disintegrate
+    Projectile
+    RenderStyle Add
+    Alpha 0.75
+    scale 0.9
+	Deathsound "Tick"
+	DamageType Burn
+    States
+  {
+  Spawn:
+    SPIT A 6 bright
+    loop
+  Death:
+    JBLS EFGH 4 bright
+    stop
+   }
+}
