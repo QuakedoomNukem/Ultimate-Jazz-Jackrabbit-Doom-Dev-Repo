@@ -1,0 +1,74 @@
+ACTOR Snowman 23006
+{
+  Tag "Snogoon"
+  Health 100
+  Radius 12
+  Height 40
+  Mass 10000000
+  Speed 0
+  PainChance 0
+  Monster
+  +NOINFIGHTING
+  +LOOKALLAROUND
+  +FLOORCLIP
+  +NOBLOOD
+  +COUNTKILL
+  +DONTHARMSPECIES
+  Obituary "%o was snowballed by a Snogoon."
+  States
+  {
+  Spawn:
+    SMAN A 3 A_Look
+    Loop
+  See:
+    SMAN ABC 3 A_Chase
+    Loop
+  Melee:
+  Missile:
+    SMAN AB 4 A_FaceTarget
+    SMAN C 3 A_CustomMissile("Snowball",48,0)
+    Goto See
+  Death:
+	TNT1 AAAAAAA 0 A_SpawnItemEx("Snowball",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+    TNT1 A 0 A_GiveToTarget ("Points",100)
+	Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	SMAN CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	Stop
+	    Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	SMAN A 5 A_GenericFreezeDeath
+    SMAN A 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+ACTOR Snowball
+{
+  Radius 6
+  Height 8
+  Damage 2
+  Speed 25
+  FastSpeed 50
+  Gravity 0.25
+  Projectile
+  +RANDOMIZE
+  -NOGRAVITY
+  +NOBLOOD
+  DeathSound "MONKSPLT"
+  RenderStyle Normal
+  States
+  {
+  Spawn:
+    SBAL C 4
+    Loop
+  Death:
+    SBAL IJKLMN 3 Bright
+    Stop
+  }
+}

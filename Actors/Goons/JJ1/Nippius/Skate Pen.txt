@@ -1,0 +1,53 @@
+ACTOR Skiguin 3123
+{           
+   Tag "Skate Pen"
+   Health 75
+   PainChance 0 
+   Speed 20
+   Radius 12 
+   Height 32
+   Mass 4000
+   Damage 5
+   Monster 
+   Painsound "PENPAIN"
+   SeeSound "PENPAIN"
+  ActiveSound "PENPAIN"
+   +FLOORCLIP
+   +NOBLOOD
+   +SOLID
+   +COUNTKILL
+   +NOINFIGHTING
+   +DONTHARMSPECIES
+   Obituary "Skate Pen showed %o they were no figure skater."
+   States 
+   { 
+   Spawn: 
+      MAUD AB 10 A_Look 
+      Loop 
+   See: 
+      MAUD AABB 2 A_Chase 
+      Loop 
+   Melee: 
+      MAUD ABA 8 A_FaceTarget 
+      MAUD B 8 A_SargAttack 
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",150)
+	  Stop
+	  Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	MAUD BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	MAUD B 5 A_GenericFreezeDeath
+    MAUD B 1 A_FreezeDeathChunks
+    wait
+   } 
+}
