@@ -1,0 +1,79 @@
+actor RocketGoon 3127
+{
+	Tag "Rocket Schwarzenguard"
+	Radius 16
+	Height 48
+	Speed 10
+	Health 250
+	PainChance 0
+	Mass 4000
+	Damage 4
+	Monster
+	+SOLID
+	+NOBLOOD
+	+NOINFIGHTING
+	+COUNTKILL
++DONTHARMSPECIES
+	SeeSound "BIGTURTS"
+  PainSound "BIGTURTP"
+  ActiveSound "Turtact"
+	Obituary "%o was blown up by a Rocket Schwarzenguard."
+	States
+	{
+	Spawn:
+		TMLR AB 8 A_Look 
+		Loop
+	See:
+		TMLR ABCD 3 A_Chase
+		Loop
+	Missile:
+		TMLR E 15 A_FaceTarget 
+		TMLR A 0 A_Playsound("Seekfire")
+		TMLR F 8 Bright A_CustomMissile("Minissiles",25,0,359,0)
+		Goto See
+	Death: 
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget ("Points",500)
+		Stop
+		Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",500)
+	TMLR A 5 A_GenericFreezeDeath
+    TMLR A 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",500)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TMLR A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+   } 
+}
+
+ACTOR Minissiles
+{
+  Radius 8
+  Height 8
+  Speed 35
+  Damage 5
+  Projectile
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +ROCKETTRAIL
++DONTHARMSPECIES
+  DeathSound "SEEKXPLD"
+  States
+  {
+  Spawn:
+    INDM A 1 Bright A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+	INDM A 4 Bright
+    Loop
+  Death:
+    RFLE AB 3 Bright
+	RFLE C 3 Bright A_Explode (5,64,0)
+	RFLE DEFGHIJK 3 Bright
+    Stop
+  }
+}
