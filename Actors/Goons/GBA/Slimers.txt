@@ -1,0 +1,250 @@
+ACTOR JJASlimer 3848
+{
+	Tag "Slimer"
+	Health 100
+	Radius 16
+	Height 24
+	Speed 15
+	PainChance 0
+	Mass 400
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	+COUNTKILL
++DONTHARMSPECIES
+	Monster
+	AttackSound "TURTBITE"
+	Obituary "%o was slimed by a Slimer."
+	States
+	{
+		Spawn:
+		    SLIM A 10 A_Look
+			loop
+		See:
+			SLIM AABBCCDD 2 Fast A_Chase
+			loop
+		Melee:
+			TNT1 A 0 A_PlaySound("TURTBITE")
+			SLIM AB 6 A_FaceTarget
+			SLIM C 6 A_SargAttack
+			Goto See
+		Death:
+		    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+           TNT1 A 0 A_GiveToTarget ("Points",100)
+		   Stop
+		   Death.JazzprojFire:
+		   Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	SLIM DD 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	STOP
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	SLIM D 5 A_GenericFreezeDeath
+    SLIM D 1 A_FreezeDeathChunks
+    wait
+	}
+}
+
+
+ACTOR JJAPoisonSlimer 3849
+{
+	Health 150
+	Radius 16
+	Height 24
+	Speed 15
+	PainChance 0
+	Mass 400
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	+COUNTKILL
++DONTHARMSPECIES
+	Monster
+	AttackSound "TURTBITE"
+	Obituary "%o got poisoned by a Poison Slimer."
+	States
+	{
+		Spawn:
+		    GSLM A 10 A_Look
+			loop
+		See:
+			GSLM AABBCCDD 2 Fast A_Chase
+			loop
+		Missile:
+			GSLM AB 10 A_FaceTarget
+			GSLM C 6 A_CustomMissile("PoisonProj", 30, 8)
+			Goto See
+		Death:
+		    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+           TNT1 A 0 A_GiveToTarget ("Points",200)
+		   Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	GSLM DD 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	STOP
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	GSLM D 5 A_GenericFreezeDeath
+    GSLM D 1 A_FreezeDeathChunks
+    wait
+	}
+}
+
+ACTOR PoisonProj
+{
+  Radius 8
+  Height 8
+  Speed 10
+  Damage 1
+  Projectile
+  +RIPPER
+  +STRIFEDAMAGE
+  SeeSound "loogsee"
+  DeathSound "loogdeth"
+  States
+  {
+  Spawn:
+	LUGG AABB 4 Bright
+    Loop
+  Death:
+    LUGG CDE 3 Bright
+    Stop
+  }
+}
+
+ACTOR ChocolateMonster 3926
+{
+	Tag "Chocolate Slobber"
+	Health 150
+	Radius 16
+	Height 24
+	Speed 15
+	PainChance 180
+	Mass 400
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	Monster
+	AttackSound "TURTBITE"
+	Obituary "%o became a chocolate rabbit for sale by a Chocolate Slobber."
+	States
+	{
+		Spawn:
+		    CMON A 10 A_Look
+			loop
+		See:
+			CMON AABBCCDD 2 Fast A_Chase
+			loop
+		Missile:
+			CMON AB 10 A_FaceTarget
+			CMON C 6 A_CustomMissile("ChocolateProj", 30, 8)
+			Goto See
+		Pain:
+			CMON D 2 A_Pain
+			Goto See
+		Death:
+		    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+           TNT1 A 0 A_GiveToTarget ("Points",100)
+		   Stop
+		   Death.JazzprojFire:
+		   Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	CMON AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	CMON A 5 A_GenericFreezeDeath
+    CMON A 1 A_FreezeDeathChunks
+    wait
+
+	}
+}
+
+ACTOR ChocolateProj
+{
+  Radius 8
+  Height 8
+  Speed 10
+  Damage 1
+  Projectile
+  +RIPPER
+  +STRIFEDAMAGE
+  SeeSound "loogsee"
+  DeathSound "loogdeth"
+  States
+  {
+  Spawn:
+	CPRJ AABB 4 Bright
+    Loop
+  Death:
+    CPRJ CDE 3 Bright
+    Stop
+  }
+}
+
+ACTOR LavaSlimer 4050
+{
+	Tag "Lava Slimer"
+	Health 100
+	Radius 16
+	Height 24
+	Speed 15
+	PainChance 0
+	Mass 10000
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	  Damagefactor Ice, 2
+  Damagefactor Fire, 0.5
+	Monster
+	AttackSound "TURTBITE"
+	Obituary "%o was melted by a Lava Slimer."
+	States
+	{
+		Spawn:
+		    FRSL A 10 A_Look
+			loop
+		See:
+			FRSL AABBCCDD 2 Fast A_Chase
+			loop
+		Missile:
+			FRSL AB 10 A_FaceTarget
+			FRSL C 6 A_CustomMissile("FireShot", 32, 8)
+			Goto See
+		Death:
+		    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+           TNT1 A 0 A_GiveToTarget ("Points",200)
+		   Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	FRSL D 5 A_GenericFreezeDeath
+    FRSL D 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	FRSL DDD 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}

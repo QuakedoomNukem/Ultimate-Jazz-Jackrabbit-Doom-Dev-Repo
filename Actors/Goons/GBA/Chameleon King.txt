@@ -1,0 +1,149 @@
+actor ChameleonKingBoss 3732
+{
+Tag "Chameleon King"
+Health 6000
+Speed 20
+Mass 10000
+Radius 24
+Height 80
+PainChance 0
+MinMissileChance 160
+SeeSound "CHAMBDTH"
+PainSound "cCHAMBDTH"
+Deathsound "CHAMBDTH"
+DamageFactor "Queendamage", 0  
+Obituary "%o has become dinner."
++FLOORCLIP
++NOBLOOD
++NOINFIGHTING
++BOSS
+  +MISSILEMORE
+  +NORADIUSDMG
+  +DONTMORPH
+  +BOSSDEATH
+  +COUNTKILL
++DONTHARMSPECIES
+Monster
+    States
+    {
+    Spawn:
+        CHKG A 10 A_Look
+        Loop
+    See:
+		TNT1 A 0 A_PlaySound ("CHAMBDTH")
+        CHKG AABBCCDD 3 A_Chase
+        Loop
+    Missile:
+		CHKG E 8 A_FaceTarget
+		CHKG E 20
+		CHKG E 10 A_FaceTarget
+		TNT1 A 0 ThrustThingZ(0,32,0,0)
+		TNT1 A 0  A_QuakeEx(4,2,0,60,0,3000)
+		TNT1 AAAAA 0
+        CHKG F 8 A_FaceTarget
+		CHKG F 4 A_CustomMissile ("FallingBrickProj",28,0,0,0)
+		CHKG F 4 A_CustomMissile ("FallingBrickProj",28,0,90,0)
+		CHKG F 4 
+    Goto Missile2
+	Missile2:
+		CHKG E 8 A_FaceTarget
+		CHKG E 50
+		CHKG E 10 A_FaceTarget
+		TNT1 A 0 ThrustThingZ(0,32,0,0)
+		TNT1 A 0  A_QuakeEx(4,2,0,60,0,3000)
+		TNT1 AAAAA 0
+        CHKG F 8 A_FaceTarget
+		CHKG F 2 Bright A_CustomMissile ("FartBlast",0,0,30,0,0)
+		CHKG F 1 Bright A_CustomMissile ("FartBlast",0,0,15,0,0)
+		CHKG F 1 Bright A_CustomMissile ("FartBlast",0,0,0,0,0)
+		CHKG F 2 Bright A_CustomMissile ("FartBlast",0,0,-15,0,0)
+		CHKG F 2 Bright A_CustomMissile ("FartBlast",0,0,-30,0,0)
+		CHKG F 4
+		Goto Charge
+	Charge:
+		TNT1 A 0 A_PlaySound ("CHAMBDTH")
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 4 A_SkullAttack
+       CHKG P 0 A_SpawnItemEx("KingGhost1",0,0,0,0,0,0,0,128,0)
+       CHKG O 0 A_Stop
+       CHKG P 1
+       Goto See
+	Melee:
+		CHKG I 10 A_FaceTarget
+		CHKG J 4 A_CustomMeleeAttack(3,"CHAMELEE","","Melee",False)
+		Goto See
+    Death:
+		TNT1 A 0 A_PlaySound ("CHAMBDTH")
+		    CHKG G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    CHKG A 2
+    CHKG A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    CHKG A 2
+    CHKG A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    CHKG A 2
+    CHKG A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    CHKG AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		CHKG A 3
+		CHKG K 3
+		CHKG L 3
+		CHKG M 3
+		CHKG N -1
+		TNT1 A 0 A_GiveToTarget ("Points",6000)
+		Stop
+  }
+}
+
+Actor KingGhost1
+{
+	Radius 40
+	Height 70
+	Speed 1
+	Damage 0
+	RenderStyle Translucent
+	Alpha 0.5
+	PROJECTILE
+	states
+	{
+	Spawn:
+                CHKG O 35
+                CHKG P 2 A_FadeOut(0.10)
+		goto Spawn+1
+	}
+}
+
+Actor FartBlast
+{
+  Radius 16
+  Height 8
+  Speed 15
+  Damage 2
+  Projectile
+  DamageType "ChameleonKing"
+  RenderStyle "Translucent"
+  +FloorClip
+  +DontHurtSpecies
+  +Ripper
+  States
+  {
+  Spawn:
+	TNT1 A 0 A_PlaySound ("CHAMFART")
+    CHGS ABCDE 1 Bright
+	CHGS DE 2 Bright
+    Goto Spawn+2
+  Death:
+    CHGS FGHIJ 5
+    Stop
+  }
+}

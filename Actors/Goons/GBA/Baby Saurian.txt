@@ -1,0 +1,60 @@
+ACTOR BabySaurian 3850
+{
+	Tag "Baby Saurian"
+	Health 30
+	Radius 16
+	Height 32
+	Speed 15
+	PainChance 0
+	Mass 10000
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	+DONTHARMSPECIES
+	Monster
+	  SeeSound "saurow"
+  PainSound "saurow"
+  DeathSound "saurow"
+  ActiveSound "saursee"
+	//AttackSound "CrabHit"
+	Obituary "%o was mauled by a Baby Saurian."
+	States
+
+	{
+		Spawn:
+		    MISA A 10 A_Look
+			loop
+		See:
+			MISA AABBCCDD 2 Fast A_Chase
+			loop
+		Melee:
+			TNT1 A 0 A_PlaySound("TURTBITE")
+			MISA E 10 A_FaceTarget
+			MISA F 6 A_SargAttack
+			Goto See
+		Death:
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		   	MISA H 3 A_Scream
+			MISA I 3
+			MISA J 3
+			MISA K 3
+			MISA L 3
+			MISA M -1
+			Stop
+			Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	MISA H 5 A_GenericFreezeDeath
+    MISA H 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+		   Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	MISA H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	}
+}
