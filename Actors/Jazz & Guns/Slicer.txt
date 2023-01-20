@@ -1,0 +1,283 @@
+actor Slicer : Doomweapon 20002
+{
+	Tag "Slicer"
+	radius 20
+	height 16
+	inventory.pickupmessage "Slicer (Slot 3)"
+	Inventory.PickupSound "WEAPNGET"
+	Obituary "%o been sliced like cheese by %k."
+	Weapon.selectionorder 700
+	Weapon.AmmoUse 1
+	Weapon.Ammogive 0
+	Weapon.Ammotype "SlicerAmmo"
+	Weapon.BobRangeX 0.5
+   Weapon.BobRangeY 0.5
+   Weapon.BobSpeed 2
+  Weapon.BobStyle Smooth
+	inventory.icon "PLSPA0"
+	DamageFactor 0
+	+FLOATBOB
+	 +NOGRAVITY
+	States
+	{
+	spawn:
+		PLSP A -1
+		Stop
+	ready:
+		PLPI A 1 A_WeaponReady
+		Loop
+	deselect:
+		PLPI A 1 A_Lower (12)
+		Loop
+	Select:
+    PLPI A 1 A_Raise (12)
+    Loop
+Fire:
+TNT1 A 0 A_JumpIfInventory("Gun3PowerUp", 1, "Powerfire")
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
+PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 8
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold1:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 7
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold2:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+PLPI A 6
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold3:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
+   PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 5
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold4:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
+   PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 4
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold5:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
+   PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 3
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold6:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
+   PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 2
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold7:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+	    PLPI A 1
+    PLPI A 0 A_ReFire
+	Goto Ready
+	Hold8:
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("Slicerblade")
+	PLPI C 3
+    PLPI A 0 A_ReFire
+	Goto Ready
+	PowerFire:
+	TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
+	PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 8
+    PLPI A 0 A_ReFire
+    Goto Ready
+	PowerHold:
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 8
+    PLPI A 0 A_ReFire
+	Goto Ready
+	PowerHold1:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 7
+    PLPI A 0 A_ReFire
+    goto Ready
+	PowerHold2:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 6
+    PLPI A 0 A_ReFire
+    goto Ready
+	PowerHold3:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
+   PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 5
+    PLPI A 0 A_ReFire
+	Goto Ready
+	PowerHold4:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 4
+    PLPI A 0 A_ReFire
+    goto Ready
+	PowerHold5:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	PLPI A 3
+    PLPI A 0 A_ReFire
+    goto Ready
+	PowerHold6:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 2
+    PLPI A 0 A_ReFire
+    goto Ready
+	PowerHold7:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+	    PLPI A 1
+    PLPI A 0 A_ReFire
+    goto Ready
+	PowerHold8:
+    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
+    PLPI B 3 A_FireCustomMissile("SlicerbladePow")
+	PLPI C 3
+    PLPI A 0 A_ReFire
+    goto Ready
+	}
+}
+
+actor Slicerblade
+{
+	Radius 4
+	Height 5
+	Speed 20
+	Damage 20
+	Projectile
+	+RIPPER
+	RenderStyle Add
+	Alpha 0.75
+	DeathSound "SLICBNCE"
+	DamageType "JazzProj"
+	States
+	{
+	Spawn:
+	SLIC ABCDEFGHI 1 
+	loop
+	Death:
+	    JPUF ABCDEFGHIJK 1
+Stop
+	}
+}
+
+actor SlicerbladePow
+{
+	Radius 4
+	Height 5
+	Speed 40
+	Damage 20
+	Projectile
+	+RIPPER
+	RenderStyle Add
+	Alpha 0.75
+	BounceType Hexen
+	 BounceCount 4
+	 WallBounceFactor 1.2
+	 BounceSound "SlicBNCE"
+	 DamageType "JazzProj"
+	DeathSound "SLICBNCE"
+	States
+	{
+	Spawn:
+	PSLC ABCDEFGHI 1 
+	loop
+	Death:
+	    JPUF ABCDEFGHIJK 1
+Stop
+	}
+}
+
+ACTOR SlicerAmmo : Ammo 19020
+{
+  Inventory.PickupMessage "\cjSlicer \clAmmo"
+  Inventory.PickupSound "ammoup"
+  Inventory.Amount 3
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 3
+  Ammo.BackpackMaxAmount 100
+  Inventory.Icon "SLCAZ0"
+  FloatBobStrength 0.5
+  +FLOATBOB
+   +NOGRAVITY
+  States
+  {
+  Spawn:
+    SLCA ABCDEFGHIJ 3
+    Loop
+  }
+}
+
+ACTOR Gun3PowerUpBox : Gun1PowerUpBox 3822
+{
+  States
+  {
+  Spawn:
+    3GUN ABCD 1 Bright
+    Loop
+  Death:
+  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 ACS_NamedExecute("Gun3",0)
+  TNT1 A 0 A_GiveToTarget("Gun3PowerUp", 1, AAPTR_DEFAULT)
+  TNT1 A 0 A_GiveToTarget("SlicerAmmo", 25, AAPTR_DEFAULT)
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	Stop
+  }
+}
+
+ACTOR Gun3PowerUp : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}

@@ -1,0 +1,352 @@
+Actor Seeker : Weapon 15005
+{
+  Tag "Seeker"
+  Weapon.AmmoType "HomingMissile"
+  Weapon.AmmoGive 0
+  Weapon.AmmoUse 1
+  Inventory.PickupMessage "Seeker (Slot 5)"
+  Inventory.PickupSound "WEAPNGET"
+  Obituary "%o was hunted down by %k's Seeker."
+  Weapon.SelectionOrder 2630
+  Weapon.BobRangeX 0.5
+   Weapon.BobRangeY 0.5
+   Weapon.BobSpeed 2
+  Weapon.BobStyle Smooth
+  Weapon.Kickback 300
+  DamageFactor 0
+  +FLOATBOB
+   +NOGRAVITY
+  States
+  {
+  Select:
+    PLPI A 1 A_Raise
+    Loop
+  Deselect:
+    PLPI A 1 A_Lower
+    Loop
+  Ready:
+    PLPI A 1 A_WeaponReady
+    Loop
+  Fire:
+  TNT1 A 0 A_JumpIfInventory("Gun5PowerUp", 1, "Powerfire")
+    TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	 PLPI A 8
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold1:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
+   PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	PLPI A 7
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold2:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 6
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold3:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
+   PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 5
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold4:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
+  PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 4
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold5:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
+   PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 3
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold6:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
+   PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 2
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold7:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
+   PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 1
+    PLPI A 0 A_Refire
+	goto Ready
+	Hold8:
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+    PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissile", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+    PLPI A 0 A_Refire
+	goto Ready
+		PowerFire:
+			TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 8
+    PLPI A 0 A_Refire ("PowerHold")
+	goto Ready
+	PowerHold1:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 7
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold2:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 6
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold3:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
+   PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	PLPI A 5
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold4:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 4
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold5:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 3
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold6:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 2
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold7:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+	    PLPI A 1
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold8:
+    PLPI B 0 Bright 
+    PLPI B 0 Bright A_PlaySound("SEEKFIRE")
+   PLPI B 3 Bright A_FireCustomMissile("HeatSeekingMissilePower", 0, 1, 0, 0)
+	PLPI B 0 A_Recoil(0)
+    PLPI C 3
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	Spawn:
+    PLSP A -1
+    Loop
+	}
+}
+	
+Actor HomingMissile : Ammo 16001
+{
+Inventory.Amount 3
+Inventory.MaxAmount 100
+ammo.backpackamount 3
+ammo.backpackmaxamount 100
+FloatBobStrength 0.5
+Inventory.PickupSound "ammoup"
+Inventory.PickupMessage "\crSeeker \clAmmo"
+Inventory.Icon "HSRKZ0"
++FLOATBOB
+ +NOGRAVITY
+states
+{
+Spawn:
+HSRK ABCDEFGHIJ 3
+loop
+}
+}
+
+	
+actor HeatSeekingMissile
+{
+  Radius 11
+  Height 8
+  Speed 12
+  Damage 100
+  Projectile
+  +SEEKERMISSILE
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +ROCKETTRAIL
+  +SCREENSEEKER
+  DamageType "JazzProj"
+  DeathSound "SEEKXPLD"
+  States
+  {
+  Spawn:
+    HRKT ABC 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
+	HRKT A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+    loop
+  Death:
+  SEKE AB 3 bright
+   SEKE C 3 bright A_Explode (96,96,0)
+   SEKE DEFGHIJKL 3 bright
+    stop
+  }
+}
+
+actor HeatSeekingMissilePower
+{
+  Radius 11
+  Height 8
+  Speed 50
+  Damage 100
+  Projectile
+  DamageType "JazzProj"
+  +SEEKERMISSILE
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +ROCKETTRAIL
+  +SCREENSEEKER
+  DeathSound "SEEKXPLD"
+  States
+  {
+  Spawn:
+    PRKT ABC 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
+	PRKT A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+    loop
+  Death:
+  SEKE AB 3 bright
+   SEKE C 3 bright A_Explode (128,128,0)
+     TNT1 A 0 A_SpawnItemex(MultiExplo, Random(-20, 20), Random(-20, 20), Random(-20, 20)) 
+   SEKE DEF 3 bright
+   TNT1 A 0 A_SpawnItemex(MultiExplo, Random(-20, 20), Random(-20, 20), Random(-20, 20))
+   SEKE GHI 3 bright
+   	TNT1 A 0 A_SpawnItemex(MultiExplo, Random(-20, 20), Random(-20, 20), Random(-20, 20) )
+   SEKE JKL 3 bright
+    stop
+  }
+}
+
+
+Actor MultiExplo
+	{
+	DamageType "JazzProj"
+	+Nogravity
+	States
+	{
+	Spawn: 
+	SEKE A 3 bright
+	SEKE B 3 bright A_Playsound("SEEKXPLD")
+   SEKE C 3 bright A_Explode (96,96,0)
+   SEKE DEFGHIJKL 3 bright
+    Stop
+	}
+	}
+
+Actor MissileTrail
+{
+  Projectile
+  +NoClip
+  RenderStyle Add
+  Alpha 0.4
+  States
+  {
+  Spawn:
+    JPUF ABCDEFGHIJK 1 Bright
+    Stop
+  }
+}
+
+ACTOR Gun5PowerUpBox : Gun1PowerUpBox 3824
+{
+  States
+  {
+  Spawn:
+    5GUN ABCD 1 Bright
+    Loop
+  Death:
+  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 ACS_NamedExecute("Gun5",0)
+  TNT1 A 0 A_GiveToTarget("Gun5PowerUp", 1, AAPTR_DEFAULT)
+  TNT1 A 0 A_GiveToTarget("HomingMissile", 25, AAPTR_DEFAULT)
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	Stop
+  }
+}
+
+ACTOR Gun5PowerUp : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}

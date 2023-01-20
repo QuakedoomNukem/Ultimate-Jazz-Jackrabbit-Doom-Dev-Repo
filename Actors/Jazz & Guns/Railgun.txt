@@ -1,0 +1,285 @@
+ACTOR Railgun : Weapon 30027
+{
+  Tag "Railgun"
+  Inventory.PickupSound "WEAPNGET"
+  Weapon.AmmoGive 0
+  Weapon.AmmoUse 1
+  Weapon.AmmoType "RailAmmo"
+  Inventory.PickupMessage "Railgun (Slot 9)"
+  Obituary "%o was shafted by %k's Railgun."
+  Weapon.BobRangeX 0.5
+   Weapon.BobRangeY 0.5
+   Weapon.BobSpeed 2
+  Weapon.BobStyle Smooth
+  DamageFactor 0
+  +FLOATBOB
+   +NOGRAVITY
+  +WEAPON.NOAUTOAIM
+  +WEAPON.NOAUTOFIRE
+  Scale 0.8
+  States
+  {
+  Ready:
+    PLPI A 1 A_WeaponReady
+    Loop
+  Ready2:
+    PLPI A 1 A_WeaponReady
+    Loop
+  Deselect:
+    PLPI A 1 A_Lower
+	PLPI A 0 A_Lower
+    Loop
+  Select:
+    PLPI A 1 A_Raise
+	PLPI A 0 A_Raise
+    Loop
+  Fire:
+	TNT1 A 0 A_JumpIfInventory("Gun9PowerUp", 1, "Powerfire")
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
+    TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 8
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold1:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
+   TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 7
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold2:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
+   TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 6
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold3:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
+  TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 5
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold4:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
+  TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 4
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold5:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
+   TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 3
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold6:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
+   TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 2
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold7:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
+   TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 1
+    PLPI A 0 A_Refire
+    Goto Ready
+	Hold8:
+   TNT1 A 0 A_Playsound("RailFire")
+    PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "Jazzfirepuff")
+	PLPI CA 4
+    PLPI A 0 A_Refire
+    Goto Ready
+	PowerFire:
+	TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
+	TNT1 A 0 A_Playsound("RailFire")
+PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 8
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold1:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
+	TNT1 A 0 A_Playsound("RailFire")
+  PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 7
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold2:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
+	TNT1 A 0 A_Playsound("RailFire")
+ PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 6
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold3:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
+	TNT1 A 0 A_Playsound("RailFire")
+ PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 5
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold4:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
+	TNT1 A 0 A_Playsound("RailFire")
+ PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 4
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold5:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
+	TNT1 A 0 A_Playsound("RailFire")
+PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 3
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold6:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
+	TNT1 A 0 A_Playsound("RailFire")
+PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 2
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold7:
+  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
+	TNT1 A 0 A_Playsound("RailFire")
+PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+	PLPI A 1
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+	PowerHold8:
+	TNT1 A 0 A_Playsound("RailFire")
+PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+	PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+   PLPI B 0 Bright A_RailAttack(50, 0, 0, "None", "White", RGF_SILENT | RGF_FULLBRIGHT, 1024 , "Jazzfirepuff", Random(-10, 10), Random(-10, 10))
+     PLPI B 4 Bright A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT, 0 , "Jazzfirepuff")
+	PLPI CA 4
+    PLPI A 0 A_Refire ("PowerHold")
+    Goto Ready
+  Spawn:
+    PLSP A -1
+    Stop
+  }
+}
+
+actor RailAmmo : Ammo 3247
+{
+  Inventory.PickupMessage "\ccRailgun \clAmmo"
+  Inventory.Amount 3
+  Inventory.MaxAmount 100
+  Ammo.BackpackAmount 3
+  Ammo.BackpackMaxAmount 100
+  FloatBobStrength 0.5
+  Inventory.Icon "RAILZ0"
+  Inventory.PickupSound "ammoup"
+  +FLOATBOB
+   +NOGRAVITY
+  States
+  {
+  Spawn:
+    RAIL ABCDEF 3
+    Loop
+  }
+}
+
+
+ACTOR Gun9PowerUpBox : Gun1PowerUpBox 3828
+{
+  States
+  {
+  Spawn:
+    9GUN ABCD 1 Bright
+    Loop
+  Death:
+  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 ACS_NamedExecute("Gun9",0)
+  TNT1 A 0 A_GiveToTarget("Gun9PowerUp", 1, AAPTR_DEFAULT)
+  TNT1 A 0 A_GiveToTarget("RailAmmo", 25, AAPTR_DEFAULT)
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	Stop
+  }
+}
+
+ACTOR Gun9PowerUp : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
