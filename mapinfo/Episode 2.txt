@@ -1,0 +1,159 @@
+//Episode 2
+
+DefaultMap
+{
+allowjump
+allowcrouch
+allowfreelook
+}
+
+map E2L1 lookup "E2L1_NAME"
+{ 
+	levelnum = 10
+	next = E2L2
+	secretnext = E2L2
+	sky1 = "turtsky", 0
+	cluster = 2
+	music = "TURTEMPLE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP10"
+}
+
+map E2L2 lookup "E2L2_NAME"
+{ 
+	levelnum = 11
+	next = E2L3
+	secretnext = 3D03
+	sky1 = "NIPSKY3", 0
+	cluster = 2
+	music = "NIPPIUS"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP11"
+}
+
+map E2L3 lookup "E2L3_NAME"
+{ 
+	levelnum = 12
+	next = E2L4
+	secretnext = E2L4
+	sky1 = "jungsky", 0
+	cluster = 2
+	music = "JUNGROCK"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP12"
+}
+
+map E2L4 lookup "E2L4_NAME"
+{ 
+	levelnum = 13
+	next = E2L5
+	secretnext = E2L5
+	sky1 = "MARBSKY2", 0
+	cluster = 2
+	music = "MARBELARA"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP13"
+}
+
+map E2L5 lookup "E2L5_NAME"
+{ 
+	levelnum = 14
+	next = E2L6
+	secretnext = 3D04
+	sky1 = "sluggsky", 0
+	cluster = 2
+	music = "SLUGGION"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP14"
+}
+
+map E2L6 lookup "E2L6_NAME"
+{ 
+	levelnum = 16
+	next = E2L7
+	secretnext = E2L7
+	sky1 = "dreemsky", 0
+	cluster = 2
+	music = "DREEMPIPES"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP15"
+}
+
+map E2L7 lookup "E2L7_NAME"
+{ 
+	levelnum = 16
+	next = E2L8
+	secretnext = E2SL1
+	sky1 = "JSKY2", 0
+	cluster = 2
+	music = "FANOLINT"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP16"
+}
+
+map E2L8 lookup "E2L8_NAME"
+{ 
+	levelnum = 17
+	next = E2L9
+	secretnext = E2L9
+	sky1 = "SCRAPSKY", 0
+	cluster = 2
+	music = "SCRAPARAP"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP17"
+}
+
+map E2L9 lookup "E2L9_NAME"
+{ 
+	levelnum = 18
+	next = E3L1
+	secretnext = E3L1
+	sky1 = "megasky", 0
+	cluster = 2
+	music = "MEGAIRBASE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP18"
+}
+
+map E2SL1 lookup "E2SL1_NAME"
+{ 
+	levelnum = 53
+	next = E2L8
+	secretnext = E2SL2
+	sky1 = "polissky", 0
+	cluster = 2
+	music = "WPNDEPOT"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP53"
+}
+
+map E2SL2 lookup "E2SL2_NAME"
+{
+	author = "$E2SL2_SUBTITLE"
+	levelnum = 54
+	next = E2L8
+	secretnext = E2L8
+	sky1 = "atlissky", 0
+	cluster = 2
+	music = "ATLANTIS"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP54"
+}
+
+cluster 2
+{ 
+	Pic = "JazzTITL"
+	music = "JJ1Bonus"
+	exittext = "You did it!",
+	"The MegAirBase has been shut down!",
+	"Devan is now on the run, again,",
+	"but you fancy savouring the hunt.",
+	"It's nice to see turtles have the",
+	"ability to run all this time!",
+	"Your pursuit will lead you through strange",
+	"and wonderful worlds.",
+	"        ",
+	"Who knows where you will wind up in...",
+	"        ",
+	"The Chase Is On... Again!"
+}

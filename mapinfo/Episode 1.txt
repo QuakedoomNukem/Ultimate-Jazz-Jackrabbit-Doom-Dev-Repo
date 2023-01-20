@@ -1,0 +1,170 @@
+//Episode 1
+
+DefaultMap
+{
+allowjump
+allowcrouch
+allowfreelook
+}
+
+map E1L1 lookup "E1L1_NAME"
+{ 
+	author = "$E1L1_SUBTITLE"
+	levelnum = 1
+	next = E1L2
+	secretnext = E1L2
+	sky1 = "JSKY1", 0
+	cluster = 1
+	music = "LEARNING"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP01"
+}
+
+map E1L2 lookup "E1L2_NAME"
+{
+	author = "$E1L2_SUBTITLE"
+	levelnum = 2
+	next = E1L3
+	secretnext = 3D01
+	sky1 = "JSKY1", 0
+	cluster = 1
+	music = "CARROTUS"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP01"
+}
+
+map E1L3 lookup "E1L3_NAME"
+{
+	author = "$E1L3_SUBTITLE"
+	levelnum = 3
+	next = E1L4
+	secretnext = E1L4
+	sky1 = "JSKY1", 0
+	cluster = 1
+	music = "CASTLE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP01"
+}
+
+map E1L4 lookup "E1L4_NAME"
+{
+	author = "$E1L4_SUBTITLE"
+	levelnum = 4
+	next = E1L5
+	secretnext = E1L5
+	sky1 = "DIASKY3", 0
+	cluster = 1
+	music = "DIAMONDUS"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP04"
+}
+
+map E1L5 lookup "E1L5_NAME"
+{
+	author = "$E1L5_SUBTITLE"
+	levelnum = 5
+	next = E1L6
+	secretnext = E1L6
+	sky1 = "JSKY2", 0
+	cluster = 1
+	music = "TUBELECTRIC"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP05"
+}
+
+map E1L6 lookup "E1L6_NAME"
+{
+	author = "$E1L6_SUBTITLE"
+	levelnum = 6
+	next = E1L7
+	secretnext = 3D02
+	sky1 = "MED6", 0
+	cluster = 1
+	music = "MEDIVO"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP06"
+}
+
+map E1L7 lookup "E1L7_NAME"
+{
+	author = "$E1L7_SUBTITLE"
+	levelnum = 7
+	next = E1L8
+	secretnext = E1L8
+	sky1 = "JSKY2", 0
+	cluster = 1
+	music = "LETNI"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP07"
+}
+
+map E1L8 lookup "E1L8_NAME"
+{
+	author = "$E1L8_SUBTITLE"
+	levelnum = 8
+	next = E1L9
+	secretnext = E1SL1
+	sky1 = "TechSKY", 0
+	cluster = 1
+	music = "TECHNOIR"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP08"
+}
+
+map E1L9 lookup "E1L9_NAME"
+{
+	author = "$E1L9_SUBTITLE"
+	levelnum = 9
+    next = E2L1
+	Secretnext = E2L1
+	sky1 = "JSKY6", 0
+	cluster = 1
+	music = "ORBITUS"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP09"
+}
+
+map E1SL1 lookup "E1SL1_NAME"
+{
+	author = "$E1SL1_SUBTITLE"
+	levelnum = 51
+	next = E1L9
+	secretnext = E1SL2
+	sky1 = "CHAMSKY", 0
+	cluster = 1
+	music = "CHAMPLNT"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP51"
+}
+
+map E1SL2 lookup "E1SL2_NAME"
+{
+	author = "$E1SL2_SUBTITLE"
+	levelnum = 52
+	next = E1L9
+	secretnext = E1L9
+	sky1 = "RSKY3", 0
+	cluster = 1
+	music = "JJ2Bonus"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP52"
+}
+
+cluster 1
+{ 
+	Pic = "JazzTITL"
+	music = "JJ1Bonus"
+	exittext = "You have managed to get a head start",
+	"in your long journey, but, you hear rumours",
+	"of some sort of air base that Devan has made.",
+	"You must hurry, as we don't know what ideas",
+	"Devan has in store, complete with a discount.",
+	"Your adventure has begun, the rabbit hole",
+	"is going to get deeper. More nefarious",
+	"foes are waiting for you.",
+	"        ",
+	"Teach those turtles nature intended them",
+	"to be slow in...",
+	"        ",
+	"More Turtle Terror"
+}

@@ -1,0 +1,109 @@
+//3D Bonus Stages
+
+DefaultMap
+{
+nojump
+nocrouch
+nofreelook
+noclustertext
+}
+
+map 3D01 "Bonus Stage 1"
+{
+	levelnum = 71
+	next = E1L3
+	secretnext = E1L3
+	sky1 = "BONSKY", 0
+	cluster = 66
+	par = 180
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D02 "Bonus Stage 2"
+{ 
+	levelnum = 72
+	next = E1L7
+	secretnext = E1L7
+	sky1 = "BONSKY2", 0
+	cluster = 66
+	par = 180
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D03 "Bonus Stage 3"
+{ 
+	levelnum = 73
+	next = MAP12
+	secretnext = MAP12
+	sky1 = "BONSKY3", 0
+	cluster = 66
+	par = 180
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D04 "Bonus Stage 4"
+{ 
+	levelnum = 74
+	next = MAP15
+	secretnext = MAP15
+	sky1 = "BONSKY4", 0
+	cluster = 66
+	par = 180
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D05 "Bonus Stage 5"
+{ 
+	levelnum = 75
+	next = MAP21
+	secretnext = MAP21
+	sky1 = "BONSKY5", 0
+	cluster = 66
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D06 "Bonus Stage 6"
+{ 
+	levelnum = 76
+	next = MAP27
+	secretnext = MAP27
+	sky1 = "BONSKY6", 0
+	cluster = 66
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D07 "Bonus Stage 7"
+{ 
+	levelnum = 77
+	next = MAP32
+	secretnext = MAP32
+	sky1 = "BONSKY7", 0
+	cluster = 66
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map 3D08 "Bonus Stage 8"
+{ 
+	levelnum = 78
+	next = MAP62
+	secretnext = MAP62
+	sky1 = "BONSKY8", 0
+	cluster = 66
+	music = JJ1Bonus
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}

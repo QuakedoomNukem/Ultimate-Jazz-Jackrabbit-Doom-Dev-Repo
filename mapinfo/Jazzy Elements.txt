@@ -1,0 +1,83 @@
+//Episode 4 Super Secret Level
+//Split into a HUB for performance reasons
+
+DefaultMap
+{
+allowjump
+allowcrouch
+allowfreelook
+noclustertext
+}
+
+cluster 65
+{
+hub
+}
+
+map E4SL2 lookup "E4SL2_NAME"
+{ 
+	levelnum = 58
+	cluster = 65
+	sky1 = "HUBSKY", 0
+	music = "HUBTRK"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4SL2A lookup "E4SL2_NAME"
+{ 
+	levelnum = 59
+	cluster = 65
+	sky1 = "EarthSky", 0
+	music = "EARTHTRCK"
+}
+
+map E4SL2B lookup "E4SL2_NAME"
+{ 
+	levelnum = 60
+	cluster = 65
+	sky1 = "FIRESKY", 0
+	music = "FIRETRCK"
+}
+
+map E4SL2C lookup "E4SL2_NAME"
+{ 
+	levelnum = 61
+	cluster = 65
+	sky1 = "WATERSKY", 0
+	music = "WATERTRK"
+}
+
+map E4SL2D lookup "E4SL2_NAME"
+{ 
+	levelnum = 62
+	cluster = 65
+	sky1 = "WINDSKY", 0
+	music = "WINDTRCK"
+}
+
+map E4SL2E lookup "E4SL2_NAME"
+{ 
+	levelnum = 63
+	cluster = 65
+	sky1 = "DARKSKY", 0
+	music = "SHADWTRK"
+}
+
+map E4SL2F lookup "E4SL2_NAME"
+{ 
+	levelnum = 64
+	cluster = 65
+	sky1 = "LIGHTSKY", 0
+	music = "LIGHTRCK"
+}
+
+map E4SL2G lookup "E4SL2_NAME"
+{ 
+	levelnum = 65
+	next = E4L7
+	secretnext = E4L7
+	cluster = 65
+	sky1 = "BOSSSKY", 0
+	music = "FBSSTRK"
+	exitpic = "$JAZZ_IN"
+}

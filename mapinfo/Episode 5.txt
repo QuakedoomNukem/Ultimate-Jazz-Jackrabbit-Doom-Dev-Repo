@@ -1,0 +1,71 @@
+//Episode 5
+
+DefaultMap
+{
+allowjump
+allowcrouch
+allowfreelook
+}
+
+map E5L1 lookup "E5L1_NAME"
+{
+	author = "$E5L1_SUBTITLE"
+	levelnum = 40
+	next = E5L2
+	secretnext = E5L2
+	sky1 = "CANDSKY", 0
+	cluster = 5
+	music = CANDION
+	exitpic = "XmasInte"
+	enterpic = "INTMAP40"
+}
+
+map E5L2 lookup "E5L2_NAME"
+{
+	author = "$E5L2_SUBTITLE"
+	levelnum = 41
+	next = MAP42
+	secretnext = 3D09
+	sky1 = "BLOXSKY", 0
+	cluster = 5
+	music = BLOXONIUS
+	exitpic = "XmasInte"
+	enterpic = "INTMAP41"
+}
+
+map MAP42 "Holidaius Fields"
+{ 
+	levelnum = 42
+    titlepatch = CWILV51
+	next = MAP43
+	secretnext = MAP43
+	sky1 = "JSKY1", 0
+	cluster = 5
+	music = HOLIDAIUS
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}
+
+map MAP44 "Holidaius Mountains"
+{ 
+	levelnum = 44
+	next = MAP45
+	secretnext = MAP45
+	sky1 = "JSKY5", 0
+	cluster = 5
+	music = SILENTNIGHT
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}
+
+map MAP47 "Burrowsville"
+{ 
+	levelnum = 47
+	next = Map47 //MAP48
+	secretnext = Map47 //MAP48
+	sky1 = "JSKY3", 0
+	cluster = 5
+	music = BURROWSVILLE
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}

@@ -1,0 +1,216 @@
+//Episode 4
+
+DefaultMap
+{
+allowjump
+allowcrouch
+allowfreelook
+}
+
+map E4L1 lookup "E4L1_NAME"
+{
+	author = "$E4L1_SUBTITLE"
+	levelnum = 31
+	next = E4L2
+	secretnext = 3D07
+	sky1 = "JSKY2", 0
+	cluster = 4
+	music = "Beach"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L2 lookup "E4L2_NAME"
+{
+	author = "$E4L2_SUBTITLE"
+	levelnum = 32
+	next = E4L3
+	secretnext = E4L3
+	sky1 = "RSKY3", 0
+	cluster = 4
+	music = "JUNGLE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L3 lookup "E4L3_NAME"
+{
+	author = "$E4L3_SUBTITLE"
+	levelnum = 33
+	next = E4L4
+	secretnext = E4L4
+	sky1 = "Eastsky", 0
+	cluster = 4
+	music = "FROLICK"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L4 lookup "E4L4_NAME"
+{ 
+	levelnum = 34
+	next = E4L5
+	secretnext = E4L5
+	sky1 = "JSKY1", 0
+	cluster = 4
+	music = "COLONIUS"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L5 lookup "E4L5_NAME"
+{ 
+	levelnum = 35
+	next = E4L6
+	secretnext = E4L6
+	sky1 = "townsky", 0
+	cluster = 4
+	music = "STRTWIZE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L6 lookup "E4L6_NAME"
+{ 
+	levelnum = 36
+	next = E4L7
+	secretnext = E4SL1
+	sky1 = "JSKY4", 0
+	cluster = 4
+	music = "LABRAT"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L7 lookup "E4L7_NAME"
+{ 
+	levelnum = 37
+	next = E4L8
+	secretnext = E4L8
+	sky1 = "psysky", 0
+	cluster = 4
+	music = "HIPPIE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L8 lookup "E4L8_NAME"
+{ 
+	levelnum = 38
+	next = E4L9
+	secretnext = 3D08
+	sky1 = "DMDSSKY", 0
+	cluster = 4
+	music = "DIAREMIX"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L9 lookup "E4L9_NAME"
+{ 
+	levelnum = 39
+	next = E4L10
+	secretnext = E4L10
+	sky1 = "JSKY2", 0
+	cluster = 4
+	music = "TUBREMIX"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L10 lookup "E4L10_NAME"
+{ 
+	levelnum = 40
+	next = E4L11
+	secretnext = E4L11
+	sky1 = "MEDRSKY", 0
+	cluster = 4
+	music = "MEDRIX"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L11 lookup "E4L11_NAME"
+{
+	author = "$E4L11_SUBTITLE"
+	levelnum = 41
+	next = E4L12
+	secretnext = E4L12
+	sky1 = "hauntsky", 0
+	cluster = 4
+	music = "BELMONT"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L12 lookup "E4L12_NAME"
+{
+	author = "$E4L12_SUBTITLE"
+	levelnum = 42
+	next = E4L13
+	secretnext = E4L13
+	sky1 = "RSKY3", 0
+	cluster = 4
+	music = "DARKGROOVE"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4L13 lookup "E4L13_NAME"
+{
+	author = "$E4L13_SUBTITLE"
+	levelnum = 43
+	next = Endsequence,"GameEnd"
+	sky1 = "RSKY3", 0
+	cluster = 4
+	music = "JZDAMNED"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E4SL1 lookup "E4SL1_NAME"
+{ 
+	levelnum = 57
+	next = E4L7
+	secretnext = E4SL2
+	sky1 = "FRCLSKY", 0
+	cluster = 4
+	music = "CHELONIA"
+	exitpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+//map E4SL2 lookup "E4SL2_NAME"
+//{ 
+//	levelnum = 58
+//	next = E4L7
+//	secretnext = E4L7
+//	cluster = 4
+//	sky1 = "HUBSKY", 0
+//	music = "HUBTRK"
+//	exitpic = "$JAZZ_IN"
+//	enterpic = "$JAZZ_IN"
+//}
+
+cluster 4
+  { 
+	Pic = "JazzTITL"
+    music = "JJ1Bonus"
+    exittext = "You did it!",
+    "You managed to go through various worlds,",
+    "just for a shot at Devan...",
+    "You succeeded, even going into hell,",
+    "just for Devan to be waiting for you.",
+    "        ",
+    "And now there has been peace for months.",
+    "Long enough for Xmas to fall,",
+    "but how can you be so sure Xmas",
+    "won't be ruined?",
+    "        ",
+    "Open your advent calendar for...",
+    "        ",
+    "Holiday Hell Hare",
+    "",
+    "Thank you for playing!",
+    "Feel free to give feedback and suggestions!"
+    }
