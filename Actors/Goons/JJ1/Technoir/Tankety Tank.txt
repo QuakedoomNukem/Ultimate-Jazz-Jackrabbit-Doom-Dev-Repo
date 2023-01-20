@@ -1,0 +1,73 @@
+actor TechnoirTank 3139
+{
+  Tag "Tankety Tank"
+  Health 300
+  Radius 31
+  Height 56
+  Mass 10000000
+  Speed 10
+  PainChance 0
+  Monster
+  +NOINFIGHTING
+  +FLOORCLIP
+  +NOBLOOD
+  +NoIceDeath
+  +COUNTKILL
+   +DONTHARMSPECIES
+  SeeSound "Turtsight"
+  PainSound "Turtpain"
+  Obituary "%o got blown up by a Tankety Tank."
+  States
+  {
+  Spawn:
+    TECH A 3 A_Look
+    Loop
+  See:
+  TECH A 35 A_Playsound("TANKSTRT")
+  TECH A 0 A_PlaySoundEx("TANKLOOP", "SoundSlot7", 1)
+    TECH A 3 A_Chase
+    Goto See+1
+  Melee:
+  Missile:
+  TECH A 0 A_PlaySoundEx("TANKLOOP", "SoundSlot7", 1)
+    TECH A 15 A_FaceTarget
+    TECH B 4 A_CustomMissile("TechRocket",32,0,0,0,0)
+    Goto See+1
+  Death:
+  TNT1 A 0 A_Stopsound(CHAN_VOICE)
+  TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 AAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+     TNT1 A 0 A_GiveToTarget ("Points",400)
+	Stop
+	    Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",400)
+	TECH A 5 A_GenericFreezeDeath
+    TECH A 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+ACTOR TechRocket
+{
+    Radius 13
+    Height 8
+    Speed 25
+    Damage 4
+	DamageType Disintegrate
+    Projectile
+    +RANDOMIZE
+    RenderStyle Normal
+    Alpha 1
+    scale 0.9
+    SeeSound "SHTBLTFI"
+	Deathsound "Toasted"
+    States
+  {
+  Spawn:
+    TRCK A 6 bright
+    loop
+  Death:
+    JBLS EFGH 4 bright
+    stop
+   }
+}
