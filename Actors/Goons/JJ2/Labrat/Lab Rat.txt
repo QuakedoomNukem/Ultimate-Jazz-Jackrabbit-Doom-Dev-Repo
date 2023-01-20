@@ -1,0 +1,54 @@
+ACTOR Labrat 13200
+{
+  Tag "Lab Rat"
+  Health 50
+  Speed 10
+  Radius 12
+  Height 22
+  Mass 1000000
+  Monster
+  PainChance 0
+  +FLOORCLIP
+  +NOINFIGHTING
+  +NOBLOOD
+    +COUNTKILL
++DONTHARMSPECIES
+  AttackSound "RATATTCK"
+  SeeSound "Ratsee"
+  Obituary "%o was gnawed on by a Lab Rat."
+  States
+  {
+  Spawn:
+    RATS A 10 A_Look
+    Loop
+  See:
+    RATS BBCCBBCC 2 A_Chase
+    Loop
+  Missile:
+	  RATS A 5 A_Jumpifcloser(128, 2)
+	  Goto See
+      RATS A 5 A_FaceTarget
+	  TNT1 A 0 A_Playsound("RATATTCK")
+      RATS D 10 A_SargAttack 
+	  RATS E 4 A_Gravity
+      Goto See  
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",50)
+	Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",50)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	RATS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",50)
+	RATS A 5 A_GenericFreezeDeath
+    RATS A 1 A_FreezeDeathChunks
+    wait
+  }
+}
