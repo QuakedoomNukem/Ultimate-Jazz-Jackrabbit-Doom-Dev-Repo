@@ -1,0 +1,68 @@
+ACTOR EasterusChicken 3933
+{
+  Tag "Chicken"
+  Health 70
+  Radius 16
+  Height 48
+  Mass 10000
+  Speed 15
+  PainChance 0
+  Monster
+  +WINDTHRUST
+  +FLOORCLIP
+  +NOBLOOD
+  +NOINFIGHTING
+  +SOLID
+  +COUNTKILL
++DONTHARMSPECIES
+  SeeSound "chicpai"
+  AttackSound "CHICATK"
+  DeathSound "chicdeath"
+  ActiveSound "chicact"
+  Obituary "%o was pecked by a chicken."
+  States
+  {
+  Spawn:
+    CHKN AB 10 A_Look
+    Loop
+  See:
+    CHKN ABCB 3 A_Chase
+    Loop
+  Melee:
+    CHKN A 8 A_FaceTarget
+	TNT1 A 0 ThrustThingZ(0,20,0,0)
+    CHKN D 10 A_CustomMeleeAttack(random[ChicAttack](1,8))
+    Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	CHKN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("SundayRoast",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	CHKN A 5 A_GenericFreezeDeath
+    CHKN A 1 A_FreezeDeathChunks
+    wait
+	}
+}
+
+ACTOR SundayRoast
+{
+  Radius 16
+  Height 24
+  -solid
+  States
+  {
+  Spawn:
+    ROAS T -1
+    Stop
+  }
+}
