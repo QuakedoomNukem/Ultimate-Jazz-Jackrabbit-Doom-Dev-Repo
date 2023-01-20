@@ -1,0 +1,231 @@
+actor CandyDropSpawner : RandomSpawner 4103
+{
+    DropItem "XmasRedCandyDrop"
+    DropItem "XmasBlueCandyDrop"
+    DropItem "XmasGreenCandyDrop"
+}
+
+actor XmasGreenCandyDrop 4100
+{
+	Tag "Green Candy Drop"
+    Health 50
+    Radius 16
+    Height 52
+    Speed 3
+    PainChance 0
+    Mass 10000
+	Scale 0.55
+	Monster
+	Obituary "%o was gobbled up by a Green Candy Drop."
+    	+SOLID
+		+NOBLOOD
+		+NoInfighting
+		+JUMPDOWN
+		+Faster
+		+COUNTKILL
++DONTHARMSPECIES
+    States
+    {
+    Spawn:
+        GDRP A 4 A_Look
+		GDRP B 4 //A_Recoil(-6)
+		GDRP B 0 A_Playsound("Turtjump")
+		GDRP C 4 ThrustThingZ(0,30,0,0)
+		GDRP D 4 A_JumpIf(Velz == 0,"Spawn")
+		Goto Jump+4
+    See:
+		GDRP A 0 A_Facetarget
+        GDRP AAAA 1 A_Chase
+		GDRP BBBB 1 A_Facetarget
+		//GDRP A 0 A_Chase
+		GDRP B 0 A_Playsound("Turtjump")
+		//GDRP A 0 A_Chase
+		GDRP C 0 A_Recoil(-6)
+		GDRP C 4 ThrustThingZ(0,30,0,0)
+		//GDRP A 0 A_Chase
+		GDRP DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Melee:
+		 GDRP ABC 4 A_FaceTarget 
+         GDRP D 4 Bright A_SargAttack
+		 Goto See
+	Jump:
+        GDRP A 4
+		GDRP B 4 A_Recoil(-6)
+		GDRP B 0 A_Playsound("Turtjump")
+		GDRP C 4 ThrustThingZ(0,30,0,0)
+		GDRP D 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Pain:
+		GDRP A 4 A_Chase
+        Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	GDRP A 5 A_GenericFreezeDeath
+    GDRP A 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	GDRP A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+    }
+}
+
+actor XmasBlueCandyDrop 4101
+{
+	Tag "Blue Candy Drop"
+    Health 50
+    Radius 16
+    Height 52
+    Speed 3
+    PainChance 0
+    Mass 10000
+	Scale 0.55
+	Monster
+	Obituary "%o was gobbled up by a Blue Candy Drop."
+    	+SOLID
+		+NOBLOOD
+		+NoInfighting
+		+JUMPDOWN
+		+Faster
+		+COUNTKILL
++DONTHARMSPECIES
+    States
+    {
+    Spawn:
+        BDRP A 4 A_Look
+		BDRP B 4 //A_Recoil(-6)
+		BDRP B 0 A_Playsound("Turtjump")
+		BDRP C 4 ThrustThingZ(0,30,0,0)
+		BDRP D 4 A_JumpIf(Velz == 0,"Spawn")
+		Goto Jump+4
+    See:
+		BDRP A 0 A_Facetarget
+        BDRP AAAA 1 A_Chase
+		BDRP BBBB 1 A_Facetarget
+		//BDRP A 0 A_Chase
+		BDRP B 0 A_Playsound("Turtjump")
+		//BDRP A 0 A_Chase
+		BDRP C 0 A_Recoil(-6)
+		BDRP C 4 ThrustThingZ(0,30,0,0)
+		//BDRP A 0 A_Chase
+		BDRP DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Melee:
+		 BDRP ABC 4 A_FaceTarget 
+         BDRP D 4 Bright A_SargAttack
+		 Goto See
+	Jump:
+        BDRP A 4
+		BDRP B 4 A_Recoil(-6)
+		BDRP B 0 A_Playsound("Turtjump")
+		BDRP C 4 ThrustThingZ(0,30,0,0)
+		BDRP D 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Pain:
+		BDRP A 4 A_Chase
+        Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	BDRP A 5 A_GenericFreezeDeath
+    BDRP A 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	BDRP A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+    }
+}
+
+actor XmasRedCandyDrop 4102
+{
+	Tag "Red Candy Drop"
+    Health 50
+    Radius 16
+    Height 52
+    Speed 3
+    PainChance 0
+    Mass 10000
+	Scale 0.55
+	Monster
+	Obituary "%o was gobbled up by a Red Candy Drop."
+    	+SOLID
+		+NOBLOOD
+		+NoInfighting
+		+JUMPDOWN
+		+Faster
+		+COUNTKILL
++DONTHARMSPECIES
+    States
+    {
+    Spawn:
+        RDRP A 4 A_Look
+		RDRP B 4 //A_Recoil(-6)
+		RDRP B 0 A_Playsound("Turtjump")
+		RDRP C 4 ThrustThingZ(0,30,0,0)
+		RDRP D 4 A_JumpIf(Velz == 0,"Spawn")
+		Goto Jump+4
+    See:
+		RDRP A 0 A_Facetarget
+        RDRP AAAA 1 A_Chase
+		RDRP BBBB 1 A_Facetarget
+		//RDRP A 0 A_Chase
+		RDRP B 0 A_Playsound("Turtjump")
+		//RDRP A 0 A_Chase
+		RDRP C 0 A_Recoil(-6)
+		RDRP C 4 ThrustThingZ(0,30,0,0)
+		//RDRP A 0 A_Chase
+		RDRP DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Melee:
+		 RDRP ABC 4 A_FaceTarget 
+         RDRP D 4 Bright A_SargAttack
+		 Goto See
+	Jump:
+        RDRP A 4
+		RDRP B 4 A_Recoil(-6)
+		RDRP B 0 A_Playsound("Turtjump")
+		RDRP C 4 ThrustThingZ(0,30,0,0)
+		RDRP D 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Pain:
+		RDRP A 4 A_Chase
+        Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	RDRP A 5 A_GenericFreezeDeath
+    RDRP A 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	RDRP A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+    }
+}

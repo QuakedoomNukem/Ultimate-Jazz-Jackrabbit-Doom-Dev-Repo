@@ -1,0 +1,48 @@
+actor XmasIceGrabber 4088
+{
+   Tag "Ice Grabber"
+   Health 30
+   PainChance 180 
+   Speed 15
+   Radius 30 
+   Height 56 
+   Mass 4000
+   Damage 3
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   -SOLID
+   +NOINFIGHTING
+   Obituary "%o was frozen to the bone by an Ice Grabber."
+   States 
+   { 
+   Spawn: 
+      IHND A 10 A_Look 
+      Loop 
+   See: 
+      IHND A 2 A_Chase 
+      Loop 
+   Melee: 
+      IHND B 10 A_FaceTarget 
+      IHND CDEFG 4 A_SargAttack 
+      Goto See  
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+    Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	IHND A 5 A_GenericFreezeDeath
+    IHND A 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	IHND A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}

@@ -1,0 +1,71 @@
+actor XmasUberSnowTurtle 4095
+{
+  Tag "Snow Schwarzenguard"
+  Health 200
+  Radius 20
+  Height 56
+  Speed 12
+  PainChance 150
+  Monster
+  +FLOORCLIP
+  +NOBLOOD
+  +NOINFIGHTING
+  SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtact"
+  Obituary "%o was snowballed by a Snow Schwarzenguard."
+  States
+  {
+  Spawn:
+  UBST AB 10 A_Look
+  loop
+  See:
+  UBST AABBCCDD 4 A_Chase
+  Missile:
+  UBST E 10 A_FaceTarget
+  UBST F 8 A_CustomMissile ("Snowball2",32,0,0,0,0)
+  UBST E 8
+  UBST E 10 A_FaceTarget
+  UBST F 8 A_CustomMissile ("Snowball2",32,0,0,0,0)
+  UBST E 8
+  Goto See
+   Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",300)
+    Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",300)
+	UBST A 5 A_GenericFreezeDeath
+    UBST A 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",300)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	UBST A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}
+
+Actor Snowball2
+{
+	Radius 6
+    Height 8
+    Speed 20
+    Damage 8
+    Projectile 
+    +RANDOMIZE
+    RenderStyle Add
+    Alpha 1
+	States
+  {
+  Spawn:
+    SNW2 AB 4 Bright
+    Loop
+  Death:
+     TNT1 AAAAAAA 0 A_SpawnItemEx("Snowball",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+    Stop
+  }
+}

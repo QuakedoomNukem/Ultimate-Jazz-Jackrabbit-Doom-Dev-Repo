@@ -1,0 +1,50 @@
+actor XmasSnowDog 4090
+{
+   Tag "Snow Mongrel"
+   Health 100
+   PainChance 180 
+   Speed 10
+   Radius 30 
+   Height 56 
+   Mass 40000
+   Damage 5
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   -SOLID
+   +NOINFIGHTING
+   ActiveSound "doggyact"
+  AttackSound "DOGGYATK"
+  SeeSound "doggysee"
+   Obituary "%o became dog food to a Snow Mongrel."
+   States 
+   { 
+   Spawn: 
+      BDOG A 10 A_Look 
+      Loop 
+   See: 
+      BDOG ABC 2 A_Chase 
+      Loop 
+   Melee: 
+      BDOG A 10 A_FaceTarget 
+      BDOG ABC 4 A_SargAttack 
+      Goto See 
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+    Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	BDOG A 5 A_GenericFreezeDeath
+    BDOG A 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	BDOG A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}

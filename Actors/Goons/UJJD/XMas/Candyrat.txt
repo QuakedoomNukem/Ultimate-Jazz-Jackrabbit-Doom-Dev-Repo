@@ -1,0 +1,73 @@
+actor XmasCandyRat 4089
+{
+	Tag "Candyrat"
+    Health 100
+    Radius 16
+    Height 52
+    Speed 3
+    PainChance 0
+    Mass 10000
+	Monster
+	AttackSound "RATATTCK"
+    SeeSound "Ratsee"
+	ActiveSound "Ratsee"
+	Obituary "%o got rabies from a Candyrat."
+    	+SOLID
+		+NOBLOOD
+		+NoInfighting
+		+JUMPDOWN
+		+Faster
+		+COUNTKILL
++DONTHARMSPECIES
+    States
+    {
+    Spawn:
+        CDRT A 4 A_Look
+		CDRT B 4 //A_Recoil(-6)
+		CDRT B 0 A_Playsound("Turtjump")
+		CDRT C 4 ThrustThingZ(0,30,0,0)
+		CDRT D 4 A_JumpIf(Velz == 0,"Spawn")
+		Goto Jump+4
+    See:
+	CDRT A 0 A_Facetarget
+        CDRT AAAA 1 A_Chase
+		CDRT BBBB 1 A_Facetarget
+		//CDRT A 0 A_Chase
+		CDRT B 0 A_Playsound("Turtjump")
+		//CDRT A 0 A_Chase
+		CDRT C 0 A_Recoil(-6)
+		CDRT C 4 ThrustThingZ(0,30,0,0)
+		//CDRT A 0 A_Chase
+		CDRT DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Melee:
+		 CDRT ABC 4 A_FaceTarget 
+         CDRT D 4 Bright A_SargAttack
+		 Goto See
+	Jump:
+        CDRT A 4
+		CDRT B 4 A_Recoil(-6)
+		CDRT B 0 A_Playsound("Turtjump")
+		CDRT C 4 ThrustThingZ(0,30,0,0)
+		CDRT D 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",200)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	CDRT A 5 A_GenericFreezeDeath
+    CDRT A 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	CDRT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+    }
+}
