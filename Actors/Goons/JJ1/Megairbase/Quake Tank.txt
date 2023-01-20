@@ -1,0 +1,89 @@
+actor Megairboss 3808
+{
+  Tag "Quake Tank"
+  Health 8000
+  Radius 32
+  Height 64
+  Mass 10000000
+  Speed 15
+  PainChance 0
+  Monster
+  +NOINFIGHTING
+  +FLOORCLIP
+  +NOBLOOD
+    +COUNTKILL
++DONTHARMSPECIES
+  SeeSound "ROBOTSEE"
+  PainSound "Turtpain"
+  ActiveSound "Turtact"
+  Obituary "%o was defeated by the Quake Tank."
+  States
+  {
+  Spawn:
+    MGBS ABCD 3 A_Look
+    Loop
+  See:
+  MGBS A 35 A_Playsound("TANKSTRT")
+  MGBS A 0 A_PlaySoundEx("TANKLOOP", "SoundSlot7", 1)
+    MGBS ABCD 3 A_Chase
+    Goto See+1
+  Melee:
+  Missile:
+  TECH A 0 A_PlaySoundEx("TANKLOOP", "SoundSlot7", 1)
+    MGBS DDDDD 4 A_FaceTarget
+    MGBS E 4 A_CustomMissile("MegairbossRocket",32,24,0,0,0)
+	MGBS E 4 A_CustomMissile("MegairbossRocket",32,-24,0,0,0)
+	MGBS DDDDD 4 A_FaceTarget
+    MGBS E 4 A_CustomMissile("MegairbossRocket",32,24,0,0,0)
+	MGBS E 4 A_CustomMissile("MegairbossRocket",32,-24,0,0,0)
+	MGBS FFFFF 5 A_FaceTarget
+    MGBS G 4 A_CustomMissile("MegairBoulder",56,0,0,0,0)
+    Goto See
+  Death:
+   TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    MGBS H 0 A_StopSound
+    MGBS H 0 A_Scream
+    MGBS H 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    MGBS H 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    MGBS H 2 A_NoBlocking
+    MGBS H 2
+    MGBS H 0 A_ChangeFlag("FloatBob", 0)
+    MGBS H 0 A_StopSoundEx("JetpackZombie/Fly")
+    MGBS H 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    MGBS H 2
+    MGBS H 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    MGBS H 2
+    MGBS H 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    MGBS H 2
+    MGBS H 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",5000)
+	Stop
+  }
+}
+
+ACTOR MegairbossRocket
+{
+  Radius 11
+  Height 4
+  Speed 50
+  Damage 5
+  Projectile
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +ROCKETTRAIL
+  +RANDOMIZE
+  SeeSound "RFLAUNCH"
+  DeathSound "SEEKXPLD"
+  States
+  {
+  Spawn:
+    RFLM A 1 Bright
+    Loop
+  Death:
+    RFLE AB 3 Bright 
+	RFLE C 3 Bright A_Explode (10,128,0)
+	RFLE DEFGHIJK 3 Bright 
+    Stop
+  }
+}
