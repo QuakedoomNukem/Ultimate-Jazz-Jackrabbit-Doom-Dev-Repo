@@ -1,0 +1,73 @@
+ACTOR LargeTurtleMech 31527
+{
+  Tag "Large Turtle Mech"
+  Health 300
+  Radius 16
+  Height 60
+  Mass 100000
+  Speed 15
+  PainChance 0
+  Monster
+  +FLOORCLIP
+  +SOLID
+  +NOINFIGHTING
+  +NOBLOOD
+    +COUNTKILL
++DONTHARMSPECIES
+  SeeSound "mechsee"
+  PainSound "mechpain"
+  DeathSound "mechpain"
+  ActiveSound "mechstep"
+  Obituary "%o was demolished by a Large Turtle Mech."
+  States
+  {
+  Spawn:
+    BMCH AB 10 A_Look
+    Loop
+  See:
+    BMCH AABBCCDD 3 A_Chase
+	BMCH A 0 A_PlaySoundEx("mech/step", 1)
+    Loop
+  Missile:
+    BMCH A 0 A_Jump(32,8)
+    BMCH E 10 A_FaceTarget
+	BMCH F 2 A_PlaySound("saurgun", CHAN_WEAPON)
+	BMCH G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
+	BMCH E 2 A_FaceTarget
+	BMCH F 2 //A_PlaySound("Saurian/SMG", CHAN_WEAPON)
+	BMCH G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
+	BMCH E 2 A_FaceTarget
+	BMCH F 2 //A_PlaySound("Saurian/SMG", CHAN_WEAPON)
+	BMCH G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
+	BMCH E 2 A_FaceTarget
+	BMCH E 0 A_SentinelRefire
+	BMCH A 0 A_Jump(32,8)
+	BMCH E 10 A_FaceTarget
+	BMCH G 8 Bright A_CustomMissile("FTFire")
+	BMCH G 8 Bright A_CustomMissile("FTFire")
+	BMCH G 8 Bright A_CustomMissile("FTFire")
+	BMCH A 0 A_Jump(32,8)
+	BMCH e 10 A_FaceTarget
+	BMCH g 4 Bright A_CustomMissile("DroneRocket",32,0,0,0,0)
+	BMCH e 10 A_FaceTarget
+	BMCH g 4 Bright A_CustomMissile("DroneRocket",32,0,0,0,0)
+	BMCH e 10 A_FaceTarget
+	BMCH g 4 Bright A_CustomMissile("DroneRocket",32,0,0,0,0)
+	TNT1 A 0
+	TNT1 A 0
+	TNT1 A 0
+    Goto See
+  Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	BMCH E 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BMCH e 2
+    BMCH e 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BMCH e 2
+    BMCH e 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BMCH e 2
+    BMCH e 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BMCH AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+        TNT1 A 0 A_GiveToTarget ("Points",1000)
+		Stop
+    }
+}

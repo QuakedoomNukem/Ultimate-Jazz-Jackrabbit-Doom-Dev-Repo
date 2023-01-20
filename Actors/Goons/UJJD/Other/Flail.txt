@@ -1,0 +1,60 @@
+ACTOR Flail 3712
+{
+	Tag "Flail"
+	Scale 3
+    Health 999
+    Speed 20
+    Height 236
+    Radius 32
+    Mass 100
+    PainChance 60
+	MeleeRange 160
+    MONSTER
+    +FLOORCLIP
+	+NOBLOOD
+	+COUNTKILL
+    +DONTHARMSPECIES
+    SeeSound "FLAILSIT"
+    PainSound "FLAILPAI"
+    DeathSound "FLAILDTH"
+    HitObituary "%o got KO'd by Flail." 
+    States 
+    { 
+    Spawn: 
+       JJFL AB 10 A_Look
+       Loop 
+    See: 
+       JJFL AABBCCDD 2 A_Chase
+       Loop 
+    Melee: 
+	   JJFL E 0
+       JJFL EF 4 A_FaceTarget
+       JJFL G 4 A_CustomMeleeAttack(15, "Clang", "", "", "")
+       Goto See 
+    Pain: 
+       JJFL H 2
+       JJFL H 2 A_Pain
+       Goto See
+    Death: 
+	TNT1 A 0 A_GiveToTarget ("Points",2000)
+    JJFL g 0 A_StopSound
+    JJFL g 0 A_Scream
+    JJFL g 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    JJFL g 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    JJFL g 2 A_NoBlocking
+    JJFL g 2
+    JJFL g 0
+    JJFL g 0 A_StopSoundEx("JetpackZombie/Fly")
+    JJFL g 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    JJFL g 2
+    JJFL g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    JJFL g 2
+    JJFL g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    JJFL g 2
+    JJFL g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    JJFL AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	JJFL HIJKLM 6
+	JJFL N -1
+	Stop
+    } 
+}

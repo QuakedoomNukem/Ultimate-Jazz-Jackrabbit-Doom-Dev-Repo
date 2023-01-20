@@ -1,0 +1,80 @@
+ACTOR ElementGoon4 4036
+{
+  Tag "Doofus Bishop"
+  Health 500
+  Radius 31
+  Height 96
+  Mass 100000
+  Speed 10
+  PainChance 128
+  Monster
+  +FLOAT
+  +FLOATBOB
+  +NOGRAVITY
+   +NOBLOOD
+   +NOINFIGHTING
+    +COUNTKILL
+ +DONTHARMCLASS
+  Obituary "%o was cursed by a Doofus Bishop."
+  States
+  {
+  Spawn:
+    ELM4 AB 1 A_Look
+    Loop
+  See:
+    ELM4 AB 1 A_Chase
+    Loop
+  Missile:
+    ELM4 C 20 A_FaceTarget
+    ELM4 D 4 
+	ELM4 E 4 
+    ELM4 F 4 Bright A_CustomMissile ("MagicAttack",32,0,0,0,0)
+	ELM4 E 4
+	ELM4 D 4
+	ELM4 C 4
+    Goto See
+  Death: 
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",1000)
+	Stop
+	Burn:
+	Death.JazzprojFire:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",1000)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	ELM4 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",1000)
+	ELM4 A 5 A_GenericFreezeDeath
+    ELM4 A 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+actor MagicAttack
+{
+    Radius 8
+    Height 8
+    Speed 30
+    Damage 5
+	DamageType Disintegrate
+    Projectile
+    +RANDOMIZE
+    RenderStyle Add
+    Alpha 0.75
+	Deathsound "BLSTRHIT"
+	DamageType "JazzProj"
+    States
+  {
+  Spawn:
+    ELMP AB 6 bright
+    TNT1 A 0 A_PlaySound("witchMAG")
+	loop
+  Death:
+    ELMH ABCDEF 3 bright
+    stop
+   }
+}

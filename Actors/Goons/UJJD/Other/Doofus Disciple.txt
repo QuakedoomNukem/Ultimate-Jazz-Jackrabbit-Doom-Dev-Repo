@@ -1,0 +1,46 @@
+ACTOR ElementGoon5 4037
+{
+  Tag "Doofus Disciple"
+  Health 700
+  Radius 31
+  Height 96
+  Mass 100000
+  Speed 10
+  PainChance 200
+  Monster
+  +FLOAT
+  +FLOATBOB
+  +NOGRAVITY
+   +NOBLOOD
+   +NOINFIGHTING
+    +COUNTKILL
+ +DONTHARMCLASS
+  Obituary "%o was cast out to oblivion by a Doofus Disciple."
+  States
+  {
+  Spawn:
+    ELM5 A 4 A_Look
+    Loop
+  See:
+    ELM5 AB 4 A_Chase
+    Loop
+  Missile:
+    ELM5 C 40 A_FaceTarget 
+    ELM5 D 1 Bright A_CustomMissile ("MagicAttack2",32,0,15,0,0)
+	ELM5 D 1 Bright A_CustomMissile ("MagicAttack2",32,0,0,0,0)
+    ELM5 D 2 Bright A_CustomMissile ("MagicAttack2",32,0,-15,0,0)
+	ELM5 D 4
+    Goto See
+  Death: 
+    ELM5 a 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    ELM5 a 2
+    ELM5 a 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ELM5 a 2
+    ELM5 a 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ELM5 a 2
+    ELM5 a 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ELM5 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 0 A_GiveToTarget ("Points",2000)
+    Stop
+  }
+}

@@ -1,0 +1,68 @@
+ACTOR DarkSparks1 4076
+{
+	Tag "Dark Realm Spark"
+	Health 50
+	Radius 18
+	Height 36
+	Mass 20000
+	Speed 12
+	PainChance 0
+	SeeSound "SPKSee"
+  PainSound "SPKPain"
+	HitObituary "%o was electrocuted by a Dark Realm Spark."
+	MONSTER
+	+NOGRAVITY
+	+FLOAT 
+	 +NOBLOOD
+	 +NOINFIGHTING
+	 +DONTHARMSPECIES
+	 +COUNTKILL
+	States
+	{
+	Spawn:
+		DSPK AB 1 A_Look
+		Loop
+    See:
+		TNT1 A 0 A_JumpIfInTargetLOS("Seen", 130)
+		DSPK ABABABABABAB 1 Bright A_Chase
+		Loop
+    Seen:
+		TNT1 A 0
+        TNT1 A 0
+		DSPK ABABABABABAB 1 
+		TNT1 A 0 A_JumpIfInTargetLOS("Seen", 130)
+		Goto See
+	Melee:
+		DSPK ABABABEF 1 A_FaceTarget
+		DSPK E 1 A_CustomMeleeAttack(random (2, 3) *5, "SPKBUZZ", "SPKBUZZ")
+		DSPK FEFABAB 1
+		goto See
+	Death:
+		TNT1 AAAAAAA 0 A_SpawnItemEx("DarkSparkPiece",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		Stop
+	}
+}
+
+actor DarkSparkPiece
+{
+  Radius 6
+  Height 8
+  Speed 25
+  FastSpeed 50
+  Gravity 0.5
+  Projectile
+  +RANDOMIZE
+  -NOGRAVITY
+  +NOBLOOD
+  RenderStyle Normal
+  States
+  {
+  Spawn:
+    DPKP ABCB 1
+    Loop
+  Death:
+    DPKP A -1
+    Stop
+  }
+}

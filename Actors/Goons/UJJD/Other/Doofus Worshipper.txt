@@ -1,0 +1,38 @@
+actor ElementGoon1 4033
+{
+Tag "Doofus Worshipper"
+height 56
+radius 16
+health 30
+mass 100000
+Monster
++SOLID
++NOBLOOD
++NOINFIGHTING
+ +COUNTKILL
+ +DONTHARMCLASS
+States
+	{
+	Spawn:
+	ELM1 A -1
+	Stop
+    Death: 
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",50)
+	Stop
+	Burn:
+	Death.JazzprojFire:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",50)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	ELM1 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",50)
+	ELM1 A 5 A_GenericFreezeDeath
+    ELM1 A 1 A_FreezeDeathChunks
+    wait
+  }
+}
