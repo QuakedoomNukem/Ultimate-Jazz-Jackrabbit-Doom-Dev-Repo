@@ -1,0 +1,75 @@
+Actor LagunicusBoss 3883
+{
+  Tag "Orbmarine"
+  Health 6000
+  Radius 20
+  Height 40
+  Mass 100000
+  Speed 25
+  PainChance 0
+  MaxStepHeight 1
+  Monster
+  Obituary "%o got Bismarck'd by The Orbmarine."
+  +Float
+  +Floatbob
+  +NOBLOOD
+  +NOINFIGHTING
+  +FLOORCLIP
+  +Nogravity
+  +Solid
+  +Dontfall
+    +COUNTKILL
++DONTHARMSPECIES
++Boss
+  States
+  {
+  Spawn:
+    LBOS ABCD 4 A_Look
+    Loop
+  See:
+    LBOS ABCD 4 A_GiveInventory("Chase_Water",1)
+    Loop
+  Missile:
+	LBOS ABCD 10 A_FaceTarget
+	LBOS E 6 A_CustomMissile("LagunicusMace", 32, 0, 0, 2, 0)
+	Goto See
+  Death:
+    LBOS A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    LBOS A 2
+    LBOS A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    LBOS A 2
+    LBOS A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    LBOS A 2
+    LBOS A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    LBOS AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",3000)
+	Stop
+  }
+}
+
+Actor LagunicusMace
+{
+   Radius 8
+   Height 11
+   Speed 25
+   Damage 3
+   PROJECTILE
+   DeathSound "SEEKXPLD"
+   ExplosionDamage 54
+   ExplosionRadius 76
+   +THRUGHOST
+   SeeSound "RFLAUNCH"
+  States
+  {
+  Spawn:
+    LMCE A 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
+	LMCE A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+    loop
+  Death:
+   SEKE AB 3 bright
+   SEKE C 3 bright A_Explode (4,32,0)
+   SEKE DEFGHIJKL 3 bright
+    stop
+  }
+}

@@ -1,0 +1,48 @@
+actor Octogoon 3230
+{
+  Tag "Octogoon"
+  Health 150
+  Radius 8
+  Height 32
+  Mass 10000
+  Speed 0
+  PainChance 0
+  MaxStepHeight 1
+  Damage 1
+  Monster
+  +FLOAT
+  +Dontfall
+  +FLOATBOB
+  +NOGRAVITY
+  +MISSILEMORE
+  +Floorclip
+   +NOBLOOD
+   +NOINFIGHTING
+   +LOOKALLAROUND
+     +COUNTKILL
++DONTHARMSPECIES
+  Obituary "%o was drowned by an Octogoon."
+  States
+  {
+  Spawn:
+    OCTO ABC 4 A_Look
+    Loop
+  See:
+    OCTO ABC 4 A_GiveInventory("Chase_Water",1)
+    Loop
+  Melee:
+    OCTO A 5 A_FaceTarget
+    OCTO B 4 A_SargAttack
+    OCTO C 4
+    Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",100)
+	Stop
+	    Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	OCTO A 5 A_GenericFreezeDeath
+    OCTO A 1 A_FreezeDeathChunks
+    wait
+  }
+}
