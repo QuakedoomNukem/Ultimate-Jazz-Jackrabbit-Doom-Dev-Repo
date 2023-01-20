@@ -1,0 +1,206 @@
+actor TurtleCruiser 4109
+{
+Tag "Turtle Cruiser"
+Health 2000
+Speed 15
+Mass 100000
+Radius 32
+Height 56
+PainChance 0
+MinMissileChance 160
+DamageFactor "TurtleCruiser", 0
+SeeSound "Turtsight"
+PainSound "Turtpain"
+ActiveSound "Turtact"
+Obituary "%o was vaporized by a Turtle Cruiser."
++FLOORCLIP
++NOBLOOD
++NOINFIGHTING
++BOSS
++fLOAT
++fLOATBOB
++nOGRAVITY
++MISSILEMORE
++NORADIUSDMG
++DONTMORPH
++BOSSDEATH
++NoTarget
++MissileEvenMore
++DONTHARMCLASS
+Monster
+    States
+    {
+    Spawn:
+        DRL1 AB 4 A_Look
+		DRL1 A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+        Loop
+    See:
+        DRL1 AB 4 A_Chase
+		DRL1 A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+        Loop
+    Missile:
+		DRL1 A 15 A_FaceTarget
+		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
+		DRL1 A 15 A_FaceTarget
+		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
+		DRL1 A 15 A_FaceTarget
+		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
+		Goto see
+    Death:
+		TNT1 A 0 A_Stopsound(CHAN_VOICE)
+		DRL1 A 0 A_Scream
+		DRL1 A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+		DRL1 A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+		DRL1 A 2 A_NoBlocking
+		DRL1 A 2
+		DRL1 A 0 A_ChangeFlag("FloatBob", 0)
+		DRL1 A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+		DRL1 A 2
+		DRL1 A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRL1 A 2
+		DRL1 A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRL1 A 2
+		DRL1 A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRL1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("TurtleDrill",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,10)
+		TNT1 AAAAAAA 0 A_SpawnItemEx("CruiserBarrel")
+		Stop
+  }
+}
+
+actor TurtleDrill 4110
+{
+Tag "Turtle Cruiser"
+Health 2000
+Speed 20
+Mass 100000
+Radius 32
+Height 56
+PainChance 0
+MinMissileChance 160
+MeleeDamage 20
+DamageFactor "DrillTurtle", 0
+SeeSound "Turtsight"
+PainSound "Turtpain"
+ActiveSound "Turtact"
+Obituary "%o took a drill to the butt by the Turtle Cruiser."
++FLOORCLIP
++LOOKALLAROUND
++NOBLOOD
++NOINFIGHTING
++BOSS
++jumpdown
++faster
++MISSILEMORE
++NORADIUSDMG
++DONTMORPH
++BOSSDEATH
++NoTarget
++MissileEvenMore
++DONTHARMCLASS
+Monster
+    States
+    {
+Spawn:
+        DRLL A 4 A_Look
+		DRLL B 4 //A_Recoil(-6)
+		DRLL B 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+		DRLL C 4 ThrustThingZ(0,38,0,0)
+		DRLL A 4 A_JumpIf(Velz == 0,"Spawn")
+		Goto Jump+4
+    See:
+		DRLL A 0 A_Facetarget
+        DRLL AAAA 1 A_Chase
+		DRLL BBBB 1 A_Facetarget
+		//DRLL A 0 A_Chase
+		DRLL B 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+		//DRLL A 0 A_Chase
+		DRLL C 0 A_Recoil(-6)
+		DRLL C 4 ThrustThingZ(0,38,0,0)
+		TNT1 A 0  A_QuakeEx(4,2,0,60,0,3000)
+		//DRLL A 0 A_Chase
+		DRLL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Melee:
+		 DRLL AB 1 A_FaceTarget 
+         DRLL C 1 A_SargAttack
+		 Goto See
+	Jump:
+        DRLL A 4
+		DRLL B 4 A_Recoil(-6)
+		DRLL B 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+		DRLL C 4 ThrustThingZ(0,38,0,0)
+		DRLL A 4 A_JumpIf(Velz == 0,"See")
+		Goto Jump+4
+	Death:
+		DRLL A 0 A_ChangeFlag("FloatBob", 0)
+		DRLL A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL A 2
+		DRLL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DRLL AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		TNT1 A 0 A_GiveToTarget ("Points",4000)
+		Stop
+  }
+}
+
+actor CruiserBarrel
+{
+  Radius 16
+  Height 12
+  Speed 25
+  FastSpeed 50
+  Gravity 0.5
+  Projectile
+  +RANDOMIZE
+  -NOGRAVITY
+  +NOBLOOD
+  States
+  {
+  Spawn:
+    DRL3 A 1
+    Loop
+  Death:
+    DRL3 A -1
+    Stop
+  }
+}
+
+actor TurtleCruiserProj
+
+{
+    Radius 8
+    Height 8
+    Speed 20
+    Damage 10
+	DamageType Disintegrate
+    Projectile
+    +RANDOMIZE
+    RenderStyle Add
+    Alpha 0.75
+    SeeSound "LFG2FIRE"
+	Deathsound "BLSTRHIT"
+	DamageType "JazzProj"
+    States
+  {
+  Spawn:
+    DRIL A 6 bright
+    loop
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+   }
+}
