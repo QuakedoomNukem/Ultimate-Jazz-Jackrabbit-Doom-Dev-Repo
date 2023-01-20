@@ -1,0 +1,96 @@
+:SeqSwingDoor1
+   Door 1
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+:SeqSwingDoor2
+   Door 2
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+:SeqSwingDoor3
+   Door 3
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+:SeqSwingDoor4
+   Door 4
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+:SeqSwingDoor5
+   Door 5
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+:SeqSwingDoor6
+   Door 6
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+:SeqSwingDoor7
+   Door 7
+   playuntildone OLDDOOROP
+   stopsound OLDDOORCL
+end
+
+
+:SoundSeq1
+        Door        1
+        platform        1
+        playrepeat      PLAT1LOP
+        stopsound      PLAT1SOP
+end
+
+:SoundSeq2
+        Door        2
+		platform        2
+		Play DoorOpen
+        stopsound      DoorClos
+end
+
+:SoundSeq3
+        Door        3
+		platform        3
+		//Play DoorOpen
+		playrepeat      DOORloop
+        stopsound      DoorClos
+end
+
+:SoundSeq4
+        platform        4
+		Play RockPLAT
+        playrepeat      ROCKYRAN
+        stopsound      RockStop
+end
+
+:SoundSeq5
+        platform        5
+        playrepeat      BARRAISE
+        stopsound      BARSTOP
+end
+
+:SoundSeq6
+   Door 6
+   playuntildone OLDDOORO
+   stopsound OLDDOORC
+end
+
+:SoundSeq8
+        platform        8
+        playrepeat      dsstnmov
+        stopsound      dspstop
+end
+
+:SoundSeq9
+        Door 9
+		platform        9
+		Play dspstart
+        stopsound      dspstop
+end

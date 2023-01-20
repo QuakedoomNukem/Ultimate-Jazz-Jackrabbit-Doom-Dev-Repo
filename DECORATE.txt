@@ -1,0 +1,258 @@
+//Player Class(es) and Weapons
+#include "actors/Jazz & Guns/Jazz.txt"
+#include "actors/Jazz & Guns/LFG 2000.txt"
+#include "actors/Jazz & Guns/Spread Gun.txt"
+#include "actors/Jazz & Guns/Slicer.txt"
+#include "actors/Jazz & Guns/Launcher.txt"
+#include "actors/Jazz & Guns/Seeker.txt"
+#include "actors/Jazz & Guns/RF Missile.txt"
+#include "actors/Jazz & Guns/Toaster.txt"
+#include "actors/Jazz & Guns/Frostbiter.txt"
+#include "actors/Jazz & Guns/Railgun.txt"
+#include "actors/Jazz & Guns/Electro-Blaster.txt"
+#include "actors/Jazz & Guns/TNT.txt"
+#include "actors/Jazz & Guns/Ammo Boxes.txt"
+
+//Self-explanatory, all powerups and pickups
+#include "actors/Pickups/Health & Armor.txt"
+#include "actors/Pickups/Powerups.txt"
+#include "actors/Pickups/Score Pickups.txt"
+#include "actors/Pickups/Hip Hop.txt"
+#include "actors/Pickups/OMF2097 Jaguar.txt"
+#include "actors/Pickups/Skyroads Ship.txt"
+#include "actors/Pickups/GBA Pickups.txt"
+#include "actors/Pickups/Easter Egg Pickups.txt"
+
+//Original JJ1 Goons from their original level appearances
+#include "actors/Goons/JJ1/Battleships/Armor-Doofus.txt"
+#include "actors/Goons/JJ1/Battleships/Evil Jazz.txt"
+#include "actors/Goons/JJ1/Battleships/Super-Bee.txt"
+
+#include "actors/Goons/JJ1/Ceramicus/Jumper Turtle.txt"
+
+#include "actors/Goons/JJ1/Crysilis/Loo Guard.txt"
+
+#include "actors/Goons/JJ1/Deckstar/Elite Doofus Guard.txt"
+
+#include "actors/Goons/JJ1/Deserto/Desert Demon.txt"
+#include "actors/Goons/JJ1/Deserto/Lizard Goons.txt"
+
+#include "actors/Goons/JJ1/Diamondus/Bumbling Bee.txt"
+#include "actors/Goons/JJ1/Diamondus/Turtle Goon.txt"
+#include "actors/Goons/JJ1/Diamondus/Turtlette.txt"
+
+#include "actors/Goons/JJ1/Dreempipes/Sewer Owl.txt"
+#include "actors/Goons/JJ1/Dreempipes/Terrapin Swimmer.txt"
+
+#include "actors/Goons/JJ1/Exoticus/Hover Doofus.txt"
+
+#include "actors/Goons/JJ1/Fanolint/Fly Flower.txt"
+#include "actors/Goons/JJ1/Fanolint/Potted Plant.txt"
+#include "actors/Goons/JJ1/Fanolint/Super Tankety Tank.txt"
+
+#include "actors/Goons/JJ1/Industrius/Hyper Tankety Tank.txt"
+
+#include "actors/Goons/JJ1/Jungrock/Buzzers.txt"
+#include "actors/Goons/JJ1/Jungrock/Jet Snake.txt"
+#include "actors/Goons/JJ1/Jungrock/Jungle Dragon.txt"
+#include "actors/Goons/JJ1/Jungrock/Ostrich.txt"
+
+#include "actors/Goons/JJ1/Lagunicus/Octoboss.txt"
+#include "actors/Goons/JJ1/Lagunicus/Octogoon.txt"
+#include "actors/Goons/JJ1/Lagunicus/Orbmarine.txt"
+
+#include "actors/Goons/JJ1/Letni/Letni Bug.txt"
+
+#include "actors/Goons/JJ1/Marbelara/Blaster Schwarzenguard.txt"
+#include "actors/Goons/JJ1/Marbelara/Drageen.txt"
+
+#include "actors/Goons/JJ1/Medivo/Helmut.txt"
+#include "actors/Goons/JJ1/Medivo/Sword.txt"
+#include "actors/Goons/JJ1/Medivo/Turtle Cruiser.txt"
+
+#include "actors/Goons/JJ1/Megairbase/Big Spark.txt"
+#include "actors/Goons/JJ1/Megairbase/Doofus Guard.txt"
+#include "actors/Goons/JJ1/Megairbase/Quake Tank.txt"
+
+#include "actors/Goons/JJ1/Muckamok/Froog.txt"
+#include "actors/Goons/JJ1/Muckamok/Zoonik.txt"
+
+#include "actors/Goons/JJ1/Nippius/Skate Pen.txt"
+#include "actors/Goons/JJ1/Nippius/Ski Turtle.txt"
+#include "actors/Goons/JJ1/Nippius/Snogoon.txt"
+
+#include "actors/Goons/JJ1/Orbitus/Beholders.txt"
+#include "actors/Goons/JJ1/Orbitus/Ostrich Steed.txt"
+#include "actors/Goons/JJ1/Orbitus/Silver Snake.txt"
+
+#include "actors/Goons/JJ1/Pezrock/Clammy.txt"
+#include "actors/Goons/JJ1/Pezrock/Green Snake.txt"
+
+#include "actors/Goons/JJ1/Raneforus/Big Hooter.txt"
+
+#include "actors/Goons/JJ1/Scraparap/Cyber Turtle.txt"
+#include "actors/Goons/JJ1/Scraparap/Gunner Drone.txt"
+#include "actors/Goons/JJ1/Scraparap/Launch Cart.txt"
+
+#include "actors/Goons/JJ1/Sluggion/Dragoon.txt"
+#include "actors/Goons/JJ1/Sluggion/Red Bat.txt"
+#include "actors/Goons/JJ1/Sluggion/Sluggi.txt"
+
+#include "actors/Goons/JJ1/Stonar/Stonar Grabber.txt"
+
+#include "actors/Goons/JJ1/Technoir/Misfire Doofus.txt"
+#include "actors/Goons/JJ1/Technoir/Tankety Tank.txt"
+
+#include "actors/Goons/JJ1/Tubelectric/Spark.txt"
+
+#include "actors/Goons/JJ1/Turtemple/Jetpack Doofus.txt"
+#include "actors/Goons/JJ1/Turtemple/Scorpweenie.txt"
+
+//Original JJ2 Goons from their original level appearances
+#include "actors/Goons/JJ2/Beach/Crab.txt"
+#include "actors/Goons/JJ2/Beach/Fish.txt"
+#include "actors/Goons/JJ2/Beach/Tube Turtle.txt"
+#include "actors/Goons/JJ2/Beach/Uterus.txt"
+
+#include "actors/Goons/JJ2/Carrotus/Flying Lizard Goon.txt"
+#include "actors/Goons/JJ2/Carrotus/Mace Schwarzenguard.txt"
+
+#include "actors/Goons/JJ2/Carrotus Castle Dungeon/Purple Bat.txt"
+#include "actors/Goons/JJ2/Carrotus Castle Dungeon/Queen Earlong.txt"
+#include "actors/Goons/JJ2/Carrotus Castle Dungeon/Tiny Dragon.txt"
+
+#include "actors/Goons/JJ2/Colonius/Fat Chick.txt"
+#include "actors/Goons/JJ2/Colonius/Fencer.txt"
+
+#include "actors/Goons/JJ2/Diamondus Remix/Bee Hive.txt"
+
+#include "actors/Goons/JJ2/Hell/Skeleton.txt"
+#include "actors/Goons/JJ2/Hell/Tiny Devil.txt"
+
+#include "actors/Goons/JJ2/Jungle/Monkey.txt"
+
+#include "actors/Goons/JJ2/Labrat/Lab Rat.txt"
+#include "actors/Goons/JJ2/Labrat/Sucker.txt"
+
+#include "actors/Goons/JJ2/Medivo Remix/Bolly.txt"
+#include "actors/Goons/JJ2/Medivo Remix/Ghost Rapier.txt"
+
+#include "actors/Goons/JJ2/Other/Cats.txt"
+#include "actors/Goons/JJ2/Other/Doggy Dog.txt"
+#include "actors/Goons/JJ2/Other/Dragonfly.txt"
+#include "actors/Goons/JJ2/Other/Witch.txt"
+#include "actors/Goons/JJ2/Other/Raven.txt"
+
+#include "actors/Goons/JJ2/Psychedelia/Mad Hatter.txt"
+
+#include "actors/Goons/JJ2/Tubelectric Remix/Remix Spark.txt"
+
+//Jazz '02 Enemies
+#include "actors/Goons/GBA/Abominable Snow Turtle.txt"
+#include "actors/Goons/GBA/Baby Saurian.txt"
+#include "actors/Goons/GBA/Chameleon Guard.txt"
+#include "actors/Goons/GBA/Chameleon Gunner.txt"
+#include "actors/Goons/GBA/Chameleon King.txt"
+#include "actors/Goons/GBA/Dark Shell.txt"
+#include "actors/Goons/GBA/Fire Chameleon.txt"
+#include "actors/Goons/GBA/Saurian General.txt"
+#include "actors/Goons/GBA/Saurian Mercenary.txt"
+#include "actors/Goons/GBA/Slimers.txt"
+#include "actors/Goons/GBA/Turtle Mech.txt"
+#include "actors/Goons/GBA/Turtle Troopers.txt"
+#include "actors/Goons/GBA/Turtlenator.txt"
+
+//New Monsters specifically made for the project & restoration of unused ones
+#include "actors/Goons/UJJD/Atlantis/Atlantis Lizard.txt"
+#include "actors/Goons/UJJD/Atlantis/Cthulhu.txt"
+#include "actors/Goons/UJJD/Atlantis/Merman.txt"
+#include "actors/Goons/UJJD/Atlantis/Queen Morey.txt"
+
+#include "actors/Goons/UJJD/Battleships/Battleship Cores.txt"
+#include "actors/Goons/UJJD/Battleships/Plasma Flyer Doofus.txt"
+#include "actors/Goons/UJJD/Battleships/Plasma Tank Doofus.txt"
+#include "actors/Goons/UJJD/Battleships/Ramming Schwarzenguard.txt"
+#include "actors/Goons/UJJD/Battleships/Rocket Flyer Schwarzenguard.txt"
+
+#include "actors/Goons/UJJD/Deckstar/Turtledactyl.txt"
+
+#include "actors/Goons/UJJD/Diamondus Remix/Big Bad Bee.txt"
+
+#include "actors/Goons/UJJD/Dreempipes/Land Terrapin.txt"
+
+#include "actors/Goons/UJJD/Easterus/Chicken.txt"
+#include "actors/Goons/UJJD/Easterus/Crazed Easter Egg.txt"
+#include "actors/Goons/UJJD/Easterus/Rooster.txt"
+
+#include "actors/Goons/UJJD/Hauntedvania/Baskervilles Hound.txt"
+#include "actors/Goons/UJJD/Hauntedvania/Count Shellcula.txt"
+#include "actors/Goons/UJJD/Hauntedvania/Turtle Bishop.txt"
+
+#include "actors/Goons/UJJD/Hell/Devan Cruiser.txt"
+#include "actors/Goons/UJJD/Hell/Devan Shell.txt"
+#include "actors/Goons/UJJD/Hell/Fire Lizard.txt"
+
+#include "actors/Goons/UJJD/Industrius/Crazy Jetpack Turtle.txt"
+#include "actors/Goons/UJJD/Industrius/Plasma Schwarzenguard.txt"
+#include "actors/Goons/UJJD/Industrius/Rocket Schwarzenguard.txt"
+
+#include "actors/Goons/UJJD/Jungrock/Mini Jungle Dragon.txt"
+#include "actors/Goons/UJJD/Jungrock/Water Snake.txt"
+
+#include "actors/Goons/UJJD/Marbelara/Heavy Titan.txt"
+
+#include "actors/Goons/UJJD/Medivo/Pyro Helmut.txt"
+
+#include "actors/Goons/UJJD/Medivo Remix/Brute Helmut.txt"
+#include "actors/Goons/UJJD/Medivo Remix/Helmut Baron.txt"
+
+#include "actors/Goons/UJJD/Muckamok/Froog Chief.txt"
+#include "actors/Goons/UJJD/Muckamok/Froog Lizard.txt"
+#include "actors/Goons/UJJD/Muckamok/Muck Bug.txt"
+#include "actors/Goons/UJJD/Muckamok/Muck Maiden.txt"
+#include "actors/Goons/UJJD/Muckamok/Snot Monkey.txt"
+#include "actors/Goons/UJJD/Muckamok/Tadpoles.txt"
+
+#include "actors/Goons/UJJD/Other/Bandersnatch.txt"
+#include "actors/Goons/UJJD/Other/Dark Realm Spark.txt"
+#include "actors/Goons/UJJD/Other/Flail.txt"
+#include "actors/Goons/UJJD/Other/Doofus Bishop.txt"
+#include "actors/Goons/UJJD/Other/Doofus Cultist.txt"
+#include "actors/Goons/UJJD/Other/Doofus Disciple.txt"
+#include "actors/Goons/UJJD/Other/Doofus Ghoul.txt"
+#include "actors/Goons/UJJD/Other/Doofus Priest.txt"
+#include "actors/Goons/UJJD/Other/Doofus Worshipper.txt"
+#include "actors/Goons/UJJD/Other/Jill Phoenix.txt"
+#include "actors/Goons/UJJD/Other/Large Turtle Mech.txt"
+#include "actors/Goons/UJJD/Other/Lochness Turtle.txt"
+
+#include "actors/Goons/UJJD/Psychedelia/Dormouse.txt"
+#include "actors/Goons/UJJD/Psychedelia/Jubjub.txt"
+#include "actors/Goons/UJJD/Psychedelia/The March Hare.txt"
+#include "actors/Goons/UJJD/Psychedelia/Tweedle Dee & Tweedle Dum.txt"
+
+#include "actors/Goons/UJJD/Technoir/Robot Turtle.txt"
+
+#include "actors/Goons/UJJD/Tubelectric Remix/Cyber Devan.txt"
+#include "actors/Goons/UJJD/Tubelectric Remix/Uber Elite Titan.txt"
+
+#include "actors/Goons/UJJD/Turtemple/Giant Turtle.txt"
+#include "actors/Goons/UJJD/Turtemple/Skeleturtle.txt"
+#include "actors/Goons/UJJD/Turtemple/Stone Turtle.txt"
+
+//Holiday Hell Hare Enemies
+#include "actors/Goons/UJJD/XMas/Candy Drops.txt"
+#include "actors/Goons/UJJD/XMas/Candyrat.txt"
+#include "actors/Goons/UJJD/XMas/Christmas Ghost.txt"
+#include "actors/Goons/UJJD/XMas/Ice Grabber.txt"
+#include "actors/Goons/UJJD/XMas/Jazz Toy.txt"
+#include "actors/Goons/UJJD/XMas/Lego Barons.txt"
+#include "actors/Goons/UJJD/XMas/Raggedy Ann Doll.txt"
+#include "actors/Goons/UJJD/XMas/Schwarzengrinch.txt"
+#include "actors/Goons/UJJD/XMas/Snow Doofus.txt"
+#include "actors/Goons/UJJD/XMas/Snow Mongrel.txt"
+#include "actors/Goons/UJJD/XMas/Snow Schwarzenguard.txt"
+
+//Other Stuff, not splitting Decorations into 30+ separate text files
+#include "actors/Decorations.txt"
+#include "actors/Other Stuff.txt"

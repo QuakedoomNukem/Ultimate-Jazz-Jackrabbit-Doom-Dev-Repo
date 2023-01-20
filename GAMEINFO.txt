@@ -1,0 +1,4 @@
+STARTUPTITLE = "Ultimate Jazz Jackrabbit Doom"
+STARTUPCOLORS = "#FFFF00","#228B22"
+
+iwad = "doom2.wad"

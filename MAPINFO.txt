@@ -1,0 +1,122 @@
+gameinfo
+{
+  titlepage = "JAZZTITL"
+  infopage = "WEPBOARD", "TUTBORD1", "TUTBORD2", "Signbord", "THANK", "GOG", "PROMO01", "PROMO02", "PROMO03", "PROMO04", "PROMO05", "PROMO06", "PROMO07", "PROMO08", "PROMO09", "PROMO10", "PROMO11"
+  playerclasses = "JazzPlayer"
+  FullscreenAutoaspect = 3
+  cursorpic = "CURSOR"
+  BorderFlat = "STATBAR2"
+  IntermissionMusic = "JJ1End"
+  TitleMusic = "JJ1TTL"
+  Border = 0, 0, "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0"  //HereticBorder //
+  pausesign = "Pausedyo"
+  AddEventHandlers = "FlashHandler"
+  QuitSound = "QuitSound"
+  Intro
+  {
+  Video = "Graphics/JAZZITO1.ivf"
+  }
+} 
+
+skill baby
+{ 
+	MonsterHealth = 2
+	DamageFactor = 0.5
+	SpawnFilter = Baby
+	Aggressiveness = 0.2
+	Name = "$VERYEASY_NAME"
+	NoInfighting
+	MustConfirm = "$VERYEASY_CONFIRM"
+	Key = "t"
+	ACSReturn = 0
+}
+
+skill easy
+{
+	MonsterHealth = 2.25
+	DamageFactor = 0.75
+	SpawnFilter = Easy
+	Aggressiveness = 0.4
+	Name = "$EASY_NAME"
+	MustConfirm = "$EASY_CONFIRM"
+	NoInfighting
+	Key = "i"
+	ACSReturn = 1
+}
+
+skill normal
+{
+	MonsterHealth = 2.5
+	SpawnFilter = Normal
+	Aggressiveness = 0.6
+	Name = "$NORMAL_NAME"
+	MustConfirm = "$NORMAL_CONFIRM"
+	NoInfighting
+	Key = "s"
+	ACSReturn = 2
+}
+
+skill hard
+{
+	MonsterHealth = 2.75
+	DamageFactor = 1.25
+	SpawnFilter = Hard
+	Aggressiveness = 0.8
+	Name = "$HARD_NAME"
+	MustConfirm = "$HARD_CONFIRM"
+	NoInfighting
+	Key = "w"
+	ACSReturn = 3
+}
+
+skill nightmare
+{
+	AmmoFactor = 2
+	DisableCheats
+	MonsterHealth = 3
+	DamageFactor = 1.5
+	Aggressiveness = 1.0
+	SpawnFilter = Nightmare
+	Name = "$VERYHARD_NAME"
+	MustConfirm = "$VERYHARD_CONFIRM"
+	NoInfighting
+	Key = "b"
+	ACSReturn = 4
+}
+
+clearepisodes
+
+episode E1L1 
+{
+name = "$E1_NAME"
+key = "r"
+}
+
+episode E2L1 
+{
+name = "$E2_NAME"
+key = "m"
+}
+
+episode E3L1 
+{
+name = "$E3_NAME"
+key = "c"
+}
+
+episode E4L1 
+{
+name = "$E4_NAME"
+key = "t"
+}
+
+//episode E5L1 { name = "$E5_NAME" key = "t"}
+
+include "mapinfo/Episode 1.txt"
+include "mapinfo/Episode 2.txt"
+include "mapinfo/Episode 3.txt"
+include "mapinfo/Episode 4.txt"
+include "mapinfo/Jazzy Elements.txt"
+include "mapinfo/Episode 5.txt"
+include "mapinfo/Bonus Stages.txt"
+

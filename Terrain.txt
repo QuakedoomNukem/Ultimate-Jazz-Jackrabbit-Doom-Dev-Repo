@@ -1,0 +1,126 @@
+terrain CloudWalk
+{
+	splash			CloudWalk
+    footclip		0
+	liquid
+}
+
+splash CloudWalk
+{
+	smallclass		None
+	smallclip		0
+	smallsound		None
+	baseclass		None
+	chunkclass		None
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			cloudstep
+	noalert
+}
+
+splash JazzSludge
+{
+   baseclass      JJWaterSplash
+   sound         WatSplsh
+   noalert
+}
+
+
+splash JazzWater
+{
+   baseclass      JJWaterSplash
+   sound         WatSplsh
+   noalert
+}
+
+splash JazzLAva
+{
+   baseclass      WalkFire
+   sound         LavSplsh
+   noalert
+}
+
+terrain JazzSludge
+{
+	splash			JazzSludge
+	liquid
+}
+
+terrain JazzWater
+{
+	splash			JazzWater
+	liquid
+}
+
+terrain JazzLava
+{
+	splash			JazzLava
+	liquid
+}
+
+floor dlww1a Jazzwater
+floor dlww1b Jazzwater
+floor dlww1c Jazzwater
+
+floor dlnd18a Jazzwater
+floor dlnd18b Jazzwater
+floor dlnd18c Jazzwater
+
+floor dlnd27a JazzSludge
+floor dlnd27b JazzSludge
+floor dlnd27c JazzSludge
+
+floor sewg1a JazzSludge
+floor sewg1b JazzSludge
+floor sewg1c JazzSludge
+
+floor DARKWTR1 Jazzwater
+floor DARKWTR2 Jazzwater
+floor DARKWTR3 Jazzwater
+
+floor DREM42A Jazzwater
+floor DREM42B Jazzwater
+floor DREM42C Jazzwater
+
+floor fwater1 Jazzwater
+floor fwater2 Jazzwater
+floor fwater3 Jazzwater
+floor fwater4 Jazzwater
+
+floor JREDLQ1 Jazzwater
+floor JREDLQ2 Jazzwater
+floor JREDLQ3 Jazzwater
+
+floor JLFLAT1 JazzLava
+floor JLFLAT2 JazzLava
+floor JLFLAT3 JazzLava
+
+floor JROCK18A Jazzwater
+floor JROCK18B Jazzwater
+floor JROCK18C Jazzwater
+
+floor MARLAV1 JazzLava
+floor MARLAV2 JazzLava
+floor MARLAV3 JazzLava
+
+floor ORB28 Jazzwater
+floor ORB29 Jazzwater
+floor ORB30 Jazzwater
+
+floor WDES1 Jazzwater
+floor WDES2 Jazzwater
+floor WDES3 Jazzwater
+
+floor WINTER48 CloudWalk
+floor ELEM15 CloudWalk
+floor ELEM16 CloudWalk
+
+floor XMAS42A Jazzwater
+floor XMAS42B Jazzwater
+floor XMAS42C Jazzwater
+
+floor CRYS2A JazzLava
+floor CRYS2B JazzLava
+floor CRYS2C JazzLava

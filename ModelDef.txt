@@ -1,0 +1,290 @@
+Model MedivoModel
+{ 
+   Path "models"
+   SKIN 0 "Peel_TX"
+   MODEL 0 "Pastil1.md2"
+   Scale 0.5 0.5 0.5
+   
+   FrameIndex MEDM A 0 0
+}
+
+Model MedivoFloorModel
+{ 
+   Path "models"
+   SKIN 0 "Peel_TX"
+   MODEL 0 "Pastil_Half1.md2"
+   Scale 0.5 0.5 0.5
+   
+   FrameIndex MEDM B 0 0
+}
+
+Model MedivoCeilingModel
+{ 
+   Path "models"
+   SKIN 0 "Peel_TX"
+   MODEL 0 "Pastil_Half2.md2"
+   Scale 0.5 0.5 0.5
+   
+   FrameIndex MEDM C 0 0
+}
+
+//Red Pad Model
+
+Model RedPadLowModel
+{ 
+   Path "models"
+   SKIN 0 "Red_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex RPAD B 0 0
+FrameIndex RPAD A 0 0
+}
+
+Model RedPadLowModel2
+{
+   Path "models"
+   SKIN 0 "Red_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex RPAD B 0 0
+FrameIndex RPAD A 1 0
+}
+
+Model RedPadHighModel
+{ 
+   Path "models"
+   SKIN 0 "Red_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex RPAD B 0 0
+FrameIndex RPAD A 0 0
+}
+
+Model RedPadHighModel2
+{ 
+   Path "models"
+   SKIN 0 "Red_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex RPAD B 0 0
+FrameIndex RPAD A 1 0
+}
+
+//Green Pad Model
+
+Model GreenPadLowModel
+{ 
+   Path "models"
+   SKIN 0 "Green_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex GPAD B 0 0
+FrameIndex GPAD A 0 0
+}
+
+Model GreenPadLowModel2
+{
+   Path "models"
+   SKIN 0 "Green_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex GPAD B 0 0
+FrameIndex GPAD A 0 0
+}
+
+Model GreenPadHighModel
+{ 
+   Path "models"
+   SKIN 0 "Green_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex GPAD B 0 0
+FrameIndex GPAD A 0 0
+}
+
+Model GreenPadHighModel2
+{ 
+   Path "models"
+   SKIN 0 "Green_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex GPAD B 0 0
+FrameIndex GPAD A 0 0
+}
+
+//Blue Pad Model
+
+Model BluePadLowModel
+{ 
+   Path "models"
+   SKIN 0 "Purple_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex BPAD B 0 0
+FrameIndex BPAD A 0 0
+}
+
+Model BluePadLowModel2
+{
+   Path "models"
+   SKIN 0 "Purple_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex BPAD B 0 0
+FrameIndex BPAD A 0 0
+}
+
+Model BluePadHighModel
+{ 
+   Path "models"
+   SKIN 0 "Purple_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex BPAD B 0 0
+FrameIndex BPAD A 0 0
+}
+
+Model BluePadHighModel2
+{ 
+   Path "models"
+   SKIN 0 "Purple_Pad"
+   MODEL 0 "Pad_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex BPAD B 0 0
+FrameIndex BPAD A 0 0
+}
+
+//Hover Red Pad
+
+Model HoverRedPadModel
+{ 
+   Path "models"
+   SKIN 0 "Red_Pad"
+   MODEL 0 "Pad_Fire_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex HSPG A 0 0
+FrameIndex HSPG D 0 0
+}
+
+Model HoverRedPadModel2
+{
+   Path "models"
+   SKIN 0 "Red_Pad"
+   MODEL 0 "Pad_Fire_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex HSPG A 0 0
+FrameIndex HSPG D 1 0
+}
+
+//Hover Green Pad
+
+Model HoverGreenPadModel
+{ 
+   Path "models"
+   SKIN 0 "Green_Pad"
+   MODEL 0 "Pad_Fire_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex HSPG B 0 0
+FrameIndex HSPG E 1 0
+}
+
+Model HoverGreenPadModel2
+{
+   Path "models"
+   SKIN 0 "Green_Pad"
+   MODEL 0 "Pad_Fire_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex HSPG B 0 0
+FrameIndex HSPG E 1 0
+}
+
+//Hover Purple Pad
+
+Model HoverPurplePadModel
+{ 
+   Path "models"
+   SKIN 0 "Purple_Pad"
+   MODEL 0 "Pad_Fire_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex HSPG C 0 0
+}
+
+Model HoverPurplePadModel2
+{
+   Path "models"
+   SKIN 0 "Purple_Pad"
+   MODEL 0 "Pad_Fire_Down.md2"
+   Scale 0.3 0.3 0.3
+   Zoffset 8
+   
+FrameIndex HSPG C 0 0
+}
+
+//Holiday
+
+Model Cookieman01Model
+{
+  RollOffset 90
+  Path "models"
+  Model 0 "Cookieman01out.md3"
+  Skin 0 "Cookieman_TX"
+  Scale 1.0 1.0 1.0
+  Zoffset 1
+  FrameIndex UNKN A 0 0
+}
+
+Model Cookieman02Model
+{
+   RollOffset 90
+   Path "models"
+   Model 0 "Cookieman02out.md3"
+   Skin 0 "Cookieman_TX"
+   Scale 1.0 1.0 1.0
+   Zoffset 1
+   FrameIndex UNKN B 0 0
+}
+
+Model Cookieman03Model
+{
+   RollOffset 90 
+   Path "models"
+   Model 0 "Cookieman03out.md3"
+   Skin 0 "Cookieman_TX"
+   Scale 1.0 1.0 1.0
+   Zoffset 1
+   FrameIndex UNKN C 0 0
+}

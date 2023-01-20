@@ -1,0 +1,1827 @@
+switch doom SW1_Jazz
+on sound SWITCH1N
+pic SW2_Jazz tics 0 
+
+Off sound SW2_Jazz
+pic SW1_Jazz tics 0 
+
+switch doom CARRSW1
+on sound PullSW1
+pic CARRSW2 tics 0 
+
+Off sound CARRSW2
+pic CARRSW1 tics 0 
+
+switch doom TUBSW1
+on sound SWITCH1N
+pic TUBSW2 tics 0 
+
+Off sound SWITCH1F
+pic TUBSW1 tics 0 
+
+switch doom JSW4S1
+on sound SWITCH1N
+pic JSW4S2 tics 0 
+
+Off sound SWITCH1F
+pic JSW4S1 tics 0 
+
+switch doom MEDSW1 
+on sound PullSW1
+pic MEDSW2 tics 8 
+pic MEDSW3 tics 8  
+
+switch doom CASTSW1 
+on sound PullSW1
+pic CASTSW2 tics 8 
+pic CASTSW3 tics 8  
+
+switch doom swjjta
+on sound PullSW1
+pic swjjta tics 8 
+pic swjjtb tics 8 
+pic swjjtc tics 8 
+
+off sound PullSW1
+pic swjjtc tics 8 
+pic swjjtb tics 8 
+pic swjjta tics 0
+
+
+switch doom DIASWI1
+on sound GEMSWITC
+pic DIASWI2 tics 0 
+
+Off sound GEMSWITC
+pic DIASWI1 tics 0 
+
+switch doom DIASWI3
+on sound GEMSWITC
+pic DIASWI4 tics 0 
+
+Off sound GEMSWITC
+pic DIASWI3 tics 0 
+
+switch doom DKRMSW1
+on sound SWITCH1N
+pic DKRMSW2 tics 0 
+
+Off sound DKRMSW2
+pic DKRMSW2 tics 0 
+
+
+switch doom CHAMSWI1 
+on sound PullSW1
+pic CHAMSWI2 tics 8 
+pic CHAMSWI3 tics 8  
+
+texture BONUSA1A
+pic BONUSA1A tics 1
+pic BONUSA1B tics 1
+pic BONUSA1C tics 1
+pic BONUSA1D tics 1
+pic BONUSA1E tics 1
+pic BONUSA1F tics 1
+pic BONUSA1G tics 1
+pic BONUSA1H tics 1
+pic BONUSA1I tics 1
+
+texture BONUSG8A
+pic BONUSG8A tics 1
+pic BONUSG8B tics 1
+pic BONUSG8C tics 1
+pic BONUSG8D tics 1
+pic BONUSG8E tics 1
+pic BONUSG8F tics 1
+
+texture BONUSO1A
+pic BONUSO1A tics 1
+pic BONUSO1B tics 1
+pic BONUSO1C tics 1
+pic BONUSO1D tics 1
+pic BONUSO1E tics 1
+pic BONUSO1F tics 1
+pic BONUSO1G tics 1
+pic BONUSO1H tics 1
+pic BONUSO1I tics 1
+pic BONUSO1J tics 1
+pic BONUSO1K tics 1
+pic BONUSO1L tics 1
+pic BONUSO1M tics 1
+pic BONUSO1N tics 1
+pic BONUSO1O tics 1
+pic BONUSO1P tics 1
+
+texture BONUSO2A
+pic BONUSO2A tics 1
+pic BONUSO2P tics 1
+pic BONUSO2O tics 1
+pic BONUSO2N tics 1
+pic BONUSO2M tics 1
+pic BONUSO2L tics 1
+pic BONUSO2K tics 1
+pic BONUSO2J tics 1
+pic BONUSO2I tics 1
+pic BONUSO2H tics 1
+pic BONUSO2G tics 1
+pic BONUSO2F tics 1
+pic BONUSO2E tics 1
+pic BONUSO2D tics 1
+pic BONUSO2C tics 1
+pic BONUSO2B tics 1
+
+texture BONUSO3A
+pic BONUSO3A tics 1
+pic BONUSO3P tics 1
+pic BONUSO3O tics 1
+pic BONUSO3N tics 1
+pic BONUSO3M tics 1
+pic BONUSO3L tics 1
+pic BONUSO3K tics 1
+pic BONUSO3J tics 1
+pic BONUSO3I tics 1
+pic BONUSO3H tics 1
+pic BONUSO3G tics 1
+pic BONUSO3F tics 1
+pic BONUSO3E tics 1
+pic BONUSO3D tics 1
+pic BONUSO3C tics 1
+pic BONUSO3B tics 1
+
+texture BONUSO4A
+pic BONUSO4A tics 1
+pic BONUSO4B tics 1
+pic BONUSO4C tics 1
+pic BONUSO4D tics 1
+pic BONUSO4E tics 1
+pic BONUSO4F tics 1
+pic BONUSO4G tics 1
+pic BONUSO4H tics 1
+pic BONUSO4I tics 1
+pic BONUSO4J tics 1
+pic BONUSO4K tics 1
+pic BONUSO4L tics 1
+pic BONUSO4M tics 1
+pic BONUSO4N tics 1
+pic BONUSO4O tics 1
+pic BONUSO4P tics 1
+
+texture BONUSO5A
+pic BONUSO5A tics 1
+pic BONUSO5P tics 1
+pic BONUSO5O tics 1
+pic BONUSO5N tics 1
+pic BONUSO5M tics 1
+pic BONUSO5L tics 1
+pic BONUSO5K tics 1
+pic BONUSO5J tics 1
+pic BONUSO5I tics 1
+pic BONUSO5H tics 1
+pic BONUSO5G tics 1
+pic BONUSO5F tics 1
+pic BONUSO5E tics 1
+pic BONUSO5D tics 1
+pic BONUSO5C tics 1
+pic BONUSO5B tics 1
+
+texture BONUSO6A
+pic BONUSO6A tics 1
+pic BONUSO6P tics 1
+pic BONUSO6O tics 1
+pic BONUSO6N tics 1
+pic BONUSO6M tics 1
+pic BONUSO6L tics 1
+pic BONUSO6K tics 1
+pic BONUSO6J tics 1
+pic BONUSO6I tics 1
+pic BONUSO6H tics 1
+pic BONUSO6G tics 1
+pic BONUSO6F tics 1
+pic BONUSO6E tics 1
+pic BONUSO6D tics 1
+pic BONUSO6C tics 1
+pic BONUSO6B tics 1
+
+texture BONUSO7A
+pic BONUSO7A tics 1
+pic BONUSO7P tics 1
+pic BONUSO7O tics 1
+pic BONUSO7N tics 1
+pic BONUSO7M tics 1
+pic BONUSO7L tics 1
+pic BONUSO7K tics 1
+pic BONUSO7J tics 1
+pic BONUSO7I tics 1
+pic BONUSO7H tics 1
+pic BONUSO7G tics 1
+pic BONUSO7F tics 1
+pic BONUSO7E tics 1
+pic BONUSO7D tics 1
+pic BONUSO7C tics 1
+pic BONUSO7B tics 1
+
+texture BONUSO8A
+pic BONUSO8A tics 1
+pic BONUSO8P tics 1
+pic BONUSO8O tics 1
+pic BONUSO8N tics 1
+pic BONUSO8M tics 1
+pic BONUSO8L tics 1
+pic BONUSO8K tics 1
+pic BONUSO8J tics 1
+pic BONUSO8I tics 1
+pic BONUSO8H tics 1
+pic BONUSO8G tics 1
+pic BONUSO8F tics 1
+pic BONUSO8E tics 1
+pic BONUSO8D tics 1
+pic BONUSO8C tics 1
+pic BONUSO8B tics 1
+
+texture BONUSU1A
+pic BONUSU1A tics 1
+pic BONUSU1B tics 1
+pic BONUSU1C tics 1
+pic BONUSU1D tics 1
+pic BONUSU1E tics 1
+pic BONUSU1F tics 1
+pic BONUSU1G tics 1
+pic BONUSU1H tics 1
+pic BONUSU1I tics 1
+pic BONUSU1J tics 1
+pic BONUSU1K tics 1
+pic BONUSU1L tics 1
+pic BONUSU1M tics 1
+pic BONUSU1N tics 1
+pic BONUSU1O tics 1
+pic BONUSU1P tics 1
+
+texture BONUSU2A
+pic BONUSU2A tics 1
+pic BONUSU2P tics 1
+pic BONUSU2O tics 1
+pic BONUSU2N tics 1
+pic BONUSU2M tics 1
+pic BONUSU2L tics 1
+pic BONUSU2K tics 1
+pic BONUSU2J tics 1
+pic BONUSU2I tics 1
+pic BONUSU2H tics 1
+pic BONUSU2G tics 1
+pic BONUSU2F tics 1
+pic BONUSU2E tics 1
+pic BONUSU2D tics 1
+pic BONUSU2C tics 1
+pic BONUSU2B tics 1
+
+texture BONUSU3A
+pic BONUSU3A tics 1
+pic BONUSU3P tics 1
+pic BONUSU3O tics 1
+pic BONUSU3N tics 1
+pic BONUSU3M tics 1
+pic BONUSU3L tics 1
+pic BONUSU3K tics 1
+pic BONUSU3J tics 1
+pic BONUSU3I tics 1
+pic BONUSU3H tics 1
+pic BONUSU3G tics 1
+pic BONUSU3F tics 1
+pic BONUSU3E tics 1
+pic BONUSU3D tics 1
+pic BONUSU3C tics 1
+pic BONUSU3B tics 1
+
+texture BONUSU4A
+pic BONUSU4A tics 1
+pic BONUSU4B tics 1
+pic BONUSU4C tics 1
+pic BONUSU4D tics 1
+pic BONUSU4E tics 1
+pic BONUSU4F tics 1
+pic BONUSU4G tics 1
+pic BONUSU4H tics 1
+pic BONUSU4I tics 1
+pic BONUSU4J tics 1
+pic BONUSU4K tics 1
+pic BONUSU4L tics 1
+pic BONUSU4M tics 1
+pic BONUSU4N tics 1
+pic BONUSU4O tics 1
+pic BONUSU4P tics 1
+
+texture BONUSU5A
+pic BONUSU5A tics 1
+pic BONUSU5P tics 1
+pic BONUSU5O tics 1
+pic BONUSU5N tics 1
+pic BONUSU5M tics 1
+pic BONUSU5L tics 1
+pic BONUSU5K tics 1
+pic BONUSU5J tics 1
+pic BONUSU5I tics 1
+pic BONUSU5H tics 1
+pic BONUSU5G tics 1
+pic BONUSU5F tics 1
+pic BONUSU5E tics 1
+pic BONUSU5D tics 1
+pic BONUSU5C tics 1
+pic BONUSU5B tics 1
+
+texture BONUSU6A
+pic BONUSU6A tics 1
+pic BONUSU6P tics 1
+pic BONUSU6O tics 1
+pic BONUSU6N tics 1
+pic BONUSU6M tics 1
+pic BONUSU6L tics 1
+pic BONUSU6K tics 1
+pic BONUSU6J tics 1
+pic BONUSU6I tics 1
+pic BONUSU6H tics 1
+pic BONUSU6G tics 1
+pic BONUSU6F tics 1
+pic BONUSU6E tics 1
+pic BONUSU6D tics 1
+pic BONUSU6C tics 1
+pic BONUSU6B tics 1
+
+texture BONUSU7A
+pic BONUSU7A tics 1
+pic BONUSU7P tics 1
+pic BONUSU7O tics 1
+pic BONUSU7N tics 1
+pic BONUSU7M tics 1
+pic BONUSU7L tics 1
+pic BONUSU7K tics 1
+pic BONUSU7J tics 1
+pic BONUSU7I tics 1
+pic BONUSU7H tics 1
+pic BONUSU7G tics 1
+pic BONUSU7F tics 1
+pic BONUSU7E tics 1
+pic BONUSU7D tics 1
+pic BONUSU7C tics 1
+pic BONUSU7B tics 1
+
+texture BONUSU8A
+pic BONUSU8A tics 1
+pic BONUSU8P tics 1
+pic BONUSU8O tics 1
+pic BONUSU8N tics 1
+pic BONUSU8M tics 1
+pic BONUSU8L tics 1
+pic BONUSU8K tics 1
+pic BONUSU8J tics 1
+pic BONUSU8I tics 1
+pic BONUSU8H tics 1
+pic BONUSU8G tics 1
+pic BONUSU8F tics 1
+pic BONUSU8E tics 1
+pic BONUSU8D tics 1
+pic BONUSU8C tics 1
+pic BONUSU8B tics 1
+
+texture bship27a
+pic bship27a tics 1
+pic bship27b tics 1
+pic bship27c tics 1
+pic bship27d tics 1
+
+texture bship28a
+pic bship28a tics 1
+pic bship28b tics 1
+pic bship28c tics 1
+pic bship28d tics 1
+
+texture bship29a
+pic bship29a tics 1
+pic bship29b tics 1
+pic bship29c tics 1
+pic bship29d tics 1
+
+texture bship30a
+pic bship30a tics 1
+pic bship30b tics 1
+pic bship30c tics 1
+pic bship30d tics 1
+
+texture bship31a
+pic bship31a tics 1
+pic bship31b tics 1
+pic bship31c tics 1
+pic bship31d tics 1
+
+texture bship32a
+pic bship32a tics 1
+pic bship32b tics 1
+pic bship32c tics 1
+pic bship32d tics 1
+pic bship32e tics 1
+pic bship32f tics 1
+pic bship32g tics 1
+pic bship32h tics 1
+
+texture bship43a
+pic bship43a tics 1
+pic bship43b tics 1
+pic bship43c tics 1
+pic bship43d tics 1
+pic bship43e tics 1
+pic bship43f tics 1
+pic bship43g tics 1
+pic bship43h tics 1
+
+texture bship44a
+pic bship44a tics 1
+pic bship44b tics 1
+pic bship44c tics 1
+pic bship44d tics 1
+pic bship44e tics 1
+pic bship44f tics 1
+pic bship44g tics 1
+pic bship44h tics 1
+
+texture COMP6
+pic COMP6 tics 3
+pic COMP7 tics 3
+
+texture DARKWTR1
+pic DARKWTR1 tics 4
+pic DARKWTR2 tics 4
+pic DARKWTR3 tics 4
+pic DARKWTR2 tics 4
+
+texture DARKWTF1
+pic DARKWTF1 tics 4
+pic DARKWTF2 tics 4
+pic DARKWTF3 tics 4
+
+TEXTURE DECK10A
+PIC DECK10A TICS 1
+PIC DECK10B TICS 1
+PIC DECK10C TICS 1
+PIC DECK10D TICS 1
+
+TEXTURE DECK12A
+PIC DECK12A TICS 1
+PIC DECK12B TICS 1
+PIC DECK12C TICS 1
+PIC DECK12D TICS 1
+
+TEXTURE DECK17A
+PIC DECK17A TICS 1
+PIC DECK17B TICS 1
+PIC DECK17C TICS 1
+PIC DECK17D TICS 1
+
+TEXTURE DECK23A
+PIC DECK23A TICS 3
+PIC DECK23B TICS 3
+PIC DECK23C TICS 3
+PIC DECK23D TICS 3
+PIC DECK23E TICS 3
+
+TEXTURE DECK26A
+PIC DECK26A TICS 1
+PIC DECK26B TICS 1
+PIC DECK26C TICS 1
+PIC DECK26D TICS 1
+PIC DECK26E TICS 1
+
+TEXTURE DECK27A
+PIC DECK27A TICS 1
+PIC DECK27B TICS 1
+PIC DECK27C TICS 1
+PIC DECK27D TICS 1
+PIC DECK27E TICS 1
+PIC DECK27F TICS 1
+
+TEXTURE DECK33A
+PIC DECK33A TICS 1
+PIC DECK33B TICS 1
+PIC DECK33C TICS 1
+PIC DECK33D TICS 1
+PIC DECK33E TICS 1
+
+TEXTURE DECK41A
+PIC DECK41A TICS 1
+PIC DECK41B TICS 1
+PIC DECK41C TICS 1
+
+TEXTURE DIA1
+PIC DIA1 TICS 8
+PIC DIA1A TICS 4
+PIC DIA1B TICS 4
+PIC DIA1C TICS 4
+PIC DIA1B TICS 4
+PIC DIA1A TICS 4
+
+TEXTURE DIA2
+PIC DIA2 TICS 8
+PIC DIA2A TICS 4
+PIC DIA2B TICS 4
+PIC DIA2C TICS 4
+PIC DIA2B TICS 4
+PIC DIA2A TICS 4
+
+TEXTURE DIA4
+PIC DIA4 TICS 8
+PIC DIA4A TICS 4
+PIC DIA4B TICS 4
+PIC DIA4C TICS 4
+PIC DIA4B TICS 4
+PIC DIA4A TICS 4
+
+TEXTURE DIA26
+PIC DIA26 TICS 8
+PIC DIA26A TICS 4
+PIC DIA26B TICS 4
+PIC DIA26C TICS 4
+PIC DIA26B TICS 4
+PIC DIA26A TICS 4
+
+TEXTURE DIA29
+PIC DIA29 TICS 8
+PIC DIA29A TICS 4
+PIC DIA29B TICS 4
+PIC DIA29C TICS 4
+PIC DIA29B TICS 4
+PIC DIA29A TICS 4
+
+texture DIASKY1
+pic DIASKY1 tics 2
+pic DIASK1A tics 2
+pic DIASK1B tics 2
+
+texture DIASKY2
+pic DIASKY2 tics 2
+pic DIASK2A tics 2
+pic DIASK2B tics 2
+
+texture DIASKY4
+pic DIASKY4 tics 2
+pic DIASK4A tics 2
+pic DIASK4B tics 2
+
+texture dlnd18a
+pic dlnd18a tics 4
+pic dlnd18b tics 4
+pic dlnd18c tics 4
+pic dlnd18b tics 4
+
+texture dlwf19a
+pic dlwf19a tics 2
+pic dlwf19b tics 2
+pic dlwf19c tics 2
+pic dlwf19d tics 2
+pic dlwf19e tics 2
+pic dlwf19f tics 2
+pic dlwf19g tics 2
+pic dlwf19h tics 2
+
+texture dlnd27a
+pic dlnd27a tics 4
+pic dlnd27b tics 4
+pic dlnd27c tics 4
+pic dlnd27b tics 4
+
+texture dlwf1a
+pic dlwf1a tics 2
+pic dlwf1b tics 2
+pic dlwf1c tics 2
+pic dlwf1d tics 2
+pic dlwf1e tics 2
+pic dlwf1f tics 2
+pic dlwf1g tics 2
+pic dlwf1h tics 2
+
+texture dlww1a
+pic dlww1a tics 4
+pic dlww1b tics 4
+pic dlww1c tics 4
+pic dlww1b tics 4
+
+texture dlwf28a
+pic dlwf28a tics 2
+pic dlwf28b tics 2
+pic dlwf28c tics 2
+pic dlwf28d tics 2
+pic dlwf28e tics 2
+pic dlwf28f tics 2
+pic dlwf28g tics 2
+pic dlwf28h tics 2
+
+texture drem30a
+pic drem30a tics 1
+pic drem30b tics 1
+pic drem30c tics 1
+pic drem30d tics 1
+pic drem30e tics 1
+pic drem30f tics 1
+pic drem30g tics 1
+pic drem30h tics 1
+
+texture drem31a
+pic drem31a tics 1
+pic drem31b tics 1
+pic drem31c tics 1
+pic drem31d tics 1
+pic drem31e tics 1
+pic drem31f tics 1
+pic drem31g tics 1
+pic drem31h tics 1
+
+texture drem32h
+pic drem32h tics 1
+pic drem32g tics 1
+pic drem32f tics 1
+pic drem32e tics 1
+pic drem32d tics 1
+pic drem32c tics 1
+pic drem32b tics 1
+pic drem32a tics 1
+
+texture drem33a
+pic drem33a tics 1
+pic drem33b tics 1
+pic drem33c tics 1
+pic drem33d tics 1
+pic drem33e tics 1
+pic drem33f tics 1
+pic drem33g tics 1
+pic drem33h tics 1
+
+texture drem34a
+pic drem34a tics 1
+pic drem34b tics 1
+pic drem34c tics 1
+pic drem34d tics 1
+
+texture drem35a
+pic drem35a tics 1
+pic drem35b tics 1
+pic drem35c tics 1
+pic drem35d tics 1
+pic drem35e tics 1
+pic drem35f tics 1
+pic drem35g tics 1
+pic drem35h tics 1
+
+texture drem36h
+pic drem36h tics 1
+pic drem36g tics 1
+pic drem36f tics 1
+pic drem36e tics 1
+pic drem36d tics 1
+pic drem36c tics 1
+pic drem36b tics 1
+pic drem36a tics 1
+
+texture drem37a
+pic drem37a tics 1
+pic drem37b tics 1
+pic drem37c tics 1
+pic drem37d tics 1
+pic drem37e tics 1
+pic drem37f tics 1
+pic drem37g tics 1
+pic drem37h tics 1
+
+texture drem41a
+pic drem41a tics 4
+pic drem41b tics 4
+pic drem41c tics 4
+
+texture drem42a
+pic drem42a tics 4
+pic drem42b tics 4
+pic drem42c tics 4
+pic drem42b tics 4
+
+texture ELEM81A
+pic ELEM81A tics 2
+pic ELEM81B tics 2
+pic ELEM81C tics 2
+pic ELEM81D tics 2
+pic ELEM81E tics 2
+pic ELEM81F tics 2
+pic ELEM81G tics 2
+pic ELEM81H tics 2
+
+texture ELM102A
+pic ELM102A tics 3
+pic ELM102B tics 3
+pic ELM102C tics 3
+pic ELM102D tics 3
+pic ELM102E tics 3
+pic ELM102F tics 3
+pic ELM102G tics 3
+pic ELM102H tics 3
+pic ELM102I tics 3
+pic ELM102J tics 3
+
+texture EXO20
+PIC EXO20 TICS 4
+PIC EXO21 TICS 4
+PIC EXO22 TICS 4
+
+texture FAN1
+pic FAN1 tics 1
+pic FAN2 tics 1
+pic FAN3 tics 1
+pic FAN4 tics 1
+pic FAN5 tics 1
+pic FAN6 tics 1
+pic FAN7 tics 1
+pic FAN8 tics 1
+pic FAN9 tics 1
+pic FAN10 tics 1
+pic FAN11 tics 1
+pic FAN12 tics 1
+pic FAN13 tics 1
+pic FAN14 tics 1
+pic FAN15 tics 1
+pic FAN16 tics 1
+
+TEXTURE FRZ3
+PIC FRZ3 TICS 1
+PIC FRZ3A TICS 1
+PIC FRZ3B TICS 1
+PIC FRZ3C TICS 1
+PIC FRZ3D TICS 1
+PIC FRZ3E TICS 1
+PIC FRZ3F TICS 1
+
+TEXTURE FRZTEX2
+PIC FRZTEX2 TICS 1
+PIC FRZTEX2A TICS 1
+PIC FRZTEX2B TICS 1
+
+TEXTURE FRZTEX4 //Unused?
+PIC FRZTEX4 TICS 1
+PIC FRZTEX4A TICS 1
+PIC FRZTEX4B TICS 1
+PIC FRZTEX4C TICS 1
+PIC FRZTEX4D TICS 1
+PIC FRZTEX4E TICS 1
+PIC FRZTEX4F TICS 1
+
+TEXTURE FRZTEX6
+PIC FRZTEX6 TICS 1
+PIC FRZTEX6A TICS 1
+PIC FRZTEX6B TICS 1
+PIC FRZTEX6C TICS 1
+PIC FRZTEX6D TICS 1
+PIC FRZTEX6E TICS 1
+PIC FRZTEX6F TICS 1
+
+TEXTURE FRZTEX8
+PIC FRZTEX8 TICS 1
+PIC FRZTEX8A TICS 1
+PIC FRZTEX8B TICS 1
+PIC FRZTEX8C TICS 1
+PIC FRZTEX8D TICS 1
+PIC FRZTEX8E TICS 1
+PIC FRZTEX8F TICS 1
+
+texture GOLDL1
+pic GOLDL1 tics 3
+pic GOLDL2 tics 3
+pic GOLDL3 tics 3
+pic GOLDL4 tics 3
+
+TEXTURE INDU4
+PIC INDU4 TICS 1
+PIC INDU4A TICS 1
+PIC INDU4B TICS 1
+PIC INDU4A TICS 1
+
+TEXTURE IND7
+PIC IND7 TICS 1
+PIC IND7A TICS 1
+PIC IND7B TICS 1
+PIC IND7C TICS 1
+PIC IND7D TICS 1
+PIC IND7E TICS 1
+PIC IND7F TICS 1
+PIC IND7G TICS 1
+
+texture JLFLAT1
+pic JLFLAT1 tics 4
+pic JLFLAT2 tics 4
+pic JLFLAT3 tics 4
+pic JLFLAT2 tics 4
+
+texture JREDLQ1
+pic JREDLQ1 tics 4
+pic JREDLQ2 tics 4
+pic JREDLQ3 tics 4
+pic JREDLQ2 tics 4
+
+texture jrock10a
+pic jrock10a tics 1
+pic jrock10b tics 1
+pic jrock10c tics 1
+pic jrock10d tics 1
+pic jrock10e tics 1
+pic jrock10f tics 1
+pic jrock10g tics 1
+pic jrock10h tics 1
+
+texture jrock13a
+pic jrock13a tics 1
+pic jrock13b tics 1
+pic jrock13c tics 1
+pic jrock13d tics 1
+
+texture jrock14a
+pic jrock14a tics 1
+pic jrock14b tics 1
+pic jrock14c tics 1
+pic jrock14d tics 1
+pic jrock14e tics 1
+pic jrock14f tics 1
+
+texture jrock15a
+pic jrock15a tics 1
+pic jrock15b tics 1
+pic jrock15c tics 1
+pic jrock15d tics 1
+
+texture jrock17a
+pic jrock17a tics 1
+pic jrock17b tics 1
+pic jrock17c tics 1
+pic jrock17d tics 1
+pic jrock17e tics 1
+pic jrock17f tics 1
+pic jrock17g tics 1
+pic jrock17h tics 1
+
+texture jrock18a
+pic jrock18a tics 4
+pic jrock18b tics 4
+pic jrock18c tics 4
+pic jrock18b tics 4
+
+texture LAB4
+pic LAB4 tics 4
+pic LAB5 tics 4
+pic LAB6 tics 4
+pic LAB7 tics 4
+
+texture LETNI17
+pic LETNI17 TICS 1
+pic LETNI18 TICS 1
+pic LETNI19 TICS 1
+pic LETNI20 TICS 1
+pic LETNI21 TICS 1
+pic LETNI22 TICS 1
+pic LETNI23 TICS 1
+pic LETNI24 TICS 1
+
+TEXTURE LETNI25
+PIC LETNI25 TICS 1
+PIC LETNI26 TICS 1
+PIC LETNI27 TICS 1
+PIC LETNI28 TICS 1
+PIC LETNI29 TICS 1
+PIC LETNI30 TICS 1
+PIC LETNI31 TICS 1
+PIC LETNI32 TICS 1
+
+TEXTURE LETNI37
+PIC LETNI37 TICS 1
+PIC LETNI37A TICS 1
+PIC LETNI37B TICS 1
+PIC LETNI37C TICS 1
+
+TEXTURE LETNI38
+PIC LETNI38 TICS 1
+PIC LETNI38A TICS 1
+PIC LETNI38B TICS 1
+PIC LETNI38C TICS 1
+
+texture LETNI41
+pic LETNI41 tics 5
+pic LETNI41A tics 1
+pic LETNI41B tics 1
+pic LETNI41C tics 1
+pic LETNI41D tics 1
+pic LETNI41E tics 1
+pic LETNI41F tics 1
+pic LETNI41E tics 1
+pic LETNI41D tics 1
+pic LETNI41C tics 1
+pic LETNI41B tics 1
+pic LETNI41A tics 1
+
+texture LETNI42
+pic LETNI42 tics 1
+pic LETNI42D tics 1
+pic LETNI42E tics 1
+pic LETNI42F tics 1
+pic LETNI42G tics 1
+pic LETNI42H tics 1
+pic LETNI42I tics 1
+pic LETNI42J tics 1
+pic LETNI42G tics 1
+pic LETNI42L tics 1
+pic LETNI42E tics 1
+pic LETNI42N tics 1
+pic LETNI42 tics 1
+pic LETNI42A tics 1
+pic LETNI42B tics 1
+pic LETNI42C tics 1
+
+texture LETNI43
+pic LETNI43 tics 5
+pic LETNI43A tics 1
+pic LETNI43B tics 1
+pic LETNI43C tics 1
+pic LETNI43D tics 1
+pic LETNI43E tics 1
+pic LETNI43F tics 1
+pic LETNI43E tics 1
+pic LETNI43D tics 1
+pic LETNI43C tics 1
+pic LETNI43B tics 1
+pic LETNI43A tics 1
+
+texture LETNI44
+pic LETNI44 tics 5
+pic LETNI44A tics 1
+pic LETNI44B tics 1
+pic LETNI44C tics 1
+pic LETNI44D tics 1
+pic LETNI44E tics 1
+pic LETNI44F tics 1
+pic LETNI44E tics 1
+pic LETNI44D tics 1
+pic LETNI44C tics 1
+pic LETNI44B tics 1
+pic LETNI44A tics 1
+
+texture LETNI45
+pic LETNI45 tics 5
+pic LETNI45A tics 1
+pic LETNI45B tics 1
+pic LETNI45C tics 1
+pic LETNI45D tics 1
+pic LETNI45E tics 1
+pic LETNI45F tics 1
+pic LETNI45E tics 1
+pic LETNI45D tics 1
+pic LETNI45C tics 1
+pic LETNI45B tics 1
+pic LETNI45A tics 1
+
+texture LETNI46
+pic LETNI46 tics 5
+pic LETNI46A tics 1
+pic LETNI46B tics 1
+pic LETNI46C tics 1
+pic LETNI46D tics 1
+pic LETNI46E tics 1
+pic LETNI46F tics 1
+pic LETNI46E tics 1
+pic LETNI46D tics 1
+pic LETNI46C tics 1
+pic LETNI46B tics 1
+pic LETNI46A tics 1
+
+TEXTURE LETNI50
+PIC LETNI50 TICS 1
+PIC LETNI51 TICS 1
+PIC LETNI52 TICS 1
+PIC LETNI53 TICS 1
+PIC LETNI50 TICS 1
+PIC LETNI53A TICS 1
+PIC LETNI53B TICS 1
+PIC LETNI53C TICS 1
+PIC LETNI53D TICS 1
+PIC LETNI53E TICS 1
+PIC LETNI53F TICS 1
+PIC LETNI53G TICS 1
+PIC LETNI53D TICS 1
+PIC LETNI53I TICS 1
+PIC LETNI53B TICS 1
+PIC LETNI53K TICS 1
+
+TEXTURE LETNI53
+PIC LETNI53 TICS 5
+PIC LETNI53A TICS 1
+PIC LETNI53B TICS 1
+PIC LETNI53C TICS 1
+PIC LETNI53D TICS 1
+PIC LETNI53E TICS 1
+PIC LETNI53F TICS 1
+PIC LETNI53E TICS 1
+PIC LETNI53D TICS 1
+PIC LETNI53C TICS 1
+PIC LETNI53B TICS 1
+PIC LETNI53A TICS 1
+
+TEXTURE LETNI54
+PIC LETNI54 TICS 1
+PIC LETNI54A TICS 1
+PIC LETNI54B TICS 1
+PIC LETNI54C TICS 1
+
+TEXTURE LTUBE1
+PIC	LTUBE1	TICS 3
+PIC	LTUBE2	TICS 3
+PIC	LTUBE3	TICS 3
+PIC	LTUBE4	TICS 3
+PIC	LTUBE5	TICS 3
+PIC	LTUBE6	TICS 3
+PIC	LTUBE7	TICS 3
+PIC	LTUBE8	TICS 3
+
+texture MARLAV1
+pic MARLAV1 tics 4
+pic MARLAV2 tics 4
+pic MARLAV3 tics 4
+pic MARLAV2 tics 4
+
+texture MARLAVF1
+pic MARLAVF1 tics 2
+pic MARLAVF2 tics 2
+pic MARLAVF3 tics 2
+pic MARLAVF4 tics 2
+pic MARLAVF5 tics 2
+pic MARLAVF6 tics 2
+pic MARLAVF7 tics 2
+pic MARLAVF8 tics 2
+
+texture MED5
+pic MED5 tics 1
+pic MED5A tics 1
+pic MED5B tics 1
+pic MED5C tics 1
+pic MED5D tics 1
+pic MED5E tics 1
+pic MED5F tics 1
+pic MED5G tics 1
+pic MED5H tics 1
+pic MED5I tics 1
+pic MED5J tics 1
+pic MED5K tics 1
+pic MED5L tics 1
+pic MED5M tics 1
+pic MED5N tics 1
+pic MED5O tics 1
+pic MED5P tics 1
+pic MED5Q tics 1
+pic MED5R tics 1
+pic MED5S tics 1
+pic MED5T tics 1
+pic MED5U tics 1
+
+
+texture MED6
+pic MED6 tics 1
+pic MED6A tics 1
+pic MED6B tics 1
+pic MED6C tics 1
+pic MED6D tics 1
+pic MED6E tics 1
+pic MED6F tics 1
+pic MED6G tics 1
+pic MED6H tics 1
+pic MED6I tics 1
+pic MED6J tics 1
+pic MED6K tics 1
+pic MED6L tics 1
+pic MED6M tics 1
+pic MED6N tics 1
+pic MED6O tics 1
+
+texture MEDTEX2
+pic MEDTEX2 tics 1
+pic MEDTEX2A tics 1
+pic MEDTEX2B tics 1
+pic MEDTEX2C tics 1
+
+texture mega27a
+pic mega27a tics 1
+pic mega27b tics 1
+pic mega27c tics 1
+pic mega27d tics 1
+pic mega27e tics 1
+pic mega27f tics 1
+pic mega27g tics 1
+pic mega27h tics 1
+
+texture mega28a
+pic mega28a tics 1
+pic mega28b tics 1
+pic mega28c tics 1
+pic mega28d tics 1
+
+
+TEXTURE MFALL1
+PIC MFALL1 TICS 4
+PIC MFALL2 TICS 4
+PIC MFALL3 TICS 4
+
+TEXTURE MLIQ1
+PIC MLIQ1 TICS 4
+PIC MLIQ2 TICS 4
+PIC MLIQ3 TICS 4
+PIC MLIQ2 TICS 4
+
+TEXTURE NIP4
+PIC NIP4 TICS 1
+PIC NIP4A TICS 1
+PIC NIP4B TICS 1
+PIC NIP4C TICS 1
+PIC NIP4D TICS 1
+PIC NIP4E TICS 1
+
+TEXTURE NIP15
+PIC NIP15 TICS 1
+PIC NIP15A TICS 1
+PIC NIP15B TICS 1
+PIC NIP15C TICS 1
+PIC NIP15D TICS 1
+PIC NIP15E TICS 1
+PIC NIP15F TICS 1
+
+TEXTURE NIP16
+PIC NIP16 TICS 1
+PIC NIP16A TICS 1
+PIC NIP16B TICS 1
+PIC NIP16C TICS 1
+PIC NIP16D TICS 1
+PIC NIP16E TICS 1
+PIC NIP16F TICS 1
+
+TEXTURE NIP17
+PIC NIP17 TICS 1
+PIC NIP17A TICS 1
+PIC NIP17B TICS 1
+PIC NIP17C TICS 1
+PIC NIP17D TICS 1
+PIC NIP17E TICS 1
+PIC NIP17F TICS 1
+
+TEXTURE NIP19
+PIC NIP19 TICS 1
+PIC NIP19A TICS 1
+PIC NIP19B TICS 1
+PIC NIP19C TICS 1
+PIC NIP19D TICS 1
+PIC NIP19E TICS 1
+PIC NIP19F TICS 1
+
+texture ORB6
+pic ORB6 tics 1
+pic ORB6A tics 1
+pic ORB6B tics 1
+pic ORB6C tics 1
+
+texture ORB9
+pic ORB9 tics 1
+pic ORB9A tics 1
+pic ORB9B tics 1
+pic ORB9C tics 1
+
+texture ORB16A
+pic ORB16A tics 1
+pic ORB16B tics 1
+pic ORB16C tics 1
+pic ORB16D tics 1
+pic ORB16E tics 1
+pic ORB16F tics 1
+pic ORB16G tics 1
+pic ORB16H tics 1
+
+texture ORB19
+pic ORB19 tics 4
+pic ORB20 tics 4
+pic ORB21 tics 4
+
+texture ORB28
+pic ORB28 tics 4
+pic ORB29 tics 4
+pic ORB30 tics 4
+pic ORB29 tics 4
+
+texture ORB16
+pic ORB16 tics 1
+pic ORB40A tics 1
+pic ORB40B tics 1
+pic ORB40C tics 1
+pic ORB40D tics 1
+pic ORB40E tics 1
+pic ORB40F tics 1
+pic ORB40G tics 1
+
+texture PEZ31A
+pic PEZ31A tics 1
+pic PEZ31B tics 1
+pic PEZ31C tics 1
+pic PEZ31D tics 1
+
+texture poll29a
+pic poll29a tics 1
+pic poll29b tics 35
+pic poll29c tics 3
+pic poll29d tics 3
+pic poll29e tics 3
+pic poll29f tics 3
+pic poll29g tics 1
+
+texture poll31a
+pic poll31a tics 1
+pic poll31b tics 1
+pic poll31c tics 1
+pic poll31d tics 1
+pic poll31e tics 1
+pic poll31f tics 1
+pic poll31g tics 1
+pic poll31h tics 1
+pic poll31i tics 1
+pic poll31j tics 1
+
+texture poll32a
+pic poll32a tics 1
+pic poll32b tics 1
+pic poll32c tics 1
+pic poll32d tics 1
+
+texture scrap8a
+pic scrap8a tics 1
+pic scrap8b tics 1
+pic scrap8c tics 1
+pic scrap8d tics 1
+pic scrap8e tics 1
+pic scrap8f tics 1
+pic scrap8g tics 1
+pic scrap8h tics 1
+
+texture scrap10a
+pic scrap10a tics 1
+pic scrap10b tics 1
+pic scrap10c tics 1
+pic scrap10d tics 1
+pic scrap10e tics 1
+pic scrap10f tics 1
+pic scrap10g tics 1
+pic scrap10h tics 1
+
+texture scrap11a
+pic scrap11a tics 1
+pic scrap11b tics 1
+pic scrap11c tics 1
+pic scrap11d tics 1
+pic scrap11e tics 1
+pic scrap11f tics 1
+pic scrap11g tics 1
+pic scrap11h tics 1
+
+texture scrap15a
+pic scrap15a tics 1
+pic scrap15b tics 1
+pic scrap15c tics 1
+pic scrap15d tics 1
+pic scrap15e tics 1
+pic scrap15f tics 1
+pic scrap15g tics 1
+pic scrap15h tics 1
+
+texture scrap16a
+pic scrap16a tics 1
+pic scrap16b tics 1
+pic scrap16c tics 1
+pic scrap16d tics 1
+pic scrap16e tics 1
+pic scrap16f tics 1
+pic scrap16g tics 1
+pic scrap16h tics 1
+
+texture scrap18a
+pic scrap18a tics 3
+pic scrap18b tics 3
+pic scrap18c tics 3
+
+texture scrap19a
+pic scrap19a tics 3
+pic scrap19b tics 3
+pic scrap19c tics 3
+
+texture scrap24a
+pic scrap24a tics 1
+pic scrap24b tics 1
+pic scrap24c tics 1
+pic scrap24d tics 1
+pic scrap24e tics 1
+pic scrap24f tics 1
+pic scrap24g tics 1
+pic scrap24h tics 1
+
+texture sewg1a
+pic sewg1a tics 4
+pic sewg1b tics 4
+pic sewg1c tics 4
+
+texture sfal1a
+pic sfal1a tics 1
+pic sfal1b tics 1
+pic sfal1c tics 1
+pic sfal1d tics 1
+pic sfal1e tics 1
+pic sfal1f tics 1
+pic sfal1g tics 1
+pic sfal1h tics 1
+
+texture SFALL1
+PIC SFALL1 TICS 4
+PIC SFALL2 TICS 4
+PIC SFALL3 TICS 4
+PIC SFALL4 TICS 4
+
+texture slug15a
+pic slug15a tics 1
+pic slug15b tics 1
+pic slug15c tics 1
+pic slug15d tics 1
+
+TEXTURE TECH3
+PIC TECH3 TICS 1
+PIC TECH3A TICS 1
+PIC TECH3B TICS 1
+PIC TECH3C TICS 1
+
+TEXTURE TECH21
+PIC TECH21 TICS 2
+PIC TECH21A TICS 2
+PIC TECH21B TICS 2
+
+TEXTURE TECH24
+PIC TECH24 TICS 1
+PIC TECH24A TICS 1
+PIC TECH24B TICS 1
+PIC TECH24C TICS 1
+
+TEXTURE TECH30
+PIC TECH30 TICS 1
+PIC TECH30C TICS 1
+PIC TECH30B TICS 1
+PIC TECH30A TICS 1
+
+TEXTURE TECH38
+PIC TECH38 TICS 1
+PIC TECH38A TICS 1
+PIC TECH38B TICS 1
+PIC TECH38C TICS 1
+
+TEXTURE TECH42
+PIC TECH42 TICS 1
+PIC TECH42A TICS 1
+PIC TECH42B TICS 1
+PIC TECH42C TICS 1
+
+TEXTURE TECH43
+PIC TECH43 TICS 1
+PIC TECH43A TICS 1
+PIC TECH43B TICS 1
+PIC TECH43C TICS 1
+
+TEXTURE TECH52
+PIC TECH52 TICS 1
+PIC TECH52A TICS 1
+PIC TECH52B TICS 1
+PIC TECH52C TICS 1
+
+TEXTURE TECH53
+PIC TECH53 TICS 1
+PIC TECH53A TICS 1
+PIC TECH53B TICS 1
+PIC TECH53C TICS 1
+
+TEXTURE TECH60
+PIC TECH60 TICS 1
+PIC TECH61 TICS 1
+PIC TECH62 TICS 1
+PIC TECH63 TICS 1
+
+TEXTURE TECH64
+PIC TECH64 TICS 1
+PIC TECH65 TICS 1
+PIC TECH66 TICS 1
+PIC TECH67 TICS 1
+
+TEXTURE TECH68
+PIC TECH68 TICS 1
+PIC TECH69 TICS 1
+PIC TECH70 TICS 1
+PIC TECH71 TICS 1
+
+TEXTURE TECH72
+PIC TECH72 TICS 1
+PIC TECH73 TICS 1
+PIC TECH74 TICS 1
+PIC TECH75 TICS 1
+
+TEXTURE TECH76
+PIC TECH76 TICS 1
+PIC TECH77 TICS 1
+PIC TECH78 TICS 1
+PIC TECH79 TICS 1
+
+TEXTURE TECH88
+PIC TECH88 TICS 1
+PIC TECH88A TICS 1
+PIC TECH88B TICS 1
+PIC TECH88C TICS 1
+
+texture TECHS1
+pic TECHS1 tics 4
+pic TECHS2 tics 4
+
+TEXTURE TECHSK1
+PIC TECHSK1 TICS 1
+PIC TECHSK1A TICS 1
+PIC TECHSK1B TICS 1
+PIC TECHSK1A TICS 1
+
+TEXTURE TLAV1
+PIC TLAV1 TICS 2
+PIC TLAV2 TICS 2
+PIC TLAV3 TICS 2
+PIC TLAV4 TICS 2
+PIC TLAV5 TICS 2
+PIC TLAV6 TICS 2
+PIC TLAV7 TICS 2
+PIC TLAV8 TICS 2
+
+TEXTURE TUBE10
+PIC TUBE10 TICS 1
+PIC TUBE10A TICS 1
+PIC TUBE10B TICS 1
+PIC TUBE10C TICS 1
+PIC TUBE10D TICS 1
+PIC TUBE10E TICS 1
+PIC TUBE10F TICS 1
+PIC TUBE10G TICS 1
+PIC TUBE10H TICS 1
+PIC TUBE10I TICS 1
+PIC TUBE10J TICS 1
+PIC TUBE10K TICS 1
+PIC TUBE10L TICS 1
+PIC TUBE10M TICS 1
+PIC TUBE10N TICS 1
+PIC TUBE10O TICS 1
+
+texture TUBE13
+pic TUBE13 tics 1
+pic TUBE13A tics 1
+pic TUBE13B tics 1
+pic TUBE13C tics 1
+pic TUBE14 tics 1
+pic TUBE13C tics 1
+pic TUBE13B tics 1
+pic TUBE13A tics 1
+
+texture TUBE15
+pic TUBE15 tics 1
+pic TUBE16 tics 1
+pic TUBE17 tics 1
+pic TUBE18 tics 1
+pic TUBE34 tics 1
+pic TUBE35 tics 1
+pic TUBE36 tics 1
+pic TUBE37 tics 1
+
+TEXTURE TUBE40
+PIC TUBE40 TICS 1
+PIC TUBE40A TICS 1
+PIC TUBE40B TICS 1
+PIC TUBE40C TICS 1
+PIC TUBE40D TICS 1
+PIC TUBE40E TICS 1
+PIC TUBE40F TICS 1
+PIC TUBE40G TICS 1
+PIC TUBE40H TICS 1
+PIC TUBE40I TICS 1
+PIC TUBE40J TICS 1
+PIC TUBE40K TICS 1
+PIC TUBE40L TICS 1
+PIC TUBE40M TICS 1
+PIC TUBE40N TICS 1
+PIC TUBE40O TICS 1
+
+texture TUBE44
+pic TUBE44 tics 1
+pic TUBE44A tics 1
+pic TUBE44B tics 1
+pic TUBE44C tics 1
+pic TUBE44D tics 1
+pic TUBE44C tics 1
+pic TUBE44B tics 1
+pic TUBE44A tics 1
+
+TEXTURE TUBE45
+PIC TUBE45 TICS 1
+PIC TUBE45A TICS 1
+PIC TUBE45B TICS 1
+PIC TUBE45C TICS 1
+PIC TUBE45D TICS 1
+PIC TUBE45C TICS 1
+PIC TUBE45B TICS 1
+PIC TUBE45A TICS 1
+
+TEXTURE TUBE45E
+PIC TUBE45E TICS 1
+PIC TUBE45F TICS 1
+PIC TUBE45 TICS 1
+PIC TUBE45F TICS 1
+PIC TUBE45E TICS 1
+PIC TUBE45F TICS 1
+PIC TUBE45 TICS 1
+PIC TUBE45F TICS 1
+
+TEXTURE TUBE45G
+PIC TUBE45G TICS 1
+PIC TUBE45 TICS 2
+PIC TUBE45H TICS 1
+PIC TUBE45I TICS 1
+PIC TUBE45H TICS 1
+PIC TUBE45 TICS 2
+
+TEXTURE TUBE45J
+PIC TUBE45J TICS 1
+PIC TUBE45G TICS 1
+PIC TUBE45I TICS 2
+PIC TUBE45H TICS 1
+PIC TUBE45I TICS 2
+PIC TUBE45G TICS 1
+
+TEXTURE TUBE46
+PIC TUBE46 TICS 1
+PIC TUBE46A TICS 1
+PIC TUBE46B TICS 1
+PIC TUBE46C TICS 1
+PIC TUBE46D TICS 1
+PIC TUBE46E TICS 1
+PIC TUBE46F TICS 1
+PIC TUBE46G TICS 1
+PIC TUBE46H TICS 1
+PIC TUBE46I TICS 1
+PIC TUBE46J TICS 1
+PIC TUBE46K TICS 1
+PIC TUBE46L TICS 1
+PIC TUBE46M TICS 1
+PIC TUBE46N TICS 1
+PIC TUBE46O TICS 1
+PIC TUBE46N TICS 1
+PIC TUBE46M TICS 1
+PIC TUBE46L TICS 1
+PIC TUBE46K TICS 1
+PIC TUBE46J TICS 1
+PIC TUBE46I TICS 1
+PIC TUBE46H TICS 1
+PIC TUBE46G TICS 1
+PIC TUBE46F TICS 1
+PIC TUBE46E TICS 1
+PIC TUBE46D TICS 1
+PIC TUBE46C TICS 1
+PIC TUBE46B TICS 1
+PIC TUBE46A TICS 1
+
+TEXTURE TUBTEX5
+PIC TUBTEX5 TICS 1
+PIC TUBTEX5A TICS 1
+PIC TUBTEX5B TICS 1
+PIC TUBTEX5C TICS 1
+PIC TUBTEX5D TICS 1
+PIC TUBTEX5E TICS 1
+PIC TUBTEX5F TICS 1
+PIC TUBTEX5G TICS 1
+PIC TUBTEX5H TICS 1
+PIC TUBTEX5I TICS 1
+PIC TUBTEX5J TICS 1
+PIC TUBTEX5K TICS 1
+PIC TUBTEX5L TICS 1
+PIC TUBTEX5M TICS 1
+PIC TUBTEX5N TICS 1
+PIC TUBTEX5O TICS 1
+
+texture wat1
+pic wat1 tics 4
+pic wat2 tics 4
+pic wat3 tics 4
+
+texture wdes1
+pic wdes1 tics 4
+pic wdes2 tics 4
+pic wdes3 tics 4
+pic wdes2 tics 4
+
+texture XMAS28A
+pic XMAS28A tics 4
+pic XMAS28B tics 4
+
+texture XMAS30A
+pic XMAS30A tics 3
+pic XMAS30B tics 3
+pic XMAS30C tics 3
+pic XMAS30D tics 3
+pic XMAS30E tics 3
+pic XMAS30F tics 3
+
+texture XMAS31A
+pic XMAS31A tics 4
+pic XMAS31B tics 4
+pic XMAS31C tics 4
+pic XMAS31D tics 4
+pic XMAS31E tics 4
+
+texture XMAS42A
+pic XMAS42A tics 4
+pic XMAS42B tics 4
+pic XMAS42C tics 4
+pic XMAS42B tics 4
+
+texture XMAS43A
+pic XMAS43A tics 3
+pic XMAS43B tics 3
+pic XMAS43C tics 3
+pic XMAS43D tics 3
+pic XMAS43E tics 3
+pic XMAS43F tics 3
+pic XMAS43G tics 3
+pic XMAS43H tics 3
+
+texture CRYS1A
+pic CRYS1A tics 1
+pic CRYS1B tics 1
+pic CRYS1C tics 1
+pic CRYS1D tics 1
+pic CRYS1E tics 1
+pic CRYS1F tics 1
+pic CRYS1G tics 1
+pic CRYS1H tics 1
+
+TEXTURE CRYS2A
+PIC CRYS2A TICS 4
+PIC CRYS2B TICS 4
+PIC CRYS2C TICS 4
+PIC CRYS2B TICS 4
+
+//Tubelectric Remix
+
+texture TUBER2A
+pic TUBER2A tics 3
+pic TUBER2B tics 3
+pic TUBER2C tics 3
+pic TUBER2D tics 3
+pic TUBER2E tics 3
+pic TUBER2F tics 3
+
+texture TUBER10A
+pic TUBER10A tics 2
+pic TUBER10B tics 2
+pic TUBER10C tics 2
+pic TUBER10D tics 2
+
+texture TUBER26A
+pic TUBER26A tics 2
+pic TUBER26B tics 2
+pic TUBER26C tics 2
+pic TUBER26D tics 2
+
+texture TUBER55A
+pic TUBER55A tics 3
+pic TUBER55B tics 3
+pic TUBER55C tics 3
+pic TUBER55D tics 3
+pic TUBER55E tics 3
+
+texture TUBER56A
+pic TUBER56A tics 3
+pic TUBER56B tics 3
+pic TUBER56C tics 3
+pic TUBER56D tics 3
+pic TUBER56E tics 3
+
+texture TUBER57A
+pic TUBER57A tics 3
+pic TUBER57B tics 3
+pic TUBER57C tics 3
+pic TUBER57D tics 3
+pic TUBER57E tics 3
+
+texture TUBER58A
+pic TUBER58A tics 3
+pic TUBER58B tics 3
+pic TUBER58C tics 3
+pic TUBER58D tics 3
+pic TUBER58E tics 3
+
+texture TUBER59A
+pic TUBER59A tics 3
+pic TUBER59B tics 3
+pic TUBER59C tics 3
+pic TUBER59D tics 3
+pic TUBER59E tics 3
+
+texture TUBER60A
+pic TUBER60A tics 2
+pic TUBER60B tics 2
+pic TUBER60C tics 2
+pic TUBER60D tics 2
+pic TUBER60E tics 2
+pic TUBER60F tics 2
+pic TUBER60G tics 2
+pic TUBER60H tics 2
+
+texture TUBER61A
+pic TUBER61A tics 2
+pic TUBER61B tics 2
+pic TUBER61C tics 2
+pic TUBER61D tics 2
+pic TUBER61E tics 2
+pic TUBER61F tics 2
+pic TUBER61G tics 2
+pic TUBER61H tics 2
+
+
+
+//Medivo Remix
+
+texture MEDRX13A
+pic MEDRX13A tics 2
+pic MEDRX13B tics 2
+pic MEDRX13C tics 2
+pic MEDRX13D tics 2
+pic MEDRX13E tics 2
+pic MEDRX13F tics 2
+pic MEDRX13G tics 2
+pic MEDRX13H tics 2
+pic MEDRX13I tics 2
+
+texture MEDRX25A
+pic MEDRX25A tics 2
+pic MEDRX25B tics 2
+pic MEDRX25C tics 2
+pic MEDRX25D tics 2
+pic MEDRX25E tics 2
+pic MEDRX25F tics 2
+pic MEDRX25G tics 2
+pic MEDRX25H tics 2
+pic MEDRX25I tics 2
+pic MEDRX25J tics 2
+
+//Chelonia FRCL1A
+
+texture FRCL1A
+pic FRCL1A tics 2
+pic FRCL1B tics 2
+pic FRCL1C tics 2
+pic FRCL1B tics 2
+
+//Epic Arcade Screens
+
+texture BLOM_AT1
+pic BLOM_AT1 tics 12
+pic BLOM_AT2 tics 12
+
+texture DSGMRAT1
+pic DSGMRAT1 tics 12
+pic DSGMRAT2 tics 12
+
+texture EP_AT1
+pic EP_AT1 tics 12
+pic EP_AT2 tics 12
+
+texture JAZZ_AT1
+pic JAZZ_AT1 tics 12
+pic JAZZ_AT2 tics 12
+
+texture JILL_AT1
+pic JILL_AT1 tics 12
+pic JILL_AT2 tics 12
+
+texture KEN_AT1
+pic KEN_AT1 tics 12
+pic KEN_AT2 tics 12
+
+texture RADXAT1
+pic RADXAT1 tics 12
+pic RADXAT2 tics 12
+
+texture TRANAT1
+pic TRANAT1 tics 12
+pic TRANAT2 tics 12
+
+texture UT99_AT1
+pic UT99_AT1 tics 12
+pic UT99_AT2 tics 12
+
+texture UNRL_AT1
+pic UNRL_AT1 tics 12
+pic UNRL_AT2 tics 12
