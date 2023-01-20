@@ -1,0 +1,76 @@
+ACTOR BigBeeBoss 3966
+{
+  Tag "Big Bad Bee"
+  Health 6000
+  Radius 24
+  Height 104
+  Mass 100000
+  Speed 20
+  Damage 6
+  PainChance 128
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +MISSILEMORE
+  +DONTFALL
+  +NOICEDEATH
+   +NOBLOOD
+   +NOINFIGHTING
+   +BOSS
+   +COUNTKILL
+ +DONTHARMCLASS
+  Obituary "%o couldn't stand a chance against the Big Bad Bee."
+  States
+  {
+  Spawn:
+    BBEE AB 3 A_Look
+	BBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    Loop
+  See:
+    BBEE AB 3 A_Chase
+	BBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    Loop
+  Missile:
+    BBEE A 0 A_Jump (256, "BeeSpawner","ThrustZAttack","StingAttack")
+    BBEE A 8 A_FaceTarget
+    TNT1 A 0 A_PlaySound ("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)
+  ThrustZAttack:
+	BBEE A 10 A_FaceTarget
+	TNT1 A 0 ThrustThingZ(0,64,0,0)
+	TNT1 A 0  A_QuakeEx(4,2,0,60,4,3000)
+  StingAttack:
+    BBEE A 10 A_FaceTarget
+    BBEE AB 4 A_SkullAttack
+    BBEE AB 2
+	BBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+  BeeSpawner:
+	BBEE A 50 A_FaceTarget
+	BBEE B 5 Bright A_PainAttack("Bee",0,PAF_AIMFACING,5)
+	BBEE A 50 A_FaceTarget
+	BBEE B 5 Bright A_PainAttack("Bee",0,PAF_AIMFACING,5)
+	BBEE A 50 A_FaceTarget
+	BBEE B 5 Bright A_PainAttack("Bee",0,PAF_AIMFACING,5)
+	BBEE A 50 A_FaceTarget
+	BBEE B 5 Bright A_PainAttack("Bee",0,PAF_AIMFACING,5)
+    Goto See
+    Death:
+	TNT1 A 0 A_GiveToTarget ("Points",5000)
+	TNT1 A 0 A_PlaySound ("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)
+    BBEE A 0 A_StopSound
+    BBEE A 0 A_Scream
+    BBEE B 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    BBEE B 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    BBEE B 2 A_NoBlocking
+    BBEE B 2
+    BBEE A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BBEE B 2
+    BBEE B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BBEE B 2
+    BBEE B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BBEE B 2
+    BBEE B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BBEE AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 100 
+    Stop
+  }
+}
