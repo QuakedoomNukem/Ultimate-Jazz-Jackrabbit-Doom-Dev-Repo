@@ -1,0 +1,68 @@
+actor MiniDragon 3836
+{
+	Tag "Mini Jungle Dragon"
+    Health 75
+    Radius 14
+    Height 44
+    Speed 30
+    PainChance 0
+    Mass 10000
+	Monster
+	Obituary "%o was scorched by a Mini Jungle Dragon."
+    	+SOLID
+		+NOBLOOD
+		+NoInfighting
+		+JUMPDOWN
+		+Faster
+		+LOOKALLAROUND
+		+NOICEDEATH
+		+JUSTHIT
+		+MISSILEMORE
+		+NORADIUSDMG
+		-NoTarget
+		+MissileEvenMore
+		+COUNTKILL
+		+DONTHARMSPECIES
+    States
+    {
+    Spawn:
+		MDRG A 8 A_Look
+		loop
+    See:
+		MDRG A 8 A_Chase
+		MDRG A 0 A_Recoil(-6)
+		MDRG B 10 ThrustThingZ(0,30,0,0)
+		MDRG A 1 A_JumpIf(floorz == 1,"See")
+		MDRG A 1 A_JumpIfCloser(128,"Missile")
+		MDRG A 8 A_Chase
+		loop
+	Missile:
+		 MDRG C 15 A_FaceTarget 
+         MDRG D 8 Bright A_CustomMissile ("FireLizardBall",56,0,0,0,0)
+		 Goto See
+	Jump:
+		MDRG A 8
+		MDRG A 0 A_Recoil(-6)
+		MDRG B 10 ThrustThingZ(0,30,0,0)
+		MDRG C 1 A_JumpIf(floorz == 1,"See")
+		Goto Jump+5
+    Death:
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+       TNT1 A 0 A_GiveToTarget ("Points",150)
+	   Stop
+	     Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	MDRG C 5 A_GenericFreezeDeath
+    MDRG C 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	   Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	MDRG C 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+    }
+}
