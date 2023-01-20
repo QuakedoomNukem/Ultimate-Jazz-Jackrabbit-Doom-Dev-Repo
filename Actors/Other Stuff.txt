@@ -1,0 +1,213 @@
+Actor FiredeadSpawner
+{
+  +NoClip
+  +Missile
+  +DropOff
+  +Randomize
+  Scale 1
+  Speed 0
+  RenderStyle Normal
+  States
+  {
+  Spawn:
+  TNT1 A 0
+  TNT1 A 0 A_SpawnItemEx("FiredeadLite",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,0,1,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,0,-1,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,1,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,-1,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,1,1,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,-1,-1,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,1,-1,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,-1,1,0,0,128)
+	Stop
+
+  }
+}
+
+Actor Firedead
+{
+  +NoClip
+  +Missile
+  +DropOff
+  +Randomize
+  Speed 0
+  RenderStyle Normal
+  States
+  {
+  Spawn:
+    FRTF ABCDEFGH 3 Bright 
+    Stop
+  }
+}
+
+Actor FiredeadLite : Firedead
+{
+States
+  {
+  Spawn:
+    FRTF ABCDEFGH 3 Bright 
+    Stop
+}
+}
+
+ACTOR AshHolm 
+{
+  Radius 16
+  Height 24
+  -solid
+  Scale 0.75
+  States
+  {
+  Spawn:
+    AshH O -1
+    Stop
+  }
+}
+
+actor JazzPoof
+{
+	-NOGRAVITY
+	scale 1.5
+	height 3
+	radius 3
+	renderstyle Translucent
+	alpha 1.0
+	
+	States
+	{
+		Spawn:
+			JBLS B 0
+			JBLS BCDEFGH 1 bright
+			stop
+	}
+}
+
+Actor JetpackZombieExplosion
+{
+  Radius 1
+  Height 1
+  Speed 0
+  Damage 0
+  RenderStyle Add
+  Alpha 0.95
+  +Missile
+  +NoGravity
+  +NoBlockMap
+  +NoClip
+  +NoTeleport
+  States
+  {
+  Spawn:
+  SEKE A 3 bright
+	SEKE B 3 bright A_Playsound("SEEKXPLD")
+   SEKE CDEFGHIJKL 3 bright
+    Stop
+  }
+}
+
+Actor JJWaterSplash : WaterSplashBase
+{
+Renderstyle Translucent
+Alpha 0.25
+States
+{
+Spawn:
+SPLH ABCDEFGHIJ 2
+Stop
+}
+}
+
+Actor ItemSparkle 
+{
++NoGravity
+Renderstyle Normal
+States
+{ 
+Spawn:
+ISPK ABCDEFGHIJ 2
+Stop
+}
+}
+
+Actor ItemSparklePower 
+{
+Renderstyle Normal
+States
+{ 
+Spawn:
+ISPK ABCDEFGHIJ 2
+Stop
+}
+}
+
+Actor JJLavaSplash
+{
+ +NOBLOCKMAP
+  +NOCLIP
+  +NOGRAVITY
+  +DONTSPLASH
+  +DONTBLAST
+Renderstyle Normal
+States
+{
+Spawn:
+SPLH ABCDEFGHIJ 2
+Stop
+}
+}
+
+Actor JJTeleportFog : TeleportFog Replaces TeleportFog
+{
+States
+{
+Spawn:
+JFOG ABCDE 4 Bright
+Stop
+}
+}
+
+ACTOR FatsoJJD : Fatso Replaces Fatso
+{
+States
+{
+Death:
+    FATT K 6 A_GiveToTarget ("Points",500)
+    FATT L 6 A_Scream
+    FATT M 6 A_NoBlocking
+    FATT NOPQRS 6
+    FATT T -1 
+    Stop
+	}
+	}
+	
+	ACTOR DemonJJD : Demon Replaces Demon
+{
+  States
+  {
+  Death:
+    SARG I 8 A_GiveToTarget ("Points",200)
+    SARG J 8 A_Scream
+    SARG K 4
+    SARG L 4 A_NoBlocking
+    SARG M 4
+    SARG N -1
+    Stop
+  }
+}
+
+ACTOR HellKnightJJD : HellKnight Replaces HellKnight
+{
+  States
+  {
+  Death:
+    BOS2 I 8 A_GiveToTarget ("Points",300)
+    BOS2 J 8 A_Scream
+    BOS2 K 8
+    BOS2 L 8 A_NoBlocking
+    BOS2 MN 8
+    BOS2 O -1
+    Stop
+  }
+}
+
