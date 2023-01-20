@@ -1,0 +1,155 @@
+actor BattleshipsCore 3893
+{
+  Tag "Small Battleship Core"
+  Height 36
+  Radius 20
+  Health 200
+  +Shootable
+  +SOLID
+  +Noblood
+  +DONTTHRUST
+  States
+  {
+  Spawn:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+    BSCR ABCDEFGH 1
+    Loop
+ Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	BSCR G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 A 0 A_GiveToTarget ("Points",1000)
+		Stop
+    }
+}
+
+actor BattleshipsCoreBoss 3898
+{
+  Tag "Battleship Core"
+  Height 36
+  Radius 20
+  Health 1000
+  PainChance 20
+  Mass 10000
+  Monster
+  +SOLID
+  +Noblood
+  +NoInfighting
+  +DONTHARMSPECIES
+  +DONTTHRUST
+  States
+  {
+  Spawn:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+    BSCR ABCDEFGH 1 A_Look
+    Loop
+  See:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+	BSCR ABCDEFGH 1 A_Chase
+    Loop
+  Missile:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+	BSCR ABCDEFGH 5 A_FaceTarget
+    BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0) 
+	BSCR A 3 BRIGHT A_CustomMissile("DroneRocket",32,0,0,0,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR ABCDEFGH 5 A_FaceTarget
+    BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR ABCDEFGH 5 A_FaceTarget
+    BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0) 
+	BSCR A 3 BRIGHT A_CustomMissile("DroneRocket",32,0,0,0,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+    Goto See
+    Pain:
+	BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+	BSCR A 3 A_Pain
+	BSCR A 3
+    Goto See
+  Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	BSCR G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 A 0 A_GiveToTarget ("Points",2000)
+		Stop
+    }
+}
+
+actor BattleshipsCoreBoss2 28735
+{
+  Tag "Mothership Core"
+  Height 36
+  Radius 20
+  Health 4000
+  PainChance 0
+  Mass 10000
+  Monster
+  +SOLID
+  +Noblood
+  +NoInfighting
+  +DONTHARMSPECIES
+  +DONTTHRUST
+  States
+  {
+  Spawn:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+    BSCR ABCDEFGH 1 A_Look
+    Loop
+  See:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+	BSCR ABCDEFGH 1 A_Chase
+    Loop
+  Missile:
+  BSCR A 0 A_PlaySoundEx("LasEYATK", "SoundSlot7", 1)
+	BSCR ABCDEFGH 5 A_FaceTarget
+    BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0) 
+	BSCR A 3 BRIGHT A_CustomMissile("DroneRocket",32,0,0,0,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR ABCDEFGH 5 A_FaceTarget
+    BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR ABCDEFGH 5 A_FaceTarget
+    BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0) 
+	BSCR A 3 BRIGHT A_CustomMissile("DroneRocket",32,0,0,0,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+	BSCR A 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+    Goto See
+  Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	BSCR G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR G 2
+    BSCR G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BSCR AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 A 0 A_GiveToTarget ("Points",4000)
+		Stop
+    }
+}

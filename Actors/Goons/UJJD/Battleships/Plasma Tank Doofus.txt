@@ -1,0 +1,59 @@
+ACTOR GoonPlasmaTank 30018
+{
+	Tag "Plasma Tank Doofus"
+    Health 1000
+    Painchance 0
+    Speed 6
+    Radius 20
+	Height 44
+	+FLOORCLIP
+	+NORADIUSDMG
+	+NOBLOOD
+	+NOGRAVITY
+	+FLOATBOB
+	+FLOAT
+	+NOINFIGHTING
+	+COUNTKILL
++DONTHARMSPECIES
+    Mass 1000
+    Obituary "%o was melted by a Doofus in a plasma tank."
+    MONSTER 
+ SeeSound "ROBOTSEE"
+  PainSound "Turtpain"
+    States
+    {
+    Spawn:
+        ZPTK A 8 A_Look
+		ZPTK A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+        Loop
+    See:
+        ZPTK A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+        ZPTK A 1 A_Chase
+        Loop
+    Missile:
+	ZPTK A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
+        ZPTK A 1 A_FaceTarget
+        ZPTK D 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+        TNT1 A 0 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+        ZPTK A 1 A_FaceTarget
+        ZPTK D 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+        TNT1 A 0 BRIGHT A_CustomMissile("PlasmaGoonPlasma",20,0,359,0)
+        ZPTK A 0 A_Jump(128,1) 
+        goto See 
+        ZPTK A 0 A_CPosRefire
+        goto Missile 
+    Death:
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	ZPTK A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    ZPTK A 2
+    ZPTK A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ZPTK A 2
+    ZPTK A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ZPTK A 2
+    ZPTK A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    ZPTK AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 A 0 A_GiveToTarget ("Points",1000)
+		Stop
+    }
+}
