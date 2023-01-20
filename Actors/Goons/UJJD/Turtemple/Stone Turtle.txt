@@ -1,0 +1,236 @@
+ACTOR StoneTurtle 3903
+{
+//use of BeamGuy, Realm667 - Captain Toenail, Ghastly Dragon (ZScript conversion)
+  Tag "Stone Turtle"
+  Health 150
+  Radius 16
+  Height 56
+  Mass 100000
+  Speed 15
+  PainChance 0
+  Monster
+  +NOBLOOD
+  +NOINFIGHTING
+  +COUNTKILL
+  +SOLID
+  	 +DONTHARMSPECIES
+	 +COUNTKILL
+  SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtact"
+  Obituary "%o was mangled by a Stone Turtle."
+  States
+  {
+  Spawn:
+    STNT E 10 A_Look
+    Loop
+  See:
+  STNT H 0 A_StopSoundEx ("SoundSlot5")
+    STNT AABBCCDD 4 A_Chase
+    Loop
+  Missile:
+  TNT1 A 0
+  STNT H 0 A_Jump (256, "Boulder", "LaserEyes")
+  Boulder:
+    STNT F 16 A_FaceTarget
+	STNT G 8 Bright A_CustomMissile("MegairBoulder",56,0,0,0,0)
+	STNT G 6 Bright
+    Goto See
+  LaserEyes:
+    STNT H 0 A_Jump (256, "REye", "LEye")
+    stop
+    
+  REye:
+    STNT H 10 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -6, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 0 A_PlaySoundEx ("LasEYATK", "SoundSlot5", 1, 0)
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -0.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -0.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -0.25, 1)
+    STNT H 0 A_FaceTarget
+    goto LockedOn
+  LEye:
+    STNT H 10 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 6, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 0 A_PlaySoundEx ("LasEYATK", "SoundSlot5", 1, 0)
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1.25, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0.75, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0.5, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0.25, 1)
+    STNT H 0 A_FaceTarget
+    goto LockedOn
+  LockedOn:
+    STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0, 1)
+    STNT H 0 A_FaceTarget
+    STNT H 0 A_Jump (8, "See")
+    STNT H 0 A_CPosRefire
+    goto LockedOn
+  Death:
+  STNT H 0 A_StopSoundEx ("SoundSlot5")
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",800)
+    Stop
+	    Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",800)
+	STNT A 5 A_GenericFreezeDeath
+    STNT A 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+ACTOR MegairBoulder
+{
+	Radius 32
+	Height 32
+	Damage 20
+	Speed 20
+	Scale 0.75
+	Reactiontime 16
+	Bouncetype "Hexen"
+	Bouncecount 50
+	BounceFactor 5.0
+    SeeSound "BMBTHROW"
+	BounceSound "SPGATK"
+	DeathSound "SPGATK"
+	Obituary "%o was rocked like a hurricane by a boulder."
+	Projectile
+	-NOGRAVITY
+	+SEEKERMISSILE
+	+USEBOUNCESTATE
+	States
+	{
+	Spawn:
+		MBPJ ABCD 3 
+		MBPJ ABCD 0 A_CountDown
+		Loop
+	Death:
+	    JBLS EFGH 3
+		Stop
+	}
+}
+
+ACTOR LaserEyeProj : FastProjectile
+{
+  Speed 200
+  Radius 13
+  Height 8
+  Damage (1)
+  MissileType LaserEyeTrail
+  Deathsound "LasEyHit"
+  -CANNOTPUSH
+  -NODAMAGETHRUST
+  states
+  {
+  Death:
+    TNT1 A 4
+    stop
+  }
+}
+
+ACTOR LaserEyeTrail
+{
+  RenderStyle Add
+  Scale 0.25
+  +NOINTERACTION
+  States
+  {
+  Spawn:
+    TBEA M 0 
+    TBEA M 0 A_Jump (256, "N", "O", "P")
+    stop
+  N:
+    TBEA N 2 bright
+    stop
+  O:
+    TBEA O 2 bright
+    stop
+  P:
+    TBEA P 2 bright
+    stop  
+  }
+  }
