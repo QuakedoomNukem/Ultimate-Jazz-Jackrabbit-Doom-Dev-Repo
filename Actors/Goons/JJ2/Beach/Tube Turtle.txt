@@ -1,0 +1,54 @@
+actor TubeGoon 3323
+{
+Tag "Inner Tube Turtle"
+Health 50
+Mass 1000000
+Height 40
+Radius 12
+Damage 4
+Speed 0
+painchance 0
+SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtactive"
+  Obituary "%o was drowned by an Inner Tube Turtle."
+MONSTER
++NOBLOOD
++FLOORCLIP
++SOLID
++NOINFIGHTING
+ +DONTHARMSPECIES
+ +COUNTKILL
+States
+{
+Spawn:
+	TUBG ABCDEFGH 3 a_look
+	Loop
+See:
+	TUBG ABCDEFGH 3 a_chase
+	Loop
+Melee:
+	TUBG DEFGH 4 A_FaceTarget
+	TUBG H 4 A_SargAttack
+	Goto See
+Death:
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",50)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",50)
+	TUBG B 5 A_GenericFreezeDeath
+    TUBG B 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",50)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TUBG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+
+  }
+}
