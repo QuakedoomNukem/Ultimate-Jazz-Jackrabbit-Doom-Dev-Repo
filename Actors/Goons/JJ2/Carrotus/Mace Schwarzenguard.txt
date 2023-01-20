@@ -1,0 +1,104 @@
+ACTOR UberGoon 32524
+{
+  Tag "Mace Schwarzenguard"
+  Health 500
+  Radius 20
+  Height 48
+  Mass 1000
+  Speed 10
+  PainChance 0
+  Monster
+  MeleeThreshold 196
+  +MISSILEMORE 
+  +FLOORCLIP
+  +NOBLOOD
+  +NOINFIGHTING
+   +COUNTKILL
+ +DONTHARMCLASS
+  SeeSound "BIGTURTS"
+  PainSound "BIGTURTP"
+  ActiveSound "Turtact"
+  HitObituary "%o was maced by a Mace Schwarzenguard."
+  Obituary "%o couldn't evade the Mace Schwarzenguard's tossed mace."
+  States
+  {
+  Spawn:
+    UBEM AB 10 A_Look
+    Loop
+  See:
+    UBEM AABBCC 2 A_Chase
+    Loop
+  Melee:
+    UBEM G 0 A_FaceTarget
+    UBEM G 6 
+    UBEM H 6 A_FaceTarget
+    UBEM I 6 A_CustomMeleeAttack(random(1, 8) * 6, "PUNCH")
+    Goto See
+  Missile:
+  TNT1 A 0 A_Jump(256, "Homing", "NonHoming")
+  Homing:
+    UBEM G 0 Bright A_FaceTarget
+    UBEM G 15 Bright A_FaceTarget
+    UBEM I 10 A_CustomMissile("MaceBall",32,0,0,0,0)
+    UBEM I 10 A_FaceTarget
+    Goto See
+	Nonhoming:
+	UBEM G 0 Bright A_FaceTarget
+    UBEM G 15 Bright A_FaceTarget
+    UBEM I 10 A_CustomMissile("MaceBall2",32,0,0,0,0)
+    UBEM I 10 A_FaceTarget
+    Goto See
+  Death:
+	TNT1 A 0 A_GiveToTarget ("Points",1000)
+    UBEM A 0 A_StopSound
+    UBEM A 0 A_Scream
+    UBEM A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    UBEM A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    UBEM A 2 A_NoBlocking
+    UBEM A 2
+    UBEM A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    UBEM A 2
+    UBEM A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    UBEM A 2
+    UBEM A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    UBEM A 2
+    UBEM A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    UBEM AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 100 
+    Stop
+  }
+}
+
+ACTOR MaceBall
+{
+  Radius 16
+  Height 8
+  Speed 8
+  Damage 8
+  Projectile
+  +SEEKERMISSILE
+  +RANDOMIZE
+  SeeSound "BMBTHROW"
+  DeathSound "BLSTRHIT"
+  RenderStyle Normal
+  States
+  {
+  Spawn:
+    MACY ABCD 2 Bright A_SeekerMissile(0,3, SMF_Look, 128, 10)
+    Loop
+  Death:
+    JPUF ABCDEFGHIJK 1
+    Stop
+  }
+}
+
+ACTOR MaceBall2 : Maceball
+{
+-Seekermissile
+States
+{
+Spawn:
+    MACY ABCD 2 Bright
+    Loop
+}
+}
