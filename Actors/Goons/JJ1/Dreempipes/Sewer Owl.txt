@@ -1,0 +1,150 @@
+actor SewerOwlBoss 3744
+{
+Tag "Sewer Owl"
+Health 6000
+Speed 15
+Mass 10000
+Damage 2
+Radius 32
+Height 64
+PainChance 8
+MinMissileChance 100
+Seesound "SWROWL"
+ActiveSound"SWROWL"
+Obituary "%o was pecked by a Sewer Owl."
++NOBLOOD
++NOINFIGHTING
++FLOAT
++NoGravity
++FLOATBOB
++COUNTKILL
+   +SOLID
++DONTHARMSPECIES
+Monster
+  States
+  {
+  Spawn:
+    DPOL ABCD 4 A_Look
+    Loop
+  See:
+    DPOL ABCD 4 A_Chase
+    Loop
+  Missile:
+    DPOL ABCD 4 A_FaceTarget
+    DPOL ABC 4 
+    DPOL D 4 A_CustomMissile("SewerOwlEgg",4,0,0,0,0)
+    Goto See
+  Missile2:
+	DPOL ABCD 4 A_FaceTarget
+    DPOL ABC 4 
+    DPOL D 4 A_SkullAttack
+    Goto See
+  Pain:
+    DPOL B 0
+    DPOL B 0  A_Pain
+    Goto Missile2
+  Death:
+    DPOL A 0 A_StopSound
+    DPOL A 0 A_Scream
+    DPOL A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    DPOL A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    DPOL A 2 A_NoBlocking
+    DPOL A 2
+    DPOL A 0 A_ChangeFlag("FloatBob", 0)
+    DPOL A 0 A_StopSoundEx("JetpackZombie/Fly")
+    DPOL A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    DPOL A 2
+    DPOL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DPOL A 2
+    DPOL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DPOL A 2
+    DPOL A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    DPOL AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_GiveToTarget ("Points",6000)
+	Stop
+  }
+}
+
+actor SewerOwlEgg
+{
+  Radius 16
+  Height 8
+  Speed 20
+  Damage 2
+  Projectile
+  Gravity 1.0
+  Obituary "%o couldn't dodge the Sewer Owl's Egg."
+  States
+  {
+  Spawn:
+    DPGG A 1
+    Loop
+  Death:
+    DPGG BC 3
+	DPGG D 3 A_SpawnItemEx("SewerOwl") 
+    Stop
+  }
+}
+
+actor SewerOwl 3743
+{
+Tag "Sewer Owl Hatchling"
+Health 100
+Speed 15
+Mass 10000
+Damage 2
+Radius 16
+Height 32
+PainChance 0
+Obituary "%o was pecked by a Sewer Owl Hatchling."
+Seesound "SWROWL"
+ActiveSound"SWROWL"
++NOBLOOD
++NOINFIGHTING
++FLOAT
++NoGravity
++FLOATBOB
++COUNTKILL
+   +SOLID
++DONTHARMSPECIES
+Monster
+  States
+  {
+  Spawn:
+  DPBO A 0 A_Playsound("RWING")
+    DPBO ABCD 4 A_Look
+    Loop
+  See:
+  DPBO A 0 A_Playsound("RWING")
+    DPBO ABCD 4 A_Chase
+    Loop
+  Missile:
+  DPBO A 0 A_Playsound("RWING")
+    DPBO ABCD 4 A_FaceTarget
+	DPBO A 0 A_Playsound("RWING")
+    DPBO ABC 4 
+    DPBO D 4 A_SkullAttack
+    Goto See
+  Death:
+  TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+    Stop
+	Burn:
+	Death.JazzprojFire:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	DPBO B 3  A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	DPBO B 5 A_GenericFreezeDeath
+    DPBO B 1 A_FreezeDeathChunks
+    wait
+  }
+}
