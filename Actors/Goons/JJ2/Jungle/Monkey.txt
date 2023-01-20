@@ -1,0 +1,72 @@
+Actor Monkey 29123
+{
+  Tag "Monkey"
+  Obituary "%o was splattered by a Monkey."
+  Health 100
+  Radius 12
+  Height 32
+  Mass 100000
+  Speed 0
+  PainChance 0
+  Monster
+  +FloorClip
+  +NOBLOOD
+  +NOINFIGHTING
+    +COUNTKILL
++DONTHARMSPECIES
+  States
+  {
+  Spawn:
+    SDDM AB 10 A_Look
+    Loop
+  See:
+    SDDM AABB 3 A_Chase
+    Loop
+  Missile: 
+    SDDM E 4
+    SDDM E 10 A_FaceTarget
+    SDDM F 2 Bright A_CustomMissile("Banana", 30, 8)
+    SDDM E 2
+    Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	SDDM A 5 A_GenericFreezeDeath
+    SDDM A 1 A_FreezeDeathChunks
+    wait
+    Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	SDDM A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+    }
+}
+
+Actor Banana
+{
+  Radius 6
+  Height 8
+  Speed 15
+  Damage 2
+  RenderStyle "Normal"
+  SeeSound "MONKTHRW"
+  DeathSound "MONKSPLT"
+  Projectile
+  +Randomize
+  States
+  {
+  Spawn:
+    SDFB ABCDEFGH 2 Bright
+    Loop
+  Death:
+    SDFB IJKLMN 3 Bright
+    Stop
+  }
+}
