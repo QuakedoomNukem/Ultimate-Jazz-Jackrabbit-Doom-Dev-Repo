@@ -1,0 +1,81 @@
+ACTOR OrbitusSnake 3792
+{
+  Tag "Silver Snake"
+  Obituary "%o was fried by a Silver Snake." 
+  health 50
+  radius 10
+  height 10
+  mass 99999
+  speed 15
+  painchance 0
+  damage 2
+  MONSTER
+  +FLOAT
+  +FLOATBOB
+  +DROPOFF
+  +DONTFALL
+  +DONTHURTSPECIES
+  +NOINFIGHTING
+  +NOBLOOD
+  +NOGRAVITY
+  +Solid
+    +COUNTKILL
+	States
+	{
+	Spawn:
+		RBSK A 1 A_Look
+		RBST A 0 A_SpawnItemEx("RBBodyI1A",-10,0,5,0,0,0,0,0,0)
+		RBST A 0 A_SpawnItemEx("RBTailI2A",-10,0,5,0,0,0,0,0,0)
+		loop
+	See:
+		RBST A 0 A_SpawnItemEx("RBTailI2A",-10,0,5,0,0,0,0,0,0)
+		Goto TrueSee
+	TrueSee:
+		RBSK A 0 A_Weave(0, 1, 0, random(1,5))
+		RBSK A 1 A_Chase
+		RBSK A 0 A_Weave(0, 1, 0, random(1,5))
+		RBSK A 1 A_Chase
+		RBST A 0 A_SpawnItemEx("RBBodyI1A",-10,0,5,0,0,0,0,0,0)
+		loop
+	Melee:
+      RBSK A 10 A_FaceTarget 
+      RBSK A 4 A_SargAttack
+      Goto TrueSee
+        Death:
+			TNT1 AAAAAAA 0 A_SpawnItemEx("RBBodyI1A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	Stop
+	TNT1 AAAAAAA 0 A_SpawnItemEx("RBTailI2A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+	Stop
+	}
+}
+
+Actor RBBodyI1A
+{
+  +FLOATBOB
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RBST A 5
+    Goto Death
+  Death:
+	RBST A 5
+	Stop
+  }
+}
+
+Actor RBTailI2A
+{
+  +FLOATBOB
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    RBST A 5
+    Goto Death
+  Death:
+	RBST A 5
+	Stop
+  }
+}

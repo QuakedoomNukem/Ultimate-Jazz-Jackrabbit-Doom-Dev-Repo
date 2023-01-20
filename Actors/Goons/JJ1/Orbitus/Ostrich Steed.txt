@@ -1,0 +1,72 @@
+ACTOR OstrichBoss 3796
+{
+  Tag "Ostrich Steed"
+  Health 4000
+  Radius 24
+  Height 64
+  Mass 100000
+  Speed 35
+  PainChance 10
+  Monster
+  Obituary "%o couldn't keep up with the Ostrich Steed."
+  +FLOAT
+  +NOGRAVITY
+  +BOSS
+  +NOBLOOD
+  +NOINFIGHTING
+  +FLOATBOB
+    +COUNTKILL
++DONTHARMSPECIES
+    SeeSound "Turtsight"
+  PainSound "Turtpain"
+  States
+  {
+  Spawn:
+    OSBS ABCD 3 A_Look
+    Loop
+  See:
+  OSBS A 0 A_Playsound("Wingflap")
+    OSBS ABCD 3 A_Chase
+    Loop
+  Missile:
+    OSBS EF 7 Bright A_FaceTarget
+    OSBS G  3 Bright A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
+    OSBS EF 3 Bright A_FaceTarget
+    OSBS G 3 Bright A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
+	OSBS EF 3 Bright A_FaceTarget
+    OSBS G 3 Bright A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
+    OSBS EF 3 Bright A_FaceTarget
+    OSBS G 3 Bright A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
+	OSBS EF 3 Bright A_FaceTarget
+    OSBS G 3 Bright A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
+	OSBS EF 3 Bright A_FaceTarget
+    OSBS G 3 Bright A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
+    Goto See
+  Missile2:
+	OSBS ABC 5 A_FaceTarget
+	OSBS D 20 A_SkullAttack
+	Goto See
+  Pain:
+    OSBS A 5
+    Goto Missile2
+  Death:
+    OSBS I 0 A_StopSound
+    OSBS I 0 A_Scream
+    OSBS I 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    OSBS I 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    OSBS I 2 A_NoBlocking
+    OSBS I 2
+    OSBS I 0 A_ChangeFlag("FloatBob", 0)
+    OSBS I 0 A_StopSoundEx("JetpackZombie/Fly")
+    OSBS I 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    OSBS I 2
+    OSBS I 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    OSBS I 2
+    OSBS I 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    OSBS I 2
+    OSBS I 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",4000)
+	Stop
+  }
+}

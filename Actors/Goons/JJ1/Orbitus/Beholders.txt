@@ -1,0 +1,87 @@
+actor HBeholder 3169
+{
+  Tag "Horizontal Beholder"
+  Health 100
+  Radius 16
+  Height 25
+  Mass 10000000
+  Speed 8
+  PainChance 0
+  Monster
+  +NOINFIGHTING
+  +LOOKALLAROUND
+  +FLOORCLIP
+  +NOBLOOD
+  +NoIceDeath
+  +COUNTKILL
++DONTHARMSPECIES
+  Obituary "%o was killed by the Horizontal Beholder."
+  States
+  {
+  Spawn:
+    BEHO ABCD 4 A_Look
+    Loop
+  See:
+    BEHO ABCD 4 A_Chase
+    Loop
+  Melee:
+	BEHO ABCD 4 A_FaceTarget
+    BEHO ABCD 4 A_SargAttack
+	Goto See
+  Death:
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",100)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	BEHO A 5 A_GenericFreezeDeath
+    BEHO A 1 A_FreezeDeathChunks
+    wait
+  }
+}
+
+actor VBeholder 3255
+{
+  Tag "Vertical Beholder"
+  Health 120
+  Radius 12
+  Height 50
+  Mass 10000000
+  Speed 0
+  PainChance 0
+  Monster
+  +NOINFIGHTING
+  +LOOKALLAROUND
+  +FLOORCLIP
+  +NOBLOOD
+  +NOGRAVITY
+  +NoIceDeath
+   +COUNTKILL
+ +DONTHARMCLASS
+  Obituary "%o was killed by the Vertical Beholder."
+  States
+  {
+  Spawn:
+    VBEH ABCD 4 A_Look
+    Loop
+  See:
+    VBEH ABCD 4 A_Chase
+    Loop
+  Missile:
+	VBEH ABCD 4 A_FaceTarget
+    VBEH A 4 Bright A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+	Goto See
+  Melee:
+	VBEH ABCD 4 A_FaceTarget
+	VBEH ABCD 4 A_SargAttack
+  Death:
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",150)
+	Stop
+		Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",150)
+	VBEH A 5 A_GenericFreezeDeath
+    VBEH A 1 A_FreezeDeathChunks
+    wait
+  }
+}
