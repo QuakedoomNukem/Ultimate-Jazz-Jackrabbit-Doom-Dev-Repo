@@ -1,0 +1,50 @@
+actor StonarGrabber 3203
+{
+   Tag "Stonar Grabber"
+   Health 50
+   PainChance 0 
+   Speed 15
+   Radius 10 
+   Height 20 
+   Mass 4000
+   Damage 2
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   -SOLID
+   +NOINFIGHTING
+   +COUNTKILL
+   	 +DONTHARMSPECIES
+   Obituary "%o was pulled six feet under by a Stonar Grabber."
+   States 
+   { 
+   Spawn: 
+      HAND A 10 A_Look 
+      Loop 
+   See: 
+      HAND A 2 A_Chase 
+      Loop 
+   Melee: 
+      HAND BCD 4 A_FaceTarget 
+      HAND EFG 4 A_SargAttack 
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",100)
+	  Stop
+	  Burn:
+	  Death.JazzprojFire:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	HAND D 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",100)
+	HAND D 5 A_GenericFreezeDeath
+    HAND D 1 A_FreezeDeathChunks
+    wait
+   } 
+}
