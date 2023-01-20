@@ -1,0 +1,50 @@
+ACTOR MarchHare 3767
+{
+  Tag "The March Hare"
+  Health 100
+  Radius 10
+  Height 46
+  Mass 10000
+  Speed 10
+  PainChance 0
+  Monster
+  +NOBLOOD
+  +NOINFIGHTING
+    +COUNTKILL
++DONTHARMSPECIES
+  SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtact"
+  Obituary "%o was pied by The March Hare."
+  States
+  {
+  Spawn:
+    MDRT ABC 3 A_Look
+    Loop
+  See:
+    MDRT ABC 3 A_Chase
+    Loop
+  Missile:
+    MDRT D 3 A_FaceTarget
+	MDRT E 4 A_CustomMissile("PieProj",40,0,0,0,0)
+    Goto See
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+    Stop
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	MDRT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	MDRT A 5 A_GenericFreezeDeath
+    MDRT A 1 A_FreezeDeathChunks
+    wait
+  }
+}
