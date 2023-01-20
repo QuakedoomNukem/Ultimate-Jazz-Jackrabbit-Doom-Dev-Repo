@@ -1,0 +1,80 @@
+ACTOR BattleshipBee 3892
+{
+  Tag "Super-Bee"
+  Health 75
+  Radius 8
+  Height 28
+  Mass 10000
+  Speed 15
+  Damage 4
+  PainChance 0
+  Monster
+  +FLOAT
+  +NOGRAVITY
+  +MISSILEMORE
+  +DONTFALL
+  +NOICEDEATH
+   +NOBLOOD
+   +NOINFIGHTING
+   +DONTHARMSPECIES
+  Obituary "%o couldn't dodge a Super-Bee."
+  States
+  {
+  Spawn:
+    BSBB AB 3 A_Look
+	BSBB A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    Loop
+  See:
+    BSBB AB 3 A_Chase
+	BSBB A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    Loop
+  Missile:
+    BSBB C 16 Bright A_FaceTarget
+    BSBB D 4 Bright A_CustomMissile("BattleshipBeeProj",20,0,0,0,0)
+	BSBB A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+    Goto See
+  Death:
+    TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+    Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	BSBB E 5 A_GenericFreezeDeath
+    BSBB E 1 A_FreezeDeathChunks
+    wait
+	Death.JazzprojFire:
+	Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	BSBB E 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+  }
+}
+
+Actor BattleshipBeeProj 
+{
+  Radius 6
+  Height 4
+  Speed 25
+  Damage 4
+  Projectile
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 1
+  SeeSound "PlasmaFI"
+  DeathSound "BLSTRHIT"
+  States
+  {
+  Spawn:
+    BSBP A 1 Bright
+    Loop
+  Death:
+    JBLS EFGH 4 Bright
+    Stop
+  }
+}

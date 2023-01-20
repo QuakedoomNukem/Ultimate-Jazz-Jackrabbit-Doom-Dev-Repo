@@ -1,0 +1,136 @@
+actor ArmorDillo1 3140
+{
+   Tag "Armor-Doofus"
+   Health 150
+   PainChance 0 
+   Speed 5
+   Radius 16 
+   Height 20 
+   Mass 40000
+   Damage 4
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   +SOLID
+   +NOINFIGHTING
+   +DONTHARMSPECIES
+   SeeSound "Turtsight"
+  ActiveSound "Turtactive"
+  AttackSound "armattk"
+   Obituary "%o was diced by an Armor-Doofus."
+   States 
+   { 
+   Spawn: 
+      ARMD A 10 A_Look 
+      Loop 
+   See: 
+      ARMD A 2 A_Chase 
+      Loop 
+   Melee: 
+      ARMD B 8 A_FaceTarget 
+      ARMD C 8 A_SargAttack 
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",200)
+	  Stop
+	  Death.JazzprojFire:
+	   Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	 ARMD A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",200)
+	ARMD A 5 A_GenericFreezeDeath
+    ARMD A 1 A_FreezeDeathChunks
+    wait
+   } 
+}
+
+actor ArmorDillo2 3141
+{          
+   Tag "Uber Armor-Doofus"    
+   Health 150
+   PainChance 0 
+   Speed 5
+   Radius 16 
+   Height 20 
+   Mass 40000
+   Damage 4
+   Monster 
+   +FLOORCLIP
+   +NOBLOOD
+   +SOLID
+   +NOINFIGHTING
+   +DONTHARMSPECIES
+   SeeSound "Turtsight"
+  PainSound "Turtpain"
+  ActiveSound "Turtactive"
+   Obituary "%o was diced by an Uber Armor-Doofus."
+   States 
+   { 
+   Spawn: 
+      RARM A 10 A_Look 
+      Loop 
+   See: 
+      RARM A 2 A_Chase 
+      Loop
+   Melee: 
+      RARM B 8 A_FaceTarget 
+      RARM C 8 A_SargAttack 
+      Goto See 
+   Missile: 
+      RARM B 8 A_FaceTarget
+      RARM C 8 A_CustomMissile ("UberArmProj",32,0,0,0,0)
+      Goto See 
+   Death: 
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 A 0 A_GiveToTarget ("Points",400)
+	  Stop
+	   Death.JazzprojFire:
+	   Burn:
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_GiveToTarget ("Points",400)
+	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_Playsound("FMTRFIRE")
+	 RARM A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+	Stop
+	Death.JazzprojIce:
+	TNT1 A 0 A_GiveToTarget ("Points",400)
+	RARM A 5 A_GenericFreezeDeath
+    RARM A 1 A_FreezeDeathChunks
+    wait
+   } 
+}
+
+actor UberArmProj
+{
+    Radius 13
+    Height 8
+    Speed 10
+    Damage 1
+	DamageType Disintegrate
+    Projectile
+    +RANDOMIZE
+	+RIPPER
+	SeeSound "armattk"
+    RenderStyle Add
+    Alpha 0.75
+    scale 0.9
+    States
+  {
+  Spawn:
+    ARMP A 6 bright
+    loop
+  Death:
+    JBLS EFGH 4 bright
+    stop
+   }
+}
