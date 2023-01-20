@@ -1,0 +1,111 @@
+actor GameBoyAdvance : Inventory 1337
+{
+    Inventory.PickupSound "SECTGEM"
+	Inventory.Pickupmessage "\ctA Game Boy Advance?!"
+	+FLOATBOB
+	 +NOGRAVITY
+	States
+	{
+	Spawn:
+		GBAA A -1
+		Stop
+		  Pickup:
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	}
+}
+
+ACTOR GBAStim : Health 3726
+{
+  Inventory.Amount 10
+  Inventory.PickupSound "GBHealth"
+  Inventory.PickupMessage "\cjPicked up a Stimpack Advance (10+ HP)"
+  +FLOATBOB
+   +NOGRAVITY
+  States
+  {
+  Spawn:
+    JJSM A -1
+    Stop
+  }
+}
+
+ACTOR GBAMedkit : Health 3725
+{
+  Inventory.Amount 50
+  Inventory.PickupSound "GBHealth"
+  Inventory.PickupMessage "\cjPicked up a Medkit Advance (50+ HP)"
+  Health.LowMessage 25, "\cjPicked up a Medkit Advance that you REALLY need! (50+ HP)"
+  +FLOATBOB
+   +NOGRAVITY
+  States
+  {
+  Spawn:
+    JJGM A -1
+    Stop
+  }
+}
+
+Actor MoneyBundle : StonarBonus  3729
+{
+    Inventory.PickupSound "money"
+	Inventory.Pickupmessage "\cdMoney Bundle"
+    +CountItem
+	States
+	{
+	Spawn:
+    MONY B -1 bright
+    Stop
+}
+}
+
+Actor MoneyBucket : CustomInventory 3728
+{
+    Inventory.PickupSound "money"
+	Inventory.Pickupmessage "\cdMoney Bucket (5+ AP)"
+    +CountItem
+	States
+	{
+	Spawn:
+    MONY A -1 bright
+    Stop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 500)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+    Stop
+}
+}
+
+ACTOR GBARabbitBonus : CustomInventory 3727
+{
+    Inventory.PickupSound "Rabbitou"
+	Inventory.Pickupmessage "\cdRabbit Bonus (10+ AP)"
+    +CountItem
+	+FLOATBOB
+    +NOGRAVITY
+	States
+	{
+	Spawn:
+    GBOU ABCD 3 bright
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 1000)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+}
+}

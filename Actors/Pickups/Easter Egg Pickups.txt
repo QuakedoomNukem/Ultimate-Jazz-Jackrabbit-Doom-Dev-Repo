@@ -1,0 +1,409 @@
+actor ApplePickup : CustomInventory 3906
+{
+    Inventory.PickupSound "jillyeah"
+	Inventory.Pickupmessage "\cfYou have found \c[A2]Jill of the Jungle\cf!"
+	Scale 3.0
+    +CountItem
+	+FLOATBOB
+	+NoGravity
+	States
+	{
+	Spawn:
+    JAPL ABCD 4 bright
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 5000)
+	TNT1 A 0 A_Giveinventory("SuperCarrot", 1)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+    Stop
+}
+}
+
+actor Artifact1 : CustomInventory 3853
+{
+    Inventory.PickupSound "misc/i_pkup"
+	Inventory.Pickupmessage "\cgRip and Tear."
+    +CountItem
+	+FLOATBOB
+	+NoGravity
+	States
+	{
+	Spawn:
+    ARTI DEF 3 bright
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 40000)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+}
+}
+
+actor Artifact2 : CustomInventory 3854
+{
+    Inventory.PickupSound "misc/i_pkup"
+	Inventory.Pickupmessage "\czNobody told me about the SI6IL."
+    +CountItem
+	+FLOATBOB
+	+NoGravity
+	States
+	{
+	Spawn:
+    ARTI A -1 bright
+    Stop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 40000)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+}
+}
+
+actor Artifact3 : CustomInventory 3855
+{
+    Inventory.PickupSound "misc/i_pkup"
+	Inventory.Pickupmessage "\ceBeyond Heresy."
+	Scale 0.50
+    +CountItem
+	+FLOATBOB
+	+NoGravity
+	States
+	{
+	Spawn:
+    ARTI B -1 bright
+    Stop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 40000)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+}
+}
+
+actor Artifact4 : CustomInventory 3856
+{
+    Inventory.PickupSound "misc/i_pkup"
+	Inventory.Pickupmessage "\cvToo bad it's not the Tome of Power."
+    +CountItem
+	+FLOATBOB
+	+NoGravity
+	States
+	{
+	Spawn:
+    ARTI C -1 bright
+    Stop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 40000)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+}
+}
+
+actor Artifact5 : CustomInventory 3857
+{
+    Inventory.PickupSound "misc/i_pkup"
+	Inventory.Pickupmessage "\csI ain't afraid of no Quake."
+	Scale 2.0
+    +CountItem
+	+FLOATBOB
+	+NoGravity
+	States
+	{
+	Spawn:
+    ARTI G -1 bright
+    Stop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 40000)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+}
+}
+
+actor CliffyB : CustomInventory  32123
+{
+  Inventory.PickupMessage "\cfCliffy B's power! (FULL RESTORE+FULL AMMO)"
+  Inventory.Amount 1
+  Inventory.PickupSound "Dominate"
+  +COUNTITEM
+  +FLOATBOB
+   +NOGRAVITY
+   FloatBobStrength 0.5
+   Scale 0.2
+  states
+  {
+  Spawn:
+	CLFB A -1
+	Stop
+  Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 100000)
+ 	TNT1 A 0 A_GiveInventory("JJShell", 100)
+ 	TNT1 A 0 A_GiveInventory("SlicerAmmo", 100)
+ 	TNT1 A 0 A_GiveInventory("Bouncers", 100)
+ 	TNT1 A 0 A_GiveInventory("HomingMissile", 100)
+ 	TNT1 A 0 A_GiveInventory("JJRocketAmmo", 100)
+ 	TNT1 A 0 A_GiveInventory("Gas", 100)
+ 	TNT1 A 0 A_GiveInventory("FreezeAmmo", 100)
+ 	TNT1 A 0 A_GiveInventory("RailAmmo", 100)
+ 	TNT1 A 0 A_GiveInventory("JJCell", 100)
+ 	TNT1 A 0 A_GiveInventory("TNT", 25)
+	TNT1 A 0 A_GiveInventory("FullRestore")
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	Stop
+  }
+}
+	
+actor ElementAirGem : CustomInventory 4057
+{
+    Inventory.PickupSound "GemPckup"
+	Inventory.Pickupmessage "\clPicked up the \cjAir Element\cl."
+    -CountItem
+	+NoGravity
+	+FloatBob
+	States
+	{
+	Spawn:
+    ELAG ABCDEFGH 3 bright a_spawnitemex("AirSparkle")
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50000)
+	TNT1 A 0 A_GiveInventory("ElementAirCount")
+    Stop
+}
+}
+
+ACTOR ElementAirCount : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	Inventory.MaxAmount 1
+	inventory.Interhubamount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor ElementFireGem : CustomInventory 4058
+{
+    Inventory.PickupSound "GemPckup"
+	Inventory.Pickupmessage "\clPicked up the \cgFire Element\cl."
+    -CountItem
+	+NoGravity
+	+FloatBob
+	States
+	{
+	Spawn:
+    ELFG ABCDEFGH 3 bright a_spawnitemex("FireSparkle")
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50000)
+	TNT1 A 0 A_GiveInventory("ElementFireCount")
+    Stop
+}
+}
+
+ACTOR ElementFireCount : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	Inventory.MaxAmount 1
+	inventory.Interhubamount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor ElementWaterGem : CustomInventory 4059
+{
+    Inventory.PickupSound "GemPckup"
+	Inventory.Pickupmessage "\clPicked up the \cnWater Element\cl."
+    -CountItem
+	+NoGravity
+	+FloatBob
+	States
+	{
+	Spawn:
+    ELWG ABCDEFGH 3 bright a_spawnitemex("WaterSparkle")
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50000)
+	TNT1 A 0 A_GiveInventory("ElementWaterCount")
+    Stop
+}
+}
+
+ACTOR ElementWaterCount : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	Inventory.MaxAmount 1
+	inventory.Interhubamount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor ElementEarthGem : CustomInventory 4060
+{
+    Inventory.PickupSound "GemPckup"
+	Inventory.Pickupmessage "\clPicked up the \cdEarth Element\cl."
+    -CountItem
+	+NoGravity
+	+FloatBob
+	States
+	{
+	Spawn:
+    ELEG ABCDEFGH 3 bright a_spawnitemex("EarthSparkle")
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50000)
+	TNT1 A 0 A_GiveInventory("ElementEarthCount")
+    Stop
+}
+}
+
+ACTOR ElementEarthCount : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	Inventory.MaxAmount 1
+	inventory.Interhubamount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor ElementLightGem : CustomInventory 4061
+{
+    Inventory.PickupSound "GemPckup"
+	Inventory.Pickupmessage "\clPicked up the \ckLight Element\cl."
+    -CountItem
+	+NoGravity
+	+FloatBob
+	States
+	{
+	Spawn:
+    ELLG ABCDEFGH 3 bright a_spawnitemex("LightSparkle")
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50000)
+    Stop
+}
+}
+
+actor ElementDarkGem : CustomInventory 4062
+{
+    Inventory.PickupSound "GemPckup"
+	Inventory.Pickupmessage "\clPicked up the \ctDark Element\cl."
+    -CountItem
+	+NoGravity
+	+FloatBob
+	States
+	{
+	Spawn:
+    ELDG ABCDEFGH 3 bright a_spawnitemex("DarkSparkle")
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50000)
+	TNT1 A 0 A_GiveInventory("ElementDarkCount")
+    Stop
+}
+}
+
+ACTOR ElementDarkCount : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	Inventory.MaxAmount 1
+	inventory.Interhubamount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
+
+actor OldTwinkie : CustomInventory 4115
+{
+    Inventory.PickupSound "smokring"
+	Inventory.Pickupmessage "Ew... you ate a thousand year old twinkie."
+    -CountItem
+	+NoGravity
+	+Floatbob
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+    OLDT A -1 bright
+    Stop
+	Pickup:
+	TNT1 A 0 A_GiveInventory("CaterpillarCount", 300)
+	TNT1 A 0 ACS_NamedExecute("CaterpillarSmoke",0)
+	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+    Stop
+}
+}
+
+actor RedFlag : CustomInventory 3717
+{
+inventory.pickupmessage "\cnRed flag taken."
+inventory.pickupsound "UTRedTak"
++inventory.alwayspickup
+height 64
+radius 16
+States
+    {
+    Spawn:
+    flgr abcdefgh 2
+    loop
+	Pickup:
+	TNT1 A 0 ACS_Execute(30,0,0)
+	}
+}
+
+actor SecretGem : Inventory 3229
+{
+    Inventory.PickupSound "SECTGEM"
+	Inventory.Pickupmessage "\cfBonus Stage Gem!"
+	+FLOATBOB
+	 +NOGRAVITY
+	States
+	{
+	Spawn:
+		SECT A -1
+		Stop
+		Pickup:
+  TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	Stop
+	}
+}
+
+actor SODPickup : CustomInventory  4053
+{
+  Inventory.PickupMessage "\cfYou have found The Spear of Destiny!"
+  Inventory.Amount 1
+  Inventory.PickupSound "DSSPEARU"
+  +COUNTITEM
+  states
+  {
+  Spawn:
+	SODA A -1
+	Stop
+  Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 5000)
+  }
+}

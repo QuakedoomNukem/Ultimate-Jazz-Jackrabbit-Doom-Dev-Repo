@@ -1,0 +1,123 @@
+ACTOR JaguarRobot : PowerupGiver 3713
+{ 
+	Tag "Jaguar H.A.R. Power-up"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.MaxAmount 0
+	Inventory.PickupSound "SECTGEM"
+	Inventory.PickupMessage "\cyYou are about to play One Must Fall 2097."
+	PowerUp.Duration 9999
+	PowerUp.Type "Robot"
+	Scale 2.5
+	Radius 32
+	Height 192
+	States
+{
+Spawn:
+OMFJ A -1
+Stop
+}
+}
+
+ACTOR PowerRobot : PowerMorph
+{
+	PowerMorph.PlayerClass "OMFJaguarPlayer"
+	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA)
+}
+
+ACTOR OMFRobotMorph
+{
+	RenderStyle None
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR OMFJaguarPlayer : PlayerPawn
+{
+	Tag "Jaguar H.A.R."
+	+NOSKIN
+	+NOBLOOD
+	Speed 1
+	Health 999
+	Radius 32
+	Height 192
+	Mass 100
+	PainChance 180
+	Player.ViewHeight 160
+	Player.MorphWeapon "OMFFist"
+	Player.DisplayName "OMFJaguarPlayer"
+	Player.JumpZ 20
+	scale 2.5
+  States
+  {
+  Spawn:
+    OMFJ A 4
+    Loop
+  See:
+    OMFJ ABCD 4
+    Loop
+  Pain:
+    OMFJ G 4 
+    OMFJ G 4 A_Pain
+    Goto See
+  Melee:
+	OMFJ E 2
+	OMFJ F 8 A_Punch
+	Goto See
+  Death:
+    OMFJ g 0 A_StopSound
+    OMFJ g 0 A_Scream
+    OMFJ g 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    OMFJ g 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    OMFJ g 2 A_NoBlocking
+    OMFJ g 2
+    OMFJ g 0
+    OMFJ g 0 A_StopSoundEx("JetpackZombie/Fly")
+    OMFJ g 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    OMFJ g 2
+    OMFJ g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    OMFJ g 2
+    OMFJ g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    OMFJ g 2
+    OMFJ g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    OMFJ AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    OMFJ HIJ 8  A_Playsound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
+	TNT1 AAAAAAAAAAA 0 A_Playsound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
+	OMFJ k -1
+	Stop
+  }
+}
+
+ACTOR OMFFist : Weapon
+{
+  Tag "Jaguar's Fists"
+  Weapon.SelectionOrder 3700
+  Weapon.Kickback 500
+  Obituary "%o got KO'd by a Jaguar."
+  Tag "OMFFIST"
+  +WEAPON.MELEEWEAPON
+  +Weapon.Dontbob
+  States
+  {
+  Ready:
+    OMFF A 1 A_WeaponReady
+    Loop
+  Deselect:
+    OMFF A 1 A_Lower
+    Loop
+  Select:
+    OMFF A 1 A_Raise
+    Loop
+  Fire:
+    OMFF B 4
+    OMFF C 4 
+    OMFF D 5 A_CustomPunch(50, 0, 0, "Jazzfirepuff", 128, 0, 0, "ArmorBonus", "Clang", "") //(100,"CLANG","","Melee",False)
+    OMFF C 4
+    OMFF B 5 A_ReFire
+    Goto Ready
+  }
+}

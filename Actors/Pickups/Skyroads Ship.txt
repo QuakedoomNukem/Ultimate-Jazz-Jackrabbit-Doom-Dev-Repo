@@ -1,0 +1,82 @@
+ACTOR SkyroadShip : PowerupGiver 3387
+{ 
+	Tag "Skyroads Ship Power-up"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+FLOATBOB
+	Inventory.MaxAmount 0
+	Inventory.PickupSound "SECTGEM"
+	Inventory.PickupMessage "\cyYou are about to play Skyroads."
+	PowerUp.Duration 1200
+	PowerUp.Type "Ship"
+	States
+{
+Spawn:
+SKYR AB 4
+Loop
+}
+}
+
+ACTOR PowerShip : PowerMorph
+{
+	PowerMorph.PlayerClass "SkyroadShipPlayer"
+	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA)
+}
+
+ACTOR SkyroadShipMorph
+{
+	RenderStyle None
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		Stop
+	}
+}
+
+ACTOR SkyroadShipPlayer : PlayerPawn
+{
+	Tag "Skyroads Ship"
+	+NOSKIN
+	+NOBLOOD
+	Speed 1
+	Health 100
+	Radius 32
+	Height 32
+	Mass 300
+	PainChance 0
+	Player.DisplayName "SkyroadShipPlayer"
+	Player.JumpZ 12
+  States
+  {
+  Spawn:
+    SKYR AB 4
+    Loop
+  See:
+    SKYR AB 4
+    Loop
+  Pain:
+    SKYR AB 4 
+    SKYR AB 4 A_Pain
+    Goto Spawn
+  Death:
+    SKYR a 0 A_StopSound
+    SKYR a 0 A_Scream
+    SKYR a 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    SKYR a 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    SKYR a 2 A_NoBlocking
+    SKYR a 2
+    SKYR a 0 A_ChangeFlag("FloatBob", 0)
+    SKYR a 0 A_StopSoundEx("Hover1")
+    SKYR a 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    SKYR a 2
+    SKYR a 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    SKYR a 2
+    SKYR a 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    SKYR a 2
+    SKYR a 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    SKYR AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A -1
+	Stop
+  }
+}
