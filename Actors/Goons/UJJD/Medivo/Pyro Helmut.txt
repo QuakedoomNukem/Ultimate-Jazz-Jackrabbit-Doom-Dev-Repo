@@ -1,0 +1,375 @@
+Actor BossHelmut 30026
+{
+  Tag "Pyro Helmut"
+  Health 2000
+  Radius 12
+  Height 40
+  Mass 1000
+  Speed 8
+  PainChance 0
+  Monster
+  Damagefactor Ice, 2
+  Damagefactor Fire, 0.5
+  Obituary "%o was burnt to a crisp by a Pyro Helmut."
+  +NoTarget
+  +FloorClip
+  +MissileMore
+  +NoRadiusDmg
+  +DontHurtSpecies
+  +NOBLOOD
+  +NOINFIGHTING
+  +COUNTKILL
++DONTHARMSPECIES
+SeeSound "BIGTURTS"
+  PainSound "BIGTURTP"
+  ActiveSound "Turtact"
+  States
+  {
+  Spawn:
+    PYRO AB 10 A_Look
+    Loop
+  See:
+    PYRO AA 3 A_Chase
+    PYRO A 0 A_SpawnItemEx("WalkFire",0,0,0,0,0,0,0,128)
+    PYRO BB 3 A_Chase
+    PYRO B 0 A_SpawnItemEx("WalkFire",0,0,0,0,0,0,0,128)
+    PYRO CC 3 A_Chase
+    PYRO C 0 A_SpawnItemEx("WalkFire",0,0,0,0,0,0,0,128)
+    PYRO DD 3 A_Chase
+    PYRO D 0 A_SpawnItemEx("WalkFire",0,0,0,0,0,0,0,128)
+    Loop
+  Missile:
+    PYRO B 0 A_Jump(32,29)
+    PYRO B 0 A_Jump(32,20)
+    PYRO AA 8 Bright A_FaceTarget
+    PYRO C 0 Bright A_CustomMissile ("FireShot",28,0,0,0)
+    PYRO C 0 Bright A_CustomMissile ("FireShot",28,0,-4,0)
+    PYRO E 3 Bright A_CustomMissile ("FireShot",28,0,4,0)
+    PYRO F 3 Bright
+    PYRO A 0 A_Jump(32,8)
+    PYRO AA 8 Bright A_FaceTarget 
+    PYRO C 0 Bright A_CustomMissile ("FireShot",28,0,0,0)
+    PYRO C 0 Bright A_CustomMissile ("FireShot",28,0,-4,0)
+    PYRO E 3 Bright A_CustomMissile ("FireShot",28,0,4,0)
+    PYRO F 3 Bright
+    PYRO A 0 A_Jump(32,1)
+    Goto See
+    PYRO AA 8 Bright A_FaceTarget
+    PYRO E 4 Bright A_CustomMissile ("PyroBlast",28,0,0,0)
+    PYRO F 4 Bright
+    Goto See
+    PYRO AA 8 Bright A_FaceTarget
+    PYRO E 4 Bright A_CustomMissile ("RainCometNull",28,0,0,0)
+    PYRO F 4 Bright A_CustomMissile ("RainCometNull",28,0,90,0)
+    PYRO E 4 Bright A_CustomMissile ("RainCometNull",28,0,180,0)
+    PYRO F 4 Bright A_CustomMissile ("RainCometNull",28,0,270,0)
+    PYRO A 4 Bright
+    Goto See
+	PYRO A 1 A_FaceTarget
+    PYRO C 0 A_PlaySound("COMETXPL")
+    PYRO C 0 A_Mushroom ("Pyroball",16)
+    PYRO E 3
+    PYRO F 3 Bright
+    PYRO A 0 A_UnSetShootable
+    PYRO E 1 
+    PYRO F 1 A_SetTranslucent(0.90)
+    PYRO E 1 A_SetTranslucent(0.80)
+    PYRO F 1 A_SetTranslucent(0.70)
+    PYRO E 1 A_SetTranslucent(0.60)
+    PYRO F 1 A_SetTranslucent(0.50)
+    PYRO E 1 A_SetTranslucent(0.40)
+    PYRO F 1 A_SetTranslucent(0.30)
+    PYRO E 1 A_SetTranslucent(0.20)
+    PYRO F 1 A_SetTranslucent(0.10)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Wander
+    TNT1 A 0 A_Jump(128,25)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_ExtChase(0,0,1,1)
+    PYRO A 1 
+    PYRO E 1 A_SetTranslucent(0.10)
+    PYRO F 1 A_SetTranslucent(0.20)
+    PYRO E 1 A_SetTranslucent(0.30)
+    PYRO F 1 A_SetTranslucent(0.40)
+    PYRO E 1 A_SetTranslucent(0.50)
+    PYRO F 1 A_SetTranslucent(0.60)
+    PYRO E 1 A_SetTranslucent(0.70)
+    PYRO F 1 A_SetTranslucent(0.80)
+    PYRO E 1 A_SetTranslucent(0.90)
+    PYRO F 1 A_SetTranslucent(1.0)
+    PYRO A 0 A_PlaySound("COMETXPL")
+    PYRO O 0 A_Mushroom ("Pyroball",16)
+    PYRO A 0 A_SetShootable
+    Goto See
+  Death:
+  PYRO A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    PYRO A 2
+    PYRO A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    PYRO A 2
+    PYRO A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    PYRO A 2
+    PYRO A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    PYRO AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 A 0 A_GiveToTarget ("Points",2000)
+	Stop
+  }
+}
+
+Actor FireShot
+{
+  Radius 2
+  Height 4
+  Speed 12
+  Damage 3
+  Projectile
+  RenderStyle Add
+  Alpha 0.75
+  DamageType Fire
+  SeeSound "FMTRFIRE"
+  DeathSound "SEEKXPLD"
+  States
+  {
+  Spawn:
+    PLSS X 1 Bright A_SpawnItemEx("FireTail",0,0,0,0,0,0,0,128)
+    Loop
+  Death:
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    Stop
+  }
+}
+
+Actor FireTail
+{
+  Projectile
+  RenderStyle Add
+  +NoClip
+  Alpha 0.8
+  States
+  {
+  Spawn:
+    FFPR ABCDEFHI 1 Bright 
+    Stop
+  }
+}
+
+Actor PyroBall 
+{
+  Radius 10
+  Height 8
+  Speed 15
+  SeeSound "FMTRFIRE"
+  DeathSound "SEEKXPLD"
+  Projectile  
+  RenderStyle Add
+  DamageType Fire
+  Alpha 0.7
+  -NoGravity
+  +DoomBounce
+  +LowGravity
+  +SeekerMissile
+  States
+  {
+  Spawn:
+    RBAL A 0 Bright
+    RBAL A 0 Bright A_AlertMonsters
+    RBAL AAAABBBB 1 Bright 
+    Goto Spawn +2
+  Death:
+    SEKE CDEFGHIJKL 2 Bright 
+    Stop
+  }
+}
+
+Actor FirebombExplosion1 
+{
+  Radius 11
+  Height 8
+  Speed 15
+  Damage 5
+  DamageType Fire
+  +NoBlockMap
+  +DropOff
+  +Missile
+  +ActivateImpact
+  +ActivatePCross
+  Obituary "%o was killed by a firebomb explosion."
+  States
+  {
+  Spawn:
+     RFLE B 1 Bright
+     Loop
+  Death:
+     RFLE A 0
+     RFLE A 0 A_PlaySound("COMETXPL")
+     RFLE B 3 Bright A_Explode(128, 144)
+     RFLE C 1 Bright A_Mushroom("Pyroball",8)
+     RFLE C 2 Bright A_CustomMissile("FirebombExplosion2",25,0,180)
+     RFLE DEFGHIJK 2 Bright
+     Stop
+  }
+}
+
+Actor FirebombExplosion2 : FirebombExplosion1
+{
+  States
+  {
+  Death:
+    RFLE A 0
+    RFLE A 0 A_PlaySound("COMETXPL")
+    RFLE B 3 Bright A_Explode(128, 136)
+    RFLE C 1 Bright
+    RFLE C 2 Bright A_CustomMissile("FirebombExplosion3",20,0,180)
+    RFLE DEFGHIJK 2 Bright
+    Stop
+  }
+}
+
+Actor FirebombExplosion3 : FirebombExplosion1
+{
+  Speed 14
+  Damage 5
+  States
+  {
+  Death:
+    RFLE A 0
+    RFLE A 0 A_PlaySound("COMETXPL")
+    RFLE B 3 Bright A_Explode(128, 128)
+    RFLE CDEFGHIJK 2 Bright
+    Stop
+  }
+}
+
+Actor PyroBlast 
+{
+  Projectile
+  +SeekerMissile
+  +NoGravity
+  DamageType Fire
+  RenderStyle Add
+  Alpha 0.9
+  SeeSound "FIRESHOT"
+  DeathSound "SEEKXPLD"
+  Speed 12
+  Height 12
+  Radius 12
+  states
+  {
+  Spawn:
+    SBLL ABCD 1 Bright A_SpawnItemEx("FireTail",0,0,0,0,0,0,0,128)
+    SBLL A 0 Bright A_SeekerMissile(0,2)
+    Loop
+  Death:
+    RFLE C 0 A_CustomMissile("FirebombExplosion1",1,0,45)
+    RFLE C 0 A_CustomMissile("FirebombExplosion1",1,0,135)
+    RFLE C 0 A_CustomMissile("FirebombExplosion1",1,0,225)
+    RFLE C 0 A_CustomMissile("FirebombExplosion1",1,0,315)
+    RFLE CDEFGHIJK 1 Bright
+    Stop
+  }
+}
+
+Actor WalkFire
+{
+  +NoClip
+  +Missile
+  +DropOff
+  +Randomize
+  Scale 0.5
+  Speed 0
+  RenderStyle Add
+  Alpha 0.67
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    FRTF A 3 Bright
+    FRTF A 0 
+    FRTF B 3 Bright
+    FRTF B 0 
+    FRTF C 3 Bright
+    FRTF C 0 
+    FRTF C 0 
+    FRTF DEFGH 3 Bright
+    Stop
+  }
+}
+
+Actor RainCometNull
+{
+  Radius 0
+  Height 0
+  Speed 8
+  Projectile
+  +FloorClip
+  +Ripper
+  +DoomBounce
+  +CeilingHugger
+  +DontHurtSpecies
+  States
+  {
+  Spawn:
+    TNT1 A 0 A_Jump(5,8)
+    TNT1 AAAAAA 1 A_Wander
+    TNT1 A 8 A_CustomMissile("FallingComet",-24,random(0,128),random(0,360),2,random(1,89))
+    Loop
+  Death:
+    TNT1 A 0
+    Stop
+  }
+}
+
+Actor FallingComet
+{
+  Radius 6
+  Height 8
+  Speed 5
+  Damage 4
+  ExplosionDamage 40
+  ExplosionRadius 80
+  Scale 0.75
+  Projectile
+  DamageType Fire
+  SeeSound "COMTLNCH"
+  DeathSound "COMETXPL"
+  -NoGravity
+  -Float
+  +FloorClip
+  +DontHurtSpecies 
+  +SpawnCeiling
+  States
+  {
+  Spawn:
+    COMT AAAABBBBCCCC 1 Bright A_SpawnItemEx("FireTail", 0, 0, 0, 0, 0, 0, 0, 128)
+    Loop
+  Death:
+    SEKE C 3 Bright A_SpawnItemEx("CometDeathGlow", 0, 0, 0, 0, 0, 0, 0, 128)
+    SEKE D 3 Bright A_Explode(20,128,0)
+    SEKE D 0 A_SpawnItemEx("CometDeath", 0, 0, 0, 0, 0, 0, 0, 128)
+    Stop
+  }
+}
+
+Actor CometDeathGlow : FireTail
+{
+  Scale 2.0
+  Alpha 0.75
+  States
+  {
+  Spawn:
+    FFPR ABCDEFHI 1 Bright
+    Stop
+  }
+}
+
+Actor CometDeath
+{
+  Projectile
+  RenderStyle Add
+  +NoClip
+  Alpha 0.8
+  States
+  {
+  Spawn:
+    SEKE DEFGHIJKL 2 Bright
+    Stop
+  }
+}
