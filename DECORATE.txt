@@ -215,6 +215,7 @@
 
 #include "actors/Goons/UJJD/Other/Bandersnatch.txt"
 #include "actors/Goons/UJJD/Other/Dark Realm Spark.txt"
+#include "actors/Goons/UJJD/Other/Devanisher.txt"
 #include "actors/Goons/UJJD/Other/Flail.txt"
 #include "actors/Goons/UJJD/Other/Doofus Bishop.txt"
 #include "actors/Goons/UJJD/Other/Doofus Cultist.txt"
