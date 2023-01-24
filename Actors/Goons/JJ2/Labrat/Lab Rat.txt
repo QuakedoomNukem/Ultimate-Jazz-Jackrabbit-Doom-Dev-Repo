@@ -1,21 +1,22 @@
 ACTOR Labrat 13200
 {
-  Tag "Lab Rat"
   Health 50
   Speed 10
   Radius 12
   Height 22
-  Mass 1000000
+  Mass 10000
   Monster
   PainChance 0
-  +FLOORCLIP
-  +NOINFIGHTING
-  +NOBLOOD
-    +COUNTKILL
-+DONTHARMSPECIES
+    +FLOORCLIP
+	+DONTHURTSPECIES
+	+NOEXTREMEDEATH
+	+NOBLOOD
+	+NOINFIGHTING
+	+COUNTKILL
+    +DONTHARMSPECIES
   AttackSound "RATATTCK"
   SeeSound "Ratsee"
-  Obituary "%o was gnawed on by a Lab Rat."
+  Obituary "%o was gnawed on by a giant rat."
   States
   {
   Spawn:
