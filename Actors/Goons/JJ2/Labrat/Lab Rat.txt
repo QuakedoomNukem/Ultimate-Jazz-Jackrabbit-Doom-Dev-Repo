@@ -1,5 +1,6 @@
 ACTOR Labrat 13200
 {
+  Tag "Lab Rat"
   Health 50
   Speed 10
   Radius 12
