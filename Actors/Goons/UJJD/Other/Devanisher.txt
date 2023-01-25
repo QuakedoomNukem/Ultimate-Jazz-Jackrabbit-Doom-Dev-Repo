@@ -1,5 +1,6 @@
 actor Devanisher 4120
 {
+	Tag "Cyber Devanisher"
 	Radius 40
 	Height 256
 	Speed 20
