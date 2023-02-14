@@ -434,4 +434,12 @@ Plansee1		Plansee1
 plansee2	    plansee2
 planeact		planeact
 
+$random PLANESEE		{ Plansee1  plansee2 }
+Plansee1		Plansee1
+plansee2	    plansee2
+planeact		planeact
+
 OLDTWINK		OLDTWINK
+
+PYRCEXPL		PYRCEXPL
+JJGLASS			JJGLASS
