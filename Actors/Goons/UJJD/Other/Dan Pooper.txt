@@ -1,0 +1,77 @@
+ACTOR DonPooper 4121
+{
+  Tag "Don Pooper"
+	Health 8000
+	Radius 24
+	Height 72
+	Speed 15
+	PainChance 0
+	Mass 100000
+	Scale 1.0
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	+BOSS
+	+COUNTKILL
+	+DONTHARMSPECIES
+	Monster
+	SeeSound "Turtsight"
+	PainSound "Turtpain"
+	ActiveSound "Turtact"
+	Obituary "%o didn't have a good day to die hard."
+	States
+	{
+		Spawn:
+		    HNSG A 10 A_Look
+			loop
+		See:
+			HNSG AABBCCDD 2 Fast A_Chase
+			loop
+		Missile:
+		TNT1 A 0 A_Jump(256, "Missile1", "Missile2", "Missile3")
+		Missile1:
+			HNSG EEEEE 4 A_FaceTarget
+			HNSG F 6 bright A_CustomMissile("JJAGeneralSeekingProj", 30, 8)
+			Goto See
+		Missile2:
+			HNSG EEEEE 4 A_FaceTarget
+			HNSG F 6 bright A_CustomMissile("TorpedoProj",-32,8)
+			HNSG EEEEE 4 A_FaceTarget
+			HNSG F 6 bright A_CustomMissile("TorpedoProj",-32,8)
+			HNSG EEEEE 4 A_FaceTarget
+			HNSG F 6 bright A_CustomMissile("TorpedoProj",-32,8)
+			Goto See
+		Missile3:
+			HNSG EEEEE 2 A_FaceTarget
+			HNSG E 0 A_PlaySound("saurgun", CHAN_WEAPON)
+			HNSG F 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+			HNSG E 2 A_FaceTarget
+			//HNSG E 0 A_PlaySound("saurgun", CHAN_WEAPON)
+			HNSG F 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+			HNSG E 2 A_FaceTarget
+			//HNSG E 0 A_PlaySound("saurgun", CHAN_WEAPON)
+			HNSG F 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+			HNSG E 2 A_FaceTarget
+			HNSG E 0 A_SentinelRefire
+			Goto See
+		Death:
+    HNSG A 0 A_Scream
+    HNSG A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    HNSG A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    HNSG A 2 A_NoBlocking
+    HNSG A 2
+    HNSG A 0 A_ChangeFlag("FloatBob", 0)
+    HNSG A 0 A_StopSoundEx("JetpackZombie/Fly")
+    HNSG A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    HNSG A 2
+    HNSG A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    HNSG A 2
+    HNSG A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    HNSG A 2
+    HNSG A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    HNSG AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",3000)
+	Stop
+  }
+}
