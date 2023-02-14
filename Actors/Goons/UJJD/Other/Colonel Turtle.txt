@@ -50,7 +50,7 @@ ACTOR ColTurtle 4124
        COLT F 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
        COLT F 4 A_SkullAttack
        COLT F 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
-	   COLT F 1 A_VileAttack("fatpunch",32,32,32,2.0,"Missile",VAF_DMGTYPEAPPLYTODIRECT)
+	   COLT F 1 A_VileAttack("fatpnch",32,32,32,2.0,"Missile",VAF_DMGTYPEAPPLYTODIRECT)
 	   COLT F 0 A_Stop
        COLT F 1
        Goto See
