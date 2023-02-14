@@ -1,0 +1,94 @@
+ACTOR ColTurtle 4124
+{
+  Tag "Col. Turtle"
+	Health 5000
+	Radius 20
+	Height 56
+	Speed 25
+	mASS 10000
+	PainChance 150
+	MONSTER 
+	+FLOORCLIP
+    +NoBlood
+	+NoInfighting
+	+Boss
+	-Countkill
+    SeeSound "GIANTSEE"
+   PainSound "GIANHURT"
+   ActiveSound "Turtact"
+
+	Obituary "%o got KO'd by Col. Turtle."
+	
+	MeleeDamage 50
+	
+	States
+	{
+	Spawn:
+		COLT A 10 A_Look
+		Loop
+	See:
+		COLT A 0 A_JumpIfCloser(192, 9)
+		COLT AABBCCDD 3 A_Chase
+		Goto See
+		COLT AABBCCDDAABBCCDDAABBCCDD 2 A_Chase
+		Goto Charge
+		Charge:
+		TNT1 A 0 A_PlaySound ("GIANTSEE")
+       COLT E 4 A_SkullAttack
+       COLT E 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT E 4 A_SkullAttack
+       COLT E 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT E 4 A_SkullAttack
+       COLT E 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT E 4 A_SkullAttack
+       COLT E 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT E 4 A_SkullAttack
+       COLT F 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT F 4 A_SkullAttack
+       COLT F 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT F 4 A_SkullAttack
+       COLT F 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+       COLT F 4 A_SkullAttack
+       COLT F 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
+	   COLT F 1 A_VileAttack("fatpunch",32,32,32,2.0,"Missile",VAF_DMGTYPEAPPLYTODIRECT)
+	   COLT F 0 A_Stop
+       COLT F 1
+       Goto See
+		Death:
+    COLT A 0 A_Scream
+    COLT A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    COLT A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    COLT A 2 A_NoBlocking
+    COLT A 2
+    COLT A 0 A_ChangeFlag("FloatBob", 0)
+    COLT A 0 A_StopSoundEx("JetpackZombie/Fly")
+    COLT A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    COLT A 2
+    COLT A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    COLT A 2
+    COLT A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    COLT A 2
+    COLT A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    COLT AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",3000)
+	Stop
+  }
+}
+
+Actor ColTurtleGhost
+{
+	Radius 40
+	Height 70
+	Speed 1
+	Damage 0
+	RenderStyle Translucent
+	Alpha 0.5
+	PROJECTILE
+	states
+	{
+	Spawn:
+                COLT E 16
+                COLT F 2 A_FadeOut(0.10)
+		goto Spawn+1
+	}
+}
