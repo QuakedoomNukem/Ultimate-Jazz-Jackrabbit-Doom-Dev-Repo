@@ -1819,3 +1819,23 @@ pic UT99_AT2 tics 12
 texture UNRL_AT1
 pic UNRL_AT1 tics 12
 pic UNRL_AT2 tics 12
+
+//Nakatomi
+
+texture NAKA35A
+pic NAKA35A tics 4
+pic NAKA35B tics 4
+pic NAKA35C tics 4
+
+texture NAKA51A
+pic NAKA51A tics 4
+pic NAKA51B tics 4
+pic NAKA51C tics 4
+pic NAKA51D tics 4
+
+switch doom NAKAOFF
+on sound NAKASW1
+pic NAKAON tics 0 
+
+Off sound NAKAON
+pic NAKAOFF tics 0
