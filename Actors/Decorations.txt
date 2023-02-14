@@ -10800,3 +10800,579 @@ MOKE AB 3
 loop
 }
 }
+
+actor BombChair 4122
+{
++sOLID
++Pushable
++Shootable
++NoBlood
++Nogravity
+Health 10
+Mass 100000
+Height 48
+Radius 16
+States
+{
+Spawn:
+C4BB A -1
+sTOP
+		Death:
+	TNT1 A 0 Radius_Quake(7,512,0,7,0)
+    TNT1 A 0 A_Scream
+    TNT1 A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    TNT1 A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    TNT1 A 2 A_NoBlocking
+    TNT1 A 2
+    TNT1 A 0 A_ChangeFlag("FloatBob", 0)
+    TNT1 A 0 A_StopSoundEx("JetpackZombie/Fly")
+    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 132)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 147)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 157)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 179)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 192)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 208)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 227)
+	TNT1 AAAAAAAAAAA 0
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 30), Random(20, 10), 0, 0, 0, 0, 228)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 50), Random(20, 20), 0, 0, 0, 0, 229)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 90), Random(-30, 30), Random(20, 30), 0, 0, 0, 0, 230)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 80), Random(-30, 70), Random(20, 40), 0, 0, 0, 0, 231)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 90), Random(20, 50), 0, 0, 0, 0, 232)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 80), Random(20, 60), 0, 0, 0, 0, 233)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 40), Random(-30, 70), Random(20, 70), 0, 0, 0, 0, 234)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 60), Random(20, 80), 0, 0, 0, 0, 235)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 75), Random(-30, 50), Random(20, 90), 0, 0, 0, 0, 236)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 16), Random(-30, 40), Random(20, 80), 0, 0, 0, 0, 237)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 30), Random(20, 70), 0, 0, 0, 0, 238)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 40), Random(20, 60), 0, 0, 0, 0, 239)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 50), Random(20, 50), 0, 0, 0, 0, 240)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 60), Random(20, 40), 0, 0, 0, 0, 241)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 90), Random(-30, 70), Random(20, 30), 0, 0, 0, 0, 242)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 80), Random(-30, 80), Random(20, 20), 0, 0, 0, 0, 243)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 90), Random(20, 10), 0, 0, 0, 0, 244)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 80), Random(20, 20), 0, 0, 0, 0, 245)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 70), Random(20, 30), 0, 0, 0, 0, 246)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 40), Random(-30, 60), Random(20, 40), 0, 0, 0, 0, 247)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 50), Random(20, 50), 0, 0, 0, 0, 248)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 40), Random(-30, 40), Random(20, 60), 0, 0, 0, 0, 249)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 45), Random(-30, 50), Random(20, 70), 0, 0, 0, 0, 250)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 60), Random(20, 80), 0, 0, 0, 0, 251)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 70), Random(20, 90), 0, 0, 0, 0, 252)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 80), Random(-30, 80), Random(20, 80), 0, 0, 0, 0, 253)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 90), Random(-30, 90), Random(20, 70), 0, 0, 0, 0, 254)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 0 Radius_Quake(7,128,0,7,0)
+		PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 0)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 20)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 40)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 60)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 80)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 100)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 120)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 140)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 160)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 180)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 200)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 220)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 240)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 260)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 280)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 300)
+    PYXP A 0 A_CustomMissile("PyroSpawner", 4, 2, 320)
+    PYXP BC 0 A_CustomMissile("PyroSpawner", 4, 2, 340)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 0, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 20, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 40, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 60, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 80, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 100, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 120, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 140, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 160, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 180, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 200, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 220, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 240, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 260, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 280, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 300, 2, 0)
+    PYXP A 3 A_CustomMissile("PyroSpawner", 320, 2, 0)
+    PYXP BC 3 A_CustomMissile("PyroSpawner", 340, 2,0)
+	PYXP DEFGHIJKLMNOPQRSTU 2
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 132)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 147)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 157)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 179)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 192)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 208)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 227)
+	PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 0)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 20)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 40)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 60)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 80)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 100)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 120)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 140)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 160)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 180)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 200)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 220)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 240)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 260)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 280)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 300)
+    PYXP A 0 A_CustomMissile("PyroSpawner", 4, 2, 320)
+    PYXP BC 0 A_CustomMissile("PyroSpawner", 4, 2, 340)
+	PYXP E 2 A_CustomMissile("PyroSpawner", 0, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 20, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 40, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 60, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 80, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 100, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 120, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 140, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 160, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 180, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 200, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 220, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 240, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 260, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 280, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 300, 2, 0)
+    PYXP A 3 A_CustomMissile("PyroSpawner", 320, 2, 0)
+    PYXP BC 3 A_CustomMissile("PyroSpawner", 340, 2,0)
+	PYXP E 2 A_CustomMissile("PyroSpawner", 360, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 380, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 400, 2, 0)
+		PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 0)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 20)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 40)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 60)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 80)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 100)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 120)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 140)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 160)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 180)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 200)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 220)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 240)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 260)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 280)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 300)
+    PYXP A 0 A_CustomMissile("PyroSpawner", 4, 2, 320)
+    PYXP BC 0 A_CustomMissile("PyroSpawner", 4, 2, 340)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 420, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 440, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 460, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 480, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 500, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 520, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 540, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 560, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 580, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 600, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 620, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 640, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 660, 2, 0)
+    PYXP A 3 A_CustomMissile("PyroSpawner", 680, 2, 0)
+    PYXP BC 3 A_CustomMissile("PyroSpawner", 700, 2,0)
+	PYXP DEFGHIJKLMNOPQRSTU 2
+    Stop
+	}
+}
+
+Actor PyroSpawner
+{
+  Radius 1
+  Height 1
+  Damage (0)
+  Projectile
+  Speed 15
+  States
+  {
+  Spawn:
+    TNT1 AAAAA 5 Bright A_CustomMissile("PyroBoom", 0, 0, 0, 4)
+    Stop
+  }
+}
+
+Actor PyroBoom
+{
+  Radius 0
+  Height 1
+  Damage (0)
+  Projectile
+  RenderStyle Add
+  DamageType Fire
+  Alpha 0.95
+  Scale 0.75
+  SeeSound "PYRCEXPL"
+  States
+  {
+  Spawn:
+    PYXP AB 2 Bright
+    PYXP C 2 Bright A_Explode(64, 128)
+    PYXP DEFGHIJKLMNOPQRSTU 2 Bright
+    Stop
+  }
+}
+
+Actor PlaneExplode
+{
+	Radius 8
+	Height 8
+	Speed 0
+	Damage 500
+	Projectile
+States
+{
+	Spawn:
+	PLEX A 0
+	goto death
+		Death:
+	TNT1 A 0 Radius_Quake(7,512,0,7,0)
+    TNT1 A 0 A_Scream
+    TNT1 A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    TNT1 A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    TNT1 A 2 A_NoBlocking
+    TNT1 A 2
+    TNT1 A 0 A_ChangeFlag("FloatBob", 0)
+    TNT1 A 0 A_StopSoundEx("JetpackZombie/Fly")
+    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 132)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 147)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 157)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 179)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 192)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 208)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 227)
+	TNT1 AAAAAAAAAAA 0
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 30), Random(20, 10), 0, 0, 0, 0, 228)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 50), Random(20, 20), 0, 0, 0, 0, 229)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 90), Random(-30, 30), Random(20, 30), 0, 0, 0, 0, 230)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 80), Random(-30, 70), Random(20, 40), 0, 0, 0, 0, 231)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 90), Random(20, 50), 0, 0, 0, 0, 232)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 80), Random(20, 60), 0, 0, 0, 0, 233)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 40), Random(-30, 70), Random(20, 70), 0, 0, 0, 0, 234)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 60), Random(20, 80), 0, 0, 0, 0, 235)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 75), Random(-30, 50), Random(20, 90), 0, 0, 0, 0, 236)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 16), Random(-30, 40), Random(20, 80), 0, 0, 0, 0, 237)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 30), Random(20, 70), 0, 0, 0, 0, 238)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 40), Random(20, 60), 0, 0, 0, 0, 239)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 50), Random(20, 50), 0, 0, 0, 0, 240)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 60), Random(20, 40), 0, 0, 0, 0, 241)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 90), Random(-30, 70), Random(20, 30), 0, 0, 0, 0, 242)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 80), Random(-30, 80), Random(20, 20), 0, 0, 0, 0, 243)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 90), Random(20, 10), 0, 0, 0, 0, 244)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 60), Random(-30, 80), Random(20, 20), 0, 0, 0, 0, 245)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 70), Random(20, 30), 0, 0, 0, 0, 246)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 40), Random(-30, 60), Random(20, 40), 0, 0, 0, 0, 247)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 50), Random(20, 50), 0, 0, 0, 0, 248)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 40), Random(-30, 40), Random(20, 60), 0, 0, 0, 0, 249)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 45), Random(-30, 50), Random(20, 70), 0, 0, 0, 0, 250)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 50), Random(-30, 60), Random(20, 80), 0, 0, 0, 0, 251)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 70), Random(-30, 70), Random(20, 90), 0, 0, 0, 0, 252)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 80), Random(-30, 80), Random(20, 80), 0, 0, 0, 0, 253)
+	TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-30, 90), Random(-30, 90), Random(20, 70), 0, 0, 0, 0, 254)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+	TNT1 A 0 Radius_Quake(7,128,0,7,0)
+		PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 0)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 20)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 40)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 60)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 80)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 100)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 120)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 140)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 160)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 180)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 200)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 220)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 240)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 260)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 280)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 300)
+    PYXP A 0 A_CustomMissile("PyroSpawner", 4, 2, 320)
+    PYXP BC 0 A_CustomMissile("PyroSpawner", 4, 2, 340)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 0, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 20, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 40, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 60, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 80, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 100, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 120, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 140, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 160, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 180, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 200, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 220, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 240, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 260, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 280, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 300, 2, 0)
+    PYXP A 3 A_CustomMissile("PyroSpawner", 320, 2, 0)
+    PYXP BC 3 A_CustomMissile("PyroSpawner", 340, 2,0)
+	PYXP DEFGHIJKLMNOPQRSTU 2
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 132)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 147)
+	    TNT1 A 0 A_SpawnItemEx("PyroSpawner", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 157)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 179)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 192)
+    TNT1 A 8
+    TNT1 A 4 A_SpawnItemEx("PyroSpawner", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 208)
+    TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("PyroSpawner", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 227)
+	PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 0)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 20)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 40)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 60)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 80)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 100)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 120)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 140)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 160)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 180)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 200)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 220)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 240)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 260)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 280)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 300)
+    PYXP A 0 A_CustomMissile("PyroSpawner", 4, 2, 320)
+    PYXP BC 0 A_CustomMissile("PyroSpawner", 4, 2, 340)
+	PYXP E 2 A_CustomMissile("PyroSpawner", 0, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 20, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 40, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 60, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 80, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 100, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 120, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 140, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 160, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 180, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 200, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 220, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 240, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 260, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 280, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 300, 2, 0)
+    PYXP A 3 A_CustomMissile("PyroSpawner", 320, 2, 0)
+    PYXP BC 3 A_CustomMissile("PyroSpawner", 340, 2,0)
+	PYXP E 2 A_CustomMissile("PyroSpawner", 360, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 380, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 400, 2, 0)
+		PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 0)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 20)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 40)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 60)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 80)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 100)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 120)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 140)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 160)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 180)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 200)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 220)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 240)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 260)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 280)
+    PYXP E 0 A_CustomMissile("PyroSpawner", 4, 2, 300)
+    PYXP A 0 A_CustomMissile("PyroSpawner", 4, 2, 320)
+    PYXP BC 0 A_CustomMissile("PyroSpawner", 4, 2, 340)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 420, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 440, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 460, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 480, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 500, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 520, 2, 0)
+    PYXP E 2 A_CustomMissile("PyroSpawner", 540, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 560, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 580, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 600, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 620, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 640, 2, 0)
+    PYXP E 3 A_CustomMissile("PyroSpawner", 660, 2, 0)
+    PYXP A 3 A_CustomMissile("PyroSpawner", 680, 2, 0)
+    PYXP BC 3 A_CustomMissile("PyroSpawner", 700, 2,0)
+	PYXP DEFGHIJKLMNOPQRSTU 2
+    Stop
+	}
+}
+
+actor PlantPot 4123
+{
++sOLID
+Height 32
+Radius 16
+States
+{
+Spawn:
+PLNT A -1
+STOP
+}
+}
+
+actor GlassSpawner 4125
+{
+Height 32
+Radius 32
+Speed 0
+Health 1
++NoGravity
++SHOOTABLE
+-COUNTKILL
++NOBLOOD
++NOINFIGHTING
+States
+{
+	Spawn:
+	PLEX A 4
+	Loop
+	Death:
+	TNT1 A 0 A_Playsound ("JJGLASS")
+ 	TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("GlassPiece",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	Stop
+	}
+}
+
+ACTOR GlassPiece
+{
+  Radius 16
+  Height 0
+  Mass 5
+  Speed 15
+  Damage 1
+  RenderStyle Add
+  PROJECTILE
+  -NOGRAVITY
+  +NoInfighting
+    +Flatsprite
+  +NOBLOOD
+  +Touchy
+  +Corpse
+  +Randomize
+  +NoExplodeFloor
+    +LowGravity
+  Gravity 0.6
+  States
+  {
+  Spawn:
+     TNT1 A 0
+     TNT1 A 0 A_Jump(255,"Standard","Small","Tiny","XLarge")
+  Standard:	
+     BGLS ABC 1
+	 Loop
+  Small:	
+     BGLS ABC 1
+	 Loop	
+  Tiny:	
+     BGLS ABC 1
+	 Loop
+  XLarge:	
+     BGLS ABC 1
+	 Loop	 
+  Death:
+     BGLS A 1
+	 BGLS B 1
+	 BGLS C -1
+     loop
+  }
+}
