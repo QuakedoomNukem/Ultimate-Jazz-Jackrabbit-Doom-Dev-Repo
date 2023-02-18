@@ -422,7 +422,7 @@ UTRedTak	UTRedTak
 UTBluWin	UTBluWin
 kamiturtle/scream		JZTSCRM
 DSSPEARU	DSSPEARU
-Ambient/Piano	TRN_BEER
+TRN_BEER	TRN_BEER
 
 suckfart	suckfart
 $random SUCKWALK 		{ SUKWALK1  SUKWALK2 }
