@@ -207,3 +207,5 @@ E5L1_NAME = "\c[O2]Candion";
 E5L1_SUBTITLE = "";
 E5L2_NAME = "\c[Q5]Bloxonius";
 E5L2_SUBTITLE = "";
+E5SL2_NAME = "\cgDie Hared";
+E5SL2_SUBTITLE = "";
