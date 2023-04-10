@@ -1,0 +1,7 @@
+#library "airctrl"
+#include "zcommon.acs"
+
+script "AirControl" enter
+{
+	SetAirControl(0.7);
+}
