@@ -24,7 +24,7 @@ map E5L2 lookup "E5L2_NAME"
 {
 	author = "$E5L2_SUBTITLE"
 	levelnum = 41
-	next = MAP42
+	next = E5L3
 	secretnext = 3D09
 	sky1 = "BLOXSKY", 0
 	cluster = 5
@@ -33,15 +33,16 @@ map E5L2 lookup "E5L2_NAME"
 	enterpic = "INTMAP41"
 }
 
-map MAP42 "Holidaius Fields"
+map E5L3 "E5L3_NAME"
 { 
+	author = "$E5L3_SUBTITLE"
 	levelnum = 42
-    titlepatch = CWILV51
+    	titlepatch = CWILV51
 	next = MAP43
 	secretnext = MAP43
 	sky1 = "JSKY1", 0
 	cluster = 5
-	music = HOLIDAIUS
+	music = Holidaius
 	exitpic = "XmasInte"
 	enterpic = "XmasInte"
 }
