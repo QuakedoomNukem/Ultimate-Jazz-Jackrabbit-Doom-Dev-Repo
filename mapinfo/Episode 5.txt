@@ -33,7 +33,7 @@ map E5L2 lookup "E5L2_NAME"
 	enterpic = "INTMAP41"
 }
 
-map E5L3 "E5L3_NAME"
+map E5L3 lookup "E5L3_NAME"
 { 
 	author = "$E5L3_SUBTITLE"
 	levelnum = 42
