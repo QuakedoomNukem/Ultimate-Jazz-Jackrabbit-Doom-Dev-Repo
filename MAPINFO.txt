@@ -110,7 +110,11 @@ name = "$E4_NAME"
 key = "t"
 }
 
-//episode E5L1 { name = "$E5_NAME" key = "t"}
+episode E5L1 
+{
+name = "$E5_NAME" 
+key = "t"
+}
 
 include "mapinfo/Episode 1.txt"
 include "mapinfo/Episode 2.txt"
