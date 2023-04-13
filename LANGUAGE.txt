@@ -23,6 +23,7 @@ E1_NAME = "Rabbit Rescue";
 E2_NAME = "More Turtle Terror";
 E3_NAME = "The Chase Is On... Again!";
 E4_NAME = "The True Final Clash";
+E5_NAME = "Holiday Hell Hare";
 
 VERYEASY_NAME = "Tending The Rabbits";
 EASY_NAME = "I Like Turtles";
