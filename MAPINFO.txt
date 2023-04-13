@@ -116,6 +116,11 @@ name = "$E5_NAME"
 key = "t"
 }
 
+map TITLEMAP "Welcome to UJJD!"
+{
+music = "JJ2TITLE"
+}
+
 include "mapinfo/Episode 1.txt"
 include "mapinfo/Episode 2.txt"
 include "mapinfo/Episode 3.txt"
