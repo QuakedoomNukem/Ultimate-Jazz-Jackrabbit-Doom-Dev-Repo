@@ -1841,3 +1841,5 @@ Off sound NAKAON
 pic NAKAOFF tics 0
 
 warp2 texture TTLMAPBG
+warp texture DREAMSKY
+warp texture PSYSKY
