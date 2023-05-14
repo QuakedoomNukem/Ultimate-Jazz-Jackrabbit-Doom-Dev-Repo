@@ -211,3 +211,86 @@ ACTOR HellKnightJJD : HellKnight Replaces HellKnight
   }
 }
 
+ACTOR NoRedCard : RedCard replaces RedCard
+{
+  +INVENTORY.NOSCREENFLASH
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  Inventory.Icon ""
+  States
+  {
+  Spawn:
+  TNT1 A 10
+  Loop
+  }
+}
+
+ACTOR NoRedSkull : RedSkull replaces RedSkull
+{
+  +INVENTORY.NOSCREENFLASH
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  Inventory.Icon ""
+  States
+  {
+  Spawn:
+  TNT1 A 10
+  Loop
+  }
+}
+
+ACTOR NoBlueCard : BlueCard replaces BlueCard
+{
+  +INVENTORY.NOSCREENFLASH
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  Inventory.Icon ""
+  States
+  {
+  Spawn:
+  TNT1 A 10
+  Loop
+  }
+}
+
+ACTOR NoBlueSkull : BlueSkull replaces BlueSkull
+{
+  +INVENTORY.NOSCREENFLASH
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  Inventory.Icon ""
+  States
+  {
+  Spawn:
+  TNT1 A 10
+  Loop
+  }
+}
+
+ACTOR NoYellowCard : YellowCard replaces YellowCard
+{
+  +INVENTORY.NOSCREENFLASH
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  Inventory.Icon ""
+  States
+  {
+  Spawn:
+  TNT1 A 10
+  Loop
+  }
+}
+
+ACTOR NoYellowSkull : YellowSkull replaces YellowSkull
+{
+  +INVENTORY.NOSCREENFLASH
+  Inventory.PickupMessage ""
+  Inventory.PickupSound ""
+  Inventory.Icon ""
+  States
+  {
+  Spawn:
+  TNT1 A 10
+  Loop
+  }
+}
