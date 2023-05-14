@@ -285,7 +285,6 @@ ACTOR ElementEarthCount : Inventory
 		Stop
 	}
 }
-
 actor ElementLightGem : CustomInventory 4061
 {
     Inventory.PickupSound "GemPckup"
@@ -300,8 +299,23 @@ actor ElementLightGem : CustomInventory 4061
     Loop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 50000)
+	TNT1 A 0 A_GiveInventory("ElementopolisBeaten")
     Stop
 }
+}
+
+ACTOR ElementopolisBeaten : Inventory 
+{
+    Inventory.PickupSound ""
+	Inventory.Pickupmessage ""
+	Inventory.MaxAmount 1
+	inventory.Interhubamount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
 }
 
 actor ElementDarkGem : CustomInventory 4062
