@@ -21,6 +21,7 @@ map E4SL2 lookup "E4SL2_NAME"
 	sky1 = "HUBSKY", 0
 	music = "HUBTRK"
 	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2A lookup "E4SL2_NAME"
@@ -29,6 +30,8 @@ map E4SL2A lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "EarthSky", 0
 	music = "EARTHTRCK"
+	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2B lookup "E4SL2_NAME"
@@ -37,6 +40,8 @@ map E4SL2B lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "FIRESKY", 0
 	music = "FIRETRCK"
+	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2C lookup "E4SL2_NAME"
@@ -45,6 +50,8 @@ map E4SL2C lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "WATERSKY", 0
 	music = "WATERTRK"
+	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2D lookup "E4SL2_NAME"
@@ -53,6 +60,8 @@ map E4SL2D lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "WINDSKY", 0
 	music = "WINDTRCK"
+	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2E lookup "E4SL2_NAME"
@@ -61,6 +70,8 @@ map E4SL2E lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "DARKSKY", 0
 	music = "SHADWTRK"
+	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2F lookup "E4SL2_NAME"
@@ -69,6 +80,8 @@ map E4SL2F lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "LIGHTSKY", 0
 	music = "LIGHTRCK"
+	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 }
 
 map E4SL2G lookup "E4SL2_NAME"
@@ -79,5 +92,6 @@ map E4SL2G lookup "E4SL2_NAME"
 	cluster = 65
 	sky1 = "BOSSSKY", 0
 	music = "FBSSTRK"
+	enterpic = "$JAZZ_IN"
 	exitpic = "$JAZZ_IN"
 }
