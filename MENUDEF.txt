@@ -97,6 +97,10 @@ OptionMenu "JazzGameplayOptions"
 	StaticText "Player", 1
 	PlayerNameField "$PLYRMNU_NAME"
 	PlayerGenderItem "$PLYRMNU_PLAYERGENDER", "Gender"
+	
+	StaticText ""
+	Option "Skip Cutscenes","Skip_Cutscenes","OnOff"
+	StaticText "This skips various dialogue cutscenes.", "Yellow"
 }
 
 //Controls
