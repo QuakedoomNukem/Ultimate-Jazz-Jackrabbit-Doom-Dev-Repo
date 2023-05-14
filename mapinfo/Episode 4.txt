@@ -138,7 +138,7 @@ map E4L11 lookup "E4L11_NAME"
 	secretnext = E4L12
 	sky1 = "hauntsky", 0
 	cluster = 4
-	music = "BELMONT"
+	music = ""
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
 }
