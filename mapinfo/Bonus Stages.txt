@@ -37,8 +37,8 @@ map 3D02 "Bonus Stage 2"
 map 3D03 "Bonus Stage 3"
 { 
 	levelnum = 73
-	next = MAP12
-	secretnext = MAP12
+	next = E2L3
+	secretnext = E2L3
 	sky1 = "BONSKY3", 0
 	cluster = 66
 	par = 180
@@ -50,8 +50,8 @@ map 3D03 "Bonus Stage 3"
 map 3D04 "Bonus Stage 4"
 { 
 	levelnum = 74
-	next = MAP15
-	secretnext = MAP15
+	next = E2L6
+	secretnext = E2L6
 	sky1 = "BONSKY4", 0
 	cluster = 66
 	par = 180
@@ -63,8 +63,8 @@ map 3D04 "Bonus Stage 4"
 map 3D05 "Bonus Stage 5"
 { 
 	levelnum = 75
-	next = MAP21
-	secretnext = MAP21
+	next = E3L3
+	secretnext = E3L3
 	sky1 = "BONSKY5", 0
 	cluster = 66
 	music = JJ1Bonus
@@ -75,8 +75,8 @@ map 3D05 "Bonus Stage 5"
 map 3D06 "Bonus Stage 6"
 { 
 	levelnum = 76
-	next = MAP27
-	secretnext = MAP27
+	next = E3L9
+	secretnext = E3L9
 	sky1 = "BONSKY6", 0
 	cluster = 66
 	music = JJ1Bonus
@@ -87,8 +87,8 @@ map 3D06 "Bonus Stage 6"
 map 3D07 "Bonus Stage 7"
 { 
 	levelnum = 77
-	next = MAP32
-	secretnext = MAP32
+	next = E4L2
+	secretnext = E4L2
 	sky1 = "BONSKY7", 0
 	cluster = 66
 	music = JJ1Bonus
@@ -99,8 +99,8 @@ map 3D07 "Bonus Stage 7"
 map 3D08 "Bonus Stage 8"
 { 
 	levelnum = 78
-	next = MAP62
-	secretnext = MAP62
+	next = E4L9
+	secretnext = E4L9
 	sky1 = "BONSKY8", 0
 	cluster = 66
 	music = JJ1Bonus
