@@ -25,12 +25,13 @@ map E1L2 lookup "E1L2_NAME"
 	author = "$E1L2_SUBTITLE"
 	levelnum = 2
 	next = E1L3
-	secretnext = 3D01
+	secretnext = BONUS01
 	sky1 = "JSKY1", 0
 	cluster = 1
 	music = "CARROTUS"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP01"
+	NoClusterText
 }
 
 map E1L3 lookup "E1L3_NAME"
@@ -77,12 +78,13 @@ map E1L6 lookup "E1L6_NAME"
 	author = "$E1L6_SUBTITLE"
 	levelnum = 6
 	next = E1L7
-	secretnext = 3D02
+	secretnext = BONUS02
 	sky1 = "MED6", 0
 	cluster = 1
 	music = "MEDIVO"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP06"
+	NoClusterText
 }
 
 map E1L7 lookup "E1L7_NAME"

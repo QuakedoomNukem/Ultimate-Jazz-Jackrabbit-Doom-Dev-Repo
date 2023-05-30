@@ -12,12 +12,13 @@ map E4L1 lookup "E4L1_NAME"
 	author = "$E4L1_SUBTITLE"
 	levelnum = 31
 	next = E4L2
-	secretnext = 3D07
+	secretnext = BONUS07
 	sky1 = "JSKY2", 0
 	cluster = 4
 	music = "Beach"
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
+	NoClusterText
 }
 
 map E4L2 lookup "E4L2_NAME"
@@ -98,12 +99,13 @@ map E4L8 lookup "E4L8_NAME"
 { 
 	levelnum = 38
 	next = E4L9
-	secretnext = 3D08
+	secretnext = BONUS08
 	sky1 = "DMDSSKY", 0
 	cluster = 4
 	music = "DIAREMIX"
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
+	NoClusterText
 }
 
 map E4L9 lookup "E4L9_NAME"

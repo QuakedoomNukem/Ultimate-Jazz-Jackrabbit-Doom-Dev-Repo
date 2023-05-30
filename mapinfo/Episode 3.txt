@@ -23,19 +23,20 @@ map E3L2 lookup "E3L2_NAME"
 { 
 	levelnum = 20
 	next = E3L3
-	secretnext = 3D05
+	secretnext = BONUS05
 	sky1 = "DESSKY", 0
 	cluster = 3
 	music = "DESERTO"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP20"
+	NoClusterText
 }
 
 map E3L3 lookup "E3L3_NAME"
 { 
 	levelnum = 21
 	next = E3L4
-	secretnext = 3D05
+	secretnext = E3L4
 	sky1 = "lagunsky", 0
 	cluster = 3
 	music = "LAGUNICUS"
@@ -95,12 +96,13 @@ map E3L8 lookup "E3L8_NAME"
 { 
 	levelnum = 26
 	next = E3L9
-	secretnext = 3D06
+	secretnext = BONUS06
 	sky1 = "STONSKY", 0
 	cluster = 3
 	music = "STONAR"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP26"
+	NoClusterText
 }
 
 map E3L9 lookup "E3L9_NAME"

@@ -23,12 +23,13 @@ map E2L2 lookup "E2L2_NAME"
 { 
 	levelnum = 11
 	next = E2L3
-	secretnext = 3D03
+	secretnext = BONUS03
 	sky1 = "NIPSKY3", 0
 	cluster = 2
 	music = "NIPPIUS"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP11"
+	NoClusterText
 }
 
 map E2L3 lookup "E2L3_NAME"
@@ -59,12 +60,13 @@ map E2L5 lookup "E2L5_NAME"
 { 
 	levelnum = 14
 	next = E2L6
-	secretnext = 3D04
+	secretnext = BONUS04
 	sky1 = "sluggsky", 0
 	cluster = 2
 	music = "SLUGGION"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP14"
+	NoClusterText
 }
 
 map E2L6 lookup "E2L6_NAME"

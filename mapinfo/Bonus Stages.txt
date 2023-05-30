@@ -8,7 +8,7 @@ nofreelook
 noclustertext
 }
 
-map 3D01 "Bonus Stage 1"
+map BONUS01 "Bonus Stage 1"
 {
 	levelnum = 71
 	next = E1L3
@@ -21,7 +21,7 @@ map 3D01 "Bonus Stage 1"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D02 "Bonus Stage 2"
+map BONUS02 "Bonus Stage 2"
 { 
 	levelnum = 72
 	next = E1L7
@@ -34,7 +34,7 @@ map 3D02 "Bonus Stage 2"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D03 "Bonus Stage 3"
+map BONUS03 "Bonus Stage 3"
 { 
 	levelnum = 73
 	next = E2L3
@@ -47,7 +47,7 @@ map 3D03 "Bonus Stage 3"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D04 "Bonus Stage 4"
+map BONUS04 "Bonus Stage 4"
 { 
 	levelnum = 74
 	next = E2L6
@@ -60,7 +60,7 @@ map 3D04 "Bonus Stage 4"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D05 "Bonus Stage 5"
+map BONUS05 "Bonus Stage 5"
 { 
 	levelnum = 75
 	next = E3L3
@@ -72,7 +72,7 @@ map 3D05 "Bonus Stage 5"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D06 "Bonus Stage 6"
+map BONUS06 "Bonus Stage 6"
 { 
 	levelnum = 76
 	next = E3L9
@@ -84,7 +84,7 @@ map 3D06 "Bonus Stage 6"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D07 "Bonus Stage 7"
+map BONUS07 "Bonus Stage 7"
 { 
 	levelnum = 77
 	next = E4L2
@@ -96,7 +96,7 @@ map 3D07 "Bonus Stage 7"
 	enterpic = "$JAZZ_IN"
 }
 
-map 3D08 "Bonus Stage 8"
+map BONUS08 "Bonus Stage 8"
 { 
 	levelnum = 78
 	next = E4L9
