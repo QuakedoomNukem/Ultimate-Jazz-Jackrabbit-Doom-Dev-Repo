@@ -1,23 +1,8 @@
-terrain CloudWalk
+splash CloudStep
 {
-	splash			CloudWalk
-    footclip		0
-	liquid
-}
-
-splash CloudWalk
-{
-	smallclass		None
-	smallclip		0
-	smallsound		None
-	baseclass		None
-	chunkclass		None
-	chunkxvelshift	0
-	chunkyvelshift	0
-	chunkzvelshift	0
-	chunkbasezvel	0
-	sound			cloudstep
-	noalert
+   baseclass      JJWaterSplash
+   sound         CloudStep
+   noalert
 }
 
 splash JazzSludge
@@ -40,6 +25,12 @@ splash JazzLAva
    baseclass      WalkFire
    sound         LavSplsh
    noalert
+}
+
+terrain CloudStep
+{
+	splash			CloudStep
+	liquid
 }
 
 terrain JazzSludge
@@ -113,9 +104,9 @@ floor WDES1 Jazzwater
 floor WDES2 Jazzwater
 floor WDES3 Jazzwater
 
-floor WINTER48 CloudWalk
-floor ELEM15 CloudWalk
-floor ELEM16 CloudWalk
+floor WINTER48 CloudStep
+floor ELEM15 CloudStep
+floor ELEM16 CloudStep
 
 floor XMAS42A Jazzwater
 floor XMAS42B Jazzwater
