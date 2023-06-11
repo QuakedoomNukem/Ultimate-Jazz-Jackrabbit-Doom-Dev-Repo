@@ -1,0 +1,6 @@
+tools
+.git*
+_stuff
+build.bat
+build.sh
+

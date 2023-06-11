@@ -1,0 +1,214 @@
+[enu default]
+
+QUITMSG = "\clI guess no carrot cake?";
+QUITMSG1 = "\clHave a great day \nand see you next time!";
+QUITMSG2 = "\clEva Earlong can't stay \nlocked up forever.";
+QUITMSG3 = "\clDon't leave Spaz... \nspazzing out for too long.";
+QUITMSG4 = "\clDon't forget to support \nyour local music. C:";
+QUITMSG5 = "\clInsert Quit Message Here.";
+QUITMSG6 = "\clIf you leave, \ndon't let a turtle bite \nyou in the butt.";
+QUITMSG7 = "\clI guess you can play with something else. Yawn P:";
+QUITMSG8 = "\clRabbit Hare-Kind \ndepends on you, \nare you sure you \nwant to leave?";
+QUITMSG9 = "\clYou're not leaving me \nfor Awesome Possum, \nare you?!";
+QUITMSG10= "\clDon't go! \nWe're easier than Battletoads, \nwe promise.";
+QUITMSG11 = "\clPress yes to initiate \ngame over process.";
+QUITMSG12 = "\clDon't be gone too long, \nLennie will nonstop pet \nJazz if he finds him.";
+QUITMSG13 = "\clIf you go, no complaints about \nnot being able to jump on \nturtles Mario style.";
+QUITMSG14 = "\clIf you leave, \nat least ponder the fact \nDevan could be a cross \nbetween Eggman and a Koopa.";
+
+
+TXT_RANDOMGOODBYE_1 = "Close";
+
+E1_NAME = "Rabbit Rescue";
+E2_NAME = "More Turtle Terror";
+E3_NAME = "The Chase Is On... Again!";
+E4_NAME = "The True Final Clash";
+E5_NAME = "Holiday Hell Hare";
+
+VERYEASY_NAME = "Tending The Rabbits";
+EASY_NAME = "I Like Turtles";
+NORMAL_NAME = "Shellshock";
+HARD_NAME = "Wabbit Season";
+VERYHARD_NAME = "Bionic Bunny's Doom";
+
+VERYEASY_CONFIRM = "You have never played\n"
+					"a video game.\n\n"
+					"Do you want to take\n"
+					"this leisurely stroll?\n\n"
+					"\cgModifiers:\n"
+					"\cl20% Aggressiveness,\n"
+					"0.5x Damage,\n"
+					"2x Enemy Health";
+
+EASY_CONFIRM = "You have a small amount\n"
+				"of experience playing\n"
+				"platformers or FPS games.\n\n"
+				"Are you ready?\n\n"
+				"\cgModifiers:\n"
+				"\cl40% Aggressiveness,\n"
+				"0.75x Damage,\n"
+				"2.25x Enemy Health";
+
+NORMAL_CONFIRM = "This is standard difficulty,\n"
+					"you have experience with\n"
+					"platformers and FPS games.\n\n"
+					"Ready to take down Devan?\n\n"
+					"\cgModifiers:\n"
+					"\cl60% Aggressiveness,\n"
+					"1x Damage,\n"
+					"2.5x Enemy Health\n";
+
+HARD_CONFIRM = "Devan wants you on a platter, \n"
+				"mostly dead.\n\n"
+				"Are you a bad enough rabbit\n"
+				"to challenge this?\n\n"
+				"\cgModifiers:\n"
+				"\cl80% Aggressiveness,\n"
+				"1.25x Damage,\n"
+				"2.75x Enemy Health";
+
+VERYHARD_CONFIRM = "There is no coming back\n"
+					"from this place.\n\n"
+					"You really want to\n"
+					"risk your life?\n\n"
+					"\cgModifiers:\n"
+					"\cl1.5x Damage, No Cheats,\n"
+					"3x Enemy Health,\n"
+					"100% Aggressiveness,\n"
+					"Double Ammo";
+					
+AM_MONSTERS = "Goons:";
+SECRETMESSAGE = "\cfSecret Found!";
+GGSAVED = "\cjYour progress has been saved.";
+STSTR_DQDON = "Invulnerability Cheat ON";
+STSTR_DQDOFF = "Invulnerability Cheat OFF";
+STSTR_FAADDED = "Full Ammo Cheat activated";
+STSTR_KFAADDED = "Full Ammo Cheat activated (Keys are not present in this)";
+
+
+GUN1POWERUP = "\cnBlaster \cfPower Up!";
+GUN2POWERUP = "\cgSpread Gun \cfPower Up!";
+GUN3POWERUP = "\cjSlicer \cfPower Up!";
+GUN4POWERUP = "\c[J1]Bouncer \cfPower Up!";
+GUN5POWERUP = "\crSeeker \cfPower Up!";
+GUN6POWERUP = "\cqRF Missile \cfPower Up!";
+GUN7POWERUP = "\cxToaster \cfPower Up!";
+GUN8POWERUP = "\cwFrostbiter \cfPower Up!";
+GUN9POWERUP = "\ccRailgun \cfPower Up!";
+GUN0POWERUP = "\ckElectro-Blaster \cfPower Up!";
+
+
+E1L1_NAME = "\c[C5]Jazz's Home";
+E1L1_SUBTITLE = "\cwLearning Curve";
+E1L2_NAME = "\c[C5]Carrotus HQ";
+E1L2_SUBTITLE = "\cwBack To It";
+E1L3_NAME = "\c[W5]Castle Dungeon";
+E1L3_SUBTITLE = "\cwRoyal Pain";
+E1L4_NAME = "\c[V3]Diamondus";
+E1L4_SUBTITLE = "";
+E1L5_NAME = "\c[E9]Tubelectric";
+E1L5_SUBTITLE = "\cwPlumber's Crack";
+E1L6_NAME = "\c[E5]Medivo";
+E1L6_SUBTITLE = "";
+E1L7_NAME = "\c[V2]Letni";
+E1L7_SUBTITLE = "\cwComputer Geekage";
+E1L8_NAME = "\c[Q3]Technoir";
+E1L8_SUBTITLE = "\cwFossil Fuel";
+E1L9_NAME = "\c[H4]Orbitus";
+E1L9_SUBTITLE = "\cwBounce and Ounce";
+E1SL1_NAME = "\c[C2]Chameleon Planet";
+E1SL1_SUBTITLE = "\cwSticks And Geckos";
+E1SL2_NAME = "\c[M1]Epic Playground";
+E1SL2_SUBTITLE = "\cwNostalgia Bomb";
+
+E2L1_NAME = "\c[E2]Turtemple";
+E2L1_SUBTITLE = "";
+E2L2_NAME = "\c[J0]Nippius";
+E2L2_SUBTITLE = "\cwChilly Willy";
+E2L3_NAME = "\c[A2]Jungrock";
+E2L3_SUBTITLE = "\cwLike Tarzan Boy";
+E2L4_NAME = "\c[O6]Marbelara";
+E2L4_SUBTITLE = "";
+E2L5_NAME = "\c[A6]Sluggion";
+E2L5_SUBTITLE = "";
+E2L6_NAME = "\c[I9]Dreempipes";
+E2L6_SUBTITLE = "";
+E2L7_NAME = "\c[S2]Fanolint";
+E2L7_SUBTITLE = "";
+E2L8_NAME = "\c[K1]Scraparap";
+E2L8_SUBTITLE = "";
+E2L9_NAME = "\c[L7]Megairbase";
+E2L9_SUBTITLE = "";
+E2SL1_NAME = "\c[C2]Carrotopolis";
+E2SL1_SUBTITLE = "";
+E2SL2_NAME = "\c[F0]Atlantis";
+E2SL2_SUBTITLE = "\cwThe Forgotten Land";
+
+E3L1_NAME = "\c[Q9]Ceramicus";
+E3L1_SUBTITLE = "";
+E3L2_NAME = "\c[J7]Deserto";
+E3L2_SUBTITLE = "";
+E3L3_NAME = "\c[L5]Lagunicus";
+E3L3_SUBTITLE = "";
+E3L4_NAME = "\c[I5]Exoticus";
+E3L4_SUBTITLE = "";
+E3L5_NAME = "\c[D9]Industrius";
+E3L5_SUBTITLE = "";
+E3L6_NAME = "\c[H5]Muckamok";
+E3L6_SUBTITLE = "";
+E3L7_NAME = "\c[V1]Raneforus";
+E3L7_SUBTITLE = "";
+E3L8_NAME = "\c[M2]Stonar";
+E3L8_SUBTITLE = "";
+E3L9_NAME = "\c[W7]Deckstar";
+E3L9_SUBTITLE = "";
+E3L10_NAME = "\c[P6]Pezrock";
+E3L10_SUBTITLE = "";
+E3L11_NAME = "\c[V7]Crysilis";
+E3L11_SUBTITLE = "";
+E3L12_NAME = "\c[N0]Battleships";
+E3L12_SUBTITLE = "\cwDestroy Them All";
+E3SL1_NAME = "\c[C2]Pollutus";
+E3SL1_SUBTITLE = "";
+E3SL2_NAME = "\c[I3]Dreamland";
+E3SL2_SUBTITLE = "\cwAll In Your Head";
+
+E4L1_NAME = "\c Beachin' Bunny";
+E4L1_SUBTITLE = "\cwNo Vacation Allowed";
+E4L2_NAME = "\c Jungle Fever";
+E4L2_SUBTITLE = "\cwMonkey Business";
+E4L3_NAME = "\c[G7]Easterus";
+E4L3_SUBTITLE = "\cwChoco and Chique";
+E4L4_NAME = "\c Colonius";
+E4L4_SUBTITLE = "";
+E4L5_NAME = "\c Town";
+E4L5_SUBTITLE = "";
+E4L6_NAME = "\c Labrat";
+E4L6_SUBTITLE = "\cwLoose Screws Squared";
+E4L7_NAME = "\c Psychedelia";
+E4L7_SUBTITLE = "";
+E4L8_NAME = "\c Diamondus Remix";
+E4L8_SUBTITLE = "";
+E4L9_NAME = "\c Tubelectric Remix";
+E4L9_SUBTITLE = "";
+E4L10_NAME = "\c Medivo Remix";
+E4L10_SUBTITLE = "";
+E4L11_NAME = "\c Haunted House";
+E4L11_SUBTITLE = "\cwVampire's Kiss";
+E4L12_NAME = "\c Rabbit Roast";
+E4L12_SUBTITLE = "\cwTo Hell And Back";
+E4L13_NAME = "\c Final Battle";
+E4L13_SUBTITLE = "\cwTime To End This";
+E4SL1_NAME = "\c[C2]Chelonia IV";
+E4SL1_SUBTITLE = "";
+E4SL2_NAME = "\c Jazzy Elements";
+E4SL2_SUBTITLE = "\cwJack Of All Elements";
+
+E5L1_NAME = "\c[O2]Candion";
+E5L1_SUBTITLE = "";
+E5L2_NAME = "\c[Q5]Bloxonius";
+E5L2_SUBTITLE = "";
+E5L3_NAME = "\c Holidaius Fields";
+E5L3_SUBTITLE = "";
+E5SL2_NAME = "\cgDie Hared";
+E5SL2_SUBTITLE = "";
