@@ -13,7 +13,7 @@ again to make life miserable. Stop them before all (S)Hell breaks loose!
 --------------------------------------------------------------------------------
 ## CREDITS:
 
-TO-UPDATE
+See CREDITS.md
 --------------------------------------------------------------------------------
 
 ### EDITORS USED:
@@ -27,7 +27,10 @@ TO-UPDATE
 - Slade3 : https://github.com/sirjuddington/SLADE/releases
 
 #### KNOWN PROBLEMS/LIMITS/BUGS:
-TO ADD
+Requires GZDoom 4.8.0 minimum, you can get it from GZDoom archives here
+Windows: https://zdoom.org/files/gzdoom/bin/gzdoom-4-8-0-Windows-64bit.zip
+MacOS: https://zdoom.org/files/gzdoom/bin/gzdoom-4-8-0-macOS.zip
+So you need at least a 64bit OS to run JJDoom, as well Doom 2 Official game
 
 ##### LICENSE:
 THIS REPOSITORY IS FOR DEVELOPMENT AND TESTING PURPOSES. CONTRIBUTIONS ARE WELCOME,

@@ -2,10 +2,19 @@
 
 DefaultMap
 {
-nojump
-nocrouch
-nofreelook
-noclustertext
+	lightmode = 0 //force Standard mode
+	
+	// Force breaking compatibility options off
+	compat_maskedmidtex = 0
+	compat_trace = 0
+
+	// Force SSAO being disabled in skyboxes
+	disableskyboxao
+
+	allowjump
+	allowcrouch
+	allowfreelook
+	noclustertext
 }
 
 map BONUS01 "Bonus Stage 1"

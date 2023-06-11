@@ -1,4 +1,4 @@
 airctrl
 dizzy
-GunPowerUps
-NoKeys
+gunpowerups
+nokeys

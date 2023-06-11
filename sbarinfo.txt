@@ -7,18 +7,17 @@ statusbar normal
 {
 InInventory "HideHUD"
 {
-//DrawInventoryBar Doom, noartibox, 0 , "JJ1HUD_FONT" ,0,0;
+	//DrawInventoryBar Doom, noartibox, 0 , "JJ1HUD_FONT" ,0,0;
 	DrawImage "JJ1STBAR", 160, 180, center;
+
 	// Player Health bar
-	
 	DrawBar "hp_top", " ", Health, Horizontal, 19, 173;
 	DrawNumber 9, "JJ1HUD_FONT", Normal, Health, Alignment(Center), 50, 174, 1;
-	
+
 	// Player Armor bar
 	DrawBar "armortop", " ", Armor (200), Horizontal, 19, 187;
 	DrawNumber 9, "JJ1HUD_FONT", Normal, Armor, Alignment(Center), 50, 188, 1;
-	
-	
+
 	IsSelected "LFG2000"	  	{DrawImage "WEPICON1", 152, 180, Center;} //"PLSPA0"
 	IsSelected "SpreadGun"     	{DrawImage "WEPICON2", 152, 180, Center;}
 	IsSelected "Slicer"  		{DrawImage "WEPICON3", 152, 180, Center;}
@@ -29,15 +28,15 @@ InInventory "HideHUD"
 	IsSelected "Frostbiter"  	{DrawImage "WEPICON8", 152, 180, Center;}
 	IsSelected "Railgun"  		{DrawImage "WEPICON9", 152, 180, Center;}
 	IsSelected "ElectroBlaster" {DrawImage "WEPICON0", 152, 180, Center;}
-	
+
 	IsSelected "LFG2000"	  	{DrawString "JJ1HUD_FONT", Normal, ":", 105, 188, 0, alignment (Center), drawshadow(2,2);}
-	
+
 	DrawNumber 9, "JJ1HUD_FONT", Normal, Ammo1, DrawShadow(2,2), Alignment(center), WhenNotZero, 104, 188, 1;
-	
+
 	DrawNumber 9, "JJ1HUD_FONT", Normal, Points, DrawShadow(2,2), Alignment(right), 300, 174, 1;
-	
+
 	DrawMugshot 5,disableouch, 197, 162;
-	
+
 	drawselectedinventory alwaysshowcounter , drawshadow(2,2), "JJ1HUD_FONT", 262, 164;  //143, 152;
 
    }
@@ -50,8 +49,8 @@ statusbar fullscreen // Standard Doom Status bar
 {
 InInventory "HideHUD"
 {
-drawimage "WEPSLOTF", 220, 160;
-IsSelected "LFG2000"	  	{DrawImage "WEPICON1", 260, 180, Center;} //"PLSPA0"
+	drawimage "WEPSLOTF", 220, 160;
+	IsSelected "LFG2000"	  	{DrawImage "WEPICON1", 260, 180, Center;} //"PLSPA0"
 	IsSelected "SpreadGun"     	{DrawImage "WEPICON2", 260, 180, Center;}
 	IsSelected "Slicer"  		{DrawImage "WEPICON3", 260, 180, Center;}
 	IsSelected "Launcher"  		{DrawImage "WEPICON4", 260, 180, Center;}
@@ -66,22 +65,25 @@ IsSelected "LFG2000"	  	{DrawImage "WEPICON1", 260, 180, Center;} //"PLSPA0"
 	drawimage "PrinA0", 390, 170;
 	drawimage ammoicon1, 310, 170; //215, 170; //-118, 155;
     drawnumber 3, "JJ2_Font", untranslated, ammo1, 375, 170;
-    drawnumber 3, "JJ2_Font", untranslated, health, 64, 170; 
-    drawnumber 3, "JJ2_Font", untranslated, armor, -32, 170; 
+    drawnumber 3, "JJ2_Font", untranslated, health, 64, 170;
+    drawnumber 3, "JJ2_Font", untranslated, armor, -32, 170;
 
     gamemode deathmatch, teamgame
     {
         drawnumber 2, HUDFONT_DOOM, untranslated, frags, 138, 171;
     }
+
     gamemode cooperative, singleplayer
     {
         drawimage translatable "", 144, 169;
     }
-        drawmugshot 5,disableouch, 72, 160;
-		drawselectedinventory alwaysshowcounter, HUDFONT_DOOM, 420, 152;  
-		DrawNumber 9, "SmallFont", Normal, Points, DrawShadow(2,2), Alignment(center), 420, -132, 1;
-		DrawString "SmallFont", Normal, "Score", 420, -150, 1, DrawShadow(2,2), Alignment(center);
-   }
+
+	drawmugshot 5,disableouch, 72, 160;
+	drawselectedinventory alwaysshowcounter, HUDFONT_DOOM, 420, 152;
+	DrawNumber 9, "SmallFont", Normal, Points, DrawShadow(2,2), Alignment(center), 420, -132, 1;
+	DrawString "SmallFont", Normal, "Score", 420, -150, 1, DrawShadow(2,2), Alignment(center);
+
+	}
 }
 
 statusbar inventory // Standard bar overlay (ZDoom Addition)

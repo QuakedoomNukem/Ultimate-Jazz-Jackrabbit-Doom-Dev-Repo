@@ -1,25 +1,27 @@
+//definitions
 gameinfo
 {
-  titlepage = "JAZZTITL"
-  infopage = "WEPBOARD", "TUTBORD1", "TUTBORD2", "Signbord", "THANK", "GOG", "PROMO01", "PROMO02", "PROMO03", "PROMO04", "PROMO05", "PROMO06", "PROMO07", "PROMO08", "PROMO09", "PROMO10", "PROMO11", "PROMO12"
-  playerclasses = "JazzPlayer"
-  FullscreenAutoaspect = 3
-  cursorpic = "CURSOR"
-  BorderFlat = "STATBAR2"
-  IntermissionMusic = "JJ1End"
-  TitleMusic = "JJ1TTL"
-  Border = 0, 0, "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0"  //HereticBorder //
-  pausesign = "Pausedyo"
-  AddEventHandlers = "FlashHandler"
-  QuitSound = "QuitSound"
-  Intro
-  {
-  Video = "Graphics/JAZZITO1.ivf"
-  }
-} 
+	titlepage = "JAZZTITL"
+	infopage = "WEPBOARD", "TUTBORD1", "TUTBORD2", "Signbord", "THANK", "GOG", "PROMO01", "PROMO02", "PROMO03", "PROMO04", "PROMO05", "PROMO06", "PROMO07", "PROMO08", "PROMO09", "PROMO10", "PROMO11", "PROMO12"
+	playerclasses = "JazzPlayer"
+	FullscreenAutoaspect = 3
+	cursorpic = "CURSOR"
+	BorderFlat = "STATBAR2"
+	IntermissionMusic = "JJ1End"
+	TitleMusic = "JJ1TTL"
+	Border = 0, 0, "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0"  //HereticBorder //
+	pausesign = "Pausedyo"
+	AddEventHandlers = "FlashHandler"
+	QuitSound = "QuitSound"
+	Intro
+	{
+		Video = "Graphics/JAZZITO1.ivf"
+	}
+}
 
+//skills
 skill baby
-{ 
+{
 	MonsterHealth = 2
 	DamageFactor = 0.5
 	SpawnFilter = Baby
@@ -84,43 +86,49 @@ skill nightmare
 	ACSReturn = 4
 }
 
+//episodes
 clearepisodes
 
-episode E1L1 
+episode E1L1
 {
-name = "$E1_NAME"
-key = "r"
+	name = "$E1_NAME"
+	key = "r"
 }
 
-episode E2L1 
+episode E2L1
 {
-name = "$E2_NAME"
-key = "m"
+	name = "$E2_NAME"
+	key = "m"
 }
 
-episode E3L1 
+episode E3L1
 {
-name = "$E3_NAME"
-key = "c"
+	name = "$E3_NAME"
+	key = "c"
 }
 
-episode E4L1 
+episode E4L1
 {
-name = "$E4_NAME"
-key = "t"
+	name = "$E4_NAME"
+	key = "t"
 }
 
-episode E5L1 
+episode E5L1
 {
-name = "$E5_NAME" 
-key = "t"
+	name = "$E5_NAME"
+	key = "t"
 }
 
+//maps setups
 map TITLEMAP "Welcome to UJJD!"
 {
-music = "JJ2TITLE"
+	music = "JJ2TITLE"
 }
 
+//doomednums and spawnids here
+//TBD
+
+//includes - usually is better to avoid spaces on lumps (ozy81)
 include "mapinfo/Episode 1.txt"
 include "mapinfo/Episode 2.txt"
 include "mapinfo/Episode 3.txt"
@@ -128,4 +136,3 @@ include "mapinfo/Episode 4.txt"
 include "mapinfo/Jazzy Elements.txt"
 include "mapinfo/Episode 5.txt"
 include "mapinfo/Bonus Stages.txt"
-

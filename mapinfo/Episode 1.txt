@@ -2,9 +2,18 @@
 
 DefaultMap
 {
-allowjump
-allowcrouch
-allowfreelook
+	lightmode = 0 //force Standard mode
+	
+	// Force breaking compatibility options off
+	compat_maskedmidtex = 0
+	compat_trace = 0
+
+	// Force SSAO being disabled in skyboxes
+	disableskyboxao
+
+	allowjump
+	allowcrouch
+	allowfreelook
 }
 
 map E1L1 lookup "E1L1_NAME"

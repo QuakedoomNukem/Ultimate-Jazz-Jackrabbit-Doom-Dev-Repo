@@ -1,0 +1,2121 @@
+PointLight BLACKCHANDELIER
+{
+    color 0.9 0.9 0.3
+    size 48
+    offset 0 14 0
+}
+
+
+flickerlight BLUESTROBE
+{
+    color 0.0 0.0 0.4
+   size 48
+    secondarySize 64
+	chance 0.5
+    attenuate 1
+}
+
+pointlight BossEXPL
+{
+    color 0.7 0.7 0.1
+    size 48
+	attenuate 1
+}
+
+flickerlight BossEXPL_X1
+{
+    color 0.7 0.7 0.1
+    size 64
+    secondarySize 56
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight BossEXPL_X2
+{
+    color 0.7 0.7 0.1
+    size 96
+    secondarySize 88
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight BossEXPL_X3
+{
+    color 0.5 0.5 0.1
+    size 128
+    secondarySize 120
+    chance 0.3
+	attenuate 1
+}
+
+pointlight BossHelmut1
+{
+    color 1.0 0.7 0.0
+    size 32
+	attenuate 1
+	offset 0 32 0
+}
+
+pointlight BossHelmut2
+{
+    color 1.0 0.8 0.0
+    size 48
+	attenuate 1
+	offset 0 32 0
+}
+
+flickerlight Candle1
+{
+    color 1.0 0.7 0.0
+    size 24
+    secondarySize 32
+    chance 0.3
+	attenuate 1
+	Offset 0 248 0
+}
+
+pulselight CMOUSE
+{
+    color 0.0 0.7 0.0
+    size 32
+    secondarySize 16
+    interval 1
+}
+
+Pointlight Comet1
+{
+Color 0.6 0.4 0.0
+Size 56
+}
+
+Pointlight Comet2
+{
+Color 0.8 0.6 0.0
+Size 64
+}
+
+pulselight DarkRealmLight1
+{
+    color 0.6 0.0 0.6
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 48 0
+}
+
+pulselight DarkRealmLight2
+{
+    color 0.6 0.0 0.6
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 23 0
+}
+
+pulselight DarkRealmLight3
+{
+    color 0.6 0.0 0.6
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 84 0
+}
+
+flickerlight DarkSparks1
+{
+    color 0.6 0.0 0.6
+    size 40
+    secondarySize 32
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight DeckStrobe
+{
+    color 0.4 0.0 0.4
+     size 48
+    secondarySize 64
+	chance 0.5
+    attenuate 1
+}
+
+flickerlight DeckTank
+{
+    color 0.4 0.0 0.4
+     size 96
+    secondarySize 128
+	chance 0.5
+    attenuate 1
+	Offset 0 16 0
+}
+
+
+flickerlight EnemyExplosion1
+{
+    color 0.9 0.1 0.1
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight EnemyExplosion1Mini
+{
+    color 0.9 0.1 0.1
+    size 20
+    secondarySize 18
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight EnemyExplosion2
+{
+    color 0.9 0.1 0.1
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight EnemyExplosion2Mini
+{
+    color 0.9 0.1 0.1
+    size 15
+    secondarySize 13
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight EnemyExplosion3
+{
+    color 0.9 0.1 0.1
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight EnemyExplosion3Mini
+{
+    color 0.9 0.1 0.1
+    size 10
+    secondarySize 8
+    chance 0.3
+	attenuate 1
+}
+
+
+flickerlight EnemyExplosion4
+{
+    color 0.9 0.1 0.1
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight EnemyExplosion4Mini
+{
+    color 0.9 0.1 0.1
+    size 5
+    secondarySize 3
+    chance 0.3
+	attenuate 1
+}
+
+
+Pointlight FairyLight1
+{
+Color 1.0 0.0 0.5
+Size 28
+}
+Pointlight FairyLight2
+{
+Color 1.0 0.0 0.5
+Size 30
+}
+Pointlight FairyLight3
+{
+Color 1.0 0.0 0.5
+Size 32
+}
+
+flickerlight Firee1
+{
+    color 0.9 0.5 0.1
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee1X
+{
+    color 0.9 0.5 0.1
+    size 60
+    secondarySize 50
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee2
+{
+    color 0.9 0.5 0.1
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee2X
+{
+    color 0.9 0.5 0.1
+    size 45
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee3
+{
+    color 0.9 0.5 0.1
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee3X
+{
+    color 0.9 0.5 0.1
+    size 30
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee4
+{
+    color 0.9 0.5 0.1
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee4X
+{
+    color 0.9 0.5 0.1
+    size 15
+    secondarySize 10
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Firee11
+{
+    color 0.9 0.5 0.1
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+	offset 0 32 0
+}
+
+flickerlight Firee11X
+{
+    color 0.9 0.5 0.1
+    size 60
+    secondarySize 50
+    chance 0.3
+	attenuate 1
+	offset 0 32 0
+}
+
+flickerlight Firee22
+{
+    color 0.9 0.5 0.1
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+	offset 0 64 0
+}
+
+flickerlight Firee22X
+{
+    color 0.9 0.5 0.1
+    size 45
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+	offset 0 64 0
+}
+
+flickerlight Firee33
+{
+    color 0.9 0.5 0.1
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+	offset 0 96 0
+}
+
+flickerlight Firee33X
+{
+    color 0.9 0.5 0.1
+    size 30
+    secondarySize 20
+    chance 0.3
+	attenuate 1
+	offset 0 96 0
+}
+
+flickerlight Firee44
+{
+    color 0.9 0.5 0.1
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+	offset 0 104 0
+}
+
+flickerlight Firee44X
+{
+    color 0.9 0.5 0.1
+    size 15
+    secondarySize 10
+    chance 0.3
+	attenuate 1
+	offset 0 104 0
+}
+
+Flickerlight2 FireShot1
+{
+Color 1.0 0.8 0.0
+Size 25
+SecondarySize 30
+Interval 2
+Offset 0 0 0
+}
+
+Pointlight FireShot2
+{
+Color 0.8 0.6 0.0
+Size 16
+}
+
+Pointlight FireShot3
+{
+Color 0.6 0.4 0.0
+Size 12
+}
+
+Pointlight FireShot4
+{
+Color 0.4 0.2 0.0
+Size 8
+}
+
+
+flickerlight FLAMBOWL
+{
+    color 1.0 0.7 0.0
+    size 32
+    secondarySize 48
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FLAMBOWL2
+{
+    color 1.0 0.7 0.0
+    size 32
+    secondarySize 48
+    chance 0.3
+	attenuate 1
+	Offset 0 32 0
+}
+
+flickerlight FLAMBOWL3
+{
+    color 1.0 0.7 0.0
+    size 32
+    secondarySize 48
+    chance 0.3
+	attenuate 1
+	Offset 0 16 0
+}
+
+PointLight FLOORSHOT1
+{
+    color 0.9 0.5 0.1
+    size 16
+}
+
+flickerlight FrostShot1
+{
+    color 0.2 0.2 0.7
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FrostShot2
+{
+    color 0.2 0.2 0.7
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FrostShot3
+{
+    color 0.2 0.2 0.7
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FrostShot4
+{
+    color 0.2 0.2 0.7
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree1
+{
+    color 0.9 0.5 0.1
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree2
+{
+    color 0.9 0.5 0.1
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree3
+{
+    color 0.9 0.5 0.1
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree4
+{
+    color 0.9 0.5 0.1
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree11
+{
+    color 0.9 0.5 0.1
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree22
+{
+    color 0.9 0.5 0.1
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree33
+{
+    color 0.9 0.5 0.1
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree44
+{
+    color 0.9 0.5 0.1
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+
+flickerlight FTFiree1P
+{
+    color 0.5 0.5 0.7
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree2P
+{
+    color 0.5 0.5 0.7
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree3P
+{
+    color 0.5 0.5 0.7
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree4P
+{
+    color 0.5 0.5 0.7
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree11P
+{
+    color 0.5 0.5 0.7
+    size 40
+    secondarySize 35
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree22P
+{
+    color 0.5 0.5 0.7
+    size 30
+    secondarySize 25
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree33P
+{
+    color 0.5 0.5 0.7
+    size 20
+    secondarySize 15
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight FTFiree44P
+{
+    color 0.5 0.5 0.7
+    size 10
+    secondarySize 5
+    chance 0.3
+	attenuate 1
+}
+
+PointLight GoonPlas
+{
+    color 0.2 0.2 0.8
+    size 32
+}
+
+flickerlight GoonPlas2
+{
+    color 0.2 0.2 0.8
+    size 16
+    secondarySize 32
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight GREENSTROBE
+{
+    color 0.0 0.4 0.0
+    size 48
+    secondarySize 64
+	chance 0.5
+    attenuate 1
+}
+
+pulselight LetniBarrier1
+{
+    color 0.2 0.2 0.8
+    size 32
+    secondarySize 48
+    interval 1
+	offset 0 32 0
+}
+
+pulselight LetniBarrier2
+{
+    color 0.2 0.2 0.8
+    size 64
+    secondarySize 76
+    interval 1
+	offset 0 64 0
+}
+
+pointlight HomingMissile
+{
+    color 0.9 0.9 0.3
+    size 32
+}
+
+pointlight ICEGLOWER
+{
+    color 0.5 0.5 1.0
+    size 20
+}
+pulselight Invis1
+{
+    color 0.6 0.6 0.0
+    size 10
+    secondarySize 12
+    interval 0.2
+}
+
+flickerlight JazzBrazier
+{
+	color 0.8 0.6 0.0
+	size 68
+	secondarySize 76
+	chance 0.6
+	offset 0 32 0
+}
+
+
+flickerlight Jazztorch
+{
+    color 1.0 0.7 0.0
+    size 32
+    secondarySize 48
+    chance 0.3
+	attenuate 1
+	Offset 0 32 0
+}
+
+
+pulselight JungLantLite
+{
+    color 0.6 0.0 0.6
+    size 8
+    secondarySize 16
+    interval 0.2
+}
+
+flickerlight Labflame1
+{
+    color 1.0 0.7 0.0
+    size 24
+    secondarySize 32
+    chance 0.3
+	attenuate 1
+	Offset 0 40 0
+}
+
+pulselight MegaAirBaseLite
+{
+    color 0.6 0.0 0.6
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 48 0
+}
+
+pulselight MegaAirBaseLite2
+{
+    color 0.6 0.0 0.6
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 84 0
+}
+
+
+pointlight Minisile
+{
+    color 1.0 0.7 0.0
+    size 32
+	attenuate 1
+}
+
+pointlight Minisile_4
+{
+    color 1.0 0.7 0.0
+    size 16
+	attenuate 1
+}
+
+flickerlight Minisile_X1
+{
+    color 1.0 0.7 0.5
+    size 32
+    secondarySize 36
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Minisile_X2
+{
+    color 0.5 0.3 0.2
+    size 36
+    secondarySize 40
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight Minisile_X3
+{
+    color 0.3 0.1 0.1
+    size 40
+    secondarySize 44
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight PelletExplod1
+{
+    color 0.9 0.1 0.1
+    size 10
+    secondarySize 8
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight PelletExplod2
+{
+    color 0.9 0.1 0.1
+    size 8
+    secondarySize 6
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight PelletExplod3
+{
+    color 0.9 0.1 0.1
+    size 6
+    secondarySize 4
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight PelletExplod4
+{
+    color 0.9 0.1 0.1
+    size 4
+    secondarySize 2
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight PollutusStrobe
+{
+    color 0.4 0.2 0.0
+    size 16
+    secondarySize 24
+	chance 0.5
+    attenuate 1
+	Offset 0 56 0
+}
+
+pointlight Sword1
+{
+    color 1.0 0.7 0.0
+    size 8
+	attenuate 1
+	offset 0 64 0
+}
+
+pointlight Sword2
+{
+    color 1.0 0.7 0.0
+    size 10
+	attenuate 1
+	offset 0 64 0
+}
+
+pointlight Sword3
+{
+    color 1.0 0.7 0.0
+    size 12
+	attenuate 1
+	offset 0 64 0
+}
+
+Pointlight PyroBall
+{
+Color 1.0 0.8 0.0
+Size 35
+}
+
+Pointlight PyroBall2
+{
+Color 1.0 0.8 0.0
+Size 40
+}
+
+Pointlight PyroBall3
+{
+Color 0.9 0.7 0.0
+Size 38
+}
+
+Pointlight PyroBall4
+{ 
+Color 0.8 0.6 0.0
+Size 36
+}
+
+Pointlight PyroBallX
+{ 
+Color 0.8 0.6 0.0
+Size 8
+}
+
+Pointlight PyroBlast1
+{
+Color 1.0 0.8 0.0
+Size 48
+}
+
+flickerlight RedStrobe
+{
+    color 0.4 0.0 0.0
+ size 48
+    secondarySize 64
+	chance 0.5
+    attenuate 1
+}
+
+pulselight RedStrobeMini
+{
+    color 0.4 0.0 0.0
+    size 12
+    secondarySize 24
+    interval 0.5
+	Offset 0 60 0
+}
+
+pointlight SparkBAL1
+{
+    color 0.9 0.9 0.1
+    size 16
+}
+
+pointlight SparkBAL2
+{
+    color 0.9 0.9 0.1
+    size 24
+}
+
+pointlight SparkBAL3
+{
+    color 0.9 0.9 0.1
+    size 8
+}
+
+pointlight SparkBAL4 //SparkBAL1
+{
+    color 0.9 0.9 0.1
+    size 16
+}
+
+pointlight SparkBAL5 //SparkBAL1
+{
+    color 0.9 0.9 0.1
+    size 16
+}
+
+flickerlight SparksBig
+{
+    color 0.9 0.9 0.1
+    size 72
+    secondarySize 64
+    chance 0.3
+	attenuate 1
+}
+
+flickerlight SparksLil
+{
+    color 0.9 0.9 0.1
+    size 40
+    secondarySize 32
+    chance 0.3
+	attenuate 1
+}
+
+pointlight StreetLite
+{
+    color 1.0 1.0 1.0
+    size 64
+	attenuate 1
+	offset 0 184 0
+}
+
+pointlight Sword1
+{
+    color 1.0 0.7 0.0
+    size 8
+	attenuate 1
+	offset 0 64 0
+}
+
+pointlight Sword2
+{
+    color 1.0 0.7 0.0
+    size 10
+	attenuate 1
+	offset 0 64 0
+}
+
+pointlight Sword3
+{
+    color 1.0 0.7 0.0
+    size 12
+	attenuate 1
+	offset 0 64 0
+}
+
+pulselight TechNoirLight
+{
+    color 0.8 0.0 0.0
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 48 0
+}
+
+pulselight TechNoirLight2
+{
+    color 0.8 0.0 0.0
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 84 0
+}
+
+pulselight Telefog1
+{
+    color 0.0 0.4 0.0
+    size 64
+}
+
+pulselight Telefog2
+{
+    color 0.0 0.4 0.0
+    size 48
+}
+
+pulselight Telefog3
+{
+    color 0.0 0.4 0.0
+    size 32
+}
+
+pulselight Telefog4
+{
+    color 0.0 0.4 0.0
+    size 16
+}
+
+pointlight TurtleBullet
+{
+    color 0.9 0.9 0.3
+    size 16
+}
+
+pointlight TurtleRobot
+{
+    color 1.0 0.7 0.0
+    size 24
+	attenuate 1
+	offset 0 8 0
+}
+
+pointlight XmasLite
+{
+    color 1.0 1.0 0.0
+    size 64
+	attenuate 1
+	offset 0 160 0
+}
+
+flickerlight YellowStrobe
+{
+    color 0.4 0.2 0.0
+    size 48
+    secondarySize 64
+	chance 0.5
+    attenuate 1
+}
+
+object 40mmTimedShot
+{
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+	}
+	
+object 40mmTimedShotPow
+{
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+object ActivatedTNT
+{
+frame DYNME { light BossEXPL_X1 }
+frame DYNMF { light BossEXPL_X2 }
+	frame DYNMM { light BossEXPL_X3 }
+	frame DYNMN { light BossEXPL_X3 }
+	frame DYNMO { light BossEXPL }
+	frame DYNMP { light BossEXPL_X2 }
+	frame DYNMQ { light BossEXPL_X2 }
+	frame DYNMR { light BossEXPL_X1 }
+	frame DYNMS { light BossEXPL_X1 }
+}
+
+object BigSparks
+{
+	frame BSPKA { light SparksBig }
+	frame BSPKC { light SparksBig }
+	frame BSPKE { light SparksBig }
+}
+
+object BollyProj
+{
+frame INDMA { light HomingMissile }
+	frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+object Blastshot
+{
+frame JBLSA { light SparkBAL1 }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+Object Cane2
+{
+Frame CANEB {Light XmasLite}
+}
+
+Object Ceilingshot
+{
+    frame FLORA { light Floorshot1 }
+	frame JBLSE { light EnemyExplosion1Mini }
+	frame JBLSF { light EnemyExplosion2Mini }
+	frame JBLSG { light EnemyExplosion3Mini }
+	frame JBLSH { light EnemyExplosion4Mini }
+}
+
+Object ChameleonComet
+{
+Frame COMTA { Light Comet1 }
+Frame COMTB { Light Comet2 }
+Frame COMTC { Light Comet1 }
+frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+}
+
+Object ChameleonProj
+{
+    frame CHPTA { light ICEGLOWER }
+	frame CHPTB { light ICEGLOWER }
+	frame CHPHA { light FrostShot4 }
+	frame CHPHB { light FrostShot3 }
+	frame CHPHC { light FrostShot2 }
+	frame CHPHD { light FrostShot1 }
+	frame CHPHE { light FrostShot2 }
+	frame CHPHF { light FrostShot3 }
+}
+
+Object Chamtorch
+{
+    frame CTORA { light FlamBowl2 }
+	frame CTORB { light FlamBowl2 }
+	frame CTORC { light FlamBowl2 }
+	frame CTORD { light FlamBowl2 }
+	frame CTORE { light FlamBowl2 }
+	frame CTORF { light FlamBowl2 }
+	frame CTORG { light FlamBowl2 }
+	frame CTORH { light FlamBowl2 }
+	}
+	
+	Object CMouse
+{
+frame CMOUA { light CMOUSE }
+}
+
+Object CometDeath 
+{
+frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+Object CometDeathGlow 
+{
+Frame FFPRA { Light FireShot4 }
+Frame FFPRB { Light FireShot4 }
+Frame FFPRC { Light FireShot3 }
+Frame FFPRD { Light FireShot3 }
+Frame FFPRE { Light FireShot2 }
+Frame FFPRF { Light FireShot2 }
+Frame FFPRH { Light FireShot3 }
+Frame FFPRI { Light FireShot4 }
+}
+
+Object DarkRealmLight1
+{
+Frame DKRMA { Light DarkRealmLight1}
+}
+
+Object DarkRealmLight2
+{
+Frame DKRMB { Light DarkRealmLight2}
+}
+
+Object DarkRealmLight3
+{
+Frame DKRMC { Light DarkRealmLight3}
+}
+
+object DarkSparks1
+{
+	frame DSPKA { light DarkSparks1 }
+	frame DSPKC { light DarkSparks1 }
+	frame DSPKE { light DarkSparks1 }
+}
+
+object DesDemonProj
+{
+Frame DESPA { Light FireShot1 }
+Frame DESPB { Light FireShot1 }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+	}
+
+object DroneRocket
+{
+frame RFLMA { light HomingMissile }
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+object DropFire
+{
+    frame FLMPA { light FTFiree2P }
+	frame FLMPB { light FTFiree2P }
+	frame FLMPC { light FTFiree2P }
+	frame FLMPD { light FTFiree2P }
+	frame FLMPE { light FTFiree2P }
+	frame FLMPF { light FTFiree2P }
+	frame FLMPG { light FTFiree2P }
+	frame FLMPH { light FTFiree2P }
+}
+
+object dstarceilingstrobe
+{
+Frame DeckC { Light Deckstrobe }
+Frame DeckE { Light Deckstrobe }
+Frame DeckF { Light Deckstrobe }
+Frame DeckG { Light Deckstrobe }
+}
+
+object dstarfloorstrobe
+{
+Frame DeckD { Light Deckstrobe }
+Frame DeckH { Light Deckstrobe }
+Frame DeckI { Light Deckstrobe }
+Frame DeckJ { Light Deckstrobe }
+}
+
+object dstartank
+{
+Frame DeckL { Light DeckTank }
+Frame DeckB { Light DeckTank }
+Frame DeckK { Light DeckTank }
+Frame DeckM { Light DeckTank }
+Frame DeckN { Light DeckTank }
+}
+
+
+object DualRocket
+
+{
+frame RFLMA { light HomingMissile }
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+object DualRocketPow
+
+{
+frame RFLPA { light HomingMissile }
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+Object FallingComet
+{
+Frame COMTA { Light Comet1 }
+Frame COMTB { Light Comet2 }
+Frame COMTC { Light Comet1 }
+frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+}
+
+Object FanolintRocket
+{
+	frame JBLSE { light EnemyExplosion1Mini }
+	frame JBLSF { light EnemyExplosion2Mini }
+	frame JBLSG { light EnemyExplosion3Mini }
+	frame JBLSH { light EnemyExplosion4Mini }
+}
+
+Object FirebombExplosion1
+{
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+Object FirebombExplosion2
+{
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+Object FirebombExplosion3
+{
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+Object FireBowl2
+{
+    frame FBW2A { light FlamBowl3 }
+	frame FBW2B { light FlamBowl3 }
+	frame FBW2C { light FlamBowl3 }
+	frame FBW2D { light FlamBowl3 }
+	frame FBW2E { light FlamBowl3 }
+	}
+
+object FiredeadLite
+{
+    frame FRTFA { light Firee4X }
+	frame FRTFB { light Firee3X }
+	frame FRTFC { light Firee2X }
+	frame FRTFD { light Firee1X }
+	frame FRTFE { light Firee11X }
+	frame FRTFF { light Firee22X }
+	frame FRTFG { light Firee33X }
+	frame FRTFH { light Firee44X }
+}
+
+Object FireBombpest
+{
+    frame FBMBA { light FlamBowl }
+	frame FBMBB { light FlamBowl }
+    frame FBMBC { light FlamBowl }
+	frame FBMBD { light FlamBowl }
+	}
+
+Object Firepest
+{
+    frame FBMBC { light FlamBowl }
+	frame FBMBD { light FlamBowl }
+	}
+
+Object FireShot 
+{
+Frame PLSSX { Light FireShot1 }
+}
+
+Object FireTail 
+{
+Frame FFPRA { Light FireShot4 }
+Frame FFPRB { Light FireShot4 }
+Frame FFPRC { Light FireShot3 }
+Frame FFPRD { Light FireShot3 }
+Frame FFPRE { Light FireShot2 }
+Frame FFPRF { Light FireShot2 }
+Frame FFPRH { Light FireShot3 }
+Frame FFPRI { Light FireShot4 }
+}
+
+Object Flame
+{
+    frame FLAMA { light FlamBowl }
+	frame FLAMB { light FlamBowl }
+	frame FLAMC { light FlamBowl }
+	frame FLAMD { light FlamBowl }
+	frame FLAME { light FlamBowl }
+	frame FLAMF { light FlamBowl }
+	frame FLAMG { light FlamBowl }
+	}
+	
+
+Object FlameBowl
+{
+    frame FLMBA { light FlamBowl3 }
+	frame FLMBB { light FlamBowl3 }
+	frame FLMBC { light FlamBowl3 }
+	frame FLMBD { light FlamBowl3 }
+	frame FLMBE { light FlamBowl3 }
+	frame FLMBF { light FlamBowl3 }
+	frame FLMBG { light FlamBowl3 }
+	}
+
+Object Floorshot
+{
+    frame FLORA { light Floorshot1 }
+	frame JBLSE { light EnemyExplosion1Mini }
+	frame JBLSF { light EnemyExplosion2Mini }
+	frame JBLSG { light EnemyExplosion3Mini }
+	frame JBLSH { light EnemyExplosion4Mini }
+}
+
+object FreezeBlast
+{
+frame FBLSA { light ICEGLOWER }
+	frame FBLSB { light ICEGLOWER }
+	frame FBLSC { light ICEGLOWER }
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot3 }
+	frame FBLSF { light FrostShot2 }
+	frame FBLSG { light FrostShot1 }
+	frame FBLSH { light FrostShot2 }
+	frame FBLSI { light FrostShot3 }
+}
+
+object FreezeBlastPowered
+{
+   frame FBLSA { light ICEGLOWER }
+	frame FBLSB { light ICEGLOWER }
+	frame FBLSC { light ICEGLOWER }
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot3 }
+	frame FBLSF { light FrostShot2 }
+	frame FBLSG { light FrostShot1 }
+	frame FBLSH { light FrostShot2 }
+	frame FBLSI { light FrostShot3 }
+}
+
+object FreezeBlastTrail
+{
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot3 }
+	frame FBLSF { light FrostShot2 }
+	frame FBLSG { light FrostShot1 }
+	frame FBLSH { light FrostShot2 }
+	frame FBLSI { light FrostShot3 }
+}
+
+object FreezeBlastTrailPowered
+{
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot3 }
+	frame FBLSF { light FrostShot2 }
+	frame FBLSG { light FrostShot1 }
+	frame FBLSH { light FrostShot2 }
+	frame FBLSI { light FrostShot3 }
+}
+
+object FTFire
+{
+    frame FFPRA { light FTFiree4 }
+	frame FFPRB { light FTFiree3 }
+	frame FFPRC { light FTFiree2 }
+	frame FFPRD { light FTFiree1 }
+	frame FFPRE { light FTFiree11 }
+	frame FFPRF { light FTFiree22 }
+	frame FFPRG { light FTFiree33 }
+	frame FFPRH { light FTFiree44 }
+	frame FFPRI { light FTFiree44 }
+}
+
+object FTFirePow
+{
+    frame FFPPA { light FTFiree4P }
+	frame FFPPB { light FTFiree3P }
+	frame FFPPC { light FTFiree2P }
+	frame FFPPD { light FTFiree1P }
+	frame FFPPE { light FTFiree11P }
+	frame FFPPF { light FTFiree22P }
+	frame FFPPG { light FTFiree33P }
+	frame FFPPH { light FTFiree44P }
+	frame FFPPI { light FTFiree44P }
+}
+
+object HeatSeekingMissile
+{
+frame HRKTA { light HomingMissile }
+frame HRKTB { light HomingMissile }
+frame HRKTC { light HomingMissile }
+	frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+object HeatSeekingMissilePower
+{
+frame PRKTA { light HomingMissile }
+frame PRKTB { light HomingMissile }
+frame PRKTC { light HomingMissile }
+	frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+object HeavyGoonPlasma
+{
+	frame NEUSA { light TurtleBullet }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+
+object HipHopProj
+{
+frame HHPJA { light SparkBAL1 }
+frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+Object JazzBrazier
+{
+	frame JBRZ { light JazzBrazier }
+}
+
+Object JazzPoof
+{
+frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+	}
+	
+Object	Jazztorch
+{
+frame JJTHA { light Jazztorch }
+frame JJTHB { light Jazztorch }
+frame JJTHC { light Jazztorch }
+}
+	
+object JetpackZombieExplosion
+{
+	frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+object JJAGeneralSeekingProj
+{
+frame HRKTA { light HomingMissile }
+frame HRKTB { light HomingMissile }
+frame HRKTC { light HomingMissile }
+	frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+	}
+	
+Object JJInvul
+{
+	frame INVSA { light Invis1 }
+	frame INVSB { light Invis1 }
+	frame INVSC { light Invis1 }
+	frame INVSD { light Invis1 }
+}
+
+Object JJTELEPORTFOG
+{
+	frame JFOGA { light Telefog1 }
+	frame JFOGB { light Telefog1 }
+	frame JFOGC { light Telefog2 }
+	frame JFOGD { light Telefog3 }
+	frame JFOGE { light Telefog4 }
+}
+
+
+Object JJThing26
+{
+	frame NROKI { light StreetLite }
+}
+
+Object JungleWallLantern
+{
+frame JUNLA { light JungLantLite }
+frame JUNLB { light JungLantLite }
+frame JUNLC { light JungLantLite }
+frame JUNLD { light JungLantLite }
+frame JUNLE { light JungLantLite }
+frame JUNLF { light JungLantLite }
+frame JUNLG { light JungLantLite }
+frame JUNLH { light JungLantLite }
+}
+
+Object LabFlame
+{
+frame LABFA { light LabFlame1 }
+frame LABFB { light LabFlame1 }
+frame LABFC { light LabFlame1 }
+frame LABFD { light LabFlame1 }
+frame LABFE { light LabFlame1 }
+frame LABFF { light LabFlame1 }
+frame LABFG { light LabFlame1 }
+frame LABFH { light LabFlame1 }
+}
+
+Object LaserEyeTrail
+{
+frame TBEAM { light TurtleBullet }
+	frame TBEAN { light TurtleBullet }
+	frame TBEAO { light TurtleBullet }
+	frame TBEAP { light TurtleBullet }
+}
+Object LabStrobe1
+{
+    frame LABLABCD { light REDSTROBEMini }
+}
+
+object LetniBarrier64
+{
+	frame LBARA { light LetniBarrier1 }
+	frame LBARB { light LetniBarrier1 }
+	}
+	
+	object LetniBarrier128
+{
+	frame LBARC { light LetniBarrier2 }
+	frame LBARD { light LetniBarrier2 }
+	}
+
+Object LitCandle
+{
+frame CCANA { light Candle1 }
+frame CCANB { light Candle1 }
+frame CCANC { light Candle1 }
+frame CCAND { light Candle1 }
+frame CCANE { light Candle1 }
+frame CCANF { light Candle1 }
+frame CCANG { light Candle1 }
+frame CCANH { light Candle1 }
+frame CCANI { light Candle1 }
+frame CCANJ { light Candle1 }
+}
+
+Object LizardBomb
+{
+frame SBLLA { light BossEXPL_X2 }
+	frame BOMBM { light BossEXPL_X3 }
+	frame BOMBN { light BossEXPL_X3 }
+	frame BOMBO { light BossEXPL }
+	frame BOMBP { light BossEXPL_X2 }
+	frame BOMBQ { light BossEXPL_X2 }
+	frame BOMBR { light BossEXPL_X1 }
+	frame BOMBS { light BossEXPL_X1 }
+}
+
+Object LizardPropeller
+{
+frame SBLLA { light BossEXPL_X2 }
+	frame BOMBM { light BossEXPL_X3 }
+	frame BOMBN { light BossEXPL_X3 }
+	frame BOMBO { light BossEXPL }
+	frame BOMBP { light BossEXPL_X2 }
+	frame BOMBQ { light BossEXPL_X2 }
+	frame BOMBR { light BossEXPL_X1 }
+	frame BOMBS { light BossEXPL_X1 }
+}
+
+Object MegairbossRocket
+{
+frame RFLMA { light HomingMissile }
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+Object MegaLight1
+{
+Frame MGALA { Light MegaAIRBaseLite}
+}
+
+Object MegaLight2
+{
+Frame MGALB { Light MegaAIRBaseLite2}
+}
+
+Object MegaLight3
+{
+Frame MGALC { Light MegaAIRBaseLite}
+}
+
+object MermanProj
+{
+	frame SPKBA { light SparkBAL1 }
+	frame SPKBB { light SparkBAL2 }
+	frame SPKBC { light SparkBAL1 }
+	frame SPKBD { light SparkBAL3 }
+	frame SPKBE { light SparkBAL4 }
+	frame SPKBF { light SparkBAL5 }
+	frame SPKBG { light SparkBAL1 }
+	frame SPKBH { light SparkBAL2 }
+}
+
+object Minissiles 
+{
+    frame INDMA { light Minisile    }
+
+     frame RFLEAB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+object MotoProj
+{
+frame JBLSA { light SparkBAL1 }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+object MultiExplo
+{
+	frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+object Neutronshot
+{
+	frame NEUSA { light TurtleBullet }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+object NeutronshotPow
+{
+	frame NEUPA { light FrostShot2 }
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot3 }
+	frame FBLSF { light FrostShot2 }
+	frame FBLSG { light FrostShot1 }
+	frame FBLSH { light FrostShot2 }
+	frame FBLSI { light FrostShot3 }
+}
+
+object MiniNeutron
+{
+	frame NEUPA { light FrostShot4 }
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot4 }
+	frame FBLSF { light FrostShot3 }
+	frame FBLSG { light FrostShot3 }
+	frame FBLSH { light FrostShot4 }
+	frame FBLSI { light FrostShot4 }
+}
+
+object PetrifyProj
+{
+frame FBLSA { light ICEGLOWER }
+	frame FBLSB { light ICEGLOWER }
+	frame FBLSC { light ICEGLOWER }
+	frame FBLSD { light FrostShot4 }
+	frame FBLSE { light FrostShot3 }
+	frame FBLSF { light FrostShot2 }
+	frame FBLSG { light FrostShot1 }
+	frame FBLSH { light FrostShot2 }
+	frame FBLSI { light FrostShot3 }
+}
+
+object PlasmagoonPlasma
+{
+	frame PLAPA { light GoonPlas }
+	frame PLAPB { light GoonPlas }
+	frame PLAPC { light GoonPlas2 }
+	frame PLAPD { light GoonPlas2 }
+	frame PLAPE { light GoonPlas2 }
+	frame PLAPF { light GoonPlas2 }
+	frame PLAPG { light GoonPlas2 }
+	frame PLAPH { light GoonPlas2 }
+	frame PLAPI { light GoonPlas2 }
+}
+
+object PollutusStrobe
+{
+frame POLLA { light PollutusStrobe }
+	frame POLLB { light PollutusStrobe }
+	frame POLLC { light PollutusStrobe }
+	frame POLLD { light PollutusStrobe }
+}
+
+object PowerBlastshot
+{
+frame HYPPA { light SparkBAL1 }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+Object PyroBall
+{
+Frame RBALA { Light PyroBallX }
+frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+Object PyroBlast
+{
+Frame SBLLA { Light PyroBlast1 }
+Frame SBLLB { Light PyroBlast1 }
+Frame SBLLC { Light PyroBlast1 }
+Frame SBLLD { Light PyroBlast1 }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+}
+
+Object SaurianBomb
+{
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+	}
+	
+Object SeaMineBoomFX
+{
+frame RFLEB { light Minisile }
+    frame RFLECD { light Minisile_X1 }
+    frame RFLEEF { light Minisile_X2 }
+    frame RFLEGH { light Minisile_X3 }
+	frame RFLEI { light Minisile_X2 }
+	frame RFLEJ { light Minisile_X1 }
+	frame RFLEK { light Minisile_4 }
+	}
+	
+object SparkBALL
+{
+	frame SPKBA { light SparkBAL1 }
+	frame SPKBB { light SparkBAL2 }
+	frame SPKBC { light SparkBAL1 }
+	frame SPKBD { light SparkBAL3 }
+	frame SPKBE { light SparkBAL4 }
+	frame SPKBF { light SparkBAL5 }
+	frame SPKBG { light SparkBAL1 }
+	frame SPKBH { light SparkBAL2 }
+}
+
+object Sparks
+{
+	frame LSPKA { light SparksLil }
+	frame LSPKC { light SparksLil }
+	frame LSPKE { light SparksLil }
+}
+
+object StrobeLightBlue
+{
+    frame STRBCBA { light BLUESTROBE }
+}
+
+object StrobeLightGreen
+{
+    frame STRGDCBA { light GREENSTROBE }
+}
+
+object StrobeLightRed
+{
+    frame STRRDCBA { light REDSTROBE }
+}
+
+object StrobeLightYellow
+{
+frame STRY { light YELLOWSTROBE }
+}
+
+object Sword
+{
+    frame SCIMA { light Sword1    }
+
+    frame SCIMB { light Sword2  }
+    frame SCIMC { light Sword3  }
+    frame SCIMD { light Sword2  }
+	
+	frame SCIME { light Sword1    }
+    frame SCIMF { light Sword2  }
+    frame SCIMG { light Sword3  }
+    frame SCIMH { light Sword2  }
+	frame SCIMI { light Sword1    }
+}
+
+Object Tagg
+{
+Frame TAGGA { Light FairyLight1}
+Frame TAGGB { Light FairyLight2}
+Frame TAGGC { Light FairyLight3}
+Frame TAGGD { Light FairyLight2}
+}
+
+Object TechnoirGoon
+{
+Frame TNGNA { light TurtleRobot}
+Frame TNGNB { light TurtleRobot}
+}
+
+Object TechnoirTank
+{
+Frame TECHB { light TurtleRobot}
+}
+
+Object TechnoirLight1
+{
+Frame TCHLA { Light TechNoirLight2}
+}
+
+Object TechnoirLight2
+{
+Frame TCHLB { Light TechNoirLight}
+}
+
+Object TechnoirLight3
+{
+Frame TCHLC { Light TechNoirLight}
+}
+
+Object TechRocket
+{
+frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+	}
+
+object TorpedoProj
+{
+frame RFLPA { light HomingMissile }
+frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+	}
+object TurtleGoonBullet
+{
+    frame TBEAM { light TurtleBullet }
+	frame TBEAN { light TurtleBullet }
+	frame TBEAO { light TurtleBullet }
+	frame TBEAP { light TurtleBullet }
+	frame JBLSE { light EnemyExplosion1 }
+	frame JBLSF { light EnemyExplosion2 }
+	frame JBLSG { light EnemyExplosion3 }
+	frame JBLSH { light EnemyExplosion4 }
+}
+
+Object TurtleRobot
+{
+ frame ROBTA { light TurtleRobot }
+ frame ROBTB { light TurtleRobot }
+ frame ROBTC { light TurtleRobot }
+}
+
+Object WalkFire
+{
+frame FRTFA { light Firee4 }
+	frame FRTFB { light Firee3 }
+	frame FRTFC { light Firee2 }
+	frame FRTFD { light Firee1 }
+	frame FRTFE { light Firee11 }
+	frame FRTFF { light Firee22 }
+	frame FRTFG { light Firee33 }
+	frame FRTFH { light Firee44 }
+}
+
+object ZombieTankMissile 
+{
+    frame INDMA { light Minisile    }
+
+     frame SEKEA { light BossEXPL }
+	frame SEKEB { light BossEXPL }
+	frame SEKEC { light BossEXPL }
+	frame SEKED { light BossEXPL_X1 }
+	frame SEKEE { light BossEXPL_X1 }
+	frame SEKEF { light BossEXPL_X2 }
+	frame SEKEG { light BossEXPL_X2 }
+	frame SEKEH { light BossEXPL_X3 }
+	frame SEKEI { light BossEXPL_X3 }
+}
+
+//added 12/29/22
+
+Object XmasSpiralThing
+{
+Frame XMSSA { Light XmasSpiralThing }
+Frame XMSSB { Light XmasSpiralThing }
+Frame XMSSC { Light XmasSpiralThing }
+Frame XMSSD { Light XmasSpiralThing }
+Frame XMSSE { Light XmasSpiralThing }
+Frame XMSSF { Light XmasSpiralThing }
+Frame XMSSG { Light XmasSpiralThing }
+Frame XMSSH { Light XmasSpiralThing }
+}
+
+pulselight XmasSpiralThing
+{
+    color 0.6 0.0 0.6
+    size 32
+    secondarySize 64
+    interval 1
+	Offset 0 48 0
+}
+
+flickerlight JazzGreentorch
+{
+    color 0.5 1.0 0.5
+    size 32
+    secondarySize 48
+    chance 0.3
+	attenuate 1
+	Offset 0 32 0
+}
+
+Object	JazzGreentorch
+{
+frame JJTGA { light JazzGreentorch }
+frame JJTGB { light JazzGreentorch }
+frame JJTGC { light JazzGreentorch }
+}
