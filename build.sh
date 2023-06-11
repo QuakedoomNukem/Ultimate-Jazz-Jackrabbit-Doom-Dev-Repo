@@ -22,8 +22,8 @@ while [[ $# > 0 ]]; do
   # Help
   if [[ "$1" == "-h" || "$1" == "--help" ]]; then
     cat <<HELP
-WolfenDoom sh.ake 'n baker - Linux/MacOS build script for
-              Wolfenstein: Blade of Agony
+UJJDOOM sh.ake 'n baker - Linux/MacOS build script for
+              Ultimate Jazz Jackrabbit Doom
 
 -h  --help        Show this help
 -n  --no-update   Do not update the repo with the latest changes.
@@ -56,7 +56,7 @@ if ((updaterepo && git)); then
 fi
 
 # Regular pk3 filename
-zipprefix="wolf_boa"
+zipprefix="ujjdoom"
 if ((git)); then
   zipcommit="$(git log -n 1 --format=%h)"
   zipname="$zipprefix-$zipcommit-$(git log -n 1 --date=short --format=%cd | sed 's/\([[:digit:]]\{4\}\)-\([[:digit:]]\{2\}\)-\([[:digit:]]\{1,2\}\)$/\1\2\3/').pk3"

@@ -13,7 +13,7 @@ REM #     Spine of the program; this makes sure that the execution works as inte
 REM # ================================================================================================
 :Main
 REM Update the terminal window title
-TITLE Jazz Jackrabbit Doom Compiler - Thanks Tiger!
+TITLE Ultimate Jazz Jackrabbit Doom Compiler - Thanks Tiger!
 REM Check if Git executable is available on the host
 CALL :GitFeature_DependencyCheck
 CALL :MainMenu
@@ -130,10 +130,10 @@ REM # Documentation
 REM #     Displays the title of the program.
 REM # ================================================================================================
 :BufferHeader
-ECHO JJDoom Compiler
-ECHO ===============
-ECHO ---------------
-ECHO ===============
+ECHO UJJDoom Compiler
+ECHO ================
+ECHO ----------------
+ECHO ================
 ECHO.&ECHO.&ECHO.
 GOTO :EOF
 
@@ -354,7 +354,7 @@ REM #             Contains the error message that is to be displayed on the scre
 REM # ================================================================================================
 :CompactProject_CheckResources_ErrMSG_PermissionIssue
 ECHO.
-ECHO CRITICAL ERROR: INSUFFICIENT PERMISIONS
+ECHO CRITICAL ERROR: INSUFFICIENT PERMISSIONS
 ECHO %~1
 ECHO.
 ECHO Please inspect the file permissions or contact your administrator for assistance.
@@ -404,7 +404,7 @@ REM #                 of the program that has the 'RealTime' flag.  Meaning, if 
 REM #                 notice that their normal activities will be greatly delayed until the program with 'RealTime' is completed.
 REM # ================================================================================================
 :CompactProject_Execute
-START "WolfenDoom Compile: 7Zip" /B /%4 /WAIT "%ProgramDirPath%tools\7za.exe" a -t%1 -mm=%2 -mx=%3 -x@"%ProgramDirPath%tools\7zExcludeListDir.txt" -xr@"%ProgramDirPath%tools\7zExcludeList.txt" "%ProgramDirPath%..\%projectName%.pk3" "%ProgramDirPath%*"
+START "UJJDoom Compile: 7Zip" /B /%4 /WAIT "%ProgramDirPath%tools\7za.exe" a -t%1 -mm=%2 -mx=%3 -x@"%ProgramDirPath%tools\7zExcludeListDir.txt" -xr@"%ProgramDirPath%tools\7zExcludeList.txt" "%ProgramDirPath%..\%projectName%.pk3" "%ProgramDirPath%*"
 REM Because I couldn't use the error-pipes with 'Start', we'll have to check the ExitCode in a conditional statement
 IF %ERRORLEVEL% GEQ 1 (
     CALL :CompactProject_Execute_ErrMSG %ERRORLEVEL%
@@ -427,14 +427,14 @@ REM If git features is not available, then just use the generic name.
 REM  No hash will be used.
 IF %featuresGit% NEQ True (
     REM Avoid redundancy
-    IF "%projectName%" NEQ "jj1doom" SET "projectName=jj1doom"
+    IF "%projectName%" NEQ "ujjdoom" SET "projectName=ujjdoom"
     GOTO :EOF
 )
 REM Assume Git features are available for us to utilize
 REM  Attach the hash to the file name.
 CALL :GitFeature_FetchCommitHash
 REM Avoid redundancy
-IF "%projectName%" NEQ "jj1doom-%GitCommitHash%" SET "projectName=jj1doom-%GitCommitHash%"
+IF "%projectName%" NEQ "ujjdoom-%GitCommitHash%" SET "projectName=ujjdoom-%GitCommitHash%"
 GOTO :EOF
 
 
