@@ -2473,7 +2473,7 @@ States
 	}
 }
 
-actor DiamondusDeadTree 3954
+actor DiamondusDeadTree : SimpleActor 3954 //zscript inheritances
 {
 height 184
 radius 8
@@ -2486,7 +2486,7 @@ States
 	}
 }
 
-actor DiamondusFlowerSpawner 3953
+actor DiamondusFlowerSpawner : SimpleActor 3953 //zscript inheritances
 {
 	States
 	{
@@ -2566,7 +2566,7 @@ States
 	}
 }
 
-actor DiamondusTree1 3949
+actor DiamondusTree1 : SimpleActor 3949 //zscript inheritances
 {
 height 252
 radius 8
@@ -2579,7 +2579,7 @@ States
 	}
 }
 
-actor DiamondusTree2 3950
+actor DiamondusTree2 : SimpleActor 3950 //zscript inheritances
 {
 height 316
 radius 16
@@ -2592,7 +2592,7 @@ States
 	}
 }
 
-actor DiamondusTree3 3951
+actor DiamondusTree3 : SimpleActor 3951 //zscript inheritances
 {
 height 184
 radius 16
@@ -2605,7 +2605,7 @@ States
 	}
 }
 
-actor DiamondusTreeSpawner 3952
+actor DiamondusTreeSpawner : SimpleActor 3952 //zscript inheritances
 {
 	States
 	{

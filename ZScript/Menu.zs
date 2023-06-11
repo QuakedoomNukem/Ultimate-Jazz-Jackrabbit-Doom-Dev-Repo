@@ -286,7 +286,7 @@ class ExtendedListMenu : ListMenu
 
 		for (int i = 0; i < input.length(); i++)
 		{
-			int c = input.CharCodeAt(i);
+			int c = input.ByteAt(i);
 
 			if (c >= 97 && c <= 122) { c -= 32; }
 

@@ -1,4 +1,0 @@
-version "3.7.2"
-
-#include "ZScript/Flash.zs"
-#include "ZScript/Menu.zs"
