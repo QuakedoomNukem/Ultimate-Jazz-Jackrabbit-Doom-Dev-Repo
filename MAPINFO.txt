@@ -15,7 +15,7 @@ gameinfo
 	QuitSound = "QuitSound"
 	Intro
 	{
-		Video = "Graphics/JAZZITO1.ivf"
+		Video = "Graphics/Startup/JAZZITO1.ivf"
 	}
 }
 

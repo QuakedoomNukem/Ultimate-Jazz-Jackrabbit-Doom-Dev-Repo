@@ -258,4 +258,4 @@
 
 //Other Stuff, not splitting Decorations into 30+ separate text files
 #include "actors/Decorations.txt"
-#include "actors/Other Stuff.txt"
+#include "actors/others.txt"

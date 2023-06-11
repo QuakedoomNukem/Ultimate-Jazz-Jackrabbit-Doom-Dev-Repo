@@ -5,14 +5,13 @@ PointLight BLACKCHANDELIER
     offset 0 14 0
 }
 
-
 flickerlight BLUESTROBE
 {
-    color 0.0 0.0 0.4
-   size 48
-    secondarySize 64
+	color 0.0 0.0 0.4
+	size 48
+	secondarySize 64
 	chance 0.5
-    attenuate 1
+	attenuate 1
 }
 
 pointlight BossEXPL
@@ -85,14 +84,14 @@ pulselight CMOUSE
 
 Pointlight Comet1
 {
-Color 0.6 0.4 0.0
-Size 56
+	Color 0.6 0.4 0.0
+	Size 56
 }
 
 Pointlight Comet2
 {
-Color 0.8 0.6 0.0
-Size 64
+	Color 0.8 0.6 0.0
+	Size 64
 }
 
 pulselight DarkRealmLight1
@@ -150,7 +149,6 @@ flickerlight DeckTank
 	Offset 0 16 0
 }
 
-
 flickerlight EnemyExplosion1
 {
     color 0.9 0.1 0.1
@@ -205,7 +203,6 @@ flickerlight EnemyExplosion3Mini
 	attenuate 1
 }
 
-
 flickerlight EnemyExplosion4
 {
     color 0.9 0.1 0.1
@@ -227,18 +224,18 @@ flickerlight EnemyExplosion4Mini
 
 Pointlight FairyLight1
 {
-Color 1.0 0.0 0.5
-Size 28
+	Color 1.0 0.0 0.5
+	Size 28
 }
 Pointlight FairyLight2
 {
-Color 1.0 0.0 0.5
-Size 30
+	Color 1.0 0.0 0.5
+	Size 30
 }
 Pointlight FairyLight3
 {
-Color 1.0 0.0 0.5
-Size 32
+	Color 1.0 0.0 0.5
+	Size 32
 }
 
 flickerlight Firee1
@@ -395,29 +392,29 @@ flickerlight Firee44X
 
 Flickerlight2 FireShot1
 {
-Color 1.0 0.8 0.0
-Size 25
-SecondarySize 30
-Interval 2
-Offset 0 0 0
+	Color 1.0 0.8 0.0
+	Size 25
+	SecondarySize 30
+	Interval 2
+	Offset 0 0 0
 }
 
 Pointlight FireShot2
 {
-Color 0.8 0.6 0.0
-Size 16
+	Color 0.8 0.6 0.0
+	Size 16
 }
 
 Pointlight FireShot3
 {
-Color 0.6 0.4 0.0
-Size 12
+	Color 0.6 0.4 0.0
+	Size 12
 }
 
 Pointlight FireShot4
 {
-Color 0.4 0.2 0.0
-Size 8
+	Color 0.4 0.2 0.0
+	Size 8
 }
 
 
@@ -564,7 +561,6 @@ flickerlight FTFiree44
 	attenuate 1
 }
 
-
 flickerlight FTFiree1P
 {
     color 0.5 0.5 0.7
@@ -707,7 +703,6 @@ flickerlight JazzBrazier
 	offset 0 32 0
 }
 
-
 flickerlight Jazztorch
 {
     color 1.0 0.7 0.0
@@ -717,7 +712,6 @@ flickerlight Jazztorch
 	attenuate 1
 	Offset 0 32 0
 }
-
 
 pulselight JungLantLite
 {
@@ -754,7 +748,6 @@ pulselight MegaAirBaseLite2
     interval 1
 	Offset 0 84 0
 }
-
 
 pointlight Minisile
 {
@@ -869,47 +862,47 @@ pointlight Sword3
 
 Pointlight PyroBall
 {
-Color 1.0 0.8 0.0
-Size 35
+	Color 1.0 0.8 0.0
+	Size 35
 }
 
 Pointlight PyroBall2
 {
-Color 1.0 0.8 0.0
-Size 40
+	Color 1.0 0.8 0.0
+	Size 40
 }
 
 Pointlight PyroBall3
 {
-Color 0.9 0.7 0.0
-Size 38
+	Color 0.9 0.7 0.0
+	Size 38
 }
 
 Pointlight PyroBall4
-{ 
-Color 0.8 0.6 0.0
-Size 36
+{
+	Color 0.8 0.6 0.0
+	Size 36
 }
 
 Pointlight PyroBallX
-{ 
-Color 0.8 0.6 0.0
-Size 8
+{
+	Color 0.8 0.6 0.0
+	Size 8
 }
 
 Pointlight PyroBlast1
 {
-Color 1.0 0.8 0.0
-Size 48
+	Color 1.0 0.8 0.0
+	Size 48
 }
 
 flickerlight RedStrobe
 {
-    color 0.4 0.0 0.0
- size 48
-    secondarySize 64
+	color 0.4 0.0 0.0
+	size 48
+	secondarySize 64
 	chance 0.5
-    attenuate 1
+	attenuate 1
 }
 
 pulselight RedStrobeMini
@@ -1081,7 +1074,7 @@ object 40mmTimedShot
 	frame JBLSG { light EnemyExplosion3 }
 	frame JBLSH { light EnemyExplosion4 }
 	}
-	
+
 object 40mmTimedShotPow
 {
 	frame JBLSE { light EnemyExplosion1 }
@@ -1092,8 +1085,8 @@ object 40mmTimedShotPow
 
 object ActivatedTNT
 {
-frame DYNME { light BossEXPL_X1 }
-frame DYNMF { light BossEXPL_X2 }
+	frame DYNME { light BossEXPL_X1 }
+	frame DYNMF { light BossEXPL_X2 }
 	frame DYNMM { light BossEXPL_X3 }
 	frame DYNMN { light BossEXPL_X3 }
 	frame DYNMO { light BossEXPL }
@@ -1112,7 +1105,7 @@ object BigSparks
 
 object BollyProj
 {
-frame INDMA { light HomingMissile }
+	frame INDMA { light HomingMissile }
 	frame SEKEA { light BossEXPL }
 	frame SEKEB { light BossEXPL }
 	frame SEKEC { light BossEXPL }
@@ -1126,7 +1119,7 @@ frame INDMA { light HomingMissile }
 
 object Blastshot
 {
-frame JBLSA { light SparkBAL1 }
+	frame JBLSA { light SparkBAL1 }
 	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
@@ -1135,7 +1128,7 @@ frame JBLSA { light SparkBAL1 }
 
 Object Cane2
 {
-Frame CANEB {Light XmasLite}
+	frame CANEB {Light XmasLite}
 }
 
 Object Ceilingshot
@@ -1149,10 +1142,10 @@ Object Ceilingshot
 
 Object ChameleonComet
 {
-Frame COMTA { Light Comet1 }
-Frame COMTB { Light Comet2 }
-Frame COMTC { Light Comet1 }
-frame SEKEC { light BossEXPL }
+	frame COMTA { Light Comet1 }
+	frame COMTB { Light Comet2 }
+	frame COMTC { Light Comet1 }
+	frame SEKEC { light BossEXPL }
 	frame SEKED { light BossEXPL_X1 }
 }
 
@@ -1179,15 +1172,15 @@ Object Chamtorch
 	frame CTORG { light FlamBowl2 }
 	frame CTORH { light FlamBowl2 }
 	}
-	
+
 	Object CMouse
 {
 frame CMOUA { light CMOUSE }
 }
 
-Object CometDeath 
+Object CometDeath
 {
-frame SEKED { light BossEXPL_X1 }
+	frame SEKED { light BossEXPL_X1 }
 	frame SEKEE { light BossEXPL_X1 }
 	frame SEKEF { light BossEXPL_X2 }
 	frame SEKEG { light BossEXPL_X2 }
@@ -1195,31 +1188,31 @@ frame SEKED { light BossEXPL_X1 }
 	frame SEKEI { light BossEXPL_X3 }
 }
 
-Object CometDeathGlow 
+Object CometDeathGlow
 {
-Frame FFPRA { Light FireShot4 }
-Frame FFPRB { Light FireShot4 }
-Frame FFPRC { Light FireShot3 }
-Frame FFPRD { Light FireShot3 }
-Frame FFPRE { Light FireShot2 }
-Frame FFPRF { Light FireShot2 }
-Frame FFPRH { Light FireShot3 }
-Frame FFPRI { Light FireShot4 }
+	frame FFPRA { Light FireShot4 }
+	frame FFPRB { Light FireShot4 }
+	frame FFPRC { Light FireShot3 }
+	frame FFPRD { Light FireShot3 }
+	frame FFPRE { Light FireShot2 }
+	frame FFPRF { Light FireShot2 }
+	frame FFPRH { Light FireShot3 }
+	frame FFPRI { Light FireShot4 }
 }
 
 Object DarkRealmLight1
 {
-Frame DKRMA { Light DarkRealmLight1}
+	frame DKRMA { Light DarkRealmLight1}
 }
 
 Object DarkRealmLight2
 {
-Frame DKRMB { Light DarkRealmLight2}
+	frame DKRMB { Light DarkRealmLight2}
 }
 
 Object DarkRealmLight3
 {
-Frame DKRMC { Light DarkRealmLight3}
+	frame DKRMC { Light DarkRealmLight3}
 }
 
 object DarkSparks1
@@ -1231,8 +1224,8 @@ object DarkSparks1
 
 object DesDemonProj
 {
-Frame DESPA { Light FireShot1 }
-Frame DESPB { Light FireShot1 }
+	frame DESPA { Light FireShot1 }
+	frame DESPB { Light FireShot1 }
 	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
@@ -1241,8 +1234,8 @@ Frame DESPB { Light FireShot1 }
 
 object DroneRocket
 {
-frame RFLMA { light HomingMissile }
-frame RFLEB { light Minisile }
+	frame RFLMA { light HomingMissile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1265,35 +1258,33 @@ object DropFire
 
 object dstarceilingstrobe
 {
-Frame DeckC { Light Deckstrobe }
-Frame DeckE { Light Deckstrobe }
-Frame DeckF { Light Deckstrobe }
-Frame DeckG { Light Deckstrobe }
+	frame DeckC { Light Deckstrobe }
+	frame DeckE { Light Deckstrobe }
+	frame DeckF { Light Deckstrobe }
+	frame DeckG { Light Deckstrobe }
 }
 
 object dstarfloorstrobe
 {
-Frame DeckD { Light Deckstrobe }
-Frame DeckH { Light Deckstrobe }
-Frame DeckI { Light Deckstrobe }
-Frame DeckJ { Light Deckstrobe }
+	frame DeckD { Light Deckstrobe }
+	frame DeckH { Light Deckstrobe }
+	frame DeckI { Light Deckstrobe }
+	frame DeckJ { Light Deckstrobe }
 }
 
 object dstartank
 {
-Frame DeckL { Light DeckTank }
-Frame DeckB { Light DeckTank }
-Frame DeckK { Light DeckTank }
-Frame DeckM { Light DeckTank }
-Frame DeckN { Light DeckTank }
+	frame DeckL { Light DeckTank }
+	frame DeckB { Light DeckTank }
+	frame DeckK { Light DeckTank }
+	frame DeckM { Light DeckTank }
+	frame DeckN { Light DeckTank }
 }
 
-
 object DualRocket
-
 {
-frame RFLMA { light HomingMissile }
-frame RFLEB { light Minisile }
+	frame RFLMA { light HomingMissile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1305,8 +1296,8 @@ frame RFLEB { light Minisile }
 object DualRocketPow
 
 {
-frame RFLPA { light HomingMissile }
-frame RFLEB { light Minisile }
+	frame RFLPA { light HomingMissile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1317,10 +1308,10 @@ frame RFLEB { light Minisile }
 
 Object FallingComet
 {
-Frame COMTA { Light Comet1 }
-Frame COMTB { Light Comet2 }
-Frame COMTC { Light Comet1 }
-frame SEKEC { light BossEXPL }
+	frame COMTA { Light Comet1 }
+	frame COMTB { Light Comet2 }
+	frame COMTC { Light Comet1 }
+	frame SEKEC { light BossEXPL }
 	frame SEKED { light BossEXPL_X1 }
 }
 
@@ -1334,7 +1325,7 @@ Object FanolintRocket
 
 Object FirebombExplosion1
 {
-frame RFLEB { light Minisile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1345,7 +1336,7 @@ frame RFLEB { light Minisile }
 
 Object FirebombExplosion2
 {
-frame RFLEB { light Minisile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1356,7 +1347,7 @@ frame RFLEB { light Minisile }
 
 Object FirebombExplosion3
 {
-frame RFLEB { light Minisile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1372,7 +1363,7 @@ Object FireBowl2
 	frame FBW2C { light FlamBowl3 }
 	frame FBW2D { light FlamBowl3 }
 	frame FBW2E { light FlamBowl3 }
-	}
+}
 
 object FiredeadLite
 {
@@ -1392,29 +1383,29 @@ Object FireBombpest
 	frame FBMBB { light FlamBowl }
     frame FBMBC { light FlamBowl }
 	frame FBMBD { light FlamBowl }
-	}
+}
 
 Object Firepest
 {
     frame FBMBC { light FlamBowl }
 	frame FBMBD { light FlamBowl }
-	}
-
-Object FireShot 
-{
-Frame PLSSX { Light FireShot1 }
 }
 
-Object FireTail 
+Object FireShot
 {
-Frame FFPRA { Light FireShot4 }
-Frame FFPRB { Light FireShot4 }
-Frame FFPRC { Light FireShot3 }
-Frame FFPRD { Light FireShot3 }
-Frame FFPRE { Light FireShot2 }
-Frame FFPRF { Light FireShot2 }
-Frame FFPRH { Light FireShot3 }
-Frame FFPRI { Light FireShot4 }
+	frame PLSSX { Light FireShot1 }
+}
+
+Object FireTail
+{
+	frame FFPRA { Light FireShot4 }
+	frame FFPRB { Light FireShot4 }
+	frame FFPRC { Light FireShot3 }
+	frame FFPRD { Light FireShot3 }
+	frame FFPRE { Light FireShot2 }
+	frame FFPRF { Light FireShot2 }
+	frame FFPRH { Light FireShot3 }
+	frame FFPRI { Light FireShot4 }
 }
 
 Object Flame
@@ -1426,8 +1417,8 @@ Object Flame
 	frame FLAME { light FlamBowl }
 	frame FLAMF { light FlamBowl }
 	frame FLAMG { light FlamBowl }
-	}
-	
+}
+
 
 Object FlameBowl
 {
@@ -1438,7 +1429,7 @@ Object FlameBowl
 	frame FLMBE { light FlamBowl3 }
 	frame FLMBF { light FlamBowl3 }
 	frame FLMBG { light FlamBowl3 }
-	}
+}
 
 Object Floorshot
 {
@@ -1451,7 +1442,7 @@ Object Floorshot
 
 object FreezeBlast
 {
-frame FBLSA { light ICEGLOWER }
+	frame FBLSA { light ICEGLOWER }
 	frame FBLSB { light ICEGLOWER }
 	frame FBLSC { light ICEGLOWER }
 	frame FBLSD { light FrostShot4 }
@@ -1523,9 +1514,9 @@ object FTFirePow
 
 object HeatSeekingMissile
 {
-frame HRKTA { light HomingMissile }
-frame HRKTB { light HomingMissile }
-frame HRKTC { light HomingMissile }
+	frame HRKTA { light HomingMissile }
+	frame HRKTB { light HomingMissile }
+	frame HRKTC { light HomingMissile }
 	frame SEKEA { light BossEXPL }
 	frame SEKEB { light BossEXPL }
 	frame SEKEC { light BossEXPL }
@@ -1539,9 +1530,9 @@ frame HRKTC { light HomingMissile }
 
 object HeatSeekingMissilePower
 {
-frame PRKTA { light HomingMissile }
-frame PRKTB { light HomingMissile }
-frame PRKTC { light HomingMissile }
+	frame PRKTA { light HomingMissile }
+	frame PRKTB { light HomingMissile }
+	frame PRKTC { light HomingMissile }
 	frame SEKEA { light BossEXPL }
 	frame SEKEB { light BossEXPL }
 	frame SEKEC { light BossEXPL }
@@ -1565,8 +1556,8 @@ object HeavyGoonPlasma
 
 object HipHopProj
 {
-frame HHPJA { light SparkBAL1 }
-frame JBLSE { light EnemyExplosion1 }
+	frame HHPJA { light SparkBAL1 }
+	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
 	frame JBLSH { light EnemyExplosion4 }
@@ -1579,19 +1570,19 @@ Object JazzBrazier
 
 Object JazzPoof
 {
-frame JBLSE { light EnemyExplosion1 }
+	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
 	frame JBLSH { light EnemyExplosion4 }
-	}
-	
+}
+
 Object	Jazztorch
 {
-frame JJTHA { light Jazztorch }
-frame JJTHB { light Jazztorch }
-frame JJTHC { light Jazztorch }
+	frame JJTHA { light Jazztorch }
+	frame JJTHB { light Jazztorch }
+	frame JJTHC { light Jazztorch }
 }
-	
+
 object JetpackZombieExplosion
 {
 	frame SEKEA { light BossEXPL }
@@ -1607,9 +1598,9 @@ object JetpackZombieExplosion
 
 object JJAGeneralSeekingProj
 {
-frame HRKTA { light HomingMissile }
-frame HRKTB { light HomingMissile }
-frame HRKTC { light HomingMissile }
+	frame HRKTA { light HomingMissile }
+	frame HRKTB { light HomingMissile }
+	frame HRKTC { light HomingMissile }
 	frame SEKEA { light BossEXPL }
 	frame SEKEB { light BossEXPL }
 	frame SEKEC { light BossEXPL }
@@ -1619,8 +1610,8 @@ frame HRKTC { light HomingMissile }
 	frame SEKEG { light BossEXPL_X2 }
 	frame SEKEH { light BossEXPL_X3 }
 	frame SEKEI { light BossEXPL_X3 }
-	}
-	
+}
+
 Object JJInvul
 {
 	frame INVSA { light Invis1 }
@@ -1638,7 +1629,6 @@ Object JJTELEPORTFOG
 	frame JFOGE { light Telefog4 }
 }
 
-
 Object JJThing26
 {
 	frame NROKI { light StreetLite }
@@ -1646,31 +1636,31 @@ Object JJThing26
 
 Object JungleWallLantern
 {
-frame JUNLA { light JungLantLite }
-frame JUNLB { light JungLantLite }
-frame JUNLC { light JungLantLite }
-frame JUNLD { light JungLantLite }
-frame JUNLE { light JungLantLite }
-frame JUNLF { light JungLantLite }
-frame JUNLG { light JungLantLite }
-frame JUNLH { light JungLantLite }
+	frame JUNLA { light JungLantLite }
+	frame JUNLB { light JungLantLite }
+	frame JUNLC { light JungLantLite }
+	frame JUNLD { light JungLantLite }
+	frame JUNLE { light JungLantLite }
+	frame JUNLF { light JungLantLite }
+	frame JUNLG { light JungLantLite }
+	frame JUNLH { light JungLantLite }
 }
 
 Object LabFlame
 {
-frame LABFA { light LabFlame1 }
-frame LABFB { light LabFlame1 }
-frame LABFC { light LabFlame1 }
-frame LABFD { light LabFlame1 }
-frame LABFE { light LabFlame1 }
-frame LABFF { light LabFlame1 }
-frame LABFG { light LabFlame1 }
-frame LABFH { light LabFlame1 }
+	frame LABFA { light LabFlame1 }
+	frame LABFB { light LabFlame1 }
+	frame LABFC { light LabFlame1 }
+	frame LABFD { light LabFlame1 }
+	frame LABFE { light LabFlame1 }
+	frame LABFF { light LabFlame1 }
+	frame LABFG { light LabFlame1 }
+	frame LABFH { light LabFlame1 }
 }
 
 Object LaserEyeTrail
 {
-frame TBEAM { light TurtleBullet }
+	frame TBEAM { light TurtleBullet }
 	frame TBEAN { light TurtleBullet }
 	frame TBEAO { light TurtleBullet }
 	frame TBEAP { light TurtleBullet }
@@ -1684,31 +1674,31 @@ object LetniBarrier64
 {
 	frame LBARA { light LetniBarrier1 }
 	frame LBARB { light LetniBarrier1 }
-	}
-	
+}
+
 	object LetniBarrier128
 {
 	frame LBARC { light LetniBarrier2 }
 	frame LBARD { light LetniBarrier2 }
-	}
+}
 
 Object LitCandle
 {
-frame CCANA { light Candle1 }
-frame CCANB { light Candle1 }
-frame CCANC { light Candle1 }
-frame CCAND { light Candle1 }
-frame CCANE { light Candle1 }
-frame CCANF { light Candle1 }
-frame CCANG { light Candle1 }
-frame CCANH { light Candle1 }
-frame CCANI { light Candle1 }
-frame CCANJ { light Candle1 }
+	frame CCANA { light Candle1 }
+	frame CCANB { light Candle1 }
+	frame CCANC { light Candle1 }
+	frame CCAND { light Candle1 }
+	frame CCANE { light Candle1 }
+	frame CCANF { light Candle1 }
+	frame CCANG { light Candle1 }
+	frame CCANH { light Candle1 }
+	frame CCANI { light Candle1 }
+	frame CCANJ { light Candle1 }
 }
 
 Object LizardBomb
 {
-frame SBLLA { light BossEXPL_X2 }
+	frame SBLLA { light BossEXPL_X2 }
 	frame BOMBM { light BossEXPL_X3 }
 	frame BOMBN { light BossEXPL_X3 }
 	frame BOMBO { light BossEXPL }
@@ -1720,7 +1710,7 @@ frame SBLLA { light BossEXPL_X2 }
 
 Object LizardPropeller
 {
-frame SBLLA { light BossEXPL_X2 }
+	frame SBLLA { light BossEXPL_X2 }
 	frame BOMBM { light BossEXPL_X3 }
 	frame BOMBN { light BossEXPL_X3 }
 	frame BOMBO { light BossEXPL }
@@ -1732,8 +1722,8 @@ frame SBLLA { light BossEXPL_X2 }
 
 Object MegairbossRocket
 {
-frame RFLMA { light HomingMissile }
-frame RFLEB { light Minisile }
+	frame RFLMA { light HomingMissile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1741,19 +1731,20 @@ frame RFLEB { light Minisile }
 	frame RFLEJ { light Minisile_X1 }
 	frame RFLEK { light Minisile_4 }
 }
+
 Object MegaLight1
 {
-Frame MGALA { Light MegaAIRBaseLite}
+	frame MGALA { Light MegaAIRBaseLite}
 }
 
 Object MegaLight2
 {
-Frame MGALB { Light MegaAIRBaseLite2}
+	frame MGALB { Light MegaAIRBaseLite2}
 }
 
 Object MegaLight3
 {
-Frame MGALC { Light MegaAIRBaseLite}
+	frame MGALC { Light MegaAIRBaseLite}
 }
 
 object MermanProj
@@ -1768,14 +1759,13 @@ object MermanProj
 	frame SPKBH { light SparkBAL2 }
 }
 
-object Minissiles 
+object Minissiles
 {
-    frame INDMA { light Minisile    }
-
-     frame RFLEAB { light Minisile }
-    frame RFLECD { light Minisile_X1 }
-    frame RFLEEF { light Minisile_X2 }
-    frame RFLEGH { light Minisile_X3 }
+	frame INDMA { light Minisile    }
+	frame RFLEAB { light Minisile }
+	frame RFLECD { light Minisile_X1 }
+	frame RFLEEF { light Minisile_X2 }
+	frame RFLEGH { light Minisile_X3 }
 	frame RFLEI { light Minisile_X2 }
 	frame RFLEJ { light Minisile_X1 }
 	frame RFLEK { light Minisile_4 }
@@ -1783,7 +1773,7 @@ object Minissiles
 
 object MotoProj
 {
-frame JBLSA { light SparkBAL1 }
+	frame JBLSA { light SparkBAL1 }
 	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
@@ -1836,7 +1826,7 @@ object MiniNeutron
 
 object PetrifyProj
 {
-frame FBLSA { light ICEGLOWER }
+	frame FBLSA { light ICEGLOWER }
 	frame FBLSB { light ICEGLOWER }
 	frame FBLSC { light ICEGLOWER }
 	frame FBLSD { light FrostShot4 }
@@ -1862,7 +1852,7 @@ object PlasmagoonPlasma
 
 object PollutusStrobe
 {
-frame POLLA { light PollutusStrobe }
+	frame POLLA { light PollutusStrobe }
 	frame POLLB { light PollutusStrobe }
 	frame POLLC { light PollutusStrobe }
 	frame POLLD { light PollutusStrobe }
@@ -1870,7 +1860,7 @@ frame POLLA { light PollutusStrobe }
 
 object PowerBlastshot
 {
-frame HYPPA { light SparkBAL1 }
+	frame HYPPA { light SparkBAL1 }
 	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
@@ -1879,8 +1869,8 @@ frame HYPPA { light SparkBAL1 }
 
 Object PyroBall
 {
-Frame RBALA { Light PyroBallX }
-frame SEKEC { light BossEXPL }
+	frame RBALA { Light PyroBallX }
+	frame SEKEC { light BossEXPL }
 	frame SEKED { light BossEXPL_X1 }
 	frame SEKEE { light BossEXPL_X1 }
 	frame SEKEF { light BossEXPL_X2 }
@@ -1891,10 +1881,10 @@ frame SEKEC { light BossEXPL }
 
 Object PyroBlast
 {
-Frame SBLLA { Light PyroBlast1 }
-Frame SBLLB { Light PyroBlast1 }
-Frame SBLLC { Light PyroBlast1 }
-Frame SBLLD { Light PyroBlast1 }
+	frame SBLLA { Light PyroBlast1 }
+	frame SBLLB { Light PyroBlast1 }
+	frame SBLLC { Light PyroBlast1 }
+	frame SBLLD { Light PyroBlast1 }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
@@ -1905,26 +1895,26 @@ Frame SBLLD { Light PyroBlast1 }
 
 Object SaurianBomb
 {
-frame RFLEB { light Minisile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
 	frame RFLEI { light Minisile_X2 }
 	frame RFLEJ { light Minisile_X1 }
 	frame RFLEK { light Minisile_4 }
-	}
-	
+}
+
 Object SeaMineBoomFX
 {
-frame RFLEB { light Minisile }
+	frame RFLEB { light Minisile }
     frame RFLECD { light Minisile_X1 }
     frame RFLEEF { light Minisile_X2 }
     frame RFLEGH { light Minisile_X3 }
 	frame RFLEI { light Minisile_X2 }
 	frame RFLEJ { light Minisile_X1 }
 	frame RFLEK { light Minisile_4 }
-	}
-	
+}
+
 object SparkBALL
 {
 	frame SPKBA { light SparkBAL1 }
@@ -1961,17 +1951,15 @@ object StrobeLightRed
 
 object StrobeLightYellow
 {
-frame STRY { light YELLOWSTROBE }
+	frame STRY { light YELLOWSTROBE }
 }
 
 object Sword
 {
     frame SCIMA { light Sword1    }
-
     frame SCIMB { light Sword2  }
     frame SCIMC { light Sword3  }
     frame SCIMD { light Sword2  }
-	
 	frame SCIME { light Sword1    }
     frame SCIMF { light Sword2  }
     frame SCIMG { light Sword3  }
@@ -1981,50 +1969,50 @@ object Sword
 
 Object Tagg
 {
-Frame TAGGA { Light FairyLight1}
-Frame TAGGB { Light FairyLight2}
-Frame TAGGC { Light FairyLight3}
-Frame TAGGD { Light FairyLight2}
+	frame TAGGA { Light FairyLight1}
+	frame TAGGB { Light FairyLight2}
+	frame TAGGC { Light FairyLight3}
+	frame TAGGD { Light FairyLight2}
 }
 
 Object TechnoirGoon
 {
-Frame TNGNA { light TurtleRobot}
-Frame TNGNB { light TurtleRobot}
+	frame TNGNA { light TurtleRobot}
+	frame TNGNB { light TurtleRobot}
 }
 
 Object TechnoirTank
 {
-Frame TECHB { light TurtleRobot}
+	frame TECHB { light TurtleRobot}
 }
 
 Object TechnoirLight1
 {
-Frame TCHLA { Light TechNoirLight2}
+	frame TCHLA { Light TechNoirLight2}
 }
 
 Object TechnoirLight2
 {
-Frame TCHLB { Light TechNoirLight}
+	frame TCHLB { Light TechNoirLight}
 }
 
 Object TechnoirLight3
 {
-Frame TCHLC { Light TechNoirLight}
+	frame TCHLC { Light TechNoirLight}
 }
 
 Object TechRocket
 {
-frame JBLSE { light EnemyExplosion1 }
+	frame JBLSE { light EnemyExplosion1 }
 	frame JBLSF { light EnemyExplosion2 }
 	frame JBLSG { light EnemyExplosion3 }
 	frame JBLSH { light EnemyExplosion4 }
-	}
+}
 
 object TorpedoProj
 {
-frame RFLPA { light HomingMissile }
-frame SEKEA { light BossEXPL }
+	frame RFLPA { light HomingMissile }
+	frame SEKEA { light BossEXPL }
 	frame SEKEB { light BossEXPL }
 	frame SEKEC { light BossEXPL }
 	frame SEKED { light BossEXPL_X1 }
@@ -2033,7 +2021,8 @@ frame SEKEA { light BossEXPL }
 	frame SEKEG { light BossEXPL_X2 }
 	frame SEKEH { light BossEXPL_X3 }
 	frame SEKEI { light BossEXPL_X3 }
-	}
+}
+
 object TurtleGoonBullet
 {
     frame TBEAM { light TurtleBullet }
@@ -2048,14 +2037,14 @@ object TurtleGoonBullet
 
 Object TurtleRobot
 {
- frame ROBTA { light TurtleRobot }
- frame ROBTB { light TurtleRobot }
- frame ROBTC { light TurtleRobot }
+	frame ROBTA { light TurtleRobot }
+	frame ROBTB { light TurtleRobot }
+	frame ROBTC { light TurtleRobot }
 }
 
 Object WalkFire
 {
-frame FRTFA { light Firee4 }
+	frame FRTFA { light Firee4 }
 	frame FRTFB { light Firee3 }
 	frame FRTFC { light Firee2 }
 	frame FRTFD { light Firee1 }
@@ -2065,11 +2054,10 @@ frame FRTFA { light Firee4 }
 	frame FRTFH { light Firee44 }
 }
 
-object ZombieTankMissile 
+object ZombieTankMissile
 {
-    frame INDMA { light Minisile    }
-
-     frame SEKEA { light BossEXPL }
+	frame INDMA { light Minisile    }
+	frame SEKEA { light BossEXPL }
 	frame SEKEB { light BossEXPL }
 	frame SEKEC { light BossEXPL }
 	frame SEKED { light BossEXPL_X1 }
@@ -2081,17 +2069,16 @@ object ZombieTankMissile
 }
 
 //added 12/29/22
-
 Object XmasSpiralThing
 {
-Frame XMSSA { Light XmasSpiralThing }
-Frame XMSSB { Light XmasSpiralThing }
-Frame XMSSC { Light XmasSpiralThing }
-Frame XMSSD { Light XmasSpiralThing }
-Frame XMSSE { Light XmasSpiralThing }
-Frame XMSSF { Light XmasSpiralThing }
-Frame XMSSG { Light XmasSpiralThing }
-Frame XMSSH { Light XmasSpiralThing }
+	frame XMSSA { Light XmasSpiralThing }
+	frame XMSSB { Light XmasSpiralThing }
+	frame XMSSC { Light XmasSpiralThing }
+	frame XMSSD { Light XmasSpiralThing }
+	frame XMSSE { Light XmasSpiralThing }
+	frame XMSSF { Light XmasSpiralThing }
+	frame XMSSG { Light XmasSpiralThing }
+	frame XMSSH { Light XmasSpiralThing }
 }
 
 pulselight XmasSpiralThing
@@ -2113,9 +2100,9 @@ flickerlight JazzGreentorch
 	Offset 0 32 0
 }
 
-Object	JazzGreentorch
+Object JazzGreentorch
 {
-frame JJTGA { light JazzGreentorch }
-frame JJTGB { light JazzGreentorch }
-frame JJTGC { light JazzGreentorch }
+	frame JJTGA { light JazzGreentorch }
+	frame JJTGB { light JazzGreentorch }
+	frame JJTGC { light JazzGreentorch }
 }
