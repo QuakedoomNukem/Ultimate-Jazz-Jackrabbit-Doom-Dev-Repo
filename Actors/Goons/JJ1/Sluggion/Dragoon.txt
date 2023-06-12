@@ -1,12 +1,12 @@
-ACTOR Draco 3296
+Actor Draco 3296
 {
   Tag "Dragoon"
   Obituary "%o was eaten by a Dragoon." 
-  health 200
-  radius 12
-  height 16
+  Health 200
+  Radius 12
+  Height 16
   mass 99999
-  speed 5
+  Speed 5
   damage 1
   painchance 0
 SeeSound "Turtsight"
@@ -25,7 +25,7 @@ SeeSound "Turtsight"
 	Spawn:
 		DRAC A 1 A_Look
 		BBOD A 0 A_SpawnItemEx("DracoBody",-10,0,5,0,0,0,0,0,0)
-		loop
+		Loop
 	See:
 		DRAC A 0 A_SpawnItemEx("DracoTail",-10,0,5,0,0,0,0,0,0)
 		Goto TrueSee
@@ -35,11 +35,11 @@ SeeSound "Turtsight"
 		DRAC A 0 A_Weave(0, 1, 0, random(1,5))
 		DRAC A 1 A_Chase
 		DRAC A 0 A_SpawnItemEx("DracoBody",-10,0,5,0,0,0,0,0,0)
-		loop
+		Loop
 	Melee:
 		DRAC A 4 A_FaceTarget 
 		DRAC A 20 A_SargAttack
-		goto see
+		Goto see
         Death:
 			TNT1 AAAAAAA 0 A_SpawnItemEx("DracoBody",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
 	TNT1 A 0 A_GiveToTarget ("Points",200)

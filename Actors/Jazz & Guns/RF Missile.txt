@@ -1,4 +1,4 @@
-actor RFMissile : Weapon 32763
+Actor RFMissile : Weapon 32763
 {
   Tag "RF Missile"
   Inventory.PickupMessage "RF Missile (Slot 6)"
@@ -11,7 +11,7 @@ actor RFMissile : Weapon 32763
    Weapon.BobSpeed 2
   Weapon.BobStyle Smooth
   DamageFactor 0
-  +Floatbob
+  +FLOATBOB
    +NOGRAVITY
   States
   {
@@ -184,7 +184,7 @@ actor RFMissile : Weapon 32763
   }
 }
 
-ACTOR DualRocket
+Actor DualRocket
 {
   Radius 11
   Height 4
@@ -197,7 +197,7 @@ ACTOR DualRocket
   +RANDOMIZE
   ReactionTime 20
   SeeSound "RFLAUNCH"
-  DamageType "JazzProj"
+  DamageType JazzProj
   DeathSound "SEEKXPLD"
   Obituary "%o couldn't dodge %k's RF Missiles sideways."
   States
@@ -214,7 +214,7 @@ ACTOR DualRocket
   }
 }
 
-ACTOR DualRocketPow : DualRocket
+Actor DualRocketPow : DualRocket
 {
  ReactionTime 30
  States
@@ -231,7 +231,7 @@ ACTOR DualRocketPow : DualRocket
 	}
 	}
 	
-ACTOR JJRocketAmmo : Ammo 32473
+Actor JJRocketAmmo : Ammo 32473
 {
   Inventory.PickupMessage "\cqRF Missile \clAmmo"
   Inventory.Amount 3
@@ -251,7 +251,7 @@ ACTOR JJRocketAmmo : Ammo 32473
   }
 }
 
-ACTOR Gun6PowerUpBox : Gun1PowerUpBox 3825
+Actor Gun6PowerUpBox : Gun1PowerUpBox 3825
 {
   States
   {
@@ -268,10 +268,10 @@ ACTOR Gun6PowerUpBox : Gun1PowerUpBox 3825
   }
 }
 
-ACTOR Gun6PowerUp : Inventory 
+Actor Gun6PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

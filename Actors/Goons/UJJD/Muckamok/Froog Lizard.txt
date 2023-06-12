@@ -1,4 +1,4 @@
-actor FroogLizard 26559
+Actor FroogLizard 26559
 {
    Tag "Froog Lizard"
    Health 500
@@ -12,7 +12,7 @@ actor FroogLizard 26559
   ActiveSound "LIZRDACT"
   DamageFactor "MuckSnot", 0
   DamageFactor "MuckSnot2", 0 
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
@@ -40,7 +40,7 @@ actor FroogLizard 26559
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",500)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	FLZD AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -49,6 +49,6 @@ actor FroogLizard 26559
 	TNT1 A 0 A_GiveToTarget ("Points",500)
 	FLZD A 5 A_GenericFreezeDeath
     FLZD A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

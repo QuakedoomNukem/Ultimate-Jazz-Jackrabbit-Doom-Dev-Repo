@@ -1,10 +1,10 @@
-ACTOR SkiTurtle 32522
+Actor SkiTurtle 32522
 {
   Tag "Ski Turtle"
   obituary "%o was flattened by a Ski Turtle."
-  health 75
+  Health 75
   mass 2000
-  speed 15
+  Speed 15
   Radius 16
   Height 40
   painchance 0
@@ -23,15 +23,15 @@ ACTOR SkiTurtle 32522
   {
    Spawn:
     HMZP AB 10 A_Look
-    loop
+    Loop
   See:
     HMZP AABB 2 A_Chase
-    loop
+    Loop
   Melee:
     HMZP A 4 A_FaceTarget
     HMZP B 4 A_CustomMeleeAttack (5)
     HMZP A 4
-    goto See
+    Goto See
   Death:
    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",150)
@@ -40,7 +40,7 @@ ACTOR SkiTurtle 32522
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	HMZP BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -49,6 +49,6 @@ ACTOR SkiTurtle 32522
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	HMZP B 5 A_GenericFreezeDeath
     HMZP B 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

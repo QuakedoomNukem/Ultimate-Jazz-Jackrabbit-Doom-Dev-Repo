@@ -1,4 +1,4 @@
-ACTOR EasterusChicken 3933
+Actor EasterusChicken 3933
 {
   Tag "Chicken"
   Health 70
@@ -7,7 +7,7 @@ ACTOR EasterusChicken 3933
   Mass 10000
   Speed 15
   PainChance 0
-  Monster
+  MONSTER
   +WINDTHRUST
   +FLOORCLIP
   +NOBLOOD
@@ -41,7 +41,7 @@ ACTOR EasterusChicken 3933
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	CHKN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("SundayRoast",0,0,0,0,0,0,0,128)
@@ -50,15 +50,15 @@ ACTOR EasterusChicken 3933
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	CHKN A 5 A_GenericFreezeDeath
     CHKN A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	}
 }
 
-ACTOR SundayRoast
+Actor SundayRoast
 {
   Radius 16
   Height 24
-  -solid
+  -SOLID
   States
   {
   Spawn:

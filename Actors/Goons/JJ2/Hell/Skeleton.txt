@@ -1,4 +1,4 @@
-ACTOR Skeleton 3791
+Actor Skeleton 3791
 {
   Tag "Skeleton"
   Health 30
@@ -7,7 +7,7 @@ ACTOR Skeleton 3791
   Mass 10000
   Speed 25
   PainChance 0
-  Monster
+  MONSTER
   +NOBLOOD
   +NOINFIGHTING
   +COUNTKILL
@@ -34,7 +34,7 @@ ACTOR Skeleton 3791
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	SKLT A 5 A_GenericFreezeDeath
     SKLT A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
@@ -60,12 +60,12 @@ Actor BoneProj
   }
 }
 
-actor BonePoof
+Actor BonePoof
 {
 	-NOGRAVITY
-	scale 1.5
-	height 3
-	radius 3
+	Scale 1.5
+	Height 3
+	Radius 3
 	alpha 1.0
 	States
 	{

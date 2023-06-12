@@ -1,4 +1,4 @@
-actor StonarGrabber 3203
+Actor StonarGrabber 3203
 {
    Tag "Stonar Grabber"
    Health 50
@@ -8,7 +8,7 @@ actor StonarGrabber 3203
    Height 20 
    Mass 4000
    Damage 2
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    -SOLID
@@ -36,7 +36,7 @@ actor StonarGrabber 3203
 	  Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	HAND D 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -45,6 +45,6 @@ actor StonarGrabber 3203
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	HAND D 5 A_GenericFreezeDeath
     HAND D 1 A_FreezeDeathChunks
-    wait
+    Wait
    } 
 }

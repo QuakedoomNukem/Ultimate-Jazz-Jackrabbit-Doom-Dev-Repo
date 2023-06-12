@@ -211,19 +211,19 @@ Fire:
 	}
 }
 
-ACTOR 40mmShot
+Actor 40mmShot
 {
 	Radius 8
 	Height 8
 	Damage 200
 	Speed 30
 	Scale 0.75
-	Bouncetype "Hexen"
-	Bouncecount 20
+	BounceType "Hexen"
+	BounceCount 20
 	BounceFactor 1.0
 	SeeSound "bounce"
 	DeathSound "BLSTRHIT"
-	DamageType "JazzProj"
+	DamageType JazzProj
 	Projectile
 	-NOGRAVITY
 	+SEEKERMISSILE
@@ -240,12 +240,12 @@ ACTOR 40mmShot
 	}
 }
 
-ACTOR 40mmTimedShot : 40mmShot
+Actor 40mmTimedShot : 40mmShot
 {
 	ReactionTime 30
 	Speed 30
 	Damage 80
-	DamageType "JazzProj"
+	DamageType JazzProj
 	-NOGRAVITY
 	+HEXENBOUNCE
 	+SEEKERMISSILE
@@ -259,14 +259,14 @@ ACTOR 40mmTimedShot : 40mmShot
 	}
 }
 
-ACTOR 40mmTimedShotPow : 40mmTimedShot
+Actor 40mmTimedShotPow : 40mmTimedShot
 {
 	ReactionTime 50
 	Speed 30
 	Damage 100
-	Bouncecount 30
+	BounceCount 30
 	Gravity 0.9
-	DamageType "JazzProj"
+	DamageType JazzProj
 	-NOGRAVITY
 	+HEXENBOUNCE
 	+SEEKERMISSILE
@@ -284,7 +284,7 @@ ACTOR 40mmTimedShotPow : 40mmTimedShot
 	}
 }
 
-ACTOR Bouncers : Ammo 15002
+Actor Bouncers : Ammo 15002
 {
 	Inventory.Amount 3
 	Inventory.MaxAmount 100
@@ -300,11 +300,11 @@ ACTOR Bouncers : Ammo 15002
 	{
 	Spawn:
 		40MM ABCDEFGHIJ 3
-		loop
+		Loop
 	}
 }
 
-ACTOR Gun4PowerUpBox : Gun1PowerUpBox 3823
+Actor Gun4PowerUpBox : Gun1PowerUpBox 3823
 {
   States
   {
@@ -321,10 +321,10 @@ ACTOR Gun4PowerUpBox : Gun1PowerUpBox 3823
   }
 }
 
-ACTOR Gun4PowerUp : Inventory 
+Actor Gun4PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

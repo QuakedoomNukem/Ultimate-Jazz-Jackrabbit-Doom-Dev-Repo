@@ -1,4 +1,4 @@
-actor MotoMortar 3735
+Actor MotoMortar 3735
 {
   Tag "Launch Cart"
   Health 100
@@ -7,7 +7,7 @@ actor MotoMortar 3735
   Mass 10000
   Speed 15
   PainChance 0
-  Monster
+  MONSTER
   +NOBLOOD
   +NOINFIGHTING
     +COUNTKILL
@@ -34,7 +34,7 @@ actor MotoMortar 3735
   }
 }
 
-actor MotoProj
+Actor MotoProj
 {
   Radius 16
   Height 8
@@ -43,9 +43,9 @@ actor MotoProj
   Gravity 1.25
   Projectile
   SeeSound "LFG2FIRE"
-	Deathsound "BLSTRHIT"
-  +LowGravity
-  -NoGravity
+	DeathSound "BLSTRHIT"
+  +LOWGRAVITY
+  -NOGRAVITY
   States
   {
   Spawn:

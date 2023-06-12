@@ -1,4 +1,4 @@
-actor Frostbiter : Weapon 15004
+Actor Frostbiter : Weapon 15004
 {
   Tag "Frostbiter"
   Weapon.SelectionOrder 110
@@ -8,7 +8,7 @@ actor Frostbiter : Weapon 15004
   Weapon.AmmoType1 "FreezeAmmo"
   Inventory.PickupMessage "Frostbiter! (Slot 8)"
   Inventory.Icon "PLSPA0"
-  Obituary "%o got frozen solid by %k's Frostbiter."
+  Obituary "%o got frozen SOLID by %k's Frostbiter."
   DamageFactor 0
   Weapon.BobRangeX 0.5
    Weapon.BobRangeY 0.5
@@ -174,7 +174,7 @@ actor Frostbiter : Weapon 15004
   }
 }
 
-actor FreezeAmmo : Ammo 16203
+Actor FreezeAmmo : Ammo 16203
 {
   Inventory.Amount 3
   Inventory.MaxAmount 100
@@ -194,7 +194,7 @@ actor FreezeAmmo : Ammo 16203
 	}
 }
 
-actor FreezeBlast
+Actor FreezeBlast
 {
   Radius 13
   Height 8
@@ -206,21 +206,21 @@ actor FreezeBlast
   Alpha 0.75
   SeeSound "ICESHOT"
   DeathSound "ICEHIT"
-  DamageType "JazzProjIce"
+  DamageType JazzProjIce
   States
   {
   Spawn:
     FBLS A 2 bright A_SpawnItem("FreezeBlastTrail")
 	FBLS B 2 bright
 	FBLS C 2 bright
-    loop
+    Loop
   Death:
     FBLS DEFGHI 2 bright
     stop
   }
 }
 
-actor FreezeBlastPowered
+Actor FreezeBlastPowered
 {
   Radius 13
   Height 8
@@ -232,7 +232,7 @@ actor FreezeBlastPowered
   Alpha 0.75
   SeeSound "ICESHOT"
   DeathSound "ICEHIT"
-  DamageType "JazzProjIce"
+  DamageType JazzProjIce
   DamageType Ice
   States
   {
@@ -240,14 +240,14 @@ actor FreezeBlastPowered
     FBLS A 2 bright A_SpawnItem("FreezeBlastTrailPowered")
 	FBLS B 2 bright
 	FBLS C 2 bright
-    loop
+    Loop
   Death:
     FBLS DEFGHI 2 bright
     stop
   }
 }
 
-actor FreezeBlastTrail
+Actor FreezeBlastTrail
 {
   Radius 13
   Height 8
@@ -258,7 +258,7 @@ actor FreezeBlastTrail
   RenderStyle Add
   Alpha 0.9
   Scale 0.5
-  DamageType "JazzProjIce"
+  DamageType JazzProjIce
   States
   {
   Spawn:
@@ -270,7 +270,7 @@ actor FreezeBlastTrail
   }
 }
 
-actor FreezeBlastTrailPowered
+Actor FreezeBlastTrailPowered
 {
   Radius 13
   Height 8
@@ -281,7 +281,7 @@ actor FreezeBlastTrailPowered
   RenderStyle Add
   Alpha 0.9
   Scale 0.5
-  DamageType "JazzProjIce"
+  DamageType JazzProjIce
   States
   {
   Spawn:
@@ -293,7 +293,7 @@ actor FreezeBlastTrailPowered
   }
 }
 
-ACTOR Gun8PowerUpBox : Gun1PowerUpBox 3827
+Actor Gun8PowerUpBox : Gun1PowerUpBox 3827
 {
   States
   {
@@ -310,10 +310,10 @@ ACTOR Gun8PowerUpBox : Gun1PowerUpBox 3827
   }
 }
 
-ACTOR Gun8PowerUp : Inventory 
+Actor Gun8PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

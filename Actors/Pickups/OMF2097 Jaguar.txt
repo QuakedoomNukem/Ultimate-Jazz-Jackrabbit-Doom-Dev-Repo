@@ -1,4 +1,4 @@
-ACTOR JaguarRobot : PowerupGiver 3713
+Actor JaguarRobot : PowerupGiver 3713
 { 
 	Tag "Jaguar H.A.R. Power-up"
 	+INVENTORY.AUTOACTIVATE
@@ -6,8 +6,8 @@ ACTOR JaguarRobot : PowerupGiver 3713
 	Inventory.MaxAmount 0
 	Inventory.PickupSound "SECTGEM"
 	Inventory.PickupMessage "\cyYou are about to play One Must Fall 2097."
-	PowerUp.Duration 9999
-	PowerUp.Type "Robot"
+	Powerup.Duration 9999
+	Powerup.Type "Robot"
 	Scale 2.5
 	Radius 32
 	Height 192
@@ -19,13 +19,13 @@ Stop
 }
 }
 
-ACTOR PowerRobot : PowerMorph
+Actor PowerRobot : PowerMorph
 {
 	PowerMorph.PlayerClass "OMFJaguarPlayer"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA)
 }
 
-ACTOR OMFRobotMorph
+Actor OMFRobotMorph
 {
 	RenderStyle None
 	States
@@ -36,7 +36,7 @@ ACTOR OMFRobotMorph
 	}
 }
 
-ACTOR OMFJaguarPlayer : PlayerPawn
+Actor OMFJaguarPlayer : PlayerPawn
 {
 	Tag "Jaguar H.A.R."
 	+NOSKIN
@@ -51,7 +51,7 @@ ACTOR OMFJaguarPlayer : PlayerPawn
 	Player.MorphWeapon "OMFFist"
 	Player.DisplayName "OMFJaguarPlayer"
 	Player.JumpZ 20
-	scale 2.5
+	Scale 2.5
   States
   {
   Spawn:
@@ -85,14 +85,14 @@ ACTOR OMFJaguarPlayer : PlayerPawn
     OMFJ g 2
     OMFJ g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     OMFJ AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    OMFJ HIJ 8  A_Playsound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
-	TNT1 AAAAAAAAAAA 0 A_Playsound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
+    OMFJ HIJ 8  A_PlaySound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
+	TNT1 AAAAAAAAAAA 0 A_PlaySound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
 	OMFJ k -1
 	Stop
   }
 }
 
-ACTOR OMFFist : Weapon
+Actor OMFFist : Weapon
 {
   Tag "Jaguar's Fists"
   Weapon.SelectionOrder 3700

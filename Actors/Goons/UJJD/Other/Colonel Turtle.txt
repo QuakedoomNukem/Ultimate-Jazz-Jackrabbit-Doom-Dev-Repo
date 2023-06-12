@@ -1,4 +1,4 @@
-ACTOR ColTurtle 4124
+Actor ColTurtle 4124
 {
   Tag "Col. Turtle"
 	Health 5000
@@ -9,8 +9,8 @@ ACTOR ColTurtle 4124
 	PainChance 150
 	MONSTER 
 	+FLOORCLIP
-    +NoBlood
-	+NoInfighting
+    +NOBLOOD
+	+NOINFIGHTING
 	+Boss
 	-Countkill
     SeeSound "GIANTSEE"
@@ -89,6 +89,6 @@ Actor ColTurtleGhost
 	Spawn:
                 COLT E 16
                 COLT F 2 A_FadeOut(0.10)
-		goto Spawn+1
+		Goto Spawn+1
 	}
 }

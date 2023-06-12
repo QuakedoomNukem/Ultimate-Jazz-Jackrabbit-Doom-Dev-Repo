@@ -1,4 +1,4 @@
-actor SpreadGun : Doomweapon 30004
+Actor SpreadGun : Doomweapon 30004
 {
   Tag "Spread Gun"
   Inventory.PickupMessage "Spread Gun (Slot 2)"
@@ -21,7 +21,7 @@ actor SpreadGun : Doomweapon 30004
     Loop
   Ready:
     PLPI A 1 A_WeaponReady
-    loop
+    Loop
   Deselect:
     PLPI A 1 A_Lower (12)
     Loop
@@ -55,7 +55,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 8 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	Hold3:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
     PLPI B 2
@@ -64,7 +64,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 7 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	Hold4:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
     PLPI B 2
@@ -73,7 +73,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 6 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	Hold5:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
     PLPI B 2
@@ -82,7 +82,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 5 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	Hold6:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
    PLPI B 2
@@ -91,7 +91,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 4 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	Hold7:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
     PLPI A 1
@@ -101,7 +101,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 3 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	Hold8:
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -109,7 +109,7 @@ actor SpreadGun : Doomweapon 30004
     PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
     PLPI A 2 Bright
     PLPI B 0 A_Refire
-    goto Ready
+    Goto Ready
 	PowerFire:
 	TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -131,7 +131,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 9 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold2:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -142,7 +142,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 8 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold3:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -153,7 +153,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 7 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold4:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -164,7 +164,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 6 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold5:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -175,7 +175,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 5 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold6:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -186,7 +186,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 4 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold7:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
@@ -197,7 +197,7 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 3 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
 	PowerHold8:
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
@@ -207,11 +207,11 @@ actor SpreadGun : Doomweapon 30004
 	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
     PLPI A 2 Bright
     PLPI B 0 A_ReFire("PowerHold")
-    goto Ready
+    Goto Ready
   }
 }
 
-ACTOR JJShell : Ammo 16133
+Actor JJShell : Ammo 16133
 {
   Inventory.PickupMessage "\cgSpread Gun \clAmmo"
   Inventory.Amount 3
@@ -229,12 +229,12 @@ ACTOR JJShell : Ammo 16133
     SHLL ABCDEFGHIJ 3
     Loop
 	Pickup:
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	Stop
   }
 }
 
-ACTOR Gun2PowerUpBox : Gun1PowerUpBox 3821
+Actor Gun2PowerUpBox : Gun1PowerUpBox 3821
 {
   States
   {
@@ -251,10 +251,10 @@ ACTOR Gun2PowerUpBox : Gun1PowerUpBox 3821
   }
 }
 
-ACTOR Gun2PowerUp : Inventory 
+Actor Gun2PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

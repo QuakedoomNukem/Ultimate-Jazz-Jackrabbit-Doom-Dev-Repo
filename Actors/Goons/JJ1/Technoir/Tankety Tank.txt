@@ -1,4 +1,4 @@
-actor TechnoirTank 3139
+Actor TechnoirTank 3139
 {
   Tag "Tankety Tank"
   Health 300
@@ -7,11 +7,11 @@ actor TechnoirTank 3139
   Mass 10000000
   Speed 10
   PainChance 0
-  Monster
+  MONSTER
   +NOINFIGHTING
   +FLOORCLIP
   +NOBLOOD
-  +NoIceDeath
+  +NOICEDEATH
   +COUNTKILL
    +DONTHARMSPECIES
   SeeSound "Turtsight"
@@ -23,13 +23,13 @@ actor TechnoirTank 3139
     TECH A 3 A_Look
     Loop
   See:
-  TECH A 35 A_Playsound("TANKSTRT")
-  TECH A 0 A_PlaySoundEx("TANKLOOP", "SoundSlot7", 1)
+  TECH A 35 A_PlaySound("TANKSTRT")
+  TECH A 0 A_PlaySoundEx("TANKLoop", "SoundSlot7", 1)
     TECH A 3 A_Chase
     Goto See+1
   Melee:
   Missile:
-  TECH A 0 A_PlaySoundEx("TANKLOOP", "SoundSlot7", 1)
+  TECH A 0 A_PlaySoundEx("TANKLoop", "SoundSlot7", 1)
     TECH A 15 A_FaceTarget
     TECH B 4 A_CustomMissile("TechRocket",32,0,0,0,0)
     Goto See+1
@@ -43,11 +43,11 @@ actor TechnoirTank 3139
 	TNT1 A 0 A_GiveToTarget ("Points",400)
 	TECH A 5 A_GenericFreezeDeath
     TECH A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
-ACTOR TechRocket
+Actor TechRocket
 {
     Radius 13
     Height 8
@@ -58,14 +58,14 @@ ACTOR TechRocket
     +RANDOMIZE
     RenderStyle Normal
     Alpha 1
-    scale 0.9
+    Scale 0.9
     SeeSound "SHTBLTFI"
-	Deathsound "Toasted"
+	DeathSound "Toasted"
     States
   {
   Spawn:
     TRCK A 6 bright
-    loop
+    Loop
   Death:
     JBLS EFGH 4 bright
     stop

@@ -1,4 +1,4 @@
-ACTOR Snowman 23006
+Actor Snowman 23006
 {
   Tag "Snogoon"
   Health 100
@@ -7,7 +7,7 @@ ACTOR Snowman 23006
   Mass 10000000
   Speed 0
   PainChance 0
-  Monster
+  MONSTER
   +NOINFIGHTING
   +LOOKALLAROUND
   +FLOORCLIP
@@ -36,7 +36,7 @@ ACTOR Snowman 23006
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	SMAN CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	Stop
@@ -44,11 +44,11 @@ ACTOR Snowman 23006
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	SMAN A 5 A_GenericFreezeDeath
     SMAN A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
-ACTOR Snowball
+Actor Snowball
 {
   Radius 6
   Height 8

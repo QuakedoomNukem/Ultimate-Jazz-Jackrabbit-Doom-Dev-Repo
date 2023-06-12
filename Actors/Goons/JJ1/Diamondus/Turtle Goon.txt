@@ -1,4 +1,4 @@
-ACTOR MeleeTurtle 14565
+Actor MeleeTurtle 14565
 {
 	Tag "Turtle Goon"
 	Health 150
@@ -12,7 +12,7 @@ ACTOR MeleeTurtle 14565
 	+NOINFIGHTING
 	  +COUNTKILL
 +DONTHARMSPECIES
-	Monster
+	MONSTER
 	SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"
@@ -22,10 +22,10 @@ ACTOR MeleeTurtle 14565
 	{
 		Spawn:
 		    TUTM AB 10 A_Look
-			loop
+			Loop
 		See:
 			TUTM AABBCCDDEEFF 2 Fast A_Chase
-			loop
+			Loop
 		Melee:
 			TUTM GH 6 A_FaceTarget
 			TNT1 A 0 A_PlaySound("TURTBITE")
@@ -39,12 +39,12 @@ ACTOR MeleeTurtle 14565
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	TUTM A 5 A_GenericFreezeDeath
     TUTM A 1 A_FreezeDeathChunks
-    wait
+    Wait
     Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	TUTM AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

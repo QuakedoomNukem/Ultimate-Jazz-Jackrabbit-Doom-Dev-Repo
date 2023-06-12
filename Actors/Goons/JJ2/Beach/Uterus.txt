@@ -1,4 +1,4 @@
-actor UterusBoss 3294
+Actor UterusBoss 3294
 {
   Tag "Uterus"
   Health 6000
@@ -7,7 +7,7 @@ actor UterusBoss 3294
   Mass 100000
   Speed 10
   PainChance 20
-  Monster
+  MONSTER
   MinMissileChance 160
   +NORADIUSDMG
   +BOSS

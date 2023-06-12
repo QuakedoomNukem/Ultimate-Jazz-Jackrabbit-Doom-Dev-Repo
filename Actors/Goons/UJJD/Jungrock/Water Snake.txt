@@ -1,10 +1,10 @@
-ACTOR WaterSnake 3909
+Actor WaterSnake 3909
 {
   Tag "Water Snake"
   obituary "%o was bitten by a Water Snake."
-  health 50
+  Health 50
   mass 120
-  speed 20
+  Speed 20
   Radius 16
   Height 16
   MaxStepHeight 1
@@ -16,22 +16,22 @@ ACTOR WaterSnake 3909
   +NOINFIGHTING
    +COUNTKILL
  +DONTHARMCLASS
- +Dontfall
+ +DONTFALL
   SeeSound "FishAct"
   ActiveSound "FishAct"
   States
   {
    Spawn:
     JSWS ABCB 10 A_Look
-    loop
+    Loop
    See:
 	JSWS ABCB 4 A_GiveInventory("Chase_Water",1)
-	loop
+	Loop
    Melee:
     JSWS AB 10 A_FaceTarget
     JSWS C 8 
     JSWS B 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
-    goto See
+    Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
@@ -40,6 +40,6 @@ ACTOR WaterSnake 3909
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	JSWS A 5 A_GenericFreezeDeath
     JSWS A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

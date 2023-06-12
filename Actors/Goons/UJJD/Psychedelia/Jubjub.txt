@@ -1,4 +1,4 @@
-ACTOR Jubjub 3770
+Actor Jubjub 3770
 {
   Health 150
   Radius 8
@@ -6,7 +6,7 @@ ACTOR Jubjub 3770
   Mass 10000
   Speed 15
   PainChance 100
-  Monster
+  MONSTER
   +NOBLOOD
   +NOINFIGHTING
   +COUNTKILL
@@ -43,7 +43,7 @@ ACTOR Jubjub 3770
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",250)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	JUBD A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -52,7 +52,7 @@ ACTOR Jubjub 3770
 	TNT1 A 0 A_GiveToTarget ("Points",250)
 	JUBD A 5 A_GenericFreezeDeath
     JUBD A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 

@@ -1,4 +1,4 @@
-actor TubeGoon 3323
+Actor TubeGoon 3323
 {
 Tag "Inner Tube Turtle"
 Health 50
@@ -39,12 +39,12 @@ Death:
 	TNT1 A 0 A_GiveToTarget ("Points",50)
 	TUBG B 5 A_GenericFreezeDeath
     TUBG B 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",50)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	TUBG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

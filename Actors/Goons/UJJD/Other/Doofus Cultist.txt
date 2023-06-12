@@ -1,4 +1,4 @@
-ACTOR ElementGoon3 4035
+Actor ElementGoon3 4035
 {
   Tag "Doofus Cultist"
   Health 175
@@ -7,7 +7,7 @@ ACTOR ElementGoon3 4035
   Mass 200
   Speed 15
   PainChance 64
-  Monster
+  MONSTER
   +FLOORCLIP
   +SOLID
    +NOBLOOD
@@ -28,7 +28,7 @@ ACTOR ElementGoon3 4035
     Loop
   Missile:
     ELM3 E 20 Bright A_FaceTarget
-	TNT1 A 0 A_Playsound("DNDFIRE")
+	TNT1 A 0 A_PlaySound("DNDFIRE")
     ELM3 F 5 Bright A_CustomMissile("Neutronshot",32,0,0,0,0)
     ELM3 E 2 Bright
     ELM3 F 5 Bright A_SpidRefire
@@ -41,12 +41,12 @@ ACTOR ElementGoon3 4035
 	TNT1 A 0 A_GiveToTarget ("Points",800)
 	ELM3 A 5 A_GenericFreezeDeath
     ELM3 A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",800)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	ELM3 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

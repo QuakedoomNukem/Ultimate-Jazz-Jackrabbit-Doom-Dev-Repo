@@ -1,4 +1,4 @@
-actor TurtleRobot 3124
+Actor TurtleRobot 3124
 {
 	Tag "Robot Turtle"
 	Radius 24
@@ -9,7 +9,7 @@ actor TurtleRobot 3124
 	Mass 4000
 	Damage 5
 	Obituary "%o was terminated by a Robot Turtle."
-	Monster
+	MONSTER
 	FloatbobStrength 0.9
 	+FLOATBOB
 	+SOLID
@@ -23,7 +23,7 @@ actor TurtleRobot 3124
  +COUNTKILL
  +DONTHARMCLASS
 	SeeSound "ROBOTSEE"
-	Painsound "Dent"
+	PainSound "Dent"
 	States 
    { 
    Spawn: 
@@ -54,7 +54,7 @@ actor TurtleRobot 3124
    } 
 }
 
-ACTOR ZombieTankMissile 
+Actor ZombieTankMissile 
 {
    Radius 8
    Height 11

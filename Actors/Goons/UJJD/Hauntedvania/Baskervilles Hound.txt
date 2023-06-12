@@ -1,4 +1,4 @@
-actor ShadowHound 3787
+Actor ShadowHound 3787
 {
    Tag "Baskervilles Hound"
    Health 150
@@ -8,7 +8,7 @@ actor ShadowHound 3787
    Height 24 
    Mass 4000
    Damage 4
-   Monster 
+   MONSTER 
      ActiveSound "DOGGYact"
   AttackSound "DOGGYATK"
   SeeSound "DOGGYSEE"
@@ -41,7 +41,7 @@ actor ShadowHound 3787
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",250)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	SDOG AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -50,6 +50,6 @@ actor ShadowHound 3787
 	TNT1 A 0 A_GiveToTarget ("Points",250)
 	SDOG A 5 A_GenericFreezeDeath
     SDOG A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

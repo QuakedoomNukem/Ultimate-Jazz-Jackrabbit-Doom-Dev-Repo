@@ -1,4 +1,4 @@
-actor Octogoon 3230
+Actor Octogoon 3230
 {
   Tag "Octogoon"
   Health 150
@@ -9,13 +9,13 @@ actor Octogoon 3230
   PainChance 0
   MaxStepHeight 1
   Damage 1
-  Monster
+  MONSTER
   +FLOAT
-  +Dontfall
+  +DONTFALL
   +FLOATBOB
   +NOGRAVITY
   +MISSILEMORE
-  +Floorclip
+  +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
    +LOOKALLAROUND
@@ -43,6 +43,6 @@ actor Octogoon 3230
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	OCTO A 5 A_GenericFreezeDeath
     OCTO A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

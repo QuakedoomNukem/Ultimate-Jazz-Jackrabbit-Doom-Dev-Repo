@@ -1,12 +1,12 @@
-actor BattleshipsCore 3893
+Actor BattleshipsCore 3893
 {
   Tag "Small Battleship Core"
   Height 36
   Radius 20
   Health 200
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   +DONTTHRUST
   States
   {
@@ -30,7 +30,7 @@ actor BattleshipsCore 3893
     }
 }
 
-actor BattleshipsCoreBoss 3898
+Actor BattleshipsCoreBoss 3898
 {
   Tag "Battleship Core"
   Height 36
@@ -38,10 +38,10 @@ actor BattleshipsCoreBoss 3898
   Health 1000
   PainChance 20
   Mass 10000
-  Monster
+  MONSTER
   +SOLID
-  +Noblood
-  +NoInfighting
+  +NOBLOOD
+  +NOINFIGHTING
   +DONTHARMSPECIES
   +DONTTHRUST
   States
@@ -90,7 +90,7 @@ actor BattleshipsCoreBoss 3898
     }
 }
 
-actor BattleshipsCoreBoss2 28735
+Actor BattleshipsCoreBoss2 28735
 {
   Tag "Mothership Core"
   Height 36
@@ -98,10 +98,10 @@ actor BattleshipsCoreBoss2 28735
   Health 4000
   PainChance 0
   Mass 10000
-  Monster
+  MONSTER
   +SOLID
-  +Noblood
-  +NoInfighting
+  +NOBLOOD
+  +NOINFIGHTING
   +DONTHARMSPECIES
   +DONTTHRUST
   States

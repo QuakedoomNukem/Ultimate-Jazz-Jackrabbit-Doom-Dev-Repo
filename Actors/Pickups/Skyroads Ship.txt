@@ -1,4 +1,4 @@
-ACTOR SkyroadShip : PowerupGiver 3387
+Actor SkyroadShip : PowerupGiver 3387
 { 
 	Tag "Skyroads Ship Power-up"
 	+INVENTORY.AUTOACTIVATE
@@ -7,8 +7,8 @@ ACTOR SkyroadShip : PowerupGiver 3387
 	Inventory.MaxAmount 0
 	Inventory.PickupSound "SECTGEM"
 	Inventory.PickupMessage "\cyYou are about to play Skyroads."
-	PowerUp.Duration 1200
-	PowerUp.Type "Ship"
+	Powerup.Duration 1200
+	Powerup.Type "Ship"
 	States
 {
 Spawn:
@@ -17,13 +17,13 @@ Loop
 }
 }
 
-ACTOR PowerShip : PowerMorph
+Actor PowerShip : PowerMorph
 {
 	PowerMorph.PlayerClass "SkyroadShipPlayer"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA)
 }
 
-ACTOR SkyroadShipMorph
+Actor SkyroadShipMorph
 {
 	RenderStyle None
 	States
@@ -34,7 +34,7 @@ ACTOR SkyroadShipMorph
 	}
 }
 
-ACTOR SkyroadShipPlayer : PlayerPawn
+Actor SkyroadShipPlayer : PlayerPawn
 {
 	Tag "Skyroads Ship"
 	+NOSKIN

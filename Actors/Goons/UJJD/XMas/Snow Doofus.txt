@@ -1,4 +1,4 @@
-ACTOR XmasSnowTurtle1 4094
+Actor XmasSnowTurtle1 4094
 {
   Tag "Snow Doofus"
   Health 50
@@ -6,7 +6,7 @@ ACTOR XmasSnowTurtle1 4094
   Height 56
   Speed 15
   PainChance 200
-  Monster
+  MONSTER
   +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
@@ -39,12 +39,12 @@ ACTOR XmasSnowTurtle1 4094
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	SNTL A 5 A_GenericFreezeDeath
     SNTL A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	SNTL A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop

@@ -1,4 +1,4 @@
-actor CastleDragon 3714
+Actor CastleDragon 3714
 {
 Tag "Tiny Dragon"
 Health 50
@@ -15,7 +15,7 @@ Obituary "%o was burned by a Tiny Dragon."
 +NOINFIGHTING
 +COUNTKILL
 +DONTHARMSPECIES
-Monster
+MONSTER
   States
   {
   Spawn:
@@ -38,12 +38,12 @@ Monster
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	CDRG B 5 A_GenericFreezeDeath
     CDRG B 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	CDRG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -51,7 +51,7 @@ Monster
   }
 }
 
-ACTOR FireLizardBall
+Actor FireLizardBall
 {
   Radius 6
   Height 8

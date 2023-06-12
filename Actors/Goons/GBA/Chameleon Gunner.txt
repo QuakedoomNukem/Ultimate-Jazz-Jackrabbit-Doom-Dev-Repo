@@ -1,77 +1,79 @@
 Actor ChameleonGunner 3730
 {
-  Tag "Chameleon Gunner"
-  Health 150
-  Radius 16
-  Height 54
-  Mass 10000
-  Speed 15
-  PainChance 110
-  Monster
-  +NOBLOOD
-  +NOINFIGHTING
-  +COUNTKILL
-+DONTHARMSPECIES
-  SeeSound "Turtsight"
-  PainSound "Turtpain"
-  ActiveSound "Turtact"
-  Obituary "%o was blasted by a Chameleon Gunner."
-  States
-  {
-  Spawn:
-    CHGC A 10 A_Look
-    Loop
-  See:
-    CHGC AABBCCDD 4 A_Chase
-    Loop
-  Missile:
-    CHGC E 15 A_FaceTarget
-	CHGC F 4 Bright A_CustomMissile("ChameleonProj",40,0,0,0,0)
-    Goto See
-  Death:
-  TNT1 A 0 A_GiveToTarget ("Points",300)
-	CHGC H 3
-	CHGC I 3
-	CHGC J 3
-	CHGC K 3
-	CHGC L -1
-    Stop
+	//$Category Goons
+	Tag "Chameleon Gunner"
+	Health 150
+	Radius 16
+	Height 54
+	Mass 10000
+	Speed 15
+	PainChance 110
+	MONSTER
+	+NOBLOOD
+	+NOINFIGHTING
+	+COUNTKILL
+	+DONTHARMSPECIES
+	SeeSound "Turtsight"
+	PainSound "Turtpain"
+	ActiveSound "Turtact"
+	Obituary "%o was blasted by a Chameleon Gunner."
+	States
+	{
+	Spawn:
+		CHGC A 10 A_Look
+		Loop
+	See:
+		CHGC AABBCCDD 4 A_Chase
+		Loop
+	Missile:
+		CHGC E 15 A_FaceTarget
+		CHGC F 4 Bright A_CustomMissile("ChameleonProj",40,0,0,0,0)
+		Goto See
+	Death:
+		TNT1 A 0 A_GiveToTarget ("Points",300)
+		CHGC H 3
+		CHGC I 3
+		CHGC J 3
+		CHGC K 3
+		CHGC L -1
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",300)
-	CHGC H 5 A_GenericFreezeDeath
-    CHGC H 1 A_FreezeDeathChunks
-    wait
+		TNT1 A 0 A_GiveToTarget ("Points",300)
+		CHGC H 5 A_GenericFreezeDeath
+		CHGC H 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",300)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
-	CHGC HHH 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget ("Points",300)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		CHGC HHH 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }
 
-actor ChameleonProj
+Actor ChameleonProj
 {
-height 8
-radius 8
-damage 3
-speed 15
-Projectile
-+RANDOMIZE
-RenderStyle Add
-Alpha 1
-  SeeSound	"Chamfire"
-  DeathSound "CHAMPHIT"
-  States
-  {
-  Spawn:
-    CHPT AB 4 Bright
-    Loop
-  Death:
-    CHPH ABCDEF 4 Bright
-    Stop
-  }
+	Height 8
+	Radius 8
+	damage 3
+	Speed 15
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound	"Chamfire"
+	DeathSound "CHAMPHIT"
+	States
+	{
+	Spawn:
+		CHPT AB 4
+		Loop
+	Death:
+		CHPH ABCDEF 4
+		Stop
+	}
 }

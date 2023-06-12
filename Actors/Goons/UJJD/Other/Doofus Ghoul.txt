@@ -1,4 +1,4 @@
-ACTOR ElementGoon2 4034
+Actor ElementGoon2 4034
 {
   Tag "Doofus Ghoul"
   Health 200
@@ -7,7 +7,7 @@ ACTOR ElementGoon2 4034
   Mass 100000
   Speed 15
   PainChance 64
-  Monster
+  MONSTER
   +FLOAT
   +FLOATBOB
   +NOGRAVITY
@@ -39,7 +39,7 @@ ACTOR ElementGoon2 4034
 	Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",400)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	ELM2 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -48,6 +48,6 @@ ACTOR ElementGoon2 4034
 	TNT1 A 0 A_GiveToTarget ("Points",400)
 	ELM2 A 5 A_GenericFreezeDeath
     ELM2 A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

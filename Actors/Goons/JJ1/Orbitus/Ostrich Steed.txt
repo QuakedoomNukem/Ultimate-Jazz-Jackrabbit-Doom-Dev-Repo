@@ -1,4 +1,4 @@
-ACTOR OstrichBoss 3796
+Actor OstrichBoss 3796
 {
   Tag "Ostrich Steed"
   Health 4000
@@ -7,7 +7,7 @@ ACTOR OstrichBoss 3796
   Mass 100000
   Speed 35
   PainChance 10
-  Monster
+  MONSTER
   Obituary "%o couldn't keep up with the Ostrich Steed."
   +FLOAT
   +NOGRAVITY
@@ -25,7 +25,7 @@ ACTOR OstrichBoss 3796
     OSBS ABCD 3 A_Look
     Loop
   See:
-  OSBS A 0 A_Playsound("Wingflap")
+  OSBS A 0 A_PlaySound("Wingflap")
     OSBS ABCD 3 A_Chase
     Loop
   Missile:

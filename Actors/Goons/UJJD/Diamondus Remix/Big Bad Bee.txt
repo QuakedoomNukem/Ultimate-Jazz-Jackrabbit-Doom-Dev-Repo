@@ -1,4 +1,4 @@
-ACTOR BigBeeBoss 3966
+Actor BigBeeBoss 3966
 {
   Tag "Big Bad Bee"
   Health 6000
@@ -8,7 +8,7 @@ ACTOR BigBeeBoss 3966
   Speed 20
   Damage 6
   PainChance 128
-  Monster
+  MONSTER
   +FLOAT
   +NOGRAVITY
   +MISSILEMORE

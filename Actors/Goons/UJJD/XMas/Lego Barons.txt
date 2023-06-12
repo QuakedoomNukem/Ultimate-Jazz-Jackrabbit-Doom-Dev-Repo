@@ -1,4 +1,4 @@
-actor XmasBluePlane 4093
+Actor XmasBluePlane 4093
 {
   Tag "Blue Lego Baron"
   Health 100
@@ -9,7 +9,7 @@ actor XmasBluePlane 4093
   PainChance 200
   SeeSound "PLANESEE"
   ActiveSound "PLANEACT"
-  Monster
+  MONSTER
   +NOINFIGHTING
   +NOGRAVITY
   +FLOAT
@@ -41,19 +41,19 @@ actor XmasBluePlane 4093
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	RPLN A 5 A_GenericFreezeDeath
     RPLN A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
   }
 }
 
-actor XmasRedPlane 4092
+Actor XmasRedPlane 4092
 {
   Tag "Red Lego Baron"
   Health 100
@@ -64,7 +64,7 @@ actor XmasRedPlane 4092
   PainChance 200
   SeeSound "PLANESEE"
   ActiveSound "PLANEACT"
-  Monster
+  MONSTER
   +NOINFIGHTING
   +NOGRAVITY
   +FLOAT
@@ -96,12 +96,12 @@ actor XmasRedPlane 4092
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	RPLN A 5 A_GenericFreezeDeath
     RPLN A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop

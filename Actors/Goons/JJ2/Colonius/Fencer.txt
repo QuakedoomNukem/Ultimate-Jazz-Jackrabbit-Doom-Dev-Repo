@@ -1,4 +1,4 @@
-actor ColoniusFencer 3965
+Actor ColoniusFencer 3965
 {
 	Tag "Fencer"
     Health 100
@@ -10,11 +10,11 @@ actor ColoniusFencer 3965
 	SeeSound "Turtsight"
     PainSound "Turtpain"
     ActiveSound "Turtact"
-	Monster
+	MONSTER
 	Obituary "%o was no Zorro to the Fencer."
     	+SOLID
 		+NOBLOOD
-		+NoInfighting
+		+NOINFIGHTING
 		+COUNTKILL
  +DONTHARMCLASS
     States
@@ -40,12 +40,12 @@ actor ColoniusFencer 3965
 	TNT1 A 0 A_GiveToTarget ("Points",200)
 	FNCR A 5 A_GenericFreezeDeath
     FNCR A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	   Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",200)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	FNCR A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

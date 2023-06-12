@@ -1,4 +1,4 @@
-ACTOR ElementGoon6 4042
+Actor ElementGoon6 4042
 {
   Tag "Doofus Priest"
   Health 800
@@ -7,7 +7,7 @@ ACTOR ElementGoon6 4042
   Mass 100000
   Speed 10
   PainChance 200
-  Monster
+  MONSTER
   +FLOAT
   +FLOATBOB
   +NOGRAVITY
@@ -51,7 +51,7 @@ ACTOR ElementGoon6 4042
   }
 }
 
-actor MagicAttack2
+Actor MagicAttack2
 {
     Radius 8
     Height 8
@@ -65,14 +65,14 @@ actor MagicAttack2
     +SCREENSEEKER
     RenderStyle Add
     Alpha 0.75
-	Deathsound "BLSTRHIT"
-	DamageType "JazzProj"
+	DeathSound "BLSTRHIT"
+	DamageType JazzProj
     States
   {
   Spawn:
     ELMP AB 6 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
     TNT1 A 0 A_PlaySound("witchMAG")
-	loop
+	Loop
   Death:
     ELMH ABCDEF 3 bright
     stop

@@ -1,10 +1,10 @@
-ACTOR Fish 30023
+Actor Fish 30023
 {
   Tag "Fish"
   obituary "%o became fish food."
-  health 50
+  Health 50
   mass 120
-  speed 10
+  Speed 10
   Radius 14
   Height 28
   MaxStepHeight 1
@@ -16,22 +16,22 @@ ACTOR Fish 30023
   +NOINFIGHTING
   +COUNTKILL
 +DONTHARMSPECIES
-+Dontfall
++DONTFALL
   SeeSound "FishSee"
   ActiveSound "FishSee"
   States
   {
    Spawn:
     SHRK A 10 A_Look
-    loop
+    Loop
    See:
 	SHRK A 4 A_GiveInventory("Chase_Water",1)
-	loop
+	Loop
    Melee:
     SHRK A 10 A_FaceTarget
     SHRK B 8 A_CustomMeleeAttack (random (1, 4) *5, "TURTBITE", "TURTBITE")
     SHRK C 10
-    goto See
+    Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
@@ -40,14 +40,14 @@ ACTOR Fish 30023
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	SHRK A 5 A_GenericFreezeDeath
     SHRK A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
 Actor Chase_Water : CustomInventory
 {
 Inventory.MaxAmount 0
-+Inventory.AutoActivate
++INVENTORY.AutoActivate
 States
 {
 Spawn:
@@ -64,13 +64,13 @@ Stop
 }
 }
 
-ACTOR JungrockFish 3833
+Actor JungrockFish 3833
 {
   Tag "Jungle Fish"
   obituary "%o became jungle fish food."
-  health 50
+  Health 50
   mass 120
-  speed 20
+  Speed 20
   Radius 16
   Height 30
   MaxStepHeight 1
@@ -82,22 +82,22 @@ ACTOR JungrockFish 3833
   +NOINFIGHTING
   		+COUNTKILL
 +DONTHARMSPECIES
-+Dontfall
++DONTFALL
   SeeSound "FishAct"
   ActiveSound "FishAct"
   States
   {
    Spawn:
     JFSH A 10 A_Look
-    loop
+    Loop
    See:
 	JFSH A 4 A_GiveInventory("Chase_Water",1)
-	loop
+	Loop
    Melee:
     JFSH A 10 A_FaceTarget
     JFSH B 8
     JFSH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
-    goto See
+    Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
@@ -106,44 +106,44 @@ ACTOR JungrockFish 3833
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	JFSH A 5 A_GenericFreezeDeath
     JFSH A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
-ACTOR ScaryFish 3780
+Actor ScaryFish 3780
 {
   Tag "Scary Fish"
   obituary "%o was scared to death by a Scary Fish."
-  health 50
+  Health 50
   mass 120
-  speed 10
+  Speed 10
   Radius 14
   Height 28
   MaxStepHeight 1
     MONSTER
   +NOGRAVITY
   +FLOAT
-  +floorclip
+  +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
   +COUNTKILL
 +DONTHARMSPECIES
-+Dontfall
++DONTFALL
   SeeSound "FishAct"
   ActiveSound "FishAct"
   States
   {
    Spawn:
     SCFH A 10 A_Look
-    loop
+    Loop
    See:
 	SCFH A 4 A_GiveInventory("Chase_Water",1)
-	loop
+	Loop
    Melee:
     SCFH A 10 A_FaceTarget
     SCFH B 8 
     SCFH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
-    goto See
+    Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
@@ -152,6 +152,6 @@ ACTOR ScaryFish 3780
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	SCFH A 5 A_GenericFreezeDeath
     SCFH A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

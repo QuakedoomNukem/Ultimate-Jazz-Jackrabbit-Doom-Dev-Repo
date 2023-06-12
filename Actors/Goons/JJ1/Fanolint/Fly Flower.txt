@@ -1,4 +1,4 @@
-actor PetalCopter 3224
+Actor PetalCopter 3224
 {
   Tag "Fly Flower"
   Health 50
@@ -7,7 +7,7 @@ actor PetalCopter 3224
   Mass 1000
   Speed 15
   PainChance 0
-  Monster
+  MONSTER
   +FLOAT
   +NOGRAVITY
   +MISSILEMORE
@@ -40,12 +40,12 @@ actor PetalCopter 3224
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	FPCE B 5 A_GenericFreezeDeath
     FPCE B 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	FPCE A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -53,7 +53,7 @@ actor PetalCopter 3224
   }
 }
 
-ACTOR PetalCopterProj
+Actor PetalCopterProj
 {
     Radius 13
     Height 8
@@ -63,13 +63,13 @@ ACTOR PetalCopterProj
     Projectile
     RenderStyle Add
     Alpha 0.75
-    scale 0.9
-	Deathsound "Tick"
+    Scale 0.9
+	DeathSound "Tick"
     States
   {
   Spawn:
     FPCP A 6 bright
-    loop
+    Loop
   Death:
     JBLS EFGH 4 bright
     stop

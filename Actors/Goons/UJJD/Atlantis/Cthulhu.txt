@@ -1,4 +1,4 @@
-ACTOR AtlantisBoss 3873
+Actor AtlantisBoss 3873
 {
   Tag "Cthulhu"
   Health 6000
@@ -7,7 +7,7 @@ ACTOR AtlantisBoss 3873
   Mass 10000
   Speed 20
   PainChance 8
-  Monster
+  MONSTER
   +FLOAT
   +NOGRAVITY
    +NOBLOOD
@@ -101,7 +101,7 @@ ACTOR AtlantisBoss 3873
     CTHU E 0 A_FaceTarget
     CTHU E 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -0.25, 1)
     CTHU E 0 A_FaceTarget
-    goto LockedOn
+    Goto LockedOn
   LEye:
     CTHU E 10 A_FaceTarget
     CTHU E 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 6, 1)
@@ -153,13 +153,13 @@ ACTOR AtlantisBoss 3873
     CTHU E 0 A_FaceTarget
     CTHU E 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 0.25, 1)
     CTHU E 0 A_FaceTarget
-    goto LockedOn
+    Goto LockedOn
   LockedOn:
     CTHU E 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 0, 1)
     CTHU A 0 A_FaceTarget
     CTHU A 0 A_Jump (8, "See")
     CTHU A 0 A_CPosRefire
-    goto LockedOn
+    Goto LockedOn
   FireBombAttack:
 	CTHU G 0 Bright A_VileStart
     CTHU G 20 Bright A_FaceTarget
@@ -191,15 +191,15 @@ ACTOR AtlantisBoss 3873
   }
 }
 
-ACTOR Tentacles 
+Actor Tentacles 
 {
-   height 64
-   radius 20
-   speed 12
+   Height 64
+   Radius 20
+   Speed 12
    Health 50
    Mass 5000
-   meleedamage 3
-   meleerange 52
+   MeleeDamage 3
+   MeleeRange 52
    Painchance 128
    MONSTER
    -SHOOTABLE
@@ -216,8 +216,8 @@ ACTOR Tentacles
    {
    Spawn:
       TNT1 A 0
-      TNT1 A 0 A_UnsetShootable
-      TNT1 A 0 A_UnsetSolid
+      TNT1 A 0 A_UnSetShootable
+      TNT1 A 0 A_UnSetSolid
       TNTB RST 0 A_Look
       Loop
    See:
@@ -295,7 +295,7 @@ ACTOR Tentacles
    }
 }
 
-actor Drt1
+Actor Drt1
 {
     PROJECTILE
     -NOGRAVITY
@@ -310,17 +310,17 @@ actor Drt1
     Spawn:
         BDRT A 0 A_SetGravity (0.5)
         BDRT A 0 ThrustThingZ (0, 15, 0, 1)
-        goto See 
+        Goto See 
     See:
         BDRT ABC 5
-        loop
+        Loop
     Death:
         BDRT JKL 3
         Stop
     }
 }
 
-actor Drt2
+Actor Drt2
 {
     PROJECTILE
     -NOGRAVITY
@@ -335,17 +335,17 @@ actor Drt2
     Spawn:
         BDRT A 0 A_SetGravity (0.5)
         BDRT A 0 ThrustThingZ (0, 15, 0, 1)
-        goto See 
+        Goto See 
     See:
         BDRT DEF 5
-        loop
+        Loop
     Death:
         BDRT JKL 3
         Stop
     }
 }
 
-actor Drt3
+Actor Drt3
 {
     PROJECTILE
     -NOGRAVITY
@@ -360,10 +360,10 @@ actor Drt3
     Spawn:
         BDRT A 0 A_SetGravity (0.5)
         BDRT A 0 ThrustThingZ (0, 15, 0, 1)
-        goto See 
+        Goto See 
     See:
         BDRT GHI 5
-        loop
+        Loop
     Death:
         BDRT JKL 3
         Stop

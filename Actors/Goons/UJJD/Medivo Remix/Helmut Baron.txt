@@ -7,15 +7,15 @@ Actor HelmutBaron 4039
   Mass 10000
   Speed 12
   PainChance 0
-  Monster
-  Damagefactor Ice, 2
-  Damagefactor Fire, 0.5
+  MONSTER
+  DamageFactor Ice, 2
+  DamageFactor Fire, 0.5
   Obituary "%o got turned to wabbit roast by a Helmut Baron."
-  +NoTarget
-  +FloorClip
-  +MissileMore
-  +NoRadiusDmg
-  +DontHurtSpecies
+  +NOTARGET
+  +FLOORCLIP
+  +MISSILEMORE
+  +NORADIUSDMG
+  +DONTHURTSPECIES
   +NOBLOOD
   +NOINFIGHTING
    +COUNTKILL

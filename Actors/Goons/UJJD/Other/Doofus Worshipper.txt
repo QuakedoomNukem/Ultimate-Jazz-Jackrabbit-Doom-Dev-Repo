@@ -1,11 +1,11 @@
-actor ElementGoon1 4033
+Actor ElementGoon1 4033
 {
 Tag "Doofus Worshipper"
-height 56
-radius 16
-health 30
+Height 56
+Radius 16
+Health 30
 mass 100000
-Monster
+MONSTER
 +SOLID
 +NOBLOOD
 +NOINFIGHTING
@@ -24,7 +24,7 @@ States
 	Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",50)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	ELM1 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -33,6 +33,6 @@ States
 	TNT1 A 0 A_GiveToTarget ("Points",50)
 	ELM1 A 5 A_GenericFreezeDeath
     ELM1 A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

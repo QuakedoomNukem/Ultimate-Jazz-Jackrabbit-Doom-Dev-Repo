@@ -8,8 +8,8 @@ Actor HeavyTitan 32766
   Mass 100000
   Speed 8
   PainChance 64
-  Monster
-  +FloorClip
+  MONSTER
+  +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
   +COUNTKILL
@@ -52,7 +52,7 @@ Actor HeavyTitan 32766
 	DPOS E 5 Bright A_FaceTarget
     DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
 	DPOS E 5 Bright
-	goto see
+	Goto see
     Death:
 	DPOS A 0 A_GiveToTarget ("Points",1500)
 	DPOS A 0 A_PlaySound ("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)

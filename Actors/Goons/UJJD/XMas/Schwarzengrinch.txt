@@ -12,7 +12,7 @@ Actor XmasHolidayBoss 4097
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
     AttackSound "skeleton/swing"
-	Monster
+	MONSTER
 	+FLOORCLIP
     +NOBLOOD
     +NOINFIGHTING
@@ -20,16 +20,16 @@ Actor XmasHolidayBoss 4097
 	{
 	Spawn:
     HBOS AB 10 A_Look
-    loop
+    Loop
 	See:
     HBOS AABBCCDD 2 A_Chase
-    loop
+    Loop
 	Missile:
     HBOS E 20 A_FaceTarget
 	HBOS F 1 Bright A_CustomMissile ("Snowball2",0,0,15,0,0)
 	HBOS F 1 Bright A_CustomMissile ("Snowball2",0,0,0,0,0)
     HBOS F 2 Bright A_CustomMissile ("Snowball2",0,0,-15,0,0)
-    goto see
+    Goto see
    Death: 
     HBOS A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
     HBOS A 2

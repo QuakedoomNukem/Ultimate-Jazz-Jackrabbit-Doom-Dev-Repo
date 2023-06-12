@@ -1,10 +1,10 @@
-ACTOR Skeleturtle 3809
+Actor Skeleturtle 3809
 {
   Tag "Skeleturtle"
   obituary "%o was diced to pieces by a Skeleturtle."
-  health 30
+  Health 30
   mass 10000
-  speed 30
+  Speed 30
   Radius 12
   Height 40
   painchance 0
@@ -21,15 +21,15 @@ ACTOR Skeleturtle 3809
   {
    Spawn:
     TTUR AB 10 A_Look
-    loop
+    Loop
   See:
     TTUR AABBCCDD 4 A_Chase
-    loop
+    Loop
   Melee:
     TTUR E 10 A_FaceTarget
     TTUR F 8 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
     TTUR E 4
-    goto See
+    Goto See
   Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("BonePoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",150)
@@ -38,6 +38,6 @@ ACTOR Skeleturtle 3809
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	TTUR A 5 A_GenericFreezeDeath
     TTUR A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

@@ -1,4 +1,4 @@
-actor JungDragonBoss 3834
+Actor JungDragonBoss 3834
 {
 	Tag "Jungle Dragon"
     Health 6000
@@ -8,11 +8,11 @@ actor JungDragonBoss 3834
     PainChance 0
     Mass 10000
 	Scale 1.5
-	Monster
+	MONSTER
 	Obituary "%o was defeated by the Jungle Dragon."
     	+SOLID
 		+NOBLOOD
-		+NoInfighting
+		+NOINFIGHTING
 		+JUMPDOWN
 		+Faster
 		+LOOKALLAROUND
@@ -22,15 +22,15 @@ actor JungDragonBoss 3834
 		+MISSILEMORE
 		+NORADIUSDMG
 		+BOSSDEATH
-		-NoTarget
-		+MissileEvenMore
+		-NOTARGET
+		+MISSILEEvenMore
 				+COUNTKILL
 +DONTHARMSPECIES
     States
     {
     Spawn:
         JDRG A 8 A_Look
-		loop
+		Loop
     See:
 		JDRG A 8 A_Chase
 		JDRG A 0 A_Recoil(-6)
@@ -38,7 +38,7 @@ actor JungDragonBoss 3834
 		JDRG A 1 A_JumpIf(floorz == 1,"See")
 		JDRG A 1 A_JumpIfCloser(128,"Missile")
 		JDRG A 8 A_Chase
-		loop
+		Loop
 	Missile:
 		 JDRG B 6 A_FaceTarget 
          JDRG C 8 Bright A_CustomMissile("FireLizardBall",56,0,15,0,0)

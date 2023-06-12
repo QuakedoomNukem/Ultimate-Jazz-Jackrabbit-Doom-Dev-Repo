@@ -1,4 +1,4 @@
-actor DracTurtle 3788
+Actor DracTurtle 3788
 {
    Tag "Count Shellcula"
    Health 2000
@@ -8,7 +8,7 @@ actor DracTurtle 3788
    Height 76 
    Mass 10000
    Damage 4
-   Monster 
+   MONSTER 
      ActiveSound "dog/active"
   AttackSound "dog/attack"
   PainSound "dog/pain"

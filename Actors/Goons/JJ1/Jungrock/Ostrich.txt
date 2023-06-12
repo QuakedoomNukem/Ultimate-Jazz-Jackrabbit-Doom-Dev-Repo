@@ -1,4 +1,4 @@
-actor JungOstrich 3835
+Actor JungOstrich 3835
 {
 	Tag "Ostrich"
     Health 100
@@ -7,7 +7,7 @@ actor JungOstrich 3835
     Speed 20
     PainChance 0
     Mass 10000
-	Monster
+	MONSTER
 	Obituary "%o didn't ask if it was Kevin The Ostrich."
     	+SOLID
 		+SHOOTABLE
@@ -21,13 +21,13 @@ actor JungOstrich 3835
         JOST A 8 A_Look
         Loop
     See:
-        JOST AB 0 A_SetFloorClip
+        JOST AB 0 A_SetFLOORCLIP
         JOST AB 3 A_Chase
         Loop
 	Melee:
 		JOST A 10 A_FaceTarget
 		JOST B 4 A_SargAttack
-		goto see
+		Goto see
     Death:
         TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
        TNT1 A 0 A_GiveToTarget ("Points",100)
@@ -36,7 +36,7 @@ actor JungOstrich 3835
 	   Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	JOST bBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -45,6 +45,6 @@ actor JungOstrich 3835
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	JOST B 5 A_GenericFreezeDeath
     JOST B 1 A_FreezeDeathChunks
-    wait
+    Wait
     }
 }

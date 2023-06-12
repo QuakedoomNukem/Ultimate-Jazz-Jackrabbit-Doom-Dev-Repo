@@ -1,4 +1,4 @@
-actor AtlantisMerman 3871
+Actor AtlantisMerman 3871
 {
    Tag "Merman"
    Health 150
@@ -10,7 +10,7 @@ actor AtlantisMerman 3871
     SeeSound "serpsee"
    PainSound "serppain"
   ActiveSound "serpact"
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
@@ -37,7 +37,7 @@ actor AtlantisMerman 3871
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",350)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	MRMN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -46,6 +46,6 @@ actor AtlantisMerman 3871
 	TNT1 A 0 A_GiveToTarget ("Points",350)
 	MRMN A 5 A_GenericFreezeDeath
     MRMN A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

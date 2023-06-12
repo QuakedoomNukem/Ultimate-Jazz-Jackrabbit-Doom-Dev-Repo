@@ -8,8 +8,8 @@ Actor Monkey 29123
   Mass 100000
   Speed 0
   PainChance 0
-  Monster
-  +FloorClip
+  MONSTER
+  +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
     +COUNTKILL
@@ -36,12 +36,12 @@ Actor Monkey 29123
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	SDDM A 5 A_GenericFreezeDeath
     SDDM A 1 A_FreezeDeathChunks
-    wait
+    Wait
     Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	SDDM A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -59,7 +59,7 @@ Actor Banana
   SeeSound "MONKTHRW"
   DeathSound "MONKSPLT"
   Projectile
-  +Randomize
+  +RANDOMIZE
   States
   {
   Spawn:

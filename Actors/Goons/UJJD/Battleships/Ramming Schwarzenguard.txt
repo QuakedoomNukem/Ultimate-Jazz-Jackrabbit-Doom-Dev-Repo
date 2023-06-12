@@ -1,4 +1,4 @@
-actor RammingTurtle 3125
+Actor RammingTurtle 3125
 {
 	Tag "Ramming Schwarzenguard"
 	Radius 24
@@ -8,19 +8,19 @@ actor RammingTurtle 3125
 	PainChance 0
 	Mass 40000
 	Damage 2
-	Monster
+	MONSTER
 	+SOLID
 	+NOBLOOD
 	+NOINFIGHTING
 	+STRIFEDAMAGE
-	+NoIceDeath
+	+NOICEDEATH
 	+FLOORCLIP
 	  +COUNTKILL
 +DONTHARMSPECIES
 	SeeSound "BIGTURTS"
   PainSound "BIGTURTP"
-	meleedamage 1
-    meleerange 32
+	MeleeDamage 1
+    MeleeRange 32
 	Obituary "%o got rammed to death by a Ramming Schwarzenguard."
 	States 
    { 
@@ -35,7 +35,7 @@ actor RammingTurtle 3125
    Missile: 
    RAMT A 0 A_PlaySoundEx("hover2", "SoundSlot7", 1)
       RAMT A 5 A_FaceTarget 
-	  RAMT A 0 A_Playsound("Whizz")
+	  RAMT A 0 A_PlaySound("Whizz")
       RAMT B 8 A_SkullAttack
       Goto See  
    Death: 

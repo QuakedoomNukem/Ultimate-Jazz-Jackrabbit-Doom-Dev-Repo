@@ -1,9 +1,9 @@
-actor Slicer : Doomweapon 20002
+Actor Slicer : Doomweapon 20002
 {
 	Tag "Slicer"
-	radius 20
-	height 16
-	inventory.pickupmessage "Slicer (Slot 3)"
+	Radius 20
+	Height 16
+	Inventory.PickupMessage "Slicer (Slot 3)"
 	Inventory.PickupSound "WEAPNGET"
 	Obituary "%o been sliced like cheese by %k."
 	Weapon.selectionorder 700
@@ -14,16 +14,16 @@ actor Slicer : Doomweapon 20002
    Weapon.BobRangeY 0.5
    Weapon.BobSpeed 2
   Weapon.BobStyle Smooth
-	inventory.icon "PLSPA0"
+	Inventory.icon "PLSPA0"
 	DamageFactor 0
 	+FLOATBOB
 	 +NOGRAVITY
 	States
 	{
-	spawn:
+	Spawn:
 		PLSP A -1
 		Stop
-	ready:
+	Ready:
 		PLPI A 1 A_WeaponReady
 		Loop
 	deselect:
@@ -125,7 +125,7 @@ PLPI A 6
 	PLPI C 3
 	    PLPI A 7
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	PowerHold2:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
     PLPI A 0 A_PlayWeaponSound("SLICFIRE")
@@ -133,7 +133,7 @@ PLPI A 6
 	PLPI C 3
 	    PLPI A 6
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	PowerHold3:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
    PLPI A 0 A_PlayWeaponSound("SLICFIRE")
@@ -149,7 +149,7 @@ PLPI A 6
 	PLPI C 3
 	    PLPI A 4
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	PowerHold5:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
     PLPI A 0 A_PlayWeaponSound("SLICFIRE")
@@ -157,7 +157,7 @@ PLPI A 6
 	PLPI C 3
 	PLPI A 3
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	PowerHold6:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
     PLPI A 0 A_PlayWeaponSound("SLICFIRE")
@@ -165,7 +165,7 @@ PLPI A 6
 	PLPI C 3
 	    PLPI A 2
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	PowerHold7:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
     PLPI A 0 A_PlayWeaponSound("SLICFIRE")
@@ -173,17 +173,17 @@ PLPI A 6
 	PLPI C 3
 	    PLPI A 1
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	PowerHold8:
     PLPI A 0 A_PlayWeaponSound("SLICFIRE")
     PLPI B 3 A_FireCustomMissile("SlicerbladePow")
 	PLPI C 3
     PLPI A 0 A_ReFire
-    goto Ready
+    Goto Ready
 	}
 }
 
-actor Slicerblade
+Actor Slicerblade
 {
 	Radius 4
 	Height 5
@@ -194,19 +194,19 @@ actor Slicerblade
 	RenderStyle Add
 	Alpha 0.75
 	DeathSound "SLICBNCE"
-	DamageType "JazzProj"
+	DamageType JazzProj
 	States
 	{
 	Spawn:
 	SLIC ABCDEFGHI 1 
-	loop
+	Loop
 	Death:
 	    JPUF ABCDEFGHIJK 1
 Stop
 	}
 }
 
-actor SlicerbladePow
+Actor SlicerbladePow
 {
 	Radius 4
 	Height 5
@@ -220,20 +220,20 @@ actor SlicerbladePow
 	 BounceCount 4
 	 WallBounceFactor 1.2
 	 BounceSound "SlicBNCE"
-	 DamageType "JazzProj"
+	 DamageType JazzProj
 	DeathSound "SLICBNCE"
 	States
 	{
 	Spawn:
 	PSLC ABCDEFGHI 1 
-	loop
+	Loop
 	Death:
 	    JPUF ABCDEFGHIJK 1
 Stop
 	}
 }
 
-ACTOR SlicerAmmo : Ammo 19020
+Actor SlicerAmmo : Ammo 19020
 {
   Inventory.PickupMessage "\cjSlicer \clAmmo"
   Inventory.PickupSound "ammoup"
@@ -253,7 +253,7 @@ ACTOR SlicerAmmo : Ammo 19020
   }
 }
 
-ACTOR Gun3PowerUpBox : Gun1PowerUpBox 3822
+Actor Gun3PowerUpBox : Gun1PowerUpBox 3822
 {
   States
   {
@@ -270,10 +270,10 @@ ACTOR Gun3PowerUpBox : Gun1PowerUpBox 3822
   }
 }
 
-ACTOR Gun3PowerUp : Inventory 
+Actor Gun3PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

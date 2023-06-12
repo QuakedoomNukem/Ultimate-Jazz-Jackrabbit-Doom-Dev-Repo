@@ -1,12 +1,12 @@
 Actor TNT : CustomInventory  3588 
 {
--CountItem
+-COUNTITEM
   Inventory.PickupSound "WEAPNGET"
   Inventory.Icon "TNT1A0"
   +KEEPDEPLETED
   +INVBAR
   Inventory.MaxAmount 25
-	inventory.Interhubamount 25
+	Inventory.InterHubAmount 25
   Inventory.PickupMessage "\c[D4]TNT"
   FloatBobStrength 0.5
   +FLOATBOB
@@ -19,22 +19,22 @@ Actor TNT : CustomInventory  3588
       TNT1 A 0 A_ThrowGrenade("ActivatedTNT",-16,8,2,0)
       Stop
 	  Pickup:
-  TNT1 A 0 A_SpawnItemex("Itemsparkle")
+  TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	Stop
   }
 }
 
-ACTOR ActivatedTNT
+Actor ActivatedTNT
 {
   -NOGRAVITY
-  +BounceonWalls
-  +BounceonActors
+  +BOUNCEONWALLS
+  +BOUNCEONACTORS
   +ALLOWBOUNCEONACTORS
   Speed 0
   Height 16
   Radius 8
   RenderStyle Normal
-  DamageType "JazzProj"
+  DamageType JazzProj
   DontHurtShooter
   +MISSILE
   Alpha 1
@@ -51,17 +51,17 @@ ACTOR ActivatedTNT
 	}
 }
 
-ACTOR ActivatedTNT2
+Actor ActivatedTNT2
 {
   -NOGRAVITY
   Speed 0
   RenderStyle Normal
-  DamageType "JazzProj"
+  DamageType JazzProj
   DontHurtShooter
   Height 16
   Radius 8
   Damage 1
-  +Missile
+  +MISSILE
   Alpha 1
   BounceFactor 0.0
   States
@@ -69,7 +69,7 @@ ACTOR ActivatedTNT2
   Spawn:
     DYNM ABC 20
 	Death:
-    DYNM D 3 A_Playsound("SEEKXPLD")
+    DYNM D 3 A_PlaySound("SEEKXPLD")
 	DYNM E 3
     DYNM F 3 Bright A_Explode(300,128,0)
     DYNM MNOPQRS 3 Bright

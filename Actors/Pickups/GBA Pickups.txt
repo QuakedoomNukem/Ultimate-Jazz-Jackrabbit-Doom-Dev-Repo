@@ -1,7 +1,7 @@
-actor GameBoyAdvance : Inventory 1337
+Actor GameBoyAdvance : Inventory 1337
 {
     Inventory.PickupSound "SECTGEM"
-	Inventory.Pickupmessage "\ctA Game Boy Advance?!"
+	Inventory.PickupMessage "\ctA Game Boy Advance?!"
 	+FLOATBOB
 	 +NOGRAVITY
 	States
@@ -10,11 +10,11 @@ actor GameBoyAdvance : Inventory 1337
 		GBAA A -1
 		Stop
 		  Pickup:
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	}
 }
 
-ACTOR GBAStim : Health 3726
+Actor GBAStim : Health 3726
 {
   Inventory.Amount 10
   Inventory.PickupSound "GBHealth"
@@ -29,7 +29,7 @@ ACTOR GBAStim : Health 3726
   }
 }
 
-ACTOR GBAMedkit : Health 3725
+Actor GBAMedkit : Health 3725
 {
   Inventory.Amount 50
   Inventory.PickupSound "GBHealth"
@@ -48,8 +48,8 @@ ACTOR GBAMedkit : Health 3725
 Actor MoneyBundle : StonarBonus  3729
 {
     Inventory.PickupSound "money"
-	Inventory.Pickupmessage "\cdMoney Bundle"
-    +CountItem
+	Inventory.PickupMessage "\cdMoney Bundle"
+    +COUNTITEM
 	States
 	{
 	Spawn:
@@ -61,8 +61,8 @@ Actor MoneyBundle : StonarBonus  3729
 Actor MoneyBucket : CustomInventory 3728
 {
     Inventory.PickupSound "money"
-	Inventory.Pickupmessage "\cdMoney Bucket (5+ AP)"
-    +CountItem
+	Inventory.PickupMessage "\cdMoney Bucket (5+ AP)"
+    +COUNTITEM
 	States
 	{
 	Spawn:
@@ -75,16 +75,16 @@ Actor MoneyBucket : CustomInventory 3728
 	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
 	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
 	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
     Stop
 }
 }
 
-ACTOR GBARabbitBonus : CustomInventory 3727
+Actor GBARabbitBonus : CustomInventory 3727
 {
     Inventory.PickupSound "Rabbitou"
-	Inventory.Pickupmessage "\cdRabbit Bonus (10+ AP)"
-    +CountItem
+	Inventory.PickupMessage "\cdRabbit Bonus (10+ AP)"
+    +COUNTITEM
 	+FLOATBOB
     +NOGRAVITY
 	States
@@ -104,7 +104,7 @@ ACTOR GBARabbitBonus : CustomInventory 3727
 	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
 	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
 	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }

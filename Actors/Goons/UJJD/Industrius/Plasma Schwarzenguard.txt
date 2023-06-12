@@ -1,4 +1,4 @@
-ACTOR PlasmaGoon 11662
+Actor PlasmaGoon 11662
 {
   Tag "Plasma Schwarzenguard"
   Health 175
@@ -7,7 +7,7 @@ ACTOR PlasmaGoon 11662
   Mass 200
   Speed 20
   PainChance 0
-  Monster
+  MONSTER
   +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
@@ -39,12 +39,12 @@ ACTOR PlasmaGoon 11662
 	TNT1 A 0 A_GiveToTarget ("Points",250)
 	PLGN A 5 A_GenericFreezeDeath
     PLGN A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",250)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	PLGN A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

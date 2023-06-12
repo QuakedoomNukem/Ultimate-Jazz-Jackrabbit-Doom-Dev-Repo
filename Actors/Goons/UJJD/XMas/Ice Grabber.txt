@@ -1,4 +1,4 @@
-actor XmasIceGrabber 4088
+Actor XmasIceGrabber 4088
 {
    Tag "Ice Grabber"
    Health 30
@@ -8,7 +8,7 @@ actor XmasIceGrabber 4088
    Height 56 
    Mass 4000
    Damage 3
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    -SOLID
@@ -34,12 +34,12 @@ actor XmasIceGrabber 4088
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	IHND A 5 A_GenericFreezeDeath
     IHND A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	IHND A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

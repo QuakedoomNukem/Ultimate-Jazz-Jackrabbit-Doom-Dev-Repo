@@ -1,4 +1,4 @@
-actor LizardGoon 3142
+Actor LizardGoon 3142
 {
    Tag "Green Lizard Goon"
    Health 150
@@ -8,7 +8,7 @@ actor LizardGoon 3142
    Height 48 
    Mass 4000
    Damage 4
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +SOLID
@@ -39,7 +39,7 @@ actor LizardGoon 3142
 		Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	LIZZ CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -48,11 +48,11 @@ actor LizardGoon 3142
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	LIZZ C 5 A_GenericFreezeDeath
     LIZZ C 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
-actor WalkingLizard 4032
+Actor WalkingLizard 4032
 {
    Tag "Yellow Lizard Goon"
    Health 150
@@ -62,7 +62,7 @@ actor WalkingLizard 4032
    Height 48 
    Mass 4000
    Damage 4
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +SOLID
@@ -93,7 +93,7 @@ actor WalkingLizard 4032
 		Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	WLKL CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -102,6 +102,6 @@ actor WalkingLizard 4032
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	WLKL C 5 A_GenericFreezeDeath
     WLKL C 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

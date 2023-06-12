@@ -1,4 +1,4 @@
-ACTOR HeavyGoon 11912
+Actor HeavyGoon 11912
 {
   Tag "Blaster Schwarzenguard"
   Health 75
@@ -7,7 +7,7 @@ ACTOR HeavyGoon 11912
   Mass 200
   Speed 15
   PainChance 0
-  Monster
+  MONSTER
   +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
@@ -37,12 +37,12 @@ ACTOR HeavyGoon 11912
 	TNT1 A 0 A_GiveToTarget ("Points",400)
 	HEGN A 5 A_GenericFreezeDeath
     HEGN A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",400)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	HEGN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -50,7 +50,7 @@ ACTOR HeavyGoon 11912
   }
 }
 
-ACTOR HeavyGoonPlasma
+Actor HeavyGoonPlasma
 {
   Radius 6
   Height 4
@@ -66,7 +66,7 @@ ACTOR HeavyGoonPlasma
   {
   Spawn:
   NEUS A 6 bright
-    loop
+    Loop
   Death:
     JBLS EFGH 4 bright
     stop

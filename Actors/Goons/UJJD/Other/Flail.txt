@@ -1,4 +1,4 @@
-ACTOR Flail 3712
+Actor Flail 3712
 {
 	Tag "Flail"
 	Scale 3

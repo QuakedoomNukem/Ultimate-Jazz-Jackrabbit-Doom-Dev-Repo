@@ -1,12 +1,12 @@
-actor CrazyEasterusEgg 3932
+Actor CrazyEasterusEgg 3932
 {
   Tag "Crazed Easter Egg"
   obituary "%o was yolked by a Crazed Easter Egg."
-  health 80
-  radius 8
-  height 16
+  Health 80
+  Radius 8
+  Height 16
   mass 10000
-  speed 0
+  Speed 0
   painchance 0
   MONSTER
   +FLOORCLIP
@@ -20,10 +20,10 @@ actor CrazyEasterusEgg 3932
   {
   Spawn:
     EEGG A 10 A_Look
-    loop
+    Loop
   See:
     EEGG A 2 A_Chase
-    loop
+    Loop
   Melee:
 	EEGG A 10 A_FaceTarget
 	EEGG A 0 A_PlaySound("eggjump")

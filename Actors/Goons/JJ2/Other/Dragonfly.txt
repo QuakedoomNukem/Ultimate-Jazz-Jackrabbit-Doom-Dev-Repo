@@ -10,15 +10,15 @@ Actor DragonFly 11915
   PainChance 0
   Scale 0.7
   Damage 4
-  Monster
-  +FloorClip
-  +Float
-  +NoGravity
-  +NoIceDeath
-  +DontFall
-  +FloatBob
+  MONSTER
+  +FLOORCLIP
+  +FLOAT
+  +NOGRAVITY
+  +NOICEDEATH
+  +DONTFALL
+  +FLOATBOB
   +NOBLOOD
-  +DontHurtSpecies
+  +DONTHURTSPECIES
   +NOINFIGHTING
   +COUNTKILL
 +DONTHARMSPECIES
@@ -51,7 +51,7 @@ Actor DragonFly 11915
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	 FRGO A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -60,6 +60,6 @@ Actor DragonFly 11915
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	FRGO A 5 A_GenericFreezeDeath
     FRGO A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

@@ -1,4 +1,4 @@
-actor FloppyTadpole 26555
+Actor FloppyTadpole 26555
 {
 	Tag "Floppy Tadpole"
     Health 50
@@ -9,10 +9,10 @@ actor FloppyTadpole 26555
     Mass 100000
 	DamageFactor "MuckSnot", 0
   DamageFactor "MuckSnot2", 0
-	Monster
+	MONSTER
     	+SOLID
 		+NOBLOOD
-		+NoInfighting
+		+NOINFIGHTING
 		  +COUNTKILL
 +DONTHARMSPECIES
     MeleeDamage 4
@@ -29,7 +29,7 @@ actor FloppyTadpole 26555
 		FTDP B 11
 		FTDP B 1 A_JumpIf(floorz <= 1,"See")
 		FTDP A 4 A_Chase
-        loop
+        Loop
 	Melee:
 		FTDP C 10 A_FaceTarget
 		FTDP D 6 A_MeleeAttack
@@ -42,7 +42,7 @@ actor FloppyTadpole 26555
 	   Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	FTDP C 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -51,11 +51,11 @@ actor FloppyTadpole 26555
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	FTDP C 5 A_GenericFreezeDeath
     FTDP C 1 A_FreezeDeathChunks
-    wait
+    Wait
     }
 }
 
-actor JumpingTadpole 3800
+Actor JumpingTadpole 3800
 {
 	Tag "Jumping Tadpole"
     Health 50
@@ -67,10 +67,10 @@ actor JumpingTadpole 3800
 	DamageFactor "MuckSnot", 0
   DamageFactor "MuckSnot2", 0
   MeleeDamage 4
-	Monster
+	MONSTER
     	+SOLID
 		+NOBLOOD
-		+NoInfighting
+		+NOINFIGHTING
 		+COUNTKILL
 +DONTHARMSPECIES
     States
@@ -99,12 +99,12 @@ actor JumpingTadpole 3800
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	HTDP A 5 A_GenericFreezeDeath
     HTDP A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	   Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	HTDP A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

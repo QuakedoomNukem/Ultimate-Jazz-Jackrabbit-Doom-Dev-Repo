@@ -1,11 +1,11 @@
-actor ApplePickup : CustomInventory 3906
+Actor ApplePickup : CustomInventory 3906
 {
     Inventory.PickupSound "jillyeah"
-	Inventory.Pickupmessage "\cfYou have found \c[A2]Jill of the Jungle\cf!"
+	Inventory.PickupMessage "\cfYou have found \c[A2]Jill of the Jungle\cf!"
 	Scale 3.0
-    +CountItem
+    +COUNTITEM
 	+FLOATBOB
-	+NoGravity
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -14,18 +14,18 @@ actor ApplePickup : CustomInventory 3906
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 5000)
 	TNT1 A 0 A_Giveinventory("SuperCarrot", 1)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
     Stop
 }
 }
 
-actor Artifact1 : CustomInventory 3853
+Actor Artifact1 : CustomInventory 3853
 {
     Inventory.PickupSound "misc/i_pkup"
-	Inventory.Pickupmessage "\cgRip and Tear."
-    +CountItem
+	Inventory.PickupMessage "\cgRip and Tear."
+    +COUNTITEM
 	+FLOATBOB
-	+NoGravity
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -33,19 +33,19 @@ actor Artifact1 : CustomInventory 3853
     Loop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 40000)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }
 }
 
-actor Artifact2 : CustomInventory 3854
+Actor Artifact2 : CustomInventory 3854
 {
     Inventory.PickupSound "misc/i_pkup"
-	Inventory.Pickupmessage "\czNobody told me about the SI6IL."
-    +CountItem
+	Inventory.PickupMessage "\czNobody told me about the SI6IL."
+    +COUNTITEM
 	+FLOATBOB
-	+NoGravity
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -53,20 +53,20 @@ actor Artifact2 : CustomInventory 3854
     Stop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 40000)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }
 }
 
-actor Artifact3 : CustomInventory 3855
+Actor Artifact3 : CustomInventory 3855
 {
     Inventory.PickupSound "misc/i_pkup"
-	Inventory.Pickupmessage "\ceBeyond Heresy."
+	Inventory.PickupMessage "\ceBeyond Heresy."
 	Scale 0.50
-    +CountItem
+    +COUNTITEM
 	+FLOATBOB
-	+NoGravity
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -74,19 +74,19 @@ actor Artifact3 : CustomInventory 3855
     Stop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 40000)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }
 }
 
-actor Artifact4 : CustomInventory 3856
+Actor Artifact4 : CustomInventory 3856
 {
     Inventory.PickupSound "misc/i_pkup"
-	Inventory.Pickupmessage "\cvToo bad it's not the Tome of Power."
-    +CountItem
+	Inventory.PickupMessage "\cvToo bad it's not the Tome of Power."
+    +COUNTITEM
 	+FLOATBOB
-	+NoGravity
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -94,20 +94,20 @@ actor Artifact4 : CustomInventory 3856
     Stop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 40000)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }
 }
 
-actor Artifact5 : CustomInventory 3857
+Actor Artifact5 : CustomInventory 3857
 {
     Inventory.PickupSound "misc/i_pkup"
-	Inventory.Pickupmessage "\csI ain't afraid of no Quake."
+	Inventory.PickupMessage "\csI ain't afraid of no Quake."
 	Scale 2.0
-    +CountItem
+    +COUNTITEM
 	+FLOATBOB
-	+NoGravity
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -115,13 +115,13 @@ actor Artifact5 : CustomInventory 3857
     Stop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 40000)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }
 }
 
-actor CliffyB : CustomInventory  32123
+Actor CliffyB : CustomInventory  32123
 {
   Inventory.PickupMessage "\cfCliffy B's power! (FULL RESTORE+FULL AMMO)"
   Inventory.Amount 1
@@ -149,18 +149,18 @@ actor CliffyB : CustomInventory  32123
  	TNT1 A 0 A_GiveInventory("JJCell", 100)
  	TNT1 A 0 A_GiveInventory("TNT", 25)
 	TNT1 A 0 A_GiveInventory("FullRestore")
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	Stop
   }
 }
 	
-actor ElementAirGem : CustomInventory 4057
+Actor ElementAirGem : CustomInventory 4057
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.Pickupmessage "\clPicked up the \cjAir Element\cl."
-    -CountItem
-	+NoGravity
-	+FloatBob
+	Inventory.PickupMessage "\clPicked up the \cjAir Element\cl."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	States
 	{
 	Spawn:
@@ -173,12 +173,12 @@ actor ElementAirGem : CustomInventory 4057
 }
 }
 
-ACTOR ElementAirCount : Inventory 
+Actor ElementAirCount : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 1
-	inventory.Interhubamount 1
+	Inventory.InterHubAmount 1
 	States
 	{
 	Spawn:
@@ -187,13 +187,13 @@ ACTOR ElementAirCount : Inventory
 	}
 }
 
-actor ElementFireGem : CustomInventory 4058
+Actor ElementFireGem : CustomInventory 4058
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.Pickupmessage "\clPicked up the \cgFire Element\cl."
-    -CountItem
-	+NoGravity
-	+FloatBob
+	Inventory.PickupMessage "\clPicked up the \cgFire Element\cl."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	States
 	{
 	Spawn:
@@ -206,12 +206,12 @@ actor ElementFireGem : CustomInventory 4058
 }
 }
 
-ACTOR ElementFireCount : Inventory 
+Actor ElementFireCount : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 1
-	inventory.Interhubamount 1
+	Inventory.InterHubAmount 1
 	States
 	{
 	Spawn:
@@ -220,13 +220,13 @@ ACTOR ElementFireCount : Inventory
 	}
 }
 
-actor ElementWaterGem : CustomInventory 4059
+Actor ElementWaterGem : CustomInventory 4059
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.Pickupmessage "\clPicked up the \cnWater Element\cl."
-    -CountItem
-	+NoGravity
-	+FloatBob
+	Inventory.PickupMessage "\clPicked up the \cnWater Element\cl."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	States
 	{
 	Spawn:
@@ -239,12 +239,12 @@ actor ElementWaterGem : CustomInventory 4059
 }
 }
 
-ACTOR ElementWaterCount : Inventory 
+Actor ElementWaterCount : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 1
-	inventory.Interhubamount 1
+	Inventory.InterHubAmount 1
 	States
 	{
 	Spawn:
@@ -253,13 +253,13 @@ ACTOR ElementWaterCount : Inventory
 	}
 }
 
-actor ElementEarthGem : CustomInventory 4060
+Actor ElementEarthGem : CustomInventory 4060
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.Pickupmessage "\clPicked up the \cdEarth Element\cl."
-    -CountItem
-	+NoGravity
-	+FloatBob
+	Inventory.PickupMessage "\clPicked up the \cdEarth Element\cl."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	States
 	{
 	Spawn:
@@ -272,12 +272,12 @@ actor ElementEarthGem : CustomInventory 4060
 }
 }
 
-ACTOR ElementEarthCount : Inventory 
+Actor ElementEarthCount : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 1
-	inventory.Interhubamount 1
+	Inventory.InterHubAmount 1
 	States
 	{
 	Spawn:
@@ -285,13 +285,13 @@ ACTOR ElementEarthCount : Inventory
 		Stop
 	}
 }
-actor ElementLightGem : CustomInventory 4061
+Actor ElementLightGem : CustomInventory 4061
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.Pickupmessage "\clPicked up the \ckLight Element\cl."
-    -CountItem
-	+NoGravity
-	+FloatBob
+	Inventory.PickupMessage "\clPicked up the \ckLight Element\cl."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	States
 	{
 	Spawn:
@@ -304,12 +304,12 @@ actor ElementLightGem : CustomInventory 4061
 }
 }
 
-ACTOR ElementopolisBeaten : Inventory 
+Actor ElementopolisBeaten : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 1
-	inventory.Interhubamount 1
+	Inventory.InterHubAmount 1
 	States
 	{
 	Spawn:
@@ -318,13 +318,13 @@ ACTOR ElementopolisBeaten : Inventory
 	}
 }
 
-actor ElementDarkGem : CustomInventory 4062
+Actor ElementDarkGem : CustomInventory 4062
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.Pickupmessage "\clPicked up the \ctDark Element\cl."
-    -CountItem
-	+NoGravity
-	+FloatBob
+	Inventory.PickupMessage "\clPicked up the \ctDark Element\cl."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	States
 	{
 	Spawn:
@@ -337,12 +337,12 @@ actor ElementDarkGem : CustomInventory 4062
 }
 }
 
-ACTOR ElementDarkCount : Inventory 
+Actor ElementDarkCount : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 1
-	inventory.Interhubamount 1
+	Inventory.InterHubAmount 1
 	States
 	{
 	Spawn:
@@ -351,13 +351,13 @@ ACTOR ElementDarkCount : Inventory
 	}
 }
 
-actor OldTwinkie : CustomInventory 4115
+Actor OldTwinkie : CustomInventory 4115
 {
     Inventory.PickupSound "smokring"
-	Inventory.Pickupmessage "Ew... you ate a thousand year old twinkie."
-    -CountItem
-	+NoGravity
-	+Floatbob
+	Inventory.PickupMessage "Ew... you ate a thousand year old twinkie."
+    -COUNTITEM
+	+NOGRAVITY
+	+FLOATBOB
 	FloatBobStrength 0.5
 	States
 	{
@@ -367,32 +367,32 @@ actor OldTwinkie : CustomInventory 4115
 	Pickup:
 	TNT1 A 0 A_GiveInventory("CaterpillarCount", 300)
 	TNT1 A 0 ACS_NamedExecute("CaterpillarSmoke",0)
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
     Stop
 }
 }
 
-actor RedFlag : CustomInventory 3717
+Actor RedFlag : CustomInventory 3717
 {
-inventory.pickupmessage "\cnRed flag taken."
-inventory.pickupsound "UTRedTak"
-+inventory.alwayspickup
-height 64
-radius 16
+Inventory.PickupMessage "\cnRed flag taken."
+Inventory.PickupSound "UTRedTak"
++INVENTORY.ALWAYSPICKUP
+Height 64
+Radius 16
 States
     {
     Spawn:
-    flgr abcdefgh 2
-    loop
+    FLGR ABCDEFGH 2
+    Loop
 	Pickup:
 	TNT1 A 0 ACS_Execute(30,0,0)
 	}
 }
 
-actor SecretGem : Inventory 3229
+Actor SecretGem : Inventory 3229
 {
     Inventory.PickupSound "SECTGEM"
-	Inventory.Pickupmessage "\cfBonus Stage Gem!"
+	Inventory.PickupMessage "\cfBonus Stage Gem!"
 	+FLOATBOB
 	 +NOGRAVITY
 	States
@@ -401,12 +401,12 @@ actor SecretGem : Inventory 3229
 		SECT A -1
 		Stop
 		Pickup:
-  TNT1 A 0 A_SpawnItemex("Itemsparkle")
+  TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	Stop
 	}
 }
 
-actor SODPickup : CustomInventory  4053
+Actor SODPickup : CustomInventory  4053
 {
   Inventory.PickupMessage "\cfYou have found The Spear of Destiny!"
   Inventory.Amount 1

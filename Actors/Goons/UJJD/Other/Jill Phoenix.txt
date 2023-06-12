@@ -1,4 +1,4 @@
-ACTOR JillBird 3832
+Actor JillBird 3832
 {
   //Sprites by Captain Q of Hocus Pocus Doom
   Tag "Phoenix"
@@ -18,7 +18,7 @@ ACTOR JillBird 3832
   +NOICEDEATH
   +FRIENDLY
   +NOBLOOD
-  +Shootable
+  +SHOOTABLE
   +NOTELEPORT
   +SOLID
   States

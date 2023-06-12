@@ -136,3 +136,21 @@ include "mapinfo/Episode 4.txt"
 include "mapinfo/Jazzy Elements.txt"
 include "mapinfo/Episode 5.txt"
 include "mapinfo/Bonus Stages.txt"
+
+/*
+DAMAGETYPES PRESENT IN UJJDOOM, KEEP THESE LINES UNCOMMENTED
+
+BFGSplash
+Burn
+ChameleonKing
+DarkShellBoss
+Disintegrate
+Fire
+Grenade
+Ice
+JazzProj
+JazzProjFire
+JazzProjIce
+MechBoss
+QueenDamage
+*/

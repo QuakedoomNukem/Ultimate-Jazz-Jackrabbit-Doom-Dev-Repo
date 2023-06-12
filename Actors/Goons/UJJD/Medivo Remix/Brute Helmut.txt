@@ -1,4 +1,4 @@
-ACTOR BruteHelmut 4038
+Actor BruteHelmut 4038
 {
 	Tag "Brute Helmut"
 	Health 300
@@ -12,7 +12,7 @@ ACTOR BruteHelmut 4038
 	+NOINFIGHTING
 	 +COUNTKILL
  +DONTHARMCLASS
-	Monster
+	MONSTER
 	SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"
@@ -21,10 +21,10 @@ ACTOR BruteHelmut 4038
 	{
 		Spawn:
 		    MDRR AB 10 A_Look
-			loop
+			Loop
 		See:
 			MDRR AABBCCDD 2 Fast A_Chase
-			loop
+			Loop
 		Melee:
 			MDRR EF 6 A_FaceTarget
 			TNT1 G 0 A_CustomMeleeAttack(6,"fatpnch","","Melee",0)
@@ -37,12 +37,12 @@ ACTOR BruteHelmut 4038
 			TNT1 A 0 A_GiveToTarget ("Points",500)
 			MDRR A 5 A_GenericFreezeDeath
 			MDRR A 1 A_FreezeDeathChunks
-			wait
+			Wait
 			Death.JazzprojFire:
 			Burn:
 			TNT1 A 0 A_NoBlocking
 			TNT1 A 0 A_GiveToTarget ("Points",500)
-			TNT1 A 0 A_Playsound("FMTRFIRE")
+			TNT1 A 0 A_PlaySound("FMTRFIRE")
 			MDRR AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 			TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 			TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

@@ -1,10 +1,10 @@
-ACTOR FatTurtleGal 3946
+Actor FatTurtleGal 3946
 {
   Tag "Fat Chick"
   obituary "%o was knocked out by a Fat Chick."
-  health 150
+  Health 150
   mass 10000
-  speed 12
+  Speed 12
   Radius 12
   Height 48
   painchance 0
@@ -21,15 +21,15 @@ ACTOR FatTurtleGal 3946
   {
    Spawn:
     FATG AB 10 A_Look
-    loop
+    Loop
   See:
     FATG ABCA 4 A_Chase
-    loop
+    Loop
   Melee:
     FATG D 10 A_FaceTarget
     FATG E 8 A_CustomMeleeAttack(6,"fatpunch","","Melee",0)
     FATG E 4
-    goto See
+    Goto See
   Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",200)
@@ -38,7 +38,7 @@ ACTOR FatTurtleGal 3946
 	Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",200)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	FATG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -47,6 +47,6 @@ ACTOR FatTurtleGal 3946
 	TNT1 A 0 A_GiveToTarget ("Points",200)
 	FATG A 5 A_GenericFreezeDeath
     FATG A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

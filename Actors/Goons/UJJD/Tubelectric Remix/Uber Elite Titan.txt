@@ -1,4 +1,4 @@
-ACTOR UberEliteTurtleGuard 4011
+Actor UberEliteTurtleGuard 4011
 {
   Tag "Uber Elite Titan"
   Health 800
@@ -7,7 +7,7 @@ ACTOR UberEliteTurtleGuard 4011
   Mass 100000
   Speed 20
   PainChance 32
-  Monster
+  MONSTER
   +NOBLOOD
   +NOINFIGHTING
   +SOLID
@@ -52,7 +52,7 @@ ACTOR UberEliteTurtleGuard 4011
 	UBEL E 5 Bright A_FaceTarget
     UBEL G 1 Bright A_CustomMissile ("DroneRocket",32,20,0,0,0)
 	UBEL E 5 Bright
-	goto see
+	Goto see
     Death:
 	TNT1 A 0 A_GiveToTarget ("Points",3000)
     UBEL A 0 A_StopSound

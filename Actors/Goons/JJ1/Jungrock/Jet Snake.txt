@@ -1,4 +1,4 @@
-actor JungrockSnake 3831
+Actor JungrockSnake 3831
 {
   Tag "Jet Snake"
   Health 75
@@ -11,7 +11,7 @@ actor JungrockSnake 3831
   ActiveSound "SNKESND"
   SeeSound "SNKESND"
   AttackSound "RATATTCK"
-  Monster
+  MONSTER
    +NOBLOOD
    +NOINFIGHTING
      +COUNTKILL
@@ -39,7 +39,7 @@ actor JungrockSnake 3831
 	Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	JSNK A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -48,6 +48,6 @@ actor JungrockSnake 3831
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	JSNK A 5 A_GenericFreezeDeath
     JSNK A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	}
 	}

@@ -10,11 +10,11 @@ Actor ZoonikBoss1 26561
   PainChance 0
   DamageFactor "MuckSnot", 0
   DamageFactor "MuckSnot2", 0
-  Monster
-  +FloorClip
+  MONSTER
+  +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
-  +Solid
+  +SOLID
    +COUNTKILL
  +DONTHARMCLASS
   States

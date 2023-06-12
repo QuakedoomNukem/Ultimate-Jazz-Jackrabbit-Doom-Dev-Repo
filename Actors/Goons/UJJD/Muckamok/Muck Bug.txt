@@ -10,14 +10,14 @@ Actor MuckBug 3799
   PainChance 0
   Scale 0.7
   Damage 4
-  Monster
-  +FloorClip
-  +Float
-  +NoGravity
-  +DontFall
-  +FloatBob
+  MONSTER
+  +FLOORCLIP
+  +FLOAT
+  +NOGRAVITY
+  +DONTFALL
+  +FLOATBOB
   +NOBLOOD
-  +DontHurtSpecies
+  +DONTHURTSPECIES
   +NOINFIGHTING
     +COUNTKILL
   SeeSound "BEEBUZZ"
@@ -52,13 +52,13 @@ Actor MuckBug 3799
 	MKBG B 5 A_GenericFreezeDeath
 	TNT1 A 0 A_Stopsound(CHAN_VOICE)
     MKBG B 1 A_FreezeDeathChunks
-    wait
+    Wait
     Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	 MKBG B 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

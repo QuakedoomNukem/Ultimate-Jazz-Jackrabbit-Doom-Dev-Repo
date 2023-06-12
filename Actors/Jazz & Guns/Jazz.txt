@@ -1,4 +1,4 @@
-ACTOR JazzPlayer : PlayerPawn 
+Actor JazzPlayer : PlayerPawn 
 {
   Speed 1
   Health 100
@@ -19,7 +19,7 @@ ACTOR JazzPlayer : PlayerPawn
   Player.StartItem "Railgun"
   Player.StartItem "ElectroBlaster" 
   Player.StartItem "TNT", 0 
-  Player.startitem "HideHUD", 1
+  Player.Startitem "HideHUD", 1
   Player.WeaponSlot 1, "LFG2000"
   Player.WeaponSlot 2, "SpreadGun"
   Player.WeaponSlot 3, "Slicer" 
@@ -45,29 +45,29 @@ ACTOR JazzPlayer : PlayerPawn
     JAZZ ABCD 4 A_JumpIf(velz!=0,"Jump")
     Loop
   Jump:
-	JAZZ P 4 A_JumpIf(velz<0,"Jumpwait")
-	loop
-  Jumpwait:
+	JAZZ P 4 A_JumpIf(velz<0,"JumpWait")
+	Loop
+  JumpWait:
 	JAZZ Q 1 A_JumpIf(velz==0,"Spawn")
-	loop
+	Loop
   Missile:
     JAZZ F 12 A_JumpIf(velz!=0,"JumpMissile")
     Goto Spawn
   JumpMissile:
-	JAZZ R 6 A_JumpIf(velz<0,"JumpMissilewait")
+	JAZZ R 6 A_JumpIf(velz<0,"JumpMissileWait")
 	Goto Jump
-  JumpMissilewait:
+  JumpMissileWait:
 	JAZZ S 6 A_JumpIf(velz==0,"Spawn")
-	Goto Jumpwait
+	Goto JumpWait
   Melee:
     JAZZ G 6 BRIGHT A_JumpIf(velz!=0,"JumpMelee")
     Goto Missile
   JumpMelee:
-	JAZZ T 6 BRIGHT A_JumpIf(velz<0,"JumpMeleewait")
+	JAZZ T 6 BRIGHT A_JumpIf(velz<0,"JumpMeleeWait")
 	Goto Jump
-  JumpMeleewait:
+  JumpMeleeWait:
 	JAZZ U 6 BRIGHT A_JumpIf(velz==0,"Spawn")
-	Goto Jumpwait
+	Goto JumpWait
   Pain:
     JAZZ H 4 
     JAZZ H 4 A_Pain
@@ -111,10 +111,10 @@ Stop
 
 Actor Jazzfirepuff : Jazzpuff
 {
-DamageType "JazzProj"
+DamageType JazzProj
 }
 
-ACTOR Points : Inventory
+Actor Points : Inventory
 {
   Height 10
    Inventory.MaxAmount 999999999
@@ -130,7 +130,7 @@ ACTOR Points : Inventory
   }
 } 
 
-ACTOR JJBackpack : Backpack 3804
+Actor JJBackpack : Backpack 3804
 {
 Inventory.PickupSound "ammoup"
   Height 26
@@ -146,7 +146,7 @@ Inventory.PickupSound "ammoup"
   }
 }
 
-ACTOR HideHUD : Inventory
+Actor HideHUD : Inventory
 {
-	inventory.MaxAmount 1
+	Inventory.MaxAmount 1
 }

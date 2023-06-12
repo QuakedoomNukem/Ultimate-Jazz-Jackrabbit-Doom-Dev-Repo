@@ -53,7 +53,7 @@ States
 	}
 }
 
-ACTOR AshHolm
+Actor AshHolm
 {
 	Radius 16
 	Height 24
@@ -67,12 +67,12 @@ ACTOR AshHolm
 	}
 }
 
-actor JazzPoof
+Actor JazzPoof
 {
 	-NOGRAVITY
-	scale 1.5
-	height 3
-	radius 3
+	Scale 1.5
+	Height 3
+	Radius 3
 	renderstyle Translucent
 	alpha 1.0
 	States
@@ -102,7 +102,7 @@ Actor JetpackZombieExplosion
 	{
 	Spawn:
 		SEKE A 3
-		SEKE B 3 A_Playsound("SEEKXPLD")
+		SEKE B 3 A_PlaySound("SEEKXPLD")
 		SEKE CDEFGHIJKL 3
 		Stop
 	}
@@ -169,7 +169,7 @@ Actor JJTeleportFog : TeleportFog Replaces TeleportFog
 	}
 }
 
-ACTOR FatsoJJD : Fatso Replaces Fatso
+Actor FatsoJJD : Fatso Replaces Fatso
 {
 	States
 	{
@@ -183,7 +183,7 @@ ACTOR FatsoJJD : Fatso Replaces Fatso
 	}
 }
 
-ACTOR DemonJJD : Demon Replaces Demon
+Actor DemonJJD : Demon Replaces Demon
 {
 	States
 	{
@@ -198,7 +198,7 @@ ACTOR DemonJJD : Demon Replaces Demon
 	}
 }
 
-ACTOR HellKnightJJD : HellKnight Replaces HellKnight
+Actor HellKnightJJD : HellKnight Replaces HellKnight
 {
 	States
 	{
@@ -213,7 +213,7 @@ ACTOR HellKnightJJD : HellKnight Replaces HellKnight
 	}
 }
 
-ACTOR NoRedCard : RedCard replaces RedCard
+Actor NoRedCard : RedCard replaces RedCard
 {
 	+INVENTORY.NOSCREENFLASH
 	Inventory.PickupMessage ""
@@ -227,7 +227,7 @@ ACTOR NoRedCard : RedCard replaces RedCard
 	}
 }
 
-ACTOR NoRedSkull : RedSkull replaces RedSkull
+Actor NoRedSkull : RedSkull replaces RedSkull
 {
 	+INVENTORY.NOSCREENFLASH
 	Inventory.PickupMessage ""
@@ -241,7 +241,7 @@ ACTOR NoRedSkull : RedSkull replaces RedSkull
 	}
 }
 
-ACTOR NoBlueCard : BlueCard replaces BlueCard
+Actor NoBlueCard : BlueCard replaces BlueCard
 {
 	+INVENTORY.NOSCREENFLASH
 	Inventory.PickupMessage ""
@@ -255,7 +255,7 @@ ACTOR NoBlueCard : BlueCard replaces BlueCard
 	}
 }
 
-ACTOR NoBlueSkull : BlueSkull replaces BlueSkull
+Actor NoBlueSkull : BlueSkull replaces BlueSkull
 {
 	+INVENTORY.NOSCREENFLASH
 	Inventory.PickupMessage ""
@@ -269,7 +269,7 @@ ACTOR NoBlueSkull : BlueSkull replaces BlueSkull
 	}
 }
 
-ACTOR NoYellowCard : YellowCard replaces YellowCard
+Actor NoYellowCard : YellowCard replaces YellowCard
 {
 	+INVENTORY.NOSCREENFLASH
 	Inventory.PickupMessage ""
@@ -283,7 +283,7 @@ ACTOR NoYellowCard : YellowCard replaces YellowCard
 	}
 }
 
-ACTOR NoYellowSkull : YellowSkull replaces YellowSkull
+Actor NoYellowSkull : YellowSkull replaces YellowSkull
 {
 	+INVENTORY.NOSCREENFLASH
 	Inventory.PickupMessage ""

@@ -1,4 +1,4 @@
-ACTOR XmasGhost 4041
+Actor XmasGhost 4041
 {
   Tag "Christmas Ghost"
   Health 100
@@ -8,7 +8,7 @@ ACTOR XmasGhost 4041
   Speed 15
   PainChance 200
   Damage 5
-  Monster
+  MONSTER
   +FLOAT
   +SOLID
   +FLOATBOB
@@ -39,7 +39,7 @@ ACTOR XmasGhost 4041
 	Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	XSGT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -48,6 +48,6 @@ ACTOR XmasGhost 4041
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	XSGT A 5 A_GenericFreezeDeath
     XSGT A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

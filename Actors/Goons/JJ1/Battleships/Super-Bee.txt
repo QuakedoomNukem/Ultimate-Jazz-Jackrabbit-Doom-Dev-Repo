@@ -1,4 +1,4 @@
-ACTOR BattleshipBee 3892
+Actor BattleshipBee 3892
 {
   Tag "Super-Bee"
   Health 75
@@ -8,7 +8,7 @@ ACTOR BattleshipBee 3892
   Speed 15
   Damage 4
   PainChance 0
-  Monster
+  MONSTER
   +FLOAT
   +NOGRAVITY
   +MISSILEMORE
@@ -42,13 +42,13 @@ ACTOR BattleshipBee 3892
 	TNT1 A 0 A_GiveToTarget ("Points",200)
 	BSBB E 5 A_GenericFreezeDeath
     BSBB E 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",200)
 	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	BSBB E 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

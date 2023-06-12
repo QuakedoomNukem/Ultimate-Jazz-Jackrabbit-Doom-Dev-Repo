@@ -1,5 +1,6 @@
-ACTOR JJASaurianGeneral 3852
+Actor JJASaurianGeneral 3852
 {
+	//$Category Goons
 	Tag "Saurian General"
 	Health 6000
 	Radius 24
@@ -14,106 +15,106 @@ ACTOR JJASaurianGeneral 3852
 	+SOLID
 	+BOSS
 	+COUNTKILL
-+DONTHARMSPECIES
-	Monster
+	+DONTHARMSPECIES
+	MONSTER
 	SeeSound "saurboss"
 	PainSound "saurow"
-    DeathSound "saurow"
+	DeathSound "saurow"
 	Obituary "%o was blown to bits by the Saurian General."
 	States
 	{
-		Spawn:
-		    SAGN A 10 A_Look
-			loop
-		See:
-			SAGN AABBCCDD 2 Fast A_Chase
-			loop
-		Missile:
+	Spawn:
+		SAGN A 10 A_Look
+		Loop
+	See:
+		SAGN AABBCCDD 2 Fast A_Chase
+		Loop
+	Missile:
 		TNT1 A 0 A_Jump(256, "Missile1", "Missile2")
-		Missile1:
-			SAGN EEEEE 4 A_FaceTarget
-			SAGN F 6 bright A_CustomMissile("JJAGeneralSeekingProj", 30, 8)
-			Goto See
-		Missile2:
-			SAGN EEEEE 4 A_FaceTarget
-			SAGN F 6 bright A_CustomMissile("TorpedoProj",-32,8)
-			SAGN EEEEE 4 A_FaceTarget
-			SAGN F 6 bright A_CustomMissile("TorpedoProj",-32,8)
-			SAGN EEEEE 4 A_FaceTarget
-			SAGN F 6 bright A_CustomMissile("TorpedoProj",-32,8)
-			Goto See
-		Death:
-    SAGN G 0 A_Scream
-    SAGN G 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    SAGN G 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
-    SAGN G 2 A_NoBlocking
-    SAGN G 2
-    SAGN G 0 A_ChangeFlag("FloatBob", 0)
-    SAGN G 0 A_StopSoundEx("JetpackZombie/Fly")
-    SAGN G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
-    SAGN G 2
-    SAGN G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    SAGN G 2
-    SAGN G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    SAGN G 2
-    SAGN G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    SAGN GGGGGGGGGGG 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 A 0 A_GiveToTarget ("Points",6000)
-	Stop
-  }
+	Missile1:
+		SAGN EEEEE 4 A_FaceTarget
+		SAGN F 6 bright A_CustomMissile("JJAGeneralSeekingProj", 30, 8)
+		Goto See
+	Missile2:
+		SAGN EEEEE 4 A_FaceTarget
+		SAGN F 6 bright A_CustomMissile("TorpedoProj",-32,8)
+		SAGN EEEEE 4 A_FaceTarget
+		SAGN F 6 bright A_CustomMissile("TorpedoProj",-32,8)
+		SAGN EEEEE 4 A_FaceTarget
+		SAGN F 6 bright A_CustomMissile("TorpedoProj",-32,8)
+		Goto See
+	Death:
+		SAGN G 0 A_Scream
+		SAGN G 2 ThrustThingZ(0, random(2, 8), 0, 0)
+		SAGN G 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+		SAGN G 2 A_NoBlocking
+		SAGN G 2
+		SAGN G 0 A_ChangeFlag("FloatBob", 0)
+		SAGN G 0 A_StopSoundEx("JetpackZombie/Fly")
+		SAGN G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+		SAGN G 2
+		SAGN G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		SAGN G 2
+		SAGN G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		SAGN G 2
+		SAGN G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		SAGN GGGGGGGGGGG 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		TNT1 A 0 A_GiveToTarget ("Points",6000)
+		Stop
+	}
 }
 
-ACTOR JJAGeneralSeekingProj
+Actor JJAGeneralSeekingProj
 {
-  Radius 16
-  Height 8
-  Speed 10
-  Projectile
-  +SEEKERMISSILE
-  +RANDOMIZE
-    SeeSound "SEEKFIRE"
-  DeathSound "SEEKXPLD"
-  RenderStyle Normal
-  States
-  {
-  Spawn:
-    HRKT ABC 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
-	HRKT A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
-    loop
-  Death:
-  SEKE AB 3 bright
-   SEKE C 3 bright A_Explode (32,128,0)
-   SEKE DEFGHIJKL 3 bright
-    stop
-  }
+	Radius 16
+	Height 8
+	Speed 10
+	Projectile
+	+SEEKERMISSILE
+	+RANDOMIZE
+	SeeSound "SEEKFIRE"
+	DeathSound "SEEKXPLD"
+	RenderStyle Normal
+	States
+	{
+	Spawn:
+		HRKT ABC 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
+		HRKT A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+		Loop
+	Death:
+		SEKE AB 3 bright
+		SEKE C 3 bright A_Explode (32,128,0)
+		SEKE DEFGHIJKL 3 bright
+		Stop
+	}
 }
 
-ACTOR TorpedoProj
+Actor TorpedoProj
 {
-   Radius 5
-   Height 5
-   Speed 10
-   ExplosionDamage 15
-   ExplosionRadius 128
-   RenderStyle Normal
-   Alpha 1
-   PROJECTILE
-   +FLOORHUGGER
-   +THRUGHOST
-   -NOGRAVITY
-   +DONTSPLASH
-    SeeSound "RFLAUNCH"
-   DeathSound "SEEKXPLD"
-   States
-   {
-   Spawn:
-      RFLP A 1 Bright A_CStaffMissileSlither
-      TNT1 A 0 Bright A_SpawnItem("MissileTrail",0,0)
-      loop
-  Death:
-  SEKE AB 3 bright
-   SEKE C 3 bright A_Explode (15,128,0)
-   SEKE DEFGHIJKL 3 bright
-    stop
-   }
+	Radius 5
+	Height 5
+	Speed 10
+	ExplosionDamage 15
+	ExplosionRadius 128
+	RenderStyle Normal
+	Alpha 1
+	PROJECTILE
+	+FLOORHUGGER
+	+THRUGHOST
+	-NOGRAVITY
+	+DONTSPLASH
+	SeeSound "RFLAUNCH"
+	DeathSound "SEEKXPLD"
+	States
+	{
+	Spawn:
+		RFLP A 1 Bright A_CStaffMissileSlither
+		TNT1 A 0 Bright A_SpawnItem("MissileTrail",0,0)
+		Loop
+	Death:
+		SEKE AB 3 bright
+		SEKE C 3 bright A_Explode (15,128,0)
+		SEKE DEFGHIJKL 3 bright
+		Stop
+	}
 }

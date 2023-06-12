@@ -137,8 +137,8 @@ Actor DropFire
   DamageType "JazzProjFire"
   Alpha 0.90
   Scale 0.75
-  -NoGravity
-  +LowGravity
+  -NOGRAVITY
+  +LOWGRAVITY
   +NoExplodeFloor
   +NoDamageThrust
   States
@@ -167,7 +167,7 @@ Actor DropFire
   }
 }
 
-ACTOR Water : Ammo
+Actor Water : Ammo
 {
 	+IGNORESKILL
 	Inventory.Amount 1
@@ -196,7 +196,7 @@ Actor Gas : Ammo 16007
   }
 }
 
-ACTOR Gun7PowerUpBox : Gun1PowerUpBox 3826
+Actor Gun7PowerUpBox : Gun1PowerUpBox 3826
 {
   States
   {
@@ -213,10 +213,10 @@ ACTOR Gun7PowerUpBox : Gun1PowerUpBox 3826
   }
 }
 
-ACTOR Gun7PowerUp : Inventory 
+Actor Gun7PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

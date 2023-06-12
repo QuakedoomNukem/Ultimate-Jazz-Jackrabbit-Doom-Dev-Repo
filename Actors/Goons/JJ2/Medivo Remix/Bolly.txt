@@ -1,4 +1,4 @@
-actor Bolly 3236
+Actor Bolly 3236
 {
 	Tag "Bolly"
     Health 2000
@@ -58,7 +58,7 @@ actor Bolly 3236
     }
 }
 
-ACTOR BollyProj
+Actor BollyProj
 {
    Radius 8
    Height 11

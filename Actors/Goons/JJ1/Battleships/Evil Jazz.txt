@@ -1,4 +1,4 @@
-ACTOR EvilJazz 32527
+Actor EvilJazz 32527
 {
   Tag "Evil Jazz"
   Health 3000
@@ -7,7 +7,7 @@ ACTOR EvilJazz 32527
   Mass 1000000
   Speed 25
   PainChance 0
-  Monster
+  MONSTER
   Scale 2.0
   +FLOORCLIP
   +BOSSDEATH
@@ -34,7 +34,7 @@ ACTOR EvilJazz 32527
 	EJAZ E 1 Bright A_CustomMissile ("VileFireSpawner",0,0,0,0,0)
     EJAZ D 2 Bright A_CustomMissile ("VileFireSpawner",0,0,-15,0,0)
 	EJAZ E 10 Bright
-	goto see
+	Goto see
   Death:
     EJAZ A 0 A_StopSound
     EJAZ A 0 A_Scream
@@ -57,7 +57,7 @@ ACTOR EvilJazz 32527
   }
 }
 
-ACTOR VileFireSpawner
+Actor VileFireSpawner
 {
 	Radius 8
 	Height 8
@@ -70,7 +70,7 @@ ACTOR VileFireSpawner
     Obituary "%o was burnt to a crisp."
 	Projectile
 	MissileType VileFireD3
-	Missileheight 0
+	MissileHeight 0
 	reactiontime 25
 	States
 	{
@@ -86,7 +86,7 @@ ACTOR VileFireSpawner
 	}
 }
 
-actor VileFireD3
+Actor VileFireD3
 {
   translation "160:167=112:127"
   Radius 10

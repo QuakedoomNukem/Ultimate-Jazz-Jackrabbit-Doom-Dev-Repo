@@ -7,15 +7,15 @@ Actor BossHelmut 30026
   Mass 1000
   Speed 8
   PainChance 0
-  Monster
-  Damagefactor Ice, 2
-  Damagefactor Fire, 0.5
+  MONSTER
+  DamageFactor Ice, 2
+  DamageFactor Fire, 0.5
   Obituary "%o was burnt to a crisp by a Pyro Helmut."
-  +NoTarget
-  +FloorClip
-  +MissileMore
-  +NoRadiusDmg
-  +DontHurtSpecies
+  +NOTARGET
+  +FLOORCLIP
+  +MISSILEMORE
+  +NORADIUSDMG
+  +DONTHURTSPECIES
   +NOBLOOD
   +NOINFIGHTING
   +COUNTKILL
@@ -141,7 +141,7 @@ Actor FireTail
 {
   Projectile
   RenderStyle Add
-  +NoClip
+  +NOCLIP
   Alpha 0.8
   States
   {
@@ -162,15 +162,15 @@ Actor PyroBall
   RenderStyle Add
   DamageType Fire
   Alpha 0.7
-  -NoGravity
-  +DoomBounce
-  +LowGravity
-  +SeekerMissile
+  -NOGRAVITY
+  +DOOMBOUNCE
+  +LOWGRAVITY
+  +SEEKERMISSILE
   States
   {
   Spawn:
     RBAL A 0 Bright
-    RBAL A 0 Bright A_AlertMonsters
+    RBAL A 0 Bright A_AlertMONSTERs
     RBAL AAAABBBB 1 Bright 
     Goto Spawn +2
   Death:
@@ -186,11 +186,11 @@ Actor FirebombExplosion1
   Speed 15
   Damage 5
   DamageType Fire
-  +NoBlockMap
-  +DropOff
-  +Missile
-  +ActivateImpact
-  +ActivatePCross
+  +NOBLOCKMAP
+  +DROPOFF
+  +MISSILE
+  +ACTIVATEIMPACT
+  +ACTIVATEPCROSS
   Obituary "%o was killed by a firebomb explosion."
   States
   {
@@ -241,8 +241,8 @@ Actor FirebombExplosion3 : FirebombExplosion1
 Actor PyroBlast 
 {
   Projectile
-  +SeekerMissile
-  +NoGravity
+  +SEEKERMISSILE
+  +NOGRAVITY
   DamageType Fire
   RenderStyle Add
   Alpha 0.9
@@ -269,10 +269,10 @@ Actor PyroBlast
 
 Actor WalkFire
 {
-  +NoClip
-  +Missile
-  +DropOff
-  +Randomize
+  +NOCLIP
+  +MISSILE
+  +DROPOFF
+  +RANDOMIZE
   Scale 0.5
   Speed 0
   RenderStyle Add
@@ -299,11 +299,11 @@ Actor RainCometNull
   Height 0
   Speed 8
   Projectile
-  +FloorClip
-  +Ripper
-  +DoomBounce
-  +CeilingHugger
-  +DontHurtSpecies
+  +FLOORCLIP
+  +RIPPER
+  +DOOMBOUNCE
+  +CEILINGHUGGER
+  +DONTHURTSPECIES
   States
   {
   Spawn:
@@ -330,11 +330,11 @@ Actor FallingComet
   DamageType Fire
   SeeSound "COMTLNCH"
   DeathSound "COMETXPL"
-  -NoGravity
-  -Float
-  +FloorClip
-  +DontHurtSpecies 
-  +SpawnCeiling
+  -NOGRAVITY
+  -FLOAT
+  +FLOORCLIP
+  +DONTHURTSPECIES 
+  +SPAWNCEILING
   States
   {
   Spawn:
@@ -364,7 +364,7 @@ Actor CometDeath
 {
   Projectile
   RenderStyle Add
-  +NoClip
+  +NOCLIP
   Alpha 0.8
   States
   {

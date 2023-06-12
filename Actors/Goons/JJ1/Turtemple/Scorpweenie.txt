@@ -1,10 +1,10 @@
-ACTOR Scorpweenie 3901
+Actor Scorpweenie 3901
 {
   Tag "Scorpweenie"
   obituary "%o was pincered by a Scorpweenie."
-  health 50
+  Health 50
   mass 10000
-  speed 15
+  Speed 15
   Radius 20
   Height 24
   painchance 0
@@ -21,15 +21,15 @@ ACTOR Scorpweenie 3901
   {
    Spawn:
     SCWN A 10 A_Look
-    loop
+    Loop
   See:
     SCWN AABBCC 4 A_Chase
-    loop
+    Loop
   Melee:
     SCWN D 10 A_FaceTarget
     SCWN E 4 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
     SCWN E 4
-    goto See
+    Goto See
   Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",100)
@@ -38,7 +38,7 @@ ACTOR Scorpweenie 3901
 	 Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	SCWN A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -47,6 +47,6 @@ ACTOR Scorpweenie 3901
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	SCWN A 5 A_GenericFreezeDeath
     SCWN A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

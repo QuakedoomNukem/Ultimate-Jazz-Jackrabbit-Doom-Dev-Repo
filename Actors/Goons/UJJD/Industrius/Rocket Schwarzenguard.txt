@@ -1,4 +1,4 @@
-actor RocketGoon 3127
+Actor RocketGoon 3127
 {
 	Tag "Rocket Schwarzenguard"
 	Radius 16
@@ -8,7 +8,7 @@ actor RocketGoon 3127
 	PainChance 0
 	Mass 4000
 	Damage 4
-	Monster
+	MONSTER
 	+SOLID
 	+NOBLOOD
 	+NOINFIGHTING
@@ -28,7 +28,7 @@ actor RocketGoon 3127
 		Loop
 	Missile:
 		TMLR E 15 A_FaceTarget 
-		TMLR A 0 A_Playsound("Seekfire")
+		TMLR A 0 A_PlaySound("Seekfire")
 		TMLR F 8 Bright A_CustomMissile("Minissiles",25,0,359,0)
 		Goto See
 	Death: 
@@ -39,12 +39,12 @@ actor RocketGoon 3127
 	TNT1 A 0 A_GiveToTarget ("Points",500)
 	TMLR A 5 A_GenericFreezeDeath
     TMLR A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",500)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	TMLR A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -52,7 +52,7 @@ actor RocketGoon 3127
    } 
 }
 
-ACTOR Minissiles
+Actor Minissiles
 {
   Radius 8
   Height 8

@@ -3,7 +3,7 @@ Actor HipHopCage 32532
 	Tag "Hip Hop Cage"
 	Mass 1000000
 	Health 1
-	+NoBlood
+	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
 	Radius 16
@@ -20,7 +20,7 @@ Actor HipHopCage 32532
 }
 	
 
-ACTOR HipHop 32533
+Actor HipHop 32533
 {
   Tag "Hip Hop"
   Health 300
@@ -32,9 +32,9 @@ ACTOR HipHop 32533
   PainChance 0
   DamageFactor 1.0
   SeeSound "HIPHOPAT"
-  Damagefactor "JAZZPROJ", 0
-  Damagefactor "JAZZPROJFire", 0
-  Damagefactor "JazzProjIce", 0
+  DamageFactor "JAZZPROJ", 0
+  DamageFactor "JAZZPROJFire", 0
+  DamageFactor "JazzProjIce", 0
   +LOOKALLAROUND
   +FLOAT
   +NOGRAVITY
@@ -43,7 +43,7 @@ ACTOR HipHop 32533
   +NOICEDEATH
   +FRIENDLY
   +NOBLOOD
-  +Shootable
+  +SHOOTABLE
   +NOTELEPORT
   +SOLID
   Obituary "%o was pecked by a Hip Hop."
@@ -65,14 +65,14 @@ ACTOR HipHop 32533
     hhop cd 4 bright A_FaceTarget
 	hhop cd 8 Bright A_CustomMissile ("HipHopProj",0,0,5,0,0)
 	hhop cd 10 Bright
-	goto see
+	Goto see
   Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8)) 
     Stop
   }
 }
 
-actor HipHopProj
+Actor HipHopProj
 {
   Radius 6
   Height 8
@@ -84,7 +84,7 @@ actor HipHopProj
   RenderStyle Add
   Alpha 1 
   SeeSound	"HIPHOPAT"
-  Deathsound "BLSTRHIT"
+  DeathSound "BLSTRHIT"
   States
   {
   Spawn:

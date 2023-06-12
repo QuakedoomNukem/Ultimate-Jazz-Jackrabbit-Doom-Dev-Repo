@@ -1,4 +1,4 @@
-ACTOR LochnessTurtle 4070
+Actor LochnessTurtle 4070
 {
 	Tag "Lochness Turtle"
 	Health 100
@@ -14,17 +14,17 @@ ACTOR LochnessTurtle 4070
 	+SOLID
 	 +COUNTKILL
  +DONTHARMCLASS
-	Monster
+	MONSTER
 	AttackSound "TURTBITE"
 	Obituary "%o became a myth by a Lochness Turtle."
 	States
 	{
 		Spawn:
 		    LCHT A 10 A_Look
-			loop
+			Loop
 		See:
 			LCHT A 5 A_GiveInventory("Chase_Water",3)
-			loop
+			Loop
 		Missile:
 			LCHT AB 10 A_FaceTarget
 			LCHT B 6 A_CustomMissile("FireShot", 32, 8)
@@ -37,12 +37,12 @@ ACTOR LochnessTurtle 4070
 	TNT1 A 0 A_GiveToTarget ("Points",250)
 	LCHT B 5 A_GenericFreezeDeath
     LCHT B 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",250)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	LCHT BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

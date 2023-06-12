@@ -1,4 +1,4 @@
-ACTOR Froog 3798
+Actor Froog 3798
 {
 	Health 70
 	Radius 16
@@ -11,7 +11,7 @@ ACTOR Froog 3798
 	+NOINFIGHTING
 	+COUNTKILL
 +DONTHARMSPECIES
-	Monster
+	MONSTER
 	SeeSound "Turtsight"
     PainSound "Turtpain"
     ActiveSound "Turtactive"
@@ -22,13 +22,13 @@ ACTOR Froog 3798
 	{
 		Spawn:
 		FRGG ABCDEFGHIJKL 3 A_Look
-		loop
+		Loop
 		See:
 		FRGG ABCDEFGHIJKL 3 A_Chase
-		loop
+		Loop
 		Melee:
 		FRGG ABCD 4 A_FaceTarget
-		FRGG E 3 A_Playsound("BMBThrow")
+		FRGG E 3 A_PlaySound("BMBThrow")
 		FRGG ABCD 4 A_FaceTarget
 		FRGG E 3 A_SkelFist
 		Goto See
@@ -40,7 +40,7 @@ ACTOR Froog 3798
 		Burn:
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget ("Points",150)
-		TNT1 A 0 A_Playsound("FMTRFIRE")
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		FRGG AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -49,6 +49,6 @@ ACTOR Froog 3798
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	FRGG A 5 A_GenericFreezeDeath
     FRGG A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	}
 }

@@ -1,4 +1,4 @@
-actor Helmut 14564
+Actor Helmut 14564
 {
 	Tag "Helmut"
     Health 75
@@ -33,7 +33,7 @@ actor Helmut 14564
       Goto See
       PRIM A 5 A_FaceTarget 
 	  PRIM A 5 A_FaceTarget 
-	  TNT1 A 0 A_Playsound("TurtSight")
+	  TNT1 A 0 A_PlaySound("TurtSight")
       PRIM E 10 A_SkullAttack 
       PRIM E 5 A_Gravity
       Goto See 
@@ -45,12 +45,12 @@ actor Helmut 14564
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	PRIM A 5 A_GenericFreezeDeath
     PRIM A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 		Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	PRIM AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

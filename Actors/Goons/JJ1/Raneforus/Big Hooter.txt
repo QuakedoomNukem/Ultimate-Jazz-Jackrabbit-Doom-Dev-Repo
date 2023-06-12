@@ -1,4 +1,4 @@
-actor BigHooter 3194
+Actor BigHooter 3194
 {
    Tag "Big Hooter"
    Health 100
@@ -7,7 +7,7 @@ actor BigHooter 3194
    Radius 16 
    Height 40 
    Mass 40000
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +SOLID
@@ -32,12 +32,12 @@ actor BigHooter 3194
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	HOOT A 5 A_GenericFreezeDeath
     HOOT A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	HOOT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

@@ -1,4 +1,4 @@
-actor GiantTurtle 3902
+Actor GiantTurtle 3902
 {
    Health 5000
    PainChance 0
@@ -10,7 +10,7 @@ actor GiantTurtle 3902
     SeeSound "GIANTSEE"
    PainSound "GIANHURT"
   ActiveSound "Turtact"
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
@@ -37,7 +37,7 @@ actor GiantTurtle 3902
 	  GGON B 20 A_FaceTarget
 	  GGON C 8 A_CustomMeleeAttack (random (3, 5) *8, "GIANTMEL", "GIANTMEL")
 	  GGON C 8
-    goto See
+    Goto See
    Death: 
     GGON A 0 A_Scream
     GGON A 2 ThrustThingZ(0, random(2, 8), 0, 0)
@@ -59,7 +59,7 @@ actor GiantTurtle 3902
   }
 }
 
-ACTOR MuckSnot
+Actor MuckSnot
 {
   Radius 8
   Height 8
@@ -80,7 +80,7 @@ ACTOR MuckSnot
   }
 }
 
-ACTOR MuckSnot2
+Actor MuckSnot2
 {
   Radius 8
   Height 8

@@ -1,4 +1,4 @@
-ACTOR ElectroBlaster : Weapon 32767
+Actor ElectroBlaster : Weapon 32767
 {
 	Tag "Electro-Blaster"
 	Weapon.SelectionOrder 3207
@@ -13,7 +13,7 @@ ACTOR ElectroBlaster : Weapon 32767
    Weapon.BobSpeed 2
   Weapon.BobStyle Smooth
 	DamageFactor 0
-	+Floatbob
+	+FLOATBOB
 	 +NOGRAVITY
 	States
 	{
@@ -81,49 +81,49 @@ ACTOR ElectroBlaster : Weapon 32767
 	}
 }
 
-actor Neutronshot
+Actor Neutronshot
 {
     Radius 13
     Height 8
     Speed 30
     Damage 15
-	DamageType "JazzProj"
+	DamageType JazzProj
     Projectile
     +RANDOMIZE
     RenderStyle Add
     Alpha 0.9
-    scale 0.9
+    Scale 0.9
     SeeSound ""
-	Deathsound "BLSTRHIT"
+	DeathSound "BLSTRHIT"
     States
   {
   Spawn:
     NEUS A 6 bright
-    loop
+    Loop
   Death:
     JBLS EFGH 4 bright
     stop
    }
 }
 
-actor NeutronshotPow
+Actor NeutronshotPow
 {
     Radius 13
     Height 8
     Speed 30
     Damage 25
-	DamageType "JazzProj"
+	DamageType JazzProj
     Projectile
     +RANDOMIZE
     RenderStyle Add
     Alpha 0.95
     SeeSound ""
-	Deathsound "BLSTRHIT"
+	DeathSound "BLSTRHIT"
     States
   {
   Spawn:
     NEUP A 6 bright
-    loop
+    Loop
   Death:
   TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 0, CMF_AIMDIRECTION)
 	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -50, CMF_AIMDIRECTION)
@@ -138,20 +138,20 @@ actor NeutronshotPow
    }
 }
 
-actor MiniNeutron
+Actor MiniNeutron
 {
 	Radius 4
 	Height 5
 	Speed 30
 	Damage 5
 	Projectile
-	DamageType "JazzProj"
+	DamageType JazzProj
     Projectile
     +RANDOMIZE
     RenderStyle Add
     Alpha 0.95
     SeeSound ""
-	Deathsound "BLSTRHIT"
+	DeathSound "BLSTRHIT"
 	 States
      {
      Spawn:
@@ -164,7 +164,7 @@ actor MiniNeutron
 }
 
 
-ACTOR JJCell : Ammo 3900
+Actor JJCell : Ammo 3900
 {
   Inventory.PickupMessage "\ckElectro-Blaster \clAmmo"
   Inventory.Amount 3
@@ -184,7 +184,7 @@ ACTOR JJCell : Ammo 3900
   }
 }
 
-ACTOR Gun0PowerUpBox : Gun1PowerUpBox 3829
+Actor Gun0PowerUpBox : Gun1PowerUpBox 3829
 {
   States
   {
@@ -201,10 +201,10 @@ ACTOR Gun0PowerUpBox : Gun1PowerUpBox 3829
   }
 }
 
-ACTOR Gun0PowerUp : Inventory 
+Actor Gun0PowerUp : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	States
 	{
 	Spawn:

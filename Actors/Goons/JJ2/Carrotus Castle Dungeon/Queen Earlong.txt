@@ -1,4 +1,4 @@
-actor QueenEarlong 3715
+Actor QueenEarlong 3715
 {
 Tag "Queen Earlong"
 Health 6000
@@ -23,7 +23,7 @@ Obituary "%o was screamed to death by Queen Earlong."
   +BOSSDEATH
     +COUNTKILL
 +DONTHARMSPECIES
-Monster
+MONSTER
     States
     {
     Spawn:
@@ -78,11 +78,11 @@ Actor FallingBrickProj
   Speed 8
   Damage 2
   Projectile
-  +FloorClip
-  +Ripper
-  +DoomBounce
-  +CeilingHugger
-  +DontHurtSpecies
+  +FLOORCLIP
+  +RIPPER
+  +DOOMBOUNCE
+  +CEILINGHUGGER
+  +DONTHURTSPECIES
   States
   {
   Spawn:
@@ -103,13 +103,13 @@ Actor FallingBrick
   Speed 5
   Damage 2
   Projectile
-  DamageType "Queendamage"
+  DamageType QueenDamage
   DeathSound "BRICKBRK"
-  -NoGravity
-  -Float
-  +FloorClip
-  +DontHurtSpecies 
-  +SpawnCeiling
+  -NOGRAVITY
+  -FLOAT
+  +FLOORCLIP
+  +DONTHURTSPECIES 
+  +SPAWNCEILING
   Decal RevenantScorch
   States
   {

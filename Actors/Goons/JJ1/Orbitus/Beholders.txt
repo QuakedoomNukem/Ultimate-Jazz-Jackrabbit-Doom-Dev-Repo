@@ -1,4 +1,4 @@
-actor HBeholder 3169
+Actor HBeholder 3169
 {
   Tag "Horizontal Beholder"
   Health 100
@@ -7,12 +7,12 @@ actor HBeholder 3169
   Mass 10000000
   Speed 8
   PainChance 0
-  Monster
+  MONSTER
   +NOINFIGHTING
   +LOOKALLAROUND
   +FLOORCLIP
   +NOBLOOD
-  +NoIceDeath
+  +NOICEDEATH
   +COUNTKILL
 +DONTHARMSPECIES
   Obituary "%o was killed by the Horizontal Beholder."
@@ -36,11 +36,11 @@ actor HBeholder 3169
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	BEHO A 5 A_GenericFreezeDeath
     BEHO A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }
 
-actor VBeholder 3255
+Actor VBeholder 3255
 {
   Tag "Vertical Beholder"
   Health 120
@@ -49,13 +49,13 @@ actor VBeholder 3255
   Mass 10000000
   Speed 0
   PainChance 0
-  Monster
+  MONSTER
   +NOINFIGHTING
   +LOOKALLAROUND
   +FLOORCLIP
   +NOBLOOD
   +NOGRAVITY
-  +NoIceDeath
+  +NOICEDEATH
    +COUNTKILL
  +DONTHARMCLASS
   Obituary "%o was killed by the Vertical Beholder."
@@ -82,6 +82,6 @@ actor VBeholder 3255
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	VBEH A 5 A_GenericFreezeDeath
     VBEH A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

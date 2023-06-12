@@ -1,4 +1,4 @@
-actor RapidFire : CustomInventory  32538
+Actor RapidFire : CustomInventory  32538
 {
   Tag "Rapid Fire"
   Inventory.PickupMessage "\cnRapid Fire!"
@@ -13,20 +13,20 @@ actor RapidFire : CustomInventory  32538
   {
   Spawn:
 	PLSP ABCDEFGH 3 Bright
-	loop
+	Loop
   Pickup:
-  TNT1 A 0 A_SpawnItemex("Itemsparkle")
+  TNT1 A 0 A_SpawnItemex("ItemSparkle")
  	TNT1 A 0 A_GiveInventory("RapidfireCount")
 	Stop
   }
 }
 
-ACTOR RapidfireCount : Inventory 
+Actor RapidfireCount : Inventory 
 {
     Inventory.PickupSound ""
-	Inventory.Pickupmessage ""
+	Inventory.PickupMessage ""
 	Inventory.MaxAmount 8
-	inventory.Interhubamount 8
+	Inventory.InterHubAmount 8
 	States
 	{
 	Spawn:
@@ -35,15 +35,15 @@ ACTOR RapidfireCount : Inventory
 	}
 }
 
-actor JJHoverBoard : PowerupGiver 32002
+Actor JJHoverBoard : PowerupGiver 32002
 {
 	Tag "Hoverboard"
-	inventory.pickupmessage "\cfYou got a \ctHoverboard\cf!"
-	inventory.maxamount 0
-	powerup.duration -30
-	powerup.color "FF 00 FF", 0.1
+	Inventory.PickupMessage "\cfYou got a \ctHoverboard\cf!"
+	Inventory.MaxAmount 0
+	Powerup.Duration -30
+	Powerup.Color "FF 00 FF", 0.1
 	Inventory.PickupSound "Powerup"
-	powerup.type Flight
+	Powerup.Type Flight
 	-COUNTITEM
 	FloatBobStrength 0.5
 	+FLOATBOB
@@ -56,7 +56,7 @@ actor JJHoverBoard : PowerupGiver 32002
 		FLYT ABCDEDCBA 3
 		Loop
 		  Pickup:
-		  TNT1 A 0 A_SpawnItemex("Itemsparkle")
+		  TNT1 A 0 A_SpawnItemex("ItemSparkle")
 		  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
 	}
@@ -90,7 +90,7 @@ Actor JJInvul : CustomInventory 3136
 		A_SetBlend("Yellow",1.0,20,"Yellow");
 		A_GiveInventory("JJInvuln");
 	}
-	TNT1 A 0 A_SpawnItemex("Itemsparkle")
+	TNT1 A 0 A_SpawnItemex("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
 	}
@@ -107,7 +107,7 @@ Actor JJInvuln : PowerupGiver
 Actor JJTimer : Inventory
 {
   Inventory.MaxAmount 30
-  Inventory.InterhubAmount 0
+  Inventory.InterHubAmount 0
 }
 
 Actor JJEffectSpawner
@@ -184,15 +184,15 @@ Actor JJFade : CustomInventory
 	}
 }
 
-actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
+Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 {
 	Game Doom
 	Tag "Turbocharge"
-	inventory.pickupmessage "\cfTurbocharge!"
-	inventory.maxamount 0
-	powerup.duration -30
-	powerup.color "FF FF 00", 0.1
-	powerup.type Speed
+	Inventory.PickupMessage "\cfTurbocharge!"
+	Inventory.MaxAmount 0
+	Powerup.Duration -30
+	Powerup.Color "FF FF 00", 0.1
+	Powerup.Type Speed
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
 	States
@@ -206,20 +206,20 @@ actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 	}
 }
 
-ACTOR TurboTimeBox 3925
+Actor TurboTimeBox 3925
 {
   Height 30
   Radius 16
   Health 1
-  Damagefactor "Normal", 0
-  Damagefactor "Ice", 0
-  Damagefactor "Fire", 0
-  Damagefactor "JAZZPROJ", 1
-  Damagefactor "JAZZPROJFire", 1
-  Damagefactor "JazzProjIce", 1
-  +Shootable
+  DamageFactor "Normal", 0
+  DamageFactor "Ice", 0
+  DamageFactor "Fire", 0
+  DamageFactor "JAZZPROJ", 1
+  DamageFactor "JAZZPROJFire", 1
+  DamageFactor "JazzProjIce", 1
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:

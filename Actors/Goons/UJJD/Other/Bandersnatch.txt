@@ -1,4 +1,4 @@
-actor Bandersnatch 3772
+Actor Bandersnatch 3772
 {
    Tag "Bandersnatch"
    Health 100
@@ -8,7 +8,7 @@ actor Bandersnatch 3772
    Height 40 
    Mass 40000
    Damage 3
-   Monster 
+   MONSTER 
    +FLOORCLIP
    +NOBLOOD
    +NOINFIGHTING
@@ -34,7 +34,7 @@ actor Bandersnatch 3772
 	Death.JazzprojFire:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",200)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	BSNT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -43,6 +43,6 @@ actor Bandersnatch 3772
 	TNT1 A 0 A_GiveToTarget ("Points",200)
 	BSNT A 5 A_GenericFreezeDeath
     BSNT A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

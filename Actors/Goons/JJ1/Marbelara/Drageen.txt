@@ -1,12 +1,12 @@
-ACTOR Dragoon 3295
+Actor Dragoon 3295
 {
   Tag "Drageen"
   Obituary "%o was eaten by a Drageen." 
-  health 200
-  radius 12
-  height 48
+  Health 200
+  Radius 12
+  Height 48
   mass 99999
-  speed 5
+  Speed 5
   painchance 0
   damage 5
  SeeSound "Turtsight"
@@ -28,7 +28,7 @@ ACTOR Dragoon 3295
 		DRAG A 1 A_Look
 		TAIL A 0 A_SpawnItemEx("DBodyI1A",-10,0,5,0,0,0,0,0,0)
 		TAL2 A 0 A_SpawnItemEx("TailI2A",-10,0,5,0,0,0,0,0,0)
-		loop
+		Loop
 	See:
 		DRAG A 0 A_SpawnItemEx("TailI2A",-10,0,5,0,0,0,0,0,0)
 		Goto TrueSee
@@ -38,7 +38,7 @@ ACTOR Dragoon 3295
 		DRAG A 0 A_Weave(0, 1, 0, random(1,5))
 		DRAG A 1 A_Chase
 		DRAG A 0 A_SpawnItemEx("DBodyI1A",-10,0,5,0,0,0,0,0,0)
-		loop
+		Loop
 	Melee:
       DRAG A 4 A_FaceTarget 
       DRAG A 20 A_SargAttack

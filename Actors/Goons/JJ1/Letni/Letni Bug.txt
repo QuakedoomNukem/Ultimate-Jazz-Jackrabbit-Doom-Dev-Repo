@@ -1,4 +1,4 @@
-actor LetniBug 32531
+Actor LetniBug 32531
 {
 	Tag "Letni Bug"
     Health 30
@@ -21,7 +21,7 @@ actor LetniBug 32531
         IMHD A 5 A_Look
         Loop
     See:
-        IMHD A 0 A_SetFloorClip
+        IMHD A 0 A_SetFLOORCLIP
         IMHD A 3 A_Gravity
         IMHD AAAAA 3 A_Chase
         Loop
@@ -37,6 +37,6 @@ actor LetniBug 32531
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	IMHD A 5 A_GenericFreezeDeath
     IMHD A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

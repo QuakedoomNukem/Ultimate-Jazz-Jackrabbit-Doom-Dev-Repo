@@ -16,7 +16,7 @@ Actor JJBat 30024
 +DONTHARMSPECIES
 	SeeSound "BATSCRCH"
 	AttackSound "BATSCRCH"
-	Activesound "BATSCRCH"
+	ActiveSound "BATSCRCH"
     HitObituary "%o got knocked out of the park by a bat."
     States
     {
@@ -25,7 +25,7 @@ Actor JJBat 30024
         Loop
     See:
         BFAM AB 3 A_Chase
-		//BFAM A 0 A_Playsound("Wingflap")
+		//BFAM A 0 A_PlaySound("Wingflap")
         Loop
     Melee:
         BFAM A 3 A_FaceTarget
@@ -40,12 +40,12 @@ Actor JJBat 30024
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	BFAM A 5 A_GenericFreezeDeath
     BFAM A 1 A_FreezeDeathChunks
-    wait
+    Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	BFAM A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)

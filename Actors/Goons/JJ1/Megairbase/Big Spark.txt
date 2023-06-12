@@ -1,4 +1,4 @@
-ACTOR BigSparks 11913
+Actor BigSparks 11913
 {
   Tag "Big Spark"
   Health 100
@@ -7,7 +7,7 @@ ACTOR BigSparks 11913
   Mass 40000
   Speed 8
   PainChance 0
-  Monster
+  MONSTER
   +FLOAT
   +NOGRAVITY
    +NOBLOOD
@@ -37,7 +37,7 @@ ACTOR BigSparks 11913
   }
 }
 
-ACTOR SparkBall
+Actor SparkBall
 {
   Radius 8
   Height 8
@@ -58,7 +58,7 @@ ACTOR SparkBall
   }
 }
 
-actor SparkPiece
+Actor SparkPiece
 {
   Radius 6
   Height 8

@@ -1,4 +1,4 @@
-ACTOR FloatingSucker 25626
+Actor FloatingSucker 25626
 {
   Tag "Sucker"
   Health 50
@@ -29,15 +29,15 @@ ACTOR FloatingSucker 25626
   Melee:
 	FLSU AM 6 A_FaceTarget
     FLSU A 1 A_SargAttack
-	goto see
+	Goto see
   Death:
     DFTF A 4 A_SpawnItemEx("DeflatedSuckerFart")
-	TNT1 A 0 A_playsound("suckfart")
+	TNT1 A 0 A_PlaySound("suckfart")
 	stop
   }
 }
 
-actor DeflatedSuckerFart
+Actor DeflatedSuckerFart
 {
   Radius 6
   Height 8
@@ -60,7 +60,7 @@ actor DeflatedSuckerFart
   }
 }
 
-ACTOR DeflatedSucker 4112
+Actor DeflatedSucker 4112
 {
   Tag "Sucker"
   Health 50
@@ -86,13 +86,13 @@ ACTOR DeflatedSucker 4112
     DFTS ABCD 8 A_Look
     Loop
   See:
-	TNT1 A 0 A_Playsound("Suckwalk")
+	TNT1 A 0 A_PlaySound("Suckwalk")
 	DFTS ABCD 8 A_Chase
 	Loop
   Melee:
 	DFTS ABC 6 A_FaceTarget
     DFTS D 1 A_SargAttack
-	goto see
+	Goto see
     Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",50)
@@ -101,7 +101,7 @@ ACTOR DeflatedSucker 4112
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",50)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	DFTS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -110,6 +110,6 @@ ACTOR DeflatedSucker 4112
 	TNT1 A 0 A_GiveToTarget ("Points",50)
 	DFTS A 5 A_GenericFreezeDeath
     DFTS A 1 A_FreezeDeathChunks
-    wait
+    Wait
     }
 }

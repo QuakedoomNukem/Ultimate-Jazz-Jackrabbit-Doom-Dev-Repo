@@ -1,11 +1,11 @@
-ACTOR ShelBox 3238
+Actor ShelBox 3238
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -20,14 +20,14 @@ ACTOR ShelBox 3238
   }
 }
 
-ACTOR SlicerBox 3237
+Actor SlicerBox 3237
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -42,14 +42,14 @@ ACTOR SlicerBox 3237
   }
 }
 
-ACTOR BounceBox 3243
+Actor BounceBox 3243
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -64,14 +64,14 @@ ACTOR BounceBox 3243
   }
 }
 
-ACTOR SeekBox 3240
+Actor SeekBox 3240
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -86,14 +86,14 @@ ACTOR SeekBox 3240
   }
 }
 
-ACTOR RFBox 3239
+Actor RFBox 3239
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -108,14 +108,14 @@ ACTOR RFBox 3239
   }
 }
 
-ACTOR GasBox 3242
+Actor GasBox 3242
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -130,14 +130,14 @@ ACTOR GasBox 3242
   }
 }
 
-ACTOR IceBox 3241
+Actor IceBox 3241
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -152,14 +152,14 @@ ACTOR IceBox 3241
   }
 }
 
-actor RailBox 3248
+Actor RailBox 3248
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -174,14 +174,14 @@ actor RailBox 3248
   }
 }
 
-ACTOR CellBox 3244
+Actor CellBox 3244
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -196,14 +196,14 @@ ACTOR CellBox 3244
   }
 }
 
-ACTOR TNTBox 3990
+Actor TNTBox 3990
 {
   Height 24
   Radius 16
   Health 1
-  +Shootable
+  +SHOOTABLE
   +SOLID
-  +Noblood
+  +NOBLOOD
   States
   {
   Spawn:
@@ -218,7 +218,7 @@ ACTOR TNTBox 3990
   }
 }
 
-actor BoxFrag1
+Actor BoxFrag1
 {
   Radius 6
   Height 8
@@ -240,7 +240,7 @@ actor BoxFrag1
   }
 }
 
-actor BoxFrag2 : BoxFrag1
+Actor BoxFrag2 : BoxFrag1
 {
   States
   {

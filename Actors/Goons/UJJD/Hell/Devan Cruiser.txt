@@ -1,4 +1,4 @@
-ACTOR DevanCruiser 32325
+Actor DevanCruiser 32325
 {
   Tag "Devan Cruiser"
   Health 4000
@@ -7,7 +7,7 @@ ACTOR DevanCruiser 32325
   Mass 4000
   Speed 8
   PainChance 0
-  Monster
+  MONSTER
   +FLOAT
   +NOGRAVITY
   +BOSS

@@ -1,4 +1,4 @@
-ACTOR LargeTurtleMech 31527
+Actor LargeTurtleMech 31527
 {
   Tag "Large Turtle Mech"
   Health 300
@@ -7,7 +7,7 @@ ACTOR LargeTurtleMech 31527
   Mass 100000
   Speed 15
   PainChance 0
-  Monster
+  MONSTER
   +FLOORCLIP
   +SOLID
   +NOINFIGHTING

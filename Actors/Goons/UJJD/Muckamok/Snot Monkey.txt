@@ -10,11 +10,11 @@ Actor MuckMonkey 3797
   PainChance 0
   DamageFactor "MuckSnot", 0
   DamageFactor "MuckSnot2", 0
-  Monster
-  +FloorClip
+  MONSTER
+  +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
-  +Solid
+  +SOLID
     +COUNTKILL
 +DONTHARMSPECIES
   States
@@ -39,7 +39,7 @@ Actor MuckMonkey 3797
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",200)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	MUMO AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -48,6 +48,6 @@ Actor MuckMonkey 3797
 	TNT1 A 0 A_GiveToTarget ("Points",200)
 	MUMO A 5 A_GenericFreezeDeath
    MUMO A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

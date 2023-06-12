@@ -1,4 +1,4 @@
-ACTOR Labrat 13200
+Actor Labrat 13200
 {
   Tag "Lab Rat"
   Health 50
@@ -6,7 +6,7 @@ ACTOR Labrat 13200
   Radius 12
   Height 22
   Mass 10000
-  Monster
+  MONSTER
   PainChance 0
     +FLOORCLIP
 	+DONTHURTSPECIES
@@ -30,7 +30,7 @@ ACTOR Labrat 13200
 	  RATS A 5 A_Jumpifcloser(128, 2)
 	  Goto See
       RATS A 5 A_FaceTarget
-	  TNT1 A 0 A_Playsound("RATATTCK")
+	  TNT1 A 0 A_PlaySound("RATATTCK")
       RATS D 10 A_SargAttack 
 	  RATS E 4 A_Gravity
       Goto See  
@@ -42,7 +42,7 @@ ACTOR Labrat 13200
 	Burn:
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Playsound("FMTRFIRE")
+	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	RATS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -51,6 +51,6 @@ ACTOR Labrat 13200
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	RATS A 5 A_GenericFreezeDeath
     RATS A 1 A_FreezeDeathChunks
-    wait
+    Wait
   }
 }

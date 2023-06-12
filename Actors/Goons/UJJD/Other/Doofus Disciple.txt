@@ -1,4 +1,4 @@
-ACTOR ElementGoon5 4037
+Actor ElementGoon5 4037
 {
   Tag "Doofus Disciple"
   Health 700
@@ -7,7 +7,7 @@ ACTOR ElementGoon5 4037
   Mass 100000
   Speed 10
   PainChance 200
-  Monster
+  MONSTER
   +FLOAT
   +FLOATBOB
   +NOGRAVITY
