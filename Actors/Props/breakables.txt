@@ -1,0 +1,141 @@
+
+Actor CeraPot 3399
+{
+	Height 24
+	Radius 12
+	Health 2
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+FLOORCLIP
+	+DONTTHRUST
+	+SOLID
+	States
+	{
+	Spawn:
+		CERA B 0
+		CERA B 0 A_Jump (256, "PotA", "PotB")
+	PotA:
+		CERA B -1
+		Stop
+	PotB:
+		CERA I -1
+		Stop
+	Death:
+		TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
+		TNT1 A 0 A_PlaySound("Break1")
+		CERA J -1
+		Stop
+	}
+}
+
+Actor GlassSpawner 4125
+{
+Height 32
+Radius 32
+Speed 0
+Health 1
++NOGRAVITY
++SHOOTABLE
+-COUNTKILL
++NOBLOOD
++NOINFIGHTING
+States
+{
+	Spawn:
+	PLEX A 4
+	Loop
+	Death:
+	TNT1 A 0 A_PlaySound ("JJGLASS")
+ 	TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("GlassPiece",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	Stop
+	}
+}
+
+Actor GlassPiece
+{
+  Radius 16
+  Height 0
+  Mass 5
+  Speed 15
+  Damage 1
+  RenderStyle Add
+  PROJECTILE
+  -NOGRAVITY
+  +NOINFIGHTING
+    +FLATSPRITE
+  +NOBLOOD
+  +TOUCHY
+  +Corpse
+  +RANDOMIZE
+  +NOEXPLODEFLOOR
+    +LOWGRAVITY
+  Gravity 0.6
+  States
+  {
+  Spawn:
+     TNT1 A 0
+     TNT1 A 0 A_Jump(255,"Standard","Small","Tiny","XLarge")
+  Standard:	
+     BGLS ABC 1
+	 Loop
+  Small:	
+     BGLS ABC 1
+	 Loop	
+  Tiny:	
+     BGLS ABC 1
+	 Loop
+  XLarge:	
+     BGLS ABC 1
+	 Loop	 
+  Death:
+     BGLS A 1
+	 BGLS B 1
+	 BGLS C -1
+     Loop
+  }
+}
+
+Actor MetalCrate 3931
+{
+  Health 1
+  Height 32
+  Radius 12
+  Health 1
+  +SHOOTABLE
+  +SOLID
+  +NOBLOOD
+  States
+  {
+  Spawn:
+    CRAT X -1
+    Stop
+  Death:
+		TNT1 A 0 A_PlaySound("cratedie")
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
+}
+
+Actor Santa 3617
+{
+	Health 2
+	Radius 32
+	Height 48
+	Mass 10000
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+FLOORCLIP
+	+DONTTHRUST
+	States
+	{
+	Spawn:
+	SANT A -1
+	Stop
+	Death:
+	SANT B 0
+	SANT B -1
+	Stop
+	}
+}

@@ -256,6 +256,15 @@
 #include "actors/Goons/UJJD/XMas/Snow Mongrel.txt"
 #include "actors/Goons/UJJD/XMas/Snow Schwarzenguard.txt"
 
-//Other Stuff, not splitting Decorations into 30+ separate text files
-#include "actors/Decorations.txt"
+//Props
+#include "actors/props/decos.txt"
+#include "actors/props/breakables.txt"
+#include "actors/props/effects.txt"
+#include "actors/props/hazards.txt"
+#include "actors/props/lights.txt"
+#include "actors/props/models.txt"
+#include "actors/props/spawners.txt"
+#include "actors/props/special.txt"
+
+//Unsorted
 #include "actors/others.txt"
