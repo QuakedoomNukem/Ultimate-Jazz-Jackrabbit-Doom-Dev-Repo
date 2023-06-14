@@ -22,6 +22,7 @@ See CREDITS.md
 - Bulk Rename Utility : https://www.bulkrenameutility.co.uk/Download.php
 - GZDoom : https://devbuilds.drdteam.org/gzdoom/
 - LameXP : http://lamexp.sourceforge.net/page_3.php
+- Doom Builder 2 : http://www.doombuilder.com/files/builder2_setup_1553.exe
 - Ultimate DoomBuilder : https://github.com/jewalky/UltimateDoomBuilder
 - Notepad++ : https://notepad-plus-plus.org
 - Slade3 : https://github.com/sirjuddington/SLADE/releases

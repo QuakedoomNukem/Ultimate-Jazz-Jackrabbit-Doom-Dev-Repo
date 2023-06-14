@@ -1,3 +1,4 @@
+
 Actor AnimatedComputer1 3344
 {
 	Height 48
@@ -239,12 +240,13 @@ Actor BattleShipFlameCeiling 3896
 {
 	Radius 16
 	Height 32
+	+BRIGHT
 	+SPAWNCEILING
 	+NOGRAVITY
 	States
 	{
 	Spawn:
-		BSFM ABCDEFGH 1 BRIGHT
+		BSFM ABCDEFGH 1
 		Loop
 	}
 }
@@ -256,7 +258,7 @@ Actor BattleShipFlameFloor 3897
 	States
 	{
 	Spawn:
-		BSFG ABCDEFGH 1 BRIGHT
+		BSFG ABCDEFGH 1
 		Loop
 	}
 }
@@ -324,18 +326,6 @@ Actor BigBox 3300
 	}
 }
 
-Actor BigHellBones 3284
-{
-	Height 192
-	Radius 64
-	States
-	{
-	Spawn:
-		HSKE A -1 //Skybox
-		Stop
-	}
-}
-
 Actor BigRock 3301
 {
 	Height 48
@@ -349,7 +339,6 @@ Actor BigRock 3301
 		Stop
 	}
 }
-
 
 Actor BloodPrize 3356
 {
@@ -888,7 +877,7 @@ Actor ChesherCat1 3452
 	}
 }
 
-Actor cheshercat2 : ChesherCat1 3453
+Actor ChesherCat2 : ChesherCat1 3453
 {
 	Height 20
 	Radius 8
@@ -1728,7 +1717,7 @@ Actor DStarTank 3410
 	}
 }
 
-Actor dukeprize 3366
+Actor DukePrize 3366
 {
 	Height 16
 	Radius 16
@@ -1754,323 +1743,308 @@ Actor DwarsDoll 3199
 	}
 }
 
-Actor easterbasket1 3415
+Actor EasterBasket1 3415
 {
-Height 72
-Radius 28
-+SOLID
-States
+	Height 72
+	Radius 28
+	+SOLID
+	States
 	{
 	Spawn:
-	east a -1
-	Stop
+		EAST A -1
+		Stop
 	}
 }
 
-Actor easterbasket2 3416
+Actor EasterBasket2 : EasterBasket1 3416
 {
-Height 28
-Radius 28
-+SOLID
-States
+	Height 28
+	States
 	{
 	Spawn:
-	east b -1
-	Stop
+		EAST B -1
+		Stop
 	}
 }
 
-Actor easterbasket3 3419
+Actor EasterBasket3 : EasterBasket1 3419
 {
-Height 72
-Radius 28
-+SOLID
-States
+	States
 	{
 	Spawn:
-	east e -1
-	Stop
+		EAST E -1
+		Stop
 	}
 }
 
 Actor EasterBeet 3427
 {
-Height 28
-Radius 24
-+SOLID
-States
+	Height 28
+	Radius 24
+	+SOLID
+	States
 	{
 	Spawn:
-	east m -1
-	Stop
+		EAST M -1
+		Stop
 	}
 }
 
 Actor EasterCarrotPillar 3425
 {
-Height 80
-Radius 12
-+SOLID
-States
+	Height 80
+	Radius 12
+	+SOLID
+	States
 	{
 	Spawn:
-	east k -1
-	Stop
+		EAST K -1
+		Stop
 	}
 }
 
 Actor EasterCarrotCeiling 3426
 {
-Height 64
-Radius 12
-+SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
+	Height 64
+	Radius 12
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	east l -1
-	Stop
+		EAST L -1
+		Stop
 	}
 }
 
-Actor easterplant1 3424
+Actor EasterPlant1 3424
 {
-Height 100
-Radius 8
-+SPAWNCEILING
-+NOGRAVITY
-States
+	Height 100
+	Radius 8
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	east j -1
-	Stop
+		EAST J -1
+		Stop
 	}
 }
 
 Actor EasterPumpkins 3429
 {
-Height 24
-Radius 20
-+SOLID
-States
+	Height 24
+	Radius 20
+	+SOLID
+	States
 	{
 	Spawn:
-	epum a -1
-	Stop
+		EPUM A -1
+		Stop
 	}
 }
 
-Actor eastertree 3423
+Actor EasterTree 3423
 {
-Height 160
-Radius 12
-+SOLID
-States
+	Height 160
+	Radius 12
+	+SOLID
+	States
 	{
 	Spawn:
-	east i -1
-	Stop
+		EAST I -1
+		Stop
 	}
 }
 
-Actor EasterTree1 3430
+Actor EasterTree1 : EasterTree 3430
 {
-Height 72
-Radius 12
-+SOLID
-States
+	Height 72
+	States
 	{
 	Spawn:
-	etre a -1
-	Stop
+		ETRE A -1
+		Stop
 	}
 }
 
-Actor EasterTree2 3431
+Actor EasterTree2 : EasterTree 3431
 {
-Height 28
-Radius 12
-+SOLID
-States
+	Height 28
+	States
 	{
 	Spawn:
-	etre b -1
-	Stop
+		ETRE B -1
+		Stop
 	}
 }
 
-Actor EasterTree3 3432
+Actor EasterTree3 : EasterTree 3432
 {
-Height 56
-Radius 12
-+SOLID
-States
+	Height 56
+	States
 	{
 	Spawn:
-	etre c -1
-	Stop
+		ETRE C -1
+		Stop
 	}
 }
 
-Actor EasterTree4 3433
+Actor EasterTree4 : EasterTree 3433
 {
-Height 120
-Radius 8
-+SOLID
-States
+	Height 120
+	Radius 8
+	States
 	{
 	Spawn:
-	etre d -1
-	Stop
+		ETRE D -1
+		Stop
 	}
 }
 
 Actor EasterusCastle 3929
 {
-Height 192
-Radius 16
-Scale 2.0
-States
+	Height 192
+	Radius 16
+	Scale 2.0
+	States
 	{
 	Spawn:
-	ECSL A -1
-	Stop
+		ECSL A -1
+		Stop
 	}
 }
 
 Actor EasterusStock 3930
 {
-Height 224
-Radius 16
-States
+	Height 224
+	Radius 16
+	States
 	{
 	Spawn:
-	EAST N -1
-	Stop
+		EAST N -1
+		Stop
 	}
 }
 
 Actor EEFish 3859
 {
-Height 2
-Radius 16
--SOLID
-States
+	Height 2
+	Radius 16
+	-SOLID
+	States
 	{
 	Spawn:
-	nemo a -1
-	Stop
+		NEMO A -1
+		Stop
 	}
 }
 
 Actor EEMermaid 3858
 {
-Height 82
-Radius 16
-+SOLID
-+NOGRAVITY
-States
+	Height 82
+	Radius 16
+	+SOLID
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	aril a -1
-	Stop
+		ARIL A -1
+		Stop
 	}
 }
 
-Actor egg1 3420
+Actor Egg1 3420
 {
-Height 16
-Radius 8
-+SOLID
-States
+	Height 16
+	Radius 8
+	+SOLID
+	States
 	{
 	Spawn:
-	east f -1
-	Stop
+		EAST F -1
+		Stop
 	}
 }
 
-Actor egg2 3421
+Actor Egg2 : Egg1 3421
 {
-Height 24
-Radius 8
-+SOLID
-States
+	Height 24
+	States
 	{
 	Spawn:
-	east g -1
-	Stop
+		EAST G -1
+		Stop
 	}
 }
 
-Actor egg3 3422
+Actor Egg3 : Egg1 3422
 {
-Height 16
-Radius 12
-+SOLID
-States
+	Radius 12
+	States
 	{
 	Spawn:
-	east h -1
-	Stop
+		EAST H -1
+		Stop
 	}
 }
 
 Actor ElectricPillar 3289
 {
-  +FLOORCLIP
-  +SOLID
-  Height 60
-  Radius 12
-  States
-  {
-  Spawn:
-  ELEP A 0 A_PlaySoundEx ("ELECPILL", "auto", 1, -1)
-  ELEP ABCD 3 bright
-    Loop
-  }
+	+BRIGHT
+	+FLOORCLIP
+	+SOLID
+	Height 60
+	Radius 12
+	States
+	{
+	Spawn:
+		ELEP A 0 NoDelay A_StartSound ("ELECPILL", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		ELEP ABCD 3
+		Loop
+	}
 }
-
 
 Actor EvaEarlong 25629
 {
-  Radius 16
-  Height 52
-  ProjectilePassHeight -16
-  -SOLID
-  States
-  {
-  Spawn:
-    EVEL ABCDEFGH 4
-    Loop
-  }
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	-SOLID
+	States
+	{
+	Spawn:
+		EVEL ABCDEFGH 4
+		Loop
+	}
 }
 
 Actor EvaPillar 3396
 {
-Height 155
-Radius 24
-+SOLID
-States
+	Height 155
+	Radius 24
+	+SOLID
+	States
 	{
 	Spawn:
-	cast g -1
-	Stop
+		CAST G -1
+		Stop
 	}
 }
 
 Actor ExitSign 3984 //Candelabra Replaces Candelabra 35
 {
-+SOLID
-  Radius 12
-  Height 30
-   States
-  {
-  Spawn:
-    EXIT A -1
-    Stop
-}
+	Radius 12
+	Height 30
+	+SOLID
+	States
+	{
+	Spawn:
+		EXIT A -1
+		Stop
+	}
 }
 
 Actor ExoticusCeilBlade 32541
@@ -2083,7 +2057,8 @@ Actor ExoticusCeilBlade 32541
 	States
 	{
 	Spawn:
-	EXOT A -1
+		EXOT A -1
+		Stop
 	}
 }
 
@@ -2095,7 +2070,8 @@ Actor ExoticusFlBlade 32542
 	States
 	{
 	Spawn:
-	EXOT B -1
+		EXOT B -1
+		Stop
 	}
 }
 
@@ -2107,47 +2083,43 @@ Actor FanolintPlant1 3218
 	States
 	{
 	Spawn:
-	FANN A -1
-	Stop
+		FANN A -1
+		Stop
 	}
 }
 
-Actor FanolintPlant2 3219
+Actor FanolintPlant2 : FanolintPlant1 3219
 {
 	Radius 12
 	Height 20
-	+SOLID
 	States
 	{
 	Spawn:
-	FANN B -1
-	Stop
+		FANN B -1
+		Stop
 	}
 }
 
-Actor FanolintPlant3 3220
+Actor FanolintPlant3 : FanolintPlant1 3220
 {
 	Radius 8
-	Height 48
-	+SOLID
 	States
 	{
 	Spawn:
-	FANN C -1
-	Stop
+		FANN C -1
+		Stop
 	}
 }
 
-Actor FanolintPlant4 3221
+Actor FanolintPlant4 : FanolintPlant1 3221
 {
-	Radius 16
 	Height 8
 	-SOLID
 	States
 	{
 	Spawn:
-	FANN D -1
-	Stop
+		FANN D -1
+		Stop
 	}
 }
 
@@ -2159,77 +2131,73 @@ Actor FanolintSpike 3222
 	States
 	{
 	Spawn:
-	FANN E -1
-	Stop
+		FANN E -1
+		Stop
 	}
 }
 
-
-Actor Gardenbush2 32488
+Actor GardenBush2 32488
 {
-  Radius 8
-  Height 32
-  +SOLID
-  States
-  {
-  Spawn:
-    PLAN D -1
-    Stop
-  }
+	Radius 8
+	Height 32
+	+SOLID
+	States
+	{
+	Spawn:
+		PLAN D -1
+		Stop
+	}
 }
 
-Actor Gardenbush3 32487
+Actor GardenBush3 32487
 {
-  Radius 12
-  Height 128
-  +SOLID
-  States
-  {
-  Spawn:
-    PLAN E -1
-    Stop
-  }
+	Radius 12
+	Height 128
+	+SOLID
+	States
+	{
+	Spawn:
+		PLAN E -1
+		Stop
+	}
 }
 
-Actor Gardentree1 32491
+Actor GardenTree1 32491
 {
-  Radius 12
-  Height 120
-  +SOLID
-  States
-  {
-  Spawn:
-    PLAN A -1
-    Stop
-  }
+	Radius 12
+	Height 120
+	+SOLID
+	States
+	{
+	Spawn:
+		PLAN A -1
+		Stop
+	}
 }
 
-Actor Gardentree2 32490
+Actor GardenTree2 : GardenTree1 32490
 {
-  Radius 12
-  Height 64
-  +SOLID
-  States
-  {
-  Spawn:
-    PLAN B -1
-    Stop
-  }
+	Height 64
+	States
+	{
+	Spawn:
+		PLAN B -1
+		Stop
+	}
 }
 
 Actor GBAStool 3723
 {
-  Height 24
-  Radius 8
-  +SOLID
-  States
-  {
-  Spawn:
-    STOL A -1
-    Stop
+	Height 24
+	Radius 8
+	+SOLID
+	States
+	{
+	Spawn:
+		STOL A -1
+		Stop
 	}
 }
-
 
 Actor GiantSpaz 3607
 {
@@ -2239,319 +2207,287 @@ Actor GiantSpaz 3607
 	States
 	{
 	Spawn:
-	WNTR J -1
-	Stop
+		WNTR J -1
+		Stop
 	}
 }
 
 Actor Gossamer 3785
 {
-  Height 76
-  Radius 16
-  +SOLID
-  States
-  {
-  Spawn:
-    HTEG A -1
-    Stop
+	Height 76
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		HTEG A -1
+		Stop
 	}
 }
 
 Actor GraveStone1 3434
 {
-Height 32
-Radius 16
-+SOLID
-States
+	Height 32
+	Radius 16
+	+SOLID
+	States
 	{
 	Spawn:
-	haut a -1
-	Stop
+		HAUT A -1
+		Stop
 	}
 }
 
-Actor GraveStone2 3435
+Actor GraveStone2 : GraveStone1 3435
 {
-Height 56
-Radius 16
-+SOLID
-States
+	Height 56
+	States
 	{
 	Spawn:
-	haut b -1
-	Stop
+		HAUT B -1
+		Stop
 	}
 }
-
-
 
 Actor GRoomDoll 3208
 {
-Radius 16
-Height 16
--SOLID
-States
-{
-Spawn:
-DDOL B -1
-Stop
+	Radius 16
+	Height 16
+	-SOLID
+	States
+	{
+	Spawn:
+		DDOL B -1
+		Stop
+	}
 }
-}
-
 
 Actor HangingWire1 3986  //NonSOLIDMeat5 Replaces NonSOLIDMeat5 62
 {
-+SPAWNCEILING
-+NOGRAVITY
-  Height 92
-  Radius 8
-  States
+	Height 92
+	Radius 8
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	WIR5 A -1
-	Stop
-}
+		WIR5 A -1
+		Stop
+	}
 }
 
 Actor HangingWire1SOLID : HangingWire1 3987 //Meat5 Replaces Meat5 53
-{
- +SOLID
-}
+{ +SOLID }
 
-Actor HangingWire2 3988 //NonSOLIDMeat4 Replaces NonSOLIDMeat4 60
+Actor HangingWire2 : HangingWire1 3988 //NonSOLIDMeat4 Replaces NonSOLIDMeat4 60
 {
-  Height 76
-  Radius 8
-  +SPAWNCEILING
-+NOGRAVITY
-  States
+	Height 76
+	States
 	{
 	Spawn:
-	WIR4 A -1
-	Stop
-}
+		WIR4 A -1
+		Stop
+	}
 }
 
 Actor HangingWire2SOLID : HangingWire2 3989 //Meat4 Replaces Meat4 52
-{
-+SOLID
-}
+{ +SOLID }
 
-Actor HangingWire3 3991 //HangingCorpse Replaces HangingCorpse 51
+Actor HangingWire3 : HangingWire1 3991 //HangingCorpse Replaces HangingCorpse 51
 {
-  Radius 8
-  Height 56
-    +SPAWNCEILING
-+NOGRAVITY
-  States
+	Height 56
+	States
 	{
 	Spawn:
-	WIR3 A -1
-	Stop
-}
+		WIR3 A -1
+		Stop
+	}
 }
 
 Actor HangingWire3SOLID : HangingWire3 3992 //NonSOLIDMeat3 Replaces NonSOLIDMeat3 61
-{
-  +SOLID
-}
+{ +SOLID }
 
 Actor HansProp 28734
 {
-Height 104
-Radius 24
-
-+SOLID
-States
-{
-Spawn:
-HANS A -1
-Stop
-}
+	Height 104
+	Radius 24
+	+SOLID
+	States
+	{
+	Spawn:
+		HANS A -1
+		Stop
+	}
 }
 
 Actor HauntedChimny 3437
 {
-Height 84
-Radius 12
-+SOLID
-States
+	Height 84
+	Radius 12
+	+SOLID
+	States
 	{
 	Spawn:
-	haut d -1
-	Stop
+		HAUT D -1
+		Stop
 	}
 }
 
 Actor HauntedGargoyle 3436
 {
-Height 24
-Radius 16
-+SOLID
-States
+	Height 24
+	Radius 16
+	+SOLID
+	States
 	{
 	Spawn:
-	haut c -1
-	Stop
+		HAUT C -1
+		Stop
 	}
 }
 
 Actor HauntedPlant1 3774
 {
-  Height 64
-  Radius 16
-  +SOLID
-  States
-  {
-  Spawn:
-    HHTR A -1
-    Stop
+	Height 64
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		HHTR A -1
+		Stop
 	}
 }
 
 Actor HauntedPlant2 3775
 {
-  Height 64
-  Radius 16
-  +SOLID
-  States
-  {
-  Spawn:
-    HHTR B -1
-    Stop
+	Height 64
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		HHTR B -1
+		Stop
 	}
 }
 
 Actor HauntedPlant3 3776
 {
-  Height 32
-  Radius 16
-  +SOLID
-  States
-  {
-  Spawn:
-    HHTR C -1
-    Stop
+	Height 32
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		HHTR C -1
+		Stop
 	}
 }
 
 Actor HauntedPlant4 3777
 {
-  Height 30
-  Radius 14
-  +SOLID
-  States
-  {
-  Spawn:
-    HHTR D -1
-    Stop
+	Height 30
+	Radius 14
+	+SOLID
+	States
+	{
+	Spawn:
+		HHTR D -1
+		Stop
 	}
 }
 
 Actor HauntedTree 3438
 {
-Height 420
-Radius 32
-+SOLID
-States
+	Height 420
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	haut e -1
-	Stop
+		HAUT E -1
+		Stop
 	}
 }
 
-
 Actor HellBody1 3269
 {
-  +FLOORCLIP
-  Height 0
-  Radius 16
-  States
-  {
-  Spawn:
-  JZSK A -1
-    Loop
-  }
+	Height 0
+	Radius 16
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		JZSK A -1
+		Loop
+	}
 }
 
-Actor HellBody2 3270
+Actor HellBody2 : HellBody1 3270
 {
-  +FLOORCLIP
-  Height 24
-  Radius 12
-  +SOLID
-  States
-  {
-  Spawn:
-  JZSK B -1
-    Loop
-  }
+	Height 24
+	Radius 12
+	+SOLID
+	States
+	{
+	Spawn:
+		JZSK B -1
+		Loop
+	}
 }
 
-Actor HellBody3 3271
+Actor HellBody3 : HellBody1 3271
 {
-  +FLOORCLIP
-  Height 0
-  Radius 16
-  States
-  {
-  Spawn:
-  JZSK C -1
-    Loop
-  }
+	States
+	{
+	Spawn:
+		JZSK C -1
+		Loop
+	}
 }
 
-Actor HellBody4 3272
+Actor HellBody4 : HellBody1 3272
 {
-  +FLOORCLIP
-  Height 0
-  Radius 16
-  States
-  {
-  Spawn:
-  JZSK D -1
-    Loop
-  }
+	States
+	{
+	Spawn:
+		JZSK D -1
+		Loop
+	}
 }
 
-Actor HellBody5 3273
+Actor HellBody5 : HellBody1 3273
 {
-  +FLOORCLIP
-  Height 0
-  Radius 16
-  States
-  {
-  Spawn:
-  JZSK E -1
-    Loop
-  }
+	States
+	{
+	Spawn:
+		JZSK E -1
+		Loop
+	}
 }
 
-Actor HellBody6 3274
+Actor HellBody6 : HellBody1 3274
 {
-  +FLOORCLIP
-  Height 0
-  Radius 16
-  States
-  {
-  Spawn:
-  JZSK F -1
-    Loop
-  }
+	States
+	{
+	Spawn:
+		JZSK F -1
+		Loop
+	}
 }
 
 Actor HellPillar 23331 //Techpillar
 {
- Radius 8
-  Height 128
-  +SOLID
-  States
-  {
-  Spawn:
-    HPIL A -1
-    Stop
-  }
+	Radius 8
+	Height 128
+	+SOLID
+	States
+	{
+	Spawn:
+		HPIL A -1
+		Stop
+	}
 }
 
 Actor HellSkull 32544
@@ -2562,105 +2498,73 @@ Actor HellSkull 32544
 	States
 	{
 	Spawn:
-	HELL A -1
-	Stop
-}
-}
-
-Actor HellStag1 3285
-{
-  +SOLID
-  Height 120
-  Radius 56
-  States
-  {
-  Spawn:
-  HSTG A -1 //Skybox
-    Stop
-  }
+		HELL A -1
+		Stop
+	}
 }
 
 Actor HellStag2 3286
 {
-  +SOLID
-  +SPAWNCEILING
-  +NOGRAVITY
-  Height 120
-  Radius 56
-  States
-  {
-  Spawn:
-  HSTG B -1
-    Stop
-  }
+	Height 120
+	Radius 56
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		HSTG B -1
+		Stop
+	}
 }
 
-Actor HellStag3 3287
+Actor HellStag3 : HellStag2 3287
 {
-  +SOLID
-  +SPAWNCEILING
-  +NOGRAVITY
-  Height 90
-  Radius 10
-  States
-  {
-  Spawn:
-  HSTG C -1
-    Stop
-  }
+	Height 90
+	Radius 10
+	States
+	{
+	Spawn:
+		HSTG C -1
+		Stop
+	}
 }
 
 Actor Helltree 3983 //33
 {
-  Radius 16
-  Height 128
-  ProjectilePassHeight -16
-  +SOLID
-  States
-  {
-  Spawn:
-    HTRE A -1
-    Stop
-  }
+	Radius 16
+	Height 128
+	ProjectilePassHeight -16
+	+SOLID
+	States
+	{
+	Spawn:
+		HTRE A -1
+		Stop
+	}
 }
 
-Actor HellTree2 3280
+Actor HHPrize1 3364
 {
-+SOLID
-  Height 160
-  Radius 64
-  States
-  {
-  Spawn:
-  DTRE A -1 //Skybox
-    Stop
-  }
+	+NOGRAVITY
+	Height 16
+	Radius 16
+	States
+	{
+	Spawn:
+		HHDL A -1
+		Stop
+	}
 }
 
-Actor hhPrize1 3364
+Actor HHPrize2 : HHPrize1 3365
 {
-+NOGRAVITY
-Height 16
-Radius 16
-States
-{
-Spawn:
-hhdl A -1
-Stop
-}
-}
-
-Actor hhPrize2 3365
-{
-+NOGRAVITY
-Height 16
-Radius 16
-States
-{
-Spawn:
-hhdl b -1
-Stop
-}
+	States
+	{
+	Spawn:
+		HHDL B -1
+		Stop
+	}
 }
 
 Actor HocusPocus 32540
@@ -2671,51 +2575,49 @@ Actor HocusPocus 32540
 	States
 	{
 	Spawn:
-	JZEE A -1
-	Stop
+		JZEE A -1
+		Stop
 	}
 }
 
-
 Actor IcarusPlush 3374
 {
-+NOGRAVITY
-Scale 0.6
-Height 16
-Radius 16
-States
-{
-Spawn:
-ICLV A -1
-Stop
+	Height 16
+	Radius 16
+	Scale 0.6
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		ICLV A -1
+		Stop
+	}
 }
-}
-
 
 Actor IndustriusSign 3195
 {
-Radius 6
-Height 96
-+SOLID
-States
-{
-Spawn:
-INDU A -1
-Stop
-}
+	Radius 6
+	Height 96
+	+SOLID
+	States
+	{
+	Spawn:
+		INDU A -1
+		Stop
+	}
 }
 
 Actor IndustriusSpike 3196
 {
-Radius 8
-Height 16
--SOLID
-States
-{
-Spawn:
-INDU B -1
-Stop
-}
+	Radius 8
+	Height 16
+	-SOLID
+	States
+	{
+	Spawn:
+		INDU B -1
+		Stop
+	}
 }
 
 Actor JackInABox 3606
@@ -2726,11 +2628,10 @@ Actor JackInABox 3606
 	States
 	{
 	Spawn:
-	WNTR I -1
-	Stop
+		WNTR I -1
+		Stop
 	}
 }
-
 
 Actor JazzFan 3253
 {
@@ -2740,630 +2641,578 @@ Actor JazzFan 3253
 	States
 	{
 	Spawn:
-	JGUY A -1
-	Stop
+		JGUY A -1
+		Stop
 	}
 }
 
 Actor JazzPillar 3395
 {
-Height 155
-Radius 24
-+SOLID
-States
+	Height 155
+	Radius 24
+	+SOLID
+	States
 	{
 	Spawn:
-	cast f -1
-	Stop
+		CAST F -1
+		Stop
 	}
 }
 
 Actor JazzTree1 3980 //TorchTree Replaces TorchTree //43
 {
-  Radius 12
-  Height 112
-  +SOLID
+	Radius 12
+	Height 112
+	+SOLID
 	States
 	{
 	Spawn:
-	JTR1 A -1
-	Stop
-}
+		JTR1 A -1
+		Stop
+	}
 }
 
-Actor JazzTree2 3981 //BigTree Replaces BigTree //54
+Actor JazzTree2 : JazzTree1 3981 //BigTree Replaces BigTree //54
 {
-  Radius 12
-  Height 112
-  +SOLID
 	States
 	{
 	Spawn:
-	JTR2 A -1
-	Stop
-}
+		JTR2 A -1
+		Stop
+	}
 }
 
 Actor Jillee 3905
 {
-Height 64
-Radius 16
-Scale 0.75
-+SOLID
-States
+	Height 64
+	Radius 16
+	Scale 0.75
+	+SOLID
+	States
 	{
 	Spawn:
-	jill a -1
-	Stop
+		JILL A -1
+		Stop
 	}
 }
 
 Actor JJALupin 3838
 {
-Height 48
-Radius 12
-+SOLID
-States
+	Height 48
+	Radius 12
+	+SOLID
+	States
 	{
 	Spawn:
-	NPC4 D -1
-	Stop
+		NPC4 D -1
+		Stop
 	}
 }
 
-Actor JJAAstronaut 3839
+Actor JJAAstronaut : JJALupin 3839
 {
-Height 40
-Radius 12
-+SOLID
-States
+	Height 40
+	States
 	{
 	Spawn:
-	NPC1 B -1
-	Stop
+		NPC1 B -1
+		Stop
 	}
 }
 
-Actor JJAPilot 3840
+Actor JJAPilot : JJALupin 3840
 {
-Height 36
-Radius 12
-+SOLID
-States
+	Height 36
+	States
 	{
 	Spawn:
-	NPC3 C -1
-	Stop
+		NPC3 C -1
+		Stop
 	}
 }
 
-Actor JJAPolice 3841
+Actor JJAPolice : JJALupin 3841
 {
-Height 40
-Radius 12
-+SOLID
-States
+	Height 40
+	States
 	{
 	Spawn:
-	NPC1 A -1
-	Stop
+		NPC1 A -1
+		Stop
 	}
 }
 
-Actor JJAPolice2 3842
+Actor JJAPolice2 : JJALupin 3842
 {
-Height 32
-Radius 12
-+SOLID
-States
+	Height 32
+	States
 	{
 	Spawn:
-	NPC2 B -1
-	Stop
+		NPC2 B -1
+		Stop
 	}
 }
 
-Actor JJAPrisoner 3843
+Actor JJAPrisoner : JJALupin 3843
 {
-Height 32
-Radius 12
-+SOLID
-States
+	Height 32
+	States
 	{
 	Spawn:
-	NPC1 F -1
-	Stop
+		NPC1 F -1
+		Stop
 	}
 }
 
-Actor JJAMajor 3844
+Actor JJAMajor : JJALupin 3844
 {
-Height 40
-Radius 12
-+SOLID
-States
+	Height 40
+	States
 	{
 	Spawn:
-	NPC1 G -1
-	Stop
+		NPC1 G -1
+		Stop
 	}
 }
 
 Actor JJARozz 3845
 {
-Height 0
-Radius 16
-States
+	Height 0
+	Radius 16
+	States
 	{
 	Spawn:
-	NPC1 H -1
-	Stop
+		NPC1 H -1
+		Stop
 	}
 }
 
-Actor JJAZoe 3846
+Actor JJAZoe : JJALupin 3846
 {
-Height 40
-Radius 12
-+SOLID
-States
+	Height 40
+	States
 	{
 	Spawn:
-	NPC1 I -1
-	Stop
+		NPC1 I -1
+		Stop
 	}
 }
 
-Actor JBlack 26557
+Actor JBlack : JJALupin 26557
 {
-+SOLID
-Scale 0.4
-Height 48
-Radius 12
-States
-{
-Spawn:
-TDJB A -1
-Stop
-}
+	Scale 0.4
+	States
+	{
+	Spawn:
+		TDJB A -1
+		Stop
+	}
 }
 
-Actor Jjthing1 16126
+Actor JJThing1 16126
 {
-Radius 6
-Height 32
-+SOLID
-States
-{
-Spawn:
-	NTRE A -1
-	Stop
-}
-}
-
-Actor Jjthing2 16125
-{
-Radius 12
-Height 192
-+SOLID
-States
-{
-Spawn:
-	NTRE B -1
-	Stop
-}
+	Radius 6
+	Height 32
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE A -1
+		Stop
+	}
 }
 
-Actor Jjthing3 16124
+Actor JJThing2 16125
 {
-Radius 32
-Height 96
-+SOLID
-States
-{
-Spawn:
-	NTRE C -1
-	Stop
-}
-}
-
-Actor Jjthing4 16123
-{
-Radius 32
-Height 96
-+SOLID
-States
-{
-Spawn:
-	NTRE D -1
-	Stop
-}
+	Radius 12
+	Height 192
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE B -1
+		Stop
+	}
 }
 
-Actor Jjthing5 16122
+Actor JJThing3 16124
 {
-Radius 6
-Height 32
-+SOLID
-States
-{
-Spawn:
-	NTRE E -1
-	Stop
-}
-}
-
-Actor Jjthing6 16121
-{
-Radius 4
-Height 16
-+SOLID
-States
-{
-Spawn:
-	NTRE F -1
-	Stop
-}
+	Radius 32
+	Height 96
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE C -1
+		Stop
+	}
 }
 
-Actor Jjthing7 16120
+Actor JJThing4 16123
 {
-Radius 4
-Height 48
-+SOLID
-States
-{
-Spawn:
-	NTRE G -1
-	Stop
-}
-}
-
-Actor Jjthing8 16100
-{
-  Radius 8
-  Height 16
-  +SOLID
-  STates
-  {
-  Spawn:
-    NROK A -1
-    Stop
-  }
+	Radius 32
+	Height 96
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE D -1
+		Stop
+	}
 }
 
-Actor Jjthing9 16101
+Actor JJThing5 16122
 {
-  Radius 8
-  Height 16
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK B -1
-    Stop
-  }
+	Radius 6
+	Height 32
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE E -1
+		Stop
+	}
 }
 
-Actor Jjthing13 16105
+Actor JJThing6 16121
 {
-  Radius 12
-  Height 80
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK F -1
-    Stop
-  }
+	Radius 4
+	Height 16
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE F -1
+		Stop
+	}
 }
 
-Actor Jjthing20 16112
+Actor JJThing7 16120
 {
-  Radius 8
-  Height 32
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK C -1
-    Stop
-  }
+	Radius 4
+	Height 48
+	+SOLID
+	States
+	{
+	Spawn:
+		NTRE G -1
+		Stop
+	}
 }
 
-Actor Jjthing21 16113
+Actor JJThing8 16100
 {
-  Radius 10
-  Height 20
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK D -1
-    Stop
-  }
+	Radius 8
+	Height 16
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK A -1
+		Stop
+	}
 }
 
-Actor Jjthing22 16114
+Actor JJThing9 16101
 {
-  Radius 16
-  Height 72
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK E -1
-    Stop
-  }
+	Radius 8
+	Height 16
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK B -1
+		Stop
+	}
 }
 
-Actor Jjthing25 16117
+Actor JJThing13 16105
 {
-  Radius 40
-  Height 160
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK H -1
-    Stop
-  }
+	Radius 12
+	Height 80
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK F -1
+		Stop
+	}
 }
 
-Actor Jjthing26 16118
+Actor JJThing20 16112
 {
-  Radius 8
-  Height 180
-  +SOLID
-  States
-  {
-  Spawn:
-    NROK I -1
-    Stop
-  }
+	Radius 8
+	Height 32
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK C -1
+		Stop
+	}
+}
+
+Actor JJThing21 16113
+{
+	Radius 10
+	Height 20
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK D -1
+		Stop
+	}
+}
+
+Actor JJThing22 16114
+{
+	Radius 16
+	Height 72
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK E -1
+		Stop
+	}
+}
+
+Actor JJThing25 16117
+{
+	Radius 40
+	Height 160
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK H -1
+		Stop
+	}
+}
+
+Actor JJThing26 16118
+{
+	Radius 8
+	Height 180
+	+SOLID
+	States
+	{
+	Spawn:
+		NROK I -1
+		Stop
+	}
 }
 
 Actor JungBambooCeiling1 3448
 {
-Height 78
-Radius 4
-+SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
+	Height 78
+	Radius 4
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	jrck j -1
-	Stop
+		JRCK J -1
+		Stop
 	}
 }
 
-Actor JungBambooCeiling2 3449
+Actor JungBambooCeiling2 : JungBambooCeiling1 3449
 {
-Height 50
-Radius 4
-+SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
+	Height 50
+	States
 	{
 	Spawn:
-	jrck k -1
-	Stop
+		JRCK K -1
+		Stop
 	}
 }
 
 Actor JungFlower1 3440
 {
-Height 16
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	jrck b -1
-	Stop
-	}
-}
-
-Actor JungFlower2 3441
-{
-Height 16
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	jrck c -1
-	Stop
-	}
-}
-
-Actor JungFlower3 3442
-{
-Height 16
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	jrck d -1
-	Stop
-	}
-}
-
-Actor JungFlower4 3443
-{
-Height 16
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	jrck e -1
-	Stop
-	}
-}
-
-Actor JungFlower5 3444
-{
-Height 16
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	jrck f -1
-	Stop
-	}
-}
-
-Actor JungFlower6 3445
-{
-Height 16
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	jrck g -1
-	Stop
-	}
-}
-	Actor JungleBush1 3187
-	{
-	Radius 16
 	Height 16
+	Radius 16
 	-SOLID
 	States
 	{
 	Spawn:
-	JUNG F -1
-	Stop
+		JRCK B -1
+		Stop
 	}
 }
 
-	Actor JungleBush2 3188
-	{
-	Radius 16
-	Height 16
-	-SOLID
+Actor JungFlower2 : JungFlower1 3441
+{
 	States
 	{
 	Spawn:
-	JUNG G -1
-	Stop
+		JRCK C -1
+		Stop
 	}
 }
 
-	Actor JungleGrass 3186
-	{
-	Radius 16
-	Height 16
-	-SOLID
+Actor JungFlower3 : JungFlower1 3442
+{
 	States
 	{
 	Spawn:
-	JUNG E -1
-	Stop
+		JRCK D -1
+		Stop
 	}
 }
 
-
-Actor JungleSpike 3193
+Actor JungFlower4 : JungFlower1 3443
+{
+	States
 	{
-	Radius 16
+	Spawn:
+		JRCK E -1
+		Stop
+	}
+}
+
+Actor JungFlower5 : JungFlower1 3444
+{
+	States
+	{
+	Spawn:
+		JRCK F -1
+		Stop
+	}
+}
+
+Actor JungFlower6 : JungFlower1 3445
+{
+	States
+	{
+	Spawn:
+		JRCK G -1
+		Stop
+	}
+}
+Actor JungleBush1 : JungFlower1 3187
+{
+	States
+	{
+	Spawn:
+		JUNG F -1
+		Stop
+	}
+}
+
+Actor JungleBush2 : JungFlower1 3188
+{
+	States
+	{
+	Spawn:
+		JUNG G -1
+		Stop
+	}
+}
+
+Actor JungleGrass : JungFlower1 3186
+{
+	States
+	{
+	Spawn:
+		JUNG E -1
+		Stop
+	}
+}
+
+Actor JungleSpike : JungFlower1 3193
+{
 	Height 12
-	-SOLID
 	States
 	{
 	Spawn:
-	JUNG L -1
-	Stop
+		JUNG L -1
+		Stop
 	}
 }
 
 Actor JungleTree1 3182
-	{
+{
 	Radius 6
 	Height 104
 	+SOLID
 	States
 	{
 	Spawn:
-	JUNG A -1
-	Stop
+		JUNG A -1
+		Stop
 	}
 }
 
-	Actor JungleTree2 3183
-	{
+Actor JungleTree2 3183
+{
 	Radius 16
 	Height 84
 	+SOLID
 	States
 	{
 	Spawn:
-	JUNG B -1
-	Stop
+		JUNG B -1
+		Stop
 	}
 }
 
-	Actor JungleTree3 3184
-	{
+Actor JungleTree3 3184
+{
 	Radius 16
 	Height 84
 	+SOLID
 	States
 	{
 	Spawn:
-	JUNG C -1
-	Stop
+		JUNG C -1
+		Stop
 	}
 }
 
-	Actor JungleTree4 3185
-	{
+Actor JungleTree4 3185
+{
 	Radius 8
 	Height 104
 	+SOLID
 	States
 	{
 	Spawn:
-	JUNG D -1
-	Stop
+		JUNG D -1
+		Stop
 	}
 }
 
-	Actor JungleTree5 3189
-	{
+Actor JungleTree5 3189
+{
 	Radius 16
 	Height 128
 	+SOLID
 	States
 	{
 	Spawn:
-	JUNG H -1
-	Stop
+		JUNG H -1
+		Stop
 	}
 }
 
 Actor JungleTree6 3190
-	{
+{
 	Radius 16
 	Height 128
 	+SOLID
-
 	States
 	{
 	Spawn:
-	JUNG I -1
-	Stop
+		JUNG I -1
+		Stop
 	}
 }
 
 Actor JungleTwine 3192
-	{
+{
 	Radius 16
 	Height 75
 	-SOLID
@@ -3372,13 +3221,13 @@ Actor JungleTwine 3192
 	States
 	{
 	Spawn:
-	JUNG K -1
-	Stop
+		JUNG K -1
+		Stop
 	}
 }
 
 Actor JungleWallLantern 3191
-	{
+{
 	Radius 4
 	Height 12
 	+SOLID
@@ -3386,94 +3235,91 @@ Actor JungleWallLantern 3191
 	States
 	{
 	Spawn:
-	JUNL ABCDEFGH 1
-	Loop
+		JUNL ABCDEFGH 1
+		Loop
 	}
 }
 
 
 Actor JungSpring 3439
 {
-Height 32
-Radius 16
-+SOLID
-States
+	Height 32
+	Radius 16
+	+SOLID
+	States
 	{
 	Spawn:
-	jrck a -1
-	Stop
+		JRCK A -1
+		Stop
 	}
 }
 
-Actor jzPrize1 3359
+Actor JzPrize1 3359
 {
-+NOGRAVITY
-Height 16
-Radius 16
-States
-{
-Spawn:
-jzzp A -1
-Stop
-}
+	+NOGRAVITY
+	Height 16
+	Radius 16
+	States
+	{
+	Spawn:
+		JZZP A -1
+		Stop
+	}
 }
 
-Actor jzPrize2 3360
+Actor JzPrize2 : JzPrize1 3360
 {
-+NOGRAVITY
-Height 16
-Radius 16
-States
-{
-Spawn:
-jzzp b -1
-Stop
-}
+	States
+	{
+	Spawn:
+		JZZP B -1
+		Stop
+	}
 }
 
 Actor KamikazeTurtleProp 3738
 {
-  Height 56
-  Radius 16
-  Health 1
-  Mass 100000
-  +NOBLOOD
-  States
-  {
-  Spawn:
-    DKAM A -1
-    Stop
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    Stop
-}
+	Height 56
+	Radius 16
+	Health 1
+	Mass 100000
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		DKAM A -1
+		Stop
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }
 
 Actor KatanaRobot 10500
 {
-  Radius 16
-  Height 72
-  +SOLID
-  States
-  {
-  Spawn:
-    KATR ABCD 2
-    Loop
-  }
+	Radius 16
+	Height 72
+	+SOLID
+	States
+	{
+	Spawn:
+		KATR ABCD 2
+		Loop
+	}
 }
 
 Actor KGass 26558
 {
-+SOLID
-Scale 0.4
-Height 52
-Radius 12
-States
-{
-Spawn:
-TDKG A -1
-Stop
-}
+	Height 52
+	Radius 12
+	Scale 0.4
+	+SOLID
+	States
+	{
+	Spawn:
+		TDKG A -1
+		Stop
+	}
 }
 
 Actor Kiss 3603
@@ -3484,208 +3330,191 @@ Actor Kiss 3603
 	States
 	{
 	Spawn:
-	WNTR D -1
-	Stop
+		WNTR D -1
+		Stop
+	}
+}
+
+Actor LabFlame 3348
+{
+	Height 32
+	Radius 7
+	+BRIGHT
+	+SOLID
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		LABF ABCDEFGH 3
+		Loop
 	}
 }
 
 Actor LabChain304 3339
 {
-Height 304
-Radius 4
-+SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
-{
-Spawn:
-LCHN B -1
-Stop
-}
-}
-
-Actor LabChain544 3338
-{
-Height 544
-Radius 4
-+SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
-{
-Spawn:
-LCHN A -1
-Stop
-}
+	Height 304
+	Radius 4
+	+SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		LCHN B -1
+		Stop
+	}
 }
 
+Actor LabChain544 : LabChain304 3338
+{
+	Height 544
+	States
+	{
+	Spawn:
+		LCHN A -1
+		Stop
+	}
+}
 
 Actor LabDecor1 3341
 {
-Height 56
-Radius 20
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABS A -1
-Stop
-}
-}
-
-Actor LabDecor2 3340
-{
-Height 16
-Radius 16
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABS B -1
-Stop
-}
+	Height 56
+	Radius 20
+	+SOLID
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		LABS A -1
+		Stop
+	}
 }
 
-Actor LabDecor3 3335
+Actor LabDecor2 : LabDecor1 3340
 {
-Height 48
-Radius 36
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABS C -1
-Stop
-}
+	Height 16
+	Radius 16
+	States
+	{
+	Spawn:
+		LABS B -1
+		Stop
+	}
 }
 
-Actor LabDecor4 3336
+Actor LabDecor3 : LabDecor1 3335
 {
-Height 48
-Radius 32
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABS D -1
-Stop
-}
+	Height 48
+	Radius 36
+	States
+	{
+	Spawn:
+		LABS C -1
+		Stop
+	}
 }
 
-Actor LabDecor5 3337
+Actor LabDecor4 : LabDecor1 3336
 {
-Height 48
-Radius 32
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABS E -1
-Stop
-}
+	Height 48
+	Radius 32
+	States
+	{
+	Spawn:
+		LABS D -1
+		Stop
+	}
 }
 
-Actor LabFlame 3348
+Actor LabDecor5 : LabDecor1 3337
 {
-Height 32
-Radius 7
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABF ABCDEFGH 3 bright
-Loop
-}
+	Height 48
+	Radius 32
+	States
+	{
+	Spawn:
+		LABS E -1
+		Stop
+	}
 }
 
 Actor LabKatana 3342
 {
-Height 120
-Radius 16
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-KATR E -1
-Stop
-}
+	Height 120
+	Radius 16
+	+SOLID
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		KATR E -1
+		Stop
+	}
 }
 
 Actor LagunCeilingStump 3879
 {
-Height 28
-Radius 10
-+SOLID
-+NOGRAVITY
-+SPAWNCEILING
-States
+	Height 28
+	Radius 10
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
 	{
 	Spawn:
-	LAGP J -1
-	Stop
+		LAGP J -1
+		Stop
 	}
 }
 
 Actor LagunTree1 3880
 {
-Height 88
-Radius 8
-+SOLID
-States
+	Height 88
+	Radius 8
+	+SOLID
+	States
 	{
 	Spawn:
-	LAGP H -1
-	Stop
+		LAGP H -1
+		Stop
 	}
 }
 
-Actor LagunTree2 3881
+Actor LagunTree2 : LagunTree1 3881
 {
-Height 88
-Radius 8
-+SOLID
-States
+	States
 	{
 	Spawn:
-	LAGP I -1
-	Stop
+		LAGP I -1
+		Stop
 	}
 }
 
 Actor LavaBubble 3307
 {
-Height 8
-Radius 8
-States
-{
-Spawn:
-LBUB ABCDE 3 Bright
-Loop
+	Height 8
+	Radius 8
+	+BRIGHT
+	States
+	{
+	Spawn:
+		LBUB ABCDE 3
+		Loop
+	}
 }
-}
-
 
 Actor LCDoll 3209
 {
-Radius 16
-Height 16
--SOLID
-States
-{
-Spawn:
-DDOL C -1
-Stop
+	Radius 16
+	Height 16
+	-SOLID
+	States
+	{
+	Spawn:
+		DDOL C -1
+		Stop
+	}
 }
-}
-
-
 
 Actor Lollipop 3602
 {
@@ -3695,258 +3524,234 @@ Actor Lollipop 3602
 	States
 	{
 	Spawn:
-	WNTR C -1
-	Stop
+		WNTR C -1
+		Stop
 	}
 }
 
-
 Actor LongGrass 3621
 {
-Height 8
-Radius 8
-States
-{
-Spawn:
-DIAG B -1
-Stop
-}
+	Height 8
+	Radius 8
+	States
+	{
+	Spawn:
+		DIAG B -1
+		Stop
+	}
 }
 
 Actor Lori 3998 //Actor replaces LiveStick 26
 {
-  Radius 16
-  Height 68
-  States
-  {
-  Spawn:
-    LORI A -1
-    Stop
-  }
+	Radius 16
+	Height 68
+	States
+	{
+	Spawn:
+		LORI A -1
+		Stop
+	}
 }
 
 Actor LoWangPrize 3369
 {
-+NOGRAVITY
-Scale 0.3
-Height 16
-Radius 16
-States
-{
-Spawn:
-lowg a -1
-Stop
-}
+	Height 16
+	Radius 16
+	Scale 0.3
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		LOWG A -1
+		Stop
+	}
 }
 
 Actor Lstat 25631
 {
-  Radius 16
-  Height 72
-  +SOLID
-  States
-  {
-  Spawn:
-    LSTA A -1
-    Stop
-  }
+	Radius 16
+	Height 72
+	+SOLID
+	States
+	{
+	Spawn:
+		LSTA A -1
+		Stop
+	}
 }
 
 Actor LubLubA 32509
 {
-Scale 0.25
-Height 52
-Radius 16
-+SOLID
-States
-{
-Spawn:
-LUBB B -1
-Stop
-}
+	Height 52
+	Radius 16
+	Scale 0.25
+	+SOLID
+	States
+	{
+	Spawn:
+		LUBB B -1
+		Stop
+	}
 }
 
-Actor LubLubB 32510
+Actor LubLubB : LubLubA 32510
 {
-Scale 0.25
-Height 52
-Radius 16
-+SOLID
-States
-{
-Spawn:
-LUBB A -1
-Stop
-}
+	States
+	{
+	Spawn:
+		LUBB A -1
+		Stop
+	}
 }
 
 Actor Lublubprize 3386
 {
-Scale 0.1
-Height 16
-Radius 16
-States
-{
-Spawn:
-LUBB A -1
-Stop
-}
+	Height 16
+	Radius 16
+	Scale 0.1
+	States
+	{
+	Spawn:
+		LUBB A -1
+		Stop
+	}
 }
 
 Actor Major 3982 //Actor replaces FloatingSkull
 {
-  Radius 16
-  Height 48
-  +SOLID
-  States
-  {
-  Spawn:
-    MAJR ABCB 6
-    Loop
-  }
+	Radius 16
+	Height 48
+	+SOLID
+	States
+	{
+	Spawn:
+		MAJR ABCB 6
+		Loop
+	}
 }
 
 Actor MarbCloudA 3404
-	{
+{
 	Radius 8
 	Height 8
+	Scale 0.5
 	-SOLID
 	+NOGRAVITY
-	Scale 0.5
 	States
 	{
 	Spawn:
-	MARC A -1
-	Stop
+		MARC A -1
+		Stop
 	}
 }
 
-Actor MarbCloudB 3405
-	{
-	Radius 8
-	Height 8
-	-SOLID
-	+NOGRAVITY
-	Scale 0.5
+Actor MarbCloudB : MarbCloudA 3405
+{
 	States
 	{
 	Spawn:
-	MARC B -1
-	Stop
+		MARC B -1
+		Stop
 	}
 }
-
 
 Actor MarbleraCeilPillar1 3993 //HangTLookingDown Replaces HangTLookingDown 75
 {
-  Height 50
-  Radius 8
-  +SPAWNCEILING
-+NOGRAVITY
-+SOLID
-  States
+	Height 50
+	Radius 8
+	+SPAWNCEILING
+	+NOGRAVITY
+	+SOLID
+	States
 	{
 	Spawn:
-	MPIL A -1
-	Stop
-}
+		MPIL A -1
+		Stop
+	}
 }
 
-Actor MarbleraCeilPillar2 3994 //HangBNoBrain Replaces HangBNoBrain 74
+Actor MarbleraCeilPillar2 : MarbleraCeilPillar1 3994 //HangBNoBrain Replaces HangBNoBrain 74
 {
-  Radius 8
-  Height 114
-  +SPAWNCEILING
-+NOGRAVITY
-+SOLID
-  States
+	Height 114
+	States
 	{
 	Spawn:
-	MPIL B -1
-	Stop
-}
+		MPIL B -1
+		Stop
+	}
 }
 
-Actor MarbleraCeilPillar3 3995 //HangNoGuts Replaces HangNoGuts 73
+Actor MarbleraCeilPillar3 : MarbleraCeilPillar1 3995 //HangNoGuts Replaces HangNoGuts 73
 {
-  Radius 8
-  Height 82
-  +SPAWNCEILING
-+NOGRAVITY
-+SOLID
-  States
+	Height 82
+	States
 	{
 	Spawn:
-	MPIL C -1
-	Stop
+		MPIL C -1
+		Stop
+	}
 }
-}
-
 
 Actor MarbelaraMediumPlatform 3327
 {
-Height 80
-Radius 12
-+SOLID
-States
-{
-Spawn:
-MARP B -1
-Stop
-}
-}
-
-Actor MarbelaraShortPlatform 3326
-{
-Height 48
-Radius 12
-+SOLID
-States
-{
-Spawn:
-MARP A -1
-Stop
-}
+	Height 80
+	Radius 12
+	+SOLID
+	States
+	{
+	Spawn:
+		MARP B -1
+		Stop
+	}
 }
 
-Actor MarbelaraTallPlatform 3328
+Actor MarbelaraShortPlatform : MarbelaraMediumPlatform 3326
 {
-Height 144
-Radius 12
-+SOLID
-States
-{
-Spawn:
-MARP C -1
-Stop
+	Height 48
+	States
+	{
+	Spawn:
+		MARP A -1
+		Stop
+	}
 }
+
+Actor MarbelaraTallPlatform : MarbelaraMediumPlatform 3328
+{
+	Height 144
+	States
+	{
+	Spawn:
+		MARP C -1
+		Stop
+	}
 }
 
 Actor MBPrize 3357
 {
-+NOGRAVITY
-Height 16
-Radius 16
-States
-{
-Spawn:
-bash A -1
-Stop
-}
+	Height 16
+	Radius 16
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		BASH A -1
+		Stop
+	}
 }
 
 Actor Meatball 4064
 {
-+NOGRAVITY
-+SOLID
-Height 56
-Radius 16
-States
-{
-Spawn:
-MTBL A -1
-Stop
-}
+	Height 56
+	Radius 16
+	+NOGRAVITY
+	+SOLID
+	States
+	{
+	Spawn:
+		MTBL A -1
+		Stop
+	}
 }
 
 Actor MedTree 25641
@@ -3957,331 +3762,254 @@ Actor MedTree 25641
 	States
 	{
 	Spawn:
-	MTRE A -1
-	Stop
+		MTRE A -1
+		Stop
 	}
 }
-
-Actor MedivoCastle 3281
-{
-  Height 291
-  Radius 64
-  States
-  {
-  Spawn:
-  MCAS A -1 //Skybox
-  Stop
-  }
-}
-
 
 Actor MedivoRemixCastle 4015
 {
-Height 256
-Radius 32
--SOLID
-States
+	Height 256
+	Radius 32
+	-SOLID
+	States
 	{
 	Spawn:
-	MEDR A -1
-	Stop
+		MEDR A -1
+		Stop
 	}
 }
-
 
 Actor MedivoRemixDoubleFlag 4013
 {
-Height 94
-Radius 4
-+SOLID
-States
+	Height 94
+	Radius 4
+	+SOLID
+	States
 	{
 	Spawn:
-	MGR2 ABCDEFGH 2
-	Loop
+		MGR2 ABCDEFGH 2
+		Loop
 	}
 }
 
-
 Actor MedivoRemixGargoyle 4018
 {
-Height 64
-Radius 32
-+SOLID
-States
+	Height 64
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR D -1
-	Stop
+		MEDR D -1
+		Stop
 	}
 }
 
 Actor MedivoRemixGargoyleLeft 4017
 {
-Height 64
-Radius 32
-+SOLID
-States
+	Height 64
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR C -1
-	Stop
+		MEDR C -1
+		Stop
 	}
 }
 
-Actor MedivoRemixGargoyleRight 4016
+Actor MedivoRemixGargoyleRight : MedivoRemixGargoyleLeft 4016
 {
-Height 64
-Radius 32
-+SOLID
-States
+	States
 	{
 	Spawn:
-	MEDR B -1
-	Stop
+		MEDR B -1
+		Stop
 	}
 }
 
 Actor MedivoRemixGar 4027
 {
-Height 64
-Radius 32
-+SOLID
-States
+	Height 64
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR J -1
-	Stop
+		MEDR J -1
+		Stop
 	}
 }
 
 Actor MedivoRemixGarLeft 4026
 {
-Height 64
-Radius 32
-+SOLID
-States
+	Height 64
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR N -1
-	Stop
+		MEDR N -1
+		Stop
 	}
 }
 
-Actor MedivoRemixGarRight 4025
+Actor MedivoRemixGarRight : MedivoRemixGarLeft 4025
 {
-Height 64
-Radius 32
-+SOLID
-States
+	States
 	{
 	Spawn:
-	MEDR M -1
-	Stop
+		MEDR M -1
+		Stop
 	}
 }
 
 Actor MedivoRemixPillar128 4021
 {
-Height 128
-Radius 16
-+SOLID
-States
+	Height 128
+	Radius 16
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR H -1
-	Stop
+		MEDR H -1
+		Stop
 	}
 }
 
-Actor MedivoRemixPillar256 4022
+Actor MedivoRemixPillar256 : MedivoRemixPillar128 4022
 {
-Height 256
-Radius 16
-+SOLID
-States
+	Height 256
+	States
 	{
 	Spawn:
-	MEDR I -1
-	Stop
+		MEDR I -1
+		Stop
 	}
 }
 
 Actor MedivoRemixRock1 4028
 {
-Height 84
-Radius 10
-+SOLID
-States
+	Height 84
+	Radius 10
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR O -1
-	Stop
+		MEDR O -1
+		Stop
 	}
 }
 
-Actor MedivoRemixRock2 4029
+Actor MedivoRemixRock2 : MedivoRemixRock1 4029
 {
-Height 88
-Radius 10
-+SOLID
-States
+	Height 88
+	States
 	{
 	Spawn:
-	MEDR P -1
-	Stop
+		MEDR P -1
+		Stop
 	}
 }
 
 Actor MedivoRemixRockCeil1 4030
 {
-Height 88
-Radius 10
-+SOLID
-+NOGRAVITY
-+SPAWNCEILING
-States
+	Height 88
+	Radius 10
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
 	{
 	Spawn:
-	MEDR Q -1
-	Stop
+		MEDR Q -1
+		Stop
 	}
 }
 
-Actor MedivoRemixRockCeil2 4031
+Actor MedivoRemixRockCeil2 : MedivoRemixRockCeil1 4031
 {
-Height 88
-Radius 10
-+SOLID
-+NOGRAVITY
-+SPAWNCEILING
-States
+	States
 	{
 	Spawn:
-	MEDR R -1
-	Stop
+		MEDR R -1
+		Stop
 	}
 }
 
 Actor MedivoRemixSkGarLeft 4024
 {
-Height 84
-Radius 32
-+SOLID
-States
+	Height 84
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR L -1
-	Stop
+		MEDR L -1
+		Stop
 	}
 }
 
-Actor MedivoRemixSkGarRight 4023
+Actor MedivoRemixSkGarRight : MedivoRemixSkGarLeft 4023
 {
-Height 84
-Radius 32
-+SOLID
-States
+	States
 	{
 	Spawn:
-	MEDR K -1
-	Stop
+		MEDR K -1
+		Stop
 	}
 }
 
 Actor MedivoRemixSkinnyGargoyleLeft 4020
 {
-Height 84
-Radius 32
-+SOLID
-States
+	Height 84
+	Radius 32
+	+SOLID
+	States
 	{
 	Spawn:
-	MEDR F -1
-	Stop
+		MEDR F -1
+		Stop
 	}
 }
 
-Actor MedivoRemixSkinnyGargoyleRight 4019
+Actor MedivoRemixSkinnyGargoyleRight : MedivoRemixSkinnyGargoyleLeft 4019
 {
-Height 84
-Radius 32
-+SOLID
-States
+	States
 	{
 	Spawn:
-	MEDR E -1
-	Stop
+		MEDR E -1
+		Stop
 	}
 }
 
 Actor MedivoRemixSpikes 4014
 {
-Height 32
-Radius 16
--SOLID
-States
-	{
-	Spawn:
-	MEDR G -1
-	Stop
-	}
-}
-
-
-Actor MegaLight1 3145
-{
-	Radius 6
-	Height 64
-	+SOLID
+	Height 32
+	Radius 16
+	-SOLID
 	States
 	{
 	Spawn:
-	MGAL A -1 bright
-	Stop
-	}
-}
-
-Actor MegaLight2 3146
-{
-	Radius 6
-	Height 96
-	+SOLID
-	States
-	{
-	Spawn:
-	MGAL B -1 bright
-	Stop
-	}
-}
-
-Actor MegaLight3 3147
-{
-	Radius 6
-	Height 64
-	+SOLID
-	States
-	{
-	Spawn:
-	MGAL C -1 bright
-	Stop
+		MEDR G -1
+		Stop
 	}
 }
 
 Actor Mermaid 3870
 {
-Height 32
-Radius 18
-+SOLID
-+NOGRAVITY
-States
+	Height 32
+	Radius 18
+	+SOLID
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	atlp k -1
-	Stop
+		ATLP K -1
+		Stop
 	}
 }
-
 
 Actor MSpike 25640
 {
@@ -4291,109 +4019,104 @@ Actor MSpike 25640
 	States
 	{
 	Spawn:
-	MSPK A -1
-	Stop
+		MSPK A -1
+		Stop
 	}
 }
 
-Actor Mtpain27 4065
+Actor MtPain27 4065
 {
-+NOGRAVITY
-+SOLID
-Scale 0.3
-Height 56
-Radius 16
-
-States
-{
-Spawn:
-MTPN A -1
-Stop
-}
+	Height 56
+	Radius 16
+	Scale 0.3
+	+NOGRAVITY
+	+SOLID
+	States
+	{
+	Spawn:
+		MTPN A -1
+		Stop
+	}
 }
 
 Actor MuckBridge 3794
 {
-Height 8
-Radius 8
-+SOLID
-+NOGRAVITY
-States
+	Height 8
+	Radius 8
+	+SOLID
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	muck e -1
-	Stop
+		MUCK E -1
+		Stop
 	}
 }
 
 Actor MuckCactus 3463
 {
-Height 96
-Radius 8
-+SOLID
-States
+	Height 96
+	Radius 8
+	+SOLID
+	States
 	{
 	Spawn:
-	muck a -1
-	Stop
+		MUCK A -1
+		Stop
 	}
 }
 
 Actor MuckGunk1 3464
 {
-Height 20
-Radius 18
--SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
+	Height 20
+	Radius 18
+	-SOLID
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	muck b -1
-	Stop
+		MUCK B -1
+		Stop
 	}
 }
 
-Actor MuckGunk2 3465
+Actor MuckGunk2 : MuckGunk1 3465
 {
-Height 20
-Radius 20
--SOLID
-+SPAWNCEILING
-+NOGRAVITY
-States
+	Radius 20
+	States
 	{
 	Spawn:
-	muck c -1
-	Stop
+		MUCK C -1
+		Stop
 	}
 }
 
-Actor NewDeadDaisy 3268
+Actor NewDeadDaisy 3268 //same as DeadDaisy, still needs new art maybe?
 {
-  +FLOORCLIP
-  Height 28
-  Radius 4
-  +SOLID
-  Scale 0.60
-  States
-  {
-  Spawn:
-  BUNN A -1
-    Loop
-  }
+	Height 28
+	Radius 4
+	Scale 0.60
+	+FLOORCLIP
+	+SOLID
+	States
+	{
+	Spawn:
+		BUNN A -1
+		Loop
+	}
 }
 
 Actor NokaSign 4010
 {
-Height 32
-Radius 14
-+SOLID
-States
+	Height 32
+	Radius 14
+	+SOLID
+	States
 	{
 	Spawn:
-	TBER M -1
-	Stop
+		TBER M -1
+		Stop
 	}
 }
 
@@ -4405,77 +4128,66 @@ Actor NPC1 3261
 	States
 	{
 	Spawn:
-	NPC1 A -1
-	Stop
+		NPC1 A -1
+		Stop
 	}
 }
 
-Actor NPC2 3256
+Actor NPC2 : NPC1 3256
 {
-	Radius 12
 	Height 32
-	+SOLID
 	States
 	{
 	Spawn:
-	NPC2 B -1
-	Stop
+		NPC2 B -1
+		Stop
 	}
 }
 
-Actor NPC3 3257
+Actor NPC3 : NPC1 3257
 {
-	Radius 12
-	Height 36
-	+SOLID
 	States
 	{
 	Spawn:
-	NPC3 C -1
-	Stop
+		NPC3 C -1
+		Stop
 	}
 }
 
-Actor NPC4 3258
+Actor NPC4 : NPC1 3258
 {
-	Radius 12
 	Height 48
-	+SOLID
 	States
 	{
 	Spawn:
-	NPC4 D -1
-	Stop
+		NPC4 D -1
+		Stop
 	}
 }
 
-Actor NPC5 3259
+Actor NPC5 : NPC1 3259
 {
-	Radius 12
 	Height 40
-	+SOLID
 	States
 	{
 	Spawn:
-	NPC5 E -1
-	Stop
+		NPC5 E -1
+		Stop
 	}
 }
 
-Actor NPC6 3260
+Actor NPC6 : NPC1 3260
 {
-	Radius 12
 	Height 60
-	+SOLID
 	States
 	{
 	Spawn:
-	NPC6 F -1
-	Stop
+		NPC6 F -1
+		Stop
 	}
 }
 
-Actor Nspikeone 32535
+Actor NSpikeOne 32535
 {
 	Radius 16
 	Height 46
@@ -4485,12 +4197,12 @@ Actor Nspikeone 32535
 	States
 	{
 	Spawn:
-	NSPK A -1
-	Stop
+		NSPK A -1
+		Stop
 	}
 }
 
-Actor Nspiketwo 32536
+Actor NSpikeTwo 32536
 {
 	Radius 14
 	Height 32
@@ -4498,12 +4210,12 @@ Actor Nspiketwo 32536
 	States
 	{
 	Spawn:
-	NSPK B -1
-	Stop
+		NSPK B -1
+		Stop
 	}
 }
 
-Actor Nspikethree 32537
+Actor NSpikeThree 32537
 {
 	Radius 16
 	Height 17
@@ -4513,11 +4225,12 @@ Actor Nspikethree 32537
 	States
 	{
 	Spawn:
-	NSPK C -1
+		NSPK C -1
+		Stop
 	}
 }
 
-Actor Nspikefour 32539
+Actor NSpikeFour 32539
 {
 	Radius 16
 	Height 8
@@ -4525,22 +4238,22 @@ Actor Nspikefour 32539
 	States
 	{
 	Spawn:
-	NSPK D -1
-	Stop
+		NSPK D -1
+		Stop
 	}
 }
 
 Actor Nstad 3204
 {
-Radius 16
-Height 180
-+SOLID
-States
-{
-Spawn:
-JJTD B -1
-Stop
-}
+	Radius 16
+	Height 180
+	+SOLID
+	States
+	{
+	Spawn:
+		JJTD B -1
+		Stop
+	}
 }
 
 Actor OLEasterEgg 3927
@@ -5572,70 +5285,6 @@ Stop
 }
 }
 
-Actor SkyboxDecor1 3311
-{
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB A -1 	Bright
-Stop
-}
-}
-
-Actor SkyboxDecor2 3312
-{
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB B -1	Bright
-Stop
-}
-}
-
-Actor SkyboxDecor3 3313
-{
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB C -1	Bright
-Stop
-}
-}
-
-Actor SkyboxDecor4 3314
-{
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB D -1	Bright
-Stop
-}
-}
-
-Actor SkyboxDecor5 3315
-{
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB E -1 Bright
-Stop
-}
-}
 
 Actor slugchain1 3484
 {
@@ -6186,19 +5835,6 @@ Spawn:
 TAGG ABCD 4
 Loop
 }
-}
-
-Actor TallMedivoTrees 3288
-{
-  +SOLID
-  Height 952
-  Radius 64
-  States
-  {
-  Spawn:
-  TALT A -1 //Skybox
-    Stop
-  }
 }
 
 Actor TallPillarCarrot 3161
@@ -6912,18 +6548,19 @@ Stop
 }
 }
 
-Actor Wbath 25632 // To Return To
+Actor WBath : SimpleActor 25632 // To Return To
 {
-  Radius 16
-  Height 32
-  +SOLID
-  States
-  {
-  Spawn:
-  TNT1 A 0 A_PlaySoundEx("FOUNTAIN", "auto", 1)
-    WBAT ACEG 1
-    Loop
-  }
+	Radius 16
+	Height 32
+	+SOLID
+	States
+	{
+	Spawn:
+		WBAT A 0 NoDelay A_StartSound ("FOUNTAIN", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0))
+	Spawn2:
+		WBAT ACEG 1
+		Loop
+	}
 }
 
 Actor WhamPlush 3371

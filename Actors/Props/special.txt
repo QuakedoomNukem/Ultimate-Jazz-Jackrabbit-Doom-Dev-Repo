@@ -483,3 +483,131 @@ Actor BlockGuy2
 	Stop
 	}
 }
+
+Actor TallMedivoTrees 3288
+{
+  +SOLID
+  Height 952
+  Radius 64
+  States
+  {
+  Spawn:
+  TALT A -1 //Skybox
+    Stop
+  }
+}
+
+Actor BigHellBones 3284
+{
+	Height 192
+	Radius 64
+	States
+	{
+	Spawn:
+		HSKE A -1 //Skybox
+		Stop
+	}
+}
+
+Actor HellStag1 3285
+{
+	Height 120
+	Radius 56
+	+SOLID
+	States
+	{
+	Spawn:
+		HSTG A -1 //Skybox
+		Stop
+	}
+}
+
+Actor HellTree2 3280
+{
+	Height 160
+	Radius 64
+	+SOLID
+	States
+	{
+	Spawn:
+		DTRE A -1 //Skybox
+		Stop
+	}
+}
+
+Actor MedivoCastle 3281
+{
+	Height 291
+	Radius 64
+	States
+	{
+	Spawn:
+		MCAS A -1 //Skybox
+		Stop
+	}
+}
+
+Actor SkyboxDecor1 3311
+{
+Height 32
+Radius 32
++NOGRAVITY
+States
+{
+Spawn:
+SKYB A -1 	Bright
+Stop
+}
+}
+
+Actor SkyboxDecor2 3312
+{
+Height 32
+Radius 32
++NOGRAVITY
+States
+{
+Spawn:
+SKYB B -1	Bright
+Stop
+}
+}
+
+Actor SkyboxDecor3 3313
+{
+Height 32
+Radius 32
++NOGRAVITY
+States
+{
+Spawn:
+SKYB C -1	Bright
+Stop
+}
+}
+
+Actor SkyboxDecor4 3314
+{
+Height 32
+Radius 32
++NOGRAVITY
+States
+{
+Spawn:
+SKYB D -1	Bright
+Stop
+}
+}
+
+Actor SkyboxDecor5 3315
+{
+Height 32
+Radius 32
++NOGRAVITY
+States
+{
+Spawn:
+SKYB E -1 Bright
+Stop
+}
+}

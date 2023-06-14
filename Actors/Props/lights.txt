@@ -437,6 +437,41 @@ States
 	}
 }
 
+Actor MegaLight1 3145
+{
+	Radius 6
+	Height 64
+	+BRIGHT
+	+SOLID
+	States
+	{
+	Spawn:
+		MGAL A -1
+		Stop
+	}
+}
+
+Actor MegaLight2 : MegaLight1 3146
+{
+	Height 96
+	States
+	{
+	Spawn:
+		MGAL B -1
+		Stop
+	}
+}
+
+Actor MegaLight3 : MegaLight1 3147
+{
+	States
+	{
+	Spawn:
+		MGAL C -1
+		Stop
+	}
+}
+
 Actor PollutusStrobe 32526
 {
 Height 64

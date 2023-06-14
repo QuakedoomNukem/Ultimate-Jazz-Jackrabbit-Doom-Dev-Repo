@@ -179,7 +179,7 @@ Actor ElementDarkGemProp
 
 Actor AirSparkle
 {	
-	states
+	States
 	{
 	Spawn:
 		TNT1 AAAA 0 a_spawnparticle(
@@ -200,7 +200,7 @@ Actor AirSparkle
 
 Actor WaterSparkle
 {	
-	states
+	States
 	{
 	Spawn:
 		TNT1 AAAA 0 a_spawnparticle(
@@ -221,7 +221,7 @@ Actor WaterSparkle
 
 Actor EarthSparkle
 {	
-	states
+	States
 	{
 	Spawn:
 		TNT1 AAAA 0 a_spawnparticle(
@@ -242,7 +242,7 @@ Actor EarthSparkle
 
 Actor FireSparkle
 {	
-	states
+	States
 	{
 	Spawn:
 		TNT1 AAAA 0 a_spawnparticle(
@@ -263,7 +263,7 @@ Actor FireSparkle
 
 Actor LightSparkle
 {	
-	states
+	States
 	{
 	Spawn:
 		TNT1 AAAA 0 a_spawnparticle(
@@ -284,7 +284,7 @@ Actor LightSparkle
 
 Actor DarkSparkle
 {	
-	states
+	States
 	{
 	Spawn:
 		TNT1 AAAA 0 a_spawnparticle(
