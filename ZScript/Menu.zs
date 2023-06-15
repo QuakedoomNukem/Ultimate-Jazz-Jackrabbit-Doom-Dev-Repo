@@ -27,12 +27,12 @@
   This code implements two new ListItem classes:
 	IconListMenu
 	- Adds an image to the left of each menu entry, resulting in a menu that
-	  looks similar to the Wolf3D episode selection menu
+	  looks similar to the Episode selection menu
 	- Also handles automatically offsetting the selection cursor
 
 	StaticIconListMenu
 	- Adds an image to the center-right of the entire menu, similar to the one
-	  seen on the Wolf3D skill selection menu
+	  seen on the Skill selection menu
 	- Automatically calculates position and offsets based on the number and size
 	  of the entries in the menu
 
