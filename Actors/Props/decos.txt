@@ -6261,7 +6261,7 @@ Actor TurtempleEasterEgg1 3816
 	}
 }
 
-Actor TurtempleEasterEgg2 : TurtempleEasterEgg13817
+Actor TurtempleEasterEgg2 : TurtempleEasterEgg1 3817
 {
 	States
 	{
