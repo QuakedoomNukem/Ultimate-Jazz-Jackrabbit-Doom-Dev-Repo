@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2023 AFADoomer, QuakeDoomNukem, RichardDS90, Ozymandias81
+ * Copyright (c) 2022-2023 Smedis2, QuakeDoomNukem, RichardDS90, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
