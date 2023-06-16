@@ -3298,20 +3298,15 @@ Actor JzPrize2 : JzPrize1 3360
 	}
 }
 
-Actor KamikazeTurtleProp 3738 // #behavior incomplete?
+Actor KamikazeTurtleProp 3738
 {
 	Height 56
 	Radius 16
-	Health 1
-	Mass 100000
-	+NOBLOOD
+	+NOINTERACTION
 	States
 	{
 	Spawn:
 		DKAM A -1
-		Stop
-	Death:
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		Stop
 	}
 }

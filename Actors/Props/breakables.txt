@@ -52,69 +52,69 @@ Actor CeraPot 3399
 
 Actor GlassSpawner 4125
 {
-Height 32
-Radius 32
-Speed 0
-Health 1
-+NOGRAVITY
-+SHOOTABLE
--COUNTKILL
-+NOBLOOD
-+NOINFIGHTING
-States
-{
+	Height 32
+	Radius 32
+	Speed 0
+	Health 1
+	-COUNTKILL //why this?
+	+NOGRAVITY
+	+NOBLOOD
+	+NOINFIGHTING
+	+SHOOTABLE
+	States
+	{
 	Spawn:
-	PLEX A 4
-	Loop
+		PLEX A 4
+		Loop
 	Death:
-	TNT1 A 0 A_PlaySound ("JJGLASS")
- 	TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("GlassPiece",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
+		TNT1 A 0 A_PlaySound ("JJGLASS")
+		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("GlassPiece",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
 	}
 }
 
 Actor GlassPiece
 {
-  Radius 16
-  Height 0
-  Mass 5
-  Speed 15
-  Damage 1
-  RenderStyle Add
-  PROJECTILE
-  -NOGRAVITY
-  +NOINFIGHTING
-    +FLATSPRITE
-  +NOBLOOD
-  +TOUCHY
-  +Corpse
-  +RANDOMIZE
-  +NOEXPLODEFLOOR
-    +LOWGRAVITY
-  Gravity 0.6
-  States
-  {
-  Spawn:
-     TNT1 A 0
-     TNT1 A 0 A_Jump(255,"Standard","Small","Tiny","XLarge")
-  Standard:	
-     BGLS ABC 1
-	 Loop
-  Small:	
-     BGLS ABC 1
-	 Loop	
-  Tiny:	
-     BGLS ABC 1
-	 Loop
-  XLarge:	
-     BGLS ABC 1
-	 Loop	 
-  Death:
-     BGLS A 1
-	 BGLS B 1
-	 BGLS C -1
-     Loop //intended?
-  }
+	Radius 16
+	Height 0
+	Mass 5
+	Speed 15
+	Damage 1
+	RenderStyle Add
+	PROJECTILE
+	-NOGRAVITY
+	+CORPSE
+	+FLATSPRITE
+	+LOWGRAVITY
+	+NOBLOOD
+	+NOEXPLODEFLOOR
+	+NOINFIGHTING
+	+RANDOMIZE
+	+TOUCHY
+	Gravity 0.6
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(255,"Standard","Small","Tiny","XLarge")
+	Standard:	
+		BGLS ABC 1
+		Loop
+	Small:	
+		BGLS ABC 1
+		Loop	
+	Tiny:	
+		BGLS ABC 1
+		Loop
+	XLarge:	
+		BGLS ABC 1
+		Loop	 
+	Death:
+		BGLS A 1
+		BGLS B 1
+		BGLS C -1
+		Stop
+	}
 }
 
 Actor MetalCrate 3931
