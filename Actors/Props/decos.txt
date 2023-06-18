@@ -2021,7 +2021,7 @@ Actor ElectricPillar 3289
 	States
 	{
 	Spawn:
-		ELEP A 0 NoDelay A_StartSound ("ELECPILL", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+		ELEP A 0 NoDelay A_StartSound("ELECPILL", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
 	Spawn2:
 		ELEP ABCD 3
 		Loop

@@ -404,25 +404,33 @@ $attenuation Fountain/Loop 3
 $volume Fountain/Loop 0.5
 $limit Fountain/Loop 0
 
-//Added Sounds
-
-EGBJYELL	EGBJYELL
-SNKESND		SNKESND
+//RAIN
 Ambient/Rain	AMBRAIN
-armattk		armattk
-SWROWL		SWROWL
-RWING		RWING
-RVNSEE		RVNSEE
-RVNATT		RVNATT
+$rolloff Ambient/Rain 250 1250
+$pitchshift Ambient/Rain 0
+$limit Ambient/Rain 2
+
+//Added Sounds
+ARMATTK		ARMATTK
+CDGNATTK	CDGNATTK
 CDGNSEE		CDGNSEE
-cdgnattk	cdgnattk
-STANDBY		STANDBY
-UTYouBlu	UTYouBlu
-UTRedTak	UTRedTak
-UTBluWin	UTBluWin
-kamiturtle/scream		JZTSCRM
 DSSPEARU	DSSPEARU
+EGBJYELL	EGBJYELL
+JJGLASS		JJGLASS
+OLDTWINK	OLDTWINK
+PYRCEXPL	PYRCEXPL
+RVNATT		RVNATT
+RVNSEE		RVNSEE
+RWING		RWING
+SNKESND		SNKESND
+STANDBY		STANDBY
+SWROWL		SWROWL
 TRN_BEER	TRN_BEER
+UTBLUWIN	UTBLUWIN
+UTREDTAK	UTREDTAK
+UTYOUBLU	UTYOUBLU
+
+kamiturtle/scream		JZTSCRM
 
 suckfart	suckfart
 $random SUCKWALK 		{ SUKWALK1  SUKWALK2 }
@@ -438,8 +446,3 @@ $random PLANESEE		{ Plansee1  plansee2 }
 Plansee1		Plansee1
 plansee2	    plansee2
 planeact		planeact
-
-OLDTWINK		OLDTWINK
-
-PYRCEXPL		PYRCEXPL
-JJGLASS			JJGLASS

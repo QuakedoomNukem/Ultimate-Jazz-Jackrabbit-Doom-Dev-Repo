@@ -48,77 +48,67 @@ Actor CastleCandleOut 3392
 	}
 }
 
-
 Actor CeilingLantern 4684 //To Be Eliminated
 {
-  Radius 16
-  Height 20
-  +SPAWNCEILING
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    FRLT C -1 Bright
-	Stop
-  }
+	Radius 16
+	Height 20
+	+SPAWNCEILING
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		FRLT C -1 Bright
+		Stop
+	}
 }
 
-Actor CeilingLantern_Animated 4685 //To Be Eliminated
+Actor CeilingLantern_Animated : CeilingLantern 4685 //To Be Eliminated
 {
-  Radius 16
-  Height 20
-  +SPAWNCEILING
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    FRLT C 5 Bright
-	FRLF C 10
-	Loop
-  }
+	States
+	{
+	Spawn:
+		FRLT C 5 Bright
+		FRLF C 10
+		Loop
+	}
 }
 
-Actor CeilingLanternTall 4686 //To Be Eliminated
+Actor CeilingLanternTall : CeilingLantern 4686 //To Be Eliminated
 {
-  Radius 16
-  Height 20
-  +SPAWNCEILING
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    FRLT D -1 Bright
-	Stop
-  }
+	+BRIGHT
+	States
+	{
+	Spawn:
+		FRLT D -1
+		Stop
+	}
 }
 
-Actor CeilingLanternTall_Animated 4687 //To Be Eliminated
+Actor CeilingLanternTall_Animated : CeilingLantern 4687 //To Be Eliminated
 {
-  Radius 16
-  Height 20
-  +SPAWNCEILING
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    FRLT D 5 Bright
-	FRLF D 10
-	Loop
-  }
+	States
+	{
+	Spawn:
+		FRLT D 5 Bright
+		FRLF D 10
+		Loop
+	}
 }
 
 Actor ChamTorch 3708
 {
-Height 16
-Radius 12
-+SOLID
-+NOGRAVITY
-States
+	Height 16
+	Radius 12
+	+BRIGHT
+	+SOLID
+	+NOGRAVITY
+	States
 	{
 	Spawn:
-	TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-	ctor abcdefgh 3 bright
-	Loop
+		CTOR A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		CTOR ABCDEFGH 3
+		Loop
 	}
 }
 
@@ -210,212 +200,221 @@ Actor DarkRealmLight3 4073
 	}
 }
 
-
 Actor FireBowl2 3302
 {
-Height 16
-Radius 16
-+NOGRAVITY
-+SOLID
-States
-{
-Spawn:
-TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-FBW2 ABCDE 3 Bright
-Loop
-}
+	Height 16
+	Radius 16
+	+BRIGHT
+	+NOGRAVITY
+	+SOLID
+	States
+	{
+	Spawn:
+		FBW2 A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		FBW2 ABCDE 3
+		Loop
+	}
 }
 
 Actor Flame 3282
 {
-  +FLOORCLIP
-  Height 16
-  Radius 16
-  States
-  {
-  Spawn:
-  TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-  FLAM ABCDEFG 4 bright
-    Loop
-  }
+	+BRIGHT
+	+FLOORCLIP
+	Height 16
+	Radius 16
+	States
+	{
+	Spawn:
+		FLAM A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		FLAM ABCDEFG 4
+		Loop
+	}
 }
 
 Actor FlameBowl 3283
 {
-  +FLOORCLIP
-  +SOLID
-  Height 20
-  Radius 20
-  States
-  {
-  Spawn:
-  TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-  FLMB ABCDEFG 4 bright
-   Loop
-  }
+	Height 20
+	Radius 20
+	+BRIGHT
+	+FLOORCLIP
+	+SOLID
+	States
+	{
+	Spawn:
+		FLMB A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		FLMB ABCDEFG 4
+		Loop
+	}
 }
 
 Actor FloorLantern 4680 ////To Be Eliminated
 {
-  Radius 16
-  Height 28
-  States
-  {
-  Spawn:
-    FRLT A -1 Bright
-	Stop
-  }
+	Radius 16
+	Height 28
+	+BRIGHT
+	States
+	{
+	Spawn:
+		FRLT A -1
+		Stop
+	}
 }
 
 Actor FloorLantern_Animated 4681 ////To Be Eliminated
 {
-  Radius 16
-  Height 28
-  States
-  {
-  Spawn:
-    FRLT A 5 Bright
-	FRLF A 10
-	Loop
-  }
+	Radius 16
+	Height 28
+	States
+	{
+	Spawn:
+		FRLT A 5 Bright
+		FRLF A 10
+		Loop
+	}
 }
 
 Actor FloorLanternTall 4682 ////To Be Eliminated
 {
-  Radius 16
-  Height 28
-  States
-  {
-  Spawn:
-    FRLT B -1 Bright
-	Stop
-  }
+	Radius 16
+	Height 28
+	+BRIGHT
+	States
+	{
+	Spawn:
+		FRLT B -1
+		Stop
+	}
 }
 
 Actor FloorLanternTall_Animated 4683 //To Be Eliminated
 {
-  Radius 16
-  Height 28
-  States
-  {
-  Spawn:
-    FRLT B 5 Bright
-	FRLF B 10
-	Loop
-  }
+	Radius 16
+	Height 28
+	States
+	{
+	Spawn:
+		FRLT B 5 Bright
+		FRLF B 10
+		Loop
+	}
 }
 	
 Actor JazzBrazier 4063
 {
-Radius 20
-Height 82
-+SOLID
-+NOGRAVITY
-+SPAWNCEILING
-+BRIGHT
-States
-{
-Spawn:
-TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-JBRZ ABCDE 3 Bright
-Loop
-}
+	Radius 20
+	Height 82
+	+BRIGHT
+	+NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		JBRZ A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		JBRZ ABCDE 3
+		Loop
+	}
 }
 
 Actor JazzTorch 3739
 {
-  Height 32
-  Radius 4
-  +SOLID
-  States
-  {
-  Spawn:
-  TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-    JJTH ABC 3 Bright
-    Loop
-    }
+	Height 32
+	Radius 4
+	+BRIGHT
+	+SOLID
+	States
+	{
+	Spawn:
+		JJTH A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		JJTH ABC 3 Bright
+		Loop
+	}
 }
 
 Actor JazzGreenTorch 4111
 {
-  Height 32
-  Radius 4
-  +SOLID
-  States
-  {
-  Spawn:
-  TNT1 A 0 A_PlaySoundEx("Torch", "auto", 1, -1)
-    JJTG ABC 3 Bright
-    Loop
-    }
+	Height 32
+	Radius 4
+	+BRIGHT
+	+SOLID
+	States
+	{
+	Spawn:
+		JJTG A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		JJTG ABC 3
+		Loop
+	}
 }
 //To be sectorised
 Actor LabLight1 3331
 {
-Height 160
-Radius 16
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABL E -1 bright
-Stop
-}
+	Height 160
+	Radius 16
+	+BRIGHT
+	+FLOORCLIP
+	+SOLID
+	States
+	{
+	Spawn:
+		LABL E -1
+		Stop
+	}
 }
 
 //To be sectorised
-Actor LabLight2 3332
+Actor LabLight2 : LabLight1 3332
 {
-Height 128
-Radius 16
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABL F -1 bright
-Stop
-}
+	Height 128
+	States
+	{
+	Spawn:
+		LABL F -1
+		Stop
+	}
 }
 
 Actor LabStrobe1 3330
 {
-Height 64
-Radius 4
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-LABL ABCD 3 bright
-Loop
-}
-}
-
-Actor lavalampred 3450
-{
-Height 64
-Radius 8
-+SOLID
-States
+	Height 64
+	Radius 4
+	+BRIGHT
+	+FLOORCLIP
+	+SOLID
+	States
 	{
 	Spawn:
-	llmp abcdefghij 3 bright
-	Stop
+		LABL ABCD 3
+		Loop
 	}
 }
 
-Actor lavalampgrey 3451
+Actor LavaLampRed 3450
 {
-Height 64
-Radius 8
-+SOLID
-States
+	Height 64
+	Radius 8
+	+BRIGHT
+	+SOLID
+	States
 	{
 	Spawn:
-	lmp2 abcdefghij 3 bright
-	Stop
+		LLMP ABCDEFGHIJ 3
+		Stop
+	}
+}
+
+Actor LavaLampGrey : LavaLampRed 3451
+{
+	States
+	{
+	Spawn:
+		LMP2 ABCDEFGHIJ 3
+		Stop
 	}
 }
 
@@ -427,8 +426,8 @@ Actor Light1 3130 //To Be Eliminated
 	States
 	{
 	Spawn:
-	LGHT A -1
-	Stop
+		LGHT A -1
+		Stop
 	}
 }
 
@@ -440,21 +439,22 @@ Actor Light2 3131 //To Be Eliminated
 	States
 	{
 	Spawn:
-	LGT2 A -1
-	Stop
+		LGT2 A -1
+		Stop
 	}
 }
 
 Actor LitCandle 3397
 {
-Height 248
-Radius 8
-+SOLID
-States
+	Height 248
+	Radius 8
+	+BRIGHT
+	+SOLID
+	States
 	{
 	Spawn:
-	ccan abcdefghij 3 bright
-	Loop
+		CCAN ABCDEFGHIJ 3
+		Loop
 	}
 }
 
@@ -495,24 +495,25 @@ Actor MegaLight3 : MegaLight1 3147
 
 Actor PollutusStrobe 32526
 {
-Height 64
-Radius 4
-+SOLID
-+FLOORCLIP
-States
-{
-Spawn:
-POLL ABCD 3 bright
-Loop
-}
+	Height 64
+	Radius 4
+	+BRIGHT
+	+FLOORCLIP
+	+SOLID
+	States
+	{
+	Spawn:
+		POLL ABCD 3
+		Loop
+	}
 }
 
 Actor ScrapLight 3481
 {
 	Height 52
 	Radius 4
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -537,55 +538,56 @@ Actor ScrapLitRocket 3483
 
 Actor TubeRemixStrobeCeiling 3967
 {
-Height 16
-Radius 8
--SOLID
-+NOGRAVITY
-+SPAWNCEILING
-States
+	Height 16
+	Radius 8
+	-SOLID
+	+BRIGHT
+	+NOGRAVITY
+	+SPAWNCEILING
+	States
 	{
 	Spawn:
-	TBRC ABCD 3 BRIGHT
-	Loop
+		TBRC ABCD 3
+		Loop
 	}
 }
 
 Actor TubeRemixStrobeFloor 3968
 {
-Height 18
-Radius 7
-+SOLID
-States
+	Height 18
+	Radius 7
+	+BRIGHT
+	+SOLID
+	States
 	{
 	Spawn:
-	TBRS ABCD 3 BRIGHT
-	Loop
+		TBRS ABCD 3
+		Loop
 	}
 }
 
-
 Actor XmasCandionLight 4086
 {
-+SOLID
-Height 105
-Radius 16
-States
-{
-Spawn:
-XSCL ABCDEFGH 3
-Loop
-}
+	Height 105
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		XSCL ABCDEFGH 3
+		Loop
+	}
 }
 
 Actor XmasLantern 4087
 {
-+SOLID
-Height 64
-Radius 16
-States
-{
-Spawn:
-XLRN ABCD 3
-Loop
-}
+	Height 64
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		XLRN ABCD 3
+		Loop
+	}
 }

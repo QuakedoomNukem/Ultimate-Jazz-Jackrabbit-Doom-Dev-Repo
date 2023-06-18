@@ -127,7 +127,7 @@ Actor CaterSmoke
 		"####" "#" 0 A_SeekerMissile(1, 3)
 		Stop
 	XDeath:
-		"####" B 0 {A_PlaySound(""); A_RadiusGive("DizzySmoke", 48, RGF_PLAYERS | RGF_CUBE, 1);}
+		"####" B 0 {A_StartSound(""); A_RadiusGive("DizzySmoke", 48, RGF_PLAYERS | RGF_CUBE, 1);}
 	Death:
 		//TNT1 AAAAAAAA 0 A_SpawnItemEx("SmokeRings", 0, 0, 0, random(10, 30)*0.1, 0, random(0, 10)*0.1, random(0,360), SXF_CLIENTSIDE|SXF_NOCHECKPOSITION)
 		//"####" AAAA 0 A_SpawnItemEx("SmokeRings", 0, 0, 0, random(10, 30)*0.04, 0, random(0, 10)*0.04, random(0,360), SXF_CLIENTSIDE|SXF_NOCHECKPOSITION)
@@ -177,7 +177,7 @@ Actor CaterpillarEffect : CustomInventory 3765
 		"####" "#" 1
 		Stop
 	Pickup:
-		TNT1 A 1 A_PlaySound("smokering/ring")
+		TNT1 A 1 A_StartSound("smokering/ring")
 		TNT1 A 0 A_GiveInventory("CaterpillarCount", 300)
 		TNT1 A 0 ACS_NamedExecute("CaterpillarSmoke",0)
 		Stop
@@ -208,7 +208,7 @@ Actor CheckSign 22022
 		CHCK A -1
 		Stop
 	Death:
-		TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
 		TNT1 A 0 A_SpawnItemEx("Checksign2")
 		Stop	
 	}
@@ -274,9 +274,9 @@ Actor JungrockPad : CustomInventory 3904
 		JRCK A -1
 		Stop
 	HoldAndDestroy: 
-		JRCK A 0  A_SpawnItemex("JungrockPad2")
-		JRCK A 0  a_PlaySound("boing")
-		JRCK A 0  A_TakeInventory ("JungrockPad",1)
+		JRCK A 0 A_SpawnItemEx("JungrockPad2")
+		JRCK A 0 A_StartSound("BOING")
+		JRCK A 0 A_TakeInventory ("JungrockPad",1)
 		Stop
 	Pickup: 
 		JRCK A 1  ThrustThingZ(0,64,0,0)
@@ -286,17 +286,17 @@ Actor JungrockPad : CustomInventory 3904
 
 Actor JungrockPad2
 {
-Radius 32
-Height 12
--SOLID
--BRIGHT
-States
-{
-Spawn:
-	JRCK Q 20
-	JRCK A 0  A_SpawnItemex("JungrockPad")
-	Stop
-    }
+	Radius 32
+	Height 12
+	-BRIGHT
+	-SOLID
+	States
+	{
+	Spawn:
+		JRCK Q 20
+		JRCK A 0  A_SpawnItemEx("JungrockPad")
+		Stop
+	}
 }
 
 Actor RabbitStinkSign2 3947
@@ -306,11 +306,11 @@ Actor RabbitStinkSign2 3947
 	Health 2
 	Mass 10000000
 	DamageFactor "Normal", 0
-  DamageFactor "Ice", 0
-  DamageFactor "Fire", 0
-  DamageFactor "JazzProj", 1
-  DamageFactor "JazzProjFire", 1
-  DamageFactor "JazzProjIce", 1
+	DamageFactor "Ice", 0
+	DamageFactor "Fire", 0
+	DamageFactor "JazzProj", 1
+	DamageFactor "JazzProjFire", 1
+	DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
@@ -319,12 +319,12 @@ Actor RabbitStinkSign2 3947
 	States
 	{
 	Spawn:
-	DMDS K -1
-	Stop
+		DMDS K -1
+		Stop
 	Death:
-	TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
-	TNT1 A 0 A_SpawnItemEx("RabbitStinkStump2")
-	Stop	
+		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("RabbitStinkStump2")
+		Stop	
 	}
 }
 
@@ -339,8 +339,8 @@ Actor RabbitStinkStump2
 	States
 	{
 	Spawn:
-	DMDS X -1
-	Stop
+		DMDS X -1
+		Stop
 	}
 }
 
@@ -351,11 +351,11 @@ Actor SecretSign 28022
 	Health 2
 	Mass 10000000
 	DamageFactor "Normal", 0
-  DamageFactor "Ice", 0
-  DamageFactor "Fire", 0
-  DamageFactor "JazzProj", 1
-  DamageFactor "JazzProjFire", 1
-  DamageFactor "JazzProjIce", 1
+	DamageFactor "Ice", 0
+	DamageFactor "Fire", 0
+	DamageFactor "JazzProj", 1
+	DamageFactor "JazzProjFire", 1
+	DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
@@ -364,100 +364,98 @@ Actor SecretSign 28022
 	States
 	{
 	Spawn:
-	SSGN A -1
-	Stop
+		SSGN A -1
+		Stop
 	Death:
-	TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
-	TNT1 A 0 A_SpawnItemEx("Checksign2")
-	Stop	
+		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("Checksign2")
+		Stop	
 	}
 }
 
 
 Actor TubeRemixFan64 : CustomInventory 3972
 {
-Radius 32
-Height 56
-+INVENTORY.QUIET
-     +INVENTORY.ALWAYSPICKUP
-     +INVENTORY.AUTOACTIVATE
-	 +NOTARGET
-	 Inventory.PickupMessage ""
-     Inventory.amount 0
-     Inventory.MaxAmount 0
-States
-{
-Spawn:
-	TBRF ABCDEFG 3
-	Loop
+	Radius 32
+	Height 56
+	+INVENTORY.QUIET
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	+NOTARGET
+	Inventory.PickupMessage ""
+	Inventory.amount 0
+	Inventory.MaxAmount 0
+	States
+	{
+	Spawn:
+		TBRF ABCDEFG 3
+		Loop
 	HoldAndDestroy: 
-        TBRF A 0 A_SpawnItemex("TubeRemixFanLow2")
-        TBRF A 0   
-     	TBRF A 0  A_TakeInventory ("TubeRemixFan64",1)
-     	Stop
- 
-       Pickup: 
-       	TBRF ABCDEFG 3  ThrustThingZ(0,64,0,0)
+		TBRF A 0 A_SpawnItemEx("TubeRemixFanLow2")
+		TBRF A 0   
+		TBRF A 0 A_TakeInventory ("TubeRemixFan64",1)
 		Stop
-    }
+	Pickup: 
+		TBRF ABCDEFG 3 ThrustThingZ(0,64,0,0)
+		Stop
+	}
 }
 
 Actor TubeRemixFanLow2
 {
-Radius 32
-Height 56
-+SOLID
--BRIGHT
-States
-{
-Spawn:
-	TBRF ABCDEFG 3
-	TBRF A 0  A_SpawnItemex("TubeRemixFan64")
-	Stop
-    }
+	Radius 32
+	Height 56
+	-BRIGHT
+	+SOLID
+	States
+	{
+	Spawn:
+		TBRF ABCDEFG 3
+		TBRF A 0 A_SpawnItemEx("TubeRemixFan64")
+		Stop
+	}
 }
 
 Actor TubeRemixFan96 : CustomInventory 3979
 {
-Radius 32
-Height 56
-+INVENTORY.QUIET
-     +INVENTORY.ALWAYSPICKUP
-     +INVENTORY.AUTOACTIVATE
-	 +NOTARGET
-	 Inventory.PickupMessage ""
-     Inventory.amount 0
-     Inventory.MaxAmount 0
-States
-{
-Spawn:
-	TBRF ABCDEFG 3
-	Loop
+	Radius 32
+	Height 56
+	+INVENTORY.QUIET
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	+NOTARGET
+	Inventory.PickupMessage ""
+	Inventory.amount 0
+	Inventory.MaxAmount 0
+	States
+	{
+	Spawn:
+		TBRF ABCDEFG 3
+		Loop
 	HoldAndDestroy: 
-        TBRF A 0 A_SpawnItemex("TubeRemixFan2")
-        TBRF A 0   
-     	TBRF A 0  A_TakeInventory ("TubeRemixFan96",1)
-     	Stop
- 
-       Pickup: 
-       	TBRF ABCDEFG 3  ThrustThingZ(0,96,0,0)
+		TBRF A 0 A_SpawnItemEx("TubeRemixFan2")
+		TBRF A 0   
+		TBRF A 0 A_TakeInventory("TubeRemixFan96",1)
 		Stop
-    }
+	Pickup: 
+		TBRF ABCDEFG 3 ThrustThingZ(0,96,0,0)
+		Stop
+	}
 }
 
 Actor TubeRemixFan2
 {
-Radius 32
-Height 56
-+SOLID
--BRIGHT
-States
-{
-Spawn:
-	TBRF ABCDEFG 3
-	TBRF A 0  A_SpawnItemex("TubeRemixFan96")
-	Stop
-    }
+	Radius 32
+	Height 56
+	-BRIGHT
+	+SOLID
+	States
+	{
+	Spawn:
+		TBRF ABCDEFG 3
+		TBRF A 0  A_SpawnItemEx("TubeRemixFan96")
+		Stop
+	}
 }
 
 Actor XmasBlockGuy 4081
@@ -467,11 +465,11 @@ Actor XmasBlockGuy 4081
 	Health 2
 	Mass 10000000
 	DamageFactor "Normal", 0
-  DamageFactor "Ice", 0
-  DamageFactor "Fire", 0
-  DamageFactor "JazzProj", 1
-  DamageFactor "JazzProjFire", 1
-  DamageFactor "JazzProjIce", 1
+	DamageFactor "Ice", 0
+	DamageFactor "Fire", 0
+	DamageFactor "JazzProj", 1
+	DamageFactor "JazzProjFire", 1
+	DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
@@ -480,12 +478,12 @@ Actor XmasBlockGuy 4081
 	States
 	{
 	Spawn:
-	BLKG A -1
-	Stop
+		BLKG A -1
+		Stop
 	Death:
-	TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
-	TNT1 A 0 A_SpawnItemEx("BlockGuy2")
-	Stop	
+		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("BlockGuy2")
+		Stop	
 	}
 }
 
@@ -500,22 +498,22 @@ Actor BlockGuy2
 	States
 	{
 	Spawn:
-	BLKG B -1
-	Stop
+		BLKG B -1
+		Stop
 	}
 }
 
 Actor TallMedivoTrees 3288
 {
-  +SOLID
-  Height 952
-  Radius 64
-  States
-  {
-  Spawn:
-  TALT A -1 //Skybox
-    Stop
-  }
+	Height 952
+	Radius 64
+	+SOLID
+	States
+	{
+	Spawn:
+		TALT A -1 //Skybox
+		Stop
+	}
 }
 
 Actor BigHellBones 3284
@@ -570,65 +568,54 @@ Actor MedivoCastle 3281
 
 Actor SkyboxDecor1 3311
 {
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB A -1 	Bright
-Stop
-}
-}
-
-Actor SkyboxDecor2 3312
-{
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB B -1	Bright
-Stop
-}
+	Height 32
+	Radius 32
+	+BRIGHT
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		SKYB A -1 
+		Stop
+	}
 }
 
-Actor SkyboxDecor3 3313
+Actor SkyboxDecor2 : SkyboxDecor1 3312
 {
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB C -1	Bright
-Stop
-}
+	States
+	{
+	Spawn:
+		SKYB B -1
+		Stop
+	}
 }
 
-Actor SkyboxDecor4 3314
+Actor SkyboxDecor3 : SkyboxDecor1 3313
 {
-Height 32
-Radius 32
-+NOGRAVITY
-States
-{
-Spawn:
-SKYB D -1	Bright
-Stop
-}
+	States
+	{
+	Spawn:
+		SKYB C -1
+		Stop
+	}
 }
 
-Actor SkyboxDecor5 3315
+Actor SkyboxDecor4 : SkyboxDecor1 3314
 {
-Height 32
-Radius 32
-+NOGRAVITY
+	States
+	{
+	Spawn:
+		SKYB D -1
+		Stop
+	}
+}
+
+Actor SkyboxDecor5 : SkyboxDecor1 3315
+{
 States
 {
-Spawn:
-SKYB E -1 Bright
-Stop
-}
+	Spawn:
+		SKYB E -1
+		Stop
+	}
 }

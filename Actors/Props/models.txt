@@ -20,205 +20,300 @@
  * SOFTWARE.
 **/
 
+//PADS
 Actor RedPadLowModel : CustomInventory 25637
 {
-Radius 32
-Height 16
-+INVENTORY.QUIET
-     +INVENTORY.ALWAYSPICKUP
-     +INVENTORY.AUTOACTIVATE
-	 +NOTARGET
-	 Inventory.PickupMessage ""
-     Inventory.amount 0
-     Inventory.MaxAmount 0
-States
-{
-Spawn:
-	RPAD A 1
-	Loop
+	Radius 32
+	Height 16
+	+INVENTORY.QUIET
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	+NOTARGET
+	Inventory.PickupMessage ""
+	Inventory.Amount 0
+	Inventory.MaxAmount 0
+	States
+	{
+	Spawn:
+		RPAD A 1
+		Loop
 	HoldAndDestroy: 
-        RPAD A 0  A_SpawnItemex("RedPadLowModel2")
-        RPAD A 0  a_PlaySound("BOING")
-     	RPAD A 0  A_TakeInventory ("RedPadLowModel",1)
-     	Stop
- 
-       Pickup: 
-       	RPAD A 1  ThrustThingZ(0,64,0,0)
+		RPAD A 0 A_SpawnItemEx("RedPadLowModel2")
+		RPAD A 0 A_StartSound("BOING")
+		RPAD A 0 A_TakeInventory("RedPadLowModel",1)
 		Stop
-    }
+	Pickup: 
+		RPAD A 1 ThrustThingZ(0,64,0,0)
+		Stop
+	}
 }
 
 Actor RedPadLowModel2
 {
-Radius 32
-Height 16
--SOLID
--BRIGHT
-States
-{
-Spawn:
-	RPAD B 20
-	RPAD A 0  A_SpawnItemex("RedPadLowModel")
-	Stop
-    }
+	Radius 32
+	Height 16
+	-SOLID
+	-BRIGHT
+	States
+	{
+	Spawn:
+		RPAD B 20
+		RPAD A 0 A_SpawnItemEx("RedPadLowModel")
+		Stop
+	}
 }
 
 Actor RedPadHighModel : RedPadLowModel 3813 //3905
-
 {
 States
 {
-HoldAndDestroy: 
-        RPAD A 0  A_SpawnItemex("RedPadHighModel2")
-        RPAD A 0  a_PlaySound("BOING")
-     	RPAD A 0  A_TakeInventory ("RedPadHighModel",1)
-     	Stop
- 
-       Pickup: 
-       	RPAD A 1  ThrustThingZ(0,96,0,0)
+	HoldAndDestroy: 
+		RPAD A 0 A_SpawnItemEx("RedPadHighModel2")
+		RPAD A 0 A_StartSound("BOING")
+		RPAD A 0 A_TakeInventory("RedPadHighModel",1)
 		Stop
-		}
-		}
-		
+	Pickup: 
+		RPAD A 1 ThrustThingZ(0,96,0,0)
+		Stop
+	}
+}
+	
 Actor RedPadHighModel2 : RedPadLowModel2
 {
-States
-{
-Spawn:
-	RPAD B 20
-	RPAD A 0  A_SpawnItemex("RedPadHighModel")
-	Stop
-    }
+	States
+	{
+	Spawn:
+		RPAD B 20
+		RPAD A 0 A_SpawnItemEx("RedPadHighModel")
+		Stop
+	}
 }
 
 Actor GreenPadLowModel : RedPadLowModel 25634 //3906
 {
-Radius 32
-Height 16
--SOLID
--BRIGHT
-States
-{
-Spawn:
-	GPAD A 1
-	Loop
+	Radius 32
+	Height 16
+	-SOLID
+	-BRIGHT
+	States
+	{
+	Spawn:
+		GPAD A 1
+		Loop
 	HoldAndDestroy: 
-        GPAD A 0  A_SpawnItemex("GreenpadLowModel2")
-        GPAD A 0  a_PlaySound("boing")
-     	GPAD A 0  A_TakeInventory ("GreenPadLowModel",1)
-     	Stop
- 
-       Pickup: 
-       	GPAD A 1  ThrustThingZ(0,100,0,0)
+		GPAD A 0 A_SpawnItemEx("GreenpadLowModel2")
+		GPAD A 0 A_StartSound("BOING")
+		GPAD A 0 A_TakeInventory ("GreenPadLowModel",1)
 		Stop
-    }
+	Pickup: 
+		GPAD A 1 ThrustThingZ(0,100,0,0)
+		Stop
+	}
 }
 
 Actor GreenPadLowModel2 : RedPadLowModel2
 {
-States
-{
-Spawn:
-	GPAD B 20
-	GPAD A 0  A_SpawnItemex("GreenpadLowModel")
-	Stop
-    }
+	States
+	{
+	Spawn:
+		GPAD B 20
+		GPAD A 0 A_SpawnItemEx("GreenpadLowModel")
+		Stop
+	}
 }
 
 Actor GreenPadHighModel : RedPadLowModel 3814
-
 {
 States
 {
-Spawn:
-	GPAD A 1
-	Loop
-HoldAndDestroy: 
-        GPAD A 0  A_SpawnItemex("GreenpadHighModel2")
-        GPAD A 0  a_PlaySound("boing")
-     	GPAD A 0  A_TakeInventory ("GreenPadHighModel",1)
-     	Stop
- 
-       Pickup: 
-       	GPAD A 1  ThrustThingZ(0,128,0,0)
+	Spawn:
+		GPAD A 1
+		Loop
+	HoldAndDestroy: 
+		GPAD A 0 A_SpawnItemEx("GreenpadHighModel2")
+		GPAD A 0 A_StartSound("BOING")
+		GPAD A 0 A_TakeInventory ("GreenPadHighModel",1)
 		Stop
-		}
-		}
-		
+	Pickup: 
+		GPAD A 1 ThrustThingZ(0,128,0,0)
+		Stop
+	}
+}
+	
 Actor GreenPadHighModel2 : RedPadLowModel2
 {
-States
-{
-Spawn:
-	GPAD B 20
-	GPAD A 0  A_SpawnItemex("GreenpadHighModel")
-	Stop
-    }
+	States
+	{
+	Spawn:
+		GPAD B 20
+		GPAD A 0 A_SpawnItemEx("GreenpadHighModel")
+		Stop
+	}
 }
 
 Actor BluePadLowModel : RedPadLowModel 25635 //3907
 {
-Radius 32
-Height 16
--SOLID
--BRIGHT
-States
-{
-Spawn:
-	BPAD A 1
-	Loop
+	Radius 32
+	Height 16
+	-SOLID
+	-BRIGHT
+	States
+	{
+	Spawn:
+		BPAD A 1
+		Loop
 	HoldAndDestroy: 
-        BPAD A 0  A_SpawnItemex("BluePadLowModel2")
-        BPAD A 0  a_PlaySound("boing")
-     	BPAD A 0  A_TakeInventory ("BluePadLowModel",1)
-     	Stop
- 
-       Pickup: 
-       	BPAD A 1  ThrustThingZ(0,132,0,0)
+		BPAD A 0 A_SpawnItemEx("BluePadLowModel2")
+		BPAD A 0 A_StartSound("BOING")
+		BPAD A 0 A_TakeInventory ("BluePadLowModel",1)
 		Stop
-    }
+	Pickup: 
+		BPAD A 1 ThrustThingZ(0,132,0,0)
+		Stop
+	}
 }
 
 Actor BluePadLowModel2 : RedPadLowModel2
 {
-States
-{
-Spawn:
-	BPAD B 20
-	BPAD A 0  A_SpawnItemex("BluePadLowModel")
-	Stop
-    }
+	States
+	{
+	Spawn:
+		BPAD B 20
+		BPAD A 0 A_SpawnItemEx("BluePadLowModel")
+		Stop
+	}
 }
 
 Actor BluePadHighModel : RedPadLowModel 3815
-
 {
-States
-{
-HoldAndDestroy: 
-        BPAD A 0  A_SpawnItemex("BluepadHighModel2")
-        BPAD A 0  a_PlaySound("boing")
-     	BPAD A 0  A_TakeInventory ("BluePadHighModel",1)
-     	Stop
- 
-       Pickup: 
-       	BPAD A 1  ThrustThingZ(0,164,0,0)
+	States
+	{
+	HoldAndDestroy: 
+		BPAD A 0 A_SpawnItemEx("BluepadHighModel2")
+		BPAD A 0 A_StartSound("BOING")
+		BPAD A 0 A_TakeInventory ("BluePadHighModel",1)
 		Stop
-		}
-		}
+	Pickup: 
+		BPAD A 1 ThrustThingZ(0,164,0,0)
+		Stop
+	}
+}
 		
 Actor BluePadHighModel2 : RedPadLowModel2
 {
-States
-{
-Spawn:
-	GPAD B 20
-	GPAD A 0  A_SpawnItemex("BluepadHighModel")
-	Stop
-    }
+	States
+	{
+	Spawn:
+		GPAD B 20
+		GPAD A 0 A_SpawnItemEx("BluepadHighModel")
+		Stop
+	}
 }
 
+Actor HoverRedPadModel : CustomInventory 3811
+{
+	+INVENTORY.QUIET
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	FloatBobStrength 0.2
+	+FLOATBOB
+	+NOGRAVITY
+	Inventory.PickupMessage ""
+	Inventory.amount 0
+	Inventory.MaxAmount 0
+	States  
+	{
+	Spawn:
+		HSPG A -1
+		Stop
+	HoldAndDestroy:
+		HSPG A 0 A_SpawnItemEx("HoverRedPadModel2")
+		HSPG A 0 A_StartSound("BOING")
+		HSPG A 1 A_TakeInventory ("HoverRedPadModel",1)
+		Stop
+	Pickup:
+		HSPG A 1 ThrustThingZ(0,96,0,0)
+		Stop
+	}
+}
 
+Actor HoverRedPadModel2
+{
+	Radius 32
+	Height 12
+	FloatBobStrength 0.2
+	-BRIGHT
+	-SOLID
+	+FLOATBOB
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		HSPG D 20
+		HSPG D 0 A_SpawnItemEx("HoverRedPadModel")
+		Stop
+	}
+}
+
+Actor HoverGreenPadModel : HoverRedPadModel 3812
+{
+	States  
+	{
+	Spawn:
+		HSPG B -1
+		Stop
+	HoldAndDestroy: 
+		HSPG B 0 A_SpawnItemEx("HoverGreenPadModel2")
+		HSPG B 0 A_StartSound("BOING")
+		HSPG B 0 A_TakeInventory ("HoverGreenPadModel",1)
+		Stop
+	Pickup: 
+		HSPG B 1 ThrustThingZ(0,128,0,0)
+		Stop
+	}
+}
+
+Actor HoverGreenPadModel2 : HoverRedPadModel2
+{
+	States
+	{
+	Spawn:
+		HSPG E 20
+		HSPG E 0 A_SpawnItemEx("HoverGreenPadModel")
+		Stop
+	}
+}
+
+Actor HoverPurplePadModel : HoverRedPadModel 3810
+{
+	States  
+	{
+	Spawn:
+		HSPG C -1
+		Stop
+	HoldAndDestroy: 
+		HSPG C 0 A_SpawnItemEx("HoverPurplePadModel2")
+		HSPG C 0 A_StartSound("BOING")
+		HSPG C 0 A_TakeInventory ("HoverPurplePadModel",1)
+		Stop
+	Pickup: 
+		HSPG C 1 ThrustThingZ(0,132,0,0)
+		Stop
+	} 
+}
+
+Actor HoverPurplePadModel2 : HoverRedPadModel2
+{
+	States
+	{
+	Spawn:
+		HSPG C 20
+		HSPG C 0 A_SpawnItemEx("HoverPurplePadModel")
+		Stop
+	}
+}
+
+//COOKIES
 Actor CookiemanSpawner : RandomSpawner 4107
 {
     DropItem "Cookieman01model"
@@ -228,192 +323,73 @@ Actor CookiemanSpawner : RandomSpawner 4107
 
 Actor Cookieman01model 4104
 {
-+SOLID
-Height 64
-Radius 16
-States
-{
-Spawn:
-UNKN A -1
-Stop
-}
-}
-
-Actor Cookieman02model 4105
-{
-+SOLID
-Height 64
-Radius 16
-States
-{
-Spawn:
-UNKN B -1
-Stop
-}
+	Height 64
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		UNKN A -1
+		Stop
+	}
 }
 
-Actor Cookieman03model 4106
+Actor Cookieman02model : Cookieman01model 4105
 {
-+SOLID
-Height 64
-Radius 16
-States
-{
-Spawn:
-UNKN C -1
-Stop
-}
+	States
+	{
+	Spawn:
+		UNKN B -1
+		Stop
+	}
 }
 
-
-Actor HoverRedPadModel : CustomInventory 3811
+Actor Cookieman03model : Cookieman01model 4106
 {
-     +INVENTORY.QUIET
-     +INVENTORY.ALWAYSPICKUP
-     +INVENTORY.AUTOACTIVATE
-	 FloatBobStrength 0.2
-	 +FLOATBOB
-	 +NOGRAVITY
-     Inventory.PickupMessage ""
-     Inventory.amount 0
-     Inventory.MaxAmount 0
-     States  
-     {
-     Spawn:
-	HSPG A -1
-	Stop
-
-     HoldAndDestroy:
-        HSPG A 0  A_SpawnItemex("HoverRedPadModel2")
-     	HSPG A 0  a_PlaySound("boing")
-     	HSPG A 1  A_TakeInventory ("HoverRedPadModel",1)
-    	Stop
-     
-	Pickup:
-	HSPG A 1  ThrustThingZ(0,96,0,0)
-  	Stop
-     }
+	States
+	{
+	Spawn:
+		UNKN C -1
+		Stop
+	}
 }
 
-Actor HoverRedPadModel2
-{
-Radius 32
-Height 12
-+NOGRAVITY
-+FLOATBOB
-FloatBobStrength 0.2
--SOLID
--BRIGHT
-States
-{
-Spawn:
-	HSPG D 20
-	HSPG D 0  A_SpawnItemex("HoverRedPadModel")
-	Stop
-    }
-}
-
-Actor HoverGreenPadModel : HoverRedPadModel 3812
-{
-     States  
-     {
-     Spawn:
-	HSPG B -1
-	Stop
-
-     HoldAndDestroy: 
-        HSPG B 0  A_SpawnItemex("HoverGreenPadModel2")
-        HSPG B 0  a_PlaySound("boing")
-     	HSPG B 0  A_TakeInventory ("HoverGreenPadModel",1)
-     	Stop
- 
-       Pickup: 
-       	HSPG B 1  ThrustThingZ(0,128,0,0)
-  	Stop
-     }
-}
-
-Actor HoverGreenPadModel2 : HoverRedPadModel2
-{
-States
-{
-Spawn:
-	HSPG E 20
-	HSPG E 0  A_SpawnItemex("HoverGreenPadModel")
-	Stop
-    }
-}
-
-Actor HoverPurplePadModel : HoverRedPadModel 3810
-{
-     States  
-     {
-     Spawn:
-	HSPG C -1
-	Stop
-
-     HoldAndDestroy: 
-        HSPG C 0  A_SpawnItemex("HoverPurplePadModel2")
-        HSPG C 0  a_PlaySound("boing")
-     	HSPG C 0  A_TakeInventory ("HoverPurplePadModel",1)
-     	Stop
- 
-       Pickup: 
-       	HSPG C 1  ThrustThingZ(0,132,0,0)
-  	Stop
-     } 
-}
-
-Actor HoverPurplePadModel2 : HoverRedPadModel2
-{
-States
-{
-Spawn:
-	HSPG C 20
-	HSPG C 0  A_SpawnItemex("HoverPurplePadModel")
-	Stop
-    }
-}
-
+//OTHERS
 Actor MedivoModel 3317
 {
-  +SOLID
-  +NOGRAVITY
-  Height 48
-  Radius 14
-  States
-  {
-  Spawn:
-    MEDM A -1
-    Stop
-  }
+	Height 48
+	Radius 14
+	+NOGRAVITY
+	+SOLID
+	States
+	{
+	Spawn:
+		MEDM A -1
+		Stop
+	}
 }
 
-Actor MedivoFloorModel 3319
+Actor MedivoFloorModel : MedivoModel 3319
 {
-  +SOLID
-  +NOGRAVITY
-  Height 30
-  Radius 12
-  States
-  {
-  Spawn:
-    MEDM B -1
-    Stop
-  }
+	Height 30
+	Radius 12
+	States
+	{
+	Spawn:
+		MEDM B -1
+		Stop
+	}
 }
 
-Actor MedivoCeilingModel 3320
+Actor MedivoCeilingModel : MedivoModel 3320
 {
-  +SOLID
-  +NOGRAVITY
-  +SPAWNCEILING
-  Height 30
-  Radius 12
-  States
-  {
-  Spawn:
-    MEDM c -1
-    Stop
-  }
+	+SPAWNCEILING
+	Height 30
+	Radius 12
+	States
+	{
+	Spawn:
+		MEDM C -1
+		Stop
+	}
 }
