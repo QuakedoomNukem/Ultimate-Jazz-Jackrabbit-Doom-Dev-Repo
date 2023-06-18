@@ -4108,21 +4108,6 @@ Actor MuckGunk2 : MuckGunk1 3465
 	}
 }
 
-Actor NewDeadDaisy 3268 //same as DeadDaisy, still needs new art maybe?
-{
-	Height 28
-	Radius 4
-	Scale 0.60
-	+FLOORCLIP
-	+SOLID
-	States
-	{
-	Spawn:
-		BUNN A -1
-		Loop //intended?
-	}
-}
-
 Actor NokaSign 4010
 {
 	Height 32

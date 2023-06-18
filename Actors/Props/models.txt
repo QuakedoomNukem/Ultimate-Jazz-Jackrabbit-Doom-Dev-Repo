@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-Actor RedPadLowModel : custominventory 25637
+Actor RedPadLowModel : CustomInventory 25637
 {
 Radius 32
 Height 16

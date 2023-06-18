@@ -399,7 +399,7 @@ $Volume Machine1 0.33
 $volume Penpain 0.75 
 $volume WINDAMB 0.75 
 
-Fountain/Loop	FOUNT
+Fountain/Loop	Fountain
 $attenuation Fountain/Loop 3
 $volume Fountain/Loop 0.5
 $limit Fountain/Loop 0

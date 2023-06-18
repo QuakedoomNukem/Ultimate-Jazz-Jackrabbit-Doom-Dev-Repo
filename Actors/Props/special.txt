@@ -96,7 +96,7 @@ Actor CaterpillarSmoke : CustomInventory 3765
 		PIPM MNOPQRST 2 A_FadeOut(0.5) //add death effects here, like smokey ring turning bigger and bigger disappearing, doable with transfer frame ####
 		Stop
 	Pickup:
-		TNT1 A 1 A_PlaySound("smokring")
+		TNT1 A 1 A_StartSound("SMOKRING")
 		TNT1 A 0 A_GiveInventory("CaterpillarCount", 300)
 		TNT1 A 0 ACS_NamedExecute("CaterpillarSmoke",0)
 		Stop
@@ -185,7 +185,6 @@ Actor CaterpillarEffect : CustomInventory 3765
 }
 */
 
-
 Actor CheckSign 22022
 {
 	Radius 16
@@ -193,11 +192,11 @@ Actor CheckSign 22022
 	Health 2
 	Mass 10000000
 	DamageFactor "Normal", 0
-  DamageFactor "Ice", 0
-  DamageFactor "Fire", 0
-  DamageFactor "JAZZPROJ", 1
-  DamageFactor "JAZZPROJFire", 1
-  DamageFactor "JazzProjIce", 1
+	DamageFactor "Ice", 0
+	DamageFactor "Fire", 0
+	DamageFactor "JazzProj", 1
+	DamageFactor "JazzProjFire", 1
+	DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
@@ -206,12 +205,12 @@ Actor CheckSign 22022
 	States
 	{
 	Spawn:
-	CHCK A -1
-	Stop
+		CHCK A -1
+		Stop
 	Death:
-	TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
-	TNT1 A 0 A_SpawnItemEx("Checksign2")
-	Stop	
+		TNT1 A 0 A_SpawnItemEx("Jazzpoof",0,0,8,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("Checksign2")
+		Stop	
 	}
 }
 
@@ -226,13 +225,16 @@ Actor CheckSign2
 	States
 	{
 	Spawn:
-	CHCK B -1
-	Stop
+		CHCK B -1
+		Stop
 	}
 }
 
 Actor FountainWater 4066  //Credit to Captain Toenail
 {
+	//$Arg0 "Sound"
+	//$Arg0Type 11
+	//$Arg0Enum { 0 = "No"; 1 = "Yes"; }
 	Height 50
 	Radius 4
 	Alpha 0.7
@@ -240,48 +242,46 @@ Actor FountainWater 4066  //Credit to Captain Toenail
 	RenderStyle Translucent	
 	+NOBLOCKMAP
 	+MOVEWITHSECTOR
-		States
-		{
-			Spawn:
-				FWAT A 0 NoDelay A_JumpIf (args[0] == 1, "Sound")
-				Goto Animate
-			Sound:
-				FWAT A 0 A_PlaySound("Fountain/Loop", CHAN_6, 1, TRUE)
-			Animate:
-				FWAT ABCD 3
-				Loop
-		}
+	States
+	{
+	Spawn:
+		FWAT A 0 NoDelay A_JumpIf (args[0] == 1, "Sound")
+		Goto Animate
+	Sound:
+		FWAT A 0 A_StartSound("Fountain/Loop", CHAN_6, CHANF_LOOP, frandom(0.7,1.0), ATTN_IDLE) //randomized volume this time - ozy81
+	Animate:
+		FWAT ABCD 3
+		Loop
+	}
 }
 
 
-Actor JungrockPad : custominventory 3904
+Actor JungrockPad : CustomInventory 3904
 {
 	Radius 16
 	Height 32
-     +INVENTORY.QUIET
-     +INVENTORY.ALWAYSPICKUP
-     +INVENTORY.AUTOACTIVATE
-	 +NOGRAVITY
-	 +SOLID
-     Inventory.PickupMessage ""
-     Inventory.amount 0
-     Inventory.MaxAmount 0
-     States  
-     {
-     Spawn:
-	JRCK A -1
-	Stop
-
-     HoldAndDestroy: 
-        JRCK A 0  A_SpawnItemex("JungrockPad2")
-        JRCK A 0  a_PlaySound("boing")
-     	JRCK A 0  A_TakeInventory ("JungrockPad",1)
-     	Stop
- 
-       Pickup: 
-       	JRCK A 1  ThrustThingZ(0,64,0,0)
-  	Stop
-     }
+	+INVENTORY.QUIET
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	+NOGRAVITY
+	+SOLID
+	Inventory.PickupMessage ""
+	Inventory.amount 0
+	Inventory.MaxAmount 0
+	States  
+	{
+	Spawn:
+		JRCK A -1
+		Stop
+	HoldAndDestroy: 
+		JRCK A 0  A_SpawnItemex("JungrockPad2")
+		JRCK A 0  a_PlaySound("boing")
+		JRCK A 0  A_TakeInventory ("JungrockPad",1)
+		Stop
+	Pickup: 
+		JRCK A 1  ThrustThingZ(0,64,0,0)
+		Stop
+	}
 }
 
 Actor JungrockPad2
@@ -308,8 +308,8 @@ Actor RabbitStinkSign2 3947
 	DamageFactor "Normal", 0
   DamageFactor "Ice", 0
   DamageFactor "Fire", 0
-  DamageFactor "JAZZPROJ", 1
-  DamageFactor "JAZZPROJFire", 1
+  DamageFactor "JazzProj", 1
+  DamageFactor "JazzProjFire", 1
   DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
@@ -353,8 +353,8 @@ Actor SecretSign 28022
 	DamageFactor "Normal", 0
   DamageFactor "Ice", 0
   DamageFactor "Fire", 0
-  DamageFactor "JAZZPROJ", 1
-  DamageFactor "JAZZPROJFire", 1
+  DamageFactor "JazzProj", 1
+  DamageFactor "JazzProjFire", 1
   DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
@@ -374,7 +374,7 @@ Actor SecretSign 28022
 }
 
 
-Actor TubeRemixFan64 : custominventory 3972
+Actor TubeRemixFan64 : CustomInventory 3972
 {
 Radius 32
 Height 56
@@ -417,7 +417,7 @@ Spawn:
     }
 }
 
-Actor TubeRemixFan96 : custominventory 3979
+Actor TubeRemixFan96 : CustomInventory 3979
 {
 Radius 32
 Height 56
@@ -469,8 +469,8 @@ Actor XmasBlockGuy 4081
 	DamageFactor "Normal", 0
   DamageFactor "Ice", 0
   DamageFactor "Fire", 0
-  DamageFactor "JAZZPROJ", 1
-  DamageFactor "JAZZPROJFire", 1
+  DamageFactor "JazzProj", 1
+  DamageFactor "JazzProjFire", 1
   DamageFactor "JazzProjIce", 1
 	+SOLID
 	+DONTTHRUST
