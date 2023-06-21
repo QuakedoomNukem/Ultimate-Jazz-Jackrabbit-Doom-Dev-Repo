@@ -1,102 +1,86 @@
 Actor GiantTurtle 3902
 {
-   Health 5000
-   PainChance 0
-   Speed 25
-   Radius 32 
-   Height 144
-   Mass 1000000
-   Scale 2.0
-    SeeSound "GIANTSEE"
-   PainSound "GIANHURT"
-  ActiveSound "Turtact"
-   MONSTER 
-   +FLOORCLIP
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-+DONTHARMSPECIES
-   Obituary "%o was scared to death by a Giant Turtle."
-   HitObituary "%o became wabbit puree."
-   States 
-   { 
-   Spawn: 
-      GGON A 10 A_Look 
-      Loop 
-   See: 
-      GGON ABCD 4 A_Chase 
-      Loop 
-   Missile:
-	  GGON E 15 Bright A_FaceTarget
-	  GGON F 1 Bright A_CustomMissile ("MuckSnot2",56,0,15,0,0)
-	  GGON F 1 Bright A_CustomMissile ("MuckSnot2",56,0,0,0,0)
-      GGON F 2 Bright A_CustomMissile ("MuckSnot2",56,0,-15,0,0)
-	  GGON E 6 Bright
-	  Goto See
-   Melee:
-	  GGON B 20 A_FaceTarget
-	  GGON C 8 A_CustomMeleeAttack (random (3, 5) *8, "GIANTMEL", "GIANTMEL")
-	  GGON C 8
-    Goto See
-   Death: 
-    GGON A 0 A_Scream
-    GGON A 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    GGON A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
-    GGON A 2 A_NoBlocking
-    GGON A 2
-    GGON A 0 A_ChangeFlag("FloatBob", 0)
-    GGON A 0 A_StopSoundEx("JetpackZombie/Fly")
-    GGON A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
-    GGON A 2
-    GGON A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    GGON A 2
-    GGON A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    GGON A 2
-    GGON A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    GGON AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 A 0 A_GiveToTarget ("Points",6000)
-	Stop
-  }
+	//$Category Goons
+	Radius 32 
+	Height 144
+	Health 5000
+	PainChance 0
+	Speed 25
+	Mass 1000000
+	Scale 2.0
+	MONSTER 
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "GIANTSEE"
+	PainSound "GIANHURT"
+	ActiveSound "TURTACT"
+	Obituary "%o was scared to death by a Giant Turtle."
+	HitObituary "%o became wabbit puree."
+	States 
+	{ 
+	Spawn: 
+		GGON A 10 A_Look 
+		Loop 
+	See: 
+		GGON ABCD 4 A_Chase 
+		Loop 
+	Missile:
+		GGON E 15 Bright A_FaceTarget
+		GGON F 1 Bright A_CustomMissile ("MuckSnot2",56,0,15,0,0)
+		GGON F 1 Bright A_CustomMissile ("MuckSnot2",56,0,0,0,0)
+		GGON F 2 Bright A_CustomMissile ("MuckSnot2",56,0,-15,0,0)
+		GGON E 6 Bright
+		Goto See
+	Melee:
+		GGON B 20 A_FaceTarget
+		GGON C 8 A_CustomMeleeAttack (random (3, 5) *8, "GIANTMEL", "GIANTMEL")
+		GGON C 8
+		Goto See
+	Death: 
+		GGON A 0 A_Scream
+		GGON A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+		GGON A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+		GGON A 2 A_NoBlocking
+		GGON A 2
+		GGON A 0 A_ChangeFlag("FloatBob", 0)
+		GGON A 0 A_StopSoundEx("JetpackZombie/Fly")
+		GGON A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+		GGON A 2
+		GGON A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		GGON A 2
+		GGON A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		GGON A 2
+		GGON A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		GGON AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		TNT1 A 0 A_GiveToTarget ("Points",6000)
+		Stop
+	}
 }
 
 Actor MuckSnot
 {
-  Radius 8
-  Height 8
-  Speed 6
-  Damage 4
-  Projectile
-  SeeSound "loogSee"
-  DeathSound "LoogDeth"
-  Obituary "%o splat %k's loogie."
-  States
-  {
-  Spawn:
-    LUGG AABB 1 Bright
-    Loop
-  Death:
-    LUGG CDE 3 Bright
-    Stop
-  }
+	Radius 8
+	Height 8
+	Speed 6
+	Damage 4
+	Projectile
+	SeeSound "LOOGSEE"
+	DeathSound "LOOGDETH"
+	Obituary "%o splat %k's loogie."
+	+BRIGHT
+	States
+	{
+	Spawn:
+		LUGG AABB 1
+		Loop
+	Death:
+		LUGG CDE 3
+		Stop
+	}
 }
 
-Actor MuckSnot2
-{
-  Radius 8
-  Height 8
-  Speed 10
-  Damage 4
-  Projectile
-  SeeSound "loogSee"
-  DeathSound "LoogDeth"
-  Obituary "%o splat %k's loogie."
-  States
-  {
-  Spawn:
-    LUGG AABB 1 Bright
-    Loop
-  Death:
-    LUGG CDE 3 Bright
-    Stop
-  }
-}
+Actor MuckSnot2 : MuckSnot //faster
+{ Speed 10 }
