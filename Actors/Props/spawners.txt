@@ -22,135 +22,150 @@
 
 Actor BigMushroomSpawner 3275
 {
-  +FLOORCLIP
-  +SOLID
-  Height 56
-  Radius 12
-  States
-  {
-  Spawn:
-  DNCM A 0
-  TNT1 A 0 A_Jump (256, "BigMush1","BigMush2","BigMush3","BigMush4")
-  BigMush1:
-    DNCM A -1 
-    Stop
-  BigMush2:
-    DNCM B -1 
-    Stop
-  BigMush3:
-    DNCM C -1 
-    Stop
-  BigMush4:
-    DNCM D -1 
-    Stop
-  }
-}
-
-Actor CastleArmorSpawner 3393
-{
-States
+	Height 56
+	Radius 12
+	+FLOORCLIP
+	+SOLID
+	States
 	{
 	Spawn:
-	CAST D 0
-	CAST D 0 A_Jump (256, "Armour1", "Armour2")
-	Armour1:
-    TNT1 A 0 A_SpawnItemEx("CastleArmour1",0,0,0,0,0,0,0,0,0,16)
-    Stop
-  Armour2:
-    TNT1 A 0 A_SpawnItemEx("CastleArmour2",0,0,0,0,0,0,0,0,0,16)
-    Stop
+		DNCM A 0
+		TNT1 A 0 A_Jump (256, "BigMush1","BigMush2","BigMush3","BigMush4")
+	BigMush1:
+		DNCM A -1
+		Stop
+	BigMush2:
+		DNCM B -1
+		Stop
+	BigMush3:
+		DNCM C -1
+		Stop
+	BigMush4:
+		DNCM D -1
+		Stop
+	}
+}
+
+Actor SmallMushroomSpawner : BigMushroomSpawner 3276
+{
+	Height 24
+	Radius 10
+	States
+	{
+	Spawn:
+		DNCM E 0
+		TNT1 A 0 A_Jump (256, "SmMush1","SmMush2","SmMush3","SmMush4")
+	SmMush1:
+		DNCM E -1
+		Stop
+	SmMush2:
+		DNCM F -1
+		Stop
+	SmMush3:
+		DNCM G -1
+		Stop
+	SmMush4:
+		DNCM H -1
+		Stop
 	}
 }
 
 Actor CastleArmour1
 {
-Health 2
-Height 56
-Radius 12
-+SOLID
-+SHOOTABLE
-	+NOBLOOD
-	+FLOORCLIP
+	Height 56
+	Radius 12
+	Health 2
 	+DONTTHRUST
-States
+	+FLOORCLIP
+	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	States
 	{
 	Spawn:
-	cast d -1
-	Stop
+		CAST D -1
+		Stop
 	Death:
-	TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,32,0,0,frandom(4,8))
-	TNT1 A 0 A_SpawnItemEx("CastleArmourBroke")
-    Stop
-	}
-	}
-	
-Actor CastleArmour2
-{
-Health 2
-Height 72
-Radius 12
-+SOLID
-+SHOOTABLE
-	+NOBLOOD
-	+FLOORCLIP
-	+DONTTHRUST
-States
-	{
-	Spawn:
-	cast I 35
-	cast JKLMNO 2
-	Loop
-	Death:
-TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,32,0,0,frandom(4,8))
-	TNT1 A 0 A_SpawnItemEx("CastleArmourBroke")
-    Stop
+		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,32,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("CastleArmourBroke")
+		Stop
 	}
 }
-	
+
+Actor CastleArmour2 : CastleArmour1
+{
+	Height 72
+	States
+	{
+	Spawn:
+		CAST I random(35,140)
+		CAST JKLMNO 2
+		Loop
+	Death:
+		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,32,0,0,frandom(4,8))
+		TNT1 A 0 A_SpawnItemEx("CastleArmourBroke")
+		Stop
+	}
+}
+
 Actor CastleArmourBroke
 {
-Height 36
-Radius 12
-+SOLID
-	+FLOORCLIP
+	Height 36
+	Radius 12
 	+DONTTHRUST
-States
+	+FLOORCLIP
+	+SOLID
+	States
 	{
 	Spawn:
-	CAST H -1
-    Stop
+		CAST H -1
+		Stop
 	}
 }
 
-Actor cocobunny1 3417 //Also 3418
+Actor CastleArmorSpawner 3393
 {
-Height 64
-Radius 24
-+SOLID
-States
+	States
 	{
 	Spawn:
-	East C 0
-	East C 0 A_Jump(256, "1", "2")
-	1:
-	east c -1
-	Stop
-	2:
-	east d -1
-	Stop
+		CAST D 0
+		CAST D 0 A_Jump (256, "Armour1", "Armour2")
+	Armour1:
+		TNT1 A 0 A_SpawnItemEx("CastleArmour1",0,0,0,0,0,0,0,0,0,16)
+		Stop
+	Armour2:
+		TNT1 A 0 A_SpawnItemEx("CastleArmour2",0,0,0,0,0,0,0,0,0,16)
+		Stop
 	}
 }
 
-Actor cocobunny2 3418
+Actor CocoBunny1 3417
 {
-Height 72
-Radius 24
-+SOLID
-States
+	Height 64
+	Radius 24
+	+SOLID
+	States
 	{
 	Spawn:
-	east d -1
-	Stop
+		EAST C 0
+		EAST C 0 A_Jump(256, "Coco1", "Coco2")
+	Coco1:
+		EAST C -1
+		Stop
+	Coco2:
+		EAST D -1
+		Stop
+	}
+}
+
+Actor CocoBunny2 : CocoBunny1 3418
+{
+	Height 72
+	States
+	{
+	Spawn:
+		EAST D -1
+		Stop
 	}
 }
 
@@ -159,202 +174,194 @@ Actor DiamondusFlowerSpawner : SimpleActor 3953 //zscript inheritances
 	States
 	{
 	Spawn:
-	DMDS M 0
-	DMDS M 0 A_Jump (256, "Flower1", "Flower2", "Flower3", "Flower4","Flower5","Flower6")
+		DMDS M 0
+		DMDS M 0 A_Jump (256, "Flower1", "Flower2", "Flower3", "Flower4","Flower5","Flower6")
 	Flower1:
-    DMDS M -1
-    Stop
-    Flower2:
-    DMDS N -1
-    Stop
+		DMDS M -1
+		Stop
+	Flower2:
+		DMDS N -1
+		Stop
 	Flower3:
-	DMDS S -1
-    Stop
+		DMDS S -1
+		Stop
 	Flower4:
-	DMDS T -1
-    Stop
+		DMDS T -1
+		Stop
 	Flower5:
-	DMDS U -1
-    Stop
+		DMDS U -1
+		Stop
 	Flower6:
-	DMDS V -1
-    Stop
+		DMDS V -1
+		Stop
 	}
 }
-
 
 Actor DiamondusTreeSpawner : SimpleActor 3952 //zscript inheritances
 {
 	States
 	{
 	Spawn:
-	DMDS B 0
-	DMDS B 0 A_Jump (256, "SkyboxTree1", "SkyboxTree2", "SkyboxTree3", "SkyboxTree4")
+		DMDS B 0
+		DMDS B 0 A_Jump (256, "SkyboxTree1", "SkyboxTree2", "SkyboxTree3", "SkyboxTree4")
 	SkyboxTree1:
-    DMDS B -1
-    Stop
-    SkyboxTree2:
-    DMDS C -1
-    Stop
+		DMDS B -1
+		Stop
+	SkyboxTree2:
+		DMDS C -1
+		Stop
 	SkyboxTree3:
-	DMDS D -1
-    Stop
+		DMDS D -1
+		Stop
 	SkyboxTree4:
-	DMDS E -1
-    Stop
+		DMDS E -1
+		Stop
 	}
 }
 
-
 Actor DreamlandGrassSpawner 31525
 {
-  +FLOORCLIP
-  Height 16
-  Radius 8
-  States
-  {
-  Spawn:
-  DLPP A 0
-  TNT1 A 0 A_Jump (256, "DLFlower1","DLFlower2","DLFlower3")
-  DLFlower1:
-    DLPP A -1
-    Stop
-  DLFlower2:
-    DLPP B -1
-    Stop
-  DLFlower3:
-    DLPP C -1
-    Stop
-  }
+	Height 16
+	Radius 8
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		DLPP A 0
+		TNT1 A 0 A_Jump (256, "DLFlower1","DLFlower2","DLFlower3")
+	DLFlower1:
+		DLPP A -1
+		Stop
+	DLFlower2:
+		DLPP B -1
+		Stop
+	DLFlower3:
+		DLPP C -1
+		Stop
+	}
 }
 
 Actor DreamlandSuckerSpawner 3912
 {
-  +FLOORCLIP
-  +SOLID
-  Height 64
-  Radius 8
-  States
-  {
-  Spawn:
-  DLPP H 0
-  TNT1 A 0 A_Jump (256, "Sucker1","Sucker2","Sucker3")
-  Sucker1:
-    DLPP H -1
-    Stop
-  Sucker2:
-    DLPP I -1
-    Stop
-  Sucker3:
-    DLPP J -1
-    Stop
-  }
+	Height 64
+	Radius 8
+	+FLOORCLIP
+	+SOLID
+	States
+	{
+	Spawn:
+		DLPP H 0
+		TNT1 A 0 A_Jump (256, "Sucker1","Sucker2","Sucker3")
+	Sucker1:
+		DLPP H -1
+		Stop
+	Sucker2:
+		DLPP I -1
+		Stop
+	Sucker3:
+		DLPP J -1
+		Stop
+	}
 }
 
-Actor DreamlandSuckerSpawner2 3914
+Actor DreamlandSuckerSpawner2 : DreamlandSuckerSpawner 3914
 {
-  +FLOORCLIP
-  +SOLID
-  Height 64
-  Radius 8
-  States
-  {
-  Spawn:
-  DLPP L 0
-  TNT1 A 0 A_Jump (256, "DLSucker4","DLSucker5","DLSucker6","DLSucker7")
-  DLSucker4:
-    DLPP L -1
-    Stop
-  DLSucker5:
-    DLPP M -1
-    Stop
-  DLSucker6:
-    DLPP N -1
-    Stop
-  DLSucker7:
-    DLPP O -1
-    Stop
-  }
+	States
+	{
+	Spawn:
+		DLPP L 0
+		TNT1 A 0 A_Jump (256, "DLSucker4","DLSucker5","DLSucker6","DLSucker7")
+	DLSucker4:
+		DLPP L -1
+		Stop
+	DLSucker5:
+		DLPP M -1
+		Stop
+	DLSucker6:
+		DLPP N -1
+		Stop
+	DLSucker7:
+		DLPP O -1
+		Stop
+	}
 }
 
 Actor FlowerSpawner 3303
 {
-  +FLOORCLIP
-  Height 16
-  Radius 8
-  States
-  {
-  Spawn:
-  FLWR A 0
-  TNT1 A 0 A_Jump (256, "Flower1","Flower2","Flower3")
-  Flower1:
-    FLWR A -1
-    Stop
-  Flower2:
-    FLWR B -1
-    Stop
-  Flower3:
-    FLWR C -1
-    Stop
-  }
+	Height 16
+	Radius 8
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		FLWR A 0
+		TNT1 A 0 A_Jump (256, "Flower1","Flower2","Flower3")
+	Flower1:
+		FLWR A -1
+		Stop
+	Flower2:
+		FLWR B -1
+		Stop
+	Flower3:
+		FLWR C -1
+		Stop
+	}
 }
 
-Actor GreenSpikeSpawner 3310
+Actor GreenSpikeSpawner : FlowerSpawner 3310
 {
-  +FLOORCLIP
-  Height 8
-  Radius 8
-  States
-  {
-  Spawn:
-  TNT1 A 0
-  TNT1 A 0 A_Jump (256, "GSpike1","GSpike2","GSpike3","GSpike4","GSpike5","GSpike6")
-  GSpike1:
-    GSPK A -1
-    Stop
-  GSpike2:
-    GSPK B -1
-    Stop
+	Height 8
+	States
+	{
+	Spawn:
+		GSPK A 0
+		TNT1 A 0 A_Jump (256, "GSpike1","GSpike2","GSpike3","GSpike4","GSpike5","GSpike6")
+	GSpike1:
+		GSPK A -1
+		Stop
+	GSpike2:
+		GSPK B -1
+		Stop
 	GSpike3:
-    GSPK C -1
-    Stop
+		GSPK C -1
+		Stop
 	GSpike4:
-    GSPK D -1
-    Stop
+		GSPK D -1
+		Stop
 	GSpike5:
-    GSPK E -1
-    Stop
+		GSPK E -1
+		Stop
 	GSpike6:
-    GSPK F -1
-    Stop
-  }
+		GSPK F -1
+		Stop
+	}
 }
 
 Actor JazzStuffTwo 32493
 {
-  Radius 10
-  Height 8
-  States
-  {
-  Spawn:
-    GLLM A 0
-    TNT1 A 0 A_Jump (256, "Shroom1", "Shroom2", "Shroom3", "Shroom4", "Shroom5")
-  Shroom1:
-    GLLM A -1 
-    Stop
-  Shroom2:
-    GLLM B -1 
-    Stop
-  Shroom3:
-    GLLM C -1 
-    Stop
-  Shroom4:
-    GLLM D -1 
-    Stop
-  Shroom5:
-    GLLM E -1 
-    Stop
-  }
+	Radius 10
+	Height 8
+	States
+	{
+	Spawn:
+		GLLM A 0
+		TNT1 A 0 A_Jump (256, "Shroom1", "Shroom2", "Shroom3", "Shroom4", "Shroom5")
+	Shroom1:
+		GLLM A -1
+		Stop
+	Shroom2:
+		GLLM B -1
+		Stop
+	Shroom3:
+		GLLM C -1
+		Stop
+	Shroom4:
+		GLLM D -1
+		Stop
+	Shroom5:
+		GLLM E -1
+		Stop
+	}
 }
 
 Actor LagunicusRockSpawner 3878
@@ -365,83 +372,80 @@ Actor LagunicusRockSpawner 3878
 	States
 	{
 	Spawn:
-	LAGP E 0
-	LAGP E 0 A_Jump (256, "LRock1","LRock2","LRock3")
+		LAGP E 0
+		LAGP E 0 A_Jump (256, "LRock1","LRock2","LRock3")
 	LRock1:
-    LAGP E -1
-    Stop
+		LAGP E -1
+		Stop
 	LRock2:
-    LAGP F -1
-    Stop
+		LAGP F -1
+		Stop
 	LRock3:
-    LAGP G -1
-    Stop
+		LAGP G -1
+		Stop
 	}
 }
 
-Actor LagunicusStarfishSpawner 3877
+Actor LagunicusStarfishSpawner : LagunicusRockSpawner 3877
 {
-	Height 8
-	Radius 16
-	-SOLID
 	States
 	{
 	Spawn:
-	LAGP A 0
-	LAGP A 0 A_Jump (256, "Sfish1","Sfish2","Sfish3","Sfish4")
+		LAGP A 0
+		LAGP A 0 A_Jump (256, "Sfish1","Sfish2","Sfish3","Sfish4")
 	Sfish1:
-    LAGP A -1
-    Stop
+		LAGP A -1
+		Stop
 	Sfish2:
-    LAGP B -1
-    Stop
+		LAGP B -1
+		Stop
 	Sfish3:
-    LAGP C -1
-    Stop
+		LAGP C -1
+		Stop
 	Sfish4:
-    LAGP D -1
-    Stop
+		LAGP D -1
+		Stop
 	}
 }
 
 Actor LoogieSpawner 3795
 {
-  Radius 8
-  Height 16
-  Mass 10000000
-  Speed 0
-  PainChance 200
-  MONSTER
-  +NOGRAVITY
-  -ISMONSTER
-  +SYNCHRONIZED
-  +NOTARGET
-  +NOINFIGHTING
-  -RANDOMIZE
-  -SHOOTABLE
-  -COUNTKILL
-  -CANUSEWALLS
-  -SOLID
-+DONTHARMSPECIES
-  Obituary "%o tried to dodge Muck Snot."
-  States
-  {
-  Spawn:
-    TNT1 A 0
-    TNT1 A 96
-    TNT1 A 0 A_StartSound("LOOGSEE")
-    TNT1 B 1 A_SpawnItemEx("MuckSnot",16,0,20,15)
-    Goto Loopstate
-  Loopstate:
-    TNT1 A 0
-    TNT1 A 64
-    TNT1 A 0 A_StartSound("LOOGSEE")
-    TNT1 B 1 A_SpawnItemEx("MuckSnot",16,0,20,15)
-    Loop
-  }
+	Radius 8
+	Height 16
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	MONSTER
+	-CANUSEWALLS
+	-COUNTKILL
+	-ISMONSTER
+	-RANDOMIZE
+	-SHOOTABLE
+	-SOLID
+	+DONTHARMSPECIES
+	+NOGRAVITY
+	+NOINFIGHTING
+	+NOTARGET
+	+SYNCHRONIZED
+	Obituary "%o tried to dodge Muck Snot." //this obituary is never triggered anywhere cause the actor doesn't have any kind of attacks, the MuckSnot itself should have it instead - ozy81
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 96
+		TNT1 A 0 A_StartSound("LOOGSEE")
+		TNT1 B 1 A_SpawnItemEx("MuckSnot",16,0,20,15)
+		Goto Loopstate
+	Loopstate:
+		TNT1 A 0
+		TNT1 A 64
+		TNT1 A 0 A_StartSound("LOOGSEE")
+		TNT1 B 1 A_SpawnItemEx("MuckSnot",16,0,20,15)
+		Loop
+	}
 }
 
-Actor MedivoRemixFlagSpawner 4012
+Actor MedivoRemixFlagSpawner : SimpleActor 4012 //zscript inheritances
 {
 	Height 56
 	Radius 4
@@ -449,17 +453,17 @@ Actor MedivoRemixFlagSpawner 4012
 	States
 	{
 	Spawn:
-	MEDF A 0
-	MEDF A 0 A_Jump (256, "FLAG1", "FLAG2", "FLAG3")
+		MEDF A 0
+		MEDF A 0 A_Jump (256, "FLAG1", "FLAG2", "FLAG3")
 	FLAG1:
-    MEDF ABCDEFG 2
-    Loop
-    FLAG2:
-    MRMX ABCDEFGH 2
-    Loop
+		MEDF ABCDEFG 2
+		Loop
+	FLAG2:
+		MRMX ABCDEFGH 2
+		Loop
 	FLAG3:
-	MGRP ABCDEFGH 2
-    Loop
+		MGRP ABCDEFGH 2
+		Loop
 	}
 }
 
@@ -470,17 +474,17 @@ Actor PoopSpawner 3837
 	States
 	{
 	Spawn:
-	POOP A 0
-    POOP A 0 A_Jump (256, "Poop1","Poop2","Poop3")
-  Poop1:
-    POOP A -1
-    Stop
-  Poop2:
-    POOP B -1
-    Stop
-  Poop3:
-    POOP C -1
-    Stop
+		POOP A 0
+		POOP A 0 A_Jump (256, "Poop1","Poop2","Poop3")
+	Poop1:
+		POOP A -1
+		Stop
+	Poop2:
+		POOP B -1
+		Stop
+	Poop3:
+		POOP C -1
+		Stop
 	}
 }
 
@@ -492,114 +496,87 @@ Actor RaneforesCactusSpawner 3884
 	States
 	{
 	Spawn:
-	RANP A 0
-	RANP A 0 A_Jump (256, "RCactus1","RCactus2","RCactus3")
+		RANP A 0
+		RANP A 0 A_Jump (256, "RCactus1","RCactus2","RCactus3")
 	RCactus1:
-    RANP A -1
-    Stop
+		RANP A -1
+		Stop
 	RCactus2:
-    RANP B -1
-    Stop
+		RANP B -1
+		Stop
 	RCactus3:
-    RANP C -1
-    Stop
+		RANP C -1
+		Stop
 	}
-}
-
-Actor SmallMushroomSpawner 3276
-{
-  +FLOORCLIP
-  +SOLID
-  Height 24
-  Radius 10
-  States
-  {
-  Spawn:
-  DNCM E 0
-  TNT1 A 0 A_Jump (256, "SmMush1","SmMush2","SmMush3","SmMush4")
-  SmMush1:
-    DNCM E -1
-    Stop
-  SmMush2:
-    DNCM F -1
-    Stop
-  SmMush3:
-    DNCM G -1
-    Stop
-  SmMush4:
-    DNCM H -1
-    Stop
-  }
 }
 
 Actor SpikeBallSpawner 3308
 {
-  +FLOORCLIP
-  Height 8
-  Radius 8
-  States
-  {
-  Spawn:
-  SBAL A 0
-  TNT1 A 0 A_Jump (256, "SpikeBall1","SpikeBall2")
-  SpikeBall1:
-    SBAL A -1
-    Stop
-  SpikeBall2:
-    SBAL B -1
-    Stop
-  }
+	Height 8
+	Radius 8
+	+FLOORCLIP
+	States
+	{
+	Spawn:
+		SBAL A 0
+		TNT1 A 0 A_Jump (256, "SpikeBall1","SpikeBall2")
+	SpikeBall1:
+		SBAL A -1
+		Stop
+	SpikeBall2:
+		SBAL B -1
+		Stop
+	}
 }
-
 
 Actor TubeRemixSkyboxTowers 3971
 {
 	States
 	{
 	Spawn:
-    TBER E 0
-    TNT1 A 0 A_Jump (256, "Tower1", "Tower2", "Tower3")
-  Tower1:
-    TBER E -1
-    Stop
-  Tower2:
-    TBER F -1
-    Stop
-  Tower3:
-    TBER G -1
-    Stop
-  }
+		TBER E 0
+		TNT1 A 0 A_Jump (256, "Tower1", "Tower2", "Tower3")
+	Tower1:
+		TBER E -1
+		Stop
+	Tower2:
+		TBER F -1
+		Stop
+	Tower3:
+		TBER G -1
+		Stop
+	}
 }
 
 Actor XmasBlockSpawner 4083
 {
-  +FLOORCLIP
-  +SOLID
-  +NOGRAVITY
-  Height 32
-  Radius 16
-  States
-  {
-  Spawn:
-  XMAS B 0
-  TNT1 A 0 A_Jump (256, "Block1","Block2","Block3","Block4","Block5","Block6")
-  Block1:
-    XMAS B -1 
-    Stop
-  Block2:
-    XMAS C -1 
-    Stop
-  Block3:
-    XMAS D -1 
-    Stop
-  Block4:
-    XMAS E -1 
-    Stop
-  Block5:
-    XMAS F -1 
-    Stop
-  Block6:
-    XMAS G -1 
-    Stop
-}
+	Height 32
+	Radius 16
+	+FLOORCLIP
+	+NOGRAVITY
+	+SOLID
+	States
+	{
+	Spawn:
+		XMAS B 0
+		TNT1 A 0 A_Jump (256, "Block1","Block2","Block3","Block4","Block5","Block6")
+	Block1:
+		XMAS B -1
+		Stop
+	Block2:
+		XMAS C -1
+		Stop
+	Block3:
+		XMAS D -1
+		Stop
+	Block4:
+		XMAS E -1
+		Stop
+	Block5:
+		XMAS F -1
+		Stop
+	Block6:
+		XMAS G -1
+		Stop
+	}
 }
