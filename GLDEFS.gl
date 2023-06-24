@@ -1,3 +1,35 @@
+//Underwater shader
+HardwareShader PostProcess Scene
+{
+	Name "watershader"
+	Shader "Shaders/uwater.fp" 330
+	Uniform float waterFactor
+	Uniform float timer // placeholder?
+}
+
+HardwareShader PostProcess Scene
+{
+	Name "waterzoomshader"
+	Shader "Shaders/uwaterzoom.fp" 330
+	Uniform float zoomFactor
+}
+
+//Textures or sprites which uses center-rotating shaders
+
+//HardwareShader Sprite DKSMA0 //example, this is used to rotate smoke sprite without using multiple frames - cw variant stays for counterclockwise
+//{
+//	Shader "Shaders/rotate.fp"
+//	Speed 0.8
+//}
+
+//Floors that should rotate with auxiliary shader
+//HardwareShader Texture ROU03 //example, shortname texture in this case - cw variant stays for counterclockwise
+//{
+//	Shader "shaders/rotate_flrs.fp"
+//	Speed 0.45
+//}
+
+//lights
 PointLight BLACKCHANDELIER
 {
     color 0.9 0.9 0.3

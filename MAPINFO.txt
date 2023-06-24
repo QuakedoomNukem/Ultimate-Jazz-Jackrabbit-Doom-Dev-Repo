@@ -11,7 +11,7 @@ gameinfo
 	TitleMusic = "JJ1TTL"
 	Border = 0, 0, "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0", "TNT1A0"  //HereticBorder //
 	pausesign = "Pausedyo"
-	AddEventHandlers = "FlashHandler"
+	AddEventHandlers = "CustomShaderHandler", "JJWaterHandler", "FlashHandler"
 	QuitSound = "QuitSound"
 	Intro
 	{

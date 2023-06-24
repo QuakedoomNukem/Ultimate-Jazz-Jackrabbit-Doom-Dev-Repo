@@ -1,1 +1,2 @@
 user bool Skip_Cutscenes = false;
+user float jj_uweffectsize = 0.015; //Underwater effect parameter
