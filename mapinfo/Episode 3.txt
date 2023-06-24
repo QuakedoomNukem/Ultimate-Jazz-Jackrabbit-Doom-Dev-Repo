@@ -154,8 +154,8 @@ map E3L11 lookup "E3L11_NAME"
 map E3L12 lookup "E3L12_NAME"
 { 
 	levelnum = 30
-	next = MAP31
-	secretnext = MAP31
+	next = E4L1
+	secretnext = E4L1
 	sky1 = "bshipsky", 0
 	cluster = 3
 	music = "BATTLESHIPS"
