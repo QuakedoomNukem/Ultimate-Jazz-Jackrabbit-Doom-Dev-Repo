@@ -1,170 +1,165 @@
 Actor Toaster : Weapon 16006
 {
-  Tag "Toaster"
-  Inventory.PickupSound "WEAPNGET"
-  Inventory.PickupMessage "Toaster (Slot 7)"
-  Obituary "%o was BBQ'd by %k's Toaster."
-  Weapon.AmmoType "Gas"
-  Weapon.AmmoGive 0
-  Weapon.AmmoUse 1
-  Weapon.BobRangeX 0.5
-   Weapon.BobRangeY 0.5
-   Weapon.BobSpeed 2
-  Weapon.BobStyle Smooth
-  DamageFactor 0
-  +Weapon.Explosive
-  +FLOATBOB
-   +NOGRAVITY
-  States
-  {
-  Spawn:
-    PLSP A -1
-    Loop
-  Ready:
-    TNT1 A 0 A_JumpIf(waterlevel>2,"Cannot")
-	PLPI A 1 A_WeaponReady
-	TNT1 A 0 A_JumpIf(waterlevel>2,"Cannot")
-	PLPI A 1 A_WeaponReady
-	TNT1 A 0 A_JumpIf(waterlevel>2,"Cannot")
-	PLPI A 1 A_WeaponReady
-	TNT1 A 0  A_JumpIf(waterlevel>2,"Cannot")
-	Goto Ready+1
-  Deselect:
-    PLPI A 1 A_Lower
-    Loop
-  Select:
-    PLPI A 1 A_Raise
-    Loop
+	Tag "Toaster"
+	DamageFactor 0
+	Weapon.AmmoType "Gas"
+	Weapon.AmmoGive 0
+	Weapon.AmmoUse 1
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.5
+	Weapon.BobSpeed 2
+	Weapon.BobStyle Smooth
+	+WEAPON.EXPLOSIVE
+	+FLOATBOB
+	+NOGRAVITY
+	Inventory.PickupSound "WEAPNGET"
+	Inventory.PickupMessage "Toaster (Slot 7)"
+	Obituary "%o was BBQ'd by %k's Toaster."
+	States
+	{
+	Spawn:
+		PLSP A -1
+		Loop
+	Ready:
+		TNT1 A 0 A_JumpIf(waterlevel>2,"Cannot")
+		PLPI A 1 A_WeaponReady
+		TNT1 A 0 A_JumpIf(waterlevel>2,"Cannot")
+		PLPI A 1 A_WeaponReady
+		TNT1 A 0 A_JumpIf(waterlevel>2,"Cannot")
+		PLPI A 1 A_WeaponReady
+		TNT1 A 0  A_JumpIf(waterlevel>2,"Cannot")
+		Goto Ready+1
+	Deselect:
+		PLPI A 1 A_Lower
+		Loop
+	Select:
+		PLPI A 1 A_Raise
+		Loop
 	Fire:
-	TNT1 A 0 A_JumpIfInventory("Gun7PowerUp", 1, "Powerfire")
-	PLPI B 1 A_FireCustomMissile("FTFire", 0,0)
-	PLPI B 1 A_FireCustomMissile("FTFire",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFire",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFire",0,0)
-	PLPI B 1 A_FireCustomMissile("FTFire",0,0)
-	PLPI B 1 A_FireCustomMissile("FTFire",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFire",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFire")
-	TNT1 A 0 A_GunFlash
-	PLPI A 0 A_ReFire
-	Goto Ready
+		TNT1 A 0 A_JumpIfInventory("Gun7PowerUp", 1, "Powerfire")
+		PLPI B 1 A_FireCustomMissile("FTFire", 0,0)
+		PLPI B 1 A_FireCustomMissile("FTFire",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFire",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFire",0,0)
+		PLPI B 1 A_FireCustomMissile("FTFire",0,0)
+		PLPI B 1 A_FireCustomMissile("FTFire",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFire",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFire")
+		TNT1 A 0 A_GunFlash
+		PLPI A 0 A_ReFire
+		Goto Ready
 	PowerFire:
-	PLPI B 1 A_FireCustomMissile("FTFirePow", 0,0)
-	PLPI B 1 A_FireCustomMissile("FTFirePow",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFirePow",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFirePow",0,0)
-	PLPI B 1 A_FireCustomMissile("FTFirePow", 0,0)
-	PLPI B 1 A_FireCustomMissile("FTFirePow",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFirePow",0,0)
-	PLPI C 1 A_FireCustomMissile("FTFirePow")
-	TNT1 A 0 A_GunFlash
-	PLPI A 0 A_ReFire
-	Goto Ready
-  Cannot:
-	TNT1 A 0 A_TakeInventory("Water",255)
-	TNT1 A 1 A_SelectWeapon("LFG2000")
-	Goto Deselect
-  }
+		PLPI B 1 A_FireCustomMissile("FTFirePow", 0,0)
+		PLPI B 1 A_FireCustomMissile("FTFirePow",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFirePow",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFirePow",0,0)
+		PLPI B 1 A_FireCustomMissile("FTFirePow", 0,0)
+		PLPI B 1 A_FireCustomMissile("FTFirePow",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFirePow",0,0)
+		PLPI C 1 A_FireCustomMissile("FTFirePow")
+		TNT1 A 0 A_GunFlash
+		PLPI A 0 A_ReFire
+		Goto Ready
+	Cannot:
+		TNT1 A 0 A_TakeInventory("Water",255)
+		TNT1 A 1 A_SelectWeapon("LFG2000")
+		Goto Deselect
+	}
 }
 
 Actor FTFire
 {
-  Radius 2
-  Height 4
-  Speed 16
-  Damage 10
-  Projectile
-  RenderStyle Add
-  Alpha 0.95
-  DamageType "JazzProjFire"
-  SeeSound "FMTRFIRE"
-  DeathSound "FMTRHIT"
-  States
-  {
-  Spawn:
-    TNT1 A 2
-    FFPR AABB 2 bright A_Explode(5, 8, 0)
-    FFPR CCD 2 bright A_Explode(5, 16, 0)
-    FFPR DEE 2 bright A_Explode(5, 32, 0)
-    FFPR FFH 2 bright A_Explode(5, 64, 0)
-    FFPR II 2 bright
-    Stop
-  Death:
-    FFPR HHH 2 bright A_Explode(5, 32, 0)
-    FFPR HII 2 bright A_Explode(5, 64, 0)
-    FFPR II 2 bright
-    Stop
-  }
+	Radius 2
+	Height 4
+	Speed 16
+	Damage 10
+	Projectile
+	RenderStyle Add
+	Alpha 0.95
+	DamageType "JazzProjFire"
+	+BRIGHT
+	+DONTSPLASH
+	SeeSound "FMTRFIRE"
+	DeathSound "FMTRHIT"
+	States
+	{
+	Spawn:
+		TNT1 A 2
+		FFPR AABB 2 A_Explode(5, 8, 0)
+		FFPR CCD 2 A_Explode(5, 16, 0)
+		FFPR DEE 2 A_Explode(5, 32, 0)
+		FFPR FFH 2 A_Explode(5, 64, 0)
+		FFPR II 2
+		Stop
+	Death:
+		FFPR HHH 2 A_Explode(5, 32, 0)
+		FFPR HII 2 A_Explode(5, 64, 0)
+		FFPR II 2
+		Stop
+	}
 }
 
-Actor FTFirePow
+Actor FTFirePow : FTFire
 {
-  Radius 2
-  Height 4
-  Speed 16
-  Damage 11
-  Projectile
-  RenderStyle Add
-  Alpha 0.95
-  DamageType "JazzProjFire"
-  SeeSound "FMTRFIRE"
-  DeathSound "FMTRHIT"
-  States
-  {
-  Spawn:
-    TNT1 A 2
-    FFPP AABB 2 bright A_Explode(5, 8, 0)
-    FFPP CCD 2 bright A_Explode(5, 16, 0)
-    FFPP DEE 2 bright A_Explode(5, 32, 0)
-    FFPP FFH 2 bright A_Explode(5, 64, 0)
-    FFPP II 2 bright
-    Stop
-  Death:
-    FFPP HHH 2 bright A_Explode(5, 32, 0)
-	TNT1 A 0 A_CustomMissile("DropFire", 0, 0, 0, 4)
-    FFPP HII 2 bright A_Explode(5, 64, 0)
-    FFPP II 2 bright
-    Stop
-  }
+	Damage 11
+	States
+	{
+	Spawn:
+		TNT1 A 2
+		FFPP AABB 2 A_Explode(5, 8, 0)
+		FFPP CCD 2 A_Explode(5, 16, 0)
+		FFPP DEE 2 A_Explode(5, 32, 0)
+		FFPP FFH 2 A_Explode(5, 64, 0)
+		FFPP II 2
+		Stop
+	Death:
+		FFPP HHH 2 A_Explode(5, 32, 0)
+		TNT1 A 0 A_CustomMissile("DropFire", 0, 0, 0, 4)
+		FFPP HII 2 A_Explode(5, 64, 0)
+		FFPP II 2
+		Stop
+	}
 }
 
 Actor DropFire
 {
-  Radius 8
-  Height 40
-  Projectile
-  RenderStyle Add
-  DamageType "JazzProjFire"
-  Alpha 0.90
-  Scale 0.75
-  -NOGRAVITY
-  +LOWGRAVITY
-  +NoExplodeFloor
-  +NoDamageThrust
-  States
-  {
-  Spawn:
-    TNT1 A 0 A_PlaySound("Burner")
-    FLMP A 3 bright A_Explode(5, 32, 0)
-    FLMP BCDEFGH 3 bright A_Explode(5, 16, 0)
-    TNT1 A 0 A_PlaySound("Burner")
-    FLMP A 3 bright A_Explode(5, 32, 0)
-    FLMP BCDEFGH 3 bright A_Explode(5, 16, 0)
-    TNT1 A 0 A_PlaySound("Burner")
-    FLMP A 3 bright A_Explode(5, 32, 0)
-    FLMP BCDEFGH 3 bright A_Explode(5, 16, 0)
-    TNT1 A 0 A_PlaySound("Burner")
-    FLMP A 3 bright A_Explode(5, 32, 0)
-    FLMP BCDEFGH 3 bright A_Explode(5, 16, 0)
-    TNT1 A 0 A_PlaySound("Burner")
-    FLMP A 3 bright A_Explode(5, 32, 0)
-    FLMP BCDEFGH 3 bright A_Explode(5, 16, 0)
-    TNT1 A 0 A_Jump(192, "Death")
-    Loop
-  Death:
-    TNT1 A 1
-    Stop
-  }
+	Radius 8
+	Height 40
+	Projectile
+	RenderStyle Add
+	DamageType "JazzProjFire"
+	Alpha 0.90
+	Scale 0.75
+	-NOGRAVITY
+	+BRIGHT
+	+DONTSPLASH
+	+LOWGRAVITY
+	+NOEXPLODEFLOOR
+	+NODAMAGETHRUST
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_PlaySound("Burner")
+		FLMP A 3 A_Explode(5, 32, 0)
+		FLMP BCDEFGH 3 A_Explode(5, 16, 0)
+		TNT1 A 0 A_PlaySound("Burner")
+		FLMP A 3 A_Explode(5, 32, 0)
+		FLMP BCDEFGH 3 A_Explode(5, 16, 0)
+		TNT1 A 0 A_PlaySound("Burner")
+		FLMP A 3 A_Explode(5, 32, 0)
+		FLMP BCDEFGH 3 A_Explode(5, 16, 0)
+		TNT1 A 0 A_PlaySound("Burner")
+		FLMP A 3 A_Explode(5, 32, 0)
+		FLMP BCDEFGH 3 A_Explode(5, 16, 0)
+		TNT1 A 0 A_PlaySound("Burner")
+		FLMP A 3 A_Explode(5, 32, 0)
+		FLMP BCDEFGH 3 A_Explode(5, 16, 0)
+		TNT1 A 0 A_Jump(192, "Death")
+		Loop
+	Death:
+		TNT1 A 1
+		Stop
+	}
 }
 
 Actor Water : Ammo
@@ -178,44 +173,44 @@ Actor Water : Ammo
 
 Actor Gas : Ammo 16007
 {
-  Inventory.PickupSound "ammoup"
-  Inventory.Amount 3
-  Inventory.MaxAmount 100
-  Ammo.BackpackAmount 3
-  Ammo.BackpackMaxAmount 100
-  Inventory.PickupMessage "\cxToaster \clAmmo"
-  FloatBobStrength 0.5
-  Inventory.Icon AGASZ0
-  +FLOATBOB
-   +NOGRAVITY
-  States
-  {
-  Spawn:
-    AGAS ABCDEFGHI 3
-    Loop
-  }
+	Ammo.BackpackAmount 3
+	Ammo.BackpackMaxAmount 100
+	Inventory.Amount 3
+	Inventory.MaxAmount 100
+	Inventory.Icon AGASZ0
+	Inventory.PickupMessage "\cxToaster \clAmmo"
+	Inventory.PickupSound "ammoup"
+	FloatBobStrength 0.5
+	+FLOATBOB
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		AGAS ABCDEFGHI 3
+		Loop
+	}
 }
 
 Actor Gun7PowerUpBox : Gun1PowerUpBox 3826
 {
-  States
-  {
-  Spawn:
-    7GUN ABCD 1 Bright
-    Loop
-  Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
-  TNT1 A 0 ACS_NamedExecute("Gun7",0)
-  TNT1 A 0 A_GiveToTarget("Gun7PowerUp", 1, AAPTR_DEFAULT)
-  TNT1 A 0 A_GiveToTarget("Gas", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
-  }
+	States
+	{
+	Spawn:
+		7GUN ABCD 1 Bright
+		Loop
+	Death:
+		TNT1 A 0 A_PlaySound ("WEAPNGET")
+		TNT1 A 0 ACS_NamedExecute("Gun7",0)
+		TNT1 A 0 A_GiveToTarget("Gun7PowerUp", 1, AAPTR_DEFAULT)
+		TNT1 A 0 A_GiveToTarget("Gas", 25, AAPTR_DEFAULT)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }
 
-Actor Gun7PowerUp : Inventory 
+Actor Gun7PowerUp : Inventory
 {
-    Inventory.PickupSound ""
+	Inventory.PickupSound ""
 	Inventory.PickupMessage ""
 	States
 	{
