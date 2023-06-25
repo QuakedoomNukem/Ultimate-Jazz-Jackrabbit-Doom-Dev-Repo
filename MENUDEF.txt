@@ -101,6 +101,16 @@ OptionMenu "JazzGameplayOptions"
 	StaticText ""
 	Option "Skip Cutscenes","Skip_Cutscenes","OnOff"
 	StaticText "This skips various dialogue cutscenes.", "Yellow"
+	
+	StaticText ""
+	Option "Keep Inventory On Episode Clear","Keep_Inventory","OnOff"
+	StaticText "This keeps your current inventory if you beat an episode.", "Yellow"
+	StaticText "By default, this option should be turned off for balancing reasons.", "Yellow"
+	
+	StaticText ""
+	Slider "Underwater Effect Value","jj_uweffectsize", 0.0, 0.015, 0.001, 3
+	StaticText "Sets the value of the curvy underwater effect.", "Yellow"
+	StaticText "Lower the value or turn it off if you are feeling nauseous.", "Yellow"
 }
 
 //Controls
