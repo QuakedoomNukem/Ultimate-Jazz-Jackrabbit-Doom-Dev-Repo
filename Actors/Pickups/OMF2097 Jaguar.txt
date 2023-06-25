@@ -42,7 +42,7 @@ Actor OMFJaguarPlayer : PlayerPawn
 	+NOSKIN
 	+NOBLOOD
 	Speed 1
-	Health 200
+	Health 250
 	Radius 32
 	Height 192
 	Mass 100
