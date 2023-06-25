@@ -18,7 +18,7 @@ Actor LargeTurtleMech 31527
   PainSound "mechpain"
   DeathSound "mechpain"
   ActiveSound "mechstep"
-  Obituary "%o was demolished by a Large Turtle Mech."
+  Obituary "$OB_LMECH"
   States
   {
   Spawn:

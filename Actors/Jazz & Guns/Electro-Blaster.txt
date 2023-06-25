@@ -7,7 +7,7 @@ Actor ElectroBlaster : Weapon 32767
 	Weapon.AmmoGive1 0
 	Inventory.PickupSound "WEAPNGET"
 	Inventory.PickupMessage "Electro-Blaster (Slot 0)"
-	Obituary "%o got erased by %k's Electro-Blaster."
+	Obituary "$OB_WEP0"
 	Weapon.BobRangeX 0.5
    Weapon.BobRangeY 0.5
    Weapon.BobSpeed 2
@@ -196,7 +196,7 @@ Actor Gun0PowerUpBox : Gun1PowerUpBox 3829
   TNT1 A 0 ACS_NamedExecute("Gun0",0)
   TNT1 A 0 A_GiveToTarget("Gun0PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("JJCell", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
   }
 }

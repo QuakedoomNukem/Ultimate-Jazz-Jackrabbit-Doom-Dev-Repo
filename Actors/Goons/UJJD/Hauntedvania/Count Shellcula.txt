@@ -18,7 +18,7 @@ Actor DracTurtle 3788
    +NOINFIGHTING
    +COUNTKILL
 +DONTHARMSPECIES
-   Obituary "%o was taught what a man is by Count Shellcula."
+   Obituary "$OB_DRACT"
    States 
    { 
    Spawn: 

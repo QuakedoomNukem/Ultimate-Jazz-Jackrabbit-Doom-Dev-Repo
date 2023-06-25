@@ -97,10 +97,10 @@ Actor OMFFist : Weapon
   Tag "Jaguar's Fists"
   Weapon.SelectionOrder 3700
   Weapon.Kickback 500
-  Obituary "%o got KO'd by a Jaguar."
+  Obituary "$OB_WEPF"
   Tag "OMFFIST"
   +WEAPON.MELEEWEAPON
-  +Weapon.Dontbob
+  +WEAPON.DONTBOB
   States
   {
   Ready:

@@ -19,7 +19,7 @@ Actor BabySaurian 3850
 	DeathSound "saurow"
 	ActiveSound "saursee"
 	//AttackSound "CrabHit"
-	Obituary "%o was mauled by a Baby Saurian."
+	Obituary "$OB_BASAU"
 	States
 	{
 	Spawn:

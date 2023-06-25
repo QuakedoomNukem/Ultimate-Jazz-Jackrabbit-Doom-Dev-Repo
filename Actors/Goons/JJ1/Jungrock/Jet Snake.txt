@@ -17,7 +17,7 @@ Actor JungrockSnake 3831
      +COUNTKILL
 +DONTHARMSPECIES
    +SOLID
-  Obituary "%o got ankle-bitten by a Jet Snake."
+  Obituary "$OB_JSNEK"
   States
   {
   Spawn:
@@ -32,7 +32,7 @@ Actor JungrockSnake 3831
     JSNK C 10
     Goto See
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",100)
 	Stop
 	Burn:

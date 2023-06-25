@@ -19,7 +19,7 @@ Actor TurtleMech 32525
 	PainSound "mechpain"
 	DeathSound "mechpain"
 	ActiveSound "mechstep"
-	Obituary "%o was shot by a Turtle Mech."
+	Obituary "$OB_TUMEC"
 	States
 	{
 	Spawn:

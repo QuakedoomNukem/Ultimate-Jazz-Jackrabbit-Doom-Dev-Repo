@@ -18,7 +18,7 @@ Actor JJASaurian 3851
 	SeeSound "saursee"
 	PainSound "saurow"
 	DeathSound "saurow"
-	Obituary "%o was destroyed by a Saurian Mercenary."
+	Obituary "$OB_SAUME"
 	States
 	{
 	Spawn:
@@ -94,7 +94,7 @@ Actor SaurianBomb
 	DeathSound "SEEKXPLD"
 	BounceSound "saurgren"
 	SeeSound "BMBTHROW"
-	Obituary "%o caught a Saurian grenade."
+	Obituary "$OB_SAUGR"
 	DamageType Grenade
 	States
 	{

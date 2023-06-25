@@ -5,7 +5,7 @@ Actor Slicer : Doomweapon 20002
 	Height 16
 	Inventory.PickupMessage "Slicer (Slot 3)"
 	Inventory.PickupSound "WEAPNGET"
-	Obituary "%o been sliced like cheese by %k."
+	Obituary "$OB_WEP3"
 	Weapon.selectionorder 700
 	Weapon.AmmoUse 1
 	Weapon.Ammogive 0
@@ -265,7 +265,7 @@ Actor Gun3PowerUpBox : Gun1PowerUpBox 3822
   TNT1 A 0 ACS_NamedExecute("Gun3",0)
   TNT1 A 0 A_GiveToTarget("Gun3PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("SlicerAmmo", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
   }
 }

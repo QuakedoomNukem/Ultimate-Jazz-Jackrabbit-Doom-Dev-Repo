@@ -18,7 +18,7 @@ Actor FireLizard 3129
 	+COUNTKILL
 +DONTHARMSPECIES
 	SeeSound "LIZRDSEE"
-	Obituary "%o was burned by a Fire Lizard."
+	Obituary "$OB_FIRLZ"
 	States
 	{
 	Spawn:
@@ -32,7 +32,7 @@ Actor FireLizard 3129
 		FRLZ D 8 Bright A_CustomMissile("FireLizardBall",25,0,359,0)
 		Goto See
 	Death: 
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		TNT1 A 0 A_GiveToTarget ("Points",300)
 		Stop
 		Death.JazzprojIce:

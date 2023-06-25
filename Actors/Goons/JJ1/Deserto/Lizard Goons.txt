@@ -18,7 +18,7 @@ Actor LizardGoon 3142
   SeeSound "LIZRDSEE"
    PainSound "LIZRDPAI"
   ActiveSound "LIZRDACT"
-   Obituary "%o got stomped on by a Green Lizard Goon."
+   Obituary "$OB_LIZGO"
    States 
    { 
    Spawn: 
@@ -32,7 +32,7 @@ Actor LizardGoon 3142
       LIZZ C 8 A_SargAttack 
       Goto See 
    Death: 
-	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
       TNT1 A 0 A_GiveToTarget ("Points",150)
 	  Stop
 	  	Burn:
@@ -72,7 +72,7 @@ Actor WalkingLizard 4032
   SeeSound "LIZRDSEE"
    PainSound "LIZRDPAI"
   ActiveSound "LIZRDACT"
-   Obituary "%o got stomped on by a Yellow Lizard Goon."
+   Obituary "$OB_WALKL"
    States 
    { 
    Spawn: 
@@ -86,7 +86,7 @@ Actor WalkingLizard 4032
       WLKL C 8 A_SargAttack 
       Goto See 
    Death: 
-	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
       TNT1 A 0 A_GiveToTarget ("Points",150)
 	  Stop
 	  	Burn:

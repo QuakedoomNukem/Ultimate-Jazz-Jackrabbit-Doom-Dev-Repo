@@ -19,7 +19,7 @@ Actor Helmut 14564
 	SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"
-    HitObituary "%o was Helmut-butted."
+    HitObituary "$HB_HELMU"
     States
     {
     Spawn:
@@ -38,7 +38,7 @@ Actor Helmut 14564
       PRIM E 5 A_Gravity
       Goto See 
     Death:
-      TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+      TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
         TNT1 A 0 A_GiveToTarget ("Points",100)
 		Stop
 		Death.JazzprojIce:

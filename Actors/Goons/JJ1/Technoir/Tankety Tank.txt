@@ -16,7 +16,7 @@ Actor TechnoirTank 3139
    +DONTHARMSPECIES
   SeeSound "Turtsight"
   PainSound "Turtpain"
-  Obituary "%o got blown up by a Tankety Tank."
+  Obituary "$OB_TTANK"
   States
   {
   Spawn:
@@ -36,7 +36,7 @@ Actor TechnoirTank 3139
   Death:
   TNT1 A 0 A_Stopsound(CHAN_VOICE)
   TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-	TNT1 AAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+	TNT1 AAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
      TNT1 A 0 A_GiveToTarget ("Points",400)
 	Stop
 	    Death.JazzprojIce:

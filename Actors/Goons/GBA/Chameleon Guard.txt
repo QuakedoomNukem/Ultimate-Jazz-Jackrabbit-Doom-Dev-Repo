@@ -16,7 +16,7 @@ Actor HammeredChameleon 3731
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o was clobbered by a Chameleon Guard."
+	Obituary "$OB_CHAGU"
 	States
 	{
 	Spawn:

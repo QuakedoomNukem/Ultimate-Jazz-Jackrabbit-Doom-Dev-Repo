@@ -12,7 +12,7 @@ Actor MotoMortar 3735
   +NOINFIGHTING
     +COUNTKILL
 +DONTHARMSPECIES
-  Obituary "%o was blasted by a Launch Cart."
+  Obituary "$OB_MOTOM"
   States
   {
   Spawn:
@@ -28,7 +28,7 @@ Actor MotoMortar 3735
 	SCCT C 10
     Goto See
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",150)
 	Stop
   }

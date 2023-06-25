@@ -1,7 +1,7 @@
 Actor Draco 3296
 {
   Tag "Dragoon"
-  Obituary "%o was eaten by a Dragoon." 
+  Obituary "$OB_DRACO" 
   Health 200
   Radius 12
   Height 16

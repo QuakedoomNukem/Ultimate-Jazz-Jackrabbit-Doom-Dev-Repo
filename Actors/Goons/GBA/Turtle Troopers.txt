@@ -17,7 +17,7 @@ Actor JJAPinkTurtle 4045
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o was swisscheesed by a SMG Trooper."
+	Obituary "$OB_JJPIN"
 	States
 	{
 	Spawn:
@@ -86,7 +86,7 @@ Actor JJABlueTurtle 4046
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o became burnt toast by a Flamethrower Trooper."
+	Obituary "$OB_JJBLU"
 	States
 	{
 	Spawn:
@@ -157,7 +157,7 @@ Actor JJAOrangeTurtle 4047
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o was blown to bits by a Missile Trooper."
+	Obituary "$OB_JJORA"
 	States
 	{
 	Spawn:

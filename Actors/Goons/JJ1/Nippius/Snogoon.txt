@@ -14,7 +14,7 @@ Actor Snowman 23006
   +NOBLOOD
   +COUNTKILL
   +DONTHARMSPECIES
-  Obituary "%o was snowballed by a Snogoon."
+  Obituary "$OB_SNOWM"
   States
   {
   Spawn:

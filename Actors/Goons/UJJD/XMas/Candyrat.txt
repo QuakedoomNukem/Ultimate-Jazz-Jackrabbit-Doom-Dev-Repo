@@ -11,12 +11,12 @@ Actor XmasCandyRat 4089
 	AttackSound "RATATTCK"
     SeeSound "Ratsee"
 	ActiveSound "Ratsee"
-	Obituary "%o got rabies from a Candyrat."
+	Obituary "$OB_CARAT"
     	+SOLID
 		+NOBLOOD
 		+NOINFIGHTING
 		+JUMPDOWN
-		+Faster
+		+FASTER
 		+COUNTKILL
 +DONTHARMSPECIES
     States
@@ -52,7 +52,7 @@ Actor XmasCandyRat 4089
 		CDRT D 4 A_JumpIf(Velz == 0,"See")
 		Goto Jump+4
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",200)
 	Stop
 	Death.JazzprojIce:

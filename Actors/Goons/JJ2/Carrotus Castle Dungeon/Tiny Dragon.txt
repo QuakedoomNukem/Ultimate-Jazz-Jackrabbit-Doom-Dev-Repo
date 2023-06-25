@@ -9,7 +9,7 @@ Height 16
 PainChance 0
 SeeSound "CDGNSEE"
 AttackSound "cdgnattk"
-Obituary "%o was burned by a Tiny Dragon."
+Obituary "$OB_TINYD"
 +FLOORCLIP
 +NOBLOOD
 +NOINFIGHTING
@@ -32,7 +32,7 @@ MONSTER
     Goto See
   Death:
   TNT1 A 0 A_GiveToTarget ("Points",100)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 	Death.JazzprojIce:
 	TNT1 A 0 A_GiveToTarget ("Points",100)

@@ -9,7 +9,7 @@ Actor Sparks 11914
 	PainChance 0
 	SeeSound "SPKSee"
   PainSound "SPKPain"
-	HitObituary "%o was electrocuted by a Spark."
+	HitObituary "$HB_SPARK"
 	MONSTER
 	+NOGRAVITY
 	+FLOAT 

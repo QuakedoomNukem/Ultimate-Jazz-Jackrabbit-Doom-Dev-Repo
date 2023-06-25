@@ -17,7 +17,7 @@ Actor Froog 3798
     ActiveSound "Turtactive"
 	DamageFactor "MuckSnot", 0
   DamageFactor "MuckSnot2", 0
-	Obituary "%o was KO'd by a Froog."
+	Obituary "$OB_FROOG"
 	States
 	{
 		Spawn:
@@ -33,7 +33,7 @@ Actor Froog 3798
 		FRGG E 3 A_SkelFist
 		Goto See
 		Death:
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
         TNT1 A 0 A_GiveToTarget ("Points",150)
 		Stop
 		Death.JazzprojFire:

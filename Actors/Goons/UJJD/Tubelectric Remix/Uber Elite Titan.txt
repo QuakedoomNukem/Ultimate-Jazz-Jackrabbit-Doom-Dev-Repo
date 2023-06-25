@@ -16,7 +16,7 @@ Actor UberEliteTurtleGuard 4011
   SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"
-  Obituary "%o became a pancake by the Uber Elite Titan."
+  Obituary "$OB_UETIT"
   States
   {
   Spawn:

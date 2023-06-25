@@ -1,7 +1,7 @@
 Actor Skeleturtle 3809
 {
   Tag "Skeleturtle"
-  obituary "%o was diced to pieces by a Skeleturtle."
+  Obituary "$OB_SKLTU"
   Health 30
   mass 10000
   Speed 30

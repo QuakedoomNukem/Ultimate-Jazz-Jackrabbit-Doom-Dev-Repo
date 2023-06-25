@@ -9,7 +9,7 @@ Actor DarkSparks1 4076
 	PainChance 0
 	SeeSound "SPKSee"
   PainSound "SPKPain"
-	HitObituary "%o was electrocuted by a Dark Realm Spark."
+	HitObituary "$HB_DARKS"
 	MONSTER
 	+NOGRAVITY
 	+FLOAT 

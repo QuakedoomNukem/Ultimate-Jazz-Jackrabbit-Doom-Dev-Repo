@@ -20,7 +20,7 @@ Actor JJASaurianGeneral 3852
 	SeeSound "saurboss"
 	PainSound "saurow"
 	DeathSound "saurow"
-	Obituary "%o was blown to bits by the Saurian General."
+	Obituary "$OB_JJSAU"
 	States
 	{
 	Spawn:

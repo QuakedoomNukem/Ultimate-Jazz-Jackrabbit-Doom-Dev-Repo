@@ -199,7 +199,7 @@ Actor DualRocket
   SeeSound "RFLAUNCH"
   DamageType JazzProj
   DeathSound "SEEKXPLD"
-  Obituary "%o couldn't dodge %k's RF Missiles sideways."
+  Obituary "$OB_DUALR"
   States
   {
   Spawn:
@@ -263,7 +263,7 @@ Actor Gun6PowerUpBox : Gun1PowerUpBox 3825
   TNT1 A 0 ACS_NamedExecute("Gun6",0)
   TNT1 A 0 A_GiveToTarget("Gun6PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("JJRocketAmmo", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
   }
 }

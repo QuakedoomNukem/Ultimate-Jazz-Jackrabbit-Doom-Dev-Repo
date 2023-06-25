@@ -19,7 +19,7 @@ Actor UterusBoss 3294
    +NOINFIGHTING
     +COUNTKILL
  +DONTHARMCLASS
-  Obituary "%o couldn't escape the Uterus."
+  Obituary "$OB_UTER"
   States
   {
   Spawn:

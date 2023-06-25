@@ -16,7 +16,7 @@ Actor ChameleonGunner 3730
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o was blasted by a Chameleon Gunner."
+	Obituary "$OB_CHAGU"
 	States
 	{
 	Spawn:

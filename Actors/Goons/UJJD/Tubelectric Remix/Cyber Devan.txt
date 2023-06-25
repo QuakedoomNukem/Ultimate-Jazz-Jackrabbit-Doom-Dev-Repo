@@ -18,7 +18,7 @@ Actor CyberDevan 4043
 	+DONTHARMCLASS
 	SeeSound "BIGTURTS"
 	PainSound "BIGTURTP"
-	Obituary "%o couldn't dodge Cyber Devan's minissiles."
+	Obituary "$OB_MINS1"
 	States
 	{
 	Spawn:
@@ -69,7 +69,7 @@ Actor Minissiles
 	+RANDOMIZE
 	+ROCKETTRAIL
 	DeathSound "SEEKXPLD"
-	Obituary "%o tried to dodge some minissiles."
+	Obituary "$OB_MINS2"
 	States
 	{
 	Spawn:

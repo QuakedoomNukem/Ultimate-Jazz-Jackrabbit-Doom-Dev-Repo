@@ -1,7 +1,7 @@
 Actor WaterSnake 3909
 {
   Tag "Water Snake"
-  obituary "%o was bitten by a Water Snake."
+  Obituary "$OB_WSNEK"
   Health 50
   mass 120
   Speed 20
@@ -33,7 +33,7 @@ Actor WaterSnake 3909
     JSWS B 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
     Goto See
    Death:
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
 	stop
 	Death.JazzprojIce:

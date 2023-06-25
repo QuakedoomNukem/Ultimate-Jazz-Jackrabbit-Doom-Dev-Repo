@@ -16,7 +16,7 @@ Actor TweedleDee 3768
   SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtactive"
-  Obituary "%o was defeated by Tweedle Dee."
+  Obituary "$OB_TWED1"
   States
   {
   Spawn:
@@ -84,7 +84,7 @@ Actor TweedleDum 3769
   SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"
-  Obituary "%o was defeated by Tweedle Dum."
+  Obituary "$OB_TWED2"
   States
   {
   Spawn:

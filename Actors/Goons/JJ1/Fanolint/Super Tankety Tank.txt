@@ -1,79 +1,80 @@
 Actor FanolintTank 3223
 {
-  Tag "Super Tankety Tank"
-  Health 500
-  Radius 31
-  Height 56
-  Mass 10000000
-  Speed 10
-  PainChance 50
-  MONSTER
-  +NOINFIGHTING
-  +FLOORCLIP
-  +NOBLOOD
-  +COUNTKILL
-+DONTHARMSPECIES
-  SeeSound "Turtsight"
-  PainSound "Turtpain"
-  Obituary "%o was killed by a Super Tankety Tank."
-  States
-  {
-  Spawn:
-    FTTG A 3 A_Look
-    Loop
-  See:
-  FTTG A 35 A_PlaySound("TANKSTRT")
-  FTTG A 0 A_PlaySoundEx("TANKLoop", "SoundSlot7", 1)
-    FTTG A 3 A_Chase
-    Goto See+1
-  Melee:
-  Missile:
-   FTTG A 0 A_PlaySoundEx("TANKLoop", "SoundSlot7", 1)
-    FTTG A 4 A_FaceTarget
-    FTTG B 4 A_CustomMissile("FanolintRocket",32,0,0,0,0)
-    Goto See+1
-  Death:
-	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-  TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-	TNT1 AAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 A 0 A_GiveToTarget ("Points",400)
-	Stop
-  }
+	Tag "Super Tankety Tank"
+	Health 500
+	Radius 31
+	Height 56
+	Mass 10000000
+	Speed 10
+	PainChance 50
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	Obituary "$OB_STANT"
+	States
+	{
+	Spawn:
+		FTTG A 3 A_Look
+		Loop
+	See:
+		FTTG A 35 A_StartSound("TANKSTRT")
+		FTTG A 0 A_PlaySoundEx("TANKLoop", "SoundSlot7", 1)
+		FTTG A 3 A_Chase
+		Goto See+1
+	Melee:
+	Missile:
+		FTTG A 0 A_PlaySoundEx("TANKLoop", "SoundSlot7", 1)
+		FTTG A 4 A_FaceTarget
+		FTTG B 4 A_CustomMissile("FanolintRocket",32,0,0,0,0)
+		Goto See+1
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		TNT1 AAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+		TNT1 A 0 A_GiveToTarget ("Points",400)
+		Stop
+	}
 }
 
 Actor HyperTankProj
 {
-    Radius 13
-    Height 8
-    Speed 15
-    Damage 5
+	Radius 13
+	Height 8
+	Speed 15
+	Scale 0.9
+	Damage 5
+	RenderStyle Add
+	Alpha 0.75
 	DamageType Disintegrate
-    Projectile
-    +RANDOMIZE
-    RenderStyle Add
-    Alpha 0.75
-    Scale 0.9
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
 	SeeSound "LFG2FIRE"
 	DeathSound "BLSTRHIT"
-    States
-  {
-  Spawn:
-    HYPP A 6 bright
-    Loop
-  Death:
-    JBLS EFGH 4 bright
-    stop
-   }
+	States
+	{
+	Spawn:
+		HYPP A 6
+		Loop
+	Death:
+		JBLS EFGH 4
+		stop
+	}
 }
 
 Actor FanolintRocket : HyperTankProj
 {
-    Speed 30
-    Damage 4
-    States
-  {
-  Spawn:
-    FRCK A 6 bright
-    Loop
-   }
+	Speed 30
+	Damage 4
+	States
+	{
+	Spawn:
+		FRCK A 6
+		Loop
+	}
 }

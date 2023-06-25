@@ -16,7 +16,7 @@ Actor AtlantisQueen 3872
    +NOINFIGHTING
    +BOSS
    +DONTHARMSPECIES
-   Obituary "%o got turned to stone by Queen Morey."
+   Obituary "$OB_ATQUE"
    States 
    { 
    Spawn: 
@@ -166,7 +166,7 @@ Actor AtlantisQueen 3872
     MORE A 2
     MORE A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     MORE AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",3000)
 	Stop
   }
@@ -214,7 +214,7 @@ Actor PetrifyProj
   Alpha 0.75
   SeeSound "atlisprj"
   DeathSound "ICEHIT"
-  Obituary "%o got frozen SOLID."
+  Obituary "$OB_PETRI"
   DamageType Ice
   States
   {

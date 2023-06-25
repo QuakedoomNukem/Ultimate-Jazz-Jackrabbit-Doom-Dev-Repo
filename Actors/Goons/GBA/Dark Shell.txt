@@ -15,7 +15,7 @@ Actor DarkShellBoss 4055
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o lost the schwartz against Dark Shell."
+	Obituary "$OB_DARKS"
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
@@ -25,7 +25,7 @@ Actor DarkShellBoss 4055
 	+DONTMORPH
 	+BOSSDEATH
 	+NOTARGET
-	+MISSILEEvenMore
+	+MISSILEEVENMORE
 	MONSTER
 	States
 	{

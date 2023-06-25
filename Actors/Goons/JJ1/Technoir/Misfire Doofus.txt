@@ -17,7 +17,7 @@ Actor TechnoirGoon 3830
     SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"
-  Obituary "%o was bombed by a Misfire Doofus."
+  Obituary "$OB_TGOON"
   States
   {
   Spawn:
@@ -35,7 +35,7 @@ Actor TechnoirGoon 3830
   Death:
   TNT1 A 0 A_GiveToTarget ("Points",150)
   TNT1 AAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 	Death.JazzprojIce:
 	TNT1 A 0 A_GiveToTarget ("Points",150)

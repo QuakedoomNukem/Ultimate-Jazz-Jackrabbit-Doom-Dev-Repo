@@ -16,7 +16,7 @@ Actor Megairboss 3808
   SeeSound "ROBOTSEE"
   PainSound "Turtpain"
   ActiveSound "Turtact"
-  Obituary "%o was defeated by the Quake Tank."
+  Obituary "$OB_QUAKE"
   States
   {
   Spawn:

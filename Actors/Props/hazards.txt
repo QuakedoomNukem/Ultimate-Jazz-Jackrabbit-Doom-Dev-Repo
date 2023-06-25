@@ -28,7 +28,7 @@ Actor BattleshipsMine 3891
 	Mass 10000
 	Speed 0
 	Health 50
-	Obituary "%o stood close to a Battleship Mine."
+	Obituary "$OB_BMINE"
 	+NOBLOOD
 	+NOINFIGHTING
 	+RIPPER
@@ -97,7 +97,7 @@ Actor CrysilisMine 3350
 	+SOLID
 	+TOUCHY
 	DeathSound "SEEKXPLD"
-	Obituary "%o was blown up by a Crysilis Mine."
+	Obituary "$OB_CMINE"
 	States
 	{
 	Spawn:
@@ -137,7 +137,7 @@ Scale 0.10
 -NOINFIGHTING
 -lookallaround
 -FLOORCLIP
-Obituary "%o was burned by a Firebomb."
+Obituary "$OB_FBOMB"
   States
   {
   Spawn:
@@ -216,7 +216,7 @@ Actor Floorshooter 32528
   +NOINFIGHTING
   -SHOOTABLE
   -SOLID
-  Obituary "%o was killed by a floor shooter."
+  Obituary "$OB_FSHOT"
   States
   {
   Spawn:
@@ -265,7 +265,7 @@ Actor CeilingShooter : Floorshooter 3213
 {
   +SPAWNCEILING
   +NOGRAVITY
-  Obituary "%o was killed by a ceiling shooter."
+  Obituary "$OB_CSHOT"
   States
   {
   Spawn:
@@ -358,7 +358,7 @@ Actor LabMace 3349
   -COUNTKILL
   -CANUSEWALLS
   +FLOORCLIP
-  Obituary "%o was maced!"
+  Obituary "$OB_MACED"
   States
   {
   Spawn:
@@ -580,7 +580,7 @@ Actor LetniBarrier128 : LetniBarrier64 3217
 
 Actor MarbelaraTree 32523
 {
-  Obituary "%o was killed by a Marbelara Tree."
+  Obituary "$OB_MTREE"
   mass 1000000
   Speed 0
   Radius 12
@@ -628,7 +628,7 @@ Actor MegaBombSpawner1 3245
   -CANUSEWALLS
   -SOLID
 +DONTHARMSPECIES
-  Obituary "%o tried to dodge some Megairbase Missiles."
+  Obituary "$OB_MEGAB"
   States
   {
   Spawn:
@@ -678,7 +678,7 @@ Actor MegaBaseMissile
   +ROCKETTRAIL
   SeeSound "RFLAUNCH"
   DeathSound "SEEKXPLD"
-  Obituary "%o rode %k's rocket."
+  Obituary "$OB_MBMIS"
   States
   {
   Spawn:
@@ -709,7 +709,7 @@ Actor PezMaceSpawner 3888
   -CANUSEWALLS
   +FLOORCLIP
 +DONTHARMSPECIES
-  Obituary "%o was maced!"
+  Obituary "$OB_MACED"
   States
   {
   Spawn:
@@ -975,7 +975,7 @@ Actor SeaMine 32502
 	+SOLID
 	+TOUCHY
 	DeathSound "SEEKXPLD"
-	Obituary "%o was sunk."
+	Obituary "$OB_SMINE"
 	States
 	{
 	Spawn:
@@ -1024,7 +1024,7 @@ Actor TechnoirMine 3587
 	+NOINFIGHTING
 	+RIPPER
 	+SOLID
-	Obituary "% was impaled on a Technoir Mine."
+	Obituary "$OB_TMINE"
 	States
 	{
 	Spawn:
@@ -1075,7 +1075,7 @@ Actor TurtempleBoulderStart : SwitchableDecoration 3819
 	Height 48
 	Scale 0.5
 	+SOLID
-	Obituary "%o became a pancake by a Turtemple Boulder."
+	Obituary "$OB_TBOUL"
 	States
 	{
 	Spawn:
@@ -1103,7 +1103,7 @@ Actor TurtempleBoulder
 	+NODAMAGETHRUST
 	+NOEXTREMEDEATH
 	+RIPPER
-	Obituary "%o became a pancake by a Turtemple Boulder."
+	Obituary "$OB_TBOUL"
 	States
 	{
 	Spawn:

@@ -35,7 +35,7 @@ Actor FloppyTadpole 26555
 		FTDP D 6 A_MeleeAttack
 		Goto See
     Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
        TNT1 A 0 A_GiveToTarget ("Points",100)
 	   Stop
 	   Death.JazzprojFire:
@@ -92,7 +92,7 @@ Actor JumpingTadpole 3800
 		HTDP B 6 A_MeleeAttack
 		Goto See
     Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
        TNT1 A 0 A_GiveToTarget ("Points",100)
 	   Stop
 	   Death.JazzprojIce:

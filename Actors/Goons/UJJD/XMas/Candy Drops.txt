@@ -16,12 +16,12 @@ Actor XmasGreenCandyDrop 4100
     Mass 10000
 	Scale 0.55
 	MONSTER
-	Obituary "%o was gobbled up by a Green Candy Drop."
+	Obituary "$OB_GRECD"
     	+SOLID
 		+NOBLOOD
 		+NOINFIGHTING
 		+JUMPDOWN
-		+Faster
+		+FASTER
 		+COUNTKILL
 +DONTHARMSPECIES
     States
@@ -60,7 +60,7 @@ Actor XmasGreenCandyDrop 4100
 		GDRP A 4 A_Chase
         Goto See
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",150)
 	Stop
 	Death.JazzprojIce:
@@ -91,12 +91,12 @@ Actor XmasBlueCandyDrop 4101
     Mass 10000
 	Scale 0.55
 	MONSTER
-	Obituary "%o was gobbled up by a Blue Candy Drop."
+	Obituary "$OB_BLUCD"
     	+SOLID
 		+NOBLOOD
 		+NOINFIGHTING
 		+JUMPDOWN
-		+Faster
+		+FASTER
 		+COUNTKILL
 +DONTHARMSPECIES
     States
@@ -135,7 +135,7 @@ Actor XmasBlueCandyDrop 4101
 		BDRP A 4 A_Chase
         Goto See
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",150)
 	Stop
 	Death.JazzprojIce:
@@ -166,12 +166,12 @@ Actor XmasRedCandyDrop 4102
     Mass 10000
 	Scale 0.55
 	MONSTER
-	Obituary "%o was gobbled up by a Red Candy Drop."
+	Obituary "$OB_REDCD"
     	+SOLID
 		+NOBLOOD
 		+NOINFIGHTING
 		+JUMPDOWN
-		+Faster
+		+FASTER
 		+COUNTKILL
 +DONTHARMSPECIES
     States
@@ -210,7 +210,7 @@ Actor XmasRedCandyDrop 4102
 		RDRP A 4 A_Chase
         Goto See
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",150)
 	Stop
 	Death.JazzprojIce:

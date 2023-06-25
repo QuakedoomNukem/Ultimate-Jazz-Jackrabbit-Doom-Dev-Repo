@@ -17,7 +17,7 @@ Actor Flail 3712
     SeeSound "FLAILSIT"
     PainSound "FLAILPAI"
     DeathSound "FLAILDTH"
-    HitObituary "%o got KO'd by Flail." 
+    HitObituary "$HB_FLAIL" 
     States 
     { 
     Spawn: 

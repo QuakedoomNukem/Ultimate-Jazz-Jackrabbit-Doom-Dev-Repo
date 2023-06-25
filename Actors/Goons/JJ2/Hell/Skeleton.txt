@@ -13,7 +13,7 @@ Actor Skeleton 3791
   +COUNTKILL
   +SOLID
   +DONTHARMSPECIES
-  Obituary "%o got the spooks from a Skeleton."
+  Obituary "$OB_SKTON"
   States
   {
   Spawn:

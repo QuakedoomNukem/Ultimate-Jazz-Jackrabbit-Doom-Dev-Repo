@@ -16,7 +16,7 @@ Actor EvilJazz 32527
   +NOINFIGHTING
   +COUNTKILL
 +DONTHARMSPECIES
-  Obituary "%o was burned to a crisp by Jazz's evil doppelganger."
+  Obituary "$OB_EVILJ"
   States
   {
   Spawn:
@@ -67,7 +67,7 @@ Actor VileFireSpawner
 	+FLOORHUGGER
 	+BLOODLESSIMPACT
 	DONTHURTSHOOTER
-    Obituary "%o was burnt to a crisp."
+    Obituary "$OB_VILEF"
 	Projectile
 	MissileType VileFireD3
 	MissileHeight 0

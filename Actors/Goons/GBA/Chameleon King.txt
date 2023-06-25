@@ -13,7 +13,7 @@ Actor ChameleonKingBoss 3732
 	PainSound "cCHAMBDTH"
 	DeathSound "CHAMBDTH"
 	DamageFactor "Queendamage", 0
-	Obituary "%o has become dinner."
+	Obituary "$OB_CHABO"
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING

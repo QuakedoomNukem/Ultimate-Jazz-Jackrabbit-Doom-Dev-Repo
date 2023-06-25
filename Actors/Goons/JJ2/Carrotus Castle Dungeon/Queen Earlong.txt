@@ -12,7 +12,7 @@ DamageFactor "Queendamage", 0
 SeeSound ""
 AttackSound "QUEENSCM"
 DeathSound "QUEENSCM"
-Obituary "%o was screamed to death by Queen Earlong."
+Obituary "$OB_QEARL"
 +FLOORCLIP
 +NOBLOOD
 +NOINFIGHTING

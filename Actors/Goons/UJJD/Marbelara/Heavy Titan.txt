@@ -1,7 +1,7 @@
 Actor HeavyTitan 32766
 {
   Tag "Heavy Titan"
-  Obituary "%o was perforated to ribbons by a Heavy Titan."
+  Obituary "$OB_HETIT"
   Health 700
   Radius 20
   Height 64

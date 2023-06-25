@@ -17,7 +17,7 @@ Actor RocketGoon 3127
 	SeeSound "BIGTURTS"
 	PainSound "BIGTURTP"
 	ActiveSound "Turtact"
-	Obituary "%o was blown up by a Rocket Schwarzenguard."
+	Obituary "$OB_RGOON"
 	States
 	{
 	Spawn:
@@ -32,7 +32,7 @@ Actor RocketGoon 3127
 		TMLR F 8 Bright A_CustomMissile("Minissiles",25,0,359,0)
 		Goto See
 	Death:
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		TNT1 A 0 A_GiveToTarget ("Points",500)
 		Stop
 	Death.JazzprojIce:

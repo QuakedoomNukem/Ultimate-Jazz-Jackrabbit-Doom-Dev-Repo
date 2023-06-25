@@ -14,7 +14,7 @@ Actor Toaster : Weapon 16006
 	+NOGRAVITY
 	Inventory.PickupSound "WEAPNGET"
 	Inventory.PickupMessage "Toaster (Slot 7)"
-	Obituary "%o was BBQ'd by %k's Toaster."
+	Obituary "$OB_WEP7"
 	States
 	{
 	Spawn:
@@ -203,7 +203,7 @@ Actor Gun7PowerUpBox : Gun1PowerUpBox 3826
 		TNT1 A 0 ACS_NamedExecute("Gun7",0)
 		TNT1 A 0 A_GiveToTarget("Gun7PowerUp", 1, AAPTR_DEFAULT)
 		TNT1 A 0 A_GiveToTarget("Gas", 25, AAPTR_DEFAULT)
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		Stop
 	}
 }

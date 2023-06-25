@@ -17,7 +17,7 @@ Actor AtlantisLizard 3874
    SeeSound "LIZRDSEE"
    PainSound "LIZRDPAI"
   ActiveSound "LIZRDACT"
-   Obituary "%o got stomped to death by an Atlantis Lizard."
+   Obituary "$OB_ATLIZ"
    States 
    { 
    Spawn: 
@@ -31,7 +31,7 @@ Actor AtlantisLizard 3874
       LIZU F 8 A_SargAttack 
       Goto See 
    Death: 
-	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
       TNT1 A 0 A_GiveToTarget ("Points",100)
 	  Stop
 	  	Death.JazzprojFire:

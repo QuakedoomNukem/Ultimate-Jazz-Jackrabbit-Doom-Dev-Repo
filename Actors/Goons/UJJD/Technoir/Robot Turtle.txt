@@ -8,7 +8,7 @@ Actor TurtleRobot 3124
 	PainChance 0
 	Mass 4000
 	Damage 5
-	Obituary "%o was terminated by a Robot Turtle."
+	Obituary "$OB_RTURT"
 	MONSTER
 	FloatbobStrength 0.9
 	+FLOATBOB
@@ -48,7 +48,7 @@ Actor TurtleRobot 3124
     ROBT j 2
     ROBT j 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     ROBT AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
         TNT1 A 0 A_GiveToTarget ("Points",600)
 		Stop
    } 

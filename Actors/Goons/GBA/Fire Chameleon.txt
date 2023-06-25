@@ -15,7 +15,7 @@ Actor FireChameleon 4049
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o was set ablaze by a Fire Chameleon."
+	Obituary "$OB_FIREC"
 	States
 	{
 	Spawn:

@@ -1,7 +1,7 @@
 Actor OrbitusSnake 3792
 {
   Tag "Silver Snake"
-  Obituary "%o was fried by a Silver Snake." 
+  Obituary "$OB_SISNA" 
   Health 50
   Radius 10
   Height 10

@@ -15,7 +15,7 @@ Actor ElementGoon6 4042
    +NOINFIGHTING
     +COUNTKILL
  +DONTHARMCLASS
-  Obituary "%o was turned to dust by the Doofus Priest."
+  Obituary "$OB_ELEG4"
   States
   {
   Spawn:

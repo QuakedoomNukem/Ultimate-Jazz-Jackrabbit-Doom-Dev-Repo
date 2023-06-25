@@ -18,7 +18,7 @@ Actor DevanShell 32326
   +NOBLOOD
   +COUNTKILL
 +DONTHARMSPECIES
-  Obituary "%o was defeated by Devan Shell."
+  Obituary "$OB_DEVAS"
   States
   {
   Spawn:

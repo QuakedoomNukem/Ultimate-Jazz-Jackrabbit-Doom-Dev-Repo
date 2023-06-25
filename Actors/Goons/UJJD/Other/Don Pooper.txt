@@ -19,7 +19,7 @@ Actor DonPooper 4121
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"
-	Obituary "%o didn't have a good day to die hard."
+	Obituary "$OB_DONPO"
 	States
 	{
 		Spawn:

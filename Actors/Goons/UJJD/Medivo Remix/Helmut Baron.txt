@@ -10,7 +10,7 @@ Actor HelmutBaron 4039
   MONSTER
   DamageFactor Ice, 2
   DamageFactor Fire, 0.5
-  Obituary "%o got turned to wabbit roast by a Helmut Baron."
+  Obituary "$OB_HELMB"
   +NOTARGET
   +FLOORCLIP
   +MISSILEMORE
@@ -57,7 +57,7 @@ SeeSound "BIGTURTS"
     MDRB A 2
     MDRB A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     MDRB AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",3000)
 	Stop
   }

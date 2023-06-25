@@ -11,8 +11,8 @@ Actor Jubjub 3770
   +NOINFIGHTING
   +COUNTKILL
 +DONTHARMSPECIES
-  Obituary "%o was feathered by a Jubjub."
-  HitObituary "%o was scratched by a Jubjub."
+  Obituary "$OB_JUBJU"
+  HitObituary "$HB_JUBJU"
   States
   {
   Spawn:
@@ -36,7 +36,7 @@ Actor Jubjub 3770
     JUBD A 0 A_Pain
     Goto Missile2
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",250)
     Stop
 	Death.JazzprojFire:

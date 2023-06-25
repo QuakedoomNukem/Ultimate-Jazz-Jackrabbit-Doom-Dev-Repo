@@ -22,7 +22,7 @@ Actor RedOctogoon 3882
    +COUNTKILL
      +COUNTKILL
 +DONTHARMSPECIES
-  Obituary "%o was inked by an Octoboss."
+  Obituary "$OB_OCTOB"
   States
   {
   Spawn:
@@ -37,7 +37,7 @@ Actor RedOctogoon 3882
     REDO A 4
     Goto See
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",200)
 	Stop
 	    Death.JazzprojIce:

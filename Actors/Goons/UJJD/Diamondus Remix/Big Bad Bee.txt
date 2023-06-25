@@ -19,7 +19,7 @@ Actor BigBeeBoss 3966
    +BOSS
    +COUNTKILL
  +DONTHARMCLASS
-  Obituary "%o couldn't stand a chance against the Big Bad Bee."
+  Obituary "$OB_BIGBE"
   States
   {
   Spawn:

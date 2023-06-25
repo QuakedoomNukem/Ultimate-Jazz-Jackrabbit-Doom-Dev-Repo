@@ -18,8 +18,8 @@ Actor UberGoon 32524
   SeeSound "BIGTURTS"
   PainSound "BIGTURTP"
   ActiveSound "Turtact"
-  HitObituary "%o was maced by a Mace Schwarzenguard."
-  Obituary "%o couldn't evade the Mace Schwarzenguard's tossed mace."
+  HitObituary "$HB_MACES"
+  Obituary "$OB_MACES"
   States
   {
   Spawn:

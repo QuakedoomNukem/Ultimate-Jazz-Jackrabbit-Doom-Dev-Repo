@@ -1,7 +1,7 @@
 Actor Dragoon 3295
 {
   Tag "Drageen"
-  Obituary "%o was eaten by a Drageen." 
+  Obituary "$OB_DRAGO" 
   Health 200
   Radius 12
   Height 48

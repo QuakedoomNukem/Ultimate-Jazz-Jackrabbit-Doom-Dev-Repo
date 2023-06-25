@@ -9,12 +9,12 @@ Actor JungDragonBoss 3834
     Mass 10000
 	Scale 1.5
 	MONSTER
-	Obituary "%o was defeated by the Jungle Dragon."
+	Obituary "$OB_JDRAG"
     	+SOLID
 		+NOBLOOD
 		+NOINFIGHTING
 		+JUMPDOWN
-		+Faster
+		+FASTER
 		+LOOKALLAROUND
 		+NOICEDEATH
 		+JUSTHIT
@@ -23,7 +23,7 @@ Actor JungDragonBoss 3834
 		+NORADIUSDMG
 		+BOSSDEATH
 		-NOTARGET
-		+MISSILEEvenMore
+		+MISSILEEVENMORE
 				+COUNTKILL
 +DONTHARMSPECIES
     States

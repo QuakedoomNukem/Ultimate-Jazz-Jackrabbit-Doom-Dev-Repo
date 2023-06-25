@@ -17,7 +17,7 @@ Actor BlackCat 3786
    +NOINFIGHTING
    +COUNTKILL
 +DONTHARMSPECIES
-   Obituary "%o was ripped to shreds by a Scaredy Cat."
+   Obituary "$OB_BLKCA"
    States 
    { 
    Spawn: 
@@ -31,7 +31,7 @@ Actor BlackCat 3786
       BCAT E 20 A_SkullAttack
       Goto See 
    Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
     Stop
 	Death.JazzprojIce:
@@ -71,7 +71,7 @@ Actor OrangeCat 4044
    +SOLID
     +COUNTKILL
  +DONTHARMCLASS
-   Obituary "%o was clawed in face by an Orange Cat."
+   Obituary "$OB_ORNCA"
    States 
    { 
    Spawn: 
@@ -85,7 +85,7 @@ Actor OrangeCat 4044
       OCAT E 20 A_SkullAttack
       Goto See 
    Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",100)
     Stop
 	Death.JazzprojIce:

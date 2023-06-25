@@ -16,7 +16,7 @@ Actor BigSparks 11913
 +DONTHARMSPECIES
    SeeSound "SPKSee"
   PainSound "SPKPain"
-  Obituary "%o experienced high voltage from a Big Spark."
+  Obituary "$OB_BIGSP"
   States
   {
   Spawn:

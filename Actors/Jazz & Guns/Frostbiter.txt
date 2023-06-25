@@ -8,7 +8,7 @@ Actor Frostbiter : Weapon 15004
   Weapon.AmmoType1 "FreezeAmmo"
   Inventory.PickupMessage "Frostbiter! (Slot 8)"
   Inventory.Icon "PLSPA0"
-  Obituary "%o got frozen SOLID by %k's Frostbiter."
+  Obituary "$OB_WEP8"
   DamageFactor 0
   Weapon.BobRangeX 0.5
    Weapon.BobRangeY 0.5
@@ -305,7 +305,7 @@ Actor Gun8PowerUpBox : Gun1PowerUpBox 3827
   TNT1 A 0 ACS_NamedExecute("Gun8",0)
   TNT1 A 0 A_GiveToTarget("Gun8PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("FreezeAmmo", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
   }
 }

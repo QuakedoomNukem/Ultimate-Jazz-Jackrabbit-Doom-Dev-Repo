@@ -9,7 +9,7 @@ Actor TubeRemixSparks 3973
 	PainChance 0
 	SeeSound "SPKSee"
 	PainSound "SPKPain"
-	HitObituary "%o was zapped by a Remix Spark."
+	HitObituary "$HB_TRSPA"
 	MONSTER
 	+NOGRAVITY
 	+FLOAT 
@@ -44,7 +44,7 @@ Actor TubeRemixSparks 3973
 		TRSK A 1
 		Goto See
 	Death:
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		TNT1 A 0 A_RemoveChildren (1, RMVF_EVERYTHING, "SparkBall1")
 		TNT1 A 0 A_RemoveChildren (1, RMVF_EVERYTHING, "SparkBall2")
 		TNT1 A 0 A_RemoveChildren (1, RMVF_EVERYTHING, "SparkBall3")

@@ -17,8 +17,8 @@ Actor GiantTurtle 3902
 	SeeSound "GIANTSEE"
 	PainSound "GIANHURT"
 	ActiveSound "TURTACT"
-	Obituary "%o was scared to death by a Giant Turtle."
-	HitObituary "%o became wabbit puree."
+	Obituary "$OB_GTURT"
+	HitObituary "$HB_GTURT"
 	States 
 	{ 
 	Spawn: 
@@ -69,7 +69,7 @@ Actor MuckSnot
 	Projectile
 	SeeSound "LOOGSEE"
 	DeathSound "LOOGDETH"
-	Obituary "%o splat %k's loogie."
+	Obituary "$OB_LOOGE"
 	+BRIGHT
 	States
 	{

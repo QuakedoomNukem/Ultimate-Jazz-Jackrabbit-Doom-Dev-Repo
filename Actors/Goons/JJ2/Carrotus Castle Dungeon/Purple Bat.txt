@@ -17,7 +17,7 @@ Actor JJBat 30024
 	SeeSound "BATSCRCH"
 	AttackSound "BATSCRCH"
 	ActiveSound "BATSCRCH"
-    HitObituary "%o got knocked out of the park by a bat."
+    HitObituary "$HB_JJBAT"
     States
     {
     Spawn:
@@ -33,7 +33,7 @@ Actor JJBat 30024
         BFAM AB 3 A_FaceTarget
         Goto See
     Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
         TNT1 A 0 A_GiveToTarget ("Points",100)
 		Stop
 		Death.JazzprojIce:

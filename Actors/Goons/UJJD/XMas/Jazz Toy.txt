@@ -10,7 +10,7 @@ Actor XmasJazzToy 4096
 	SeeSound "JZTOYSEE"
 	ActiveSound "JZTOYBP"
 	DeathSound "SEEKXPLD"
-	Obituary "%o was blown up by a Jazz Toy."
+	Obituary "$OB_XJTOY"
 	MONSTER
 	+FLOORCLIP
     +NOBLOOD

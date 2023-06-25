@@ -1,7 +1,7 @@
 Actor CrazyEasterusEgg 3932
 {
   Tag "Crazed Easter Egg"
-  obituary "%o was yolked by a Crazed Easter Egg."
+  Obituary "$OB_YOLKE"
   Health 80
   Radius 8
   Height 16

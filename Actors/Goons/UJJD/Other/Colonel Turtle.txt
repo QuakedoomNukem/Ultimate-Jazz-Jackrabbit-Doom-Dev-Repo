@@ -17,7 +17,7 @@ Actor ColTurtle 4124
    PainSound "GIANHURT"
    ActiveSound "Turtact"
 
-	Obituary "%o got KO'd by Col. Turtle."
+	Obituary "$OB_COLTU"
 	
 	MeleeDamage 50
 	

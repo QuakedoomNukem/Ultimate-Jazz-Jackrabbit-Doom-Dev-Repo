@@ -16,7 +16,7 @@ Actor TurtleBishop 3293
   +DONTHARMSPECIES
   +NOINFIGHTING
  +COUNTKILL
-  Obituary "%o got turned to ash by a Turtle Bishop."
+  Obituary "$OB_TBISH"
   States
   {
   Spawn:

@@ -8,7 +8,7 @@ Actor OstrichBoss 3796
   Speed 35
   PainChance 10
   MONSTER
-  Obituary "%o couldn't keep up with the Ostrich Steed."
+  Obituary "$OB_OSTRB"
   +FLOAT
   +NOGRAVITY
   +BOSS

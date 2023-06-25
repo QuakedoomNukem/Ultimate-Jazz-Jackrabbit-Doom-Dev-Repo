@@ -15,7 +15,7 @@ Actor AtlantisMerman 3871
    +NOBLOOD
    +NOINFIGHTING
    +DONTHARMSPECIES
-   Obituary "%o was burnt to a crisp by a Merman."
+   Obituary "$OB_MERMA"
    States 
    { 
    Spawn: 
@@ -30,7 +30,7 @@ Actor AtlantisMerman 3871
 	  MRMN C 6 Bright
 	  Goto See
    Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",350)
     Stop
 	Death.JazzprojFire:

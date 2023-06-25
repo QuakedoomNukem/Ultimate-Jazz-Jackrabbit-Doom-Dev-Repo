@@ -10,7 +10,7 @@ Actor BossHelmut 30026
   MONSTER
   DamageFactor Ice, 2
   DamageFactor Fire, 0.5
-  Obituary "%o was burnt to a crisp by a Pyro Helmut."
+  Obituary "$OB_PYRHE"
   +NOTARGET
   +FLOORCLIP
   +MISSILEMORE
@@ -108,7 +108,7 @@ SeeSound "BIGTURTS"
     PYRO A 2
     PYRO A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     PYRO AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",2000)
 	Stop
   }
@@ -132,7 +132,7 @@ Actor FireShot
     PLSS X 1 Bright A_SpawnItemEx("FireTail",0,0,0,0,0,0,0,128)
     Loop
   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
   }
 }
@@ -191,7 +191,7 @@ Actor FirebombExplosion1
   +MISSILE
   +ACTIVATEIMPACT
   +ACTIVATEPCROSS
-  Obituary "%o was killed by a firebomb explosion."
+  Obituary "$OB_FBEXP"
   States
   {
   Spawn:

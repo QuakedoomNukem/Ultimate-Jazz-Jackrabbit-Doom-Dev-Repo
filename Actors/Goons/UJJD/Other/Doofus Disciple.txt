@@ -15,7 +15,7 @@ Actor ElementGoon5 4037
    +NOINFIGHTING
     +COUNTKILL
  +DONTHARMCLASS
-  Obituary "%o was cast out to oblivion by a Doofus Disciple."
+  Obituary "$OB_ELEG3"
   States
   {
   Spawn:

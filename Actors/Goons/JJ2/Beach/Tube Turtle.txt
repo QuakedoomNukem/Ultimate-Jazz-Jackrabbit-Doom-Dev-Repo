@@ -11,7 +11,7 @@ painchance 0
 SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtactive"
-  Obituary "%o was drowned by an Inner Tube Turtle."
+  Obituary "$OB_TUBEG"
 MONSTER
 +NOBLOOD
 +FLOORCLIP
@@ -32,7 +32,7 @@ Melee:
 	TUBG H 4 A_SargAttack
 	Goto See
 Death:
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     TNT1 A 0 A_GiveToTarget ("Points",50)
 	Stop
 	Death.JazzprojIce:

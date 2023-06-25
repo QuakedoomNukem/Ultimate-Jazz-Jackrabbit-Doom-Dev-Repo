@@ -8,19 +8,19 @@ Actor MiniDragon 3836
     PainChance 0
     Mass 10000
 	MONSTER
-	Obituary "%o was scorched by a Mini Jungle Dragon."
+	Obituary "$OB_MDRAG"
     	+SOLID
 		+NOBLOOD
 		+NOINFIGHTING
 		+JUMPDOWN
-		+Faster
+		+FASTER
 		+LOOKALLAROUND
 		+NOICEDEATH
 		+JUSTHIT
 		+MISSILEMORE
 		+NORADIUSDMG
 		-NOTARGET
-		+MISSILEEvenMore
+		+MISSILEEVENMORE
 		+COUNTKILL
 		+DONTHARMSPECIES
     States
@@ -47,7 +47,7 @@ Actor MiniDragon 3836
 		MDRG C 1 A_JumpIf(floorz == 1,"See")
 		Goto Jump+5
     Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
        TNT1 A 0 A_GiveToTarget ("Points",150)
 	   Stop
 	     Death.JazzprojIce:

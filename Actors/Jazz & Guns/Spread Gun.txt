@@ -3,7 +3,7 @@ Actor SpreadGun : Doomweapon 30004
   Tag "Spread Gun"
   Inventory.PickupMessage "Spread Gun (Slot 2)"
   Inventory.PickupSound "WEAPNGET"
-  Obituary "%o was rattled by %k's Spread Gun."
+  Obituary "$OB_SPREG"
   Weapon.AmmoGive 0
   Weapon.AmmoUse 1
   Weapon.AmmoType "JJShell" 
@@ -246,7 +246,7 @@ Actor Gun2PowerUpBox : Gun1PowerUpBox 3821
   TNT1 A 0 ACS_NamedExecute("Gun2",0)
   TNT1 A 0 A_GiveToTarget("Gun2PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("JJShell", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
   }
 }

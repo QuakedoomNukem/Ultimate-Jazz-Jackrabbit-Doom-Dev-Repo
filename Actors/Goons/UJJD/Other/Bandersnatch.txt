@@ -13,7 +13,7 @@ Actor Bandersnatch 3772
    +NOBLOOD
    +NOINFIGHTING
    +DONTHARMSPECIES
-   Obituary "%o was mauled by a Bandersnatch."
+   Obituary "$OB_BANDE"
    States 
    { 
    Spawn: 
@@ -27,7 +27,7 @@ Actor Bandersnatch 3772
       BSNT ABC 8 A_SargAttack 
       Goto See 
    Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("Jazzpoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	TNT1 A 0 A_GiveToTarget ("Points",200)
     Stop
 	Burn:
