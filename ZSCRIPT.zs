@@ -1,4 +1,4 @@
-version "4.8.0"
+version "4.7.1" //minor regression to let the mod work under 4.8.0 or higher without warnings - ozy81
 
 // AFADoomer
 
