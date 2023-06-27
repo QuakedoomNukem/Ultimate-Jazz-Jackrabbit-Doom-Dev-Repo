@@ -1,27 +1,28 @@
 Actor Dragoon 3295
 {
-  Tag "Drageen"
-  Obituary "$OB_DRAGO" 
-  Health 200
-  Radius 12
-  Height 48
-  mass 99999
-  Speed 5
-  painchance 0
-  damage 5
- SeeSound "Turtsight"
-  PainSound "Turtpain"
-  ActiveSound "Turtact"
-  MONSTER
-  +FLOAT
-  +FLOATBOB
-  +DROPOFF
-  +DONTFALL
-  +DONTHARMCLASS
-  +NOINFIGHTING
-  +NOBLOOD
-  +NOGRAVITY
-  +COUNTKILL
+	//$Category Goons
+	Tag "Drageen"
+	Health 200
+	Radius 12
+	Height 48
+	Mass 99999
+	Speed 5
+	PainChance 0
+	Damage 5
+	MONSTER
+	+COUNTKILL
+	+DONTFALL
+	+DONTHARMCLASS
+	+DROPOFF
+	+FLOAT
+	+FLOATBOB
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACT"
+	Obituary "$OB_DRAGO"
 	States
 	{
 	Spawn:
@@ -40,44 +41,42 @@ Actor Dragoon 3295
 		DRAG A 0 A_SpawnItemEx("DBodyI1A",-10,0,5,0,0,0,0,0,0)
 		Loop
 	Melee:
-      DRAG A 4 A_FaceTarget 
-      DRAG A 20 A_SargAttack
-      Goto TrueSee
-        Death:
-			TNT1 AAAAAAA 0 A_SpawnItemEx("DBodyI1A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	Stop
-	TNT1 AAAAAAA 0 A_SpawnItemEx("TailI2A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-	Stop
+		DRAG A 4 A_FaceTarget
+		DRAG A 20 A_SargAttack
+		Goto TrueSee
+	Death:
+		TNT1 AAAAAAA 0 A_SpawnItemEx("DBodyI1A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		Stop
+		TNT1 AAAAAAA 0 A_SpawnItemEx("TailI2A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+		Stop
 	}
 }
 
 Actor DBodyI1A
 {
-  +FLOATBOB
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    TAIL A 5
-    Goto Death
-  Death:
-	TAIL A 5
-	Stop
-  }
+	+FLOATBOB
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		TAIL A 5
+		Goto Death
+	Death:
+		TAIL A 5
+		Stop
+	}
 }
 
-Actor TailI2A
+Actor TailI2A : DBodyI1A
 {
-  +FLOATBOB
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    TAL2 A 5
-    Goto Death
-  Death:
-	TAL2 A 5
-	Stop
-  }
+	States
+	{
+	Spawn:
+		TAL2 A 5
+		Goto Death
+	Death:
+		TAL2 A 5
+		Stop
+	}
 }

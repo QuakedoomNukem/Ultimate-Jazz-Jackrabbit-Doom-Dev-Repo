@@ -1,77 +1,79 @@
 Actor PetalCopter 3224
 {
-  Tag "Fly Flower"
-  Health 50
-  Radius 8
-  Height 24
-  Mass 1000
-  Speed 15
-  PainChance 0
-  MONSTER
-  +FLOAT
-  +NOGRAVITY
-  +MISSILEMORE
-  +DONTFALL
-  +NOICEDEATH
-   +NOBLOOD
-   +NOINFIGHTING
-   +LOOKALLAROUND
-     +COUNTKILL
-+DONTHARMSPECIES
-  Obituary "$OB_FLYFL"
-  States
-  {
-  Spawn:
-    FPCE AB 2 A_Look
-    Loop
-  See:
-    FPCE AB 2 A_Chase
-    Loop
-  Missile:
-    FPCE A 5 A_FaceTarget
-    FPCE B 4 A_CustomMissile("PetalCopterProj",32,0,0,0,0)
-    FPCE AB 4
-    Goto See
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget("Points",150)
-	Stop
+	//$Category Goons
+	Tag "Fly Flower"
+	Health 50
+	Radius 8
+	Height 24
+	Mass 1000
+	Speed 15
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTFALL
+	+DONTHARMSPECIES
+	+FLOAT
+	+LOOKALLAROUND
+	+MISSILEMORE
+	+NOBLOOD
+	+NOGRAVITY
+	+NOICEDEATH
+	+NOINFIGHTING
+	Obituary "$OB_FLYFL"
+	States
+	{
+	Spawn:
+		FPCE AB 2 A_Look
+		Loop
+	See:
+		FPCE AB 2 A_Chase
+		Loop
+	Missile:
+		FPCE A 5 A_FaceTarget
+		FPCE B 4 A_CustomMissile("PetalCopterProj",32,0,0,0,0)
+		FPCE AB 4
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",150)
-	FPCE B 5 A_GenericFreezeDeath
-    FPCE B 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		FPCE B 5 A_GenericFreezeDeath
+		FPCE B 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",150)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	FPCE A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		FPCE A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }
 
 Actor PetalCopterProj
 {
-    Radius 13
-    Height 8
-    Speed 15
-    Damage 2
+	Radius 13
+	Height 8
+	Speed 15
+	Damage 2
 	DamageType Disintegrate
-    Projectile
-    RenderStyle Add
-    Alpha 0.75
-    Scale 0.9
-	DeathSound "Tick"
-    States
-  {
-  Spawn:
-    FPCP A 6 bright
-    Loop
-  Death:
-    JBLS EFGH 4 bright
-    Stop
-   }
+	RenderStyle Add
+	Alpha 0.75
+	Scale 0.9
+	Projectile
+	+BRIGHT
+	DeathSound "TICK"
+	States
+	{
+	Spawn:
+		FPCP A 6
+		Loop
+	Death:
+		JBLS EFGH 4
+		Stop
+	}
 }

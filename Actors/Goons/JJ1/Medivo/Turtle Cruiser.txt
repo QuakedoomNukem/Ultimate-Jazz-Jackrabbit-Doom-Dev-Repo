@@ -1,44 +1,49 @@
-Actor TurtleCruiser 4109
+Actor TurtleBossBase //so we can put damagetypes separately through inheritances, otherwise you get all assigned - ozy81
 {
-Tag "Turtle Cruiser"
-Health 2000
-Speed 15
-Mass 100000
-Radius 32
-Height 56
-PainChance 0
-MinMissileChance 160
-DamageFactor "TurtleCruiser", 0
-SeeSound "Turtsight"
-PainSound "Turtpain"
-ActiveSound "Turtact"
-Obituary "$OB_TURCR"
-+FLOORCLIP
-+NOBLOOD
-+NOINFIGHTING
-+BOSS
-+FLOAT
-+FLOATBOB
-+NOGRAVITY
-+MISSILEMORE
-+NORADIUSDMG
-+DONTMORPH
-+BOSSDEATH
-+NOTARGET
-+MISSILEEVENMORE
-+DONTHARMCLASS
-MONSTER
-    States
-    {
-    Spawn:
-        DRL1 AB 4 A_Look
+	Health 2000
+	Speed 15
+	Mass 100000
+	Radius 32
+	Height 56
+	PainChance 0
+	MinMissileChance 160
+	MONSTER
+	+BOSS
+	+BOSSDEATH
+	+DONTHARMCLASS
+	+DONTMORPH
+	+FLOORCLIP
+	+MISSILEEVENMORE
+	+MISSILEMORE
+	+NOBLOOD
+	+NOINFIGHTING
+	+NORADIUSDMG
+	+NOTARGET
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACT"
+}
+
+Actor TurtleCruiser : TurtleBossBase 4109
+{
+	//$Category Goons
+	Tag "Turtle Cruiser"
+	DamageFactor "TurtleCruiser", 0
+	+FLOAT
+	+FLOATBOB
+	+NOGRAVITY
+	Obituary "$OB_TURCR"
+	States
+	{
+	Spawn:
+		DRL1 AB 4 A_Look
 		DRL1 A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
-        Loop
-    See:
-        DRL1 AB 4 A_Chase
+		Loop
+	See:
+		DRL1 AB 4 A_Chase
 		DRL1 A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
-        Loop
-    Missile:
+		Loop
+	Missile:
 		DRL1 A 15 A_FaceTarget
 		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
 		DRL1 A 15 A_FaceTarget
@@ -46,7 +51,7 @@ MONSTER
 		DRL1 A 15 A_FaceTarget
 		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
 		Goto see
-    Death:
+	Death:
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		DRL1 A 0 A_Scream
 		DRL1 A 2 ThrustThingZ(0, random(2, 8), 0, 0)
@@ -65,52 +70,32 @@ MONSTER
 		TNT1 A 0 A_SpawnItemEx("TurtleDrill",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0,10)
 		TNT1 AAAAAAA 0 A_SpawnItemEx("CruiserBarrel")
 		Stop
-  }
+	}
 }
 
-Actor TurtleDrill 4110
+Actor TurtleDrill : TurtleBossBase 4110
 {
-Tag "Turtle Cruiser"
-Health 2000
-Speed 20
-Mass 100000
-Radius 32
-Height 56
-PainChance 0
-MinMissileChance 160
-MeleeDamage 20
-DamageFactor "DrillTurtle", 0
-SeeSound "Turtsight"
-PainSound "Turtpain"
-ActiveSound "Turtact"
-Obituary "$OB_TURDR"
-+FLOORCLIP
-+LOOKALLAROUND
-+NOBLOOD
-+NOINFIGHTING
-+BOSS
-+JUMPDOWN
-+FASTER
-+MISSILEMORE
-+NORADIUSDMG
-+DONTMORPH
-+BOSSDEATH
-+NOTARGET
-+MISSILEEVENMORE
-+DONTHARMCLASS
-MONSTER
-    States
-    {
-Spawn:
-        DRLL A 4 A_Look
+	//$Category Goons
+	Tag "Turtle Drill"
+	Speed 20
+	MeleeDamage 20
+	DamageFactor "DrillTurtle", 0
+	+FASTER
+	+JUMPDOWN
+	+LOOKALLAROUND
+	Obituary "$OB_TURDR"
+	States
+	{
+	Spawn:
+		DRLL A 4 A_Look
 		DRLL B 4 //A_Recoil(-6)
 		DRLL B 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
 		DRLL C 4 ThrustThingZ(0,38,0,0)
 		DRLL A 4 A_JumpIf(Velz == 0,"Spawn")
 		Goto Jump+4
-    See:
+	See:
 		DRLL A 0 A_Facetarget
-        DRLL AAAA 1 A_Chase
+		DRLL AAAA 1 A_Chase
 		DRLL BBBB 1 A_Facetarget
 		//DRLL A 0 A_Chase
 		DRLL B 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
@@ -122,11 +107,11 @@ Spawn:
 		DRLL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 4 A_JumpIf(Velz == 0,"See")
 		Goto Jump+4
 	Melee:
-		 DRLL AB 1 A_FaceTarget 
-         DRLL C 1 A_SargAttack
-		 Goto See
+		DRLL AB 1 A_FaceTarget
+		DRLL C 1 A_SargAttack
+		Goto See
 	Jump:
-        DRLL A 4
+		DRLL A 4
 		DRLL B 4 A_Recoil(-6)
 		DRLL B 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
 		DRLL C 4 ThrustThingZ(0,38,0,0)
@@ -155,53 +140,53 @@ Spawn:
 		TNT1 A 0 A_GiveToTarget("Points",4000)
 		TNT1 A 0 ACS_Execute (7,0,0,0,0)
 		Stop
-  }
+	}
 }
 
 Actor CruiserBarrel
 {
-  Radius 16
-  Height 12
-  Speed 25
-  FastSpeed 50
-  Gravity 0.5
-  Projectile
-  +RANDOMIZE
-  -NOGRAVITY
-  +NOBLOOD
-  States
-  {
-  Spawn:
-    DRL3 A 1
-    Loop
-  Death:
-    DRL3 A -1
-    Stop
-  }
+	Radius 16
+	Height 12
+	Speed 25
+	FastSpeed 50
+	Gravity 0.5
+	Projectile
+	-NOGRAVITY
+	+NOBLOOD
+	+RANDOMIZE
+	States
+	{
+	Spawn:
+		DRL3 A 1
+		Loop
+	Death:
+		DRL3 A -1
+		Stop
+	}
 }
 
-Actor TurtleCruiserProj
-
+Actor TurtleCruiserProj //double DamageType defined - ozy81
 {
-    Radius 8
-    Height 8
-    Speed 20
-    Damage 10
-	DamageType Disintegrate
-    Projectile
-    +RANDOMIZE
-    RenderStyle Add
-    Alpha 0.75
-    SeeSound "LFG2FIRE"
-	DeathSound "BLSTRHIT"
+	Radius 8
+	Height 8
+	Speed 20
+	Damage 10
 	DamageType JazzProj
-    States
-  {
-  Spawn:
-    DRIL A 6 bright
-    Loop
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    Stop
-   }
+	DamageType Disintegrate
+	RenderStyle Add
+	Alpha 0.75
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	SeeSound "LFG2FIRE"
+	DeathSound "BLSTRHIT"
+	States
+	{
+	Spawn:
+		DRIL A 6
+		Loop
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }

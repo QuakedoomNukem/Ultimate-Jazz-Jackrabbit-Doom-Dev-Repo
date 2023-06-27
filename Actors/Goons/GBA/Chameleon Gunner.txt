@@ -9,13 +9,13 @@ Actor ChameleonGunner 3730
 	Speed 15
 	PainChance 110
 	MONSTER
-	+NOBLOOD
-	+NOINFIGHTING
 	+COUNTKILL
 	+DONTHARMSPECIES
-	SeeSound "Turtsight"
-	PainSound "Turtpain"
-	ActiveSound "Turtact"
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACT"
 	Obituary "$OB_CHAGU"
 	States
 	{
@@ -60,12 +60,12 @@ Actor ChameleonProj
 	Radius 8
 	damage 3
 	Speed 15
+	RenderStyle Add
+	Alpha 1
 	Projectile
 	+BRIGHT
 	+RANDOMIZE
-	RenderStyle Add
-	Alpha 1
-	SeeSound	"Chamfire"
+	SeeSound "CHAMFIRE"
 	DeathSound "CHAMPHIT"
 	States
 	{

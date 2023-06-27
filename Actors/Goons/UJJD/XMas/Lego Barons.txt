@@ -1,109 +1,97 @@
 Actor XmasBluePlane 4093
 {
-  Tag "Blue Lego Baron"
-  Health 100
-  Radius 31
-  Height 56
-  Mass 10000000
-  Speed 5
-  PainChance 200
-  SeeSound "PLANESEE"
-  ActiveSound "PLANEACT"
-  MONSTER
-  +NOINFIGHTING
-  +NOGRAVITY
-  +FLOAT
-  +FLOATBOB
-  +NOBLOOD
-  Obituary "$OB_XBPLA"
-  States
-  {
-  Spawn:
-    BPLN A 3 A_Look
-    Loop
-  See:
-    BPLN A 3 A_Chase
-    Loop
-  Melee:
-  Missile:
-    BPLN A 20 A_FaceTarget
-    BPLN A 10 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
-	BPLN A 4 A_FaceTarget
-    BPLN A 10 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
-	BPLN A 4 A_FaceTarget
-    BPLN A 10 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
-    Goto See
-   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",150)
-    Stop
+	//$Category Goons
+	Tag "Blue Lego Baron"
+	Health 100
+	Radius 31
+	Height 56
+	Mass 10000000
+	Speed 5
+	PainChance 200
+	MONSTER
+	+FLOAT
+	+FLOATBOB
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	SeeSound "PLANESEE"
+	ActiveSound "PLANEACT"
+	Obituary "$OB_XBPLA"
+	States
+	{
+	Spawn:
+		BPLN A 3 A_Look
+		Loop
+	See:
+		BPLN A 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		BPLN A 20 A_FaceTarget
+		BPLN A 10 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+		BPLN A 4 A_FaceTarget
+		BPLN A 10 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+		BPLN A 4 A_FaceTarget
+		BPLN A 10 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",150)
-	RPLN A 5 A_GenericFreezeDeath
-    RPLN A 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		RPLN A 5 A_GenericFreezeDeath
+		RPLN A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",150)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }
 
-Actor XmasRedPlane 4092
+Actor XmasRedPlane : XmasBluePlane 4092
 {
-  Tag "Red Lego Baron"
-  Health 100
-  Radius 31
-  Height 56
-  Mass 10000000
-  Speed 5
-  PainChance 200
-  SeeSound "PLANESEE"
-  ActiveSound "PLANEACT"
-  MONSTER
-  +NOINFIGHTING
-  +NOGRAVITY
-  +FLOAT
-  +FLOATBOB
-  +NOBLOOD
-  Obituary "$OB_XRPLA"
-  States
-  {
-  Spawn:
-    RPLN A 3 A_Look
-    Loop
-  See:
-    RPLN A 3 A_Chase
-    Loop
-  Melee:
-  Missile:
-    RPLN A 10 A_FaceTarget
-    RPLN A 4 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
-    Goto See
-  Pain:
-    RPLN A 2
-    RPLN A 2 A_Pain
-    Goto See
-   Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-    Stop
+	//$Category Goons
+	Tag "Red Lego Baron"
+	Obituary "$OB_XRPLA"
+	States
+	{
+	Spawn:
+		RPLN A 3 A_Look
+		Loop
+	See:
+		RPLN A 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		RPLN A 10 A_FaceTarget
+		RPLN A 4 A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+		Goto See
+	Pain:
+		RPLN A 2
+		RPLN A 2 A_Pain
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	RPLN A 5 A_GenericFreezeDeath
-    RPLN A 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		RPLN A 5 A_GenericFreezeDeath
+		RPLN A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }

@@ -1,53 +1,54 @@
 Actor JungrockSnake 3831
 {
-  Tag "Jet Snake"
-  Health 75
-  Radius 16
-  Height 16
-  Mass 10000
-  Speed 15
-  PainChance 0
-  Damage 3
-  ActiveSound "SNKESND"
-  SeeSound "SNKESND"
-  AttackSound "RATATTCK"
-  MONSTER
-   +NOBLOOD
-   +NOINFIGHTING
-     +COUNTKILL
-+DONTHARMSPECIES
-   +SOLID
-  Obituary "$OB_JSNEK"
-  States
-  {
-  Spawn:
-    JSNK ABCB 4 A_Look
-    Loop
-  See:
-    JSNK ABCB 4 A_Chase
-    Loop
-  Melee:
-    JSNK A 10 A_FaceTarget
-    JSNK B 8 A_SargAttack
-    JSNK C 10
-    Goto See
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
+	//$Category Goons
+	Tag "Jet Snake"
+	Health 75
+	Radius 16
+	Height 16
+	Mass 10000
+	Speed 15
+	PainChance 0
+	Damage 3
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	ActiveSound "SNKESND"
+	SeeSound "SNKESND"
+	AttackSound "RATATTCK"
+	Obituary "$OB_JSNEK"
+	States
+	{
+	Spawn:
+		JSNK ABCB 4 A_Look
+		Loop
+	See:
+		JSNK ABCB 4 A_Chase
+		Loop
+	Melee:
+		JSNK A 10 A_FaceTarget
+		JSNK B 8 A_SargAttack
+		JSNK C 10
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	JSNK A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		JSNK A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	JSNK A 5 A_GenericFreezeDeath
-    JSNK A 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		JSNK A 5 A_GenericFreezeDeath
+		JSNK A 1 A_FreezeDeathChunks
+		Wait
 	}
-	}
+}

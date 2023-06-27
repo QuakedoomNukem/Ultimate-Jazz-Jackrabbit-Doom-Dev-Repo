@@ -38,7 +38,7 @@ Actor MiniDragon 3836
 		Loop
 	Missile:
 		 MDRG C 15 A_FaceTarget 
-         MDRG D 8 Bright A_CustomMissile ("FireLizardBall",56,0,0,0,0)
+         MDRG D 8 Bright A_CustomMissile("FireLizardBall",56,0,0,0,0)
 		 Goto See
 	Jump:
 		MDRG A 8

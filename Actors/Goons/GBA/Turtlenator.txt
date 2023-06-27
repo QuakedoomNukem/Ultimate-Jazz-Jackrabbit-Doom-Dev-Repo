@@ -63,7 +63,7 @@ Actor MechBoss 31526
 		TNT1 A 0 A_PlaySound
 		MBSS K 10 A_FaceTarget
 		MBSS L 5 A_SargAttack
-		Goto see
+		Goto See
 	Death:
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		MBSS m 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
@@ -118,7 +118,7 @@ Actor MechBossHeatSeek
 	{
 	Spawn:
 		HRKT A 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
-		HRKT A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+		HRKT A 0 A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
 		Loop
 	Death:
 		SEKE AB 3 bright
@@ -151,7 +151,7 @@ Actor MechBFGBall
 		Loop
 	Death:
 		MBDD ABCD 4
-		MBDD AB 4 A_SpawnItemEX("MechBFGBallExtra",0,0,0,0,0)
+		MBDD AB 4 A_SpawnItemEx("MechBFGBallExtra",0,0,0,0,0)
 		MBDD BCD 4
 		Stop
 	}

@@ -9,10 +9,10 @@ Actor HammeredChameleon 3731
 	Speed 15
 	PainChance 0
 	MONSTER
-	+NOBLOOD
-	+NOINFIGHTING
 	+COUNTKILL
 	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"

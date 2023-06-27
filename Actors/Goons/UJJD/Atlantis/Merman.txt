@@ -1,51 +1,52 @@
 Actor AtlantisMerman 3871
 {
-   Tag "Merman"
-   Health 150
-   PainChance 0
-   Speed 25
-   Radius 16
-   Height 56
-   Mass 1000000
-    SeeSound "serpsee"
-   PainSound "serppain"
-  ActiveSound "serpact"
-   MONSTER 
-   +FLOORCLIP
-   +NOBLOOD
-   +NOINFIGHTING
-   +DONTHARMSPECIES
-   Obituary "$OB_MERMA"
-   States 
-   { 
-   Spawn: 
-      MRMN AB 4 A_Look 
-      Loop 
-   See: 
-      MRMN AB 4 A_Chase 
-      Loop 
-   Missile:
-	  MRMN C 15 Bright A_FaceTarget
-	  MRMN D 6 Bright A_CustomMissile("MermanProj", 30, 8)
-	  MRMN C 6 Bright
-	  Goto See
-   Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",350)
-    Stop
+	//$Category Goons
+	Tag "Merman"
+	Health 150
+	PainChance 0
+	Speed 25
+	Radius 16
+	Height 56
+	Mass 1000000
+	MONSTER 
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "SERPSEE"
+	PainSound "SERPPAIN"
+	ActiveSound "SERPACT"
+	Obituary "$OB_MERMA"
+	States 
+	{ 
+	Spawn: 
+		MRMN AB 4 A_Look 
+		Loop 
+	See: 
+		MRMN AB 4 A_Chase 
+		Loop 
+	Missile:
+		MRMN C 15 Bright A_FaceTarget
+		MRMN D 6 Bright A_CustomMissile("MermanProj", 30, 8)
+		MRMN C 6 Bright
+		Goto See
+	Death: 
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",350)
+		Stop
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",350)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	MRMN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",350)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		MRMN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",350)
-	MRMN A 5 A_GenericFreezeDeath
-    MRMN A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",350)
+		MRMN A 5 A_GenericFreezeDeath
+		MRMN A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

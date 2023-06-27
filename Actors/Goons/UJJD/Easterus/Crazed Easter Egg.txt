@@ -1,41 +1,42 @@
 Actor CrazyEasterusEgg 3932
 {
-  Tag "Crazed Easter Egg"
-  Obituary "$OB_YOLKE"
-  Health 80
-  Radius 8
-  Height 16
-  mass 10000
-  Speed 0
-  painchance 0
-  MONSTER
-  +FLOORCLIP
-  +NOINFIGHTING
-  +NOBLOOD
-  +FLOORCLIP
-  +SOLID
-  -COUNTKILL
-+DONTHARMSPECIES
-  States
-  {
-  Spawn:
-    EEGG A 10 A_Look
-    Loop
-  See:
-    EEGG A 2 A_Chase
-    Loop
-  Melee:
-	EEGG A 10 A_FaceTarget
-	EEGG A 0 A_PlaySound("eggjump")
-	TNT1 A 0 ThrustThingZ(0,45,0,0)
-	EEGG A 20 A_FaceTarget
-    EEGG A 0 A_Die
-    Stop
-  Death:
-    RFLE AB 3 Bright 
-	RFLE C 3 Bright A_Explode (50,128,XF_NOTMISSILE)
-	RFLE DEFGHIJK 3 Bright
-	TNT1 A 0 A_GiveToTarget("Points",150)
-    Stop
-  }
+	//$Category Goons
+	Tag "Crazed Easter Egg"
+	Obituary "$OB_YOLKE"
+	Health 80
+	Radius 8
+	Height 16
+	Mass 10000
+	Speed 0
+	PainChance 0
+	MONSTER
+	-COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	States
+	{
+	Spawn:
+		EEGG A 10 A_Look
+		Loop
+	See:
+		EEGG A 2 A_Chase
+		Loop
+	Melee:
+		EEGG A 10 A_FaceTarget
+		EEGG A 0 A_PlaySound("eggjump")
+		TNT1 A 0 ThrustThingZ(0,45,0,0)
+		EEGG A 20 A_FaceTarget
+		EEGG A 0 A_Die
+		Stop
+	Death:
+		RFLE AB 3 Bright 
+		RFLE C 3 Bright A_Explode (50,128,XF_NOTMISSILE)
+		RFLE DEFGHIJK 3 Bright
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		Stop
+	}
 }

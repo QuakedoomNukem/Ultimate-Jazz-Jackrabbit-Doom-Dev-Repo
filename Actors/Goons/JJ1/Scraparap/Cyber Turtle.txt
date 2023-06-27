@@ -1,52 +1,53 @@
 Actor CyberTurtle 3736
 {
+	//$Category Goons
 	Tag "Cyber Turtle"
-    Health 50
-    Radius 8
-    Height 12
-    Speed 15
-    PainChance 0
+	Health 50
+	Radius 8
+	Height 12
+	Speed 15
+	PainChance 0
 	MeleeDamage 3
-	Obituary "$OB_CYBTU"
-    Mass 30
+	Mass 30
 	MONSTER
-    	+SOLID
-		+SHOOTABLE
-		+NOBLOOD
-		+NOINFIGHTING
-		+COUNTKILL
-+DONTHARMSPECIES
-    States
-    {
-    Spawn:
-        CYBT D 5 A_Look
-        Loop
-    See:
-        CYBT A 0 A_SetFloorClip
-        CYBT A 3 A_Gravity
-        CYBT AABBCCDD 3 A_Chase
-        Loop
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	+SHOOTABLE
+	+SOLID
+	Obituary "$OB_CYBTU"
+	States
+	{
+	Spawn:
+		CYBT D 5 A_Look
+		Loop
+	See:
+		CYBT A 0 A_SetFloorClip
+		CYBT A 3 A_Gravity
+		CYBT AABBCCDD 3 A_Chase
+		Loop
 	Melee:
 		CYBT A 4 A_FaceTarget
 		CYBT ABCD 4 A_CustomMeleeAttack(3,"CrabHit","","Melee",False)
 		Goto See
-    Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-       TNT1 A 0 A_GiveToTarget("Points",100)
-	   Stop
-	   Death.JazzprojFire:
-	   Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	CYBT D 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
+	Death.JazzprojFire:
+	Burn:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		CYBT D 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	CYBT D 5 A_GenericFreezeDeath
-    CYBT D 1 A_FreezeDeathChunks
-    Wait
-    }
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		CYBT D 5 A_GenericFreezeDeath
+		CYBT D 1 A_FreezeDeathChunks
+		Wait
+	}
 }

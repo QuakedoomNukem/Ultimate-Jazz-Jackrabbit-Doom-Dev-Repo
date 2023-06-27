@@ -41,7 +41,7 @@ Death:
     UTER A 0 A_StopSound
     UTER A 0 A_Scream
     UTER A 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    UTER A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    UTER A 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     UTER A 2 A_NoBlocking
     UTER A 2
     UTER A 0 A_ChangeFlag("FloatBob", 0)

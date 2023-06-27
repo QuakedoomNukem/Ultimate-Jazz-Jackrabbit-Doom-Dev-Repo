@@ -53,7 +53,7 @@ Actor UberGoon 32524
     UBEM A 0 A_StopSound
     UBEM A 0 A_Scream
     UBEM A 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    UBEM A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    UBEM A 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     UBEM A 2 A_NoBlocking
     UBEM A 2
     UBEM A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)

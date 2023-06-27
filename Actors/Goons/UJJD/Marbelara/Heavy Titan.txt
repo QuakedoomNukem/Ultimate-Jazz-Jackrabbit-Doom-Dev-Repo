@@ -1,76 +1,77 @@
 Actor HeavyTitan 32766
 {
-  Tag "Heavy Titan"
-  Obituary "$OB_HETIT"
-  Health 700
-  Radius 20
-  Height 64
-  Mass 100000
-  Speed 8
-  PainChance 64
-  MONSTER
-  +FLOORCLIP
-  +NOBLOOD
-  +NOINFIGHTING
-  +COUNTKILL
-+DONTHARMSPECIES
-  SeeSound "BIGTURTS"
-  PainSound "BIGTURTP"
-  ActiveSound "Turtact"
-  AttackSound "RIPRFIRE"
-  States
-  {
-  Spawn:
-    DPOS AB 10 A_Look
-    Loop
-  See:
-    DPOS AABBCCDD 3 A_Chase
-    Loop
-  Missile:
-    DPOS E 10 Bright A_FaceTarget
-    DPOS F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-    DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-	DPOS F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-    DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-	DPOS F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-    DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-	DPOS F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-    DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-	DPOS F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-    DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-	DPOS F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
-	DPOS E 5 Bright A_FaceTarget
-    DPOS G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
-	DPOS E 5 Bright
-	Goto see
-    Death:
-	DPOS A 0 A_GiveToTarget("Points",1500)
-	DPOS A 0 A_PlaySound ("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)
-    DPOS A 0 A_StopSound
-    DPOS A 0 A_Scream
-    DPOS B 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    DPOS B 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
-    DPOS B 2 A_NoBlocking
-    DPOS B 2
-    DPOS A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
-    DPOS B 2
-    DPOS B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    DPOS B 2
-    DPOS B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    DPOS B 2
-    DPOS B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
-    DPOS AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-	TNT1 A 100 
-    Stop
-  }
+	//$Category Goons
+	Tag "Heavy Titan"
+	Obituary "$OB_HETIT"
+	Health 700
+	Radius 20
+	Height 64
+	Mass 100000
+	Speed 8
+	PainChance 64
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "BIGTURTS"
+	PainSound "BIGTURTP"
+	ActiveSound "TURTACT"
+	AttackSound "RIPRFIRE"
+	States
+	{
+	Spawn:
+		DPOS AB 10 A_Look
+		Loop
+	See:
+		DPOS AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		DPOS E 10 Bright A_FaceTarget
+		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 Bright A_FaceTarget
+		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 Bright
+		Goto See
+	Death:
+		DPOS A 0 A_GiveToTarget("Points",1500)
+		DPOS A 0 A_PlaySound ("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)
+		DPOS A 0 A_StopSound
+		DPOS A 0 A_Scream
+		DPOS B 2 ThrustThingZ(0, random(2, 8), 0, 0)
+		DPOS B 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
+		DPOS B 2 A_NoBlocking
+		DPOS B 2
+		DPOS A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+		DPOS B 2
+		DPOS B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DPOS B 2
+		DPOS B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DPOS B 2
+		DPOS B 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+		DPOS AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		TNT1 A 100
+		Stop
+	}
 }

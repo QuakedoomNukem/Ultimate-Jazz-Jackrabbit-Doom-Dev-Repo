@@ -1,54 +1,55 @@
 Actor FroogChief 26556
 {
-   Tag "Froog Chief"
-   Health 200
-   PainChance 0 
-   Speed 0
-   Radius 24 
-   Height 48 
-   Mass 1000000
-   Damage 4
-   SeeSound "Turtsight"
-    PainSound "Turtpain"
-    ActiveSound "Turtactive"
+	//$Category Goons
+	Tag "Froog Chief"
+	Health 200
+	PainChance 0 
+	Speed 0
+	Radius 24 
+	Height 48 
+	Mass 1000000
+	Damage 4
 	DamageFactor "MuckSnot", 0
-  DamageFactor "MuckSnot2", 0
-   MONSTER 
-   +FLOORCLIP
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-+DONTHARMSPECIES
-   Obituary "$OB_FROOC"
-   States 
-   { 
-   Spawn: 
-      FGCH A 4 A_Look 
-      Loop 
-   See: 
-      FGCH A 4 A_Chase 
-      Loop 
-   Missile:
-	  FGCH A 20 A_FaceTarget
-	  FGCH B 6 Bright A_CustomMissile("MuckSnot2", 30, 8)
-	  Goto See
-   Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",300)
-    Stop
+	DamageFactor "MuckSnot2", 0
+	MONSTER 
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACTIVE"
+	Obituary "$OB_FROOC"
+	States 
+	{ 
+	Spawn: 
+		FGCH A 4 A_Look 
+		Loop 
+	See: 
+		FGCH A 4 A_Chase 
+		Loop 
+	Missile:
+		FGCH A 20 A_FaceTarget
+		FGCH B 6 Bright A_CustomMissile("MuckSnot2", 30, 8)
+		Goto See
+	Death: 
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",300)
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",300)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	FGCH A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-		Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",300)
-	FGCH A 5 A_GenericFreezeDeath
-    FGCH A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",300)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		FGCH A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget("Points",300)
+		FGCH A 5 A_GenericFreezeDeath
+		FGCH A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

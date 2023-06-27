@@ -28,37 +28,37 @@ Actor UberEliteTurtleGuard 4011
     Loop
   Missile:
     UBEL E 10 Bright A_FaceTarget
-    UBEL F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
+    UBEL F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
+    UBEL G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
+	UBEL F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile ("DroneRocket",32,20,0,0,0)
+    UBEL G 1 Bright A_CustomMissile("DroneRocket",32,20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile ("DroneRocket",32,-20,0,0,0)
+	UBEL F 1 Bright A_CustomMissile("DroneRocket",32,-20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
+    UBEL G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile ("TurtleGoonBullet",32,-20,0,0,0)
+	UBEL F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile ("TurtleGoonBullet",32,20,0,0,0)
+    UBEL G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile ("DroneRocket",32,-20,0,0,0)
+	UBEL F 1 Bright A_CustomMissile("DroneRocket",32,-20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile ("DroneRocket",32,20,0,0,0)
+    UBEL G 1 Bright A_CustomMissile("DroneRocket",32,20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile ("DroneRocket",32,-20,0,0,0)
+	UBEL F 1 Bright A_CustomMissile("DroneRocket",32,-20,0,0,0)
 	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile ("DroneRocket",32,20,0,0,0)
+    UBEL G 1 Bright A_CustomMissile("DroneRocket",32,20,0,0,0)
 	UBEL E 5 Bright
-	Goto see
+	Goto See
     Death:
 	TNT1 A 0 A_GiveToTarget("Points",3000)
     UBEL A 0 A_StopSound
     UBEL A 0 A_Scream
     UBEL B 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    UBEL B 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    UBEL B 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     UBEL B 2 A_NoBlocking
     UBEL B 2
     UBEL A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)

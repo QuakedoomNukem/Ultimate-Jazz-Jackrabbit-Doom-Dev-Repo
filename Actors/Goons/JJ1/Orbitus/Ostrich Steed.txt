@@ -53,7 +53,7 @@ Actor OstrichBoss 3796
     OSBS I 0 A_StopSound
     OSBS I 0 A_Scream
     OSBS I 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    OSBS I 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    OSBS I 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     OSBS I 2 A_NoBlocking
     OSBS I 2
     OSBS I 0 A_ChangeFlag("FloatBob", 0)

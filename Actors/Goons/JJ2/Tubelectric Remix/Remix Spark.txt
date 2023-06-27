@@ -20,11 +20,11 @@ Actor TubeRemixSparks 3973
 	States
 	{
 	Spawn: //spawn these only once
-		TRSK A 0 A_SpawnItemEx ("SparkBall1", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
-		TRSK A 0 A_SpawnItemEx ("SparkBall2", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
-		TRSK A 0 A_SpawnItemEx ("SparkBall3", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
-		TRSK A 0 A_SpawnItemEx ("SparkBall4", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
-		TRSK A 0 A_SpawnItemEx ("SparkBall5", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
+		TRSK A 0 A_SpawnItemEx("SparkBall1", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
+		TRSK A 0 A_SpawnItemEx("SparkBall2", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
+		TRSK A 0 A_SpawnItemEx("SparkBall3", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
+		TRSK A 0 A_SpawnItemEx("SparkBall4", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
+		TRSK A 0 A_SpawnItemEx("SparkBall5", 16, 0, 16, 0, 0, 0, 0, SXF_SETMASTER|SXF_NOCHECKPOSITION)
 	Spawn2: //then loop - ozy81
 		TRSK A 1 A_Look
 		Loop

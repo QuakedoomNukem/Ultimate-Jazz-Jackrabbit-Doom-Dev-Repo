@@ -1,106 +1,97 @@
 Actor BlackCat 3786
 {
-   Tag "Scaredy Cat"
-   Health 50
-   PainChance 0 
-   Speed 15
-   Radius 12 
-   Height 28 
-   Mass 4000
-   Damage 3
-   MONSTER 
-   ActiveSound "catactive"
-   AttackSound "catattak"
-   SeeSound "catsight"
-   +FLOORCLIP
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-+DONTHARMSPECIES
-   Obituary "$OB_BLKCA"
-   States 
-   { 
-   Spawn: 
-      BCAT ABCD 4 A_Look 
-      Loop 
-   See: 
-      BCAT ABCD 4 A_Chase 
-      Loop 
-   Missile: 
-      BCAT D 6 A_FaceTarget 
-      BCAT E 20 A_SkullAttack
-      Goto See 
-   Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-    Stop
+	//$Category Goons
+	Tag "Scaredy Cat"
+	Health 50
+	PainChance 0 
+	Speed 15
+	Radius 12 
+	Height 28 
+	Mass 4000
+	Damage 3
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES 
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	ActiveSound "CATACTIVE"
+	AttackSound "CATATTAK"
+	SeeSound "CATSIGHT"
+	Obituary "$OB_BLKCA"
+	States 
+	{ 
+	Spawn: 
+		BCAT ABCD 4 A_Look 
+		Loop 
+	See: 
+		BCAT ABCD 4 A_Chase 
+		Loop 
+	Missile: 
+		BCAT D 6 A_FaceTarget 
+		BCAT E 20 A_SkullAttack
+		Goto See 
+	Death: 
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	BCAT A 5 A_GenericFreezeDeath
-    BCAT A 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		BCAT A 5 A_GenericFreezeDeath
+		BCAT A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	BCAT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		BCAT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }
 
-Actor OrangeCat 4044
+Actor OrangeCat : BlackCat 4044
 {
-   Tag "Orange Cat"
-   Health 70
-   PainChance 0 
-   Speed 15
-   Radius 16 
-   Height 32 
-   Mass 4000
-   Damage 3
-   MONSTER 
-   ActiveSound "catactive"
-   AttackSound "catattak"
-   SeeSound "catsight"
-   +FLOORCLIP
-   +NOBLOOD
-   +NOINFIGHTING
-   +SOLID
-    +COUNTKILL
- +DONTHARMCLASS
-   Obituary "$OB_ORNCA"
-   States 
-   { 
-   Spawn: 
-      OCAT B 4 A_Look 
-      Loop 
-   See: 
-      OCAT ABCD 4 A_Chase 
-      Loop 
-   Missile: 
-      OCAT D 6 A_FaceTarget 
-      OCAT E 20 A_SkullAttack
-      Goto See 
-   Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-    Stop
+	//$Category Goons
+	Tag "Orange Cat"
+	Health 70
+	Radius 16 
+	Height 32
+	-DONTHARMSPECIES //it has DONTHARMCLASS instead of this flag, so gets removed because of inheritances - ozy81
+	+DONTHARMCLASS
+	+SOLID
+	Obituary "$OB_ORNCA"
+	States 
+	{ 
+	Spawn: 
+		OCAT B 4 A_Look 
+		Loop 
+	See: 
+		OCAT ABCD 4 A_Chase 
+		Loop 
+	Missile: 
+		OCAT D 6 A_FaceTarget 
+		OCAT E 20 A_SkullAttack
+		Goto See 
+	Death: 
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	OCAT A 5 A_GenericFreezeDeath
-    OCAT A 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		OCAT A 5 A_GenericFreezeDeath
+		OCAT A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	OCAT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		OCAT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }

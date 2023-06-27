@@ -1,5 +1,6 @@
 Actor HyperTank 3212
 {
+	//$Category Goons
 	Tag "Hyper Tankety Tank"
 	Radius 16
 	Height 48
@@ -9,14 +10,14 @@ Actor HyperTank 3212
 	Mass 600
 	Damage 3
 	MONSTER
-	+SOLID
-	+NOBLOOD
-	+NOINFIGHTING
 	+COUNTKILL
 	+DONTHARMSPECIES
-	SeeSound "Turtsight"
-	PainSound "Turtpain"
-	ActiveSound "Turtactive"
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACTIVE"
 	Obituary "$OB_HTANK"
 	States
 	{
@@ -51,6 +52,7 @@ Actor HyperTank 3212
 
 Actor JazzMissile 3210 //obituaries can't be used here, they are triggered by Minissiles themselves - ozy81
 {
+	//$Category Hazards
 	Radius 8
 	Height 16
 	+NOGRAVITY
@@ -60,7 +62,7 @@ Actor JazzMissile 3210 //obituaries can't be used here, they are triggered by Mi
 	Spawn:
 		INDM A 0
 		TNT1 A 64
-		TNT1 A 0 A_StartSound ("RFLAUNCH")
+		TNT1 A 0 A_StartSound("RFLAUNCH")
 		TNT1 B 1 A_SpawnItemEx("Minissiles",16,0,20,15)
 		Loop
 	}
@@ -68,12 +70,13 @@ Actor JazzMissile 3210 //obituaries can't be used here, they are triggered by Mi
 
 Actor JazzMissile2 : JazzMissile 3211
 {
+	//$Category Hazards
 	States
 	{
 	Spawn:
 		INDM A 0
 		TNT1 A 96
-		TNT1 A 0 A_StartSound ("RFLAUNCH")
+		TNT1 A 0 A_StartSound("RFLAUNCH")
 		TNT1 B 1 A_SpawnItemEx("Minissiles",16,0,20,15)
 		Loop
 	}

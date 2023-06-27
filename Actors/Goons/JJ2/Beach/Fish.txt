@@ -1,157 +1,146 @@
 Actor Fish 30023
 {
-  Tag "Fish"
-  Obituary "$OB_FISH1"
-  Health 50
-  mass 120
-  Speed 10
-  Radius 14
-  Height 28
-  MaxStepHeight 1
-    MONSTER
-  +FLOORCLIP
-  +NOGRAVITY
-  +FLOAT
-  +NOBLOOD
-  +NOINFIGHTING
-  +COUNTKILL
-+DONTHARMSPECIES
-+DONTFALL
-  SeeSound "FishSee"
-  ActiveSound "FishSee"
-  States
-  {
-   Spawn:
-    SHRK A 10 A_Look
-    Loop
-   See:
-	SHRK A 4 A_GiveInventory("Chase_Water",1)
-	Loop
-   Melee:
-    SHRK A 10 A_FaceTarget
-    SHRK B 8 A_CustomMeleeAttack (random (1, 4) *5, "TURTBITE", "TURTBITE")
-    SHRK C 10
-    Goto See
-   Death:
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
-    Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	SHRK A 5 A_GenericFreezeDeath
-    SHRK A 1 A_FreezeDeathChunks
-    Wait
-  }
+	//$Category Goons
+	Tag "Fish"
+	Health 50
+	Mass 120
+	Speed 10
+	Radius 14
+	Height 28
+	MaxStepHeight 1
+	MONSTER
+	+FLOORCLIP
+	+NOGRAVITY
+	+FLOAT
+	+NOBLOOD
+	+NOINFIGHTING
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+DONTFALL
+	SeeSound "FISHSEE"
+	ActiveSound "FISHSEE"
+	Obituary "$OB_FISH1"
+	States
+	{
+	Spawn:
+		SHRK A 10 A_Look
+		Loop
+	See:
+		SHRK A 4 A_GiveInventory("Chase_Water",1)
+		Loop
+	Melee:
+		SHRK A 10 A_FaceTarget
+		SHRK B 8 A_CustomMeleeAttack (random (1, 4) *5, "TURTBITE", "TURTBITE")
+		SHRK C 10
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		SHRK A 5 A_GenericFreezeDeath
+		SHRK A 1 A_FreezeDeathChunks
+		Wait
+	}
 }
 
 Actor Chase_Water : CustomInventory
 {
-Inventory.MaxAmount 0
-+INVENTORY.AutoActivate
-States
-{
-Spawn:
-TNT1 A 1
-Fail
-Use:
-TNT1 A 0 A_jumpif(waterlevel < 3, "Waterlimit")
-TNT1 A 0 A_Chase
-Stop
-Waterlimit:
-TNT1 A 0 ThrustThingZ(0, 4, 1, 1)
-TNT1 A 0 A_Chase
-Stop
-}
-}
-
-Actor JungrockFish 3833
-{
-  Tag "Jungle Fish"
-  Obituary "$OB_FISH2"
-  Health 50
-  mass 120
-  Speed 20
-  Radius 16
-  Height 30
-  MaxStepHeight 1
-    MONSTER
-  +FLOORCLIP
-  +NOGRAVITY
-  +FLOAT
-  +NOBLOOD
-  +NOINFIGHTING
-  		+COUNTKILL
-+DONTHARMSPECIES
-+DONTFALL
-  SeeSound "FishAct"
-  ActiveSound "FishAct"
-  States
-  {
-   Spawn:
-    JFSH A 10 A_Look
-    Loop
-   See:
-	JFSH A 4 A_GiveInventory("Chase_Water",1)
-	Loop
-   Melee:
-    JFSH A 10 A_FaceTarget
-    JFSH B 8
-    JFSH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
-    Goto See
-   Death:
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
-	    Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	JFSH A 5 A_GenericFreezeDeath
-    JFSH A 1 A_FreezeDeathChunks
-    Wait
-  }
+	Inventory.MaxAmount 0
+	+INVENTORY.AutoActivate
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		Fail
+	Use:
+		TNT1 A 0 A_JumpIf(waterlevel < 3, "Waterlimit")
+		TNT1 A 0 A_Chase
+		Stop
+	Waterlimit:
+		TNT1 A 0 ThrustThingZ(0, 4, 1, 1)
+		TNT1 A 0 A_Chase
+		Stop
+	}
 }
 
-Actor ScaryFish 3780
+Actor JungRockFish 3833
 {
-  Tag "Scary Fish"
-  Obituary "$OB_FISH3"
-  Health 50
-  mass 120
-  Speed 10
-  Radius 14
-  Height 28
-  MaxStepHeight 1
-    MONSTER
-  +NOGRAVITY
-  +FLOAT
-  +FLOORCLIP
-  +NOBLOOD
-  +NOINFIGHTING
-  +COUNTKILL
-+DONTHARMSPECIES
-+DONTFALL
-  SeeSound "FishAct"
-  ActiveSound "FishAct"
-  States
-  {
-   Spawn:
-    SCFH A 10 A_Look
-    Loop
-   See:
-	SCFH A 4 A_GiveInventory("Chase_Water",1)
-	Loop
-   Melee:
-    SCFH A 10 A_FaceTarget
-    SCFH B 8 
-    SCFH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
-    Goto See
-   Death:
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
-	    Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	SCFH A 5 A_GenericFreezeDeath
-    SCFH A 1 A_FreezeDeathChunks
-    Wait
-  }
+	//$Category Goons
+	Tag "Jungle Fish"
+	Health 50
+	Mass 120
+	Speed 20
+	Radius 16
+	Height 30
+	MaxStepHeight 1
+	MONSTER
+	+COUNTKILL
+	+DONTFALL
+	+DONTHARMSPECIES
+	+FLOAT
+	+FLOORCLIP
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	SeeSound "FISHACT"
+	ActiveSound "FISHACT"
+	Obituary "$OB_FISH2"
+	States
+	{
+	Spawn:
+		JFSH A 10 A_Look
+		Loop
+	See:
+		JFSH A 4 A_GiveInventory("Chase_Water",1)
+		Loop
+	Melee:
+		JFSH A 10 A_FaceTarget
+		JFSH B 8
+		JFSH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		JFSH A 5 A_GenericFreezeDeath
+		JFSH A 1 A_FreezeDeathChunks
+		Wait
+	}
+}
+
+Actor ScaryFish : JungRockFish 3780
+{
+	//$Category Goons
+	Tag "Scary Fish"
+	Speed 10
+	Radius 14
+	Height 28
+	Obituary "$OB_FISH3"
+	States
+	{
+	Spawn:
+		SCFH A 10 A_Look
+		Loop
+	See:
+		SCFH A 4 A_GiveInventory("Chase_Water",1)
+		Loop
+	Melee:
+		SCFH A 10 A_FaceTarget
+		SCFH B 8
+		SCFH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		SCFH A 5 A_GenericFreezeDeath
+		SCFH A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

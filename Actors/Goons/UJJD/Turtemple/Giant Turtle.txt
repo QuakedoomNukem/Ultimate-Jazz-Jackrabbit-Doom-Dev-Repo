@@ -29,9 +29,9 @@ Actor GiantTurtle 3902
 		Loop 
 	Missile:
 		GGON E 15 Bright A_FaceTarget
-		GGON F 1 Bright A_CustomMissile ("MuckSnot2",56,0,15,0,0)
-		GGON F 1 Bright A_CustomMissile ("MuckSnot2",56,0,0,0,0)
-		GGON F 2 Bright A_CustomMissile ("MuckSnot2",56,0,-15,0,0)
+		GGON F 1 Bright A_CustomMissile("MuckSnot2",56,0,15,0,0)
+		GGON F 1 Bright A_CustomMissile("MuckSnot2",56,0,0,0,0)
+		GGON F 2 Bright A_CustomMissile("MuckSnot2",56,0,-15,0,0)
 		GGON E 6 Bright
 		Goto See
 	Melee:
@@ -42,7 +42,7 @@ Actor GiantTurtle 3902
 	Death: 
 		GGON A 0 A_Scream
 		GGON A 2 ThrustThingZ(0, random(2, 8), 0, 0)
-		GGON A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+		GGON A 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
 		GGON A 2 A_NoBlocking
 		GGON A 2
 		GGON A 0 A_ChangeFlag("FloatBob", 0)
@@ -67,10 +67,10 @@ Actor MuckSnot
 	Speed 6
 	Damage 4
 	Projectile
+	+BRIGHT
 	SeeSound "LOOGSEE"
 	DeathSound "LOOGDETH"
 	Obituary "$OB_LOOGE"
-	+BRIGHT
 	States
 	{
 	Spawn:

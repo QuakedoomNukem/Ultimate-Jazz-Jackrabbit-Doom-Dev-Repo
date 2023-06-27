@@ -1,52 +1,53 @@
 Actor FatTurtleGal 3946
 {
-  Tag "Fat Chick"
-  Obituary "$OB_FATCH"
-  Health 150
-  mass 10000
-  Speed 12
-  Radius 12
-  Height 48
-  painchance 0
-  MONSTER
-  +FLOORCLIP
-  +NOBLOOD
-  +NOINFIGHTING
-  +COUNTKILL
- +DONTHARMCLASS
-  SeeSound "Turtsight"
-  PainSound "Turtpain"
-  ActiveSound "Turtact"
-  States
-  {
-   Spawn:
-    FATG AB 10 A_Look
-    Loop
-  See:
-    FATG ABCA 4 A_Chase
-    Loop
-  Melee:
-    FATG D 10 A_FaceTarget
-    FATG E 8 A_CustomMeleeAttack(6,"fatpunch","","Melee",0)
-    FATG E 4
-    Goto See
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget("Points",200)
-	Stop
+	//$Category Goons
+	Tag "Fat Chick"
+	Obituary "$OB_FATCH"
+	Health 150
+	Mass 10000
+	Speed 12
+	Radius 12
+	Height 48
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTHARMCLASS
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACT"
+	States
+	{
+	Spawn:
+		FATG AB 10 A_Look
+		Loop
+	See:
+		FATG ABCA 4 A_Chase
+		Loop
+	Melee:
+		FATG D 10 A_FaceTarget
+		FATG E 8 A_CustomMeleeAttack(6,"fatpunch","","Melee",0)
+		FATG E 4
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	FATG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		FATG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	FATG A 5 A_GenericFreezeDeath
-    FATG A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		FATG A 5 A_GenericFreezeDeath
+		FATG A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

@@ -34,7 +34,7 @@ Actor GoonRocketFlyer 3895
 	    BSRF A 0 A_PlaySoundEx("Hover1", "SoundSlot7", 1)
         BSRF D 15 A_FaceTarget
         BSRF E 6 BRIGHT A_CustomMissile("DroneRocket",32,0,0,0,0)
-        Goto see
+        Goto See
     Death:
 	TNT1 A 0 A_StopSound(CHAN_VOICE)
 	BSRF G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)

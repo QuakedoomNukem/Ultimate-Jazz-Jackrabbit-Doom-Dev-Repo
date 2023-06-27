@@ -1,61 +1,62 @@
 Actor SleepingTurtle 3741
 {
-Tag "Land Terrapin"
-Health 100
-Speed 0
-Mass 10000
-Damage 3
-Radius 16
-Height 16
-PainChance 0
-Obituary "$OB_STURT"
-   SeeSound "Turtsight"
-  PainSound "Turtpain"
-  ActiveSound "Turtact"
-+FLOORCLIP
-+NOBLOOD
-+NOINFIGHTING
-+COUNTKILL
-+SOLID
-+DONTHARMSPECIES
-MONSTER
-  States
-  {
-  Spawn:
-    SLPT ABCDE 5 A_Look
-    Loop
-  See:
-    SLPT J 3 A_Chase
-    Loop
-  Missile:
-    SLPT FGHI 4 A_FaceTarget
-    SLPT FGHI 3 
-    SLPT FGHI 2 A_SkullAttack
-    SLPT FGHI 3
-	SLPT FGHI 4 
-    Goto Dizzy
-  Dizzy:
-	SLPT KL 3
-	Goto See
-  Death:
-  TNT1 A 0 A_StopSound(CHAN_VOICE)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-    Stop
+	//$Category Goons
+	Tag "Land Terrapin"
+	Health 100
+	Speed 0
+	Mass 10000
+	Damage 3
+	Radius 16
+	Height 16
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACT"
+	Obituary "$OB_STURT"
+	States
+	{
+	Spawn:
+		SLPT ABCDE 5 A_Look
+		Loop
+	See:
+		SLPT J 3 A_Chase
+		Loop
+	Missile:
+		SLPT FGHI 4 A_FaceTarget
+		SLPT FGHI 3 
+		SLPT FGHI 2 A_SkullAttack
+		SLPT FGHI 3
+		SLPT FGHI 4 
+		Goto Dizzy
+	Dizzy:
+		SLPT KL 3
+		Goto See
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_StopSound(CHAN_VOICE)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	SLPT K 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		SLPT K 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	SLPT K 5 A_GenericFreezeDeath
-    SLPT K 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		SLPT K 5 A_GenericFreezeDeath
+		SLPT K 1 A_FreezeDeathChunks
+		Wait
+	}
 }

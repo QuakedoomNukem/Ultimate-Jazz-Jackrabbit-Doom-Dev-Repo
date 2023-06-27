@@ -1,137 +1,161 @@
 Actor LizardHatter 3766
 {
-  Tag "The Mad Hatter"
-  Health 100
-  Radius 16
-  Height 46
-  Mass 10000
-  Speed 10
-  PainChance 0
-  MONSTER
-  +NOBLOOD
-  +NOINFIGHTING
-    +COUNTKILL
-+DONTHARMSPECIES
-SeeSound "LIZRDSEE"
-   PainSound "LIZRDPAI"
-  ActiveSound "LIZRDACT"
-  Obituary "$OB_MADHA"
-  States
-  {
-  Spawn:
-    MDHT ABCDEFGHIJKL 3 A_Look
-    Loop
-  See:
-    MDHT ABCDEFGHIJKL 3 A_Chase
-    Loop
-  Missile:
-    MDHT MN 3 A_FaceTarget
-	MDHT O 4 A_CustomMissile("TeaProj",40,0,0,0,0)
-	MDHT P 8
-	MDHT P 10
-	MDHT MN 3 A_FaceTarget
-	MDHT O 4 A_CustomMissile("TeaProj",40,0,0,0,0)
-	MDHT P 8
-	MDHT P 10
-	MDHT MN 3 A_FaceTarget
-	MDHT O 4 A_CustomMissile("TeaProj",40,0,0,0,0)
-	MDHT P 8
-	MDHT P 10
-    Goto See
-  Death:
-	TNT1 A 1 A_SpawnItemEx("MadCup", 20, 0, 32, 0, 8, 0, 0, 64)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 1 A_SpawnItemEx("MadHat", 10, 0, 32, 0, 8, 0, 0, 128)
-	TNT1 A 0 A_GiveToTarget("Points",200)
-    Stop
+	//$Category Goons
+	Tag "The Mad Hatter"
+	Health 100
+	Radius 16
+	Height 46
+	Mass 10000
+	Speed 10
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "LIZRDSEE"
+	PainSound "LIZRDPAI"
+	ActiveSound "LIZRDACT"
+	Obituary "$OB_MADHA"
+	States
+	{
+	Spawn:
+		MDHT ABCDEFGHIJKL 3 A_Look
+		Loop
+	See:
+		MDHT ABCDEFGHIJKL 3 A_Chase
+		Loop
+	Missile:
+		MDHT MN 3 A_FaceTarget
+		MDHT O 4 A_CustomMissile("TeaProj",40,0,0,0,0)
+		MDHT P 8
+		MDHT P 10
+		MDHT MN 3 A_FaceTarget
+		MDHT O 4 A_CustomMissile("TeaProj",40,0,0,0,0)
+		MDHT P 8
+		MDHT P 10
+		MDHT MN 3 A_FaceTarget
+		MDHT O 4 A_CustomMissile("TeaProj",40,0,0,0,0)
+		MDHT P 8
+		MDHT P 10
+		Goto See
+	Death:
+		TNT1 A 1 A_SpawnItemEx("MadCup", 0, -12, 24, random(1,3), random(1,3), random(1,3), random(0,360), SXF_CLIENTSIDE | SXF_NOCHECKPOSITION)
+		//TNT1 A 1 A_SpawnItemEx("MadCup", 20, 0, 32, 0, 8, 0, 0, 64)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		//TNT1 A 1 A_SpawnItemEx("MadHat", 10, 0, 32, 0, 8, 0, 0, 128)
+		TNT1 A 1 A_SpawnItemEx("MadHat", 0, 0, 46, random(1,3), random(1,3), random(1,3), random(0,360), SXF_CLIENTSIDE | SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	TNT1 A 1 A_SpawnItemEx("MadHat", 10, 0, 32, 0, 8, 0, 0, 128)
-	MDHT BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		TNT1 A 1 A_SpawnItemEx("MadHat", 10, 0, 32, 0, 8, 0, 0, 128)
+		MDHT BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	MDHT B 5 A_GenericFreezeDeath
-    MDHT B 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		MDHT B 5 A_GenericFreezeDeath
+		MDHT B 1 A_FreezeDeathChunks
+		Wait
+	}
 }
 
 Actor TeaProj
 {
-  Radius 6
-  Height 4
-  Speed 25
-  Damage 3
-  Projectile
-  +RANDOMIZE
-  RenderStyle Normal
-  Alpha 1
-  SeeSound "teaproj"
-  DeathSound "teadeath"
-  States
-  {
-  Spawn:
-    TEAP A 1 Bright
-    Loop
-  Death:
-    TEDH ABCD 4 Bright
-    Stop
-  }
-}
-
-Actor MadHat
-{
 	Radius 6
-	Height 6
-	Speed 10
-	BounceType "Hexen"
-	BounceCount 25
-	BounceFactor 7.0
-	ReactionTime 30
-	Gravity 0.9
+	Height 4
+	Speed 25
+	Damage 3
+	RenderStyle Normal
+	Alpha 1
+	Projectile
+	+BRIGHT
 	+RANDOMIZE
-		+HEXENBOUNCE
-	+BOUNCEONACTORS
-      States
+	SeeSound "TEAPROJ"
+	DeathSound "TEADEATH"
+	States
 	{
 	Spawn:
-	HTHT ABCDABCDABCDABCD 3
-    HTHT ABCD 0 A_CountDown
-    Goto Death
+		TEAP A 1
+		Loop
 	Death:
-	HTHT A -1
-	Stop
+		TEDH ABCD 4
+		Stop
 	}
 }
 
-Actor MadCup
+Actor MadDebris
 {
-	Radius 6
-	Height 6
-	Speed 10
-	BounceType "Hexen"
-	BounceCount 30
-	BounceFactor 3.0
-	ReactionTime 30
-	Gravity 0.9
-	SeeSound "cuptink"
-	+RANDOMIZE
-		+HEXENBOUNCE
+	Radius 1
+	Height 1
+	Mass 5
+	Projectile
+	-ACTIVATEIMPACT
+	-ACTIVATEPCROSS
+	-NOGRAVITY
 	+BOUNCEONACTORS
-      States
+	+RANDOMIZE
+	+THRUSPECIES
+	Species "JazzPlayer"
+	BounceType "Doom"
+	BounceFactor 0.7
+	WallBounceFactor 0.7
+	BounceCount 7
+	Gravity 0.5
+}
+
+Actor MadHat : MadDebris
+{
+	States
 	{
 	Spawn:
-	HTCP ABCDABCDABCDABCD 3
-    HTCP ABCD 0 A_CountDown
-    Goto Death
+		HTHT ABCDABCDABCDABCD 3 NODELAY A_JumpIf(waterlevel == 3, "AdjustMass") //mxd
+		Loop
+	AdjustMass: //mxd
+		HTHT "#" 0 A_SetMass(400)
+		Goto Swim
+	Swim: //mxd
+		HTHT A 2 A_ScaleVelocity(0.7)
+		HTHT B 2 A_SpawnItemEx("Bubble", 0, 0, 0, 0, 0, 2, random (0, 360), 0, 128)
+		HTHT C 2 A_ScaleVelocity(0.7)
+		HTHT D 2 A_SpawnItemEx("Bubble", 0, 0, 0, 0, 0, 2, random (0, 360), 0, 128)
+		Loop
 	Death:
-	HTCP C -1
-	Stop
+		HTHT A 0 {bBounceOnActors = FALSE;}
+		HTHT A 1 A_SetTics(35*5)
+	DeathWait:
+		HTHT A 1 A_FadeOut(0.1)
+		Wait
+	}
+}
+
+Actor MadCup : MadDebris
+{
+	BounceSound "CUPTINK" //no See state, supposedly BounceSound then? - ozy81
+	States
+	{
+	Spawn:
+		HTCP ABCDABCDABCDABCD 3 NODELAY A_JumpIf(waterlevel == 3, "AdjustMass") //mxd
+		Loop
+	AdjustMass: //mxd
+		HTCP "#" 0 A_SetMass(400)
+		Goto Swim
+	Swim: //mxd
+		HTCP A 2 A_ScaleVelocity(0.7)
+		HTCP B 2 A_SpawnItemEx("Bubble", 0, 0, 0, 0, 0, 2, random (0, 360), 0, 128)
+		HTCP C 2 A_ScaleVelocity(0.7)
+		HTCP D 2 A_SpawnItemEx("Bubble", 0, 0, 0, 0, 0, 2, random (0, 360), 0, 128)
+		Loop
+	Death:
+		HTCP C 0 {bBounceOnActors = FALSE;}
+		HTCP C 1 A_SetTics(35*5)
+	DeathWait:
+		HTCP C 1 A_FadeOut(0.1)
+		Wait
 	}
 }

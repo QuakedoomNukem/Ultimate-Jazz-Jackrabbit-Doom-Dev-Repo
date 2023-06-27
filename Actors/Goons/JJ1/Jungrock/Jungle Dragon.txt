@@ -45,14 +45,14 @@ Actor JungDragonBoss 3834
 	     JDRG B 6 A_FaceTarget
 	     JDRG C 8 Bright A_CustomMissile("FireLizardBall",56,0,-15,0,0)
 	     JDRG B 10 A_FaceTarget
-	     JDRG C 1 Bright A_CustomMissile ("FireLizardBall",56,0,15,0,0)
-	     JDRG C 1 Bright A_CustomMissile ("FireLizardBall",56,0,0,0,0)
-         JDRG C 2 Bright A_CustomMissile ("FireLizardBall",56,0,-15,0,0)
+	     JDRG C 1 Bright A_CustomMissile("FireLizardBall",56,0,15,0,0)
+	     JDRG C 1 Bright A_CustomMissile("FireLizardBall",56,0,0,0,0)
+         JDRG C 2 Bright A_CustomMissile("FireLizardBall",56,0,-15,0,0)
          Goto See
     Death:
     JDRG A 0 A_Scream
     JDRG A 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    JDRG A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    JDRG A 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     JDRG A 2 A_NoBlocking
     JDRG A 2
     JDRG A 0 A_ChangeFlag("FloatBob", 0)

@@ -47,7 +47,7 @@ MONSTER
     DPOL A 0 A_StopSound
     DPOL A 0 A_Scream
     DPOL A 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    DPOL A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    DPOL A 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     DPOL A 2 A_NoBlocking
     DPOL A 2
     DPOL A 0 A_ChangeFlag("FloatBob", 0)

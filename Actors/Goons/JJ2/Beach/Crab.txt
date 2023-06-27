@@ -1,51 +1,52 @@
 Actor Crab 30022
 {
-  Tag "Crab"
-  Obituary "$OB_CRAB"
-  Health 50
-  mass 1000
-  Speed 8
-  Radius 16
-  Height 32
-  painchance 0
-  MONSTER
-  +FLOORCLIP
-  +NOBLOOD
-  +NOINFIGHTING
-  +COUNTKILL
-+DONTHARMSPECIES
-  SeeSound "CrabMiss"
-  ActiveSound "CrabMiss"
-  States
-  {
-   Spawn:
-    SCZA A 10 A_Look
-    Loop
-  See:
-    SCZA AABBCCDD 3 A_Chase
-    Loop
-  Melee:
-    SCZA A 10 A_FaceTarget
-    SCZA B 8 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
-    SCZA A 5
-    Goto See
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
+	//$Category Goons
+	Tag "Crab"
+	Health 50
+	Mass 1000
+	Speed 8
+	Radius 16
+	Height 32
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	SeeSound "CRABMISS"
+	ActiveSound "CRABMISS"
+	Obituary "$OB_CRAB"
+	States
+	{
+	Spawn:
+		SCZA A 10 A_Look
+		Loop
+	See:
+		SCZA AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+		SCZA A 10 A_FaceTarget
+		SCZA B 8 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
+		SCZA A 5
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Burn:
-	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	SCZA A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		Death.JazzprojFire:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		SCZA A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	SCZA A 5 A_GenericFreezeDeath
-    SCZA A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		SCZA A 5 A_GenericFreezeDeath
+		SCZA A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

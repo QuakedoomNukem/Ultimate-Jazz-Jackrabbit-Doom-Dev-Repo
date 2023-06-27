@@ -1,58 +1,60 @@
 Actor MotoMortar 3735
 {
-  Tag "Launch Cart"
-  Health 100
-  Radius 16
-  Height 32
-  Mass 10000
-  Speed 15
-  PainChance 0
-  MONSTER
-  +NOBLOOD
-  +NOINFIGHTING
-    +COUNTKILL
-+DONTHARMSPECIES
-  Obituary "$OB_MOTOM"
-  States
-  {
-  Spawn:
-    SCCT AB 4 A_Look
-    Loop
-  See:
-    SCCT AACCBBDD 4 A_Chase
-    Loop
-  Missile:
-    SCCT C 3 A_FaceTarget
-	SCCT C 4 Bright A_CustomMissile("MotoProj",40,0,0,0,0)
-	SCCT D 8 Bright
-	SCCT C 10
-    Goto See
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",150)
-	Stop
-  }
+	//$Category Goons
+	Tag "Launch Cart"
+	Health 100
+	Radius 16
+	Height 32
+	Mass 10000
+	Speed 15
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	Obituary "$OB_MOTOM"
+	States
+	{
+	Spawn:
+		SCCT AB 4 A_Look
+		Loop
+	See:
+		SCCT AACCBBDD 4 A_Chase
+		Loop
+	Missile:
+		SCCT C 3 A_FaceTarget
+		SCCT C 4 Bright A_CustomMissile("MotoProj",40,0,0,0,0)
+		SCCT D 8 Bright
+		SCCT C 10
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		Stop
+	}
 }
 
 Actor MotoProj
 {
-  Radius 16
-  Height 8
-  Speed 20
-  Damage 3
-  Gravity 1.25
-  Projectile
-  SeeSound "LFG2FIRE"
+	Radius 16
+	Height 8
+	Speed 20
+	Damage 3
+	Gravity 1.25
+	Projectile
+	-NOGRAVITY
+	+BRIGHT
+	+LOWGRAVITY //deprecated
+	SeeSound "LFG2FIRE"
 	DeathSound "BLSTRHIT"
-  +LOWGRAVITY
-  -NOGRAVITY
-  States
-  {
-  Spawn:
-    JBLS A 6 Bright
-    Loop
-  Death:
-    JBLS EFGH 4 bright
-    Stop
-  }
+	States
+	{
+	Spawn:
+		JBLS A 6
+		Loop
+	Death:
+		JBLS EFGH 4
+		Stop
+	}
 }

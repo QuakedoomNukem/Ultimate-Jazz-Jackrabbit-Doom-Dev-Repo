@@ -48,110 +48,110 @@ Actor AtlantisQueen 3872
     Stop
   REye:
     MORE F 10 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -6, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -6, 1)
     MORE F 0 A_FaceTarget
     MORE F 0 A_PlaySoundEx ("LasEYATK", "SoundSlot5", 1, 0)
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -5.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -5.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -5.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -4.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -4.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -4.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -4, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -3.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -3.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -3.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -3, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -2.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -2.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -2.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -2, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -1.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -1.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -1.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -1, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -0.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -0.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -0.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -0.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, -0.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -0.25, 1)
     MORE F 0 A_FaceTarget
     Goto LockedOn
   LEye:
     MORE F 10 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 6, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 6, 1)
     MORE F 0 A_FaceTarget
     MORE F 0 A_PlaySoundEx ("LasEYATK", "SoundSlot5", 1, 0)
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 5.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 5.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 5.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 4.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 4.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 4.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 4, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 3.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 3.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 3.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 3, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 2.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 2.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 2.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 2, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 1.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 1.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 1.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1.25, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 1, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 0.75, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0.75, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 0.5, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0.5, 1)
     MORE F 0 A_FaceTarget
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 0.25, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0.25, 1)
     MORE F 0 A_FaceTarget
     Goto LockedOn
   LockedOn:
-    MORE F 1 bright A_CustomMissile ("LaserEyeProj", 64, 8, 0, 1)
+    MORE F 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0, 1)
     MORE A 0 A_FaceTarget
     MORE A 0 A_Jump (8, "See")
     MORE A 0 A_CPosRefire

@@ -1,54 +1,55 @@
 Actor ColoniusFencer 3965
 {
+	//$Category Goons
 	Tag "Fencer"
-    Health 100
-    Radius 12
-    Height 56
-    Speed 25
-    PainChance 32
-    Mass 1000000
-	SeeSound "Turtsight"
-    PainSound "Turtpain"
-    ActiveSound "Turtact"
+	Health 100
+	Radius 12
+	Height 56
+	Speed 25
+	PainChance 32
+	Mass 1000000
 	MONSTER
+	+COUNTKILL
+	+DONTHARMCLASS
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	SeeSound "TURTSIGHT"
+	PainSound "TURTPAIN"
+	ActiveSound "TURTACT"
 	Obituary "$OB_COLFE"
-    	+SOLID
-		+NOBLOOD
-		+NOINFIGHTING
-		+COUNTKILL
- +DONTHARMCLASS
-    States
-    {
-    Spawn:
-        FNCR AB 4 A_Look
+	States
+	{
+	Spawn:
+		FNCR AB 4 A_Look
 		FNCR A 4 
-        Loop
-    See:
-        FNCR ABCD 4 A_Chase
+		Loop
+	See:
+		FNCR ABCD 4 A_Chase
 		FNCR A 4 
-        Loop
+		Loop
 	Melee:
 		FNCR A 10 A_FaceTarget
 		FNCR A 4 ThrustThingZ(0,30,0,0)
 		FNCR C 6 A_SargAttack
 		Goto See
-    Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-       TNT1 A 0 A_GiveToTarget("Points",200)
-	   Stop
-	   Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	FNCR A 5 A_GenericFreezeDeath
-    FNCR A 1 A_FreezeDeathChunks
-    Wait
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		FNCR A 5 A_GenericFreezeDeath
+		FNCR A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
-	   Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",200)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	FNCR A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-    }
+	Burn:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		FNCR A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }

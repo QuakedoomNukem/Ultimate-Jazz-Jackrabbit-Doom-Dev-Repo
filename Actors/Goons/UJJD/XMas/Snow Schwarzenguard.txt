@@ -23,10 +23,10 @@ Actor XmasUberSnowTurtle 4095
   UBST AABBCCDD 4 A_Chase
   Missile:
   UBST E 10 A_FaceTarget
-  UBST F 8 A_CustomMissile ("Snowball2",32,0,0,0,0)
+  UBST F 8 A_CustomMissile("Snowball2",32,0,0,0,0)
   UBST E 8
   UBST E 10 A_FaceTarget
-  UBST F 8 A_CustomMissile ("Snowball2",32,0,0,0,0)
+  UBST F 8 A_CustomMissile("Snowball2",32,0,0,0,0)
   UBST E 8
   Goto See
    Death:

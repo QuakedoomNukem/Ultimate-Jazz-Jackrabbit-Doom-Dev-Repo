@@ -64,7 +64,7 @@ Actor LagunicusMace
   {
   Spawn:
     LMCE A 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
-	LMCE A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+	LMCE A 0 A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
     Loop
   Death:
    SEKE AB 3 bright

@@ -46,7 +46,7 @@ Actor JJASaurianGeneral 3852
 	Death:
 		SAGN G 0 A_Scream
 		SAGN G 2 ThrustThingZ(0, random(2, 8), 0, 0)
-		SAGN G 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+		SAGN G 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
 		SAGN G 2 A_NoBlocking
 		SAGN G 2
 		SAGN G 0 A_ChangeFlag("FloatBob", 0)
@@ -79,7 +79,7 @@ Actor JJAGeneralSeekingProj
 	{
 	Spawn:
 		HRKT ABC 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
-		HRKT A 0 A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+		HRKT A 0 A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
 		Loop
 	Death:
 		SEKE AB 3 bright

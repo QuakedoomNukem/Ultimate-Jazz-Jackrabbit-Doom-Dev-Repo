@@ -68,7 +68,7 @@ Actor ZombieTankMissile
    States
    {
    Spawn:
-      INDM A 1 Bright A_SpawnItemEx ("MissileTrail", -21, 0, 0, 1)
+      INDM A 1 Bright A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
 	INDM A 4 Bright
       Loop
       Death:

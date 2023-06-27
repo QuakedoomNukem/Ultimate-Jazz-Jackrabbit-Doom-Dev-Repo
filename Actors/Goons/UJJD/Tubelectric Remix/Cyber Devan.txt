@@ -1,5 +1,6 @@
 Actor CyberDevan 4043
 {
+	//$Category Goons
 	Tag "Cyber Devan"
 	Radius 40
 	Height 144
@@ -10,12 +11,12 @@ Actor CyberDevan 4043
 	Damage 10
 	Scale 2.0
 	MONSTER
-	+SOLID
-	+NOBLOOD
-	+NOINFIGHTING
 	+BOSS
 	+COUNTKILL
 	+DONTHARMCLASS
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
 	SeeSound "BIGTURTS"
 	PainSound "BIGTURTP"
 	Obituary "$OB_MINS1"
@@ -65,7 +66,7 @@ Actor Minissiles
 	Projectile
 	+BRIGHT
 	+DEHEXPLOSION
-	+DONTHARMSPECIES //but which species is it then? - ozy81
+	+DONTHARMSPECIES
 	+RANDOMIZE
 	+ROCKETTRAIL
 	DeathSound "SEEKXPLD"

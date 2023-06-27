@@ -44,7 +44,7 @@ Actor Megairboss 3808
     MGBS H 0 A_StopSound
     MGBS H 0 A_Scream
     MGBS H 2 ThrustThingZ(0, random(2, 8), 0, 0)
-    MGBS H 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    MGBS H 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
     MGBS H 2 A_NoBlocking
     MGBS H 2
     MGBS H 0 A_ChangeFlag("FloatBob", 0)
