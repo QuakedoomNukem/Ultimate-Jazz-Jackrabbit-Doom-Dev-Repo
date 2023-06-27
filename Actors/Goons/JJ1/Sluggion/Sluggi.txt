@@ -1,50 +1,51 @@
 Actor Sluggy 3231
 {
-  Tag "Sluggi"
-  Health 50
-  Radius 16
-  Height 16
-  Mass 10000
-  Speed 15
-  PainChance 0
-  Damage 5
-  MONSTER
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-   +SOLID
-   +DONTHARMSPECIES
-  Obituary "$OB_SLUGG"
-  States
-  {
-  Spawn:
-    SLUG ABCB 4 A_Look
-    Loop
-  See:
-    SLUG ABCB 4 A_Chase
-    Loop
-  Melee:
-    SLUG A 5 A_FaceTarget
-    SLUG B 4 A_SargAttack
-    SLUG C 4
-    Goto See
-  Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
+	//$Category Goons
+	Tag "Sluggi"
+	Health 50
+	Radius 16
+	Height 16
+	Mass 10000
+	Speed 15
+	PainChance 0
+	Damage 5
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	Obituary "$OB_SLUGG"
+	States
+	{
+	Spawn:
+		SLUG ABCB 4 A_Look
+		Loop
+	See:
+		SLUG ABCB 4 A_Chase
+		Loop
+	Melee:
+		SLUG A 5 A_FaceTarget
+		SLUG B 4 A_SargAttack
+		SLUG C 4
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	SLUG B 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		SLUG B 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	SLUG B 5 A_GenericFreezeDeath
-    SLUG B 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		SLUG B 5 A_GenericFreezeDeath
+		SLUG B 1 A_FreezeDeathChunks
+		Wait
 	}
 }
