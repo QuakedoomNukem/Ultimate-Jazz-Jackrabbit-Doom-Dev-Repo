@@ -30,7 +30,7 @@ Actor ChameleonGunner 3730
 		CHGC F 4 Bright A_CustomMissile("ChameleonProj",40,0,0,0,0)
 		Goto See
 	Death:
-		TNT1 A 0 A_GiveToTarget ("Points",300)
+		TNT1 A 0 A_GiveToTarget("Points",300)
 		CHGC H 3
 		CHGC I 3
 		CHGC J 3
@@ -38,14 +38,14 @@ Actor ChameleonGunner 3730
 		CHGC L -1
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",300)
+		TNT1 A 0 A_GiveToTarget("Points",300)
 		CHGC H 5 A_GenericFreezeDeath
 		CHGC H 1 A_FreezeDeathChunks
 		Wait
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",300)
+		TNT1 A 0 A_GiveToTarget("Points",300)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		CHGC HHH 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)

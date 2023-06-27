@@ -34,10 +34,10 @@ Actor Fish 30023
     Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	stop
+	TNT1 A 0 A_GiveToTarget("Points",100)
+	Stop
     Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	SHRK A 5 A_GenericFreezeDeath
     SHRK A 1 A_FreezeDeathChunks
     Wait
@@ -100,10 +100,10 @@ Actor JungrockFish 3833
     Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	stop
+	TNT1 A 0 A_GiveToTarget("Points",100)
+	Stop
 	    Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	JFSH A 5 A_GenericFreezeDeath
     JFSH A 1 A_FreezeDeathChunks
     Wait
@@ -146,10 +146,10 @@ Actor ScaryFish 3780
     Goto See
    Death:
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	stop
+	TNT1 A 0 A_GiveToTarget("Points",100)
+	Stop
 	    Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	SCFH A 5 A_GenericFreezeDeath
     SCFH A 1 A_FreezeDeathChunks
     Wait

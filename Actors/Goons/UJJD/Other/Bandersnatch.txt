@@ -1,48 +1,49 @@
 Actor Bandersnatch 3772
 {
-   Tag "Bandersnatch"
-   Health 100
-   PainChance 0 
-   Speed 10
-   Radius 16 
-   Height 40 
-   Mass 40000
-   Damage 3
-   MONSTER 
-   +FLOORCLIP
-   +NOBLOOD
-   +NOINFIGHTING
-   +DONTHARMSPECIES
-   Obituary "$OB_BANDE"
-   States 
-   { 
-   Spawn: 
-      BSNT A 10 A_Look 
-      Loop 
-   See: 
-      BSNT ABC 2 A_Chase 
-      Loop 
-   Melee: 
-      BSNT ABC 8 A_FaceTarget 
-      BSNT ABC 8 A_SargAttack 
-      Goto See 
-   Death: 
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",200)
-    Stop
+	//$Category Goons
+	Tag "Bandersnatch"
+	Health 100
+	PainChance 0
+	Speed 10
+	Radius 16
+	Height 40
+	Mass 40000
+	Damage 3
+	MONSTER
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	Obituary "$OB_BANDE"
+	States
+	{
+	Spawn:
+		BSNT A 10 A_Look
+		Loop
+	See:
+		BSNT ABC 2 A_Chase
+		Loop
+	Melee:
+		BSNT ABC 8 A_FaceTarget
+		BSNT ABC 8 A_SargAttack
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",200)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	BSNT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		BSNT A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",200)
-	BSNT A 5 A_GenericFreezeDeath
-    BSNT A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",200)
+		BSNT A 5 A_GenericFreezeDeath
+		BSNT A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

@@ -37,17 +37,17 @@ Actor Raven 19985
 	Goto Missile+2
   Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget ("Points",100)
+    TNT1 A 0 A_GiveToTarget("Points",100)
 	Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	BATH A 5 A_GenericFreezeDeath
     BATH A 1 A_FreezeDeathChunks
     Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	BATH A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)

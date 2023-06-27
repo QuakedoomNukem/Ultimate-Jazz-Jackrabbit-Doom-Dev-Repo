@@ -1,115 +1,117 @@
 Actor FloatingSucker 25626
 {
-  Tag "Sucker"
-  Health 50
-  Radius 14
-  Height 24
-  Speed 0
-  Mass 10000000
-  PainChance 0
-  +SOLID
-  +NOGRAVITY
-  +SHOOTABLE
-  +NOICEDEATH
-  +ISMONSTER
-  +FLOATBOB
-  +NOBLOOD
-  +NOINFIGHTING
-  -COUNTKILL
-+DONTHARMSPECIES
-+LOOKALLAROUND
-  States
-  {
-  Spawn:
-    FLSU ANOPM 3 A_Look
-    Loop
-  See:
-	FLSU ANOPM 3 A_Chase
-	Loop
-  Melee:
-	FLSU AM 6 A_FaceTarget
-    FLSU A 1 A_SargAttack
-	Goto see
-  Death:
-    DFTF A 4 A_SpawnItemEx("DeflatedSuckerFart")
-	TNT1 A 0 A_PlaySound("suckfart")
-	stop
-  }
+	//$Category Goons
+	Tag "Sucker"
+	Health 50
+	Radius 14
+	Height 24
+	Speed 0
+	Mass 10000000
+	PainChance 0
+	-COUNTKILL
+	+DONTHARMSPECIES
+	+FLOATBOB
+	+ISMONSTER
+	+LOOKALLAROUND
+	+NOBLOOD
+	+NOGRAVITY
+	+NOICEDEATH
+	+NOINFIGHTING
+	+SHOOTABLE
+	+SOLID
+	States
+	{
+	Spawn:
+		FLSU ANOPM 3 A_Look
+		Loop
+	See:
+		FLSU ANOPM 3 A_Chase
+		Loop
+	Melee:
+		FLSU AM 6 A_FaceTarget
+		FLSU A 1 A_SargAttack
+		Goto see
+	Death:
+		DFTF A 4 A_SpawnItemEx("DeflatedSuckerFart")
+		TNT1 A 0 A_PlaySound("suckfart")
+		Stop
+	}
 }
 
 Actor DeflatedSuckerFart
 {
-  Radius 6
-  Height 8
-  Speed 10
-  FastSpeed 10
-  Gravity 0.25
-  Projectile
-  +RANDOMIZE
-  -NOGRAVITY
-  +NOBLOOD
-  RenderStyle Normal
-  States
-  {
-  Spawn:
-    DFTF CBCBCBCB 4
-    Loop
-  Death:
-    TNT1 A 0 A_SpawnItemEx("DeflatedSucker")
-    Stop
-  }
+	Radius 6
+	Height 8
+	Speed 10
+	FastSpeed 10
+	Gravity 0.25
+	Projectile
+	-NOGRAVITY
+	+NOBLOOD
+	+RANDOMIZE
+	RenderStyle Normal
+	States
+	{
+	Spawn:
+		DFTF CBCBCBCB 4
+		Loop
+	Death:
+		TNT1 A 0 A_SpawnItemEx("DeflatedSucker")
+		Stop
+	}
 }
 
 Actor DeflatedSucker 4112
 {
-  Tag "Sucker"
-  Health 50
-  Radius 14
-  Height 24
-  Speed 8
-  Mass 10000
-  PainChance 0
-  ActiveSound "SUCKWALK"
-  +SOLID
-  +SHOOTABLE
-  +NOICEDEATH
-  +ISMONSTER
-  +NOBLOOD
-  -COUNTKILL
-  +NOINFIGHTING
-+DONTHARMSPECIES
-+LOOKALLAROUND
-+FRIGHTENED
-  States
-  {
-  Spawn:
-    DFTS ABCD 8 A_Look
-    Loop
-  See:
-	TNT1 A 0 A_PlaySound("Suckwalk")
-	DFTS ABCD 8 A_Chase
-	Loop
-  Melee:
-	DFTS ABC 6 A_FaceTarget
-    DFTS D 1 A_SargAttack
-	Goto see
-    Death:
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget ("Points",50)
-	Stop
+	//$Category Goons
+	Tag "Sucker"
+	Health 50
+	Radius 14
+	Height 24
+	Speed 8
+	Mass 10000
+	PainChance 0
+	ActiveSound "SUCKWALK"
+	-COUNTKILL
+	+DONTHARMSPECIES
+	+FRIGHTENED
+	+ISMONSTER
+	+LOOKALLAROUND
+	+NOBLOOD
+	+NOICEDEATH
+	+NOINFIGHTING
+	+SHOOTABLE
+	+SOLID
+	States
+	{
+	Spawn:
+		DFTS ABCD 8 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_PlaySound("Suckwalk")
+		DFTS ABCD 8 A_Chase
+		Loop
+	Melee:
+		DFTS ABC 6 A_FaceTarget
+		DFTS D 1 A_SargAttack
+		Goto see
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget ("Points",50)
+		Stop
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",50)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	DFTS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget ("Points",50)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		DFTS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",50)
-	DFTS A 5 A_GenericFreezeDeath
-    DFTS A 1 A_FreezeDeathChunks
-    Wait
-    }
+		TNT1 A 0 A_GiveToTarget ("Points",50)
+		DFTS A 5 A_GenericFreezeDeath
+		DFTS A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

@@ -1,119 +1,107 @@
 Actor GoldHornet 3907
 {
-  Tag "Yellow Buzzer"
-  Health 50
-  Radius 12
-  Height 32
-  Mass 50
-  Speed 15
-  Damage 3
-  PainChance 0
-  MONSTER
-  +FLOAT
-  +NOGRAVITY
-  +MISSILEMORE
-  +DONTFALL
-  +NOICEDEATH
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-+DONTHARMSPECIES
-  Obituary "$OB_YEBUZ"
-  States
-  {
-  Spawn:
-    JBUG AB 3 A_Look
-	JBUG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Loop
-  See:
-    JBUG AB 3 A_Chase
-	JBUG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Loop
-  Missile:
-    JBUG A 10 A_FaceTarget
-    JBUG AB 4 A_SkullAttack
-    JBUG A 2
-	 DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Goto Missile+2
-  Death:
-  TNT1 A 0 A_Stopsound(CHAN_VOICE)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-    Stop
+	//$Category Goons
+	Tag "Yellow Buzzer"
+	Health 50
+	Radius 12
+	Height 32
+	Mass 50
+	Speed 15
+	Damage 3
+	PainChance 0
+	MONSTER
+	+FLOAT
+	+NOGRAVITY
+	+MISSILEMORE
+	+DONTFALL
+	+NOICEDEATH
+	+NOBLOOD
+	+NOINFIGHTING
+	+COUNTKILL
+	+DONTHARMSPECIES
+	Obituary "$OB_YEBUZ"
+	States
+	{
+	Spawn:
+		JBUG AB 3 A_Look
+		JBUG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Loop
+	See:
+		JBUG AB 3 A_Chase
+		JBUG A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Loop
+	Missile:
+		JBUG A 10 A_FaceTarget
+		JBUG AB 4 A_SkullAttack
+		JBUG A 2
+		DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Goto Missile+2
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	JBUG A 5 A_GenericFreezeDeath
-    JBUG a 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		JBUG A 5 A_GenericFreezeDeath
+		JBUG a 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	JBUG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		JBUG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }
 
-Actor RedHornet 3908
+Actor RedHornet : GoldHornet 3908
 {
-  Tag "Red Buzzer"
-  Health 75
-  Radius 12
-  Height 32
-  Mass 50
-  Speed 20
-  Damage 6
-  PainChance 0
-  MONSTER
-  +FLOAT
-  +NOGRAVITY
-  +MISSILEMORE
-  +DONTFALL
-  +NOICEDEATH
-   +NOBLOOD
-   +NOINFIGHTING
-     +COUNTKILL
-+DONTHARMSPECIES
-  Obituary "$OB_REBUZ"
-  States
-  {
-  Spawn:
-    JBG2 AB 3 A_Look
-	JBG2 A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Loop
-  See:
-    JBG2 AB 3 A_Chase
-	JBG2 A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Loop
-  Missile:
-    JBG2 A 10 A_FaceTarget
-    JBG2 AB 4 A_SkullAttack
-    JBG2 A 2
-	 DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Goto Missile+2
-  Death:
-  TNT1 A 0 A_Stopsound(CHAN_VOICE)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",150)
-    Stop
+	//$Category Goons
+	Tag "Red Buzzer"
+	Health 75
+	Speed 20
+	Damage 6
+	Obituary "$OB_REBUZ"
+	States
+	{
+	Spawn:
+		JBG2 AB 3 A_Look
+		JBG2 A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Loop
+	See:
+		JBG2 AB 3 A_Chase
+		JBG2 A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Loop
+	Missile:
+		JBG2 A 10 A_FaceTarget
+		JBG2 AB 4 A_SkullAttack
+		JBG2 A 2
+		DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Goto Missile+2
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",150)
-	JBG2 A 5 A_GenericFreezeDeath
-    JBG2 A 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		JBG2 A 5 A_GenericFreezeDeath
+		JBG2 A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",150)
-	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	JBG2 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",150)
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		JBG2 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }

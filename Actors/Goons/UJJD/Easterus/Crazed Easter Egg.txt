@@ -16,7 +16,7 @@ Actor CrazyEasterusEgg 3932
   +SOLID
   -COUNTKILL
 +DONTHARMSPECIES
-  states
+  States
   {
   Spawn:
     EEGG A 10 A_Look
@@ -30,12 +30,12 @@ Actor CrazyEasterusEgg 3932
 	TNT1 A 0 ThrustThingZ(0,45,0,0)
 	EEGG A 20 A_FaceTarget
     EEGG A 0 A_Die
-    stop
+    Stop
   Death:
     RFLE AB 3 Bright 
 	RFLE C 3 Bright A_Explode (50,128,XF_NOTMISSILE)
 	RFLE DEFGHIJK 3 Bright
-	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_GiveToTarget("Points",150)
     Stop
   }
 }

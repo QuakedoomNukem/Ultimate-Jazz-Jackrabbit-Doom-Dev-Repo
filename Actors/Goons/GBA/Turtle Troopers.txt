@@ -43,7 +43,7 @@ Actor JJAPinkTurtle 4045
 		JAPT H 0
 		Goto See
 	Death:
-		TNT1 A 0 A_GiveToTarget ("Points",250)
+		TNT1 A 0 A_GiveToTarget("Points",250)
 		JAPT H 4
 		JAPT I 4 A_Scream
 		JAPT J 4 A_NoBlocking
@@ -53,14 +53,14 @@ Actor JJAPinkTurtle 4045
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",250)
+		TNT1 A 0 A_GiveToTarget("Points",250)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		JAPT H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",250)
+		TNT1 A 0 A_GiveToTarget("Points",250)
 		JAPT A 5 A_GenericFreezeDeath
 		JAPT A 1 A_FreezeDeathChunks
 		Wait
@@ -114,7 +114,7 @@ Actor JJABlueTurtle 4046
 		JABT H 0
 		Goto See
 	Death:
-		TNT1 A 0 A_GiveToTarget ("Points",350)
+		TNT1 A 0 A_GiveToTarget("Points",350)
 		JABT H 4
 		JABT I 4 A_Scream
 		JABT J 4 A_NoBlocking
@@ -124,14 +124,14 @@ Actor JJABlueTurtle 4046
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",350)
+		TNT1 A 0 A_GiveToTarget("Points",350)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		JABT H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",350)
+		TNT1 A 0 A_GiveToTarget("Points",350)
 		JABT A 5 A_GenericFreezeDeath
 		JABT A 1 A_FreezeDeathChunks
 		Wait
@@ -176,7 +176,7 @@ Actor JJAOrangeTurtle 4047
 		JAOT H 0
 		Goto See
 	Death:
-		TNT1 A 0 A_GiveToTarget ("Points",500)
+		TNT1 A 0 A_GiveToTarget("Points",500)
 		JAOT H 4
 		JAOT I 4 A_Scream
 		JAOT J 4 A_NoBlocking
@@ -186,14 +186,14 @@ Actor JJAOrangeTurtle 4047
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",500)
+		TNT1 A 0 A_GiveToTarget("Points",500)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		JAOT H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",500)
+		TNT1 A 0 A_GiveToTarget("Points",500)
 		JAOT A 5 A_GenericFreezeDeath
 		JAOT A 1 A_FreezeDeathChunks
 		Wait

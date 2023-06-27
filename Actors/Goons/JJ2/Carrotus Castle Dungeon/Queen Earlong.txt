@@ -50,7 +50,7 @@ MONSTER
 		QNEL A 4 
     Goto See
     Death:
-	TNT1 A 0 A_GiveToTarget ("Points",5000)
+	TNT1 A 0 A_GiveToTarget("Points",5000)
 	TNT1 A 0 A_PlaySound ("QUEENSCM", CHAN_AUTO, 1, False, ATTN_NONE)
 	TNT1 A 0 A_StopSound
     QNEL B 2 ThrustThingZ(0, random(2, 8), 0, 0)
@@ -82,7 +82,7 @@ Actor FallingBrickProj
   +RIPPER
   +DOOMBOUNCE
   +CEILINGHUGGER
-  +DONTHURTSPECIES
+  +DONTHARMCLASS
   States
   {
   Spawn:
@@ -108,7 +108,7 @@ Actor FallingBrick
   -NOGRAVITY
   -FLOAT
   +FLOORCLIP
-  +DONTHURTSPECIES 
+  +DONTHARMCLASS 
   +SPAWNCEILING
   Decal RevenantScorch
   States

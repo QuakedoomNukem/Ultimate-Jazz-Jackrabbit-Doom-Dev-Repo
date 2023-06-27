@@ -15,7 +15,7 @@ Actor BossHelmut 30026
   +FLOORCLIP
   +MISSILEMORE
   +NORADIUSDMG
-  +DONTHURTSPECIES
+  +DONTHARMCLASS
   +NOBLOOD
   +NOINFIGHTING
   +COUNTKILL
@@ -109,7 +109,7 @@ SeeSound "BIGTURTS"
     PYRO A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     PYRO AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    TNT1 A 0 A_GiveToTarget ("Points",2000)
+    TNT1 A 0 A_GiveToTarget("Points",2000)
 	Stop
   }
 }
@@ -251,7 +251,7 @@ Actor PyroBlast
   Speed 12
   Height 12
   Radius 12
-  states
+  States
   {
   Spawn:
     SBLL ABCD 1 Bright A_SpawnItemEx("FireTail",0,0,0,0,0,0,0,128)
@@ -303,7 +303,7 @@ Actor RainCometNull
   +RIPPER
   +DOOMBOUNCE
   +CEILINGHUGGER
-  +DONTHURTSPECIES
+  +DONTHARMCLASS
   States
   {
   Spawn:
@@ -333,7 +333,7 @@ Actor FallingComet
   -NOGRAVITY
   -FLOAT
   +FLOORCLIP
-  +DONTHURTSPECIES 
+  +DONTHARMCLASS 
   +SPAWNCEILING
   States
   {

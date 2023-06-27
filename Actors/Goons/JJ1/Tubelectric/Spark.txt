@@ -39,7 +39,7 @@ Actor Sparks 11914
 		Goto See
 	Death:
 		TNT1 AAAAAAA 0 A_SpawnItemEx("SparkPiece",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		Stop
 	}
 }

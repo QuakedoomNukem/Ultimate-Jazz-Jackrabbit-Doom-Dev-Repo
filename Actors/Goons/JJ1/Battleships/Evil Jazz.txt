@@ -52,7 +52,7 @@ Actor EvilJazz 32527
     EJAZ A 2
     EJAZ A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     EJAZ AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 A 0 A_GiveToTarget ("Points",5000)
+    TNT1 A 0 A_GiveToTarget("Points",5000)
 	Stop
   }
 }

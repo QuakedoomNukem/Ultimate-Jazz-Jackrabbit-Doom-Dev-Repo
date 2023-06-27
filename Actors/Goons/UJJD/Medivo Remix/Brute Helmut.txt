@@ -1,5 +1,6 @@
 Actor BruteHelmut 4038
 {
+	//$Category Goons
 	Tag "Brute Helmut"
 	Health 300
 	Radius 16
@@ -7,45 +8,45 @@ Actor BruteHelmut 4038
 	Speed 10
 	PainChance 0
 	Mass 10000
+	MONSTER
+	+COUNTKILL
+	+DONTHARMCLASS
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
-	 +COUNTKILL
- +DONTHARMCLASS
-	MONSTER
 	SeeSound "Turtsight"
-  PainSound "Turtpain"
-  ActiveSound "Turtact"
+	PainSound "Turtpain"
+	ActiveSound "Turtact"
 	Obituary "$OB_HELMU"
 	States
 	{
-		Spawn:
-		    MDRR AB 10 A_Look
-			Loop
-		See:
-			MDRR AABBCCDD 2 Fast A_Chase
-			Loop
-		Melee:
-			MDRR EF 6 A_FaceTarget
-			TNT1 G 0 A_CustomMeleeAttack(6,"fatpnch","","Melee",0)
-			Goto See
-		Death:
-		   TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-           TNT1 A 0 A_GiveToTarget ("Points",500)
-		   Stop
-		   Death.JazzprojIce:
-			TNT1 A 0 A_GiveToTarget ("Points",500)
-			MDRR A 5 A_GenericFreezeDeath
-			MDRR A 1 A_FreezeDeathChunks
-			Wait
-			Death.JazzprojFire:
-			Burn:
-			TNT1 A 0 A_NoBlocking
-			TNT1 A 0 A_GiveToTarget ("Points",500)
-			TNT1 A 0 A_PlaySound("FMTRFIRE")
-			MDRR AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-			TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-			TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-			Stop
+	Spawn:
+		MDRR AB 10 A_Look
+		Loop
+	See:
+		MDRR AABBCCDD 2 Fast A_Chase
+		Loop
+	Melee:
+		MDRR EF 6 A_FaceTarget
+		TNT1 G 0 A_CustomMeleeAttack(6,"fatpnch","","Melee",0)
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",500)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget("Points",500)
+		MDRR A 5 A_GenericFreezeDeath
+		MDRR A 1 A_FreezeDeathChunks
+		Wait
+	Death.JazzprojFire:
+	Burn:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",500)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		MDRR AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	}
 }

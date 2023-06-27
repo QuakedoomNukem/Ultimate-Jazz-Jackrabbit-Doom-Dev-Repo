@@ -1,82 +1,84 @@
 Actor BigSparks 11913
 {
-  Tag "Big Spark"
-  Health 100
-  Radius 31
-  Height 56
-  Mass 40000
-  Speed 8
-  PainChance 0
-  MONSTER
-  +FLOAT
-  +NOGRAVITY
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-+DONTHARMSPECIES
-   SeeSound "SPKSee"
-  PainSound "SPKPain"
-  Obituary "$OB_BIGSP"
-  States
-  {
-  Spawn:
-    BSPK AB 1 A_Look
-    Loop
-  See:
-    BSPK ABAB 1 A_Chase
-    Loop
-  Missile:
-    BSPK EFEFEFEFEF 1 A_FaceTarget
-    BSPK F 1 Bright A_CustomMissile("SparkBall")
-	BSPK ABAB 1
-    Goto See
-  Death:
-	TNT1 AAAAAAA 0 A_SpawnItemEx("SparkPiece",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-	TNT1 A 0 A_GiveToTarget ("Points",300)
-	Stop
-  }
+	//$Category Goons
+	Tag "Big Spark"
+	Health 100
+	Radius 31
+	Height 56
+	Mass 40000
+	Speed 8
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+FLOAT
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	SeeSound "SPKSEE"
+	PainSound "SPKPAIN"
+	Obituary "$OB_BIGSP"
+	States
+	{
+	Spawn:
+		BSPK AB 1 A_Look
+		Loop
+	See:
+		BSPK ABAB 1 A_Chase
+		Loop
+	Missile:
+		BSPK EFEFEFEFEF 1 A_FaceTarget
+		BSPK F 1 Bright A_CustomMissile("SparkBall")
+		BSPK ABAB 1
+		Goto See
+	Death:
+		TNT1 AAAAAAA 0 A_SpawnItemEx("SparkPiece",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+		TNT1 A 0 A_GiveToTarget("Points",300)
+		Stop
+	}
 }
 
 Actor SparkBall
 {
-  Radius 8
-  Height 8
-  Speed 8
-  Damage 4
-  Projectile
-  RenderStyle Normal
-  SeeSound "ELECSHOT"
-  DeathSound "SPKPAIN"
-  States
-  {
-  Spawn:
-    SPKB ABCB 2 Bright
-    Loop
-  Death:
-    SPKB DEFGHED 4 bright
-    stop
-  }
+	Radius 8
+	Height 8
+	Speed 8
+	Damage 4
+	Projectile
+	RenderStyle Normal
+	+BRIGHT
+	SeeSound "ELECSHOT"
+	DeathSound "SPKPAIN"
+	States
+	{
+	Spawn:
+		SPKB ABCB 2
+		Loop
+	Death:
+		SPKB DEFGHED 4
+		Stop
+	}
 }
 
 Actor SparkPiece
 {
-  Radius 6
-  Height 8
-  Speed 25
-  FastSpeed 50
-  Gravity 0.5
-  Projectile
-  +RANDOMIZE
-  -NOGRAVITY
-  +NOBLOOD
-  RenderStyle Normal
-  States
-  {
-  Spawn:
-    SPKP ABCB 1
-    Loop
-  Death:
-    SPKP A -1
-    Stop
-  }
+	Radius 6
+	Height 8
+	Speed 25
+	FastSpeed 50
+	Gravity 0.5
+	Projectile
+	-NOGRAVITY
+	+NOBLOOD
+	+RANDOMIZE
+	RenderStyle Normal
+	States
+	{
+	Spawn:
+		SPKP ABCB 1
+		Loop
+	Death:
+		SPKP A -1
+		Stop
+	}
 }

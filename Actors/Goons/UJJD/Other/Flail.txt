@@ -36,7 +36,7 @@ Actor Flail 3712
        JJFL H 2 A_Pain
        Goto See
     Death: 
-	TNT1 A 0 A_GiveToTarget ("Points",2000)
+	TNT1 A 0 A_GiveToTarget("Points",2000)
     JJFL g 0 A_StopSound
     JJFL g 0 A_Scream
     JJFL g 2 ThrustThingZ(0, random(2, 8), 0, 0)

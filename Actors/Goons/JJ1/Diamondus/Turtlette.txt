@@ -1,49 +1,50 @@
 Actor BabyTurtle 25625
 {
+	//$Category Goons
 	Tag "Turtlette"
-    Health 10
-    Radius 8
-    Height 8
-    Speed 10
-    PainChance 0
-    Mass 100000
+	Health 10
+	Radius 8
+	Height 8
+	Speed 10
+	PainChance 0
+	MeleeDamage 0 //why? - ozy81
+	Mass 100000
 	MONSTER
-    	+SOLID
-		+SHOOTABLE
-		-NOPAIN
-		-INVISIBLE
-		-COUNTKILL
-		+NOBLOOD
-		+FRIGHTENED
-		+DONTHARMSPECIES
-    MeleeDamage 0
-    States
-    {
-    Spawn:
-        JZBT D 5 A_Look
-        Loop
-    See:
-        JZBT A 0 A_SetFLOORCLIP
-        JZBT A 3 A_Gravity
-        JZBT ABCDEC 3 A_Chase
-        Loop
-    Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-       TNT1 A 0 A_GiveToTarget ("Points",50)
-	   Stop
+	-COUNTKILL
+	-INVISIBLE //why? - ozy81
+	-NOPAIN //why? - ozy81
+	+DONTHARMSPECIES
+	+FRIGHTENED
+	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	States
+	{
+	Spawn:
+		JZBT D 5 A_Look
+		Loop
+	See:
+		JZBT A 0 A_SetFloorClip
+		JZBT A 3 A_Gravity
+		JZBT ABCDEC 3 A_Chase
+		Loop
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",50)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",50)
-	JZBT D 5 A_GenericFreezeDeath
-    JZBT D 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",50)
+		JZBT D 5 A_GenericFreezeDeath
+		JZBT D 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",50)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	JZBT D 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-    }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",50)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		JZBT D 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }

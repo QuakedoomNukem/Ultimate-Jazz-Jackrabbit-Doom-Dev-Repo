@@ -50,7 +50,7 @@ Actor TurtleBishop 3293
     BISH A 2
     BISH A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     BISH AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-    TNT1 A 0 A_GiveToTarget ("Points",1500)
+    TNT1 A 0 A_GiveToTarget("Points",1500)
 	Stop
   }
 }

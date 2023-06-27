@@ -34,20 +34,20 @@ Actor BattleshipBee 3892
 	BSBB A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
     Goto See
   Death:
-    TNT1 A 0 A_Stopsound(CHAN_VOICE)
+    TNT1 A 0 A_StopSound(CHAN_VOICE)
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_GiveToTarget("Points",200)
     Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_GiveToTarget("Points",200)
 	BSBB E 5 A_GenericFreezeDeath
     BSBB E 1 A_FreezeDeathChunks
     Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",200)
-	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_GiveToTarget("Points",200)
+	TNT1 A 0 A_StopSound(CHAN_VOICE)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	BSBB E 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)

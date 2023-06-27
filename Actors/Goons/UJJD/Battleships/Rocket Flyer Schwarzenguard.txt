@@ -36,7 +36,7 @@ Actor GoonRocketFlyer 3895
         BSRF E 6 BRIGHT A_CustomMissile("DroneRocket",32,0,0,0,0)
         Goto see
     Death:
-	TNT1 A 0 A_Stopsound(CHAN_VOICE)
+	TNT1 A 0 A_StopSound(CHAN_VOICE)
 	BSRF G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
     BSRF G 2
     BSRF G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
@@ -46,7 +46,7 @@ Actor GoonRocketFlyer 3895
     BSRF G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     BSRF AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
         TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-        TNT1 A 0 A_GiveToTarget ("Points",1000)
+        TNT1 A 0 A_GiveToTarget("Points",1000)
 		Stop
     }
 }

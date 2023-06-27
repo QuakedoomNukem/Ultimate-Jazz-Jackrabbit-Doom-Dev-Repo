@@ -36,7 +36,7 @@ Actor FanolintTank 3223
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
 		TNT1 AAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-		TNT1 A 0 A_GiveToTarget ("Points",400)
+		TNT1 A 0 A_GiveToTarget("Points",400)
 		Stop
 	}
 }
@@ -63,7 +63,7 @@ Actor HyperTankProj
 		Loop
 	Death:
 		JBLS EFGH 4
-		stop
+		Stop
 	}
 }
 

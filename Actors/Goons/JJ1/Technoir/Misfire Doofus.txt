@@ -33,19 +33,19 @@ Actor TechnoirGoon 3830
     TNGN A 1 
     Goto see
   Death:
-  TNT1 A 0 A_GiveToTarget ("Points",150)
+  TNT1 A 0 A_GiveToTarget("Points",150)
   TNT1 AAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNGN A 5 A_GenericFreezeDeath
     TNGN A 1 A_FreezeDeathChunks
     Wait
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",150)
+	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	TNGN A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 AAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)

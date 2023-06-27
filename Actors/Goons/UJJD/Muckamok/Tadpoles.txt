@@ -1,27 +1,28 @@
 Actor FloppyTadpole 26555
 {
+	//$Category Goons
 	Tag "Floppy Tadpole"
-    Health 50
-    Radius 8
-    Height 10
-    Speed 20
-    PainChance 0
-    Mass 100000
+	Health 50
+	Radius 8
+	Height 10
+	Speed 20
+	PainChance 0
+	Mass 100000
+	MeleeDamage 4
 	DamageFactor "MuckSnot", 0
-  DamageFactor "MuckSnot2", 0
+	DamageFactor "MuckSnot2", 0
 	MONSTER
-    	+SOLID
-		+NOBLOOD
-		+NOINFIGHTING
-		  +COUNTKILL
-+DONTHARMSPECIES
-    MeleeDamage 4
-    States
-    {
-    Spawn:
-        FTDP AB 4 A_Look
-        Loop
-    See:
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	States
+	{
+	Spawn:
+		FTDP AB 4 A_Look
+		Loop
+	See:
 		FTDP A 4 A_Chase
 		FTDP B 0 A_Recoil(-6)
 		FTDP B 10 ThrustThingZ(0,32,0,0)
@@ -29,56 +30,57 @@ Actor FloppyTadpole 26555
 		FTDP B 11
 		FTDP B 1 A_JumpIf(floorz <= 1,"See")
 		FTDP A 4 A_Chase
-        Loop
+		Loop
 	Melee:
 		FTDP C 10 A_FaceTarget
 		FTDP D 6 A_MeleeAttack
 		Goto See
-    Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-       TNT1 A 0 A_GiveToTarget ("Points",100)
-	   Stop
-	   Death.JazzprojFire:
-	   Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	FTDP C 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		Stop
+	Death.JazzprojFire:
+	Burn:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		FTDP C 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	FTDP C 5 A_GenericFreezeDeath
-    FTDP C 1 A_FreezeDeathChunks
-    Wait
-    }
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		FTDP C 5 A_GenericFreezeDeath
+		FTDP C 1 A_FreezeDeathChunks
+		Wait
+	}
 }
 
 Actor JumpingTadpole 3800
 {
+	//$Category Goons
 	Tag "Jumping Tadpole"
-    Health 50
-    Radius 8
-    Height 16
-    Speed 20
-    PainChance 0
-    Mass 1000000
+	Health 50
+	Radius 8
+	Height 16
+	Speed 20
+	PainChance 0
+	Mass 1000000
 	DamageFactor "MuckSnot", 0
-  DamageFactor "MuckSnot2", 0
-  MeleeDamage 4
+	DamageFactor "MuckSnot2", 0
+	MeleeDamage 4
 	MONSTER
-    	+SOLID
-		+NOBLOOD
-		+NOINFIGHTING
-		+COUNTKILL
-+DONTHARMSPECIES
-    States
-    {
-    Spawn:
-        HTDP A 4 A_Look
-        Loop
-    See:
+	+COUNTKILL
+	+DONTHARMSPECIES
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	States
+	{
+	Spawn:
+		HTDP A 4 A_Look
+		Loop
+	See:
 		HTDP A 4 A_Chase
 		HTDP B 0 A_Recoil(-6)
 		HTDP B 10 ThrustThingZ(0,32,0,0)
@@ -86,28 +88,28 @@ Actor JumpingTadpole 3800
 		HTDP B 11
 		HTDP B 1 A_JumpIf(floorz <= 1,"See")
 		HTDP A 4 A_Chase
-        Loop
+		Loop
 	Melee:
 		HTDP A 10 A_FaceTarget
 		HTDP B 6 A_MeleeAttack
 		Goto See
-    Death:
-        TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-       TNT1 A 0 A_GiveToTarget ("Points",100)
-	   Stop
-	   Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	HTDP A 5 A_GenericFreezeDeath
-    HTDP A 1 A_FreezeDeathChunks
-    Wait
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		Stop
+	Death.JazzprojIce:
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		HTDP A 5 A_GenericFreezeDeath
+		HTDP A 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
-	   Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	HTDP A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-    }
+	Burn:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		HTDP A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }

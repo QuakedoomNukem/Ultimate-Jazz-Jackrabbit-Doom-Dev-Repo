@@ -32,19 +32,19 @@ Actor JJASlimer 3848
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		Stop
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		SLIM DD 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		SLIM D 5 A_GenericFreezeDeath
 		SLIM D 1 A_FreezeDeathChunks
 		Wait
@@ -84,19 +84,19 @@ Actor JJAPoisonSlimer 3849
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-		TNT1 A 0 A_GiveToTarget ("Points",200)
+		TNT1 A 0 A_GiveToTarget("Points",200)
 		Stop
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",200)
+		TNT1 A 0 A_GiveToTarget("Points",200)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		GSLM DD 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",200)
+		TNT1 A 0 A_GiveToTarget("Points",200)
 		GSLM D 5 A_GenericFreezeDeath
 		GSLM D 1 A_FreezeDeathChunks
 		Wait
@@ -160,19 +160,19 @@ Actor ChocolateMonster 3926
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		Stop
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		CMON AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_GiveToTarget("Points",100)
 		CMON A 5 A_GenericFreezeDeath
 		CMON A 1 A_FreezeDeathChunks
 		Wait
@@ -235,17 +235,17 @@ Actor LavaSlimer 4050
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-		TNT1 A 0 A_GiveToTarget ("Points",200)
+		TNT1 A 0 A_GiveToTarget("Points",200)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",200)
+		TNT1 A 0 A_GiveToTarget("Points",200)
 		FRSL D 5 A_GenericFreezeDeath
 		FRSL D 1 A_FreezeDeathChunks
 		Wait
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",200)
+		TNT1 A 0 A_GiveToTarget("Points",200)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		FRSL DDD 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)

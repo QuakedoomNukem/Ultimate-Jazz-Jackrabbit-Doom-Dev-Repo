@@ -17,7 +17,7 @@ Actor Dragoon 3295
   +FLOATBOB
   +DROPOFF
   +DONTFALL
-  +DONTHURTSPECIES
+  +DONTHARMCLASS
   +NOINFIGHTING
   +NOBLOOD
   +NOGRAVITY
@@ -45,7 +45,7 @@ Actor Dragoon 3295
       Goto TrueSee
         Death:
 			TNT1 AAAAAAA 0 A_SpawnItemEx("DBodyI1A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-	TNT1 A 0 A_GiveToTarget ("Points",200)
+	TNT1 A 0 A_GiveToTarget("Points",200)
 	Stop
 	TNT1 AAAAAAA 0 A_SpawnItemEx("TailI2A",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
 	Stop

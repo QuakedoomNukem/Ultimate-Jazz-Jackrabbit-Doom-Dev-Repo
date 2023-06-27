@@ -1,52 +1,53 @@
 Actor AtlantisLizard 3874
 {
-   Tag "Atlantis Lizard" 
-   Health 150
-   PainChance 0 
-   Speed 15
-   Radius 12 
-   Height 48 
-   Mass 40000
-   Damage 4
-   MONSTER 
-   +FLOORCLIP
-   +NOBLOOD
-   +SOLID
-   +NOINFIGHTING
-   +DONTHARMSPECIES
-   SeeSound "LIZRDSEE"
-   PainSound "LIZRDPAI"
-  ActiveSound "LIZRDACT"
-   Obituary "$OB_ATLIZ"
-   States 
-   { 
-   Spawn: 
-      LIZU A 10 A_Look 
-      Loop 
-   See: 
-      LIZU ABCD 3 A_Chase 
-      Loop 
-   Melee: 
-      LIZU E 8 A_FaceTarget 
-      LIZU F 8 A_SargAttack 
-      Goto See 
-   Death: 
-	  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-      TNT1 A 0 A_GiveToTarget ("Points",100)
-	  Stop
-	  	Death.JazzprojFire:
-	  	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	LIZU AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
+	//$Category Goons
+	Tag "Atlantis Lizard"
+	Health 150
+	PainChance 0
+	Speed 15
+	Radius 12
+	Height 48
+	Mass 40000
+	Damage 4
+	MONSTER
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	SeeSound "LIZRDSEE"
+	PainSound "LIZRDPAI"
+	ActiveSound "LIZRDACT"
+	Obituary "$OB_ATLIZ"
+	States
+	{
+	Spawn:
+		LIZU A 10 A_Look
+		Loop
+	See:
+		LIZU ABCD 3 A_Chase
+		Loop
+	Melee:
+		LIZU E 8 A_FaceTarget
+		LIZU F 8 A_SargAttack
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		Stop
+	Death.JazzprojFire:
+	Burn:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		LIZU AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	LIZU A 5 A_GenericFreezeDeath
-    LIZU A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget ("Points",100)
+		LIZU A 5 A_GenericFreezeDeath
+		LIZU A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

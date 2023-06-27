@@ -47,7 +47,7 @@ Actor TurtleMech 32525
 		TMCH I 4 Bright A_CustomMissile("DroneRocket",4,0,0,0,0)
 		Goto See
 	Death:
-		TNT1 A 0 A_Stopsound(CHAN_VOICE)
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		TMCH J 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
 		TMCH j 2
 		TMCH j 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
@@ -56,10 +56,10 @@ Actor TurtleMech 32525
 		TMCH j 2
 		TMCH j 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
 		TMCH AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-		TNT1 A 0 A_GiveToTarget ("Points",500)
+		TNT1 A 0 A_GiveToTarget("Points",500)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",500)
+		TNT1 A 0 A_GiveToTarget("Points",500)
 		TMCH A 5 A_GenericFreezeDeath
 		TMCH A 1 A_FreezeDeathChunks
 		Wait

@@ -55,7 +55,7 @@ Actor DracTurtle 3788
     VAMT g 2
     VAMT g 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
     VAMT AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-	TNT1 A 0 A_GiveToTarget ("Points",3500)
+	TNT1 A 0 A_GiveToTarget("Points",3500)
     Stop
   }
 }

@@ -32,7 +32,7 @@ Actor FireChameleon 4049
 		FRCM F 3 Bright A_CustomMissile ("FireShot",28,0,4,0)
 		Goto See
 	Death:
-		TNT1 A 0 A_GiveToTarget ("Points",1000)
+		TNT1 A 0 A_GiveToTarget("Points",1000)
 		FRCM G 3
 		FRCM H 3
 		FRCM I 3
@@ -40,14 +40,14 @@ Actor FireChameleon 4049
 		FRCM K -1
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",1000)
+		TNT1 A 0 A_GiveToTarget("Points",1000)
 		FRCM G 5 A_GenericFreezeDeath
 		FRCM G 1 A_FreezeDeathChunks
 		Wait
 	Death.JazzprojFire:
 	Burn:
 		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_GiveToTarget ("Points",1000)
+		TNT1 A 0 A_GiveToTarget("Points",1000)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
 		FRCM GGG 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)

@@ -65,7 +65,7 @@ Actor MechBoss 31526
 		MBSS L 5 A_SargAttack
 		Goto see
 	Death:
-		TNT1 A 0 A_Stopsound(CHAN_VOICE)
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		MBSS m 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
 		MBSS m 2
 		MBSS m 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
@@ -75,7 +75,7 @@ Actor MechBoss 31526
 		MBSS m 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
 		BMCH AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-		TNT1 A 0 A_GiveToTarget ("Points",6000)
+		TNT1 A 0 A_GiveToTarget("Points",6000)
 		Stop
 	}
 }
@@ -87,7 +87,7 @@ Actor MechBossProj : ArachnotronPlasma
 	DeathSound "PlasmaFI"
 	DamageType Mechboss
 	Height 8
-	+DONTHURTSPECIES
+	+DONTHARMCLASS
 	States
 	{
 	Spawn:
@@ -112,7 +112,7 @@ Actor MechBossHeatSeek
 	+DEHEXPLOSION
 	+ROCKETTRAIL
 	+SCREENSEEKER
-	+DONTHURTSPECIES
+	+DONTHARMCLASS
 	DeathSound "SEEKXPLD"
 	States
 	{
@@ -137,7 +137,7 @@ Actor MechBFGBall
 	Projectile
 	+BRIGHT
 	+RANDOMIZE
-	+DONTHURTSPECIES
+	+DONTHARMCLASS
 	RenderStyle Add
 	DamageType Mechboss
 	DamageType DarkShellBoss

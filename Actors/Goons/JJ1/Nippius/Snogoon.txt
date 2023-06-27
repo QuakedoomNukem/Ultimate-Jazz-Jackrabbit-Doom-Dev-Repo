@@ -30,18 +30,18 @@ Actor Snowman 23006
     Goto See
   Death:
 	TNT1 AAAAAAA 0 A_SpawnItemEx("Snowball",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 A 0 A_GiveToTarget ("Points",100)
+    TNT1 A 0 A_GiveToTarget("Points",100)
 	Stop
 	Death.JazzprojFire:
 	Burn:
 	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
 	SMAN CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
 	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
 	Stop
 	    Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
+	TNT1 A 0 A_GiveToTarget("Points",100)
 	SMAN A 5 A_GenericFreezeDeath
     SMAN A 1 A_FreezeDeathChunks
     Wait

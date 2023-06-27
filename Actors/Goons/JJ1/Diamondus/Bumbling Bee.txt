@@ -1,59 +1,60 @@
 Actor Bee 11911
 {
-  Tag "Bumbling Bee"
-  Health 50
-  Radius 8
-  Height 28
-  Mass 10000
-  Speed 15
-  Damage 6
-  PainChance 0
-  MONSTER
-  +FLOAT
-  +NOGRAVITY
-  +MISSILEMORE
-  +DONTFALL
-  +NOICEDEATH
-   +NOBLOOD
-   +NOINFIGHTING
-   +COUNTKILL
-+DONTHARMSPECIES
-  Obituary "$OB_BEE"
-  States
-  {
-  Spawn:
-    DBEE AB 3 A_Look
-	DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Loop
-  See:
-    DBEE AB 3 A_Chase
-	DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Loop
-  Missile:
-    DBEE C 10 A_FaceTarget
-    DBEE D 4 A_SkullAttack
-    DBEE CD 2
-	 DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
-    Goto Missile+2
-  Death:
-  TNT1 A 0 A_Stopsound(CHAN_VOICE)
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-    Stop
+	//$Category Goons
+	Tag "Bumbling Bee"
+	Health 50
+	Radius 8
+	Height 28
+	Mass 10000
+	Speed 15
+	Damage 6
+	PainChance 0
+	MONSTER
+	+COUNTKILL
+	+DONTFALL
+	+DONTHARMSPECIES
+	+FLOAT
+	+MISSILEMORE
+	+NOBLOOD
+	+NOGRAVITY
+	+NOICEDEATH
+	+NOINFIGHTING
+	Obituary "$OB_BEE"
+	States
+	{
+	Spawn:
+		DBEE AB 3 A_Look
+		DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Loop
+	See:
+		DBEE AB 3 A_Chase
+		DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Loop
+	Missile:
+		DBEE C 10 A_FaceTarget
+		DBEE D 4 A_SkullAttack
+		DBEE CD 2
+		DBEE A 0 A_PlaySoundEx("BEEBUZZ", "SoundSlot7", 1)
+		Goto Missile+2
+	Death:
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	DBEE E 5 A_GenericFreezeDeath
-    DBEE E 1 A_FreezeDeathChunks
-    Wait
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		DBEE E 5 A_GenericFreezeDeath
+		DBEE E 1 A_FreezeDeathChunks
+		Wait
 	Death.JazzprojFire:
 	Burn:
-	TNT1 A 0 A_NoBlocking
-	TNT1 A 0 A_GiveToTarget ("Points",100)
-	TNT1 A 0 A_Stopsound(CHAN_VOICE)
-	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	DBEE E 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		TNT1 A 0 A_StopSound(CHAN_VOICE)
+		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		DBEE E 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		Stop
+	}
 }
