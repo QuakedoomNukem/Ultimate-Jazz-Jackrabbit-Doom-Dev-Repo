@@ -38,7 +38,7 @@ Actor MiniDragon 3836
 		Loop
 	Missile:
 		 MDRG C 15 A_FaceTarget 
-         MDRG D 8 Bright A_CustomMissile("FireLizardBall",56,0,0,0,0)
+         MDRG D 8 BRIGHT A_CustomMissile("FireLizardBall",56,0,0,0,0)
 		 Goto See
 	Jump:
 		MDRG A 8
@@ -60,8 +60,8 @@ Actor MiniDragon 3836
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	MDRG C 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	MDRG C 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
     }

@@ -2,7 +2,7 @@ Actor GoonRocketFlyer 3895
 {
 	Tag "Rocket Flyer Schwarzenguard"
     Health 700
-    Painchance 0
+    PainChance 0
     Speed 8
     Radius 24
 	Height 56

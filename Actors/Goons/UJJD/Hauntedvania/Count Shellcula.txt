@@ -30,18 +30,18 @@ Actor DracTurtle 3788
 		Loop 
 	Missile: 
 		VAMT C 6 A_FaceTarget 
-		VAMT E 8 Bright A_CustomMissile("FireLizardBall",56,0,15,0,0)
+		VAMT E 8 BRIGHT A_CustomMissile("FireLizardBall",56,0,15,0,0)
 		VAMT D 6 A_FaceTarget
-		VAMT F 8 Bright A_CustomMissile("FireLizardBall",56,0,-15,0,0)
+		VAMT F 8 BRIGHT A_CustomMissile("FireLizardBall",56,0,-15,0,0)
 		VAMT A 20 A_FaceTarget
-		VAMT G 1 Bright A_CustomMissile("FireLizardBall",56,0,15,0,0)
-		VAMT G 1 Bright A_CustomMissile("FireLizardBall",56,0,0,0,0)
-		VAMT G 2 Bright A_CustomMissile("FireLizardBall",56,0,-15,0,0)
+		VAMT G 1 BRIGHT A_CustomMissile("FireLizardBall",56,0,15,0,0)
+		VAMT G 1 BRIGHT A_CustomMissile("FireLizardBall",56,0,0,0,0)
+		VAMT G 2 BRIGHT A_CustomMissile("FireLizardBall",56,0,-15,0,0)
 		Goto See
 	Missile2:
 		VAMT A 6 A_FaceTarget
-		VAMT G 10 Bright A_SpawnItemEx("JJBat",56,0,15,0,0)
-		VAMT G 12 Bright A_SpawnItemEx("JJBat",56,0,0,0,0)
+		VAMT G 10 BRIGHT A_SpawnItemEx("JJBat",56,0,15,0,0)
+		VAMT G 12 BRIGHT A_SpawnItemEx("JJBat",56,0,0,0,0)
 		Goto See
 	Pain: 
 		VAMT A 0 

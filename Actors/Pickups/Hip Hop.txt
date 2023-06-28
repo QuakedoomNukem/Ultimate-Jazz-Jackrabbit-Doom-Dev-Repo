@@ -14,7 +14,7 @@ Actor HipHopCage 32532
 		HHOP WY 4
 		Loop
 	Death:
-        HHOP Z -1 A_SpawnItemEx ("HipHop")
+        HHOP Z -1 A_SpawnItemEx("HipHop")
         Stop
   }
 }
@@ -50,22 +50,22 @@ Actor HipHop 32533
   States
   {
   Spawn:
-    HHOP ABCD 3 Bright A_Look
+    HHOP ABCD 3 BRIGHT A_Look
     Loop
   See:
-    HHOP ABCD 3 Bright A_Chase
+    HHOP ABCD 3 BRIGHT A_Chase
     Loop
   Missile:
-    HHOP A 8 Bright A_Jump(150, "Missile2")
-    HHOP B 3 Bright A_FaceTarget
-    HHOP CD 3 Bright A_SkullAttack
-    Goto see
+    HHOP A 8 BRIGHT A_Jump(150, "Missile2")
+    HHOP B 3 BRIGHT A_FaceTarget
+    HHOP CD 3 BRIGHT A_SkullAttack
+    Goto See
   Missile2:
-    hhop cd 3 bright A_FaceTarget
-    hhop cd 4 bright A_FaceTarget
-	hhop cd 8 Bright A_CustomMissile ("HipHopProj",0,0,5,0,0)
-	hhop cd 10 Bright
-	Goto see
+    hhop cd 3 BRIGHT A_FaceTarget
+    hhop cd 4 BRIGHT A_FaceTarget
+	hhop cd 8 BRIGHT A_CustomMissile("HipHopProj",0,0,5,0,0)
+	hhop cd 10 BRIGHT
+	Goto See
   Death:
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8)) 
     Stop
@@ -88,10 +88,10 @@ Actor HipHopProj
   States
   {
   Spawn:
-    HHPJ A 6 Bright
+    HHPJ A 6 BRIGHT
     Loop
   Death:
-    JBLS EFGH 4 Bright
+    JBLS EFGH 4 BRIGHT
     Stop
   }
 }	

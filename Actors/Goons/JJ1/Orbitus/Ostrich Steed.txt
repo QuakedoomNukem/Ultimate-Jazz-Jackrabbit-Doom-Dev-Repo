@@ -29,18 +29,18 @@ Actor OstrichBoss 3796
     OSBS ABCD 3 A_Chase
     Loop
   Missile:
-    OSBS EF 7 Bright A_FaceTarget
-    OSBS G  3 Bright A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
-    OSBS EF 3 Bright A_FaceTarget
-    OSBS G 3 Bright A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
-	OSBS EF 3 Bright A_FaceTarget
-    OSBS G 3 Bright A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
-    OSBS EF 3 Bright A_FaceTarget
-    OSBS G 3 Bright A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
-	OSBS EF 3 Bright A_FaceTarget
-    OSBS G 3 Bright A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
-	OSBS EF 3 Bright A_FaceTarget
-    OSBS G 3 Bright A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
+    OSBS EF 7 BRIGHT A_FaceTarget
+    OSBS G  3 BRIGHT A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
+    OSBS EF 3 BRIGHT A_FaceTarget
+    OSBS G 3 BRIGHT A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
+	OSBS EF 3 BRIGHT A_FaceTarget
+    OSBS G 3 BRIGHT A_CustomMissile("TurtleGoonBullet", 56, -15, 0)
+    OSBS EF 3 BRIGHT A_FaceTarget
+    OSBS G 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
+	OSBS EF 3 BRIGHT A_FaceTarget
+    OSBS G 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
+	OSBS EF 3 BRIGHT A_FaceTarget
+    OSBS G 3 BRIGHT A_CustomMissile("PlasmaGoonPlasma", 56, -15, 0)
     Goto See
   Missile2:
 	OSBS ABC 5 A_FaceTarget

@@ -64,10 +64,10 @@ Actor TechRocket
     States
   {
   Spawn:
-    TRCK A 6 bright
+    TRCK A 6 BRIGHT
     Loop
   Death:
-    JBLS EFGH 4 bright
+    JBLS EFGH 4 BRIGHT
     Stop
    }
 }

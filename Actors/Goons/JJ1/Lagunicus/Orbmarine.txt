@@ -54,7 +54,7 @@ Actor LagunicusMace
    Height 11
    Speed 25
    Damage 3
-   PROJECTILE
+   Projectile
    DeathSound "SEEKXPLD"
    ExplosionDamage 54
    ExplosionRadius 76
@@ -63,13 +63,13 @@ Actor LagunicusMace
   States
   {
   Spawn:
-    LMCE A 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
+    LMCE A 1 BRIGHT A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
 	LMCE A 0 A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
     Loop
   Death:
-   SEKE AB 3 bright
-   SEKE C 3 bright A_Explode (4,32,0)
-   SEKE DEFGHIJKL 3 bright
+   SEKE AB 3 BRIGHT
+   SEKE C 3 BRIGHT A_Explode (4,32,0)
+   SEKE DEFGHIJKL 3 BRIGHT
     Stop
   }
 }

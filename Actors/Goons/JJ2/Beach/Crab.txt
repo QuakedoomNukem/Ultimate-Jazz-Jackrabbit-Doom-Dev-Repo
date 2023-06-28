@@ -27,7 +27,7 @@ Actor Crab 30022
 		Loop
 	Melee:
 		SCZA A 10 A_FaceTarget
-		SCZA B 8 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
+		SCZA B 8 A_CustomMeleeAttack(random (2, 3) *5, "CrabHit", "CrabMiss")
 		SCZA A 5
 		Goto See
 	Death:
@@ -39,8 +39,8 @@ Actor Crab 30022
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",100)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		SCZA A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		SCZA A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:

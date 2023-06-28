@@ -28,15 +28,15 @@ Actor ZoonikBoss1 26561
 		Loop
 	Missile:
 		ZOON E 10 A_FaceTarget
-		ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+		ZOON F 6 BRIGHT A_CustomMissile("TurtleGoonBullet", 25, 5)
 		ZOON E 2 A_FaceTarget
-		ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+		ZOON F 6 BRIGHT A_CustomMissile("TurtleGoonBullet", 25, 5)
 		ZOON E 2 A_FaceTarget
-		ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+		ZOON F 6 BRIGHT A_CustomMissile("TurtleGoonBullet", 25, 5)
 		ZOON E 2 A_FaceTarget
-		ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+		ZOON F 6 BRIGHT A_CustomMissile("TurtleGoonBullet", 25, 5)
 		ZOON E 2 A_FaceTarget
-		ZOON F 6 Bright A_CustomMissile("TurtleGoonBullet", 25, 5)
+		ZOON F 6 BRIGHT A_CustomMissile("TurtleGoonBullet", 25, 5)
 		ZOON E 10
 		Goto See
 	Death:

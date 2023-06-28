@@ -1,152 +1,146 @@
-Actor JazzPlayer : PlayerPawn 
+Actor JazzPlayer : PlayerPawn
 {
-  Speed 1
-  Health 100
-  Radius 16
-  Height 40
-  Mass 100
-  PainChance 255
-  Player.AttackZOffset 16
-  Player.DisplayName "Jazz Jackrabbit"
-  Player.StartItem "LFG2000"
-  Player.StartItem "SpreadGun"
-  Player.StartItem "Slicer"
-  Player.StartItem "Launcher"
-  Player.StartItem "Seeker"
-  Player.StartItem "RFMissile"
-  Player.StartItem "Toaster"
-  Player.StartItem "Frostbiter"
-  Player.StartItem "Railgun"
-  Player.StartItem "ElectroBlaster" 
-  Player.StartItem "TNT", 0 
-  Player.Startitem "HideHUD", 1
-  Player.WeaponSlot 1, "LFG2000"
-  Player.WeaponSlot 2, "SpreadGun"
-  Player.WeaponSlot 3, "Slicer" 
-  Player.WeaponSlot 4, "Launcher"
-  Player.WeaponSlot 5, "Seeker"
-  Player.WeaponSlot 6, "RFMissile"
-  Player.WeaponSlot 7, "Toaster"
-  Player.WeaponSlot 8, "Frostbiter"
-  Player.WeaponSlot 9, "Railgun"
-  Player.WeaponSlot 0, "ElectroBlaster"
-  Player.Jumpz 12.00
-  Player.AirCapacity 0
-  Player.GruntSpeed 48
-  Player.Face "JAZ"
-  Player.SoundClass Jazz
-  +NOBLOOD
-  States
-  {
-  Spawn:
-    JAZZ E 3 A_JumpIf(velz!=0,"Jump")
-    Loop
-  See:
-    JAZZ ABCD 4 A_JumpIf(velz!=0,"Jump")
-    Loop
-  Jump:
-	JAZZ P 4 A_JumpIf(velz<0,"JumpWait")
-	Loop
-  JumpWait:
-	JAZZ Q 1 A_JumpIf(velz==0,"Spawn")
-	Loop
-  Missile:
-    JAZZ F 12 A_JumpIf(velz!=0,"JumpMissile")
-    Goto Spawn
-  JumpMissile:
-	JAZZ R 6 A_JumpIf(velz<0,"JumpMissileWait")
-	Goto Jump
-  JumpMissileWait:
-	JAZZ S 6 A_JumpIf(velz==0,"Spawn")
-	Goto JumpWait
-  Melee:
-    JAZZ G 6 BRIGHT A_JumpIf(velz!=0,"JumpMelee")
-    Goto Missile
-  JumpMelee:
-	JAZZ T 6 BRIGHT A_JumpIf(velz<0,"JumpMeleeWait")
-	Goto Jump
-  JumpMeleeWait:
-	JAZZ U 6 BRIGHT A_JumpIf(velz==0,"Spawn")
-	Goto JumpWait
-  Pain:
-    JAZZ H 4 
-    JAZZ H 4 A_Pain
-    Goto Spawn
-  Death:
-    JAZZ I 6
-    JAZZ J 6 A_PlayerScream
-    JAZZ K 6 A_NoBlocking
-    JAZZ LMN 6
-    JAZZ O -1
-    Stop
+	Speed 1
+	Health 100
+	Radius 16
+	Height 40
+	Mass 100
+	PainChance 255
+	Player.AttackZOffset 16
+	Player.DisplayName "Jazz Jackrabbit"
+	Player.StartItem "LFG2000"
+	Player.StartItem "SpreadGun"
+	Player.StartItem "Slicer"
+	Player.StartItem "Launcher"
+	Player.StartItem "Seeker"
+	Player.StartItem "RFMissile"
+	Player.StartItem "Toaster"
+	Player.StartItem "Frostbiter"
+	Player.StartItem "Railgun"
+	Player.StartItem "ElectroBlaster"
+	Player.StartItem "TNT", 0
+	Player.Startitem "HideHUD", 1
+	Player.WeaponSlot 1, "LFG2000"
+	Player.WeaponSlot 2, "SpreadGun"
+	Player.WeaponSlot 3, "Slicer"
+	Player.WeaponSlot 4, "Launcher"
+	Player.WeaponSlot 5, "Seeker"
+	Player.WeaponSlot 6, "RFMissile"
+	Player.WeaponSlot 7, "Toaster"
+	Player.WeaponSlot 8, "Frostbiter"
+	Player.WeaponSlot 9, "Railgun"
+	Player.WeaponSlot 0, "ElectroBlaster"
+	Player.Jumpz 12.00
+	Player.AirCapacity 0
+	Player.GruntSpeed 48
+	Player.Face "JAZ"
+	Player.SoundClass Jazz
+	+NOBLOOD
+	States
+	{
+	Spawn:
+		JAZZ E 3 A_JumpIf(velz!=0,"Jump")
+		Loop
+	See:
+		JAZZ ABCD 4 A_JumpIf(velz!=0,"Jump")
+		Loop
+	Jump:
+		JAZZ P 4 A_JumpIf(velz<0,"JumpWait")
+		Loop
+	JumpWait:
+		JAZZ Q 1 A_JumpIf(velz==0,"Spawn")
+		Loop
+	Missile:
+		JAZZ F 12 A_JumpIf(velz!=0,"JumpMissile")
+		Goto Spawn
+	JumpMissile:
+		JAZZ R 6 A_JumpIf(velz<0,"JumpMissileWait")
+		Goto Jump
+	JumpMissileWait:
+		JAZZ S 6 A_JumpIf(velz==0,"Spawn")
+		Goto JumpWait
+	Melee:
+		JAZZ G 6 BRIGHT A_JumpIf(velz!=0,"JumpMelee")
+		Goto Missile
+	JumpMelee:
+		JAZZ T 6 BRIGHT A_JumpIf(velz<0,"JumpMeleeWait")
+		Goto Jump
+	JumpMeleeWait:
+		JAZZ U 6 BRIGHT A_JumpIf(velz==0,"Spawn")
+		Goto JumpWait
+	Pain:
+		JAZZ H 4
+		JAZZ H 4 A_Pain
+		Goto Spawn
+	Death:
+		JAZZ I 6
+		JAZZ J 6 A_PlayerScream
+		JAZZ K 6 A_NoBlocking
+		JAZZ LMN 6
+		JAZZ O -1
+		Stop
 	XDeath:
-    JAZZ I 6
-    JAZZ J 6 A_PlayerScream
-    JAZZ K 6 A_NoBlocking
-    JAZZ LMN 6
-    JAZZ O -1
-    Stop
+		JAZZ I 6
+		JAZZ J 6 A_PlayerScream
+		JAZZ K 6 A_NoBlocking
+		JAZZ LMN 6
+		JAZZ O -1
+		Stop
 	Burn:
 	Death.JazzprojFire:
-	TNT1 A 0 A_NoBlocking
-	JAZZ HHH 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
-	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
-	TNT1 A -1
-	Stop
-  }
+		TNT1 A 0 A_NoBlocking
+		JAZZ HHH 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
+		TNT1 A -1
+		Stop
+	}
 }
 
-Actor Jazzpuff : Bulletpuff
+Actor JazzPuff : BulletPuff
 {
-VSpeed 0
-Scale 0.5
-States
-{
-Spawn:
-JPUF ABCDEFGHIJK 1
-Stop
-}
-}
-
-Actor Jazzfirepuff : Jazzpuff
-{
-DamageType JazzProj
+	VSpeed 0
+	Scale 0.5
+	States
+	{
+	Spawn:
+		JPUF ABCDEFGHIJK 1
+		Stop
+	}
 }
 
 Actor Points : Inventory
 {
-  Height 10
-   Inventory.MaxAmount 999999999
-   Inventory.PickupMessage ""
-  +COUNTITEM
-  +INVENTORY.UNDROPPABLE
-  +INVENTORY.ALWAYSPICKUP
-  States
-  {
-  Spawn:
-    CMRT A -1
-    Loop
-  }
-} 
+	Height 10
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.ALWAYSPICKUP
+	+COUNTITEM
+	Inventory.MaxAmount 999999999
+	Inventory.PickupMessage ""
+	States
+	{
+	Spawn:
+		CMRT A -1
+		Loop
+	}
+}
 
 Actor JJBackpack : Backpack 3804
 {
-Inventory.PickupSound "ammoup"
-  Height 26
-  Inventory.PickupMessage "Backpack full of ammo!"
-  +FLOATBOB
-   +NOGRAVITY
-   FloatBobStrength 0.5
-  States
-  {
-  Spawn:
-    JBAG A -1
-    Stop
-  }
+	//$Category Powerups
+	Height 26
+	Inventory.PickupMessage "$PK_JJBAK"
+	Inventory.PickupSound "AMMOUP"
+	+FLOATBOB
+	+NOGRAVITY
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+		JBAG A -1
+		Stop
+	}
 }
 
-Actor HideHUD : Inventory
-{
-	Inventory.MaxAmount 1
-}
+Actor JazzFirePuff : Jazzpuff { DamageType JazzProj }
+Actor HideHUD : Inventory { Inventory.MaxAmount 1 }

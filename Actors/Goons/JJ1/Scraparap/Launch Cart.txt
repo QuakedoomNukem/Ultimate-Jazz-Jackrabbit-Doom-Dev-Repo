@@ -24,8 +24,8 @@ Actor MotoMortar 3735
 		Loop
 	Missile:
 		SCCT C 3 A_FaceTarget
-		SCCT C 4 Bright A_CustomMissile("MotoProj",40,0,0,0,0)
-		SCCT D 8 Bright
+		SCCT C 4 BRIGHT A_CustomMissile("MotoProj",40,0,0,0,0)
+		SCCT D 8 BRIGHT
 		SCCT C 10
 		Goto See
 	Death:

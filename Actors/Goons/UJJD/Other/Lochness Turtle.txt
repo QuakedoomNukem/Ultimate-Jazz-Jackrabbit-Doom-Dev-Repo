@@ -44,8 +44,8 @@ Actor LochnessTurtle 4070
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",250)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		LCHT BBB 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		LCHT BBB 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

@@ -43,7 +43,7 @@ Actor XmasUberSnowTurtle 4095
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",300)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	UBST A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	UBST A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
   }
@@ -62,7 +62,7 @@ Actor Snowball2
 	States
   {
   Spawn:
-    SNW2 AB 4 Bright
+    SNW2 AB 4 BRIGHT
     Loop
   Death:
      TNT1 AAAAAAA 0 A_SpawnItemEx("Snowball",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))

@@ -29,7 +29,7 @@ Actor RocketGoon 3127
 	Missile:
 		TMLR E 15 A_FaceTarget
 		TMLR A 0 A_StartSound("SEEKFIRE")
-		TMLR F 8 Bright A_CustomMissile("Minissiles",25,0,359,0)
+		TMLR F 8 BRIGHT A_CustomMissile("Minissiles",25,0,359,0)
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -45,8 +45,8 @@ Actor RocketGoon 3127
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",500)
 		TNT1 A 0 A_StartSound("FMTRFIRE")
-		TMLR A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TMLR A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

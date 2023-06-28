@@ -27,9 +27,9 @@ Actor ElementGoon5 4037
 		Loop
 	Missile:
 		ELM5 C 40 A_FaceTarget
-		ELM5 D 1 Bright A_CustomMissile("MagicAttack2",32,0,15,0,0)
-		ELM5 D 1 Bright A_CustomMissile("MagicAttack2",32,0,0,0,0)
-		ELM5 D 2 Bright A_CustomMissile("MagicAttack2",32,0,-15,0,0)
+		ELM5 D 1 BRIGHT A_CustomMissile("MagicAttack2",32,0,15,0,0)
+		ELM5 D 1 BRIGHT A_CustomMissile("MagicAttack2",32,0,0,0,0)
+		ELM5 D 2 BRIGHT A_CustomMissile("MagicAttack2",32,0,-15,0,0)
 		ELM5 D 4
 		Goto See
 	Death:

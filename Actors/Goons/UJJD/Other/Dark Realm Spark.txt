@@ -25,7 +25,7 @@ Actor DarkSparks1 4076
 		Loop
 	See:
 		TNT1 A 0 A_JumpIfInTargetLOS("Seen", 130)
-		DSPK ABABABABABAB 1 Bright A_Chase
+		DSPK ABABABABABAB 1 BRIGHT A_Chase
 		Loop
 	Seen:
 		TNT1 A 0

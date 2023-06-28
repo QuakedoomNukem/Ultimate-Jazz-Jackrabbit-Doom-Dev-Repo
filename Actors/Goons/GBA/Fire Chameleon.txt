@@ -26,10 +26,10 @@ Actor FireChameleon 4049
 		Loop
 	Missile:
 		FRCM E 15 A_FaceTarget
-		FRCM E 8 Bright A_FaceTarget
-		FRCM E 0 Bright A_CustomMissile("FireShot",28,0,0,0)
-		FRCM E 0 Bright A_CustomMissile("FireShot",28,0,-4,0)
-		FRCM F 3 Bright A_CustomMissile("FireShot",28,0,4,0)
+		FRCM E 8 BRIGHT A_FaceTarget
+		FRCM E 0 BRIGHT A_CustomMissile("FireShot",28,0,0,0)
+		FRCM E 0 BRIGHT A_CustomMissile("FireShot",28,0,-4,0)
+		FRCM F 3 BRIGHT A_CustomMissile("FireShot",28,0,4,0)
 		Goto See
 	Death:
 		TNT1 A 0 A_GiveToTarget("Points",1000)
@@ -49,8 +49,8 @@ Actor FireChameleon 4049
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",1000)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		FRCM GGG 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		FRCM GGG 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

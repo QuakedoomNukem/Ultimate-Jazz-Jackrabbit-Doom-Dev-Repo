@@ -24,27 +24,27 @@ Actor Lizard 30025
 	States
 	{
 	Spawn:
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ ABC 3 A_Look
 		Loop
 	See:
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ ABC 3 A_Chase
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ DAB 3 A_Chase
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ CDA 3 A_Chase
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ BCD 3 A_Chase
 		Loop
 	Missile:
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ BCD 3 A_FaceTarget
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ E 3 A_FaceTarget
 		FLIZ F 3 A_FaceTarget
 		FLIZ G 3 A_CustomMissile("LizardBomb")
-		FLIZ A 0 A_PlaySound ("HELILoop")
+		FLIZ A 0 A_PlaySound("HELILoop")
 		FLIZ D 3 
 		Goto See
 	Death:
@@ -66,9 +66,9 @@ Actor Lizard 30025
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		TNT1 A 0 A_GiveToTarget("Points",200)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		FLIZ AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
+		FLIZ AAA 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
 		FLIZ A 0 A_SpawnItemEx("LizardPropeller",0,0,8,0,0,16)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}
@@ -83,7 +83,7 @@ Actor LizardBomb
 	Gravity 0.1
 	ExplosionDamage 32
 	ExplosionRadius 96
-	PROJECTILE
+	Projectile
 	-NOGRAVITY
 	+BRIGHT
 	DeathSound "SEEKXPLD"
@@ -108,19 +108,19 @@ Actor LizardPropeller
 	Height 32
 	Speed 15
 	Damage 8
-	PROJECTILE
+	Projectile
 	States
 	{
 	Spawn:
-		PRPL ABCD 3 A_PlaySound ("HELILoop")
+		PRPL ABCD 3 A_PlaySound("HELILoop")
 		Loop
 	Death:
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
-		TNT1 A 0 A_PlaySound ("SEEKXPLD")
-		SBLL A 3 Bright
-		BOMB M 0 Bright A_SetTranslucent (0.75,1)
-		BOMB M 3 Bright A_Explode(32,96)
-		BOMB NOPQRS 3 bright
+		TNT1 A 0 A_PlaySound("SEEKXPLD")
+		SBLL A 3 BRIGHT
+		BOMB M 0 BRIGHT A_SetTranslucent (0.75,1)
+		BOMB M 3 BRIGHT A_Explode(32,96)
+		BOMB NOPQRS 3 BRIGHT
 		Stop
 	}
 }

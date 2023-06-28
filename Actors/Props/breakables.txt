@@ -35,7 +35,7 @@ Actor CeraPot 3399
 	{
 	Spawn:
 		CERA B 0
-		CERA B 0 A_Jump (256, "PotA", "PotB")
+		CERA B 0 A_Jump(256, "PotA", "PotB")
 	PotA:
 		CERA B -1
 		Stop
@@ -67,7 +67,7 @@ Actor GlassSpawner 4125
 		PLEX A 4
 		Loop
 	Death:
-		TNT1 A 0 A_StartSound ("JJGLASS")
+		TNT1 A 0 A_StartSound("JJGLASS")
 		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("GlassPiece",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		Stop
 	}
@@ -87,7 +87,7 @@ Actor GlassPiece
 	WallBounceFactor 0.7
 	Gravity 0.3
 	RenderStyle Add
-	PROJECTILE
+	Projectile
 	-ACTIVATEIMPACT
 	-ACTIVATEPCROSS
 	-FLATSPRITE

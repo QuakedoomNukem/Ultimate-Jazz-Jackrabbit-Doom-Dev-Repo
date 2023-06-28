@@ -28,15 +28,15 @@ Actor GiantTurtle 3902
 		GGON ABCD 4 A_Chase 
 		Loop 
 	Missile:
-		GGON E 15 Bright A_FaceTarget
-		GGON F 1 Bright A_CustomMissile("MuckSnot2",56,0,15,0,0)
-		GGON F 1 Bright A_CustomMissile("MuckSnot2",56,0,0,0,0)
-		GGON F 2 Bright A_CustomMissile("MuckSnot2",56,0,-15,0,0)
-		GGON E 6 Bright
+		GGON E 15 BRIGHT A_FaceTarget
+		GGON F 1 BRIGHT A_CustomMissile("MuckSnot2",56,0,15,0,0)
+		GGON F 1 BRIGHT A_CustomMissile("MuckSnot2",56,0,0,0,0)
+		GGON F 2 BRIGHT A_CustomMissile("MuckSnot2",56,0,-15,0,0)
+		GGON E 6 BRIGHT
 		Goto See
 	Melee:
 		GGON B 20 A_FaceTarget
-		GGON C 8 A_CustomMeleeAttack (random (3, 5) *8, "GIANTMEL", "GIANTMEL")
+		GGON C 8 A_CustomMeleeAttack(random (3, 5) *8, "GIANTMEL", "GIANTMEL")
 		GGON C 8
 		Goto See
 	Death: 

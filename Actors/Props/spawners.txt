@@ -30,7 +30,7 @@ Actor BigMushroomSpawner 3275
 	{
 	Spawn:
 		DNCM A 0
-		TNT1 A 0 A_Jump (256, "BigMush1","BigMush2","BigMush3","BigMush4")
+		TNT1 A 0 A_Jump(256, "BigMush1","BigMush2","BigMush3","BigMush4")
 	BigMush1:
 		DNCM A -1
 		Stop
@@ -54,7 +54,7 @@ Actor SmallMushroomSpawner : BigMushroomSpawner 3276
 	{
 	Spawn:
 		DNCM E 0
-		TNT1 A 0 A_Jump (256, "SmMush1","SmMush2","SmMush3","SmMush4")
+		TNT1 A 0 A_Jump(256, "SmMush1","SmMush2","SmMush3","SmMush4")
 	SmMush1:
 		DNCM E -1
 		Stop
@@ -129,7 +129,7 @@ Actor CastleArmorSpawner 3393
 	{
 	Spawn:
 		CAST D 0
-		CAST D 0 A_Jump (256, "Armour1", "Armour2")
+		CAST D 0 A_Jump(256, "Armour1", "Armour2")
 	Armour1:
 		TNT1 A 0 A_SpawnItemEx("CastleArmour1",0,0,0,0,0,0,0,0,0,16)
 		Stop
@@ -175,7 +175,7 @@ Actor DiamondusFlowerSpawner : SimpleActor 3953 //zscript inheritances
 	{
 	Spawn:
 		DMDS M 0
-		DMDS M 0 A_Jump (256, "Flower1", "Flower2", "Flower3", "Flower4","Flower5","Flower6")
+		DMDS M 0 A_Jump(256, "Flower1", "Flower2", "Flower3", "Flower4","Flower5","Flower6")
 	Flower1:
 		DMDS M -1
 		Stop
@@ -203,7 +203,7 @@ Actor DiamondusTreeSpawner : SimpleActor 3952 //zscript inheritances
 	{
 	Spawn:
 		DMDS B 0
-		DMDS B 0 A_Jump (256, "SkyboxTree1", "SkyboxTree2", "SkyboxTree3", "SkyboxTree4")
+		DMDS B 0 A_Jump(256, "SkyboxTree1", "SkyboxTree2", "SkyboxTree3", "SkyboxTree4")
 	SkyboxTree1:
 		DMDS B -1
 		Stop
@@ -228,7 +228,7 @@ Actor DreamlandGrassSpawner 31525
 	{
 	Spawn:
 		DLPP A 0
-		TNT1 A 0 A_Jump (256, "DLFlower1","DLFlower2","DLFlower3")
+		TNT1 A 0 A_Jump(256, "DLFlower1","DLFlower2","DLFlower3")
 	DLFlower1:
 		DLPP A -1
 		Stop
@@ -251,7 +251,7 @@ Actor DreamlandSuckerSpawner 3912
 	{
 	Spawn:
 		DLPP H 0
-		TNT1 A 0 A_Jump (256, "Sucker1","Sucker2","Sucker3")
+		TNT1 A 0 A_Jump(256, "Sucker1","Sucker2","Sucker3")
 	Sucker1:
 		DLPP H -1
 		Stop
@@ -270,7 +270,7 @@ Actor DreamlandSuckerSpawner2 : DreamlandSuckerSpawner 3914
 	{
 	Spawn:
 		DLPP L 0
-		TNT1 A 0 A_Jump (256, "DLSucker4","DLSucker5","DLSucker6","DLSucker7")
+		TNT1 A 0 A_Jump(256, "DLSucker4","DLSucker5","DLSucker6","DLSucker7")
 	DLSucker4:
 		DLPP L -1
 		Stop
@@ -295,7 +295,7 @@ Actor FlowerSpawner 3303
 	{
 	Spawn:
 		FLWR A 0
-		TNT1 A 0 A_Jump (256, "Flower1","Flower2","Flower3")
+		TNT1 A 0 A_Jump(256, "Flower1","Flower2","Flower3")
 	Flower1:
 		FLWR A -1
 		Stop
@@ -315,7 +315,7 @@ Actor GreenSpikeSpawner : FlowerSpawner 3310
 	{
 	Spawn:
 		GSPK A 0
-		TNT1 A 0 A_Jump (256, "GSpike1","GSpike2","GSpike3","GSpike4","GSpike5","GSpike6")
+		TNT1 A 0 A_Jump(256, "GSpike1","GSpike2","GSpike3","GSpike4","GSpike5","GSpike6")
 	GSpike1:
 		GSPK A -1
 		Stop
@@ -345,7 +345,7 @@ Actor JazzStuffTwo 32493
 	{
 	Spawn:
 		GLLM A 0
-		TNT1 A 0 A_Jump (256, "Shroom1", "Shroom2", "Shroom3", "Shroom4", "Shroom5")
+		TNT1 A 0 A_Jump(256, "Shroom1", "Shroom2", "Shroom3", "Shroom4", "Shroom5")
 	Shroom1:
 		GLLM A -1
 		Stop
@@ -373,7 +373,7 @@ Actor LagunicusRockSpawner 3878
 	{
 	Spawn:
 		LAGP E 0
-		LAGP E 0 A_Jump (256, "LRock1","LRock2","LRock3")
+		LAGP E 0 A_Jump(256, "LRock1","LRock2","LRock3")
 	LRock1:
 		LAGP E -1
 		Stop
@@ -392,7 +392,7 @@ Actor LagunicusStarfishSpawner : LagunicusRockSpawner 3877
 	{
 	Spawn:
 		LAGP A 0
-		LAGP A 0 A_Jump (256, "Sfish1","Sfish2","Sfish3","Sfish4")
+		LAGP A 0 A_Jump(256, "Sfish1","Sfish2","Sfish3","Sfish4")
 	Sfish1:
 		LAGP A -1
 		Stop
@@ -434,7 +434,7 @@ Actor MedivoRemixFlagSpawner : SimpleActor 4012 //zscript inheritances
 	{
 	Spawn:
 		MEDF A 0
-		MEDF A 0 A_Jump (256, "FLAG1", "FLAG2", "FLAG3")
+		MEDF A 0 A_Jump(256, "FLAG1", "FLAG2", "FLAG3")
 	FLAG1:
 		MEDF ABCDEFG 2
 		Loop
@@ -455,7 +455,7 @@ Actor PoopSpawner 3837
 	{
 	Spawn:
 		POOP A 0
-		POOP A 0 A_Jump (256, "Poop1","Poop2","Poop3")
+		POOP A 0 A_Jump(256, "Poop1","Poop2","Poop3")
 	Poop1:
 		POOP A -1
 		Stop
@@ -477,7 +477,7 @@ Actor RaneforesCactusSpawner 3884
 	{
 	Spawn:
 		RANP A 0
-		RANP A 0 A_Jump (256, "RCactus1","RCactus2","RCactus3")
+		RANP A 0 A_Jump(256, "RCactus1","RCactus2","RCactus3")
 	RCactus1:
 		RANP A -1
 		Stop
@@ -499,7 +499,7 @@ Actor SpikeBallSpawner 3308
 	{
 	Spawn:
 		SBAL A 0
-		TNT1 A 0 A_Jump (256, "SpikeBall1","SpikeBall2")
+		TNT1 A 0 A_Jump(256, "SpikeBall1","SpikeBall2")
 	SpikeBall1:
 		SBAL A -1
 		Stop
@@ -515,7 +515,7 @@ Actor TubeRemixSkyboxTowers 3971
 	{
 	Spawn:
 		TBER E 0
-		TNT1 A 0 A_Jump (256, "Tower1", "Tower2", "Tower3")
+		TNT1 A 0 A_Jump(256, "Tower1", "Tower2", "Tower3")
 	Tower1:
 		TBER E -1
 		Stop
@@ -539,7 +539,7 @@ Actor XmasBlockSpawner 4083
 	{
 	Spawn:
 		XMAS B 0
-		TNT1 A 0 A_Jump (256, "Block1","Block2","Block3","Block4","Block5","Block6")
+		TNT1 A 0 A_Jump(256, "Block1","Block2","Block3","Block4","Block5","Block6")
 	Block1:
 		XMAS B -1
 		Stop

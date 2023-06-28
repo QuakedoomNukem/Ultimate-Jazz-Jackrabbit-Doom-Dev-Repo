@@ -30,9 +30,9 @@ Actor ShadowHound 3787
 		Loop 
 	Missile: 
 		SDOG A 15 A_FaceTarget 
-		SDOG A 8 Bright A_CustomMissile("FTFire")
-		SDOG A 8 Bright A_CustomMissile("FTFire")
-		SDOG A 8 Bright A_CustomMissile("FTFire")
+		SDOG A 8 BRIGHT A_CustomMissile("FTFire")
+		SDOG A 8 BRIGHT A_CustomMissile("FTFire")
+		SDOG A 8 BRIGHT A_CustomMissile("FTFire")
 		Goto See 
 	Death: 
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -43,8 +43,8 @@ Actor ShadowHound 3787
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",250)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		SDOG AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		SDOG AAA 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:

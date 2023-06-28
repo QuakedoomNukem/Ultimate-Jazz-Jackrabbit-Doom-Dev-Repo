@@ -39,7 +39,7 @@ Actor JumpingTurtle 3876
 		Goto Jump+4
 	Melee:
 		 JUTL ABC 4 A_FaceTarget 
-         JUTL D 4 Bright A_SargAttack
+         JUTL D 4 BRIGHT A_SargAttack
 		 Goto See
 	Jump:
         JUTL A 4
@@ -65,8 +65,8 @@ Actor JumpingTurtle 3876
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	JUTL A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	JUTL A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
     }

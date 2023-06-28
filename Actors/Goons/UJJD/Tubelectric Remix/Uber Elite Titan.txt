@@ -27,31 +27,31 @@ Actor UberEliteTurtleGuard 4011
     UBEL AABBCCDD 4 A_Chase
     Loop
   Missile:
-    UBEL E 10 Bright A_FaceTarget
-    UBEL F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile("DroneRocket",32,20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile("DroneRocket",32,-20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile("DroneRocket",32,-20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile("DroneRocket",32,20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-	UBEL F 1 Bright A_CustomMissile("DroneRocket",32,-20,0,0,0)
-	UBEL E 5 Bright A_FaceTarget
-    UBEL G 1 Bright A_CustomMissile("DroneRocket",32,20,0,0,0)
-	UBEL E 5 Bright
+    UBEL E 10 BRIGHT A_FaceTarget
+    UBEL F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+    UBEL G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+	UBEL F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+    UBEL G 1 BRIGHT A_CustomMissile("DroneRocket",32,20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+	UBEL F 1 BRIGHT A_CustomMissile("DroneRocket",32,-20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+    UBEL G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+	UBEL F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+    UBEL G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+	UBEL F 1 BRIGHT A_CustomMissile("DroneRocket",32,-20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+    UBEL G 1 BRIGHT A_CustomMissile("DroneRocket",32,20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+	UBEL F 1 BRIGHT A_CustomMissile("DroneRocket",32,-20,0,0,0)
+	UBEL E 5 BRIGHT A_FaceTarget
+    UBEL G 1 BRIGHT A_CustomMissile("DroneRocket",32,20,0,0,0)
+	UBEL E 5 BRIGHT
 	Goto See
     Death:
 	TNT1 A 0 A_GiveToTarget("Points",3000)

@@ -30,7 +30,7 @@ Actor Helmut 14564
 		PRIM AABBCCDD 3 A_Chase
 		Loop
 	Missile:
-		PRIM E 0 A_JumpIfcloser(128, 2)
+		PRIM E 0 A_JumpIfCloser(128, 2)
 		Goto See
 		PRIM A 5 A_FaceTarget 
 		PRIM A 5 A_FaceTarget 
@@ -52,8 +52,8 @@ Actor Helmut 14564
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",100)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		PRIM AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		PRIM AAA 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

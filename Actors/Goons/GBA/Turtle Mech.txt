@@ -32,19 +32,19 @@ Actor TurtleMech 32525
 	Missile:
 		TMCH E 10 A_FaceTarget
 		TMCH F 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		TMCH G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
+		TMCH G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
 		TMCH E 2 A_FaceTarget
 		//TMCH F 0 A_PlaySound("Saurian/SMG", CHAN_WEAPON)
-		TMCH G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
+		TMCH G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
 		TMCH E 2 A_FaceTarget
 		//TMCH F 0 A_PlaySound("Saurian/SMG", CHAN_WEAPON)
-		TMCH G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
+		TMCH G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzpuff")
 		TMCH E 2 A_FaceTarget
 		TMCH E 0 A_SentinelRefire
 		TMCH E 10 A_FaceTarget
-		TMCH E 8 Bright A_CustomMissile("FTFire")
+		TMCH E 8 BRIGHT A_CustomMissile("FTFire")
 		TMCH H 10 A_FaceTarget
-		TMCH I 4 Bright A_CustomMissile("DroneRocket",4,0,0,0,0)
+		TMCH I 4 BRIGHT A_CustomMissile("DroneRocket",4,0,0,0,0)
 		Goto See
 	Death:
 		TNT1 A 0 A_StopSound(CHAN_VOICE)

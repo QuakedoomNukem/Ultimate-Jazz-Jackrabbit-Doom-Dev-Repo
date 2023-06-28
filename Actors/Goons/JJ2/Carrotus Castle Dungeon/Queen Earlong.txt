@@ -37,7 +37,7 @@ MONSTER
     Missile:
 		TNT1 A 0 A_UnSetInvulnerable
 		QNEL A 8 A_FaceTarget
-		TNT1 A 0 A_PlaySound ("QUEENSCM", CHAN_AUTO, 1, False, ATTN_NONE)
+		TNT1 A 0 A_PlaySound("QUEENSCM", CHAN_AUTO, 1, False, ATTN_NONE)
 		QNEL B 50 ACS_Execute(8)
 		QNEL A 10 A_FaceTarget
 		TNT1 A 0 ThrustThingZ(0,32,0,0)
@@ -51,7 +51,7 @@ MONSTER
     Goto See
     Death:
 	TNT1 A 0 A_GiveToTarget("Points",5000)
-	TNT1 A 0 A_PlaySound ("QUEENSCM", CHAN_AUTO, 1, False, ATTN_NONE)
+	TNT1 A 0 A_PlaySound("QUEENSCM", CHAN_AUTO, 1, False, ATTN_NONE)
 	TNT1 A 0 A_StopSound
     QNEL B 2 ThrustThingZ(0, random(2, 8), 0, 0)
     QNEL B 0 ThrustThing(random(0, 255), random(2, 8), 0, 0)
@@ -114,7 +114,7 @@ Actor FallingBrick
   States
   {
   Spawn:
-    QBRK A 1 Bright
+    QBRK A 1 BRIGHT
     Loop
   Death:
     QBRK A 2

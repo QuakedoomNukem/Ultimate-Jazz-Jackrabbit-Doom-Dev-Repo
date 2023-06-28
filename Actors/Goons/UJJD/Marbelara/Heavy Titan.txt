@@ -28,35 +28,35 @@ Actor HeavyTitan 32766
 		DPOS AABBCCDD 3 A_Chase
 		Loop
 	Missile:
-		DPOS E 10 Bright A_FaceTarget
-		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS F 1 Bright A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
-		DPOS E 5 Bright A_FaceTarget
-		DPOS G 1 Bright A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
-		DPOS E 5 Bright
+		DPOS E 10 BRIGHT A_FaceTarget
+		DPOS F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS F 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,-20,0,0,0)
+		DPOS E 5 BRIGHT A_FaceTarget
+		DPOS G 1 BRIGHT A_CustomMissile("TurtleGoonBullet",32,20,0,0,0)
+		DPOS E 5 BRIGHT
 		Goto See
 	Death:
 		DPOS A 0 A_GiveToTarget("Points",1500)
-		DPOS A 0 A_PlaySound ("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)
+		DPOS A 0 A_PlaySound("BEEBUZZ", CHAN_AUTO, 1, False, ATTN_NONE)
 		DPOS A 0 A_StopSound
 		DPOS A 0 A_Scream
 		DPOS B 2 ThrustThingZ(0, random(2, 8), 0, 0)

@@ -26,9 +26,9 @@ Actor XmasHolidayBoss 4097
     Loop
 	Missile:
     HBOS E 20 A_FaceTarget
-	HBOS F 1 Bright A_CustomMissile("Snowball2",0,0,15,0,0)
-	HBOS F 1 Bright A_CustomMissile("Snowball2",0,0,0,0,0)
-    HBOS F 2 Bright A_CustomMissile("Snowball2",0,0,-15,0,0)
+	HBOS F 1 BRIGHT A_CustomMissile("Snowball2",0,0,15,0,0)
+	HBOS F 1 BRIGHT A_CustomMissile("Snowball2",0,0,0,0,0)
+    HBOS F 2 BRIGHT A_CustomMissile("Snowball2",0,0,-15,0,0)
     Goto See
    Death: 
     HBOS A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)

@@ -36,27 +36,27 @@ Actor MechBoss 31526
 		Loop
 	Missile:
 		MBSS F 20 A_FaceTarget
-		MBSS G 2 Bright A_CustomMissile("MechBossHeatSeek",32,32,0,0,0)
+		MBSS G 2 BRIGHT A_CustomMissile("MechBossHeatSeek",32,32,0,0,0)
 		MBSS F 10 A_FaceTarget
-		MBSS G 2 Bright A_CustomMissile("MechBossHeatSeek",32,32,0,0,0)
+		MBSS G 2 BRIGHT A_CustomMissile("MechBossHeatSeek",32,32,0,0,0)
 		MBSS F 10 A_FaceTarget
-		MBSS G 2 Bright A_CustomMissile("MechBossHeatSeek",32,32,0,0,0)
+		MBSS G 2 BRIGHT A_CustomMissile("MechBossHeatSeek",32,32,0,0,0)
 		MBSS I 10 A_FaceTarget
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
 		MBSS I 10 A_FaceTarget
-		MBSS h 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS h 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
 		MBSS i 10 A_FaceTarget
-		MBSS h 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
-		MBSS H 4 Bright A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS h 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
+		MBSS H 4 BRIGHT A_CustomMissile("MechBossProj",32,-32,0,0,0)
 		MBSS A 20 A_FaceTarget
-		MBSS J 20 A_PlaySound ("mbfgfire")
-		MBSS K 10 Bright
-		MBSS L 20 Bright A_CustomMissile("MechBFGBall",32,0,0,0,0)
+		MBSS J 20 A_PlaySound("mbfgfire")
+		MBSS K 10 BRIGHT
+		MBSS L 20 BRIGHT A_CustomMissile("MechBFGBall",32,0,0,0,0)
 		MBSS J 20 A_FaceTarget
 		Goto See
 	Melee:
@@ -91,10 +91,10 @@ Actor MechBossProj : ArachnotronPlasma
 	States
 	{
 	Spawn:
-		MPLS AB 3 Bright
+		MPLS AB 3 BRIGHT
 		Loop
 	Death:
-		MPLS CDEFGHI 3 Bright
+		MPLS CDEFGHI 3 BRIGHT
 		Stop
 	}
 }
@@ -117,13 +117,13 @@ Actor MechBossHeatSeek
 	States
 	{
 	Spawn:
-		HRKT A 1 bright A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
+		HRKT A 1 BRIGHT A_SeekerMissile(9,6,SMF_LOOK|SMF_CURSPEED,75,10)
 		HRKT A 0 A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
 		Loop
 	Death:
-		SEKE AB 3 bright
-		SEKE C 3 bright A_Explode (4,32,0)
-		SEKE DEFGHIJKL 3 bright
+		SEKE AB 3 BRIGHT
+		SEKE C 3 BRIGHT A_Explode (4,32,0)
+		SEKE DEFGHIJKL 3 BRIGHT
 		Stop
 	}
 }

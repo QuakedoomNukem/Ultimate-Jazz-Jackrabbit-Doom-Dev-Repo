@@ -28,7 +28,7 @@ Actor BigSparks 11913
 		Loop
 	Missile:
 		BSPK EFEFEFEFEF 1 A_FaceTarget
-		BSPK F 1 Bright A_CustomMissile("SparkBall")
+		BSPK F 1 BRIGHT A_CustomMissile("SparkBall")
 		BSPK ABAB 1
 		Goto See
 	Death:

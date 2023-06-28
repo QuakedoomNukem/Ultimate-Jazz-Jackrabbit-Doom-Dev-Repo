@@ -30,7 +30,7 @@ Actor FloatingSucker 25626
 	Melee:
 		FLSU AM 6 A_FaceTarget
 		FLSU A 1 A_SargAttack
-		Goto see
+		Goto See
 	Death:
 		DFTF A 4 A_SpawnItemEx("DeflatedSuckerFart")
 		TNT1 A 0 A_PlaySound("suckfart")
@@ -94,7 +94,7 @@ Actor DeflatedSucker 4112
 	Melee:
 		DFTS ABC 6 A_FaceTarget
 		DFTS D 1 A_SargAttack
-		Goto see
+		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 		TNT1 A 0 A_GiveToTarget("Points",50)
@@ -104,8 +104,8 @@ Actor DeflatedSucker 4112
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",50)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		DFTS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		DFTS A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:

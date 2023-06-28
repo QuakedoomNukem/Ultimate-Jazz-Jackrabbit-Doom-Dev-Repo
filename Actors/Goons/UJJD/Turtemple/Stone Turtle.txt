@@ -30,132 +30,132 @@ Actor StoneTurtle 3903
 		Loop
 	Missile:
 		TNT1 A 0
-		STNT H 0 A_Jump (256, "Boulder", "LaserEyes")
+		STNT H 0 A_Jump(256, "Boulder", "LaserEyes")
 	Boulder:
 		STNT F 16 A_FaceTarget
-		STNT G 8 Bright A_CustomMissile("MegairBoulder",56,0,0,0,0)
-		STNT G 6 Bright
+		STNT G 8 BRIGHT A_CustomMissile("MegairBoulder",56,0,0,0,0)
+		STNT G 6 BRIGHT
 		Goto See
 	LaserEyes:
-		STNT H 0 A_Jump (256, "REye", "LEye")
+		STNT H 0 A_Jump(256, "REye", "LEye")
 		Stop
 	REye:
 		STNT H 10 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -6, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -6, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 0 A_PlaySoundEx ("LasEYATK", "SoundSlot5", 1, 0)
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5.75, 1)
+		STNT H 0 A_PlaySoundEx("LasEYATK", "SoundSlot5", 1, 0)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -5.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -5.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -5.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -4.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -4.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -4.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -4, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -4, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -3.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -3.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -3.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -3, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -3, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -2.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -2.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -2.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -2, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -2, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -1.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -1.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -1.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -1, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -1, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -0.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -0.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -0.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -0.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, -0.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, -0.25, 1)
 		STNT H 0 A_FaceTarget
 		Goto LockedOn
 	LEye:
 		STNT H 10 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 6, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 6, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 0 A_PlaySoundEx ("LasEYATK", "SoundSlot5", 1, 0)
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5.75, 1)
+		STNT H 0 A_PlaySoundEx("LasEYATK", "SoundSlot5", 1, 0)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 5.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 5.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 5.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 4.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 4.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 4.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 4, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 4, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 3.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 3.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 3.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 3, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 3, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 2.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 2.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 2.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 2, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 2, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 1.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 1.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 1.25, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 1, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 1, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0.75, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 0.75, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0.5, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 0.5, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0.25, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 0.25, 1)
 		STNT H 0 A_FaceTarget
 		Goto LockedOn
 	LockedOn:
-		STNT H 1 bright A_CustomMissile ("LaserEyeProj", 56, 8, 0, 1)
+		STNT H 1 BRIGHT A_CustomMissile("LaserEyeProj", 56, 8, 0, 1)
 		STNT H 0 A_FaceTarget
-		STNT H 0 A_Jump (8, "See")
+		STNT H 0 A_Jump(8, "See")
 		STNT H 0 A_CPosRefire
 		Goto LockedOn
 	Death:
 		STNT H 0 A_StopSoundEx ("SoundSlot5")
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-		TNT1 A 0 A_GiveToTarget ("Points",800)
+		TNT1 A 0 A_GiveToTarget("Points",800)
 		Stop
 	Death.JazzprojIce:
-		TNT1 A 0 A_GiveToTarget ("Points",800)
+		TNT1 A 0 A_GiveToTarget("Points",800)
 		STNT A 5 A_GenericFreezeDeath
 		STNT A 1 A_FreezeDeathChunks
 		Wait
@@ -221,7 +221,7 @@ Actor LaserEyeTrail
 	{
 	Spawn:
 		TBEA M 0
-		TBEA M 0 A_Jump (256, "N", "O", "P")
+		TBEA M 0 A_Jump(256, "N", "O", "P")
 		Stop
 	N:
 		TBEA N 2

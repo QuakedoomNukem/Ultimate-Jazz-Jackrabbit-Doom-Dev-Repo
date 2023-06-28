@@ -28,7 +28,7 @@ Actor Bubble
 	Speed 1
 	Alpha 0.9
 	RenderStyle Add
-	PROJECTILE
+	Projectile
 	+FORCEXYBILLBOARD
 	States
 	{
@@ -69,7 +69,7 @@ Actor BubbleSpawner 504
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 2 A_SpawnItemEx ("Bubble", random (-16, 16), 0, 0, 0, 0, 2, random (0, 360), 0, 128)
+		TNT1 A 2 A_SpawnItemEx("Bubble", random (-16, 16), 0, 0, 0, 0, 2, random (0, 360), 0, 128)
 		Loop
 	}
 }
@@ -426,10 +426,10 @@ Actor SnowSpawner 3615
 		TNT1 A 0
 		TNT1 A 0 A_CheckSight("Unsighted")
 		TNT1 A 0 A_JumpIf(Args[2] > 0, "Circle")
-		TNT1 A 8 A_SpawnItemEx ("SnowParticle", Random(-Args[0], -Args[0]), Random(-Args[0], -Args[0]), 0, frandom(-1.0, 1.0), frandom(-1.0, 1.0), frandom(-1.0, -3.0), 0, 128, Args[1])
+		TNT1 A 8 A_SpawnItemEx("SnowParticle", Random(-Args[0], -Args[0]), Random(-Args[0], -Args[0]), 0, frandom(-1.0, 1.0), frandom(-1.0, 1.0), frandom(-1.0, -3.0), 0, 128, Args[1])
 		Loop
 	Circle:
-		TNT1 A 8 A_SpawnItemEx ("SnowParticle", Random(-Args[0], -Args[0]), 0, 0, frandom(-1.0, 1.0), frandom(-1.0, 1.0), frandom(-1.0, -3.0), Random(0, 360), 128, Args[1])
+		TNT1 A 8 A_SpawnItemEx("SnowParticle", Random(-Args[0], -Args[0]), 0, 0, frandom(-1.0, 1.0), frandom(-1.0, 1.0), frandom(-1.0, -3.0), Random(0, 360), 128, Args[1])
 		Loop
 	Unsighted:
 		TNT1 A 1

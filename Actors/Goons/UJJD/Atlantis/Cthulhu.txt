@@ -32,11 +32,11 @@ Actor AtlantisBoss 3873
 		Loop
 	Missile:
 		CTHU F 0 A_Jump(128,"FireBombAttack")
-		CTHU F 8 Bright A_FaceTarget
-		CTHU F 0 Bright A_CustomMissile("FireShot",28,0,0,0)
-		CTHU F 0 Bright A_CustomMissile("FireShot",28,0,-4,0)
-		CTHU F 3 Bright A_CustomMissile("FireShot",28,0,4,0)
-		CTHU G 3 Bright
+		CTHU F 8 BRIGHT A_FaceTarget
+		CTHU F 0 BRIGHT A_CustomMissile("FireShot",28,0,0,0)
+		CTHU F 0 BRIGHT A_CustomMissile("FireShot",28,0,-4,0)
+		CTHU F 3 BRIGHT A_CustomMissile("FireShot",28,0,4,0)
+		CTHU G 3 BRIGHT
 		CTHU G 0 A_Jump(32,"Tentacles")
 		Goto See
 	Tentacles:
@@ -49,129 +49,129 @@ Actor AtlantisBoss 3873
 		CTHU G 5 A_Spawnitem("Tentacles", 56, 1, 1)
 		Goto See
 	LaserEyes:
-		CTHU E 0 A_Jump (256, "REye", "LEye")
+		CTHU E 0 A_Jump(256, "REye", "LEye")
 		Stop
 	REye:
 		CTHU E 10 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -6, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -6, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 0 A_PlaySoundEx ("ATBOSS/Attack", SoundSlot7, 1)
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5.75, 1)
+		CTHU E 0 A_PlaySoundEx("ATBOSS/Attack", SoundSlot7, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -5.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -5.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -5.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -4.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -4.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -4.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -4, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -4, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -3.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -3.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -3.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -3, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -3, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -2.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -2.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -2.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -2, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -2, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -1.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -1.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -1.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -1, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -1, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -0.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -0.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -0.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -0.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, -0.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, -0.25, 1)
 		CTHU E 0 A_FaceTarget
 		Goto LockedOn
 	LEye:
 		CTHU E 10 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 6, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 6, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 0 A_PlaySoundEx ("ATBOSS/Attack", SoundSlot7, 1)
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5.75, 1)
+		CTHU E 0 A_PlaySoundEx("ATBOSS/Attack", SoundSlot7, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 5.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 5.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 5.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 4.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 4.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 4.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 4, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 4, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 3.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 3.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 3.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 3, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 3, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 2.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 2.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 2.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 2, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 2, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 1.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 1.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 1.25, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 1, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 1, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0.75, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 0.75, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0.5, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 0.5, 1)
 		CTHU E 0 A_FaceTarget
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0.25, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 0.25, 1)
 		CTHU E 0 A_FaceTarget
 		Goto LockedOn
 	LockedOn:
-		CTHU E 1 bright A_CustomMissile("LaserEyeProj", 64, 8, 0, 1)
+		CTHU E 1 BRIGHT A_CustomMissile("LaserEyeProj", 64, 8, 0, 1)
 		CTHU A 0 A_FaceTarget
-		CTHU A 0 A_Jump (8, "See")
+		CTHU A 0 A_Jump(8, "See")
 		CTHU A 0 A_CPosRefire
 		Goto LockedOn
 	FireBombAttack:
-		CTHU G 0 Bright A_VileStart
-		CTHU G 20 Bright A_FaceTarget
-		CTHU G 16 Bright A_VileTarget
-		CTHU F 16 Bright A_FaceTarget
-		CTHU F 16 Bright A_VileAttack
-		CTHU F 30 Bright
+		CTHU G 0 BRIGHT A_VileStart
+		CTHU G 20 BRIGHT A_FaceTarget
+		CTHU G 16 BRIGHT A_VileTarget
+		CTHU F 16 BRIGHT A_FaceTarget
+		CTHU F 16 BRIGHT A_VileAttack
+		CTHU F 30 BRIGHT
 		Goto See
 	Melee:
 		CTHU I 15 A_FaceTarget
-		CTHU J 6 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
+		CTHU J 6 A_CustomMeleeAttack(random (2, 3) *5, "CrabHit", "CrabMiss")
 		Goto See
 	Pain:
 		STNT A 0 A_StopSoundEx ("SoundSlot5")
@@ -201,7 +201,7 @@ Actor Tentacles
 	Mass 5000
 	MeleeDamage 3
 	MeleeRange 52
-	Painchance 128
+	PainChance 128
 	MONSTER
 	-COUNTKILL
 	-SHOOTABLE

@@ -30,7 +30,7 @@ Actor MuckMaiden 26560
     Loop
   Missile: 
     FMFG E 15 A_FaceTarget
-    FMFG F 6 Bright A_CustomMissile("MuckSpearProj", 30, 5)
+    FMFG F 6 BRIGHT A_CustomMissile("MuckSpearProj", 30, 5)
     FMFG D 2
     Goto See
   Death:
@@ -42,8 +42,8 @@ Actor MuckMaiden 26560
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",300)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	FMFG AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	FMFG AAA 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
 	Death.JazzprojIce:
@@ -66,10 +66,10 @@ Actor MuckSpearProj
   States
   {
   Spawn:
-    FMPJ A 1 Bright
+    FMPJ A 1 BRIGHT
     Loop
   Death:
-    JBLS EFGH 4 bright
+    JBLS EFGH 4 BRIGHT
     Stop
   }
 }

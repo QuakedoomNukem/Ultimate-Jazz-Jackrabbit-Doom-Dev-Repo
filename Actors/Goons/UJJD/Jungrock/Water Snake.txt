@@ -1,45 +1,46 @@
 Actor WaterSnake 3909
 {
-  Tag "Water Snake"
-  Obituary "$OB_WSNEK"
-  Health 50
-  mass 120
-  Speed 20
-  Radius 16
-  Height 16
-  MaxStepHeight 1
-    MONSTER
-  +FLOORCLIP
-  +NOGRAVITY
-  +FLOAT
-  +NOBLOOD
-  +NOINFIGHTING
-   +COUNTKILL
- +DONTHARMCLASS
- +DONTFALL
-  SeeSound "FishAct"
-  ActiveSound "FishAct"
-  States
-  {
-   Spawn:
-    JSWS ABCB 10 A_Look
-    Loop
-   See:
-	JSWS ABCB 4 A_GiveInventory("Chase_Water",1)
-	Loop
-   Melee:
-    JSWS AB 10 A_FaceTarget
-    JSWS C 8 
-    JSWS B 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
-    Goto See
-   Death:
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	Stop
+	//$Category Goons
+	Tag "Water Snake"
+	Obituary "$OB_WSNEK"
+	Health 50
+	Mass 120
+	Speed 20
+	Radius 16
+	Height 16
+	MaxStepHeight 1
+	MONSTER
+	+COUNTKILL
+	+DONTFALL
+	+DONTHARMCLASS
+	+FLOAT
+	+FLOORCLIP
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	SeeSound "FISHACT"
+	ActiveSound "FISHACT"
+	States
+	{
+	Spawn:
+		JSWS ABCB 10 A_Look
+		Loop
+	See:
+		JSWS ABCB 4 A_GiveInventory("Chase_Water",1)
+		Loop
+	Melee:
+		JSWS AB 10 A_FaceTarget
+		JSWS C 8
+		JSWS B 10 A_CustomMeleeAttack(random (1, 5) *5, "TURTBITE", "TURTBITE")
+		Goto See
+	Death:
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		Stop
 	Death.JazzprojIce:
-	TNT1 A 0 A_GiveToTarget("Points",100)
-	JSWS A 5 A_GenericFreezeDeath
-    JSWS A 1 A_FreezeDeathChunks
-    Wait
-  }
+		TNT1 A 0 A_GiveToTarget("Points",100)
+		JSWS A 5 A_GenericFreezeDeath
+		JSWS A 1 A_FreezeDeathChunks
+		Wait
+	}
 }

@@ -34,8 +34,8 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 10 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 10 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold1:
@@ -43,8 +43,8 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 9 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 9 BRIGHT
     PLPI B 0 A_Refire
 	Goto Ready
 	Hold2:
@@ -52,8 +52,8 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 8 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 8 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold3:
@@ -61,8 +61,8 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 7 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 7 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold4:
@@ -70,8 +70,8 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 6 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 6 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold5:
@@ -79,8 +79,8 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 5 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 5 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold6:
@@ -88,8 +88,8 @@ Actor SpreadGun : Doomweapon 30004
    PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 4 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 4 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold7:
@@ -98,114 +98,114 @@ Actor SpreadGun : Doomweapon 30004
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 3 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 3 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	Hold8:
     PLPI B 2
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-    PLPI C 3 Bright A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
-    PLPI A 2 Bright
+    PLPI C 3 BRIGHT A_FireBullets(4,3,10,10, "Jazzfirepuff", 1) 
+    PLPI A 2 BRIGHT
     PLPI B 0 A_Refire
     Goto Ready
 	PowerFire:
 	TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 10 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 10 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold1:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 9 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 9 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold2:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 8 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 8 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold3:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 7 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 7 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold4:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 6 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 6 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold5:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 5 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 5 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold6:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 4 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 4 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold7:
   TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 3 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 3 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
 	PowerHold8:
     PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI B 3 Bright A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
+	PLPI B 3 BRIGHT A_FireBullets(1,1,10,10,"Jazzfirepuff",0) 
 	PLPI A 0 A_PlayWeaponSound("SHTBLTFI")
 	PLPI A 0 Offset(0,35) A_Recoil(0.3)
-	PLPI C 3 Bright A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
-    PLPI A 2 Bright
+	PLPI C 3 BRIGHT A_FireBullets(4,3,10,10,"Jazzfirepuff",1) 
+    PLPI A 2 BRIGHT
     PLPI B 0 A_ReFire("PowerHold")
     Goto Ready
   }
@@ -219,7 +219,7 @@ Actor JJShell : Ammo 16133
   Ammo.BackpackAmount 3
   Ammo.BackpackMaxAmount 100
   Inventory.Icon "SHLLZ0"
-  Inventory.PickupSound "ammoup"
+  Inventory.PickupSound "AMMOUP"
   +FLOATBOB
    +NOGRAVITY
    FloatBobStrength 0.5
@@ -229,7 +229,7 @@ Actor JJShell : Ammo 16133
     SHLL ABCDEFGHIJ 3
     Loop
 	Pickup:
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 	Stop
   }
 }
@@ -239,10 +239,10 @@ Actor Gun2PowerUpBox : Gun1PowerUpBox 3821
   States
   {
   Spawn:
-    2GUN ABCD 1 Bright
+    2GUN ABCD 1 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 A_PlaySound("WEAPNGET")
   TNT1 A 0 ACS_NamedExecute("Gun2",0)
   TNT1 A 0 A_GiveToTarget("Gun2PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("JJShell", 25, AAPTR_DEFAULT)

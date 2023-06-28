@@ -30,7 +30,7 @@ Actor Fish 30023
 		Loop
 	Melee:
 		SHRK A 10 A_FaceTarget
-		SHRK B 8 A_CustomMeleeAttack (random (1, 4) *5, "TURTBITE", "TURTBITE")
+		SHRK B 8 A_CustomMeleeAttack(random (1, 4) *5, "TURTBITE", "TURTBITE")
 		SHRK C 10
 		Goto See
 	Death:
@@ -98,7 +98,7 @@ Actor JungRockFish 3833
 	Melee:
 		JFSH A 10 A_FaceTarget
 		JFSH B 8
-		JFSH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
+		JFSH C 10 A_CustomMeleeAttack(random (1, 5) *5, "TURTBITE", "TURTBITE")
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -131,7 +131,7 @@ Actor ScaryFish : JungRockFish 3780
 	Melee:
 		SCFH A 10 A_FaceTarget
 		SCFH B 8
-		SCFH C 10 A_CustomMeleeAttack (random (1, 5) *5, "TURTBITE", "TURTBITE")
+		SCFH C 10 A_CustomMeleeAttack(random (1, 5) *5, "TURTBITE", "TURTBITE")
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))

@@ -88,7 +88,7 @@ STSTR_DQDOFF = "Invulnerability Cheat OFF";
 STSTR_FAADDED = "Full Ammo Cheat activated";
 STSTR_KFAADDED = "Full Ammo Cheat activated (Keys are not present in this)";
 
-//Guns
+//Guns Powerups
 GUN1POWERUP = "\cnBlaster \cfPower Up!";
 GUN2POWERUP = "\cgSpread Gun \cfPower Up!";
 GUN3POWERUP = "\cjSlicer \cfPower Up!";
@@ -433,3 +433,46 @@ HB_JUBJU = "%o was scratched by a Jubjub.";
 HB_MACES = "%o was maced by a Mace Schwarzenguard.";
 HB_SPARK = "%o was electrocuted by a Spark.";
 HB_TRSPA = "%o was zapped by a Remix Spark.";
+
+//Pickups
+PK_APPLE = "\cfYou have found \c[A2]Jill of the Jungle\cf!";
+PK_ARTF1 = "\cgRip and Tear.";
+PK_ARTF2 = "\czNobody told me about the SI6IL.";
+PK_ARTF3 = "\ceBeyond Heresy.";
+PK_ARTF4 = "\cvToo bad it's not the Tome of Power.";
+PK_ARTF5 = "\csI ain't afraid of no Quake.";
+PK_CAROT = "\ciYum! A Carrot! (25+ HP)";
+PK_CLIFF = "\cfCliffy B's power! (FULL RESTORE+FULL AMMO)";
+PK_DRINK = "\cl*Burp";
+PK_ELAIR = "\clPicked up the \cjAir Element\cl.";
+PK_ELDAR = "\clPicked up the \ctDark Element\cl.";
+PK_ELEAR = "\clPicked up the \cdEarth Element\cl.";
+PK_ELFIR = "\clPicked up the \cgFire Element\cl.";
+PK_ELLIT = "\clPicked up the \ckLight Element\cl.";
+PK_ELWAT = "\clPicked up the \cnWater Element\cl.";
+PK_FOODP = "\clYummy!";
+PK_FURES = "\cfFull Health and Armor!";
+PK_GBAHL = "\cjPicked up a Stimpack Advance (10+ HP)";
+PK_GBAMK = "\cjPicked up a Medkit Advance (50+ HP)";
+PK_GBAPK = "\ctA Game Boy Advance?!";
+PK_JJBAK = "Backpack full of ammo!";
+PK_MONE1 = "\cdMoney Bundle";
+PK_MONE2 = "\cdMoney Bucket (5+ AP)";
+PK_RABIT = "\cdRabbit Bonus (10+ AP)";
+PK_RFLAG = "\cnRed flag taken.";
+PK_SCGEM = "\cfBonus Stage Gem!";
+PK_SODPK = "\cfYou have found The Spear of Destiny!";
+PK_STARM = "\cdStandard Armor! (100+ AP)";
+PK_SUARM = "\cnSuper Armor! (200+ AP)";
+PK_SUPCA = "\ciSuper Carrot! (50+ HP)";
+PK_TWINK = "Ew... you ate a thousand year old twinkie.";
+
+//Special
+LH_CAROT = "\ciNever needed a carrot so much until NOW! (25+ HP)";
+LH_GBAMK = "\cjPicked up a Medkit Advance that you REALLY need! (50+ HP)";
+
+//Weapons
+PK_AMMO0 = "\ckElectro-Blaster \clAmmo";
+PK_AMMO8 = "\cwFrostbiter \clAmmo";
+PK_WEAP0 = "Electro-Blaster (Slot 0)";
+PK_WEAP8 = "Frostbiter! (Slot 8)";

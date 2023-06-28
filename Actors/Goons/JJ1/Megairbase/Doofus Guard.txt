@@ -27,8 +27,8 @@ Actor TurtleGoon 11909
 		Loop
 	Missile:
 	TURG E 15 A_FaceTarget
-		TURG F 4 Bright A_CustomMissile("TurtleGoonBullet",40,0,0,0,0)
-		TURG E 8 Bright
+		TURG F 4 BRIGHT A_CustomMissile("TurtleGoonBullet",40,0,0,0,0)
+		TURG E 8 BRIGHT
 		TURG E 10
 		Goto See
 	Death:
@@ -45,8 +45,8 @@ Actor TurtleGoon 11909
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",150)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		TURG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TURG A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

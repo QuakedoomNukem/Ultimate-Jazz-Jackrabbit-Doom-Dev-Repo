@@ -2,7 +2,7 @@ Actor GoonPlasmaFlyer 3894
 {
 	Tag "Plasma Flyer Doofus"
     Health 500
-    Painchance 0
+    PainChance 0
     Speed 8
     Radius 24
 	Height 56

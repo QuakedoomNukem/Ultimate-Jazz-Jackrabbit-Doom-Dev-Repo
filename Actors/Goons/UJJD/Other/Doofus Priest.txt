@@ -27,15 +27,15 @@ Actor ElementGoon6 4042
 		Loop
 	Missile:
 		ELM6 B 50 A_FaceTarget 
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
-		ELM6 C 1 Bright A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
+		ELM6 C 1 BRIGHT A_CustomMissile("MagicAttack",32,0,0,0,0)
 		ELM6 B 4
 		Goto See
 	Death: 

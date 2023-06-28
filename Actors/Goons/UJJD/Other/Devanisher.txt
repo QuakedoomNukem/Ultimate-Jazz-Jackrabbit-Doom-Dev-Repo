@@ -33,16 +33,16 @@ Actor Devanisher 4120
 	Missile:
 		DYDN E 15 A_FaceTarget 
 		DYDN E 0 A_PlaySound("Seekfire")
-		DYDN F 0 Bright A_CustomMissile("Minissiles2",64,48,0,0)
-		DYDN F 12 Bright A_CustomMissile("Minissiles2",64,-48,0,0)
+		DYDN F 0 BRIGHT A_CustomMissile("Minissiles2",64,48,0,0)
+		DYDN F 12 BRIGHT A_CustomMissile("Minissiles2",64,-48,0,0)
 		DYDN E 5 A_FaceTarget 
 		DYDN E 0 A_PlaySound("Seekfire")
-		DYDN F 0 Bright A_CustomMissile("Minissiles2",64,48,0,0)
-		DYDN F 12 Bright A_CustomMissile("Minissiles2",64,-48,0,0)
+		DYDN F 0 BRIGHT A_CustomMissile("Minissiles2",64,48,0,0)
+		DYDN F 12 BRIGHT A_CustomMissile("Minissiles2",64,-48,0,0)
 		DYDN E 5 A_FaceTarget 
 		DYDN E 0 A_PlaySound("Seekfire")
-		DYDN F 0 Bright A_CustomMissile("Minissiles2",64,48,0,0)
-		DYDN F 12 Bright A_CustomMissile("Minissiles2",64,-48,0,0)
+		DYDN F 0 BRIGHT A_CustomMissile("Minissiles2",64,48,0,0)
+		DYDN F 12 BRIGHT A_CustomMissile("Minissiles2",64,-48,0,0)
 		DYDN E 8
 		Goto See
 	Death: 

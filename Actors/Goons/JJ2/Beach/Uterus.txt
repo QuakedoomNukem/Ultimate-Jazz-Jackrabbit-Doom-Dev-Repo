@@ -30,7 +30,7 @@ Actor UterusBoss 3294
     Loop
   Missile:
     UTTA ABCDEFGHI 3 A_FaceTarget
-    UTTA J 5 Bright A_PainAttack("Crab",0,PAF_NOTARGET)
+    UTTA J 5 BRIGHT A_PainAttack("Crab",0,PAF_NOTARGET)
     Goto See
   //Pain:
     //UTTA EDCBA 2

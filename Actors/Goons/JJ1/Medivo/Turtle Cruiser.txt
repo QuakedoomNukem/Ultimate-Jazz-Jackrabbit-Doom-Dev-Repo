@@ -45,12 +45,12 @@ Actor TurtleCruiser : TurtleBossBase 4109
 		Loop
 	Missile:
 		DRL1 A 15 A_FaceTarget
-		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
+		DRL1 C 4 BRIGHT A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
 		DRL1 A 15 A_FaceTarget
-		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
+		DRL1 C 4 BRIGHT A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
 		DRL1 A 15 A_FaceTarget
-		DRL1 C 4 Bright A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
-		Goto see
+		DRL1 C 4 BRIGHT A_CustomMissile("TurtleCruiserProj",16,0,0,0,0)
+		Goto See
 	Death:
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		DRL1 A 0 A_Scream

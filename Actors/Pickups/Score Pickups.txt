@@ -11,11 +11,11 @@ Actor BigRedGem 3761
   States
   {
   Spawn:
-    BIGG ABCDEFGH 3 bright
+    BIGG ABCDEFGH 3 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("gemsmash")
-    TNT1 AAAAAAAAAA 0 A_SpawnItemEx ("RedGemSmash", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+  TNT1 A 0 A_PlaySound("gemsmash")
+    TNT1 AAAAAAAAAA 0 A_SpawnItemEx("RedGemSmash", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -28,12 +28,12 @@ Actor RedGemSmash : CustomInventory 3762
 	States
 	{
 	Spawn:
-    RGEM ABCDEFGH 3 bright
+    RGEM ABCDEFGH 3 BRIGHT
     Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
     Stop
 }
 }
@@ -47,7 +47,7 @@ Actor BonusGem : CustomInventory  3333
   +FLOATBOB
    +NOGRAVITY
    FloatBobStrength 0.5
-  states
+  States
   {
   Spawn:
 	GEM1 X -1
@@ -56,55 +56,55 @@ Actor BonusGem : CustomInventory  3333
   TNT1 A 0 A_SpawnItemEx("ItemSparkle")
   TNT1 A 0 A_Jump(256, "JJBackpack", "JJShell", "JJClip", "Bouncers", "HomingMissile", "JJRocketAmmo", "Gas", "FreezeAmmo", "Railammo", "JJCell", "TNT", "Food", "Carrot", "Armor")
 	JJBackpack:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("JJBackpack")
 	Stop
 	JJShell:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("JJShell")
 	Stop
 	JJClip:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("SlicerAmmo")
 	Stop
 	Bouncers:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("Bouncers")
 	Stop
 	HomingMissile:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("HomingMissile")
 	Stop
 	JJRocketAmmo:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("JJRocketAmmo")
 	Stop
 	Gas:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("Gas")
 	Stop
 	FreezeAmmo:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("FreezeAmmo")
 	Stop
 	Rail:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("RailAmmo")
 	Stop
 	JJCell:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("JJCell")
 	Stop
 	TNT:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("TNT")
 	Stop
 	Carrot:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("Carrot")
 	Stop
 	Food:
-	TNT1 A 0 A_Giveinventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("Points", 100)
  	TNT1 A 0 A_GiveInventory("DrinkDrop")
 	Stop
 	Armor:
@@ -122,18 +122,18 @@ Actor GemDrop : CustomInventory 3758
 	{
 	Spawn:
 	RGEM A 0
-	RGEM A 0 A_Jump (256, "Red", "Blue", "Green", "Purple")
+	RGEM A 0 A_Jump(256, "Red", "Blue", "Green", "Purple")
 	Red:
-    TNT1 A 0 Bright A_SpawnItem("RedGem")
+    TNT1 A 0 BRIGHT A_SpawnItem("RedGem")
     Stop
   Blue:
-    TNT1 A 0 Bright A_SpawnItem("BlueGem")
+    TNT1 A 0 BRIGHT A_SpawnItem("BlueGem")
     Stop
 	Green:
-	TNT1 A 0 Bright A_SpawnItem("GreenGem")
+	TNT1 A 0 BRIGHT A_SpawnItem("GreenGem")
     Stop
 	Purple:
-	TNT1 A 0 Bright A_SpawnItem("PurpleGem")
+	TNT1 A 0 BRIGHT A_SpawnItem("PurpleGem")
     Stop
 	}
 	}
@@ -147,12 +147,12 @@ Actor RedGem : CustomInventory //3758
 	States
 	{
 	Spawn:
-    RGEM ABCDEFGH 3 bright
+    RGEM ABCDEFGH 3 BRIGHT
     Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
     Stop
 }
 }
@@ -163,12 +163,12 @@ Actor GreenGem : RedGem 3759
 	States
 	{
 	Spawn:
-    GGEM ABCDEFGH 3 bright
+    GGEM ABCDEFGH 3 BRIGHT
     Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
     Stop
 }
 }
@@ -179,12 +179,12 @@ Actor BlueGem : RedGem 3760
 	States
 	{
 	Spawn:
-    BGEM ABCDEFGH 3 bright
+    BGEM ABCDEFGH 3 BRIGHT
     Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
     Stop
 }
 }
@@ -195,12 +195,12 @@ Actor PurpleGem : RedGem
 	States
 	{
 	Spawn:
-    PGEM ABCDEFGH 3 bright
+    PGEM ABCDEFGH 3 BRIGHT
     Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
     Stop
 }
 }
@@ -213,11 +213,11 @@ Actor GoldenTurtle : CustomInventory 3818
 	States
 	{
 	Spawn:
-    GTMP A -1 bright
+    GTMP A -1 BRIGHT
     Stop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 5000)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 5000)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
     Stop
 }
@@ -233,7 +233,7 @@ Actor Goodiearmor : ArmorBonus
 	States
 	{
 	Spawn:
-    Good Z -1 bright
+    Good Z -1 BRIGHT
     Stop
 }
 }
@@ -249,12 +249,12 @@ Actor StonarBonus : CustomInventory 3500
 	States
 	{
 	Spawn:
-    Good Z -1 bright
+    Good Z -1 BRIGHT
     Stop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("GoodieArmor", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_GiveInventory("Points", 100)
+	TNT1 A 0 A_GiveInventory("GoodieArmor", 1)
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
     Stop
 }
 }
@@ -264,7 +264,7 @@ Actor MarbelaraBonus : StonarBonus 3501
 	States
 	{
 	Spawn:
-    GOOD A -1 bright
+    GOOD A -1 BRIGHT
     Stop
 }
 }
@@ -274,7 +274,7 @@ Actor TubelectricBonus : StonarBonus 3502
 	States
 	{
 	Spawn:
-    GOOD B -1 bright
+    GOOD B -1 BRIGHT
     Stop
 }
 }
@@ -284,7 +284,7 @@ Actor MedivoBonus : StonarBonus 3503
 	States
 	{
 	Spawn:
-    GOOA ABCD 1 bright
+    GOOA ABCD 1 BRIGHT
     Loop
 }
 }
@@ -294,7 +294,7 @@ Actor LetniBonus : StonarBonus 3504
 	States
 	{
 	Spawn:
-    GOOD E -1 bright
+    GOOD E -1 BRIGHT
     Stop
 }
 }
@@ -304,7 +304,7 @@ Actor TechnoirBonus : StonarBonus 3505
 	States
 	{
 	Spawn:
-    GOOD N -1 bright
+    GOOD N -1 BRIGHT
     Stop
 }
 }
@@ -314,7 +314,7 @@ Actor OrbitusBonus : StonarBonus 3506
 	States
 	{
 	Spawn:
-    GOOD I -1 bright
+    GOOD I -1 BRIGHT
     Stop
 }
 }
@@ -324,7 +324,7 @@ Actor FanolintBonus : StonarBonus 3507
 	States
 	{
 	Spawn:
-    GOOD J -1 bright
+    GOOD J -1 BRIGHT
     Stop
 }
 }
@@ -334,7 +334,7 @@ Actor MegaAirBaseBonus : StonarBonus 3508
 	States
 	{
 	Spawn:
-    GOOD O -1 bright
+    GOOD O -1 BRIGHT
     Stop
 }
 }
@@ -344,7 +344,7 @@ Actor NippiusBonus : StonarBonus 3509
 	States
 	{
 	Spawn:
-    GOOD P -1 bright
+    GOOD P -1 BRIGHT
     Stop
 }
 }
@@ -354,7 +354,7 @@ Actor DiamondusBonus : StonarBonus 3510
 	States
 	{
 	Spawn:
-    GOOD Q -1 bright
+    GOOD Q -1 BRIGHT
     Stop
 }
 }
@@ -364,7 +364,7 @@ Actor SluggionBonus : StonarBonus 3511
 	States
 	{
 	Spawn:
-    GOOD R -1 bright
+    GOOD R -1 BRIGHT
 	Stop
 }
 }
@@ -375,7 +375,7 @@ Actor CrysilisBonus : StonarBonus 3512
 	States
 	{
 	Spawn:
-    GOOD H -1 bright
+    GOOD H -1 BRIGHT
     Stop
 }
 }
@@ -385,7 +385,7 @@ Actor BattleshipsBonus : StonarBonus 3513
 	States
 	{
 	Spawn:
-    GOOD S -1 bright
+    GOOD S -1 BRIGHT
     Stop
 }
 }
@@ -395,7 +395,7 @@ Actor DeckstarBonus : StonarBonus 3514
 	States
 	{
 	Spawn:
-    GOOD M -1 bright
+    GOOD M -1 BRIGHT
     Stop
 }
 }
@@ -405,7 +405,7 @@ Actor TubelectricBonus2 : StonarBonus 3515
 	States
 	{
 	Spawn:
-    GOOD C -1 bright
+    GOOD C -1 BRIGHT
     Stop
 }
 }
@@ -415,7 +415,7 @@ Actor TechnoirBonus2 : StonarBonus 3516
 	States
 	{
 	Spawn:
-    GOOD F -1 bright
+    GOOD F -1 BRIGHT
     Stop
 }
 }
@@ -425,7 +425,7 @@ Actor TurtempleBonus : StonarBonus 3517
 	States
 	{
 	Spawn:
-    GOOD G -1 bright
+    GOOD G -1 BRIGHT
     Stop
 }
 }
@@ -436,12 +436,12 @@ Actor JungrockBonus : StonarBonus 3518
 	{
 	Spawn:
 	GOOD K 0
-	TNT1 A 0 A_Jump (256, "Bonus1", "Bonus2")
+	TNT1 A 0 A_Jump(256, "Bonus1", "Bonus2")
 	Bonus1:
-    GOOD K -1 bright
+    GOOD K -1 BRIGHT
     Stop
   Bonus2:
-    GOOD L -1 bright
+    GOOD L -1 BRIGHT
 }
 }
 
@@ -450,7 +450,7 @@ Actor CastleBonus : StonarBonus 3519
 	States
 	{
 	Spawn:
-    GOOD T -1 bright
+    GOOD T -1 BRIGHT
     Stop
 }
 }
@@ -460,7 +460,7 @@ Actor ScraparapBonus : StonarBonus 3520
 	States
 	{
 	Spawn:
-    GOOD U -1 bright
+    GOOD U -1 BRIGHT
     Stop
 }
 }
@@ -470,7 +470,7 @@ Actor CarrotusBonus : StonarBonus 3521
 	States
 	{
 	Spawn:
-    GOOD V -1 bright
+    GOOD V -1 BRIGHT
     Stop
 }
 }
@@ -481,15 +481,15 @@ Actor ChristmasBonus : StonarBonus 3589
 	{
 	Spawn:
     GOOD W 0
-    TNT1 A 0 A_Jump (256, "Item1", "Item2", "Item3")
+    TNT1 A 0 A_Jump(256, "Item1", "Item2", "Item3")
   Item1:
-    GOOD W -1 bright
+    GOOD W -1 BRIGHT
     Stop
   Item2:
-    GOOD X -1 bright
+    GOOD X -1 BRIGHT
     Stop
   Item3:
-    GOOD Y -1 bright
+    GOOD Y -1 BRIGHT
     Stop
   }
 }

@@ -236,7 +236,7 @@ Stop
 Actor SlicerAmmo : Ammo 19020
 {
   Inventory.PickupMessage "\cjSlicer \clAmmo"
-  Inventory.PickupSound "ammoup"
+  Inventory.PickupSound "AMMOUP"
   Inventory.Amount 3
   Inventory.MaxAmount 100
   Ammo.BackpackAmount 3
@@ -258,10 +258,10 @@ Actor Gun3PowerUpBox : Gun1PowerUpBox 3822
   States
   {
   Spawn:
-    3GUN ABCD 1 Bright
+    3GUN ABCD 1 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 A_PlaySound("WEAPNGET")
   TNT1 A 0 ACS_NamedExecute("Gun3",0)
   TNT1 A 0 A_GiveToTarget("Gun3PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("SlicerAmmo", 25, AAPTR_DEFAULT)

@@ -45,16 +45,16 @@ Actor DarkShellBoss 4055
 		Goto See
 	Missile:
 		GBDS E 10 A_FaceTarget
-		GBDS F 4 Bright A_CustomMissile("MechBossProj",32,16,0,0,0)
+		GBDS F 4 BRIGHT A_CustomMissile("MechBossProj",32,16,0,0,0)
 		GBDS E 4 A_FaceTarget
-		GBDS F 4 Bright A_CustomMissile("MechBossProj",32,16,0,0,0)
+		GBDS F 4 BRIGHT A_CustomMissile("MechBossProj",32,16,0,0,0)
 		GBDS E 4 A_FaceTarget
-		GBDS F 4 Bright A_CustomMissile("MechBossProj",32,16,0,0,0)
+		GBDS F 4 BRIGHT A_CustomMissile("MechBossProj",32,16,0,0,0)
 		GBDS E 4
 		GBDS E 20 A_FaceTarget
-		GBDS E 20 A_PlaySound ("mbfgfire")
-		GBDS E 10 Bright
-		GBDS F 20 Bright A_CustomMissile("MechBFGBall",32,0,0,0,0)
+		GBDS E 20 A_PlaySound("mbfgfire")
+		GBDS E 10 BRIGHT
+		GBDS F 20 BRIGHT A_CustomMissile("MechBFGBall",32,0,0,0,0)
 		GBDS E 20 A_FaceTarget
 		Goto Jump
 	Death:

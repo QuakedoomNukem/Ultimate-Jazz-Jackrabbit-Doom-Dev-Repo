@@ -2,7 +2,7 @@ Actor GoonPlasmaTank 30018
 {
 	Tag "Plasma Tank Doofus"
     Health 1000
-    Painchance 0
+    PainChance 0
     Speed 6
     Radius 20
 	Height 44

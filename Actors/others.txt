@@ -1,6 +1,6 @@
 //Specific map actors, replacements and workarounds
 
-Actor FiredeadSpawner
+Actor FireDeadSpawner
 {
 	+NOCLIP
 	+MISSILE
@@ -13,20 +13,20 @@ Actor FiredeadSpawner
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx("FiredeadLite",0,0,0,0,0,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,0,1,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,0,-1,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,1,0,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,-1,0,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,1,1,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,-1,-1,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,1,-1,0,0,128)
-		TNT1 A 0 A_SpawnItemEx("Firedead",0,0,0,-1,1,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDeadLite",0,0,0,0,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,0,1,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,0,-1,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,1,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,-1,0,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,1,1,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,-1,-1,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,1,-1,0,0,128)
+		TNT1 A 0 A_SpawnItemEx("FireDead",0,0,0,-1,1,0,0,128)
 		Stop
 	}
 }
 
-Actor Firedead
+Actor FireDead
 {
 	+BRIGHT
 	+NOCLIP
@@ -43,7 +43,7 @@ Actor Firedead
 	}
 }
 
-Actor FiredeadLite : Firedead
+Actor FireDeadLite : FireDead
 {
 States
 	{
@@ -79,7 +79,7 @@ Actor JazzPoof
 	{
 	Spawn:
 		JBLS B 0
-		JBLS BCDEFGH 1 bright
+		JBLS BCDEFGH 1 BRIGHT
 		stop
 	}
 }
@@ -164,7 +164,7 @@ Actor JJTeleportFog : TeleportFog Replaces TeleportFog
 	States
 	{
 	Spawn:
-		JFOG ABCDE 4 Bright
+		JFOG ABCDE 4 BRIGHT
 		Stop
 	}
 }
@@ -174,7 +174,7 @@ Actor FatsoJJD : Fatso Replaces Fatso
 	States
 	{
 	Death:
-		FATT K 6 A_GiveToTarget ("Points",500)
+		FATT K 6 A_GiveToTarget("Points",500)
 		FATT L 6 A_Scream
 		FATT M 6 A_NoBlocking
 		FATT NOPQRS 6
@@ -188,7 +188,7 @@ Actor DemonJJD : Demon Replaces Demon
 	States
 	{
 	Death:
-		SARG I 8 A_GiveToTarget ("Points",200)
+		SARG I 8 A_GiveToTarget("Points",200)
 		SARG J 8 A_Scream
 		SARG K 4
 		SARG L 4 A_NoBlocking
@@ -203,7 +203,7 @@ Actor HellKnightJJD : HellKnight Replaces HellKnight
 	States
 	{
 	Death:
-		BOS2 I 8 A_GiveToTarget ("Points",300)
+		BOS2 I 8 A_GiveToTarget("Points",300)
 		BOS2 J 8 A_Scream
 		BOS2 K 8
 		BOS2 L 8 A_NoBlocking

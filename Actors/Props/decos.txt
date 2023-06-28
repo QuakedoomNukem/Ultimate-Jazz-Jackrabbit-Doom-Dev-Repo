@@ -6321,7 +6321,7 @@ Actor WBath : SimpleActor 25632 // To Return To
 	States
 	{
 	Spawn:
-		WBAT A 0 NoDelay A_StartSound ("FOUNTAIN", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0))
+		WBAT A 0 NoDelay A_StartSound("FOUNTAIN", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0))
 	Spawn2:
 		WBAT ACEG 1
 		Loop

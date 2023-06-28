@@ -29,10 +29,10 @@ Actor XmasJazzToy 4096
 		Stop
 	Death:
 		TNT1 A 0 A_GiveToTarget("Points",100)
-		TNT1 A 0 A_PlaySound ("SEEKXPLD", CHAN_AUTO, 1, False, ATTN_NONE)
-		RFLE AB 3 Bright 
-		RFLE C 3 Bright A_Explode (35,64)
-		RFLE DEFGHIJK 3 Bright 
+		TNT1 A 0 A_PlaySound("SEEKXPLD", CHAN_AUTO, 1, False, ATTN_NONE)
+		RFLE AB 3 BRIGHT 
+		RFLE C 3 BRIGHT A_Explode (35,64)
+		RFLE DEFGHIJK 3 BRIGHT 
 		Stop
 	}
 }

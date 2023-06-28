@@ -10,7 +10,7 @@ Actor LFG2000 : Doomweapon 15000
   Weapon.BobStyle Smooth
   DamageFactor 0
   +FLOATBOB
-  states
+  States
   {
   Spawn:
     PLSP ABCDEFGH 3
@@ -182,10 +182,10 @@ Actor Blastshot
     States
   {
   Spawn:
-    JBLS A 6 bright
+    JBLS A 6 BRIGHT
     Loop
   Death:
-    JBLS EFGH 4 bright
+    JBLS EFGH 4 BRIGHT
     stop
    }
 }
@@ -208,10 +208,10 @@ Actor PowerBlastshot
     States
   {
   Spawn:
-    HYPP A 6 bright
+    HYPP A 6 BRIGHT
     Loop
   Death:
-    JBLS EFGH 4 bright
+    JBLS EFGH 4 BRIGHT
     stop
    }
 }
@@ -233,10 +233,10 @@ Actor Gun1PowerUpBox 3820
   States
   {
   Spawn:
-    1GUN ABCD 1 Bright
+    1GUN ABCD 1 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 A_PlaySound("WEAPNGET")
   TNT1 A 0 ACS_NamedExecute("Gun1",0)
   TNT1 A 0 A_GiveToTarget("Gun1PowerUp", 1, AAPTR_DEFAULT)
   TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))

@@ -29,13 +29,13 @@ Actor JJAPinkTurtle 4045
 	Missile:
 		JAPT EEEEE 2 A_FaceTarget
 		JAPT E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		JAPT F 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		JAPT F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
 		JAPT E 2 A_FaceTarget
 		//SAUR E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		JAPT G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
 		JAPT E 2 A_FaceTarget
 		//SAUR E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		JAPT G 2 Bright A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
 		JAPT E 2 A_FaceTarget
 		JAPT E 0 A_SentinelRefire
 		Goto See
@@ -55,8 +55,8 @@ Actor JJAPinkTurtle 4045
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",250)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		JAPT H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		JAPT H 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
@@ -98,15 +98,15 @@ Actor JJABlueTurtle 4046
 	Missile:
 		JABT EEEEE 2 A_FaceTarget
 		JABT E 0 A_PlaySound("FMTRFIRE", CHAN_WEAPON)
-		JABT F 2 Bright A_CustomMissile("FTFire",32,0,0,0,0)
+		JABT F 2 BRIGHT A_CustomMissile("FTFire",32,0,0,0,0)
 		JABT E 2 A_FaceTarget
-		JABT F 2 Bright A_CustomMissile("FTFire")
+		JABT F 2 BRIGHT A_CustomMissile("FTFire")
 		JABT E 2 A_FaceTarget
-		JABT F 2 Bright A_CustomMissile("FTFire")
+		JABT F 2 BRIGHT A_CustomMissile("FTFire")
 		JABT E 2 A_FaceTarget
-		JABT F 2 Bright A_CustomMissile("FTFire")
+		JABT F 2 BRIGHT A_CustomMissile("FTFire")
 		JABT E 2 A_FaceTarget
-		JABT F 2 Bright A_CustomMissile("FTFire")
+		JABT F 2 BRIGHT A_CustomMissile("FTFire")
 		JABT E 2 A_FaceTarget
 		JABT E 0 A_SentinelRefire
 		Goto See
@@ -126,8 +126,8 @@ Actor JJABlueTurtle 4046
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",350)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		JABT H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		JABT H 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:
@@ -169,7 +169,7 @@ Actor JJAOrangeTurtle 4047
 	Missile:
 		JAOT E 15 A_FaceTarget
 		JAOT E 0 A_PlaySound("RFLAUNCH")
-		JAOT F 5 Bright A_CustomMissile("JJAOTurtleRocket",32,0,0,0,0)
+		JAOT F 5 BRIGHT A_CustomMissile("JJAOTurtleRocket",32,0,0,0,0)
 		JAOT E 5
 		Goto See
 	Pain:
@@ -188,8 +188,8 @@ Actor JJAOrangeTurtle 4047
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",500)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		JAOT H 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		JAOT H 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:

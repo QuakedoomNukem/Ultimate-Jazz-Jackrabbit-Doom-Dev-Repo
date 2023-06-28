@@ -27,12 +27,12 @@ Actor TurtleGrunt 11910
 		Loop
 	Missile:
 		TURS E 15 A_FaceTarget
-		TURS F 5 Bright A_CustomMissile("TurtleGoonBullet",48,0,0,0,0)
-		TURS E 15 Bright A_FaceTarget
-		TURS F 5 Bright A_CustomMissile("TurtleGoonBullet",48,0,0,0,0)
-		TURS E 15 Bright A_FaceTarget
-		TURS F 5 Bright A_CustomMissile("TurtleGoonBullet",48,0,0,0,0)
-		TURS E 15 Bright A_FaceTarget
+		TURS F 5 BRIGHT A_CustomMissile("TurtleGoonBullet",48,0,0,0,0)
+		TURS E 15 BRIGHT A_FaceTarget
+		TURS F 5 BRIGHT A_CustomMissile("TurtleGoonBullet",48,0,0,0,0)
+		TURS E 15 BRIGHT A_FaceTarget
+		TURS F 5 BRIGHT A_CustomMissile("TurtleGoonBullet",48,0,0,0,0)
+		TURS E 15 BRIGHT A_FaceTarget
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -48,8 +48,8 @@ Actor TurtleGrunt 11910
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",300)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		TURS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TURS A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

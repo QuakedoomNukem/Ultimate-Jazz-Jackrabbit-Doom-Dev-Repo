@@ -28,10 +28,10 @@ Actor TurtleBishop 3293
   Melee:
   Missile:
     BISH AB 2 A_Chase("","")
-	BISH A 0 BRIGHT A_PlaySound ("vile/firecrkl")
-    BISH ABCDE 3 Bright A_FaceTarget
-	BISH A 1 Bright A_CustomMissile("BishopProj",0,0,0,0,0)
-	BISH A 10 Bright
+	BISH A 0 BRIGHT A_PlaySound("vile/firecrkl")
+    BISH ABCDE 3 BRIGHT A_FaceTarget
+	BISH A 1 BRIGHT A_CustomMissile("BishopProj",0,0,0,0,0)
+	BISH A 10 BRIGHT
 	Goto See
   Death:
     BISH A 0 A_StopSound
@@ -72,8 +72,8 @@ Actor BishopProj
 	States
 	{
 	Spawn: 
-		TNT1 A 0 A_PlaySound ("vile/firecrkl")
-		TNT1 A 3 Bright A_SpawnItemEx("BishopFireD3",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_PlaySound("vile/firecrkl")
+		TNT1 A 3 BRIGHT A_SpawnItemEx("BishopFireD3",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_Explode(16,64,0)
 		TNT1 A 0 A_CountDown
 		Loop
@@ -95,7 +95,7 @@ Actor BishopFireD3
   States
   {
   Spawn:
-    FLAM ABCDEFGH 4 Bright
+    FLAM ABCDEFGH 4 BRIGHT
     Stop
   }
 }

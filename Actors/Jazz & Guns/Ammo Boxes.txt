@@ -12,10 +12,10 @@ Actor ShelBox 3238
     SHBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("JJShell", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("JJShell", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -34,10 +34,10 @@ Actor SlicerBox 3237
     BTBX A -1
     Stop
   Death:
-	TNT1 A 0 A_PlaySound ("BOXBREAK")
+	TNT1 A 0 A_PlaySound("BOXBREAK")
 	  TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("SlicerAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("SlicerAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -56,10 +56,10 @@ Actor BounceBox 3243
     BOBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("Bouncers", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("Bouncers", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -78,10 +78,10 @@ Actor SeekBox 3240
     SKBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("HomingMissile", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("HomingMissile", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -100,10 +100,10 @@ Actor RFBox 3239
     RFBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("JJRocketAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("JJRocketAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -122,10 +122,10 @@ Actor GasBox 3242
     GSBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("Gas", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("Gas", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -144,10 +144,10 @@ Actor IceBox 3241
     ICBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("FreezeAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("FreezeAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -166,10 +166,10 @@ Actor RailBox 3248
     RLBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("RailAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("RailAmmo", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -188,10 +188,10 @@ Actor CellBox 3244
     CLBX A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("JJCell", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("JJCell", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }
@@ -210,10 +210,10 @@ Actor TNTBox 3990
     BTNT A -1
     Stop
   Death:
-  TNT1 A 0 A_PlaySound ("BOXBREAK")
+  TNT1 A 0 A_PlaySound("BOXBREAK")
     TNT1 AAAA 0 A_SpawnItemEx("Boxfrag1",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
   TNT1 AAAA 0 A_SpawnItemEx("Boxfrag2",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-    TNT1 AAAAA 0 A_SpawnItemEx ("TNT", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
+    TNT1 AAAAA 0 A_SpawnItemEx("TNT", Random(-16,16),Random(-16,16),1, 0, 0, 0,Random(-179,179), 0)
 	Stop
   }
 }

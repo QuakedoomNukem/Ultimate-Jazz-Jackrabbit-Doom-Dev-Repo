@@ -48,7 +48,7 @@ Actor XmasBluePlane 4093
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",150)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		RPLN A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}
@@ -90,7 +90,7 @@ Actor XmasRedPlane : XmasBluePlane 4092
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",100)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		RPLN A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		RPLN A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

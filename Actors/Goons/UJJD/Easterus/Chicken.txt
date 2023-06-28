@@ -43,8 +43,8 @@ Actor EasterusChicken 3933
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",150)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		CHKN AAA 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		CHKN AAA 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("SundayRoast",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:

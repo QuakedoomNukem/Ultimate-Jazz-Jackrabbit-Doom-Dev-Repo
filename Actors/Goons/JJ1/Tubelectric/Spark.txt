@@ -24,7 +24,7 @@ Actor Sparks 11914
 		Loop
     See:
 		TNT1 A 0 A_JumpIfInTargetLOS("Seen", 130)
-		LSPK ABABABABABAB 1 Bright A_Chase
+		LSPK ABABABABABAB 1 BRIGHT A_Chase
 		Loop
     Seen:
 		TNT1 A 0
@@ -34,7 +34,7 @@ Actor Sparks 11914
 		Goto See
 	Melee:
 		LSPK ABABABEF 1 A_FaceTarget
-		LSPK E 1 A_CustomMeleeAttack (random (2, 3) *5, "SPKBUZZ", "SPKBUZZ")
+		LSPK E 1 A_CustomMeleeAttack(random (2, 3) *5, "SPKBUZZ", "SPKBUZZ")
 		LSPK FEFABAB 1
 		Goto See
 	Death:

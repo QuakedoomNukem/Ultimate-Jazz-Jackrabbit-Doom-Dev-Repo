@@ -78,12 +78,12 @@ Actor MegairbossRocket
   States
   {
   Spawn:
-    RFLM A 1 Bright
+    RFLM A 1 BRIGHT
     Loop
   Death:
-    RFLE AB 3 Bright 
-	RFLE C 3 Bright A_Explode (10,128,0)
-	RFLE DEFGHIJK 3 Bright 
+    RFLE AB 3 BRIGHT 
+	RFLE C 3 BRIGHT A_Explode (10,128,0)
+	RFLE DEFGHIJK 3 BRIGHT 
     Stop
   }
 }

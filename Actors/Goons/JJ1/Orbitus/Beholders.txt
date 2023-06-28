@@ -71,7 +71,7 @@ Actor VBeholder 3255
 		Loop
 	Missile:
 		VBEH ABCD 4 A_FaceTarget
-		VBEH A 4 Bright A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
+		VBEH A 4 BRIGHT A_CustomMissile("TurtleGoonBullet",32,0,0,0,0)
 		Goto See
 	Melee:
 		VBEH ABCD 4 A_FaceTarget

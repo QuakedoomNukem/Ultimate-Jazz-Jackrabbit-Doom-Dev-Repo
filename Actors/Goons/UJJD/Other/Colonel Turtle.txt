@@ -31,7 +31,7 @@ Actor ColTurtle 4124
 		COLT AABBCCDDAABBCCDDAABBCCDD 2 A_Chase
 		Goto Charge
 	Charge:
-		TNT1 A 0 A_PlaySound ("GIANTSEE")
+		TNT1 A 0 A_PlaySound("GIANTSEE")
 		COLT E 4 A_SkullAttack
 		COLT E 0 A_SpawnItemEx("ColTurtleGhost",0,0,0,0,0,0,0,128,0)
 		COLT E 4 A_SkullAttack
@@ -81,7 +81,7 @@ Actor ColTurtleGhost
 	Damage 0
 	RenderStyle Translucent
 	Alpha 0.5
-	PROJECTILE
+	Projectile
 	States
 	{
 	Spawn:

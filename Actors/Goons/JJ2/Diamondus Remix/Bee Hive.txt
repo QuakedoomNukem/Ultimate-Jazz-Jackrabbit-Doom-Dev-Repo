@@ -24,8 +24,8 @@ Actor DiamondusBeeHive 3964
 		DMDS P 3 A_Chase
 		Loop
 	Missile:
-		DMDS P 60 Bright A_FaceTarget
-		DMDS P 5 Bright A_PainAttack("Bee",0,PAF_AIMFACING,5)
+		DMDS P 60 BRIGHT A_FaceTarget
+		DMDS P 5 BRIGHT A_PainAttack("Bee",0,PAF_AIMFACING,5)
 		Goto See
 	Pain:
 		DMDS P 6
@@ -40,8 +40,8 @@ Actor DiamondusBeeHive 3964
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",300)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		DMDS P 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		DMDS P 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	Death.JazzprojIce:

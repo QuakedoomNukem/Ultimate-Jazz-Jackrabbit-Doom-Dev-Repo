@@ -32,7 +32,7 @@ Fire:
 		PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 10
 		PLPI A 0 A_ReFire
@@ -42,7 +42,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 9
 		PLPI A 0 A_ReFire
@@ -52,7 +52,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 8
 		PLPI A 0 A_ReFire
@@ -62,7 +62,7 @@ Fire:
    PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 7
 		PLPI A 0 A_ReFire
@@ -72,7 +72,7 @@ Fire:
    PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 6
 		PLPI A 0 A_ReFire
@@ -82,7 +82,7 @@ Fire:
    PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 5
 		PLPI A 0 A_ReFire
@@ -92,7 +92,7 @@ Fire:
    PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 4
 		PLPI A 0 A_ReFire
@@ -102,7 +102,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 3
 		PLPI A 0 A_ReFire
@@ -111,7 +111,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 2
 		PLPI A 0 A_ReFire
@@ -121,7 +121,7 @@ Fire:
    PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 10
 		PLPI A 0 A_ReFire("PowerHold")
@@ -131,7 +131,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 9
 		PLPI A 0 A_ReFire("PowerHold")
@@ -141,7 +141,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 8
 		PLPI A 0 A_ReFire("PowerHold")
@@ -151,7 +151,7 @@ Fire:
    PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 7
 		PLPI A 0 A_ReFire("PowerHold")
@@ -161,7 +161,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 6
 		PLPI A 0 A_ReFire("PowerHold")
@@ -171,7 +171,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 5
 		PLPI A 0 A_ReFire("PowerHold")
@@ -181,7 +181,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 4
 		PLPI A 0 A_ReFire("PowerHold")
@@ -191,7 +191,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 3
 		PLPI A 0 A_ReFire("PowerHold")
@@ -200,7 +200,7 @@ Fire:
     PLPI A 0 A_GunFlash 
 		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
 		PLPI B 3
-		PLPI B 0 A_FireCustomMissile ("40mmTimedShotPow", 0, 1, 1, 5, 1)
+		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
 		PLPI A 2
 		PLPI A 0 A_ReFire("PowerHold")
@@ -290,7 +290,7 @@ Actor Bouncers : Ammo 15002
 	Inventory.MaxAmount 100
 	Ammo.BackpackAmount 3
 	Ammo.BackpackMaxAmount 100
-	Inventory.PickupSound "ammoup"
+	Inventory.PickupSound "AMMOUP"
 	Inventory.PickupMessage "\c[J1]Bouncer \clAmmo"
 	FloatBobStrength 0.5
 	Inventory.Icon "40MMZ0"
@@ -309,10 +309,10 @@ Actor Gun4PowerUpBox : Gun1PowerUpBox 3823
   States
   {
   Spawn:
-    4GUN ABCD 1 Bright
+    4GUN ABCD 1 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 A_PlaySound("WEAPNGET")
   TNT1 A 0 ACS_NamedExecute("Gun4",0)
   TNT1 A 0 A_GiveToTarget("Gun4PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("Bouncers", 25, AAPTR_DEFAULT)

@@ -30,7 +30,7 @@ Actor FireLizard 3129
 		Loop
 	Missile:
 		FRLZ C 2 A_FaceTarget
-		FRLZ D 8 Bright A_CustomMissile("FireLizardBall",25,0,359,0)
+		FRLZ D 8 BRIGHT A_CustomMissile("FireLizardBall",25,0,359,0)
 		Goto See
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -46,8 +46,8 @@ Actor FireLizard 3129
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",300)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		FRLZ A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		FRLZ A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

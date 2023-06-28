@@ -52,8 +52,8 @@ Actor GoldHornet 3907
 		TNT1 A 0 A_GiveToTarget("Points",100)
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		JBUG A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		JBUG A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}
@@ -99,8 +99,8 @@ Actor RedHornet : GoldHornet 3908
 		TNT1 A 0 A_GiveToTarget("Points",150)
 		TNT1 A 0 A_StopSound(CHAN_VOICE)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		JBG2 A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		JBG2 A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

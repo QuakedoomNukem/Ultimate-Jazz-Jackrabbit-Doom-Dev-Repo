@@ -3,11 +3,11 @@ Actor Scorpweenie 3901
   Tag "Scorpweenie"
   Obituary "$OB_SCORP"
   Health 50
-  mass 10000
+  Mass 10000
   Speed 15
   Radius 20
   Height 24
-  painchance 0
+  PainChance 0
   MONSTER
   +FLOORCLIP
   +NOBLOOD
@@ -27,7 +27,7 @@ Actor Scorpweenie 3901
     Loop
   Melee:
     SCWN D 10 A_FaceTarget
-    SCWN E 4 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
+    SCWN E 4 A_CustomMeleeAttack(random (2, 3) *5, "CrabHit", "CrabMiss")
     SCWN E 4
     Goto See
   Death:
@@ -39,8 +39,8 @@ Actor Scorpweenie 3901
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",100)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	SCWN A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	SCWN A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
 	Death.JazzprojIce:

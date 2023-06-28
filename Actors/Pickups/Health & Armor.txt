@@ -1,306 +1,312 @@
-Actor FoodHealth : Healthbonus
+Actor FoodHealth : HealthBonus
 {
 -COUNTITEM
 }
 
 Actor FoodDrinkDrop : CustomInventory 3807
 {
+	//$Category Health&Armor
+	-COUNTITEM
 	+FLOATBOB
-	 +NOGRAVITY
-	 -COUNTITEM
+	+NOGRAVITY
 	States
 	{
 	Spawn:
-	DRNK A 0
-	DRNK A 0 A_Jump (256, "FoodDrop", "DrinkDrop", "FoodDrop2", "FoodDrop3")
+		DRNK A 0
+		DRNK A 0 A_Jump(256, "FoodDrop", "DrinkDrop", "FoodDrop2", "FoodDrop3")
 	FoodDrop:
-    TNT1 A 0 A_SpawnItem("FoodDrop")
-    Stop
-  DrinkDrop:
-    TNT1 A 0 A_SpawnItem("DrinkDrop")
-    Stop
+		TNT1 A 0 A_SpawnItem("FoodDrop")
+		Stop
+	DrinkDrop:
+		TNT1 A 0 A_SpawnItem("DrinkDrop")
+		Stop
 	FoodDrop2:
-	TNT1 A 0 A_SpawnItem("FoodDrop")
-    Stop
+		TNT1 A 0 A_SpawnItem("FoodDrop")
+		Stop
 	FoodDrop3:
-	TNT1 A 0 A_SpawnItem("FoodDrop")
-    Stop
+		TNT1 A 0 A_SpawnItem("FoodDrop")
+		Stop
 	}
 }
 
 Actor FoodDrop : CustomInventory
 {
 	Tag "Food"
-    Inventory.PickupSound "Food"
-	Inventory.PickupMessage "\clYummy!"
+	Inventory.PickupSound "FOOD"
+	Inventory.PickupMessage "$PK_FOODP"
+	+COUNTITEM
 	+FLOATBOB
-	 +NOGRAVITY
-	 +COUNTITEM
-	 FloatBobStrength 0.5
+	+NOGRAVITY
+	FloatBobStrength 0.5
 	States
 	{
 	Spawn:
-	HEAL A 0
-		HEAL A 0 A_Jump (256, "Food1","Food2","Food3","Food4","Food5","Food6","Food7","Food8","Food9","Food10","Food11" ,"Food12","Food13","Food14","Food15","Food16","Food17","Food18","Food19","Food20","Food21","Food22","Food23","Food24","Food25","Food26","Food27","Food28","Food29","Food30","Food31","Food32","Food33")
-  Food1:
-    HEAL A -1
-    Stop
-  Food2:
-    HEAL B -1
-    Stop
+		HEAL A 0
+		HEAL A 0 A_Jump(256, "Food1","Food2","Food3","Food4","Food5","Food6","Food7","Food8","Food9","Food10","Food11","Food12","Food13","Food14","Food15","Food16","Food17","Food18","Food19","Food20","Food21","Food22","Food23","Food24","Food25","Food26","Food27","Food28","Food29","Food30","Food31","Food32","Food33")
+	Food1:
+		HEAL A -1
+		Stop
+	Food2:
+		HEAL B -1
+		Stop
 	Food3:
-    HEAL C -1
-    Stop
+		HEAL C -1
+		Stop
 	Food4:
-    HEAL D -1
-    Stop
+		HEAL D -1
+		Stop
 	Food5:
-    HEAL E -1
-    stop
+		HEAL E -1
+		Stop
 	Food6:
-    HEAL F -1
-    Stop
+		HEAL F -1
+		Stop
 	Food7:
-    HEAL G -1
-    Stop
+		HEAL G -1
+		Stop
 	Food8:
-    HEAL H -1
-    Stop
+		HEAL H -1
+		Stop
 	Food9:
-    HEAL I -1
-    Stop
+		HEAL I -1
+		Stop
 	Food10:
-    HEAL J -1
-    Stop
+		HEAL J -1
+		Stop
 	Food11:
-    HEAL K -1
-    Stop
+		HEAL K -1
+		Stop
 	Food12:
-    HEAL L -1
-    Stop
+		HEAL L -1
+		Stop
 	Food13:
-    HEAL M -1
-    Stop
+		HEAL M -1
+		Stop
 	Food14:
-    HEAL N -1
-    Stop
+		HEAL N -1
+		Stop
 	Food15:
-    HEAL O -1
-    Stop
+		HEAL O -1
+		Stop
 	Food16:
-    HEAL P -1
-    Stop
+		HEAL P -1
+		Stop
 	Food17:
-    HEAL Q -1
-    Stop
+		HEAL Q -1
+		Stop
 	Food18:
-    HEAL R -1
-    Stop
+		HEAL R -1
+		Stop
 	Food19:
-    HEAL S -1
-    Stop
+		HEAL S -1
+		Stop
 	Food20:
-    HEAL T -1
-    Stop
+		HEAL T -1
+		Stop
 	Food21:
-    HEAL U -1
-    Stop
+		HEAL U -1
+		Stop
 	Food22:
-    HEAL V -1
-    Stop
+		HEAL V -1
+		Stop
 	Food23:
-    HEAL W -1
-    Stop
+		HEAL W -1
+		Stop
 	Food24:
-    HEAL X -1
-    Stop
+		HEAL X -1
+		Stop
 	Food25:
-    HEAL Y -1
-    Stop
+		HEAL Y -1
+		Stop
 	Food26:
-    HEAL Z -1
-    Stop
+		HEAL Z -1
+		Stop
 	Food27:
-    HEA1 A -1
-    Stop
+		HEA1 A -1
+		Stop
 	Food28:
-    HEA1 B -1
-    Stop
+		HEA1 B -1
+		Stop
 	Food29:
-    HEA1 C -1
-    Stop
+		HEA1 C -1
+		Stop
 	Food30:
-    HEA1 D -1
-    Stop
+		HEA1 D -1
+		Stop
 	Food31:
-    HEA1 E -1
-    Stop
+		HEA1 E -1
+		Stop
 	Food32:
-    HEA1 F -1
-    Stop
+		HEA1 F -1
+		Stop
 	Food33:
-    HEA1 G -1
-    Stop
-		Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("FoodHealth", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
-    Stop
+		HEA1 G -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("Points", 100)
+		TNT1 A 0 A_GiveInventory("FoodHealth", 1)
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
 	}
 }
 
 Actor DrinkDrop : CustomInventory
 {
 	Tag "Drink"
-    Inventory.PickupSound "Drink"
-	Inventory.PickupMessage "\cl*Burp"
+	Inventory.PickupSound "DRINK"
+	Inventory.PickupMessage "$PK_DRINK"
+	+COUNTITEM
 	+FLOATBOB
-	 +NOGRAVITY
-	 +COUNTITEM
-	 FloatBobStrength 0.5
+	+NOGRAVITY
+	FloatBobStrength 0.5
 	States
 	{
 	Spawn:
-	DRNK A 0
+		DRNK A 0
 		DRNK A 0 A_Jump(256,"Drink1","Drink2","Drink3","Drink4","Drink5")
-Drink1:
-    DRNK A -1
-    Stop
-  Drink2:
-    DRNK B -1
-    Stop
+	Drink1:
+		DRNK A -1
+		Stop
+	Drink2:
+		DRNK B -1
+		Stop
 	Drink3:
-    DRNK C -1
-    Stop
+		DRNK C -1
+		Stop
 	Drink4:
-    DRNK D -1
-    Stop
+		DRNK D -1
+		Stop
 	Drink5:
-    DRNK E -1
-    stop
+		DRNK E -1
+		Stop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-	TNT1 A 0 A_Giveinventory("FoodHealth", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
-    Stop
+		TNT1 A 0 A_GiveInventory("Points", 100)
+		TNT1 A 0 A_GiveInventory("FoodHealth", 1)
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
 	}
-	}
+}
 
 Actor Carrot : Medikit 3803
 {
-  Tag "Carrot"
-  Inventory.Amount 25
-  Inventory.PickupSound "YUMM"
-  Inventory.PickupMessage "\ciYum! A Carrot! (25+ HP)"
-  Health.LowMessage 25, "\ciNever needed a carrot so much until NOW! (25+ HP)"
-  +FLOATBOB
-   +NOGRAVITY
-   FloatBobStrength 0.5
-  States
-  {
-  Spawn:
-    CARR X -1
-    Stop
+	//$Category Health&Armor
+	Tag "Carrot"
+	Inventory.Amount 25
+	Inventory.PickupSound "YUMM"
+	Inventory.PickupMessage "$PK_CAROT"
+	Health.LowMessage 25, "$LH_CAROT"
+	+FLOATBOB
+	+NOGRAVITY
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+		CARR X -1
+		Stop
 	Pickup:
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
-	Stop
-  }
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
+	}
 }
 
- Actor StandardArmor : GreenArmor 3806
+Actor StandardArmor : GreenArmor 3806
 {
-  Tag "Standard Armor"
-  Radius 20
-  Height 16
-  Inventory.PickupMessage "\cdStandard Armor! (100+ AP)"
-  Inventory.Icon "NARMA0"
-  Inventory.PickupSound "Armor"
-  Armor.SavePercent 50
-  Armor.SaveAmount 100
-  +FLOATBOB
-  FloatBobStrength 0.5
-   +NOGRAVITY
-  States
-  {
-  Spawn:
-    NARM A -1 Bright
-	Stop
+	//$Category Health&Armor
+	Tag "Standard Armor"
+	Radius 20
+	Height 16
+	Inventory.PickupMessage "$PK_STARM"
+	Inventory.Icon "NARMA0"
+	Inventory.PickupSound "ARMOR"
+	Armor.SavePercent 50
+	Armor.SaveAmount 100
+	+FLOATBOB
+	+NOGRAVITY
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+		NARM A -1 BRIGHT
+		Stop
 	Pickup:
-  TNT1 A 0 A_SpawnItemex("ItemSparkle")
-	Stop
-  }
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
+	}
 }
 
 Actor SuperArmor : BlueArmor 3805
 {
-  Tag "Super Armor"
-  Radius 20
-  Height 16
-  Inventory.PickupMessage "\cnSuper Armor! (200+ AP)"
-  Inventory.PickupSound "Armor"
-  Inventory.Icon "SARMA0"
-  Armor.SavePercent 50
-  Armor.SaveAmount 200
-  FloatBobStrength 0.5
-  +FLOATBOB
-   +NOGRAVITY
-  States
-  {
-  Spawn:
-    SARM A -1 Bright
-    Stop
+	//$Category Health&Armor
+	Tag "Super Armor"
+	Radius 20
+	Height 16
+	Inventory.PickupMessage "$PK_SUARM"
+	Inventory.PickupSound "ARMOR"
+	Inventory.Icon "SARMA0"
+	Armor.SavePercent 50
+	Armor.SaveAmount 200
+	+FLOATBOB
+	+NOGRAVITY
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+		SARM A -1 BRIGHT
+		Stop
 	Pickup:
-  TNT1 A 0 A_SpawnItemex("ItemSparkle")
-	Stop
-  }
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
+	}
 }
 
 Actor SuperCarrot : SoulSphere 3801
 {
-  Tag "Super Carrot"
-  +FLOATBOB
-   +NOGRAVITY
-  +INVENTORY.AUTOACTIVATE
-  +INVENTORY.ALWAYSPICKUP
-  +INVENTORY.FANCYPickupSound
-  Inventory.Amount 50
-  Inventory.MaxAmount 200
-  Inventory.PickupMessage "\ciSuper Carrot! (50+ HP)"
-  Inventory.PickupSound "Powerup"
-  FloatBobStrength 0.5
-  -COUNTITEM
-  States
-  {
-  Spawn:
-    SUPC ABCDEFGHIJ 2 Bright
-    Loop
+	//$Category Health&Armor
+	Tag "Super Carrot"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.FANCYPICKUPSOUND
+	-COUNTITEM
+	+FLOATBOB
+	+NOGRAVITY
+	Inventory.Amount 50
+	Inventory.MaxAmount 200
+	Inventory.PickupMessage "$PK_SUPCA"
+	Inventory.PickupSound "POWERUP"
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+		SUPC ABCDEFGHIJ 2 BRIGHT
+		Loop
 	Pickup:
-  TNT1 A 0 A_SpawnItemex("ItemSparkle")
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
-  }
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }
 
-  Actor FullRestore : MegaSphere 3802
-  {
-  Tag "Full Restore"
-  -COUNTITEM
-  +INVENTORY.ALWAYSPICKUP
-  Inventory.PickupMessage "\cfFull Health and Armor!"
-  Inventory.PickupSound "Powerup"
-  +FLOATBOB
-   +NOGRAVITY
-   FloatBobStrength 0.5
-  States
-  {
-  Spawn:
-    FULR A 1 Bright
-    Loop
-  Pickup:
-    TNT1 A 0 A_GiveInventory("SuperArmor", 1)
-    TNT1 A 0 A_GiveInventory("MegasphereHealth", 1)
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-    Stop
-  }
+Actor FullRestore : MegaSphere 3802
+{
+	//$Category Health&Armor
+	Tag "Full Restore"
+	+INVENTORY.ALWAYSPICKUP
+	-COUNTITEM
+	+FLOATBOB
+	+NOGRAVITY
+	Inventory.PickupMessage "$PK_FURES"
+	Inventory.PickupSound "POWERUP"
+	FloatBobStrength 0.5
+	States
+	{
+	Spawn:
+		FULR A 1 BRIGHT //looping? - ozy81
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("SuperArmor", 1)
+		TNT1 A 0 A_GiveInventory("MegasphereHealth", 1)
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }

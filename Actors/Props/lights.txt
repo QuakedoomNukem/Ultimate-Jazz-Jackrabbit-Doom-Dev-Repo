@@ -57,7 +57,7 @@ Actor CeilingLantern 4684 //To Be Eliminated
 	States
 	{
 	Spawn:
-		FRLT C -1 Bright
+		FRLT C -1 BRIGHT
 		Stop
 	}
 }
@@ -67,7 +67,7 @@ Actor CeilingLantern_Animated : CeilingLantern 4685 //To Be Eliminated
 	States
 	{
 	Spawn:
-		FRLT C 5 Bright
+		FRLT C 5 BRIGHT
 		FRLF C 10
 		Loop
 	}
@@ -89,7 +89,7 @@ Actor CeilingLanternTall_Animated : CeilingLantern 4687 //To Be Eliminated
 	States
 	{
 	Spawn:
-		FRLT D 5 Bright
+		FRLT D 5 BRIGHT
 		FRLF D 10
 		Loop
 	}
@@ -270,7 +270,7 @@ Actor FloorLantern_Animated 4681 ////To Be Eliminated
 	States
 	{
 	Spawn:
-		FRLT A 5 Bright
+		FRLT A 5 BRIGHT
 		FRLF A 10
 		Loop
 	}
@@ -296,7 +296,7 @@ Actor FloorLanternTall_Animated 4683 //To Be Eliminated
 	States
 	{
 	Spawn:
-		FRLT B 5 Bright
+		FRLT B 5 BRIGHT
 		FRLF B 10
 		Loop
 	}
@@ -331,7 +331,7 @@ Actor JazzTorch 3739
 	Spawn:
 		JJTH A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
 	Spawn2:
-		JJTH ABC 3 Bright
+		JJTH ABC 3 BRIGHT
 		Loop
 	}
 }

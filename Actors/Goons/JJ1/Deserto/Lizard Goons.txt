@@ -40,8 +40,8 @@ Actor LizardGoon 3142
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	LIZZ CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	LIZZ CCC 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
 	Death.JazzprojIce:
@@ -94,8 +94,8 @@ Actor WalkingLizard 4032
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	WLKL CCC 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	WLKL CCC 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
 	Death.JazzprojIce:

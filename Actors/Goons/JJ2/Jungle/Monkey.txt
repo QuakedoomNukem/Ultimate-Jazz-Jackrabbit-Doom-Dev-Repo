@@ -25,7 +25,7 @@ Actor Monkey 29123
   Missile: 
     SDDM E 4
     SDDM E 10 A_FaceTarget
-    SDDM F 2 Bright A_CustomMissile("Banana", 30, 8)
+    SDDM F 2 BRIGHT A_CustomMissile("Banana", 30, 8)
     SDDM E 2
     Goto See
   Death:
@@ -42,8 +42,8 @@ Actor Monkey 29123
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	SDDM A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	SDDM A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
     }
@@ -63,10 +63,10 @@ Actor Banana
   States
   {
   Spawn:
-    SDFB ABCDEFGH 2 Bright
+    SDFB ABCDEFGH 2 BRIGHT
     Loop
   Death:
-    SDFB IJKLMN 3 Bright
+    SDFB IJKLMN 3 BRIGHT
     Stop
   }
 }

@@ -42,8 +42,8 @@ Actor Devil 3126
 	TNT1 A 0 A_GiveToTarget("Points",150)
 	TNT1 A 0 A_StopSound(CHAN_VOICE)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	DEVL A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	DEVL A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
    } 

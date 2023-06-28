@@ -19,7 +19,7 @@ Actor TNT : CustomInventory  3588
       TNT1 A 0 A_ThrowGrenade("ActivatedTNT",-16,8,2,0)
       Stop
 	  Pickup:
-  TNT1 A 0 A_SpawnItemex("ItemSparkle")
+  TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 	Stop
   }
 }
@@ -71,8 +71,8 @@ Actor ActivatedTNT2
 	Death:
     DYNM D 3 A_PlaySound("SEEKXPLD")
 	DYNM E 3
-    DYNM F 3 Bright A_Explode(300,128,0)
-    DYNM MNOPQRS 3 Bright
+    DYNM F 3 BRIGHT A_Explode(300,128,0)
+    DYNM MNOPQRS 3 BRIGHT
     Stop
 	}
 }

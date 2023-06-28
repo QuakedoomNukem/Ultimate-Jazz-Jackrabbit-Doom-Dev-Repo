@@ -6,7 +6,7 @@ Actor ElectroBlaster : Weapon 32767
 	Weapon.AmmoUse1 1
 	Weapon.AmmoGive1 0
 	Inventory.PickupSound "WEAPNGET"
-	Inventory.PickupMessage "Electro-Blaster (Slot 0)"
+	Inventory.PickupMessage "$PK_WEAP0"
 	Obituary "$OB_WEP0"
 	Weapon.BobRangeX 0.5
    Weapon.BobRangeY 0.5
@@ -98,10 +98,10 @@ Actor Neutronshot
     States
   {
   Spawn:
-    NEUS A 6 bright
+    NEUS A 6 BRIGHT
     Loop
   Death:
-    JBLS EFGH 4 bright
+    JBLS EFGH 4 BRIGHT
     stop
    }
 }
@@ -122,7 +122,7 @@ Actor NeutronshotPow
     States
   {
   Spawn:
-    NEUP A 6 bright
+    NEUP A 6 BRIGHT
     Loop
   Death:
   TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 0, CMF_AIMDIRECTION)
@@ -155,7 +155,7 @@ Actor MiniNeutron
 	 States
      {
      Spawn:
-        NLPJ A 6 bright
+        NLPJ A 6 BRIGHT
         Loop      
      Death: 
 	    FBLS DEFGHI 2
@@ -166,13 +166,13 @@ Actor MiniNeutron
 
 Actor JJCell : Ammo 3900
 {
-  Inventory.PickupMessage "\ckElectro-Blaster \clAmmo"
+  Inventory.PickupMessage "$PK_AMMO0"
   Inventory.Amount 3
   Inventory.MaxAmount 100
   Ammo.BackpackAmount 3
   Ammo.BackpackMaxAmount 100
   Inventory.Icon "XELLZ0"
-  Inventory.PickupSound "ammoup"
+  Inventory.PickupSound "AMMOUP"
   FloatBobStrength 0.5
   +FLOATBOB
    +NOGRAVITY
@@ -189,10 +189,10 @@ Actor Gun0PowerUpBox : Gun1PowerUpBox 3829
   States
   {
   Spawn:
-    0GUN ABCD 1 Bright
+    0GUN ABCD 1 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 A_PlaySound("WEAPNGET")
   TNT1 A 0 ACS_NamedExecute("Gun0",0)
   TNT1 A 0 A_GiveToTarget("Gun0PowerUp", 1, AAPTR_DEFAULT)
   TNT1 A 0 A_GiveToTarget("JJCell", 25, AAPTR_DEFAULT)

@@ -30,7 +30,7 @@ Actor TubeRemixSparks 3973
 		Loop
 	See:
 		TNT1 A 0 A_JumpIfInTargetLOS("Seen", 130)
-		TRSK A 1 Bright A_Chase
+		TRSK A 1 BRIGHT A_Chase
 		Loop
 	Seen:
 		TNT1 A 0
@@ -40,7 +40,7 @@ Actor TubeRemixSparks 3973
 		Goto See
 	Melee:
 		TRSK A 1 A_FaceTarget
-		TRSK A 1 A_CustomMeleeAttack (random (2, 3) *5, "SPKBUZZ", "SPKBUZZ")
+		TRSK A 1 A_CustomMeleeAttack(random (2, 3) *5, "SPKBUZZ", "SPKBUZZ")
 		TRSK A 1
 		Goto See
 	Death:
@@ -62,8 +62,8 @@ Actor TubeRemixSparks 3973
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",200)
 		TNT1 A 0 A_PlaySound("FMTRFIRE")
-		TRSK A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-		TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+		TRSK A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 		Stop
 	}

@@ -34,9 +34,9 @@ Actor TurtleRobot 3124
       Loop 
    Missile: 
       ROBT B 8 A_FaceTarget 
-      ROBT C 8 Bright A_CustomMissile("ZombieTankMissile",40,32,359,0)
+      ROBT C 8 BRIGHT A_CustomMissile("ZombieTankMissile",40,32,359,0)
 	  ROBT B 2 A_FaceTarget 
-      ROBT C 8 Bright A_CustomMissile("ZombieTankMissile",40,-29,359,0) 
+      ROBT C 8 BRIGHT A_CustomMissile("ZombieTankMissile",40,-29,359,0) 
       Goto See 
 	Death:
 	TNT1 A 0 A_StopSound(CHAN_VOICE)
@@ -60,7 +60,7 @@ Actor ZombieTankMissile
    Height 11
    Speed 18
    Damage 8
-   PROJECTILE
+   Projectile
    DeathSound "SEEKXPLD"
    +THRUGHOST
    +SEEKERMISSILE
@@ -68,14 +68,14 @@ Actor ZombieTankMissile
    States
    {
    Spawn:
-      INDM A 1 Bright A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
-	INDM A 4 Bright
+      INDM A 1 BRIGHT A_SpawnItemEx("MissileTrail", -21, 0, 0, 1)
+	INDM A 4 BRIGHT
       Loop
       Death:
-   SEKE AB 3 Bright
-      SEKE C 0 Bright A_SetTranslucent (0.67,1)
-      SEKE C 8 Bright A_Explode(50,76, 0)
-      SEKE DEFGHIJKL 3 bright
+   SEKE AB 3 BRIGHT
+      SEKE C 0 BRIGHT A_SetTranslucent (0.67,1)
+      SEKE C 8 BRIGHT A_Explode(50,76, 0)
+      SEKE DEFGHIJKL 3 BRIGHT
       Stop
    }
 }

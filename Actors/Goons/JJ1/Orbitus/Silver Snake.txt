@@ -5,9 +5,9 @@ Actor OrbitusSnake 3792
   Health 50
   Radius 10
   Height 10
-  mass 99999
+  Mass 99999
   Speed 15
-  painchance 0
+  PainChance 0
   damage 2
   MONSTER
   +FLOAT

@@ -3,11 +3,11 @@ Actor Skeleturtle 3809
   Tag "Skeleturtle"
   Obituary "$OB_SKLTU"
   Health 30
-  mass 10000
+  Mass 10000
   Speed 30
   Radius 12
   Height 40
-  painchance 0
+  PainChance 0
   MONSTER
   +FLOORCLIP
   +NOBLOOD
@@ -27,7 +27,7 @@ Actor Skeleturtle 3809
     Loop
   Melee:
     TTUR E 10 A_FaceTarget
-    TTUR F 8 A_CustomMeleeAttack (random (2, 3) *5, "CrabHit", "CrabMiss")
+    TTUR F 8 A_CustomMeleeAttack(random (2, 3) *5, "CrabHit", "CrabMiss")
     TTUR E 4
     Goto See
   Death:

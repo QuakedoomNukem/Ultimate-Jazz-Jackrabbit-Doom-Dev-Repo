@@ -9,13 +9,13 @@ Actor RapidFire : CustomInventory  32538
   +FLOATBOB
    +NOGRAVITY
    +INVENTORY.ALWAYSPICKUP
-  states
+  States
   {
   Spawn:
-	PLSP ABCDEFGH 3 Bright
+	PLSP ABCDEFGH 3 BRIGHT
 	Loop
   Pickup:
-  TNT1 A 0 A_SpawnItemex("ItemSparkle")
+  TNT1 A 0 A_SpawnItemEx("ItemSparkle")
  	TNT1 A 0 A_GiveInventory("RapidfireCount")
 	Stop
   }
@@ -56,7 +56,7 @@ Actor JJHoverBoard : PowerupGiver 32002
 		FLYT ABCDEDCBA 3
 		Loop
 		  Pickup:
-		  TNT1 A 0 A_SpawnItemex("ItemSparkle")
+		  TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 		  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
 	}
@@ -76,7 +76,7 @@ Actor JJInvul : CustomInventory 3136
   States
   {
   Spawn:
-    INVS ABCDCB 1 Bright
+    INVS ABCDCB 1 BRIGHT
     Loop
   Pickup:
 	TNT1 A 0
@@ -90,7 +90,7 @@ Actor JJInvul : CustomInventory 3136
 		A_SetBlend("Yellow",1.0,20,"Yellow");
 		A_GiveInventory("JJInvuln");
 	}
-	TNT1 A 0 A_SpawnItemex("ItemSparkle")
+	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
 	Stop
 	}
@@ -198,7 +198,7 @@ Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 	States
 	{
 	Spawn:
-		HAST ABCD 1 Bright
+		HAST ABCD 1 BRIGHT
 		Loop
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -223,10 +223,10 @@ Actor TurboTimeBox 3925
   States
   {
   Spawn:
-    HAST ABCD 1 Bright
+    HAST ABCD 1 BRIGHT
     Loop
   Death:
-  TNT1 A 0 A_PlaySound ("WEAPNGET")
+  TNT1 A 0 A_PlaySound("WEAPNGET")
   TNT1 A 0 A_Print("It's Turbo Time!", 3, "Smallfont")
   TNT1 A 0 A_GiveToTarget("TurboTime", 1, AAPTR_DEFAULT)
   TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))

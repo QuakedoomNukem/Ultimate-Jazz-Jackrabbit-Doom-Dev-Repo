@@ -27,7 +27,7 @@ Actor Labrat 13200
     RATS BBCCBBCC 2 A_Chase
     Loop
   Melee:
-	  RATS A 5 A_JumpIfcloser(128, 2)
+	  RATS A 5 A_JumpIfCloser(128, 2)
 	  Goto See
       RATS A 5 A_FaceTarget
 	  TNT1 A 0 A_PlaySound("RATATTCK")
@@ -43,8 +43,8 @@ Actor Labrat 13200
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_GiveToTarget("Points",100)
 	TNT1 A 0 A_PlaySound("FMTRFIRE")
-	RATS A 2 A_SpawnItemEx("FiredeadSpawner",0,0,0,0,0,0,0,128)
-	TNT1 A 2 A_SpawnItemEx("Firedead",0,0,0,0,0,0,0,128)
+	RATS A 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
+	TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 	TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
 	Stop
 	Death.JazzprojIce:
