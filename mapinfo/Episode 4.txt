@@ -206,7 +206,7 @@ map E4SL1 lookup "E4SL1_NAME"
 
 cluster 4
   { 
-	Pic = "JazzTITL"
+	Pic = "E4END"
     music = "JJ1Bonus"
     exittext = "You did it!",
     "You managed to go through various worlds,",
