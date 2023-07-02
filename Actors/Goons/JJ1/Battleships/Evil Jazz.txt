@@ -1,6 +1,6 @@
 Actor EvilJazz 32527
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Evil Jazz"
 	Health 3000
 	Radius 32

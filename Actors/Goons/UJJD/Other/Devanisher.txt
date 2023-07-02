@@ -1,6 +1,6 @@
 Actor Devanisher 4120
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Cyber Devanisher"
 	Radius 40
 	Height 256

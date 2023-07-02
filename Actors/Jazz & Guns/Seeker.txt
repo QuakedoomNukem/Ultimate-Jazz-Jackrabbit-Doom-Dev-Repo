@@ -4,7 +4,7 @@ Actor Seeker : Weapon 15005
   Weapon.AmmoType "HomingMissile"
   Weapon.AmmoGive 0
   Weapon.AmmoUse 1
-  Inventory.PickupMessage "Seeker (Slot 5)"
+  Inventory.PickupMessage "$PK_WEAP5"
   Inventory.PickupSound "WEAPNGET"
   Obituary "$OB_WEP5"
   Weapon.SelectionOrder 2630
@@ -218,7 +218,7 @@ ammo.backpackamount 3
 ammo.backpackMaxAmount 100
 FloatBobStrength 0.5
 Inventory.PickupSound "AMMOUP"
-Inventory.PickupMessage "\crSeeker \clAmmo"
+Inventory.PickupMessage "$PK_AMMO5"
 Inventory.Icon "HSRKZ0"
 +FLOATBOB
  +NOGRAVITY

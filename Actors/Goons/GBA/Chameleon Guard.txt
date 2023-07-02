@@ -1,6 +1,6 @@
 Actor HammeredChameleon 3731
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Chameleon Guard"
 	Health 100
 	Radius 16

@@ -1,6 +1,6 @@
 Actor HyperTank 3212
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Hyper Tankety Tank"
 	Radius 16
 	Height 48
@@ -52,7 +52,7 @@ Actor HyperTank 3212
 
 Actor JazzMissile 3210 //obituaries can't be used here, they are triggered by Minissiles themselves - ozy81
 {
-	//$Category Hazards
+	//$Category JJ_Hazards
 	Radius 8
 	Height 16
 	+NOGRAVITY
@@ -70,7 +70,7 @@ Actor JazzMissile 3210 //obituaries can't be used here, they are triggered by Mi
 
 Actor JazzMissile2 : JazzMissile 3211
 {
-	//$Category Hazards
+	//$Category JJ_Hazards
 	States
 	{
 	Spawn:

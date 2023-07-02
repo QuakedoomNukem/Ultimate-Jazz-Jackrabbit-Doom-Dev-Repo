@@ -1,6 +1,6 @@
 Actor XmasGhost 4041
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Christmas Ghost"
 	Health 100
 	Radius 20

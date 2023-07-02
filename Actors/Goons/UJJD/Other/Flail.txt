@@ -1,6 +1,6 @@
 Actor Flail 3712
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Flail"
 	Scale 3
 	Health 999

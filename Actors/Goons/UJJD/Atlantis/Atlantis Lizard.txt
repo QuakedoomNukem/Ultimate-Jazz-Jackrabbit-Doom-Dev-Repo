@@ -1,6 +1,6 @@
 Actor AtlantisLizard 3874
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Atlantis Lizard"
 	Health 150
 	PainChance 0

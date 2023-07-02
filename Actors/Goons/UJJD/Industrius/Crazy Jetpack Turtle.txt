@@ -1,6 +1,6 @@
 Actor CrazyJetpackGoon 4040
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Crazy Jetpack Turtle"
 	Health 56
 	Radius 16

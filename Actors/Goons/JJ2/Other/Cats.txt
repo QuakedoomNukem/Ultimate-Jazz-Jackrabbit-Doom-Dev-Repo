@@ -1,6 +1,6 @@
 Actor BlackCat 3786
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Scaredy Cat"
 	Health 50
 	PainChance 0 
@@ -54,7 +54,7 @@ Actor BlackCat 3786
 
 Actor OrangeCat : BlackCat 4044
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Orange Cat"
 	Health 70
 	Radius 16 

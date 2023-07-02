@@ -1,6 +1,6 @@
 Actor Dragoon 3295
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Drageen"
 	Health 200
 	Radius 12

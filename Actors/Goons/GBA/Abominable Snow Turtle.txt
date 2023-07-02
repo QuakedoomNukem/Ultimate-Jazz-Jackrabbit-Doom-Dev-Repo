@@ -1,6 +1,6 @@
 Actor SnowTurtleBoss 4048
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Abominable Snow Turtle"
 	Health 5000
 	Radius 32

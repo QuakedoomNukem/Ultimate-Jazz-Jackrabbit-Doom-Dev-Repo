@@ -1,6 +1,6 @@
 Actor SleepingTurtle 3741
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Land Terrapin"
 	Health 100
 	Speed 0

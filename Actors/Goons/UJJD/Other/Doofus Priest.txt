@@ -1,6 +1,6 @@
 Actor ElementGoon6 4042
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Priest"
 	Health 800
 	Radius 31

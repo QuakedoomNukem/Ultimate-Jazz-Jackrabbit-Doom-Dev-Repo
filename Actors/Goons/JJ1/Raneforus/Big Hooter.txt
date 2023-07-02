@@ -1,6 +1,6 @@
 Actor BigHooter 3194
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Big Hooter"
 	Health 100
 	PainChance 0

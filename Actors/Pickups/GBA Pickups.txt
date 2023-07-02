@@ -1,6 +1,6 @@
 Actor GameBoyAdvance : Inventory 1337
 {
-	//$Category Bonuses
+	//$Category JJ_Pickups
 	Inventory.PickupSound "SECTGEM"
 	Inventory.PickupMessage "$PK_GBAPK"
 	+FLOATBOB
@@ -18,7 +18,7 @@ Actor GameBoyAdvance : Inventory 1337
 
 Actor GBAStim : Health 3726
 {
-	//$Category Bonuses
+	//$Category JJ_Pickups
 	Inventory.Amount 10
 	Inventory.PickupSound "GBHealth"
 	Inventory.PickupMessage "$PK_GBAHL"
@@ -34,7 +34,7 @@ Actor GBAStim : Health 3726
 
 Actor GBAMedkit : Health 3725
 {
-	//$Category Bonuses
+	//$Category JJ_Pickups
 	Inventory.Amount 50
 	Inventory.PickupSound "GBHealth"
 	Inventory.PickupMessage "$PK_GBAMK"
@@ -51,7 +51,7 @@ Actor GBAMedkit : Health 3725
 
 Actor MoneyBundle : StonarBonus  3729
 {
-	//$Category Bonuses
+	//$Category JJ_Pickups
 	Inventory.PickupSound "MONEY"
 	Inventory.PickupMessage "$PK_MONE1"
 	+BRIGHT
@@ -66,7 +66,7 @@ Actor MoneyBundle : StonarBonus  3729
 
 Actor MoneyBucket : CustomInventory 3728
 {
-	//$Category Bonuses
+	//$Category JJ_Pickups
 	Inventory.PickupSound "MONEY"
 	Inventory.PickupMessage "$PK_MONE2"
 	+BRIGHT
@@ -90,7 +90,7 @@ Actor MoneyBucket : CustomInventory 3728
 
 Actor GBARabbitBonus : CustomInventory 3727
 {
-	//$Category Bonuses
+	//$Category JJ_Pickups
 	Inventory.PickupSound "RABBITOU"
 	Inventory.PickupMessage "$PK_RABIT"
 	+BRIGHT

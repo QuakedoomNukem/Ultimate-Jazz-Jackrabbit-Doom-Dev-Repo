@@ -1,6 +1,6 @@
 Actor BattleshipsCore 3893
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Small Battleship Core"
 	Height 36
 	Radius 20
@@ -33,7 +33,7 @@ Actor BattleshipsCore 3893
 
 Actor BattleshipsCoreBoss 3898
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Battleship Core"
 	Height 36
 	Radius 20
@@ -94,7 +94,7 @@ Actor BattleshipsCoreBoss 3898
 
 Actor BattleshipsCoreBoss2 : BattleshipsCoreBoss 28735
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Mothership Core"
 	Health 4000
 	PainChance 0

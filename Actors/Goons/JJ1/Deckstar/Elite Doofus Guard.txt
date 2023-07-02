@@ -1,6 +1,6 @@
 Actor TurtleGrunt 11910
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Elite Doofus Guard"
 	Health 50
 	Radius 18

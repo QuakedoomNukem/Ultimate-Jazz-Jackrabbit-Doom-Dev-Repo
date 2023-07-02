@@ -1,6 +1,6 @@
 Actor Draco 3296
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Dragoon"
 	Health 200
 	Radius 12

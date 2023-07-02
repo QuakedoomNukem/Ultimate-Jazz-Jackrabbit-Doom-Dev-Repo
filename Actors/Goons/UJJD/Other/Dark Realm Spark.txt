@@ -1,6 +1,6 @@
 Actor DarkSparks1 4076
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Dark Realm Spark"
 	Health 50
 	Radius 18

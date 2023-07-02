@@ -1,6 +1,6 @@
 Actor LochnessTurtle 4070
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Lochness Turtle"
 	Health 100
 	Radius 16

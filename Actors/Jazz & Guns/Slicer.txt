@@ -1,9 +1,9 @@
-Actor Slicer : Doomweapon 20002
+Actor Slicer : DoomWeapon 20002
 {
 	Tag "Slicer"
 	Radius 20
 	Height 16
-	Inventory.PickupMessage "Slicer (Slot 3)"
+	Inventory.PickupMessage "$PK_WEAP3"
 	Inventory.PickupSound "WEAPNGET"
 	Obituary "$OB_WEP3"
 	Weapon.selectionorder 700
@@ -235,7 +235,7 @@ Stop
 
 Actor SlicerAmmo : Ammo 19020
 {
-  Inventory.PickupMessage "\cjSlicer \clAmmo"
+  Inventory.PickupMessage "$PK_AMMO3"
   Inventory.PickupSound "AMMOUP"
   Inventory.Amount 3
   Inventory.MaxAmount 100

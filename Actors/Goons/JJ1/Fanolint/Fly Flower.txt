@@ -1,6 +1,6 @@
 Actor PetalCopter 3224
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Fly Flower"
 	Health 50
 	Radius 8

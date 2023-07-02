@@ -1,6 +1,6 @@
 Actor DorMouse 3771
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "The Dormouse"
 	Health 100
 	Radius 12

@@ -1,6 +1,6 @@
 Actor DragonFly 11915
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Dragonfly"
 	Obituary "$OB_DRFLY"
 	Health 100

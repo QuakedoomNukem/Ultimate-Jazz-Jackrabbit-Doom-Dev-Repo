@@ -1,6 +1,6 @@
 Actor ShadowHound 3787
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Baskervilles Hound"
 	Health 150
 	PainChance 0 

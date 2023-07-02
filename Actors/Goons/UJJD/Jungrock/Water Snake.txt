@@ -1,6 +1,6 @@
 Actor WaterSnake 3909
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Water Snake"
 	Obituary "$OB_WSNEK"
 	Health 50

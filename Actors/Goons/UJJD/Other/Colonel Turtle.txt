@@ -1,6 +1,6 @@
 Actor ColTurtle 4124
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Col. Turtle"
 	Health 5000
 	Radius 20

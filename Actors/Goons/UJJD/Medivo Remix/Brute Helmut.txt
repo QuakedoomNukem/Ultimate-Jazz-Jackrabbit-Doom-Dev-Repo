@@ -1,6 +1,6 @@
 Actor BruteHelmut 4038
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Brute Helmut"
 	Health 300
 	Radius 16

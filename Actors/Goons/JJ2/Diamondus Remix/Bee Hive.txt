@@ -1,6 +1,6 @@
 Actor DiamondusBeeHive 3964
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Bee Hive"
 	Health 60
 	Radius 12

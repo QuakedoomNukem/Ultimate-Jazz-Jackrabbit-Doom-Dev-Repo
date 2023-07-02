@@ -1,6 +1,6 @@
 Actor EasterusChicken 3933
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Chicken"
 	Health 70
 	Radius 16

@@ -1,6 +1,6 @@
 Actor FroogChief 26556
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Froog Chief"
 	Health 200
 	PainChance 0 

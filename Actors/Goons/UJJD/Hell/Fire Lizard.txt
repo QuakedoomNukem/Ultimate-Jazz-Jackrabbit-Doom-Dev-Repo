@@ -1,6 +1,6 @@
 Actor FireLizard 3129
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Fire Lizard"
 	Radius 12
 	Height 56

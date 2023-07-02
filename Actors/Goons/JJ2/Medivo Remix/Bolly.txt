@@ -1,6 +1,6 @@
 Actor Bolly 3236
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Bolly"
 	Health 2000
 	PainChance 0

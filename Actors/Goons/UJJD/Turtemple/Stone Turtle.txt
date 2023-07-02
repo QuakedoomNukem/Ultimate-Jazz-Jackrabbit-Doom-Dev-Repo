@@ -1,7 +1,7 @@
 //inspired from BeamGuy by Captain Toenail
 Actor StoneTurtle 3903
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Stone Turtle"
 	Health 150
 	Radius 16

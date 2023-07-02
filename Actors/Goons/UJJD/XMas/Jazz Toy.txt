@@ -1,6 +1,6 @@
 Actor XmasJazzToy 4096
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Jazz Toy"
 	Radius 24
 	Height 32

@@ -1,6 +1,6 @@
 Actor ElementGoon3 4035
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Cultist"
 	Health 175
 	Radius 20

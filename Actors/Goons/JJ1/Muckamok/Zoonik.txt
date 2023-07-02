@@ -1,6 +1,6 @@
 Actor ZoonikBoss1 26561
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Zoonik"
 	Obituary "$OB_ZOON"
 	Health 6000

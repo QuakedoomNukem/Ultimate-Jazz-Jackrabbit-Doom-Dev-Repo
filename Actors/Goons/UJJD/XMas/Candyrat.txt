@@ -1,6 +1,6 @@
 Actor XmasCandyRat 4089
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Candyrat"
 	Health 100
 	Radius 16

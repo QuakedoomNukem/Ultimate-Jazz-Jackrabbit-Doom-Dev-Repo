@@ -1,6 +1,6 @@
 Actor Bandersnatch 3772
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Bandersnatch"
 	Health 100
 	PainChance 0

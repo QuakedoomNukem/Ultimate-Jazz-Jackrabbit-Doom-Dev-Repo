@@ -1,6 +1,6 @@
 Actor ElementGoon2 4034
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Ghoul"
 	Health 200
 	Radius 31

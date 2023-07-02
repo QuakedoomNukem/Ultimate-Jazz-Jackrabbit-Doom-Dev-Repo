@@ -1,6 +1,6 @@
 Actor JJASaurianGeneral 3852
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Saurian General"
 	Health 6000
 	Radius 24

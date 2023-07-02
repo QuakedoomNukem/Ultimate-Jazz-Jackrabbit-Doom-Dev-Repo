@@ -1,6 +1,6 @@
 Actor FroogLizard 26559
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Froog Lizard"
 	Health 500
 	PainChance 0

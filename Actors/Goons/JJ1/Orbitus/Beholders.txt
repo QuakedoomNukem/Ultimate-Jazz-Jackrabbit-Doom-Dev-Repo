@@ -1,6 +1,6 @@
 Actor HBeholder 3169
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Horizontal Beholder"
 	Health 100
 	Radius 16
@@ -43,7 +43,7 @@ Actor HBeholder 3169
 
 Actor VBeholder 3255
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Vertical Beholder"
 	Health 120
 	Radius 12

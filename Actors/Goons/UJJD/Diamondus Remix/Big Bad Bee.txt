@@ -1,6 +1,6 @@
 Actor BigBeeBoss 3966
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Big Bad Bee"
 	Health 6000
 	Radius 24

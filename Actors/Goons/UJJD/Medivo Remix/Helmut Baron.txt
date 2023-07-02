@@ -1,6 +1,6 @@
 Actor HelmutBaron 4039
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Helmut Baron"
 	Health 2000
 	Radius 16

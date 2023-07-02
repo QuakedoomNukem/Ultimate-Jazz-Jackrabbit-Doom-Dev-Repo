@@ -1,6 +1,6 @@
 Actor MechBoss 31526
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Turtlenator"
 	Health 5000
 	Radius 30

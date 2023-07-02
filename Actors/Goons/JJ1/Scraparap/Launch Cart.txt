@@ -1,6 +1,6 @@
 Actor MotoMortar 3735
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Launch Cart"
 	Health 100
 	Radius 16

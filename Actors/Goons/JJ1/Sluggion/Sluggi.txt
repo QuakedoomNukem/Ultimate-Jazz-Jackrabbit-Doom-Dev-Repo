@@ -1,6 +1,6 @@
 Actor Sluggy 3231
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Sluggi"
 	Health 50
 	Radius 16

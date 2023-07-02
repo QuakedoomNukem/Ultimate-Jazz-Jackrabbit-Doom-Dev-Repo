@@ -1,6 +1,6 @@
 Actor BabyTurtle 25625
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Turtlette"
 	Health 10
 	Radius 8

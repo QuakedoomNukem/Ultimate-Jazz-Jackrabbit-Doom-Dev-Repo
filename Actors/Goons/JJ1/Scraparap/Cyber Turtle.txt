@@ -1,6 +1,6 @@
 Actor CyberTurtle 3736
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Cyber Turtle"
 	Health 50
 	Radius 8

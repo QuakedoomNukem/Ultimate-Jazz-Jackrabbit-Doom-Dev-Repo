@@ -1,6 +1,6 @@
 Actor JJASlimer 3848
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Slimer"
 	Health 100
 	Radius 16
@@ -54,7 +54,7 @@ Actor JJASlimer 3848
 
 Actor JJAPoisonSlimer 3849
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Health 150
 	Radius 16
 	Height 24
@@ -128,7 +128,7 @@ Actor PoisonProj
 
 Actor ChocolateMonster 3926
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Chocolate Slobber"
 	Health 150
 	Radius 16
@@ -204,7 +204,7 @@ Actor ChocolateProj
 
 Actor LavaSlimer 4050
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Lava Slimer"
 	Health 100
 	Radius 16

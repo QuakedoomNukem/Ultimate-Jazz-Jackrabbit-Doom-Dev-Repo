@@ -5,7 +5,7 @@ Actor FoodHealth : HealthBonus
 
 Actor FoodDrinkDrop : CustomInventory 3807
 {
-	//$Category Health&Armor
+	//$Category JJ_Health&Armor
 	-COUNTITEM
 	+FLOATBOB
 	+NOGRAVITY
@@ -189,7 +189,7 @@ Actor DrinkDrop : CustomInventory
 
 Actor Carrot : Medikit 3803
 {
-	//$Category Health&Armor
+	//$Category JJ_Health&Armor
 	Tag "Carrot"
 	Inventory.Amount 25
 	Inventory.PickupSound "YUMM"
@@ -211,7 +211,7 @@ Actor Carrot : Medikit 3803
 
 Actor StandardArmor : GreenArmor 3806
 {
-	//$Category Health&Armor
+	//$Category JJ_Health&Armor
 	Tag "Standard Armor"
 	Radius 20
 	Height 16
@@ -236,7 +236,7 @@ Actor StandardArmor : GreenArmor 3806
 
 Actor SuperArmor : BlueArmor 3805
 {
-	//$Category Health&Armor
+	//$Category JJ_Health&Armor
 	Tag "Super Armor"
 	Radius 20
 	Height 16
@@ -261,7 +261,7 @@ Actor SuperArmor : BlueArmor 3805
 
 Actor SuperCarrot : SoulSphere 3801
 {
-	//$Category Health&Armor
+	//$Category JJ_Health&Armor
 	Tag "Super Carrot"
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
@@ -288,7 +288,7 @@ Actor SuperCarrot : SoulSphere 3801
 
 Actor FullRestore : MegaSphere 3802
 {
-	//$Category Health&Armor
+	//$Category JJ_Health&Armor
 	Tag "Full Restore"
 	+INVENTORY.ALWAYSPICKUP
 	-COUNTITEM

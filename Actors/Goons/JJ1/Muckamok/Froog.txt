@@ -1,6 +1,6 @@
 Actor Froog 3798
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Health 70
 	Radius 16
 	Height 48

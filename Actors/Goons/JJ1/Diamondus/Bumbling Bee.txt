@@ -1,6 +1,6 @@
 Actor Bee 11911
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Bumbling Bee"
 	Health 50
 	Radius 8

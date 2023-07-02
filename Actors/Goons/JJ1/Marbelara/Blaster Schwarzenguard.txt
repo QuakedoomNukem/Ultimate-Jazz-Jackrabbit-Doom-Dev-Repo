@@ -1,6 +1,6 @@
 Actor HeavyGoon 11912
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Blaster Schwarzenguard"
 	Health 75
 	Radius 20

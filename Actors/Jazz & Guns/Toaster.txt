@@ -13,7 +13,7 @@ Actor Toaster : Weapon 16006
 	+FLOATBOB
 	+NOGRAVITY
 	Inventory.PickupSound "WEAPNGET"
-	Inventory.PickupMessage "Toaster (Slot 7)"
+	Inventory.PickupMessage "$PK_WEAP7"
 	Obituary "$OB_WEP7"
 	States
 	{
@@ -178,7 +178,7 @@ Actor Gas : Ammo 16007
 	Inventory.Amount 3
 	Inventory.MaxAmount 100
 	Inventory.Icon AGASZ0
-	Inventory.PickupMessage "\cxToaster \clAmmo"
+	Inventory.PickupMessage "$PK_AMMO7"
 	Inventory.PickupSound "AMMOUP"
 	FloatBobStrength 0.5
 	+FLOATBOB

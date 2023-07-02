@@ -127,7 +127,7 @@ Actor Points : Inventory
 
 Actor JJBackpack : Backpack 3804
 {
-	//$Category Powerups
+	//$Category JJ_PowerUps
 	Height 26
 	Inventory.PickupMessage "$PK_JJBAK"
 	Inventory.PickupSound "AMMOUP"

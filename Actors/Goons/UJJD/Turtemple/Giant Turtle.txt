@@ -1,6 +1,6 @@
 Actor GiantTurtle 3902
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Radius 32 
 	Height 144
 	Health 5000

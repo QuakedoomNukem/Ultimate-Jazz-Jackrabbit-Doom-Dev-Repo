@@ -1,6 +1,6 @@
 Actor CrazyEasterusEgg 3932
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Crazed Easter Egg"
 	Obituary "$OB_YOLKE"
 	Health 80

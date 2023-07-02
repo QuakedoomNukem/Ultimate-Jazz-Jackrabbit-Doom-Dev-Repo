@@ -1,6 +1,6 @@
 Actor ColoniusFencer 3965
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Fencer"
 	Health 100
 	Radius 12

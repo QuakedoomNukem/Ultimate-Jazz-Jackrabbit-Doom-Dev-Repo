@@ -1,6 +1,6 @@
 Actor BigSparks 11913
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Big Spark"
 	Health 100
 	Radius 31

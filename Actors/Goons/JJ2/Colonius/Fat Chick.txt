@@ -1,6 +1,6 @@
 Actor FatTurtleGal 3946
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Fat Chick"
 	Obituary "$OB_FATCH"
 	Health 150

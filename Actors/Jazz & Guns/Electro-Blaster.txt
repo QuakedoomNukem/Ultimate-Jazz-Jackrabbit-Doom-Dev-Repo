@@ -1,38 +1,39 @@
 Actor ElectroBlaster : Weapon 32767
 {
+	//$Category JJ_Weapons
 	Tag "Electro-Blaster"
+	DamageFactor 0
 	Weapon.SelectionOrder 3207
 	Weapon.AmmoType1 "JJCell"
 	Weapon.AmmoUse1 1
 	Weapon.AmmoGive1 0
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.5
+	Weapon.BobSpeed 2
+	Weapon.BobStyle Smooth
 	Inventory.PickupSound "WEAPNGET"
 	Inventory.PickupMessage "$PK_WEAP0"
-	Obituary "$OB_WEP0"
-	Weapon.BobRangeX 0.5
-   Weapon.BobRangeY 0.5
-   Weapon.BobSpeed 2
-  Weapon.BobStyle Smooth
-	DamageFactor 0
 	+FLOATBOB
-	 +NOGRAVITY
+	+NOGRAVITY
+	Obituary "$OB_WEP0"
 	States
 	{
 	Spawn:
 		PLSP A -1
 		Stop
 	Ready:
-    PLPI A 1 A_WeaponReady
-    Loop
-  Deselect:
-    PLPI A 1 A_Lower
-	PLPI A 0 A_Lower
-    Loop
-  Select:
-    PLPI A 1 A_Raise
-	PLPI A 0 A_Raise
-    Loop
+		PLPI A 1 A_WeaponReady
+		Loop
+	Deselect:
+		PLPI A 1 A_Lower
+		PLPI A 0 A_Lower
+		Loop
+	Select:
+		PLPI A 1 A_Raise
+		PLPI A 0 A_Raise
+		Loop
 	Fire:
-	TNT1 A 0 A_JumpIfInventory("Gun0PowerUp", 1, "Powerfire")
+		TNT1 A 0 A_JumpIfInventory("Gun0PowerUp", 1, "Powerfire")
 		PLPI A 0 A_PlaySound("DNDFIRE", 7)
 		PLPI A 0 BRIGHT Offset(0,38) A_FireCustomMissile("Neutronshot", 0, 1, 0, 0, 0, 0)
 		PLPI B 1 BRIGHT Offset(0,38) A_SetPitch(pitch + 0.4)
@@ -55,7 +56,7 @@ Actor ElectroBlaster : Weapon 32767
 		PLPI A 0 Offset(0,35) A_Recoil(0.3)
 		PLPI A 0 A_Refire
 		Goto Ready
-		PowerFire:
+	PowerFire:
 		PLPI A 0 A_PlaySound("DNDFIRE", 7)
 		PLPI A 0 BRIGHT Offset(0,38) A_FireCustomMissile("NeutronshotPow", 0, 1, 0, 0, 0, 0)
 		PLPI B 1 BRIGHT Offset(0,38) A_SetPitch(pitch + 0.4)
@@ -83,59 +84,60 @@ Actor ElectroBlaster : Weapon 32767
 
 Actor Neutronshot
 {
-    Radius 13
-    Height 8
-    Speed 30
-    Damage 15
+	Radius 13
+	Height 8
+	Speed 30
+	Damage 15
 	DamageType JazzProj
-    Projectile
-    +RANDOMIZE
-    RenderStyle Add
-    Alpha 0.9
-    Scale 0.9
-    SeeSound ""
+	RenderStyle Add
+	Alpha 0.9
+	Scale 0.9
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	SeeSound ""
 	DeathSound "BLSTRHIT"
-    States
-  {
-  Spawn:
-    NEUS A 6 BRIGHT
-    Loop
-  Death:
-    JBLS EFGH 4 BRIGHT
-    stop
-   }
+	States
+	{
+	Spawn:
+		NEUS A 6
+		Loop
+	Death:
+		JBLS EFGH 4
+		Stop
+	}
 }
 
 Actor NeutronshotPow
 {
-    Radius 13
-    Height 8
-    Speed 30
-    Damage 25
+	Radius 13
+	Height 8
+	Speed 30
+	Damage 25
 	DamageType JazzProj
-    Projectile
-    +RANDOMIZE
-    RenderStyle Add
-    Alpha 0.95
-    SeeSound ""
+	RenderStyle Add
+	Alpha 0.95
+	Projectile
+	+RANDOMIZE
+	SeeSound ""
 	DeathSound "BLSTRHIT"
-    States
-  {
-  Spawn:
-    NEUP A 6 BRIGHT
-    Loop
-  Death:
-  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 0, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -50, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 50, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -90, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 90, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -130, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 130, CMF_AIMDIRECTION)
-	  TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 180, CMF_AIMDIRECTION)
-    FBLS DEFGHI 2
-    stop
-   }
+	States
+	{
+	Spawn:
+		NEUP A 6 BRIGHT
+		Loop
+	Death:
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 0, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -50, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 50, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -90, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 90, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, -130, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 130, CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("MiniNeutron", 0, 0, 180, CMF_AIMDIRECTION)
+		FBLS DEFGHI 2
+		Stop
+	}
 }
 
 Actor MiniNeutron
@@ -144,66 +146,66 @@ Actor MiniNeutron
 	Height 5
 	Speed 30
 	Damage 5
-	Projectile
 	DamageType JazzProj
-    Projectile
-    +RANDOMIZE
-    RenderStyle Add
-    Alpha 0.95
-    SeeSound ""
+	RenderStyle Add
+	Alpha 0.95
+	Projectile
+	+RANDOMIZE
+	SeeSound ""
 	DeathSound "BLSTRHIT"
-	 States
-     {
-     Spawn:
-        NLPJ A 6 BRIGHT
-        Loop      
-     Death: 
-	    FBLS DEFGHI 2
-        Stop   
-     }
+	States
+	{
+	Spawn:
+		NLPJ A 6 BRIGHT
+		Loop
+	Death:
+		FBLS DEFGHI 2
+		Stop
+	}
 }
-
 
 Actor JJCell : Ammo 3900
 {
-  Inventory.PickupMessage "$PK_AMMO0"
-  Inventory.Amount 3
-  Inventory.MaxAmount 100
-  Ammo.BackpackAmount 3
-  Ammo.BackpackMaxAmount 100
-  Inventory.Icon "XELLZ0"
-  Inventory.PickupSound "AMMOUP"
-  FloatBobStrength 0.5
-  +FLOATBOB
-   +NOGRAVITY
-  States
-  {
-  Spawn:
-    XELL ABCDEFGHIJ 3
-    Loop
-  }
+	//$Category JJ_Weapons
+	Ammo.BackpackAmount 3
+	Ammo.BackpackMaxAmount 100
+	Inventory.Icon "XELLZ0"
+	Inventory.PickupSound "AMMOUP"
+	Inventory.PickupMessage "$PK_AMMO0"
+	Inventory.Amount 3
+	Inventory.MaxAmount 100
+	FloatBobStrength 0.5
+	+FLOATBOB
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		XELL ABCDEFGHIJ 3
+		Loop
+	}
 }
 
 Actor Gun0PowerUpBox : Gun1PowerUpBox 3829
 {
-  States
-  {
-  Spawn:
-    0GUN ABCD 1 BRIGHT
-    Loop
-  Death:
-  TNT1 A 0 A_PlaySound("WEAPNGET")
-  TNT1 A 0 ACS_NamedExecute("Gun0",0)
-  TNT1 A 0 A_GiveToTarget("Gun0PowerUp", 1, AAPTR_DEFAULT)
-  TNT1 A 0 A_GiveToTarget("JJCell", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
-  }
+	//$Category JJ_Weapons
+	States
+	{
+	Spawn:
+		0GUN ABCD 1 BRIGHT
+		Loop
+	Death:
+		TNT1 A 0 A_PlaySound("WEAPNGET")
+		TNT1 A 0 ACS_NamedExecute("Gun0",0)
+		TNT1 A 0 A_GiveToTarget("Gun0PowerUp", 1, AAPTR_DEFAULT)
+		TNT1 A 0 A_GiveToTarget("JJCell", 25, AAPTR_DEFAULT)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }
 
-Actor Gun0PowerUp : Inventory 
+Actor Gun0PowerUp : Inventory
 {
-    Inventory.PickupSound ""
+	Inventory.PickupSound ""
 	Inventory.PickupMessage ""
 	States
 	{

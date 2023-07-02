@@ -7,7 +7,7 @@ Actor TNT : CustomInventory  3588
   +INVBAR
   Inventory.MaxAmount 25
 	Inventory.InterHubAmount 25
-  Inventory.PickupMessage "\c[D4]TNT"
+  Inventory.PickupMessage "$PK_TNT"
   FloatBobStrength 0.5
   +FLOATBOB
   States

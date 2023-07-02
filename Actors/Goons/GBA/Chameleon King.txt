@@ -1,6 +1,6 @@
 Actor ChameleonKingBoss 3732
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Chameleon King"
 	Health 6000
 	Speed 20

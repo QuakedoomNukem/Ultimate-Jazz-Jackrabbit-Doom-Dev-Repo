@@ -1,6 +1,6 @@
 Actor FireChameleon 4049
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Fire Chameleon"
 	Health 1000
 	Radius 16

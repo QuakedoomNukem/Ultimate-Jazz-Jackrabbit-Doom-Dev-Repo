@@ -23,7 +23,7 @@ Actor BigRedGem 3761
 Actor RedGemSmash : CustomInventory 3762
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.PickupMessage "\clPicked up a \cgred gem\cl."
+	Inventory.PickupMessage "$PK_REGEM"
     +COUNTITEM
 	States
 	{
@@ -40,7 +40,7 @@ Actor RedGemSmash : CustomInventory 3762
 
 Actor BonusGem : CustomInventory  3333
 {
-  Inventory.PickupMessage "\clBonus Gem"
+  Inventory.PickupMessage "$PK_BONUS"
   Inventory.Amount 1
   Inventory.PickupSound "ITEMUP"
   +COUNTITEM
@@ -141,7 +141,7 @@ Actor GemDrop : CustomInventory 3758
 Actor RedGem : CustomInventory //3758
 {
     Inventory.PickupSound "GemPckup"
-	Inventory.PickupMessage "\clPicked up a \cgred gem\cl."
+	Inventory.PickupMessage "$PK_REGEM"
     +COUNTITEM
 	+NOGRAVITY
 	States
@@ -159,7 +159,7 @@ Actor RedGem : CustomInventory //3758
 
 Actor GreenGem : RedGem 3759
 {
-	Inventory.PickupMessage "\clPicked up a \cdgreen gem\cl."
+	Inventory.PickupMessage "$PK_GRGEM"
 	States
 	{
 	Spawn:
@@ -175,7 +175,7 @@ Actor GreenGem : RedGem 3759
 
 Actor BlueGem : RedGem 3760
 {
-	Inventory.PickupMessage "\clPicked up a \cnblue gem\cl."
+	Inventory.PickupMessage "$PK_BLGEM"
 	States
 	{
 	Spawn:
@@ -191,7 +191,7 @@ Actor BlueGem : RedGem 3760
 
 Actor PurpleGem : RedGem
 {
-	Inventory.PickupMessage "\clPicked up a \ctpurple gem\cl."
+	Inventory.PickupMessage "$PK_PRGEM"
 	States
 	{
 	Spawn:
@@ -207,8 +207,8 @@ Actor PurpleGem : RedGem
 
 Actor GoldenTurtle : CustomInventory 3818
 {
-    Inventory.PickupSound "Powerup"
-	Inventory.PickupMessage "\clYou have found \cfThe Golden Turtle\cl!"
+    Inventory.PickupSound "POWERUP"
+	Inventory.PickupMessage "$PK_GOLTU"
     +COUNTITEM
 	States
 	{
@@ -241,7 +241,7 @@ Actor Goodiearmor : ArmorBonus
 Actor StonarBonus : CustomInventory 3500
 {
     Inventory.PickupSound "ITEMUP"
-	Inventory.PickupMessage "\clBonus Goodies"
+	Inventory.PickupMessage "$PK_GOODS"
     +COUNTITEM
 	+FLOATBOB
 	+NOGRAVITY

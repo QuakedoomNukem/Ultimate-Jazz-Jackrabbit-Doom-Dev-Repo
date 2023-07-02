@@ -1,6 +1,6 @@
 Actor LizardHatter 3766
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "The Mad Hatter"
 	Health 100
 	Radius 16

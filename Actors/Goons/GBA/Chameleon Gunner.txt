@@ -1,6 +1,6 @@
 Actor ChameleonGunner 3730
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Chameleon Gunner"
 	Health 150
 	Radius 16

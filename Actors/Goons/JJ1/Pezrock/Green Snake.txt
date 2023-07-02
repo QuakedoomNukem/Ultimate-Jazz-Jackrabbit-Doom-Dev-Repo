@@ -1,6 +1,6 @@
 Actor Cobra 3324
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Green Snake"
 	Health 50
 	Mass 10000

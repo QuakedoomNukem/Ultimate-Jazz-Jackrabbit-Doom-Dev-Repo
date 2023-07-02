@@ -1,6 +1,6 @@
 Actor Clammy 3325
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Clammy"
 	Health 50
 	Mass 10000

@@ -1,6 +1,6 @@
 Actor JetpackDoofus 3235
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Jetpack Doofus"
 	Health 150
 	Radius 12

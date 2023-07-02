@@ -1,193 +1,195 @@
 Actor Frostbiter : Weapon 15004
 {
-  Tag "Frostbiter"
-  Weapon.SelectionOrder 110
-  Weapon.AmmoUse 1
-  Weapon.AmmoGive 0
-  Inventory.PickupSound "WEAPNGET"
-  Weapon.AmmoType1 "FreezeAmmo"
-  Inventory.PickupMessage "$PK_WEAP8"
-  Inventory.Icon "PLSPA0"
-  Obituary "$OB_WEP8"
-  DamageFactor 0
-  Weapon.BobRangeX 0.5
-   Weapon.BobRangeY 0.5
-   Weapon.BobSpeed 2
-  Weapon.BobStyle Smooth
-  +FLOATBOB
-   +NOGRAVITY
-  States
-  {
-  Ready:
-    PLPI A 1 A_WeaponReady
-    Loop
-  Deselect:
-    PLPI A 1 A_Lower
-    Loop
-  Select:
-    PLPI A 1 A_Raise
-    Loop
-  Fire:
-	TNT1 A 0 A_JumpIfInventory("Gun8PowerUp", 1, "Powerfire")
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
-    PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 8
-    PLPI A 0 A_ReFire
-    Goto Ready
+	//$Category JJ_Weapons
+	Tag "Frostbiter"
+	DamageFactor 0
+	Weapon.SelectionOrder 110
+	Weapon.AmmoUse 1
+	Weapon.AmmoGive 0
+	Weapon.AmmoType1 "FreezeAmmo"
+	Weapon.BobRangeX 0.5
+	Weapon.BobRangeY 0.5
+	Weapon.BobSpeed 2
+	Weapon.BobStyle Smooth
+	Inventory.PickupSound "WEAPNGET"
+	Inventory.PickupMessage "$PK_WEAP8"
+	Inventory.Icon "PLSPA0"
+	+FLOATBOB
+	+NOGRAVITY
+	Obituary "$OB_WEP8"
+	States
+	{
+	Ready:
+		PLPI A 1 A_WeaponReady
+		Loop
+	Deselect:
+		PLPI A 1 A_Lower
+		Loop
+	Select:
+		PLPI A 1 A_Raise
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("Gun8PowerUp", 1, "Powerfire")
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 8
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold1:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 7
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 7
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold2:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 6
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 6
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold3:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 5
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 5
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold4:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
-  PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 4
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 4
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold5:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 3
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 3
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold6:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 2
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 2
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold7:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-	PLPI A 1
-    PLPI A 0 A_ReFire
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 1
+		PLPI A 0 A_ReFire
+		Goto Ready
 	Hold8:
-   PLPI B 3 A_FireCustomMissile("FreezeBlast")
-	PLPI C 3
-    PLPI A 0 A_ReFire
-    Goto Ready
+		PLPI B 3 A_FireCustomMissile("FreezeBlast")
+		PLPI C 3
+		PLPI A 0 A_ReFire
+		Goto Ready
 	PowerFire:
-	TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
- PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 8
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 8
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold1:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
-   PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 7
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 7
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold2:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
-   PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 6
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 6
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold3:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
-  PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 5
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 5
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold4:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
-   PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 4
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 4
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold5:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
-    PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 3
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 3
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold6:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
-    PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 2
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 2
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold7:
-  TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
-    PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-	PLPI A 1
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
+		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 1
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
 	PowerHold8:
-   PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
-	PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
-	PLPI C 1
-    PLPI A 0 A_ReFire ("PowerHold")
-    Goto Ready
-  Spawn:
-    PLSP A -1
-    Stop
-  }
+		PLPI B 1 A_FireCustomMissile("FreezeBlastPowered")
+		PLPI B 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 2 A_FireCustomMissile("FreezeBlastTrailPowered", 0, 0)
+		PLPI C 1
+		PLPI A 0 A_ReFire ("PowerHold")
+		Goto Ready
+	Spawn:
+		PLSP A -1
+		Stop
+	}
 }
 
 Actor FreezeAmmo : Ammo 16203
 {
-  Inventory.Amount 3
-  Inventory.MaxAmount 100
-  Ammo.BackpackAmount 3
-  Ammo.BackpackMaxAmount 100
-  Inventory.PickupMessage "$PK_AMMO8"
-  Inventory.PickupSound "AMMOUP"
-  FloatBobStrength 0.5
-  Inventory.Icon "MBLSZ0"
-  +FLOATBOB
-   +NOGRAVITY
-  States
-  	{
+	//$Category JJ_Weapons
+	Inventory.Amount 3
+	Inventory.MaxAmount 100
+	Ammo.BackpackAmount 3
+	Ammo.BackpackMaxAmount 100
+	Inventory.PickupMessage "$PK_AMMO8"
+	Inventory.PickupSound "AMMOUP"
+	FloatBobStrength 0.5
+	Inventory.Icon "MBLSZ0"
+	+FLOATBOB
+	+NOGRAVITY
+	States
+	{
 	Spawn:
 		MBLS ABCDE 3
 		Loop
@@ -196,123 +198,128 @@ Actor FreezeAmmo : Ammo 16203
 
 Actor FreezeBlast
 {
-  Radius 13
-  Height 8
-  Speed 25
-  Damage 30
-  Projectile
-  +RANDOMIZE
-  RenderStyle Add
-  Alpha 0.75
-  SeeSound "ICESHOT"
-  DeathSound "ICEHIT"
-  DamageType JazzProjIce
-  States
-  {
-  Spawn:
-    FBLS A 2 BRIGHT A_SpawnItem("FreezeBlastTrail")
-	FBLS B 2 BRIGHT
-	FBLS C 2 BRIGHT
-    Loop
-  Death:
-    FBLS DEFGHI 2 BRIGHT
-    stop
-  }
+	Radius 13
+	Height 8
+	Speed 25
+	Damage 30
+	DamageType JazzProjIce
+	RenderStyle Add
+	Alpha 0.75
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	SeeSound "ICESHOT"
+	DeathSound "ICEHIT"
+	States
+	{
+	Spawn:
+		FBLS A 2 A_SpawnItem("FreezeBlastTrail")
+		FBLS B 2
+		FBLS C 2
+		Loop
+	Death:
+		FBLS DEFGHI 2
+		stop
+	}
 }
 
 Actor FreezeBlastPowered
 {
-  Radius 13
-  Height 8
-  Speed 25
-  Damage 35
-  Projectile
-  +RANDOMIZE
-  RenderStyle Add
-  Alpha 0.75
-  SeeSound "ICESHOT"
-  DeathSound "ICEHIT"
-  DamageType JazzProjIce
-  DamageType Ice
-  States
-  {
-  Spawn:
-    FBLS A 2 BRIGHT A_SpawnItem("FreezeBlastTrailPowered")
-	FBLS B 2 BRIGHT
-	FBLS C 2 BRIGHT
-    Loop
-  Death:
-    FBLS DEFGHI 2 BRIGHT
-    stop
-  }
+	Radius 13
+	Height 8
+	Speed 25
+	Damage 35
+	DamageType JazzProjIce
+	DamageType Ice
+	RenderStyle Add
+	Alpha 0.75
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	SeeSound "ICESHOT"
+	DeathSound "ICEHIT"
+	States
+	{
+	Spawn:
+		FBLS A 2 A_SpawnItem("FreezeBlastTrailPowered")
+		FBLS B 2
+		FBLS C 2
+		Loop
+	Death:
+		FBLS DEFGHI 2
+		Stop
+	}
 }
 
 Actor FreezeBlastTrail
 {
-  Radius 13
-  Height 8
-  Speed 20
-  Damage 0
-  Projectile
-  +RANDOMIZE
-  RenderStyle Add
-  Alpha 0.9
-  Scale 0.5
-  DamageType JazzProjIce
-  States
-  {
-  Spawn:
-    FBLS DEFGHI 2 BRIGHT 
-    Stop
-  Death:
-    FBLS DEFGHI 2 BRIGHT
-    stop
-  }
+	Radius 13
+	Height 8
+	Speed 20
+	Damage 0
+	DamageType JazzProjIce
+	RenderStyle Add
+	Alpha 0.9
+	Scale 0.5
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	States
+	{
+	Spawn:
+		FBLS DEFGHI 2
+		Stop
+	Death:
+		FBLS DEFGHI 2
+		Stop
+	}
 }
 
 Actor FreezeBlastTrailPowered
 {
-  Radius 13
-  Height 8
-  Speed 20
-  Damage 3
-  Projectile
-  +RANDOMIZE
-  RenderStyle Add
-  Alpha 0.9
-  Scale 0.5
-  DamageType JazzProjIce
-  States
-  {
-  Spawn:
-    FBLS DEFGHI 2 BRIGHT 
-    Stop
-  Death:
-    FBLS DEFGHI 2 BRIGHT
-    stop
-  }
+	Radius 13
+	Height 8
+	Speed 20
+	Damage 3
+	DamageType JazzProjIce
+	RenderStyle Add
+	Alpha 0.9
+	Scale 0.5
+	Projectile
+	+BRIGHT
+	+RANDOMIZE
+	States
+	{
+	Spawn:
+		FBLS DEFGHI 2
+		Stop
+	Death:
+		FBLS DEFGHI 2
+		Stop
+	}
 }
 
 Actor Gun8PowerUpBox : Gun1PowerUpBox 3827
 {
-  States
-  {
-  Spawn:
-    8GUN ABCD 1 BRIGHT
-    Loop
-  Death:
-  TNT1 A 0 A_PlaySound("WEAPNGET")
-  TNT1 A 0 ACS_NamedExecute("Gun8",0)
-  TNT1 A 0 A_GiveToTarget("Gun8PowerUp", 1, AAPTR_DEFAULT)
-  TNT1 A 0 A_GiveToTarget("FreezeAmmo", 25, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
-  }
+	//$Category JJ_Weapons
+	States
+	{
+	Spawn:
+		8GUN ABCD 1 BRIGHT
+		Loop
+	Death:
+		TNT1 A 0 A_PlaySound("WEAPNGET")
+		TNT1 A 0 ACS_NamedExecute("Gun8",0)
+		TNT1 A 0 A_GiveToTarget("Gun8PowerUp", 1, AAPTR_DEFAULT)
+		TNT1 A 0 A_GiveToTarget("FreezeAmmo", 25, AAPTR_DEFAULT)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }
 
-Actor Gun8PowerUp : Inventory 
+Actor Gun8PowerUp : Inventory
 {
-    Inventory.PickupSound ""
+	Inventory.PickupSound ""
 	Inventory.PickupMessage ""
 	States
 	{

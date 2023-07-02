@@ -1,6 +1,6 @@
 Actor ElementGoon5 4037
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Disciple"
 	Health 700
 	Radius 31

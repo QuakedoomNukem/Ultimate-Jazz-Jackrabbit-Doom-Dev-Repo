@@ -1,6 +1,6 @@
 Actor FloppyTadpole 26555
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Floppy Tadpole"
 	Health 50
 	Radius 8
@@ -58,7 +58,7 @@ Actor FloppyTadpole 26555
 
 Actor JumpingTadpole 3800
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Jumping Tadpole"
 	Health 50
 	Radius 8

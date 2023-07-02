@@ -1,6 +1,6 @@
 Actor JJAPinkTurtle 4045
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "SMG Trooper"
 	Health 50
 	Radius 15
@@ -29,13 +29,13 @@ Actor JJAPinkTurtle 4045
 	Missile:
 		JAPT EEEEE 2 A_FaceTarget
 		JAPT E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		JAPT F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		JAPT F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		JAPT E 2 A_FaceTarget
 		//SAUR E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		JAPT E 2 A_FaceTarget
 		//SAUR E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		JAPT E 2 A_FaceTarget
 		JAPT E 0 A_SentinelRefire
 		Goto See
@@ -69,7 +69,7 @@ Actor JJAPinkTurtle 4045
 
 Actor JJABlueTurtle 4046
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Flamethrower Trooper"
 	Health 70
 	Radius 15
@@ -140,7 +140,7 @@ Actor JJABlueTurtle 4046
 
 Actor JJAOrangeTurtle 4047
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Missile Trooper"
 	Health 100
 	Radius 15

@@ -1,27 +1,28 @@
 Actor RapidFire : CustomInventory  32538
 {
-  Tag "Rapid Fire"
-  Inventory.PickupMessage "\cnRapid Fire!"
-  Inventory.Amount 1
-  Inventory.PickupSound "RAPIDFIR"
-  FloatBobStrength 0.5
-  -COUNTITEM
-  +FLOATBOB
-   +NOGRAVITY
-   +INVENTORY.ALWAYSPICKUP
-  States
-  {
-  Spawn:
-	PLSP ABCDEFGH 3 BRIGHT
-	Loop
-  Pickup:
-  TNT1 A 0 A_SpawnItemEx("ItemSparkle")
- 	TNT1 A 0 A_GiveInventory("RapidfireCount")
-	Stop
-  }
+	//$Category JJ_PowerUps
+	Tag "Rapid Fire"
+	Inventory.PickupMessage "$PK_RFIRE"
+	Inventory.PickupSound "RAPIDFIR"
+	Inventory.Amount 1
+	FloatBobStrength 0.5
+	-COUNTITEM
+	+FLOATBOB
+	+NOGRAVITY
+	+INVENTORY.ALWAYSPICKUP
+	States
+	{
+	Spawn:
+		PLSP ABCDEFGH 3 BRIGHT
+		Loop
+	Pickup:
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		TNT1 A 0 A_GiveInventory("RapidfireCount")
+		Stop
+	}
 }
 
-Actor RapidfireCount : Inventory 
+Actor RapidfireCount : Inventory
 {
     Inventory.PickupSound ""
 	Inventory.PickupMessage ""
@@ -37,17 +38,18 @@ Actor RapidfireCount : Inventory
 
 Actor JJHoverBoard : PowerupGiver 32002
 {
+	//$Category JJ_PowerUps
 	Tag "Hoverboard"
-	Inventory.PickupMessage "\cfYou got a \ctHoverboard\cf!"
+	Inventory.PickupSound "Powerup"
+	Inventory.PickupMessage "$PK_HOVER"
 	Inventory.MaxAmount 0
 	Powerup.Duration -30
 	Powerup.Color "FF 00 FF", 0.1
-	Inventory.PickupSound "Powerup"
 	Powerup.Type Flight
-	-COUNTITEM
 	FloatBobStrength 0.5
+	-COUNTITEM
 	+FLOATBOB
-	 +NOGRAVITY
+	+NOGRAVITY
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
 	States
@@ -55,93 +57,94 @@ Actor JJHoverBoard : PowerupGiver 32002
 	Spawn:
 		FLYT ABCDEDCBA 3
 		Loop
-		  Pickup:
-		  TNT1 A 0 A_SpawnItemEx("ItemSparkle")
-		  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
+	Pickup:
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
 	}
 }
 
 Actor JJInvul : CustomInventory 3136
 {
-  Tag "Invulnerability"
-  Inventory.PickupSound "INVINCE"
-  Inventory.PickupMessage "\cfInvulnerability!"
-  Renderstyle Translucent
-  Alpha 0.9
-  +FLOATBOB
-   +NOGRAVITY
-   FloatBobStrength 0.5
-  -COUNTITEM
-  States
-  {
-  Spawn:
-    INVS ABCDCB 1 BRIGHT
-    Loop
-  Pickup:
-	TNT1 A 0
+	//$Category JJ_PowerUps
+	Tag "Invulnerability"
+	Inventory.PickupSound "INVINCE"
+	Inventory.PickupMessage "$PK_JJINV"
+	Renderstyle Translucent
+	Alpha 0.9
+	FloatBobStrength 0.5
+	-COUNTITEM
+	+FLOATBOB
+	+NOGRAVITY
+	States
 	{
-		A_GiveInventory("JJTimer",30);
-		if (!CountInv("PowerInvulnerable"))
+	Spawn:
+		INVS ABCDCB 1 BRIGHT
+		Loop
+	Pickup:
+		TNT1 A 0
 		{
-			A_SpawnItemEx("JJManager",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_SETMASTER);
-			A_SpawnItemEx("JJEffectSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_SETMASTER);
+			A_GiveInventory("JJTimer",30);
+			if (!CountInv("PowerInvulnerable"))
+				{
+					A_SpawnItemEx("JJManager",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_SETMASTER);
+					A_SpawnItemEx("JJEffectSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_SETMASTER);
+				}
+			A_SetBlend("Yellow",1.0,20,"Yellow");
+			A_GiveInventory("JJInvuln");
 		}
-		A_SetBlend("Yellow",1.0,20,"Yellow");
-		A_GiveInventory("JJInvuln");
-	}
-	TNT1 A 0 A_SpawnItemEx("ItemSparkle")
-	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
 	}
 }
 
 Actor JJInvuln : PowerupGiver
 {
-  Powerup.Color "00 00 00", 0.0
-  Powerup.Type "Invulnerable"
-  +INVENTORY.AUTOACTIVATE
-  +INVENTORY.ALWAYSPICKUP
+	Powerup.Color "00 00 00", 0.0
+	Powerup.Type "Invulnerable"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
 }
 
 Actor JJTimer : Inventory
 {
-  Inventory.MaxAmount 30
-  Inventory.InterHubAmount 0
+	Inventory.MaxAmount 30
+	Inventory.InterHubAmount 0
 }
 
 Actor JJEffectSpawner
 {
-  +NOINTERACTION
-  States
-  {
-  Spawn:
-	TNT1 A 1 Light("InvulnActive") 
+	+NOINTERACTION
+	States
 	{
-		if (CountInv("PowerInvulnerable",AAPTR_MASTER))
+	Spawn:
+		TNT1 A 1 Light("InvulnActive")
 		{
-			if(A_CheckFlag("CORPSE","Null",AAPTR_MASTER)) { return state("Null"); }
-			A_SpawnParticle("Yellow",SPF_FULLBRIGHT,35,2,0,random(-30,30),random(-30,30),random(0,64),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(0,3),0,0,0,1,-1,-0.1);
-			A_SpawnParticle("Yellow",SPF_FULLBRIGHT,35,2,0,random(-30,30),random(-30,30),random(0,64),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(0,3),0,0,0,1,-1,-0.1);
-			A_Warp(AAPTR_MASTER,0,0,0,0,WARPF_INTERPOLATE|WARPF_NOCHECKPOSITION);
-			return state("");
+			if (CountInv("PowerInvulnerable",AAPTR_MASTER))
+			{
+				if(A_CheckFlag("CORPSE","Null",AAPTR_MASTER)) { return state("Null"); }
+				A_SpawnParticle("Yellow",SPF_FULLBRIGHT,35,2,0,random(-30,30),random(-30,30),random(0,64),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(0,3),0,0,0,1,-1,-0.1);
+				A_SpawnParticle("Yellow",SPF_FULLBRIGHT,35,2,0,random(-30,30),random(-30,30),random(0,64),frandom(-0.5,0.5),frandom(-0.5,0.5),frandom(0,3),0,0,0,1,-1,-0.1);
+				A_Warp(AAPTR_MASTER,0,0,0,0,WARPF_INTERPOLATE|WARPF_NOCHECKPOSITION);
+				return state("");
+			}
+			return state("Null");
 		}
-		return state("Null");
-	}
-	Wait
+		Wait
 	}
 }
 
 Actor JJManager
 {
-  +NOINTERACTION
-  +NOTONAUTOMAP
-  +NOTIMEFREEZE
-  var int user_time;
-  States
-  {
-  Spawn:
-	TNT1 A 35 
+	+NOINTERACTION
+	+NOTONAUTOMAP
+	+NOTIMEFREEZE
+	var int user_time;
+	States
+	{
+	Spawn:
+	TNT1 A 35
 	{
 		if (A_CheckFlag("CORPSE","Null",AAPTR_MASTER)) { return state("Null"); }
 		if (CountInv("JJTimer",AAPTR_MASTER))
@@ -152,7 +155,7 @@ Actor JJManager
 		else
 		{
 			user_time--;
-		}		
+		}
 		if (user_time == 4 || user_time == 3 || user_time == 2)
 			{
 			if (user_time == 4)
@@ -161,7 +164,7 @@ Actor JJManager
 			}
 			A_PlaySound("INVINCE",5,1,0,ATTN_NONE);
 			A_GiveInventory("JJFade",1,AAPTR_MASTER);
-		}			
+		}
 		if (user_time <= 0)
 		{
 			A_TakeInventory("JJTimer",30,0,AAPTR_MASTER);
@@ -175,20 +178,21 @@ Actor JJManager
 
 Actor JJFade : CustomInventory
 {
-  +INVENTORY.ALWAYSPICKUP
-  States
-  {
-  Pickup:
-	TNT1 A 0 A_SetBlend("Yellow",0.4,12)
-	Stop
+	+INVENTORY.ALWAYSPICKUP
+	States
+	{
+	Pickup:
+		TNT1 A 0 A_SetBlend("Yellow",0.4,12)
+		Stop
 	}
 }
 
 Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 {
+	//$Category JJ_PowerUps
 	Game Doom
 	Tag "Turbocharge"
-	Inventory.PickupMessage "\cfTurbocharge!"
+	Inventory.PickupMessage "$PK_JJTUR"
 	Inventory.MaxAmount 0
 	Powerup.Duration -30
 	Powerup.Color "FF FF 00", 0.1
@@ -208,28 +212,29 @@ Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 
 Actor TurboTimeBox 3925
 {
-  Height 30
-  Radius 16
-  Health 1
-  DamageFactor "Normal", 0
-  DamageFactor "Ice", 0
-  DamageFactor "Fire", 0
-  DamageFactor "JAZZPROJ", 1
-  DamageFactor "JAZZPROJFire", 1
-  DamageFactor "JazzProjIce", 1
-  +SHOOTABLE
-  +SOLID
-  +NOBLOOD
-  States
-  {
-  Spawn:
-    HAST ABCD 1 BRIGHT
-    Loop
-  Death:
-  TNT1 A 0 A_PlaySound("WEAPNGET")
-  TNT1 A 0 A_Print("It's Turbo Time!", 3, "Smallfont")
-  TNT1 A 0 A_GiveToTarget("TurboTime", 1, AAPTR_DEFAULT)
-  TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
-  }
+	//$Category JJ_PowerUps
+	Height 30
+	Radius 16
+	Health 1
+	DamageFactor "Normal", 0
+	DamageFactor "Ice", 0
+	DamageFactor "Fire", 0
+	DamageFactor "JazzProj", 1
+	DamageFactor "JazzProjFire", 1
+	DamageFactor "JazzProjIce", 1
+	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	States
+	{
+	Spawn:
+		HAST ABCD 1 BRIGHT
+		Loop
+	Death:
+		TNT1 A 0 A_PlaySound("WEAPNGET")
+		TNT1 A 0 A_Print("$PK_JJTIM", 3, "Smallfont")
+		TNT1 A 0 A_GiveToTarget("TurboTime", 1, AAPTR_DEFAULT)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,8,frandom(-8,8),frandom(-8,8),frandom(4,8))
+		Stop
+	}
 }

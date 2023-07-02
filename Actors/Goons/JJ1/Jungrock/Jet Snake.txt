@@ -1,6 +1,6 @@
 Actor JungrockSnake 3831
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Jet Snake"
 	Health 75
 	Radius 16

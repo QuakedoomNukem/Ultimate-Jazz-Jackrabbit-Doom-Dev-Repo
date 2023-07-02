@@ -1,6 +1,6 @@
 Actor ApplePickup : CustomInventory 3906
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_APPLE"
 	Inventory.PickupSound "JILLYEAH"
 	Scale 3.0
@@ -22,7 +22,7 @@ Actor ApplePickup : CustomInventory 3906
 
 Actor ArtifactBase : CustomInventory
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupSound "misc/i_pkup"
 	+COUNTITEM
 	+FLOATBOB
@@ -96,7 +96,7 @@ Actor Artifact5 : ArtifactBase 3857
 
 Actor CliffyB : CustomInventory  32123
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_CLIFF"
 	Inventory.PickupSound "DOMINATE"
 	Inventory.Amount 1
@@ -130,7 +130,7 @@ Actor CliffyB : CustomInventory  32123
 
 Actor ElementAirGem : CustomInventory 4057
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELAIR"
     Inventory.PickupSound "GEMPCKUP"
     -COUNTITEM
@@ -166,7 +166,7 @@ Actor ElementAirCount : Inventory
 
 Actor ElementFireGem : CustomInventory 4058
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELFIR"
     Inventory.PickupSound "GEMPCKUP"
 	-COUNTITEM
@@ -202,7 +202,7 @@ Actor ElementFireCount : Inventory
 
 Actor ElementWaterGem : CustomInventory 4059
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELWAT"
     Inventory.PickupSound "GEMPCKUP"
 	-COUNTITEM
@@ -238,7 +238,7 @@ Actor ElementWaterCount : Inventory
 
 Actor ElementEarthGem : CustomInventory 4060
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELEAR"
     Inventory.PickupSound "GEMPCKUP"
 	-COUNTITEM
@@ -274,7 +274,7 @@ Actor ElementEarthCount : Inventory
 
 Actor ElementLightGem : CustomInventory 4061
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELLIT"
     Inventory.PickupSound "GEMPCKUP"
 	-COUNTITEM
@@ -310,7 +310,7 @@ Actor ElementopolisBeaten : Inventory
 
 Actor ElementDarkGem : CustomInventory 4062
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELDAR"
     Inventory.PickupSound "GEMPCKUP"
 	-COUNTITEM
@@ -346,7 +346,7 @@ Actor ElementDarkCount : Inventory
 
 Actor OldTwinkie : CustomInventory 4115
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_TWINK"
 	Inventory.PickupSound "SMOKRING"
 	-COUNTITEM
@@ -368,7 +368,7 @@ Actor OldTwinkie : CustomInventory 4115
 
 Actor RedFlag : CustomInventory 3717
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Height 64
 	Radius 16
 	Inventory.PickupMessage "$PK_RFLAG"
@@ -387,7 +387,7 @@ Actor RedFlag : CustomInventory 3717
 
 Actor SecretGem : Inventory 3229
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_SCGEM"
 	Inventory.PickupSound "SECTGEM"
 	+FLOATBOB
@@ -405,7 +405,7 @@ Actor SecretGem : Inventory 3229
 
 Actor SODPickup : CustomInventory  4053
 {
-	//$Category EasterEggs
+	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_SODPK"
 	Inventory.PickupSound "DSSPEARU"
 	Inventory.Amount 1

@@ -1,6 +1,6 @@
 Actor DracTurtle 3788
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Count Shellcula"
 	Health 2000
 	PainChance 64 

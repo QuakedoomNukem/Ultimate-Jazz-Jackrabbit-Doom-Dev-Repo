@@ -1,6 +1,6 @@
 Actor AtlantisMerman 3871
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Merman"
 	Health 150
 	PainChance 0

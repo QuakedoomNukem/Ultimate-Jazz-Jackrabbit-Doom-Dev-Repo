@@ -1,6 +1,6 @@
 Actor HeavyTitan 32766
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Heavy Titan"
 	Obituary "$OB_HETIT"
 	Health 700

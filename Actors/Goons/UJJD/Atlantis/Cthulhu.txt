@@ -1,6 +1,6 @@
 Actor AtlantisBoss 3873
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Cthulhu"
 	Health 6000
 	Radius 24

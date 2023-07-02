@@ -1,6 +1,6 @@
 Actor SluggionBat 3752
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Red Bat"
 	Health 50
 	Radius 12

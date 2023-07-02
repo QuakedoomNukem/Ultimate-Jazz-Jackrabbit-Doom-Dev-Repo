@@ -26,7 +26,7 @@ Actor TurtleBossBase //so we can put damagetypes separately through inheritances
 
 Actor TurtleCruiser : TurtleBossBase 4109
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Turtle Cruiser"
 	DamageFactor "TurtleCruiser", 0
 	+FLOAT
@@ -75,7 +75,7 @@ Actor TurtleCruiser : TurtleBossBase 4109
 
 Actor TurtleDrill : TurtleBossBase 4110
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Turtle Drill"
 	Speed 20
 	MeleeDamage 20

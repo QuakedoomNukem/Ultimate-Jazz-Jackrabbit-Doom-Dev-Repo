@@ -1,6 +1,6 @@
 Actor XmasBluePlane 4093
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Blue Lego Baron"
 	Health 100
 	Radius 31
@@ -56,7 +56,7 @@ Actor XmasBluePlane 4093
 
 Actor XmasRedPlane : XmasBluePlane 4092
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Red Lego Baron"
 	Obituary "$OB_XRPLA"
 	States

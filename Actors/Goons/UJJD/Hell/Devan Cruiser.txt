@@ -1,6 +1,6 @@
 Actor DevanCruiser 32325
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Devan Cruiser"
 	Health 4000
 	Radius 30

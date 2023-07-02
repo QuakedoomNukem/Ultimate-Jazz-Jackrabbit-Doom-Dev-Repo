@@ -82,7 +82,7 @@ Actor CaterpillarSmoke : CustomInventory 3765
 	+SEEKERMISSILE
 	+AlwaysPickup
 	+GRENADETRAIL
-	Inventory.PickupMessage "\c[D8]Now you feel dizzy and smokey." 
+	Inventory.PickupMessage "$PK_SMOKE" 
 	Inventory.PickupSound ""
 	Alpha 0.8
 	DeathSound "" //needs one
@@ -153,7 +153,7 @@ Actor CaterpillarEffect : CustomInventory 3765
 {	
 	Radius 16
 	Height 16
-	Inventory.PickupMessage "Now you feel dizzy and smokey." 
+	Inventory.PickupMessage "$PK_SMOKE" 
 	Inventory.PickupSound "item/powerup"
 	States
 	{

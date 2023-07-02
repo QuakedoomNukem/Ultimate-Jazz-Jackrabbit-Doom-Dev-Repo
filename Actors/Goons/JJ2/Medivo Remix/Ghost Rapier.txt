@@ -1,6 +1,6 @@
 Actor Rapier 3781
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Ghost Rapier"
 	Health 100
 	Radius 8

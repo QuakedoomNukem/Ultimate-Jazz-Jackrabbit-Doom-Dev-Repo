@@ -1,6 +1,6 @@
 Actor Lizard 30025
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Flying Lizard Goon"
 	Health 75
 	Radius 20

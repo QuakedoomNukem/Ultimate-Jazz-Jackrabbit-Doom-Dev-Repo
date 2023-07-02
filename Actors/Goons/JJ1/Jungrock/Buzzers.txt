@@ -1,6 +1,6 @@
 Actor GoldHornet 3907
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Yellow Buzzer"
 	Health 50
 	Radius 12
@@ -61,7 +61,7 @@ Actor GoldHornet 3907
 
 Actor RedHornet : GoldHornet 3908
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Red Buzzer"
 	Health 75
 	Speed 20

@@ -1,6 +1,6 @@
 Actor CyberDevan 4043
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Cyber Devan"
 	Radius 40
 	Height 144

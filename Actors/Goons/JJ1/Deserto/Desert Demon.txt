@@ -1,6 +1,6 @@
 Actor DesertDemon 3143
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Desert Demon"
 	Health 100
 	PainChance 0 

@@ -1,6 +1,6 @@
 Actor DevanShell 32326
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Devan Shell"
 	Health 5000
 	Radius 12

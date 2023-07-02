@@ -1,6 +1,6 @@
 Actor DonPooper 4121
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Don Pooper"
 	Health 8000
 	Radius 24
@@ -46,13 +46,13 @@ Actor DonPooper 4121
 	Missile3:
 		HNSG EEEEE 2 A_FaceTarget
 		HNSG E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		HNSG F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		HNSG F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		HNSG E 2 A_FaceTarget
 		//HNSG E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		HNSG F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		HNSG F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		HNSG E 2 A_FaceTarget
 		//HNSG E 0 A_PlaySound("saurgun", CHAN_WEAPON)
-		HNSG F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "Jazzfirepuff")
+		HNSG F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		HNSG E 2 A_FaceTarget
 		HNSG E 0 A_SentinelRefire
 		Goto See

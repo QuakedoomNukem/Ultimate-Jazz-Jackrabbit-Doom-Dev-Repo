@@ -1,6 +1,6 @@
 Actor Helmut 14564
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Helmut"
 	Health 75
 	Radius 12

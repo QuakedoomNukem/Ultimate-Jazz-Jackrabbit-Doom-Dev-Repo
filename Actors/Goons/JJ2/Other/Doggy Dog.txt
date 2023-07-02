@@ -1,6 +1,6 @@
 Actor JJDog 3128
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doggy Dog"
 	Radius 10
 	Height 24

@@ -1,6 +1,6 @@
 Actor TurtleGoon 11909
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Guard"
 	Health 30
 	Radius 16

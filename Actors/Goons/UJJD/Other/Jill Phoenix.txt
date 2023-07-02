@@ -1,7 +1,7 @@
 //Sprites by Captain Q of Hocus Pocus Doom
 Actor JillBird 3832
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Phoenix"
 	Health 30
 	Radius 16

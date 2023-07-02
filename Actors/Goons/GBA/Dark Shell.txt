@@ -1,6 +1,6 @@
 Actor DarkShellBoss 4055
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Dark Shell"
 	Health 7000
 	Speed 15

@@ -1,6 +1,6 @@
 Actor CandyDropSpawner : RandomSpawner 4103
 {
-	//$Category Spawners
+	//$Category JJ_Spawners
     DropItem "XmasRedCandyDrop"
     DropItem "XmasBlueCandyDrop"
     DropItem "XmasGreenCandyDrop"
@@ -8,7 +8,7 @@ Actor CandyDropSpawner : RandomSpawner 4103
 
 Actor XmasGreenCandyDrop 4100
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Green Candy Drop"
 	Health 50
 	Radius 16
@@ -84,7 +84,7 @@ Actor XmasGreenCandyDrop 4100
 
 Actor XmasBlueCandyDrop : XmasGreenCandyDrop 4101
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Blue Candy Drop"
 	Obituary "$OB_BLUCD"
 	States
@@ -145,7 +145,7 @@ Actor XmasBlueCandyDrop : XmasGreenCandyDrop 4101
 
 Actor XmasRedCandyDrop : XmasGreenCandyDrop 4102
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Red Candy Drop"
 	Obituary "$OB_REDCD"
 	States

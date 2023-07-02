@@ -1,6 +1,6 @@
 Actor Fish 30023
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Fish"
 	Health 50
 	Mass 120
@@ -67,7 +67,7 @@ Actor Chase_Water : CustomInventory
 
 Actor JungRockFish 3833
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Jungle Fish"
 	Health 50
 	Mass 120
@@ -114,7 +114,7 @@ Actor JungRockFish 3833
 
 Actor ScaryFish : JungRockFish 3780
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Scary Fish"
 	Speed 10
 	Radius 14

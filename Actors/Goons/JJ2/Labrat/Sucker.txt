@@ -1,6 +1,6 @@
 Actor FloatingSucker 25626
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Sucker"
 	Health 50
 	Radius 14
@@ -63,7 +63,7 @@ Actor DeflatedSuckerFart
 
 Actor DeflatedSucker 4112
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Sucker"
 	Health 50
 	Radius 14

@@ -1,6 +1,6 @@
 Actor Crab 30022
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Crab"
 	Health 50
 	Mass 1000

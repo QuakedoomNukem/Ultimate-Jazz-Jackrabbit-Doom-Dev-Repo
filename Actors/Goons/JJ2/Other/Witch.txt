@@ -1,6 +1,6 @@
 Actor Witch 3782
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Witch"
 	Health 200
 	Radius 12

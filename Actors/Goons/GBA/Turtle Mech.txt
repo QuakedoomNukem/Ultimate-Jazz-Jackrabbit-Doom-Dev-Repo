@@ -1,6 +1,6 @@
 Actor TurtleMech 32525
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Turtle Mech"
 	Health 100
 	Radius 14

@@ -1,6 +1,6 @@
 Actor ElementGoon4 4036
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Bishop"
 	Health 500
 	Radius 31

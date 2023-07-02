@@ -1,6 +1,6 @@
 Actor BabySaurian 3850
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Baby Saurian"
 	Health 30
 	Radius 16

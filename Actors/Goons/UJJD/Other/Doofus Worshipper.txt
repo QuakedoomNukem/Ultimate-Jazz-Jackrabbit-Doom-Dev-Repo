@@ -1,6 +1,6 @@
 Actor ElementGoon1 4033
 {
-	//$Category Goons
+	//$Category JJ_Goons
 	Tag "Doofus Worshipper"
 	Height 56
 	Radius 16
