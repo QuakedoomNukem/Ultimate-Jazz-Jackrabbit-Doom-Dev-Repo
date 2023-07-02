@@ -110,6 +110,42 @@ class SimpleActor : Actor
 	}
 }
 
+class ParticleBase : SimpleActor // Use for non-interactive effects actors only!
+{
+	int checktimer;
+	int flags;
+
+	FlagDef CHECKPOSITION:flags, 0;
+
+	States
+	{
+		Fade:
+			"####" "#" 1 A_FadeOut(0.1, FTF_REMOVE);
+			Loop;
+	}
+
+	override void PostBeginPlay()
+	{
+		Super.PostBeginPlay();
+
+		// Set the initial check at a random tick so they don't all check at once...
+		checktimer = Random(0, 35);
+	}
+
+	override void Tick()
+	{
+		Super.Tick();
+
+		if (bCheckPosition && checktimer-- <= 0)
+		{
+			// If it's outside the level, remove it
+			if (!level.IsPointInLevel(pos)) { Destroy(); return; }
+
+			checktimer = 35; // Check once every second.
+		}
+	}
+}
+
 #include "ZScript/Flash.zs"
 #include "ZScript/Menu.zs"
 #include "ZScript/underwater.zs"

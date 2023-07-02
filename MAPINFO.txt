@@ -126,7 +126,10 @@ map TITLEMAP "Welcome to UJJD!"
 }
 
 //doomednums and spawnids here
-//TBD
+DoomEdNums
+{
+	504 = "BubbleSpawner"
+}
 
 //includes - usually is better to avoid spaces on lumps (ozy81)
 include "mapinfo/Episode 1.txt"

@@ -1,3 +1,5 @@
 user bool Skip_Cutscenes = false;
-user float jj_uweffectsize = 0.015; //Underwater effect parameter
 user bool Keep_Inventory = false;
+
+user float jj_uweffectsize = 0.015; //Underwater effect parameter
+server int jj_sfxlod = 1280; //special effects render distance - let's avoid this to be accessible to users

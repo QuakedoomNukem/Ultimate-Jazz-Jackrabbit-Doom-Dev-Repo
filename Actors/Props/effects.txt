@@ -20,8 +20,8 @@
  * SOFTWARE.
 **/
 
-//BUBBLES - very old actor
-Actor Bubble
+//BUBBLES
+Actor Bubble : SimpleActor
 {
 	Radius 2
 	Height 2
@@ -30,6 +30,7 @@ Actor Bubble
 	RenderStyle Add
 	Projectile
 	+FORCEXYBILLBOARD
+	DistanceCheck "jj_sfxlod"
 	States
 	{
 	Spawn:
@@ -60,7 +61,7 @@ Actor Bubble
 	}
 }
 
-Actor BubbleSpawner 504
+Actor BubbleSpawner
 {
 	Radius 2
 	Height 2
@@ -69,7 +70,7 @@ Actor BubbleSpawner 504
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 2 A_SpawnItemEx("Bubble", random (-16, 16), 0, 0, 0, 0, 2, random (0, 360), 0, 128)
+		TNT1 A 2 A_SpawnItemEx("Bubble", random (-16, 16), 0, 0, 0, 0, 2, random (0, 360), 0, random(128, 224))
 		Loop
 	}
 }
@@ -112,6 +113,7 @@ Actor ChameleonComet
 	+BRIGHT
 	+MISSILE
 	+NOBLOCKMAP
+	DistanceCheck "jj_sfxlod"
 	States
 	{
 	Spawn:
@@ -330,6 +332,7 @@ Actor RainDrop
 	+FORCEXYBILLBOARD
 	+MISSILE
 	+NOBLOCKMAP
+	DistanceCheck "jj_sfxlod"
 	States
 	{
 	Spawn:
@@ -386,6 +389,7 @@ Actor SnowParticle
 	Scale 0.6
 	+MISSILE
 	+NOBLOCKMAP
+	DistanceCheck "jj_sfxlod"
 	States
 	{
 	Spawn:

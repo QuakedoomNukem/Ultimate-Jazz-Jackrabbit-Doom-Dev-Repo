@@ -20,6 +20,7 @@ Actor JazzPlayer : PlayerPawn
 	Player.StartItem "ElectroBlaster"
 	Player.StartItem "TNT", 0
 	Player.Startitem "HideHUD", 1
+	Player.StartItem "JJ_Underwater", 1
 	Player.WeaponSlot 1, "LFG2000"
 	Player.WeaponSlot 2, "SpreadGun"
 	Player.WeaponSlot 3, "Slicer"
