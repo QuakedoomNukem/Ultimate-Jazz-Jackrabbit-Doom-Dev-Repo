@@ -1,7 +1,6 @@
-Actor Toaster : Weapon 16006
+Actor Toaster : Weapon
 {
 	Tag "Toaster"
-	DamageFactor 0
 	Weapon.AmmoType "Gas"
 	Weapon.AmmoGive 0
 	Weapon.AmmoUse 1
@@ -9,11 +8,12 @@ Actor Toaster : Weapon 16006
 	Weapon.BobRangeY 0.5
 	Weapon.BobSpeed 2
 	Weapon.BobStyle Smooth
+	Inventory.PickupSound "WEAPNGET"
+	Inventory.PickupMessage "$PK_WEAP7"
+	DamageFactor 0
 	+WEAPON.EXPLOSIVE
 	+FLOATBOB
 	+NOGRAVITY
-	Inventory.PickupSound "WEAPNGET"
-	Inventory.PickupMessage "$PK_WEAP7"
 	Obituary "$OB_WEP7"
 	States
 	{
@@ -171,15 +171,15 @@ Actor Water : Ammo
 	Ammo.BackpackMaxAmount 70
 }
 
-Actor Gas : Ammo 16007
+Actor Gas : Ammo
 {
-	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
 	Inventory.Amount 3
 	Inventory.MaxAmount 100
 	Inventory.Icon AGASZ0
 	Inventory.PickupMessage "$PK_AMMO7"
 	Inventory.PickupSound "AMMOUP"
+	Ammo.BackpackAmount 3
+	Ammo.BackpackMaxAmount 100
 	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY
@@ -191,7 +191,7 @@ Actor Gas : Ammo 16007
 	}
 }
 
-Actor Gun7PowerUpBox : Gun1PowerUpBox 3826
+Actor Gun7PowerUpBox : Gun1PowerUpBox
 {
 	States
 	{

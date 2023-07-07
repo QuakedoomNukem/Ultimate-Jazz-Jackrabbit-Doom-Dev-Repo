@@ -1,10 +1,8 @@
-Actor Launcher : Doomweapon 15001
+Actor Launcher : DoomWeapon
 {
 	//$Category JJ_Weapons
 	Tag "Bouncer"
-	Inventory.PickupMessage "$PK_WEAP4"
-	Weapon.Ammogive 0
-	Inventory.PickupSound "WEAPNGET"
+	Weapon.AmmoGive 0
 	Weapon.AmmoType1 "Bouncers"
 	Weapon.AmmoUse1 1
 	Weapon.SelectionOrder 400
@@ -12,10 +10,12 @@ Actor Launcher : Doomweapon 15001
 	Weapon.BobRangeY 0.5
 	Weapon.BobSpeed 2
 	Weapon.BobStyle Smooth
+	Inventory.PickupMessage "$PK_WEAP4"
+	Inventory.PickupSound "WEAPNGET"
 	DamageFactor 0
-	Obituary "$OB_WEP4"
 	+FLOATBOB
 	+NOGRAVITY
+	Obituary "$OB_WEP4"
 	States
 	{
 	Ready:
@@ -30,8 +30,8 @@ Actor Launcher : Doomweapon 15001
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("Gun4PowerUp", 1, "Powerfire")
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -40,8 +40,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold1:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -50,8 +50,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold2:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -60,8 +60,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold3:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -70,8 +70,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold4:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -80,8 +80,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold5:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -90,8 +90,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold6:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -100,8 +100,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	Hold7:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -109,8 +109,8 @@ Actor Launcher : Doomweapon 15001
 		PLPI A 0 A_ReFire
 		Goto Ready
 	Hold8:
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShot", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -119,8 +119,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerFire:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -129,8 +129,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold1:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -139,8 +139,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold2:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -149,8 +149,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold3:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -159,8 +159,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold4:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -169,8 +169,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold5:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -179,8 +179,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold6:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -189,8 +189,8 @@ Actor Launcher : Doomweapon 15001
 		Goto Ready
 	PowerHold7:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -198,8 +198,8 @@ Actor Launcher : Doomweapon 15001
 		PLPI A 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold8:
-		PLPI A 0 A_GunFlash 
-		PLPI A 0 A_PlayWeaponSound ("LNCHFIRE")
+		PLPI A 0 A_GunFlash
+		PLPI A 0 A_StartSound ("LNCHFIRE")
 		PLPI B 3
 		PLPI B 0 A_FireCustomMissile("40mmTimedShotPow", 0, 1, 1, 5, 1)
 		PLPI C 3
@@ -227,12 +227,12 @@ Actor 40mmShot
 	-NOGRAVITY
 	+SEEKERMISSILE
 	+USEBOUNCESTATE
-	SeeSound "BOUNCE"
+	BounceSound "BOUNCE"
 	DeathSound "BLSTRHIT"
 	States
 	{
 	Spawn:
-		SHRP O 3 
+		SHRP O 3
 		SHRP O 0 A_CountDown
 		Loop
 	Death:
@@ -246,56 +246,41 @@ Actor 40mmTimedShot : 40mmShot
 	ReactionTime 30
 	Speed 30
 	Damage 80
-	DamageType JazzProj
-	-NOGRAVITY
 	+CANBOUNCEWATER
 	+EXTREMEDEATH
 	+HEXENBOUNCE
-	+SEEKERMISSILE
-	States
-	{
-	Death:
-	    JBLS EFGH 3
-		Stop
-	}
 }
 
-Actor 40mmTimedShotPow : 40mmTimedShot
+Actor 40mmTimedShotPow : 40mmShot
 {
 	ReactionTime 50
 	Speed 30
 	Damage 100
 	BounceCount 30
 	Gravity 0.9
-	DamageType JazzProj
-	-NOGRAVITY
 	+CANBOUNCEWATER
 	+EXTREMEDEATH
 	+HEXENBOUNCE
-	+SEEKERMISSILE
 	States
 	{
 	Spawn:
 		SHPP A 3 A_SeekerMissile(0,90, SMF_Look, 128, 10)
 		SHPP A 0 A_CountDown
 		Loop
-	Death:
-	    JBLS EFGH 3
-		Stop
 	}
 }
 
-Actor Bouncers : Ammo 15002
+Actor Bouncers : Ammo
 {
 	//$Category JJ_Weapons
 	Inventory.Amount 3
 	Inventory.MaxAmount 100
-	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
 	Inventory.PickupSound "AMMOUP"
 	Inventory.PickupMessage "$PK_AMMO4"
-	FloatBobStrength 0.5
 	Inventory.Icon "40MMZ0"
+	Ammo.BackpackAmount 3
+	Ammo.BackpackMaxAmount 100
+	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY
 	States
@@ -306,7 +291,7 @@ Actor Bouncers : Ammo 15002
 	}
 }
 
-Actor Gun4PowerUpBox : Gun1PowerUpBox 3823
+Actor Gun4PowerUpBox : Gun1PowerUpBox
 {
 	//$Category JJ_Weapons
 	States
@@ -315,7 +300,7 @@ Actor Gun4PowerUpBox : Gun1PowerUpBox 3823
 		4GUN ABCD 1 BRIGHT
 		Loop
 	Death:
-		TNT1 A 0 A_PlaySound("WEAPNGET")
+		TNT1 A 0 A_StartSound("WEAPNGET")
 		TNT1 A 0 ACS_NamedExecute("Gun4",0)
 		TNT1 A 0 A_GiveToTarget("Gun4PowerUp", 1, AAPTR_DEFAULT)
 		TNT1 A 0 A_GiveToTarget("Bouncers", 25, AAPTR_DEFAULT)
@@ -324,7 +309,7 @@ Actor Gun4PowerUpBox : Gun1PowerUpBox 3823
 	}
 }
 
-Actor Gun4PowerUp : Inventory 
+Actor Gun4PowerUp : Inventory
 {
 	Inventory.PickupSound ""
 	Inventory.PickupMessage ""

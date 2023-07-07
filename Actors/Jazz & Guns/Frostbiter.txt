@@ -1,8 +1,7 @@
-Actor Frostbiter : Weapon 15004
+Actor Frostbiter : Weapon
 {
 	//$Category JJ_Weapons
 	Tag "Frostbiter"
-	DamageFactor 0
 	Weapon.SelectionOrder 110
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 0
@@ -14,6 +13,7 @@ Actor Frostbiter : Weapon 15004
 	Inventory.PickupSound "WEAPNGET"
 	Inventory.PickupMessage "$PK_WEAP8"
 	Inventory.Icon "PLSPA0"
+	DamageFactor 0
 	+FLOATBOB
 	+NOGRAVITY
 	Obituary "$OB_WEP8"
@@ -175,17 +175,17 @@ Actor Frostbiter : Weapon 15004
 	}
 }
 
-Actor FreezeAmmo : Ammo 16203
+Actor FreezeAmmo : Ammo
 {
 	//$Category JJ_Weapons
 	Inventory.Amount 3
 	Inventory.MaxAmount 100
-	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
 	Inventory.PickupMessage "$PK_AMMO8"
 	Inventory.PickupSound "AMMOUP"
-	FloatBobStrength 0.5
 	Inventory.Icon "MBLSZ0"
+	Ammo.BackpackAmount 3
+	Ammo.BackpackMaxAmount 100
+	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY
 	States
@@ -223,21 +223,9 @@ Actor FreezeBlast
 	}
 }
 
-Actor FreezeBlastPowered
+Actor FreezeBlastPowered : FreezeBlast
 {
-	Radius 13
-	Height 8
-	Speed 25
 	Damage 35
-	DamageType JazzProjIce
-	DamageType Ice
-	RenderStyle Add
-	Alpha 0.75
-	Projectile
-	+BRIGHT
-	+RANDOMIZE
-	SeeSound "ICESHOT"
-	DeathSound "ICEHIT"
 	States
 	{
 	Spawn:
@@ -245,9 +233,6 @@ Actor FreezeBlastPowered
 		FBLS B 2
 		FBLS C 2
 		Loop
-	Death:
-		FBLS DEFGHI 2
-		Stop
 	}
 }
 
@@ -275,31 +260,12 @@ Actor FreezeBlastTrail
 	}
 }
 
-Actor FreezeBlastTrailPowered
+Actor FreezeBlastTrailPowered : FreezeBlastTrail
 {
-	Radius 13
-	Height 8
-	Speed 20
 	Damage 3
-	DamageType JazzProjIce
-	RenderStyle Add
-	Alpha 0.9
-	Scale 0.5
-	Projectile
-	+BRIGHT
-	+RANDOMIZE
-	States
-	{
-	Spawn:
-		FBLS DEFGHI 2
-		Stop
-	Death:
-		FBLS DEFGHI 2
-		Stop
-	}
 }
 
-Actor Gun8PowerUpBox : Gun1PowerUpBox 3827
+Actor Gun8PowerUpBox : Gun1PowerUpBox
 {
 	//$Category JJ_Weapons
 	States

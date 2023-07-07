@@ -1,4 +1,4 @@
-Actor AtlantisBoss 3873
+Actor AtlantisBoss
 {
 	//$Category JJ_Goons
 	Tag "Cthulhu"
@@ -16,9 +16,9 @@ Actor AtlantisBoss 3873
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
-	SeeSound "serpsee"
-	PainSound "serppain"
-	ActiveSound "serpact"
+	SeeSound "SERPSEE"
+	PainSound "SERPPAIN"
+	ActiveSound "SERPACT"
 	Obituary "$OB_CTHUL"
 	States
 	{

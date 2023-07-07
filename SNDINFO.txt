@@ -1,248 +1,260 @@
+////////////////////
+//Weapons & Pickups//
+/////////////////////
 LFG2FIRE LFG2FIRE //blastshot BLSTFIR0
-SHTBLTFI		SHTBLTFI //riotgun/fire		dsriotfr
-RIPRFIRE		RIPRFIRE //uzifire		dsuzifir
+SHTBLTFI SHTBLTFI //riotgun/fire		dsriotfr
+RIPRFIRE RIPRFIRE //uzifire		dsuzifir
 SLICFIRE SLICFIRE
-bounce bounce //40mm/grenbounce bounce
-SEEKFIRE	SEEKFIRE //Weapons/SeekerFire	SEEKFIRE
-SEEKXPLD	SEEKXPLD // Seeker/Explode	SEEKXPLD ------ ZMTank/missileX SEEKXPLD ----pyro/flamepoof SEEKXPLD ---- pyro/bombhit SEEKXPLD
+BOUNCE BOUNCE //40mm/grenbounce bounce
+SEEKFIRE SEEKFIRE //Weapons/SeekerFire	SEEKFIRE
+SEEKXPLD SEEKXPLD // Seeker/Explode	SEEKXPLD ------ ZMTank/missileX SEEKXPLD ----pyro/flamepoof SEEKXPLD ---- pyro/bombhit SEEKXPLD
 RFLAUNCH RFLAUNCH //weapons/rocklf  JJRLAUNC ---- ZMTank/missile JJRLAUNC
-FMTRFIRE	FMTRFIRE //Flamethrower/Fire	FMTRFIRE ---- pyro/flame FMTRFIRE ---- pyro/bomb FMTRFIRE
-FMTRHIT	FMTRHIT //Flamethrower/Hit	FMTRHIT
-Toasty Toasty //DSFLAMST	DSFLAMST 
-Toasted Toasted //DSFLAME		DSFLAME
-Burner Burner
+FMTRFIRE FMTRFIRE //Flamethrower/Fire	FMTRFIRE ---- pyro/flame FMTRFIRE ---- pyro/bomb FMTRFIRE
+FMTRHIT FMTRHIT //Flamethrower/Hit	FMTRHIT
+TOASTY TOASTY //DSFLAMST	DSFLAMST
+TOASTED TOASTED //DSFLAME		DSFLAME
+BURNER BURNER
 ICESHOT	ICESHOT //weapons/iceshot		DSICESHT
 ICEHIT ICEHIT //weapons/icehit		DSICEHIT
 ICESHARD ICESHARD //shard1	SHARD1
-RailFire RailFire
-DNDFIRE		DNDFIRE //swrailgun/fire		6XCHFIRE ----- ZPTank/attack 6XCHFIRE ------Weapons/Demontech/XFire 6XCHFIRE
+RAILFIRE RAILFIRE
+DNDFIRE	DNDFIRE //swrailgun/fire		6XCHFIRE ----- ZPTank/attack 6XCHFIRE ------Weapons/Demontech/XFire 6XCHFIRE
 DRYFIRE DRYFIRE //Weapons/Dryfire 9RYFIRE
 
-$random LNCHFIRE 		{ LNCHFIR1  LNCHFIR2  LNCHFIR3 LNCHFIR4 } //40mm/grenfire gfire
-LNCHFIR1			LNCHFIR1
-LNCHFIR2			LNCHFIR2
-LNCHFIR3			LNCHFIR3
-LNCHFIR4			LNCHFIR4
+$random LNCHFIRE { LNCHFIR1  LNCHFIR2  LNCHFIR3 LNCHFIR4 } //40mm/grenfire gfire
+LNCHFIR1 LNCHFIR1
+LNCHFIR2 LNCHFIR2
+LNCHFIR3 LNCHFIR3
+LNCHFIR4 LNCHFIR4
 
-$random BLSTRHIT 		{ BLSTRHT1  BLSTRHT2  BLSTRHT3} //jzbullht	jzbullht
-BLSTRHT1			BLSTRHT1
-BLSTRHT2			BLSTRHT2
-BLSTRHT3			BLSTRHT3
+$random BLSTRHIT  { BLSTRHT1  BLSTRHT2  BLSTRHT3} //jzbullht	jzbullht
+BLSTRHT1 BLSTRHT1
+BLSTRHT2 BLSTRHT2
+BLSTRHT3 BLSTRHT3
 
-$random GUNRAISE 		{ GUNRISE1  GUNRISE2  GUNRISE3} //DSSAWUP
-GUNRISE1			GUNRISE1
-GUNRISE2			GUNRISE2
-GUNRISE3			GUNRISE3
+$random GUNRAISE { GUNRISE1  GUNRISE2  GUNRISE3} //DSSAWUP
+GUNRISE1 GUNRISE1
+GUNRISE2 GUNRISE2
+GUNRISE3 GUNRISE3
 
+$random SLICBNCE  { SLICBNC1  SLICBNC2} //
+SLICBNC1 SLICBNC1
+SLICBNC2 SLICBNC2
 
-$random SLICBNCE 		{ SLICBNC1  SLICBNC2} //
-SLICBNC1			SLICBNC1
-SLICBNC2			SLICBNC2
-
-RAPIDFIR RAPIDFIR  //jazz/rapid		JZRAPID
-ammoup		ammoup
-YUMM	YUMM //Carrot/Pickup	Dsyum
+AMMOUP AMMOUP
+ARMOR ARMOR
+GEMPCKUP GEMPCKUP //Gempickup/Gem
+GEMSMASH SHATTER //gemsmash/gem - before this was using a doubled sound straight from SHATTER
 INVINCE INVINCE //jzinv  jzinv
-POWERUP POWERUP //misc/p_pkup dsgetpow
-SECTGEM		SECTGEM
-WEAPNGET WEAPNGET //DSWPNUP
-Armor Armor
 ITEMUP ITEMUP
-jillyeah  jillyeah //jill/yeah
-GemSmash GemSmash //gemsmash/gem
-GemPckup GemPckup //Gempickup/Gem
+JILLYEAH  JILLYEAH //jill/yeah
+POWERUP POWERUP //misc/p_pkup dsgetpow
+RAPIDFIR RAPIDFIR  //jazz/rapid		JZRAPID
+SECTGEM	SECTGEM
+WEAPNGET WEAPNGET //DSWPNUP
+YUMM YUMM //Carrot/Pickup	Dsyum
 
-$random FOOD 		{ FOOD1  FOOD2  FOOD3 FOOD4 }
-FOOD1			FOOD1
-FOOD2			FOOD2
-FOOD3			FOOD3
-FOOD4			FOOD4
+$random FOOD { FOOD1 FOOD2 FOOD3 FOOD4 }
+FOOD1 FOOD1
+FOOD2 FOOD2
+FOOD3 FOOD3
+FOOD4 FOOD4
 
-$random Drink 		{ Drink1  Drink2  Drink3 Drink4 }
-Drink1			Drink1
-Drink2			Drink2
-Drink3			Drink3
-Drink4			Drink4
+$random Drink { DRINK1 DRINK2 DRINK3 DRINK4 }
+DRINK1 DRINK1
+DRINK2 DRINK2
+DRINK3 DRINK3
+DRINK4 DRINK4
 
-
-BOXBREAK       BOXBREAK //JZBox       JZBox
-TOILET1      TOILET1
-BREAK1       BREAK1
-BOING BOING  //jazz/boing JZBOING
-TUBETRAV TUBETRAV  //JZTUBE JZTUBE
-OLDDOORO	OLDDOORO //olddoor/open
-OLDDOORC	OLDDOORC //olddoor/close
-ORBOUNCE ORBOUNCE
-
-cuptink		cuptink //cuptink/tink
-teaproj		teaproj //tea/attack
-teadeath		teadeath //tea/death
-smokring smokring //Smokering/Ring
-
-cratedie  cratedie //crate/death 
-eggjump	eggjump //EasterEgg/See
+/////////
+//Goons//
+/////////
+CUPTINK CUPTINK //cuptink/tink
+TEAPROJ TEAPROJ //tea/attack
+TEADEATH TEADEATH //tea/death
+SMOKRING SMOKRING //Smokering/Ring
 
 CHICPAI	CHICPAI //chicken/pain
 CHICATK	CHICATK //chicken/attack
-CHICACT	CHICACT //chicken/active
-CHICACT	CHICACT //chicken/see	
+CHICACT	CHICACT //chicken/active and see
 
 ROOSFIRE ROOSFIRE //rooster/fire
 
-BATSCRCH		BATSCRCH //jzbat		jzbat
+BATSCRCH BATSCRCH //jzbat		jzbat
 BEEBUZZ	BEEBUZZ
-BigTurtP BigTurtP
-BigTurtS BigTurtS
-BollPain BollPain
+BIGTURTP GIANHURT //before this was using GIANHURT doubled sound
+BIGTURTS GIANTSEE //before this was using GIANTSEE doubled sound
+BOLLPAIN BOLLPAIN
 BRICKBRK BRICKBRK
-catsight	catsee //cat/sight
-catactive	catactive //cat/active
-catattak	catattak //cat/attack
-catpain	catpain //cat/pain
-COMETXPL COMETXPL //pyro/blastexplosion DSCMTEXP ---- pyro/cometdeath DSCMTEXP
+
+catactive CATACTIV //cat/active
+catsight CATSEE //cat/sight
+catattak CATATTAK //cat/attack
+catpain	CATPAIN //cat/pain
+
 COMTLNCH COMTLNCH //pyro/comet DSCMTLNC
-CrabHit Crabhit
-Dent Dent
-DOGGPAIN		DOGGPAIN //Find Suitable Replacement----  Dog/Pain		DSDOGPAN
-DOGGYATK		DOGGYATK //Dog/Attack		DSDOGATK
-DollAttack/Toyball  DOLLP
-ElecSHOT ELECSHOT
+COMETXPL COMETXPL //pyro/blastexplosion DSCMTEXP ---- pyro/cometdeath DSCMTEXP
+CRABHIT CRABHIT
+DENT DENT
+DOGGPAIN DOGGPAIN //Find Suitable Replacement----  Dog/Pain		DSDOGPAN
+DOGGYATK DOGGYATK //Dog/Attack		DSDOGATK
+DollAttack/Toyball  DOLLP //there was an undefined GFIREL too using the same sound
+ELECSHOT ELECSHOT
 FIRESHOT FIRESHOT //pyro/blast DP_ATTAC
-FishAct FishAct
 FISHSEE FISHSEE
-ghostsee	ghostsee //ghost/see
-ghostatt	ghostatt //ghost/attack
-ghostact	ghostact //ghost/active
-GIANTSEE	Giantsee //giant/see
-GIANHURT	Gianhurt //giant/hurt
-GIANTMEL	Giantmel //giant/melee
-GoonPLAS GOONPLAS
+GIANTSEE GIANTSEE //giant/see
+GIANHURT GIANHURT //giant/hurt
+GIANTMEL GIANTMEL //giant/melee
+GOONPLAS GOONPLAS
 HELILOOP HELILOOP
-Hover1 Hover1 //JHover JHover
-Hover2 Hover2 //THover THover
-LasEYATK LasEYATK //LaserEye/Attack
-LasEYHIT	LASEYHIT //LaserEye/Hit
+HOVER1 HOVER1 //JHover JHover
+HOVER2 HOVER2 //THover THover
+LASEYATK LASEYATK //LaserEye/Attack
+LASEYHIT LASEYHIT //LaserEye/Hit
 LILFLAP LILFLAP
 LIZRDPAI LIZRDPAI  //jzlizPAI jzlizPAI
 LIZRDACT LIZRDACT //jzlizACT jzlizACT
-LIZRDSEE	LIZRDSEE //jzlizsee	jzlizsee
-loogdeth	loogdeth //loog/explode
-loogsee		loogsee //loogie/see
-Miniflap Miniflap
+LIZRDSEE LIZRDSEE //jzlizsee	jzlizsee
+LOOGDETH LOOGDETH //loog/explode
+LOOGSEE LOOGSEE //loogie/see
+MINIFLAP MINIFLAP
 MONKSPLT MONKSPLT
 MONKTHRW MONKTHRW
 PENPAIN PENPAIN
-Piesplat Piesplat //pie/splat
-PlasmaFI PlasmaFI //JJPlasma JJPlasma
+PIESPLAT PIESPLAT //pie/splat
+PLASMAFI PLASMAFI //JJPlasma JJPlasma
 PUNCH PUNCH
-QUEENDTH QUEENDTH
 QUEENSCM QUEENSCM
-RATATTCK	RATATTCK //jzratatt	jzratatt
+RATATTCK RATATTCK //jzratatt
 RATACT RATACT
-ROBOTSEE	ROBOTSEE //jzrbtsee	jzrbtsee
+ROBOTSEE MECHSEE //jzrbtsee - before this was using MECHSEE doubled sound
 SPKPAIN SPKPAIN
 SPKSEE SPKSEE //ELECHIT ELECHIT
 SPKBUZZ SPKBUZZ
-spgatk	spgatk 
+SPGATK SPGATK
 SWORDSEE SWORDSEE
 SWORDPAN SWORDPAN
 TANKSTRT TANKSTRT
 TANKLOOP TANKLOOP
-Tick 		Tick
-Turtact			TURTact //Turtactive			TURTact
-Turtpain			TURTpain
-TURTBITE		TURTBITE //bpbite		bpbite
-Wingflap Wingflap
-Wingflp2 Wingflp2 //Wingflap/feather
-witchsee	witchsee //witch/see
-witchMAG	witchmag //witch/attack
+TICK TICK
+TURTACT TURTACT //Turtactive			TURTact
+TURTPAIN TURTPAIN
+TURTBITE TURTBITE //bpbite		bpbite
+WINGFLAP WINGFLAP
+WINGFLP2 WINGFLP2 //Wingflap/feather
+WITCHSEE WITCHSEE //witch/see
+WITCHMAG WITCHMAG //witch/attack
 
-FLAILATK  FLAILATK //flail/attack
-FLAILDTH	FLAILDTH //flail/death
-FLAILSIT 	FLAILSIT //flail/sit
-FLAILPAI	FLAILPAI //flail/pain
+FLAILATK FLAILATK //flail/attack
+FLAILDTH FLAILDTH //flail/death
+FLAILSIT FLAILSIT //flail/sit
+FLAILPAI FLAILPAI //flail/pain
 
-bldrrol	bldrrol //boulder/roll
+$random BMBTHROW { BMBTHRW1  BMBTHRW2  BMBTHRW3 BMBTHRW4 }
+BMBTHRW1 BMBTHRW1
+BMBTHRW2 BMBTHRW2
+BMBTHRW3 BMBTHRW3
+BMBTHRW4 BMBTHRW4
 
-$random BMBTHROW		{ BMBTHRW1  BMBTHRW2  BMBTHRW3 BMBTHRW4 }
-BMBTHRW1			BMBTHRW1
-BMBTHRW2			BMBTHRW2
-BMBTHRW3			BMBTHRW3
-BMBTHRW4			BMBTHRW4
+$random CRABMISS { CRABMIS1  CRABMIS2  CRABMIS3 }
+CRABMIS1 CRABMIS1
+CRABMIS2 CRABMIS2
+CRABMIS3 CRABMIS3
 
-$random CRABMISS 		{ CRABMIS1  CRABMIS2  CRABMIS3 }
-CRABMIS1			CRABMIS1
-CRABMIS2			CRABMIS2
-CRABMIS3			CRABMIS3
+$random DOGGYSEE { DOGGSEE1  DOGGSEE2  DOGGSEE3 } //Dog/Sight		DSDOGSEE
+DOGGSEE1 DOGGSEE1
+DOGGSEE2 DOGGSEE2
+DOGGSEE3 DOGGSEE3
 
-$random DOGGYSEE 		{ DOGGSEE1  DOGGSEE2  DOGGSEE3 } //Dog/Sight		DSDOGSEE
-DOGGSEE1			DOGGSEE1
-DOGGSEE2			DOGGSEE2
-DOGGSEE3			DOGGSEE3
+$random DOGGYACT { DOGGSEE1  DOGGSEE2  DOGGACT1 }
+DOGGSEE1 DOGGSEE1
+DOGGSEE2 DOGGSEE2
+DOGGACT1 DOGGACT1
 
-$random DOGGYACT 		{ DOGGSEE1  DOGGSEE2  DOGGACT1 }
-DOGGSEE1			DOGGSEE1
-DOGGSEE2			DOGGSEE2
-DOGGACT1			DOGGACT1
+$random FISHACT { FISHACT1  FISHACT2 }
+FISHACT1 FISHACT1
+FISHACT2 FISHACT2
 
-$random FISHACT 		{ FISHACT1  FISHACT2 }
-FISHACT1			FISHACT1
-FISHACT2			FISHACT2
+$random Ratsee { RATSEE1  RATSEE2 } //jzratsee	jzratsee
+RATSEE1 RATSEE1
+RATSEE2 RATSEE2
 
+$random TurtJump { TUTJUMP1  TUTJUMP2  }
+TUTJUMP1 TUTJUMP1
+TUTJUMP2 TUTJUMP2
 
-$random Ratsee		{ RATSEE1  RATSEE2 } //jzratsee	jzratsee
-RATSEE1			RATSEE1
-RATSEE2			RATSEE2
+$random Turtsight { Turtsight1  Turtsight2  Turtsight3 }
+Turtsight1 TURTSIT1
+Turtsight2 TURTSIT2
+Turtsight3 TURTSIT3
 
-$random TurtJump		{ TUTJUMP1  TUTJUMP2  }
-TUTJUMP1			TUTJUMP1
-TUTJUMP2		TUTJUMP2
-
-$random Turtsight 		{ Turtsight1  Turtsight2  Turtsight3 }
-Turtsight1			TURTsit1
-Turtsight2			TURTsit2
-Turtsight3			TURTsit3
-
-$random Whizz 		{ Whizz1  Whizz2 }
-Whizz1		    Whizz1
-Whizz2			Whizz2
+$random Whizz { Whizz1  Whizz2 }
+Whizz1 WHIZZ1
+Whizz2 WHIZZ2
 
 $Random CLANG { CLANG1 CLANG2 CLANG3 }
 CLANG1	CLANG1
 CLANG2	CLANG2
 CLANG3	CLANG3
 
-
-SPAZSEE		SPAZSEE
+SPAZSEE SPAZSEE
 WHATYODO WHATYODO  //DSWHAT		DSWHAT
-LORISEE		LORISEE //jzlori		jzlori
-evakiss		evakiss
+LORISEE LORISEE //jzlori		jzlori
+EVAKISS EVAKISS
 LUBLUBAE LUBLUBAE //DSLUB1 DSLUB1
 LUBLUBTB LUBLUBTB //DSLUB1 DSLUB2
-HIPHOPAT		HIPHOPAT //jzhop		jzhop
+HIPHOPAT HIPHOPAT //jzhop		jzhop
 
-plats/pt1_stop			DSEMPTY
-plats/pt1_strt			DSEMPTY
-plats/pt1_mid			DSEMPTY
+/////////////
+//OMF Stuff//
+/////////////
+FIGHT OMFFIGHT
+READY OMFREADY
+YOUWIN OMFWIN
 
-doors/dr1_open			DSEMPTY
-doors/dr1_clos			DSEMPTY
-doors/dr2_open			DSEMPTY
-doors/dr2_clos			DSEMPTY
+//Pinball//
+PINBELL PINBELL
+PINFLIP PINFLIP
+FATPNCH FATPNCH
+SHATTER SHATTER
+JJDING JJDING //jazzding/ding
 
-misc/secret			SECRETS
-AllBonus AllBonus
+saurgren		saurgren //saurian/grenade
+saurgun		saurgun //saurian/smg
+saurow		saurow //saurian/pain
+saursee		saursee //saurian/see
+saurboss		saurboss //saurianboss/see
+money money //gba/money  	money
+Rabbitou Rabbitou  //gba/rabbitou	rabbitou
+GBHealth GBHealth    //gba/health	gbhealth
+Chamfire Chamfire   //cham/fire	chfire
+CHAMPHIT CHAMPHIT  //cham/projhit	chpjhit
+CHAMELEE CHAMELEE   //cham/melee 	chhmm
+CHAMFART CHAMFART  //cham/fart   chfart
+CHAMBDTH CHAMBDTH  //cham/bossdeath	 chbsdth
+CHAMTELE CHAMTELE  //cham/teleport	chtele
 
-fight	OMFFIGHT
-ready	OMFREADY
-youwin	OMFWIN
+switches/lever2n	CHNSTCH //To Check Over
+switches/lever2f	SWJJTF //To Check Over
 
-PullSW1 PullSW1
-SWITCH1N SWITCH1N 
-SWITCH1F SWITCH1F 
+MSPLASH MSPLASH //muck/gloop
 
-misc/teleport			TELEPORT
+SPEARSEE SPEARSEE //spear/see
 
+SERPSEE	SERPSEE //serp/see
+SERPPAIN SERPPAIN //serp/pain
+SERPACT	SERPACT //serp/act
+ATLISPRJ ATLISPRJ //atlis/fire
+
+MECHSEE	MECHSEE //mech/see
+MECHPAIN MECHPAIN //mech/pain
+MECHSTEP MECHSTEP //mech/step
+MBFGFIRE MBFGFIRE //mech/bfgfire
+MBFGDIE	MBFGDIE //mech/bfgdie
+
+//////////
+//Player//
+//////////
 $playersound	Jazz	male	*death		JJouch
 $playersound	Jazz	male	*xdeath		JJouch
 $playersound	Jazz	male	*gibbed		JJouch
@@ -256,95 +268,91 @@ $playersound	Jazz	male	*jump		JJjump
 $playersound	Jazz	male	*fist		dspunch
 $playersound	Jazz	male	*usefail	JJnoway
 
-JJouch JJouch
+$volume *land 0.75
+$volume *pain100 0.75
+$volume *death 0.75
+$volume *Xdeath 0.75
+$volume *gibbed 0.75
+$volume *pain75 0.75
+$volume *pain50 0.75
+$volume *pain25 0.75
 
-menu/activate			WEAPNGET 	
-menu/backup			WEAPNGET 	
-menu/prompt			WEAPNGET 	
-menu/cursor			Bounce		
-menu/choose			WEAPNGET
-menu/clear			SWITCH1F 
+JJOUCH JJOUCH
 
-intermission/tick			TOASTED
-intermission/nextstage		TOASTED
-intermission/paststats		SECTGEM
+//////////
+//Menues//
+//////////
+menu/activate WEAPNGET
+menu/backup WEAPNGET
+menu/prompt WEAPNGET
+menu/cursor BOUNCE
+menu/choose WEAPNGET
+menu/clear SWITCH1F
 
-PINBELL PINBELL
-PINFLIP PINFLIP
+intermission/tick TOASTED
+intermission/nextstage TOASTED
+intermission/paststats SECTGEM
 
-Torch Torch
-Fountain Fountain
+$random Quitsound { JJOUCH HIPHOPAT RAPIDFIR BOING SPAZSEE WEAPNGET SECTGEM WHATYODO }
+
+///////////////
+//Environment//
+///////////////
+ALLBONUS ALLBONUS
+BLDRROL	BLDRROL		//boulder/roll
+BOING BOING			//jazz/boing JZBOING
+BOXBREAK BOXBREAK	//JZBox       JZBox
+BREAK1 BREAK1
+CRATEDIE CRATEDIE	//crate/death
+EGGJUMP	EGGJUMP		//EasterEgg/See
 ELECPILL ELECPILL
+FOUNTAIN FOUNTAIN
+ORBOUNCE ORBOUNCE
+TOILET1 TINYFALL	//since it is already present as ambientsound, requires a diff entry - before it was doubled
+TORCH TORCH
+TUBETRAV TUBETRAV	//JZTUBE JZTUBE
 
+DOMINATE DOMINATE
+IFELGOOD IFELGOOD
+EXBONUS EXBONUS
+
+///////////
+//Ambient//
+///////////
 dspstart dspstart
 dspstop dspstop
 dsstnmov dsstnmov
 
-fatpnch		fatpnch
+plats/pt1_stop DSEMPTY
+plats/pt1_strt DSEMPTY
+plats/pt1_mid DSEMPTY
 
-pinbell		pinbell
+doors/dr1_open DSEMPTY
+doors/dr1_clos DSEMPTY
+doors/dr2_open DSEMPTY
+doors/dr2_clos DSEMPTY
 
-shatter		shatter
+misc/secret SECRETS
+misc/teleport TELEPORT
 
-bldrrol bldrrol //boulder/roll
+cloudstep CLODSTEP //cloud/step
 
-JJDing	JJDing //jazzding/ding
+OLDDOORC OLDDOORC //olddoor/close
+OLDDOORO OLDDOORO //olddoor/open
 
-jjhorn		jjhorn
-jjtick		jjtick
-jjbell		jjbell
-
-saurgren		saurgren //saurian/grenade
-saurgun		saurgun //saurian/smg
-saurow		saurow //saurian/pain
-saursee		saursee //saurian/see
-saurboss		saurboss //saurianboss/see	
-money money //gba/money  	money
-Rabbitou Rabbitou  //gba/rabbitou	rabbitou
-GBHealth GBHealth    //gba/health	gbhealth
-Chamfire Chamfire   //cham/fire	chfire
-CHAMPHIT CHAMPHIT  //cham/projhit	chpjhit
-CHAMELEE CHAMELEE   //cham/melee 	chhmm
-CHAMFART CHAMFART  //cham/fart   chfart
-CHAMBDTH CHAMBDTH  //cham/bossdeath	 chbsdth
-CHAMTELE CHAMTELE  //cham/teleport	chtele
-
-switches/lever2n	chnstch //To Check Over
-switches/lever2f	swjjtf //To Check Over
-
-mSplash		msplash //muck/gloop	
-
-spearsee		spearsee //spear/see
-
-serpsee	serpsee //serp/see
-serppain	serppain //serp/pain
-serpact	serpact //serp/act
-atlisprj	atlisprj //atlis/fire
-
-mechsee	mechsee //mech/see
-mechpain	mechpain //mech/pain
-mechstep	mechstep //mech/step
-
-mbfgfire mbfgfire //mech/bfgfire
-mbfgdie	mbfgdie //mech/bfgdie
-cloudstep		cloudstep //cloud/step
-
-$random Quitsound { JJouch HIPHOPAT RAPIDFIR BOING SPAZSEE WEAPNGET SECTGEM WHATYODO }
-
+PULLSW1 PULLSW1
+SWITCH1N SWITCH1N
+SWITCH1F SWITCH1F
 PLAT1LOP PLAT1LOP
 PLAT1SOP PLAT1SOP
-DoorOpen DoorOpen
-DoorClos DoorClos
-DoorLoop DoorLoop
-RockPlat RockPlat
-RockSTOP RockSTOP
-BarRaise BarRaise
-BarStop Barstop
-GemSWITC GemSWITC
-
-DOMINATE Dominate
-IFELGOOD IFELGOOD
-ExBonus ExBonus
+DOOROPEN DOOROPEN
+DOORCLOS DOORCLOS
+DOORLOOP DOORLOOP
+ROCKPLAT ROCKPLAT
+ROCKSTOP BRICKBRK //before this was using BRICKBRK doubled sound
+BARRAISE BARRAISE
+BARSTOP BARSTOP
+GEMSWITC GEMSWITC
 
 WATSPLSH WATSPLSH
 LAVSPLSH LAVSPLSH
@@ -359,61 +367,52 @@ WINDAMB WINDAMB
 FUNKY1 FUNKY1
 WAVES WAVES
 JETAMB JETAMB
-FanAir FanAir
-TinyFall TinyFall
-TestTube TestTube
-ScaryAhh ScaryAhh
+FANAIR FANAIR
+TINYFALL TINYFALL
+TESTTUBE TESTTUBE
+SCARYAHH SCARYAHH
 
-$AMBIENT 1  WFALAMB1 POINT CONTINUOUS 1.0
-$AMBIENT 2  OUTSAMB1 POINT CONTINUOUS 1.0
-$AMBIENT 3  FORESTA1 POINT CONTINUOUS 1.0
-$AMBIENT 4  FORESTA2 POINT CONTINUOUS 1.0
+$AMBIENT 1 WFALAMB1 POINT CONTINUOUS 1.0
+$AMBIENT 2 OUTSAMB1 POINT CONTINUOUS 1.0
+$AMBIENT 3 FORESTA1 POINT CONTINUOUS 1.0
+$AMBIENT 4 FORESTA2 POINT CONTINUOUS 1.0
 $AMBIENT 5 ROCKYRAN Point RANDOM 15.0 60.0 1.0
-$AMBIENT 6  MACHINE1 POINT CONTINUOUS 1.0
-$AMBIENT 7  WINDAMB POINT CONTINUOUS 1.0
+$AMBIENT 6 MACHINE1 POINT CONTINUOUS 1.0
+$AMBIENT 7 WINDAMB POINT CONTINUOUS 1.0
 $AMBIENT 8 LAVSPLSH Point RANDOM 5.0 15.0 1.0
 $AMBIENT 9 FUNKY1 Point RANDOM 15.0 30.0 1.0
-$AMBIENT 10  Waves POINT CONTINUOUS 1.0
-$AMBIENT 11  JETAMB POINT CONTINUOUS 1.0
-$AMBIENT 12  FanAir POINT CONTINUOUS 1.0
-$AMBIENT 13  TinyFall POINT CONTINUOUS 1.0
-$AMBIENT 14  Testtube POINT CONTINUOUS 1.0
-$AMBIENT 15 ScaryAhh Point RANDOM 15.0 30.0 1.0
+$AMBIENT 10 WAVES POINT CONTINUOUS 1.0
+$AMBIENT 11 JETAMB POINT CONTINUOUS 1.0
+$AMBIENT 12 FANAIR POINT CONTINUOUS 1.0
+$AMBIENT 13 TINYFALL POINT CONTINUOUS 1.0
+$AMBIENT 14 TESTTUBE POINT CONTINUOUS 1.0
+$AMBIENT 15 SCARYAHH Point RANDOM 15.0 30.0 1.0
 
 $limit WATSPLSH	0
 $limit LAVSPLSH	0
-$limit LasEYHIT	0
+$limit LASEYHIT	0
 
-$volume *land 0.75
-$volume *pain100 0.75 
-$volume *death 0.75
-$volume *Xdeath 0.75
-$volume *gibbed 0.75 
-$volume *pain75 0.75 
-$volume *pain50 0.75 
-$volume *pain25 0.75 
-$Volume JJouch 0.75
-$Volume Hover1 0.75
-$Volume Hover2 0.75
-$Volume Machine1 0.33
-$volume Penpain 0.75 
-$volume WINDAMB 0.75 
+$volume JJOUCH 0.75
+$volume HOVER1 0.75
+$volume HOVER2 0.75
+$volume MACHINE1 0.33
+$volume PENPAIN 0.75
+$volume WINDAMB 0.75
 
-Fountain/Loop	Fountain
+Fountain/Loop FOUNTAIN
 $attenuation Fountain/Loop 3
 $volume Fountain/Loop 0.5
 $limit Fountain/Loop 0
 
 //RAIN
-Ambient/Rain	AMBRAIN
+Ambient/Rain AMBRAIN
 $rolloff Ambient/Rain 250 1250
 $pitchshift Ambient/Rain 0
 $limit Ambient/Rain 2
 
 //Added Sounds
 ARMATTK		ARMATTK
-CDGNATTK	CDGNATTK
-CDGNSEE		CDGNSEE
+CDGNSEE		CDGNSEE //this was also used by an undefined sound CTHUPAIN as double
 DSSPEARU	DSSPEARU
 EGBJYELL	EGBJYELL
 JJGLASS		JJGLASS
@@ -422,7 +421,7 @@ PYRCEXPL	PYRCEXPL
 RVNATT		RVNATT
 RVNSEE		RVNSEE
 RWING		RWING
-SNKESND		SNKESND
+SNKESND		RATSEE2 //before this was using RATSEE2 doubled sound
 STANDBY		STANDBY
 SWROWL		SWROWL
 TRN_BEER	TRN_BEER
@@ -430,19 +429,27 @@ UTBLUWIN	UTBLUWIN
 UTREDTAK	UTREDTAK
 UTYOUBLU	UTYOUBLU
 
-kamiturtle/scream		JZTSCRM
+kamiturtle/scream JZTSCRM
 
-suckfart	suckfart
-$random SUCKWALK 		{ SUKWALK1  SUKWALK2 }
-SUKWALK1			SUKWALK1
-SUKWALK2			SUKWALK2
+SUCKFART SUCKFART
+$random SUCKWALK { SUKWALK1  SUKWALK2 }
+SUKWALK1 SUKWALK1
+SUKWALK2 SUKWALK2
 
-$random PLANESEE		{ Plansee1  plansee2 }
-Plansee1		Plansee1
-plansee2	    plansee2
-planeact		planeact
+$random PLANESEE { plansee1  plansee2 }
+plansee1 PLANSEE1
+plansee2 PLANSEE2
+planeact HOVER2 //before this was using HOVER2 doubled sound
 
-$random PLANESEE		{ Plansee1  plansee2 }
-Plansee1		Plansee1
-plansee2	    plansee2
-planeact		planeact
+//Not Included
+CDGNATTK CDGNATTK
+
+GHOSTACT GHOSTACT //ghost/active
+GHOSTATT GHOSTATT //ghost/attack
+GHOSTSEE GHOSTSEE //ghost/see
+
+JJBELL JJBELL
+JJHORN JJHORN
+JJTICK JJTICK
+
+QUEENDTH QUEENDTH

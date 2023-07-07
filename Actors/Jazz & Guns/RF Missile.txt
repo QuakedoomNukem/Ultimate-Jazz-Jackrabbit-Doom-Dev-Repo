@@ -1,4 +1,4 @@
-Actor RFMissile : Weapon 32763
+Actor RFMissile : Weapon
 {
 	//$Category JJ_Weapons
 	Tag "RF Missile"
@@ -222,30 +222,30 @@ Actor DualRocketPow : DualRocket
 	States
 	{
 	Spawn:
-		RFLP A 1 BRIGHT
+		RFLP A 1
 		RFLM A 0 A_Countdown
-	Loop
+		Loop
 	Death:
-		RFLE AB 3 BRIGHT
-		RFLE C 3 BRIGHT A_Explode (150,256,0)
-		RFLE DEFGHIJK 3 BRIGHT
+		RFLE AB 3
+		RFLE C 3 A_Explode (150,256,0)
+		RFLE DEFGHIJK 3
 		Stop
 	}
 }
 
-Actor JJRocketAmmo : Ammo 32473
+Actor JJRocketAmmo : Ammo
 {
 	//$Category JJ_Weapons
-	Inventory.PickupMessage "$PK_AMMO6"
 	Inventory.Amount 3
+	Inventory.Icon "JROKZ0"
 	Inventory.MaxAmount 100
+	Inventory.PickupMessage "$PK_AMMO6"
+	Inventory.PickupSound "AMMOUP"
 	Ammo.BackpackAmount 3
 	Ammo.BackpackMaxAmount 100
-	Inventory.PickupSound "AMMOUP"
 	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY
-	Inventory.Icon "JROKZ0"
 	States
 	{
 	Spawn:
@@ -254,7 +254,7 @@ Actor JJRocketAmmo : Ammo 32473
 	}
 }
 
-Actor Gun6PowerUpBox : Gun1PowerUpBox 3825
+Actor Gun6PowerUpBox : Gun1PowerUpBox
 {
 	//$Category JJ_Weapons
 	States

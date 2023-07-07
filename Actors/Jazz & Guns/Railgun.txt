@@ -1,4 +1,4 @@
-Actor Railgun : Weapon 30027
+Actor Railgun : Weapon
 {
 	//$Category JJ_Weapons
 	Tag "Railgun"
@@ -235,13 +235,13 @@ Actor Railgun : Weapon 30027
 	}
 }
 
-Actor RailAmmo : Ammo 3247
+Actor RailAmmo : Ammo
 {
 	//$Category JJ_Weapons
-	Inventory.PickupMessage "$PK_AMMO9"
 	Inventory.Amount 3
 	Inventory.MaxAmount 100
 	Inventory.Icon "RAILZ0"
+	Inventory.PickupMessage "$PK_AMMO9"
 	Inventory.PickupSound "AMMOUP"
 	Ammo.BackpackAmount 3
 	Ammo.BackpackMaxAmount 100
@@ -256,7 +256,7 @@ Actor RailAmmo : Ammo 3247
 	}
 }
 
-Actor Gun9PowerUpBox : Gun1PowerUpBox 3828
+Actor Gun9PowerUpBox : Gun1PowerUpBox
 {
 	//$Category JJ_Weapons
 	States

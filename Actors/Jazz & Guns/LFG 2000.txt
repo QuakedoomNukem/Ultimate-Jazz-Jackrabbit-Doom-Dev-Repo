@@ -1,4 +1,4 @@
-Actor LFG2000 : DoomWeapon 15000
+Actor LFG2000 : DoomWeapon
 {
 	//$Category JJ_Weapons
 	Tag "Blaster"
@@ -29,7 +29,7 @@ Actor LFG2000 : DoomWeapon 15000
 		TNT1 A 0 A_JumpIfInventory("Gun1PowerUp", 1, "Powerfire")
 		PLPI A 0
 		PLPI B 2 BRIGHT
-		PLPI C 2 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 2 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold:
@@ -37,134 +37,134 @@ Actor LFG2000 : DoomWeapon 15000
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
 		PLPI A 8
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold1:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
 		PLPI A 7
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold2:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
 		PLPI A 6
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold3:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
 		PLPI A 5
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold4:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
 		PLPI A 4
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold5:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
 		PLPI A 3
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold6:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
 		PLPI A 2
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold7:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
 		PLPI A 1
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	Hold8:
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("Blastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("BlastShot")
 		PLPI B 0 A_ReFire
 		Goto Ready
 	PowerFire:
 		PLPI A 0
 		PLPI B 2 BRIGHT
-		PLPI C 2 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 2 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "PowerHold1")
 		PLPI A 8
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold1:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "PowerHold2")
 		PLPI A 7
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold2:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "PowerHold3")
 		PLPI A 6
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold3:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "PowerHold4")
 		PLPI A 5
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold4:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "PowerHold5")
 		PLPI A 4
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold5:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "PowerHold6")
 		PLPI A 3
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold6:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "PowerHold7")
 		PLPI A 2
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold7:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "PowerHold8")
 		PLPI A 4
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	PowerHold8:
 		PLPI B 3 BRIGHT
-		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastshot")
+		PLPI C 3 BRIGHT A_FireCustomMissile("PowerBlastShot")
 		PLPI B 0 A_ReFire("PowerHold")
 		Goto Ready
 	}
 }
 
-Actor Blastshot
+Actor BlastShot
 {
 	Radius 8
 	Height 8
@@ -191,33 +191,23 @@ Actor Blastshot
 	}
 }
 
-Actor PowerBlastshot
+Actor PowerBlastShot : BlastShot
 {
 	Radius 10
 	Height 10
 	Speed 40
 	Damage 15
-	DamageType JazzProj
-	RenderStyle Add
 	Alpha 0.9
 	Scale 1.1
-	Projectile
-	+BRIGHT
-	+RANDOMIZE
-	SeeSound "LFG2FIRE"
-	DeathSound "BLSTRHIT"
 	States
 	{
 	Spawn:
 		HYPP A 6
 		Loop
-	Death:
-		JBLS EFGH 4
-		Stop
 	}
 }
 
-Actor Gun1PowerUpBox 3820
+Actor Gun1PowerUpBox
 {
 	//$Category JJ_Weapons
 	Height 30
@@ -226,8 +216,8 @@ Actor Gun1PowerUpBox 3820
 	DamageFactor "Normal", 0
 	DamageFactor "Ice", 0
 	DamageFactor "Fire", 0
-	DamageFactor "JAZZPROJ", 1
-	DamageFactor "JAZZPROJFire", 1
+	DamageFactor "JazzProj", 1
+	DamageFactor "JazzProjFire", 1
 	DamageFactor "JazzProjIce", 1
 	+NOBLOOD
 	+SHOOTABLE
