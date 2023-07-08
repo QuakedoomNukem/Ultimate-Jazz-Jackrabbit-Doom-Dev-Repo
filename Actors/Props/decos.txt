@@ -893,8 +893,8 @@ Actor ChesherCat1 3452
 	States
 	{
 	Spawn:
-		PSYH A -1
-		Stop
+		CHSR ABCD 4
+		Loop
 	}
 }
 
@@ -905,8 +905,8 @@ Actor ChesherCat2 : ChesherCat1 3453
 	States
 	{
 	Spawn:
-		PSYH B -1
-		Stop
+		CHSR EFGH 4
+		Loop
 	}
 }
 
