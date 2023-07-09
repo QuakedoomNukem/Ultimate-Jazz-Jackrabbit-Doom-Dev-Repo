@@ -79,7 +79,7 @@ InInventory "HideHUD"
     }
 
 	drawmugshot 5,disableouch, 72, 160;
-	drawselectedinventory alwaysshowcounter, HUDFONT_DOOM, 420, 152;
+	DrawNumber 2, "JJ2_Font", Orange, TNT, drawshadow(2,2), Alignment(right), 452, 170;
 	DrawNumber 9, "SmallFont", Normal, Points, DrawShadow(2,2), Alignment(center), 420, -132, 1;
 	DrawString "SmallFont", Normal, "Score", 420, -150, 1, DrawShadow(2,2), Alignment(center);
 
