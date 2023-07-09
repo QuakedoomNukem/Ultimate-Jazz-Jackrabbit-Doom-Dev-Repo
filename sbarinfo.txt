@@ -5,8 +5,8 @@ Resolution 320,200;
 //Jazz Jackrabbit 1 Inspired HUD
 statusbar normal
 {
-InInventory "HideHUD"
-{
+	InInventory "HideHUD"
+	{
 	//DrawInventoryBar Doom, noartibox, 0 , "JJ1HUD_FONT" ,0,0;
 	DrawImage "JJ1STBAR", 160, 180, center;
 
@@ -37,9 +37,7 @@ InInventory "HideHUD"
 
 	DrawMugshot 5,disableouch, 197, 162;
 
-<<<<<<< Updated upstream
 	DrawNumber 2, "JJ1HUD_FONT", Orange, TNT, drawshadow(2,2), Alignment(right), 291, 188;
-=======
 	drawselectedinventory alwaysshowcounter , drawshadow(2,2), "JJ1HUD_FONT", 262, 164;  //143, 152;	
 	
 	InInventory ShopToken, 1
@@ -47,9 +45,8 @@ InInventory "HideHUD"
 		DrawImage "SCONA0", 246, 150;
 		DrawNumber 4, "SmallFont", Grey, Coins, alignment(left), 262, 134;
 	}
->>>>>>> Stashed changes
-
-   }
+	
+	}
 }
 // AUTOMAP STATUS BAR
 statusbar automap {	DrawImage "TNT1A0", 160, 180, center; }
