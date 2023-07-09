@@ -267,4 +267,5 @@
 #include "actors/props/special.txt"
 
 //Unsorted
+#include "actors/shop.txt"
 #include "actors/others.txt"

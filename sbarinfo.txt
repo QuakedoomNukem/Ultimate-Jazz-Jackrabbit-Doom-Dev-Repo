@@ -37,7 +37,17 @@ InInventory "HideHUD"
 
 	DrawMugshot 5,disableouch, 197, 162;
 
+<<<<<<< Updated upstream
 	DrawNumber 2, "JJ1HUD_FONT", Orange, TNT, drawshadow(2,2), Alignment(right), 291, 188;
+=======
+	drawselectedinventory alwaysshowcounter , drawshadow(2,2), "JJ1HUD_FONT", 262, 164;  //143, 152;	
+	
+	InInventory ShopToken, 1
+	{
+		DrawImage "SCONA0", 246, 150;
+		DrawNumber 4, "SmallFont", Grey, Coins, alignment(left), 262, 134;
+	}
+>>>>>>> Stashed changes
 
    }
 }
@@ -47,8 +57,8 @@ statusbar automap {	DrawImage "TNT1A0", 160, 180, center; }
 // Jazz Jackrabbit 2 Inspired HUD
 statusbar fullscreen // Standard Doom Status bar
 {
-InInventory "HideHUD"
-{
+	InInventory "HideHUD"
+	{
 	drawimage "WEPSLOTF", 220, 160;
 	IsSelected "LFG2000"	  	{DrawImage "WEPICON1", 260, 180, Center;} //"PLSPA0"
 	IsSelected "SpreadGun"     	{DrawImage "WEPICON2", 260, 180, Center;}
@@ -82,6 +92,12 @@ InInventory "HideHUD"
 	DrawNumber 2, "JJ2_Font", Orange, TNT, drawshadow(2,2), Alignment(right), 452, 170;
 	DrawNumber 9, "SmallFont", Normal, Points, DrawShadow(2,2), Alignment(center), 420, -132, 1;
 	DrawString "SmallFont", Normal, "Score", 420, -150, 1, DrawShadow(2,2), Alignment(center);
+	
+	InInventory ShopToken, 1
+	{
+		DrawImage "SCONA0", 400, 150;
+		DrawNumber 4, "SmallFont", Grey, Coins, alignment(left), 416, 134;
+	}
 
 	}
 }
