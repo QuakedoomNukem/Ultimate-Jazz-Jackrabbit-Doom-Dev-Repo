@@ -37,7 +37,7 @@ InInventory "HideHUD"
 
 	DrawMugshot 5,disableouch, 197, 162;
 
-	drawselectedinventory alwaysshowcounter , drawshadow(2,2), "JJ1HUD_FONT", 262, 164;  //143, 152;
+	DrawNumber 2, "JJ1HUD_FONT", Orange, TNT, drawshadow(2,2), Alignment(right), 291, 188;
 
    }
 }
