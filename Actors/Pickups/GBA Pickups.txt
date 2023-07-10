@@ -1,4 +1,4 @@
-Actor GameBoyAdvance : Inventory 1337
+Actor GameBoyAdvance : Inventory
 {
 	//$Category JJ_Pickups
 	Inventory.PickupSound "SECTGEM"
@@ -16,7 +16,7 @@ Actor GameBoyAdvance : Inventory 1337
 	}
 }
 
-Actor GBAStim : Health 3726
+Actor GBAStim : Health
 {
 	//$Category JJ_Pickups
 	Inventory.Amount 10
@@ -32,7 +32,7 @@ Actor GBAStim : Health 3726
 	}
 }
 
-Actor GBAMedkit : Health 3725
+Actor GBAMedkit : Health
 {
 	//$Category JJ_Pickups
 	Inventory.Amount 50
@@ -49,13 +49,11 @@ Actor GBAMedkit : Health 3725
 	}
 }
 
-Actor MoneyBundle : StonarBonus  3729
+Actor MoneyBundle : StonarBonus //100 pts & 1 goodiearmor
 {
 	//$Category JJ_Pickups
 	Inventory.PickupSound "MONEY"
 	Inventory.PickupMessage "$PK_MONE1"
-	+BRIGHT
-	+COUNTITEM
 	States
 	{
 	Spawn:
@@ -64,7 +62,7 @@ Actor MoneyBundle : StonarBonus  3729
 	}
 }
 
-Actor MoneyBucket : CustomInventory 3728
+Actor MoneyBucket : CustomInventory
 {
 	//$Category JJ_Pickups
 	Inventory.PickupSound "MONEY"
@@ -88,7 +86,7 @@ Actor MoneyBucket : CustomInventory 3728
 	}
 }
 
-Actor GBARabbitBonus : CustomInventory 3727
+Actor GBARabbitBonus : CustomInventory
 {
 	//$Category JJ_Pickups
 	Inventory.PickupSound "RABBITOU"

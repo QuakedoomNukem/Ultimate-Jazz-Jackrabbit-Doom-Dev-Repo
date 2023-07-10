@@ -1,9 +1,6 @@
-Actor FoodHealth : HealthBonus
-{
--COUNTITEM
-}
+Actor FoodHealth : HealthBonus { -COUNTITEM }
 
-Actor FoodDrinkDrop : CustomInventory 3807
+Actor FoodDrinkDrop : CustomInventory
 {
 	//$Category JJ_Health&Armor
 	-COUNTITEM
@@ -187,7 +184,7 @@ Actor DrinkDrop : CustomInventory
 	}
 }
 
-Actor Carrot : Medikit 3803
+Actor Carrot : Medikit
 {
 	//$Category JJ_Health&Armor
 	Tag "Carrot"
@@ -209,7 +206,7 @@ Actor Carrot : Medikit 3803
 	}
 }
 
-Actor StandardArmor : GreenArmor 3806
+Actor StandardArmor : GreenArmor
 {
 	//$Category JJ_Health&Armor
 	Tag "Standard Armor"
@@ -220,13 +217,14 @@ Actor StandardArmor : GreenArmor 3806
 	Inventory.PickupSound "ARMOR"
 	Armor.SavePercent 50
 	Armor.SaveAmount 100
+	+BRIGHT
 	+FLOATBOB
 	+NOGRAVITY
 	FloatBobStrength 0.5
 	States
 	{
 	Spawn:
-		NARM A -1 BRIGHT
+		NARM A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
@@ -234,7 +232,7 @@ Actor StandardArmor : GreenArmor 3806
 	}
 }
 
-Actor SuperArmor : BlueArmor 3805
+Actor SuperArmor : BlueArmor
 {
 	//$Category JJ_Health&Armor
 	Tag "Super Armor"
@@ -245,13 +243,14 @@ Actor SuperArmor : BlueArmor 3805
 	Inventory.Icon "SARMA0"
 	Armor.SavePercent 50
 	Armor.SaveAmount 200
+	+BRIGHT
 	+FLOATBOB
 	+NOGRAVITY
 	FloatBobStrength 0.5
 	States
 	{
 	Spawn:
-		SARM A -1 BRIGHT
+		SARM A -1
 		Stop
 	Pickup:
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
@@ -259,7 +258,7 @@ Actor SuperArmor : BlueArmor 3805
 	}
 }
 
-Actor SuperCarrot : SoulSphere 3801
+Actor SuperCarrot : SoulSphere
 {
 	//$Category JJ_Health&Armor
 	Tag "Super Carrot"
@@ -267,6 +266,7 @@ Actor SuperCarrot : SoulSphere 3801
 	+INVENTORY.ALWAYSPICKUP
 	+INVENTORY.FANCYPICKUPSOUND
 	-COUNTITEM
+	+BRIGHT
 	+FLOATBOB
 	+NOGRAVITY
 	Inventory.Amount 50
@@ -277,7 +277,7 @@ Actor SuperCarrot : SoulSphere 3801
 	States
 	{
 	Spawn:
-		SUPC ABCDEFGHIJ 2 BRIGHT
+		SUPC ABCDEFGHIJ 2
 		Loop
 	Pickup:
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
@@ -286,13 +286,14 @@ Actor SuperCarrot : SoulSphere 3801
 	}
 }
 
-Actor FullRestore : MegaSphere 3802
+Actor FullRestore : MegaSphere
 {
 	//$Category JJ_Health&Armor
 	Tag "Full Restore"
-	+INVENTORY.ALWAYSPICKUP
 	-COUNTITEM
+	+BRIGHT
 	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
 	+NOGRAVITY
 	Inventory.PickupMessage "$PK_FURES"
 	Inventory.PickupSound "POWERUP"
@@ -300,8 +301,8 @@ Actor FullRestore : MegaSphere 3802
 	States
 	{
 	Spawn:
-		FULR A 1 BRIGHT //looping? - ozy81
-		Loop
+		FULR A -1
+		Stop
 	Pickup:
 		TNT1 A 0 A_GiveInventory("SuperArmor", 1)
 		TNT1 A 0 A_GiveInventory("MegasphereHealth", 1)

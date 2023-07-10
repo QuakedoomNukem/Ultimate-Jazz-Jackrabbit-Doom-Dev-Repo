@@ -1,4 +1,4 @@
-Actor RapidFire : CustomInventory  32538
+Actor RapidFire : CustomInventory
 {
 	//$Category JJ_PowerUps
 	Tag "Rapid Fire"
@@ -7,13 +7,14 @@ Actor RapidFire : CustomInventory  32538
 	Inventory.Amount 1
 	FloatBobStrength 0.5
 	-COUNTITEM
+	+BRIGHT
 	+FLOATBOB
 	+NOGRAVITY
 	+INVENTORY.ALWAYSPICKUP
 	States
 	{
 	Spawn:
-		PLSP ABCDEFGH 3 BRIGHT
+		PLSP ABCDEFGH 3
 		Loop
 	Pickup:
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
@@ -36,7 +37,7 @@ Actor RapidfireCount : Inventory
 	}
 }
 
-Actor JJHoverBoard : PowerupGiver 32002
+Actor JJHoverBoard : PowerupGiver
 {
 	//$Category JJ_PowerUps
 	Tag "Hoverboard"
@@ -64,7 +65,7 @@ Actor JJHoverBoard : PowerupGiver 32002
 	}
 }
 
-Actor JJInvul : CustomInventory 3136
+Actor JJInvul : CustomInventory
 {
 	//$Category JJ_PowerUps
 	Tag "Invulnerability"
@@ -74,12 +75,13 @@ Actor JJInvul : CustomInventory 3136
 	Alpha 0.9
 	FloatBobStrength 0.5
 	-COUNTITEM
+	+BRIGHT
 	+FLOATBOB
 	+NOGRAVITY
 	States
 	{
 	Spawn:
-		INVS ABCDCB 1 BRIGHT
+		INVS ABCDCB 1
 		Loop
 	Pickup:
 		TNT1 A 0
@@ -187,7 +189,7 @@ Actor JJFade : CustomInventory
 	}
 }
 
-Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
+Actor TurboTime : PowerupGiver  //HasteSphere by scalliano
 {
 	//$Category JJ_PowerUps
 	Game Doom
@@ -197,12 +199,13 @@ Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 	Powerup.Duration -30
 	Powerup.Color "FF FF 00", 0.1
 	Powerup.Type Speed
+	+BRIGHT
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
 	States
 	{
 	Spawn:
-		HAST ABCD 1 BRIGHT
+		HAST ABCD 1
 		Loop
 	Death:
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("JazzPoof",0,0,0,frandom(-8,8),frandom(-8,8),frandom(4,8))
@@ -210,7 +213,7 @@ Actor TurboTime : PowerupGiver 3924  //HasteSphere by scalliano
 	}
 }
 
-Actor TurboTimeBox 3925
+Actor TurboTimeBox
 {
 	//$Category JJ_PowerUps
 	Height 30
@@ -222,13 +225,14 @@ Actor TurboTimeBox 3925
 	DamageFactor "JazzProj", 1
 	DamageFactor "JazzProjFire", 1
 	DamageFactor "JazzProjIce", 1
+	+BRIGHT
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
 	States
 	{
 	Spawn:
-		HAST ABCD 1 BRIGHT
+		HAST ABCD 1
 		Loop
 	Death:
 		TNT1 A 0 A_PlaySound("WEAPNGET")

@@ -1,4 +1,4 @@
-Actor ApplePickup : CustomInventory 3906
+Actor ApplePickup : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_APPLE"
@@ -24,6 +24,7 @@ Actor ArtifactBase : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupSound "misc/i_pkup"
+	+BRIGHT
 	+COUNTITEM
 	+FLOATBOB
 	+NOGRAVITY
@@ -37,64 +38,64 @@ Actor ArtifactBase : CustomInventory
 	}
 }
 
-Actor Artifact1 : ArtifactBase 3853
+Actor Artifact1 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF1"
 	States
 	{
 	Spawn:
-		ARTI DEF 3 BRIGHT
+		ARTI DEF 3
 		Loop
 	}
 }
 
-Actor Artifact2 : ArtifactBase 3854
+Actor Artifact2 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF2"
 	States
 	{
 	Spawn:
-		ARTI A -1 BRIGHT
+		ARTI A -1
 		Stop
 	}
 }
 
-Actor Artifact3 : ArtifactBase 3855
+Actor Artifact3 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF3"
 	Scale 0.50
 	States
 	{
 	Spawn:
-		ARTI B -1 BRIGHT
+		ARTI B -1
 		Stop
 	}
 }
 
-Actor Artifact4 : ArtifactBase 3856
+Actor Artifact4 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF4"
 	States
 	{
 	Spawn:
-		ARTI C -1 BRIGHT
+		ARTI C -1
 		Stop
 	}
 }
 
-Actor Artifact5 : ArtifactBase 3857
+Actor Artifact5 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF5"
 	Scale 2.0
 	States
 	{
 	Spawn:
-		ARTI G -1 BRIGHT
+		ARTI G -1
 		Stop
 	}
 }
 
-Actor CliffyB : CustomInventory  32123
+Actor CliffyB : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_CLIFF"
@@ -128,14 +129,39 @@ Actor CliffyB : CustomInventory  32123
 	}
 }
 
-Actor ElementAirGem : CustomInventory 4057
+Actor ElementGemBase : CustomInventory
 {
 	//$Category JJ_EasterEggs
-	Inventory.PickupMessage "$PK_ELAIR"
     Inventory.PickupSound "GEMPCKUP"
     -COUNTITEM
 	+FLOATBOB
 	+NOGRAVITY
+}
+
+Actor ElementCountBase : Inventory
+{
+	Inventory.PickupSound ""
+	Inventory.PickupMessage ""
+	Inventory.MaxAmount 1
+	Inventory.InterHubAmount 1
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	}
+}
+
+Actor ElementAirCount : ElementCountBase { }
+Actor ElementDarkCount : ElementCountBase { }
+Actor ElementEarthCount : ElementCountBase { }
+Actor ElementFireCount : ElementCountBase { }
+Actor ElementWaterCount : ElementCountBase { }
+Actor ElementopolisBeaten : ElementCountBase { }
+
+Actor ElementAirGem : ElementGemBase
+{
+	Inventory.PickupMessage "$PK_ELAIR"
 	States
 	{
 	Spawn:
@@ -150,28 +176,9 @@ Actor ElementAirGem : CustomInventory 4057
 	}
 }
 
-Actor ElementAirCount : Inventory
+Actor ElementFireGem : ElementGemBase
 {
-	Inventory.PickupSound ""
-	Inventory.PickupMessage ""
-	Inventory.MaxAmount 1
-	Inventory.InterHubAmount 1
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}
-
-Actor ElementFireGem : CustomInventory 4058
-{
-	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELFIR"
-    Inventory.PickupSound "GEMPCKUP"
-	-COUNTITEM
-	+FLOATBOB
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -186,28 +193,9 @@ Actor ElementFireGem : CustomInventory 4058
 	}
 }
 
-Actor ElementFireCount : Inventory
+Actor ElementWaterGem : ElementGemBase
 {
-	Inventory.PickupSound ""
-	Inventory.PickupMessage ""
-	Inventory.MaxAmount 1
-	Inventory.InterHubAmount 1
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}
-
-Actor ElementWaterGem : CustomInventory 4059
-{
-	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELWAT"
-    Inventory.PickupSound "GEMPCKUP"
-	-COUNTITEM
-	+FLOATBOB
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -222,28 +210,9 @@ Actor ElementWaterGem : CustomInventory 4059
 	}
 }
 
-Actor ElementWaterCount : Inventory
+Actor ElementEarthGem : ElementGemBase
 {
-	Inventory.PickupSound ""
-	Inventory.PickupMessage ""
-	Inventory.MaxAmount 1
-	Inventory.InterHubAmount 1
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}
-
-Actor ElementEarthGem : CustomInventory 4060
-{
-	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELEAR"
-    Inventory.PickupSound "GEMPCKUP"
-	-COUNTITEM
-	+FLOATBOB
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -258,28 +227,9 @@ Actor ElementEarthGem : CustomInventory 4060
 	}
 }
 
-Actor ElementEarthCount : Inventory
+Actor ElementLightGem : ElementGemBase
 {
-	Inventory.PickupSound ""
-	Inventory.PickupMessage ""
-	Inventory.MaxAmount 1
-	Inventory.InterHubAmount 1
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}
-
-Actor ElementLightGem : CustomInventory 4061
-{
-	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELLIT"
-    Inventory.PickupSound "GEMPCKUP"
-	-COUNTITEM
-	+FLOATBOB
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -294,28 +244,10 @@ Actor ElementLightGem : CustomInventory 4061
 	}
 }
 
-Actor ElementopolisBeaten : Inventory
-{
-	Inventory.PickupSound ""
-	Inventory.PickupMessage ""
-	Inventory.MaxAmount 1
-	Inventory.InterHubAmount 1
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}
 
-Actor ElementDarkGem : CustomInventory 4062
+Actor ElementDarkGem : ElementGemBase
 {
-	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_ELDAR"
-    Inventory.PickupSound "GEMPCKUP"
-	-COUNTITEM
-	+FLOATBOB
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -330,35 +262,22 @@ Actor ElementDarkGem : CustomInventory 4062
 	}
 }
 
-Actor ElementDarkCount : Inventory
-{
-	Inventory.PickupSound ""
-	Inventory.PickupMessage ""
-	Inventory.MaxAmount 1
-	Inventory.InterHubAmount 1
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}
-
-Actor OldTwinkie : CustomInventory 4115
+Actor OldTwinkie : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_TWINK"
 	Inventory.PickupSound "SMOKRING"
 	-COUNTITEM
-	+NOGRAVITY
+	+BRIGHT
 	+FLOATBOB
+	+NOGRAVITY
 	FloatBobStrength 0.5
 	States
 	{
 	Spawn:
-		OLDT A -1 BRIGHT
+		OLDT A -1
 		Stop
-		Pickup:
+	Pickup:
 		TNT1 A 0 A_GiveInventory("CaterpillarCount", 300)
 		TNT1 A 0 ACS_NamedExecute("CaterpillarSmoke",0)
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
@@ -366,7 +285,7 @@ Actor OldTwinkie : CustomInventory 4115
 	}
 }
 
-Actor RedFlag : CustomInventory 3717
+Actor RedFlag : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Height 64
@@ -385,7 +304,7 @@ Actor RedFlag : CustomInventory 3717
 	}
 }
 
-Actor SecretGem : Inventory 3229
+Actor SecretGem : Inventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_SCGEM"
@@ -403,7 +322,7 @@ Actor SecretGem : Inventory 3229
 	}
 }
 
-Actor SODPickup : CustomInventory  4053
+Actor SODPickup : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupMessage "$PK_SODPK"

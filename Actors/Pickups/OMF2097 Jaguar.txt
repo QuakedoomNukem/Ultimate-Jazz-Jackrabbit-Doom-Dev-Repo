@@ -1,4 +1,4 @@
-Actor JaguarRobot : PowerupGiver 3713
+Actor JaguarRobot : PowerupGiver
 {
 	//$Category JJ_OMF97
 	Tag "Jaguar H.A.R. Power-up"
@@ -40,19 +40,19 @@ Actor OMFRobotMorph
 Actor OMFJaguarPlayer : PlayerPawn
 {
 	Tag "Jaguar H.A.R."
-	+NOSKIN
-	+NOBLOOD
 	Speed 1
 	Health 250
 	Radius 32
 	Height 192
 	Mass 100
 	PainChance 180
+	Scale 2.5
+	+NOBLOOD
+	+NOSKIN
 	Player.ViewHeight 160
 	Player.MorphWeapon "OMFFist"
 	Player.DisplayName "OMFJaguarPlayer"
 	Player.JumpZ 20
-	Scale 2.5
 	States
 	{
 	Spawn:
@@ -70,14 +70,14 @@ Actor OMFJaguarPlayer : PlayerPawn
 		OMFJ F 8 A_Punch
 		Goto See
 	Death:
-		OMFJ G 0 A_StopSound
+		OMFJ G 0 A_StopSound //which one? - ozy81
 		OMFJ G 0 A_Scream
 		OMFJ G 2 ThrustThingZ(0, random(2, 8), 0, 0)
 		OMFJ G 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
 		OMFJ G 2 A_NoBlocking
 		OMFJ G 2
 		OMFJ G 0
-		OMFJ G 0 A_StopSoundEx("JetpackZombie/Fly")
+		OMFJ G 0 A_StopSoundEx("JetpackZombie/Fly") //but it didn't ever start - ozy81
 		OMFJ G 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
 		OMFJ G 2
 		OMFJ G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
@@ -86,8 +86,8 @@ Actor OMFJaguarPlayer : PlayerPawn
 		OMFJ G 2
 		OMFJ G 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
 		OMFJ AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-		OMFJ HIJ 8 A_PlaySound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
-		TNT1 AAAAAAAAAAA 0 A_PlaySound("youlose",CHAN_VOICE,1.0,False,ATTN_NORM)
+		OMFJ HIJ 8 A_StartSound("YOULOSE", CHAN_VOICE, CHANF_DEFAULT, 1.0, ATTN_NORM)
+		TNT1 AAAAAAAAAAA 0 A_StartSound("YOULOSE", CHAN_VOICE, CHANF_DEFAULT, 1.0, ATTN_NORM)
 		OMFJ K -1
 		Stop
 	}
@@ -98,10 +98,9 @@ Actor OMFFist : Weapon
 	Tag "Jaguar's Fists"
 	Weapon.SelectionOrder 3700
 	Weapon.Kickback 500
-	Obituary "$OB_WEPF"
-	Tag "OMFFIST"
-	+WEAPON.MELEEWEAPON
 	+WEAPON.DONTBOB
+	+WEAPON.MELEEWEAPON
+	Obituary "$OB_WEPF"
 	States
 	{
 	Ready:
