@@ -1,14 +1,35 @@
-//Specific map actors, replacements and workarounds
+/*
+ * Copyright (c) 2019-2023 BassSlapper89, QuakeDoomNukem, RichardDS90, Ozymandias81
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
 
+//Specific map actors, replacements and workarounds
 Actor FireDeadSpawner
 {
+	Scale 1
+	Speed 0
+	RenderStyle Normal
 	+NOCLIP
 	+MISSILE
 	+DROPOFF
 	+RANDOMIZE
-	Scale 1
-	Speed 0
-	RenderStyle Normal
 	States
 	{
 	Spawn:
@@ -28,13 +49,13 @@ Actor FireDeadSpawner
 
 Actor FireDead
 {
+	Speed 0
+	RenderStyle Normal
 	+BRIGHT
 	+NOCLIP
 	+MISSILE
 	+DROPOFF
 	+RANDOMIZE
-	Speed 0
-	RenderStyle Normal
 	States
 	{
 	Spawn:
@@ -45,7 +66,7 @@ Actor FireDead
 
 Actor FireDeadLite : FireDead
 {
-States
+	States
 	{
 	Spawn:
 		FRTF ABCDEFGH 3
@@ -57,8 +78,8 @@ Actor AshHolm
 {
 	Radius 16
 	Height 24
-	-SOLID
 	Scale 0.75
+	-SOLID
 	States
 	{
 	Spawn:
@@ -69,12 +90,12 @@ Actor AshHolm
 
 Actor JazzPoof
 {
-	-NOGRAVITY
 	Scale 1.5
 	Height 3
 	Radius 3
-	renderstyle Translucent
-	alpha 1.0
+	RenderStyle Translucent
+	Alpha 1.0
+	-NOGRAVITY
 	States
 	{
 	Spawn:
@@ -102,7 +123,7 @@ Actor JetpackZombieExplosion
 	{
 	Spawn:
 		SEKE A 3
-		SEKE B 3 A_PlaySound("SEEKXPLD")
+		SEKE B 3 A_StartSound("SEEKXPLD")
 		SEKE CDEFGHIJKL 3
 		Stop
 	}
@@ -110,7 +131,7 @@ Actor JetpackZombieExplosion
 
 Actor JJWaterSplash : WaterSplashBase
 {
-	Renderstyle Translucent
+	RenderStyle Translucent
 	Alpha 0.25
 	States
 	{
@@ -122,8 +143,8 @@ Actor JJWaterSplash : WaterSplashBase
 
 Actor ItemSparkle
 {
+	RenderStyle Normal
 	+NOGRAVITY
-	Renderstyle Normal
 	States
 	{
 	Spawn:
@@ -134,7 +155,7 @@ Actor ItemSparkle
 
 Actor ItemSparklePower
 {
-	Renderstyle Normal
+	RenderStyle Normal
 	States
 	{
 	Spawn:
@@ -145,12 +166,12 @@ Actor ItemSparklePower
 
 Actor JJLavaSplash
 {
+	RenderStyle Normal
+	+DONTBLAST
+	+DONTSPLASH
 	+NOBLOCKMAP
 	+NOCLIP
 	+NOGRAVITY
-	+DONTSPLASH
-	+DONTBLAST
-	Renderstyle Normal
 	States
 	{
 	Spawn:

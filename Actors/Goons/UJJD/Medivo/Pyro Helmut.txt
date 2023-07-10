@@ -1,3 +1,25 @@
+/*
+ * Copyright (c) 2019-2023 BassSlapper89, QuakeDoomNukem, RichardDS90, Ozymandias81
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
+
 Actor BossHelmut 30026
 {
   Tag "Pyro Helmut"
@@ -66,7 +88,7 @@ SeeSound "BIGTURTS"
     PYRO A 4 BRIGHT
     Goto See
 	PYRO A 1 A_FaceTarget
-    PYRO C 0 A_PlaySound("COMETXPL")
+    PYRO C 0 A_StartSound("COMETXPL")
     PYRO C 0 A_Mushroom ("Pyroball",16)
     PYRO E 3
     PYRO F 3 BRIGHT
@@ -95,7 +117,7 @@ SeeSound "BIGTURTS"
     PYRO F 1 A_SetTranslucent(0.80)
     PYRO E 1 A_SetTranslucent(0.90)
     PYRO F 1 A_SetTranslucent(1.0)
-    PYRO A 0 A_PlaySound("COMETXPL")
+    PYRO A 0 A_StartSound("COMETXPL")
     PYRO O 0 A_Mushroom ("Pyroball",16)
     PYRO A 0 A_SetShootable
     Goto See
@@ -199,7 +221,7 @@ Actor FirebombExplosion1
      Loop
   Death:
      RFLE A 0
-     RFLE A 0 A_PlaySound("COMETXPL")
+     RFLE A 0 A_StartSound("COMETXPL")
      RFLE B 3 BRIGHT A_Explode(128, 144)
      RFLE C 1 BRIGHT A_Mushroom("Pyroball",8)
      RFLE C 2 BRIGHT A_CustomMissile("FirebombExplosion2",25,0,180)
@@ -214,7 +236,7 @@ Actor FirebombExplosion2 : FirebombExplosion1
   {
   Death:
     RFLE A 0
-    RFLE A 0 A_PlaySound("COMETXPL")
+    RFLE A 0 A_StartSound("COMETXPL")
     RFLE B 3 BRIGHT A_Explode(128, 136)
     RFLE C 1 BRIGHT
     RFLE C 2 BRIGHT A_CustomMissile("FirebombExplosion3",20,0,180)
@@ -231,7 +253,7 @@ Actor FirebombExplosion3 : FirebombExplosion1
   {
   Death:
     RFLE A 0
-    RFLE A 0 A_PlaySound("COMETXPL")
+    RFLE A 0 A_StartSound("COMETXPL")
     RFLE B 3 BRIGHT A_Explode(128, 128)
     RFLE CDEFGHIJK 2 BRIGHT
     Stop

@@ -1,3 +1,25 @@
+/*
+ * Copyright (c) 2019-2023 BassSlapper89, QuakeDoomNukem, RichardDS90, Ozymandias81
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
+
 Actor JJAPinkTurtle 4045
 {
 	//$Category JJ_Goons
@@ -28,13 +50,13 @@ Actor JJAPinkTurtle 4045
 		Loop
 	Missile:
 		JAPT EEEEE 2 A_FaceTarget
-		JAPT E 0 A_PlaySound("saurgun", CHAN_WEAPON)
+		JAPT E 0 A_StartSound("SAURGUN", CHAN_WEAPON)
 		JAPT F 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		JAPT E 2 A_FaceTarget
-		//SAUR E 0 A_PlaySound("saurgun", CHAN_WEAPON)
+		//SAUR E 0 A_StartSound("SAURGUN", CHAN_WEAPON)
 		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		JAPT E 2 A_FaceTarget
-		//SAUR E 0 A_PlaySound("saurgun", CHAN_WEAPON)
+		//SAUR E 0 A_StartSound("SAURGUN", CHAN_WEAPON)
 		JAPT G 2 BRIGHT A_CustomBulletAttack(8, 8, 1, 5, "JazzFirePuff")
 		JAPT E 2 A_FaceTarget
 		JAPT E 0 A_SentinelRefire
@@ -54,7 +76,7 @@ Actor JJAPinkTurtle 4045
 	Burn:
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",250)
-		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		TNT1 A 0 A_StartSound("FMTRFIRE")
 		JAPT H 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -97,7 +119,7 @@ Actor JJABlueTurtle 4046
 		Loop
 	Missile:
 		JABT EEEEE 2 A_FaceTarget
-		JABT E 0 A_PlaySound("FMTRFIRE", CHAN_WEAPON)
+		JABT E 0 A_StartSound("FMTRFIRE", CHAN_WEAPON)
 		JABT F 2 BRIGHT A_CustomMissile("FTFire",32,0,0,0,0)
 		JABT E 2 A_FaceTarget
 		JABT F 2 BRIGHT A_CustomMissile("FTFire")
@@ -125,7 +147,7 @@ Actor JJABlueTurtle 4046
 	Burn:
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",350)
-		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		TNT1 A 0 A_StartSound("FMTRFIRE")
 		JABT H 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
@@ -168,7 +190,7 @@ Actor JJAOrangeTurtle 4047
 		Loop
 	Missile:
 		JAOT E 15 A_FaceTarget
-		JAOT E 0 A_PlaySound("RFLAUNCH")
+		JAOT E 0 A_StartSound("RFLAUNCH")
 		JAOT F 5 BRIGHT A_CustomMissile("JJAOTurtleRocket",32,0,0,0,0)
 		JAOT E 5
 		Goto See
@@ -187,7 +209,7 @@ Actor JJAOrangeTurtle 4047
 	Burn:
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_GiveToTarget("Points",500)
-		TNT1 A 0 A_PlaySound("FMTRFIRE")
+		TNT1 A 0 A_StartSound("FMTRFIRE")
 		JAOT H 2 A_SpawnItemEx("FireDeadSpawner",0,0,0,0,0,0,0,128)
 		TNT1 A 2 A_SpawnItemEx("FireDead",0,0,0,0,0,0,0,128)
 		TNT1 A 0 A_SpawnItemEx("AshHolm",0,0,0,0,0,0,0,128)
