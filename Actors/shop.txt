@@ -23,13 +23,34 @@
 //Shop Mechanics Test
 Actor ShopToken : Inventory { Inventory.MaxAmount 1 }
 
-Actor SilverCoin : CustomInventory 30000
+Actor BronzeCoin : CustomInventory 30000
 {
 	-COUNTITEM
 	+NOGRAVITY
 	+INVENTORY.ALWAYSPICKUP
 	Inventory.PickupSound "MONEY"
-	Inventory.PickupMessage "\ccA silver coin (+1 Coin)"
+	Inventory.PickupMessage "\ceA bronze coin (+1 Coin)"
+	Inventory.MaxAmount 0
+	Scale 0.8
+	States
+	{
+	Spawn:
+		BCON ABCDEFGHIJKLMNOPQRST 1
+		Loop
+	Pickup:
+		TNT1 A 0 a_giveinventory("Coins",1) 	    
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
+	}
+}
+
+Actor SilverCoin : CustomInventory 30001
+{
+	-COUNTITEM
+	+NOGRAVITY
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "MONEY"
+	Inventory.PickupMessage "\ccA silver coin (+5 Coins)"
 	Inventory.MaxAmount 0
 	Scale 0.8
 	States
@@ -38,11 +59,54 @@ Actor SilverCoin : CustomInventory 30000
 		SCON ABCDEFGHIJKLMNOPQRST 1
 		Loop
 	Pickup:
-		TNT1 A 0 a_giveinventory("Coins",1) 	    
+		TNT1 A 0 a_giveinventory("Coins",5) 	    
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 		Stop
 	}
 }
+
+Actor GoldCoin : CustomInventory 30002
+{
+	-COUNTITEM
+	+NOGRAVITY
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "MONEY"
+	Inventory.PickupMessage "\cfA gold coin (+10 Coins)"
+	Inventory.MaxAmount 0
+	Scale 0.8
+	States
+	{
+	Spawn:
+		GCON ABCDEFGHIJKLMNOPQRST 1
+		Loop
+	Pickup:
+		TNT1 A 0 a_giveinventory("Coins",10) 	    
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
+	}
+}
+
+Actor DiamondCoin : CustomInventory 30003
+{
+	-COUNTITEM
+	+NOGRAVITY
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "MONEY"
+	Inventory.PickupMessage "\cvA diamond coin (+20 Coins)"
+	Inventory.MaxAmount 0
+	Scale 0.8
+	States
+	{
+	Spawn:
+		DCON ABCDEFGHIJKLMNOPQRST 1
+		Loop
+	Pickup:
+		TNT1 A 0 a_giveinventory("Coins",20) 	    
+		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
+		Stop
+	}
+}
+
 
 Actor Coins : Inventory 
 {
