@@ -244,6 +244,7 @@ Actor Gun1PowerUpBox
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:

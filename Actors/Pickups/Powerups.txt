@@ -251,6 +251,7 @@ Actor TurboTimeBox
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:

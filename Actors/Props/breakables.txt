@@ -20,17 +20,18 @@
  * SOFTWARE.
 **/
 
-Actor CeraPot 3399
+Actor CeraPot
 {
+	//$Category JJ_Breakables
 	Height 24
 	Radius 12
 	Health 2
-	+SOLID
-	+SHOOTABLE
-	+NOBLOOD
-	+FLOORCLIP
 	+DONTTHRUST
+	+FLOORCLIP
+	+NOBLOOD
+	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -50,21 +51,20 @@ Actor CeraPot 3399
 	}
 }
 
-Actor GlassSpawner 4125
+Actor GlassSpawner
 {
+	//$Category JJ_Breakables
 	Height 32
 	Radius 32
-	Speed 0
 	Health 1
-	-COUNTKILL //why this?
-	+NOGRAVITY
+	+INVISIBLE
 	+NOBLOOD
-	+NOINFIGHTING
+	+NOGRAVITY
 	+SHOOTABLE
 	States
 	{
 	Spawn:
-		PLEX A 4
+		BGLS A 4
 		Loop
 	Death:
 		TNT1 A 0 A_StartSound("JJGLASS")
@@ -98,7 +98,9 @@ Actor GlassPiece
 	+RANDOMIZE
 	+ROLLCENTER
 	+ROLLSPRITE
+	+THRUSPECIES
 	+TOUCHY
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -128,15 +130,16 @@ Actor GlassPiece
 	}
 }
 
-Actor MetalCrate 3931
+Actor MetalCrate
 {
-	Health 1
+	//$Category JJ_Breakables
 	Height 32
 	Radius 12
 	Health 1
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -149,8 +152,9 @@ Actor MetalCrate 3931
 	}
 }
 
-Actor RStink 16109
+Actor RStink
 {
+	//$Category JJ_Breakables
 	Radius 12
 	Height 24
 	Health 2
@@ -159,6 +163,7 @@ Actor RStink 16109
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -171,12 +176,13 @@ Actor RStink 16109
 	}
 }
 
-Actor Santa : RStink 3617
+Actor Santa : RStink
 {
 	Radius 32
 	Height 48
-	Health 2
 	Mass 10000
+	-FLOORCLIP
+	Species "Breakable"
 	States
 	{
 	Spawn:

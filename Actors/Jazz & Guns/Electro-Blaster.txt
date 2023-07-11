@@ -202,7 +202,6 @@ Actor JJCell : Ammo
 
 Actor Gun0PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

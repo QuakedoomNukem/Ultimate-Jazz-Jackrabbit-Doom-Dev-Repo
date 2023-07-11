@@ -260,7 +260,6 @@ Actor JJShell : Ammo
 
 Actor Gun2PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

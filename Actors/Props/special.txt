@@ -24,15 +24,16 @@ Actor Caterpillar 3764
 {
 	Radius 56
 	Height 118
-	+SHOOTABLE
-	+INVULNERABLE
-	+ALLOWPAIN
-	+SOLID
-	+NOINFIGHTING
-	+NOBLOOD
 	Mass 100000
 	Speed 0
 	PainChance 256
+	+ALLOWPAIN
+	+INVULNERABLE
+	+NOBLOOD
+	+NOINFIGHTING
+	+SHOOTABLE
+	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -72,19 +73,16 @@ Actor CaterpillarSmoke : CustomInventory 3765
 {
 	Radius 16
 	Height 16
-	//Speed 1
-	//Damage 0
-	//Projectile
 	Gravity 0.25
 	Renderstyle Translucent
-	+RANDOMIZE
-	+NOTIMEFREEZE
-	+SEEKERMISSILE
-	+AlwaysPickup
+	Alpha 0.8
+	+ALWAYSPICKUP
 	+GRENADETRAIL
+	+NOTIMEFREEZE
+	+RANDOMIZE
+	+SEEKERMISSILE
 	Inventory.PickupMessage "$PK_SMOKE" 
 	Inventory.PickupSound ""
-	Alpha 0.8
 	DeathSound "" //needs one
 	States
 	{
@@ -197,11 +195,12 @@ Actor CheckSign 22022
 	DamageFactor "JazzProj", 1
 	DamageFactor "JazzProjFire", 1
 	DamageFactor "JazzProjIce", 1
-	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
-	+SHOOTABLE
 	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -254,7 +253,6 @@ Actor FountainWater 4066  //Credit to Captain Toenail
 		Loop
 	}
 }
-
 
 Actor JungrockPad : CustomInventory 3904
 {
@@ -311,11 +309,12 @@ Actor RabbitStinkSign2 3947
 	DamageFactor "JazzProj", 1
 	DamageFactor "JazzProjFire", 1
 	DamageFactor "JazzProjIce", 1
-	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
-	+SHOOTABLE
 	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -356,11 +355,12 @@ Actor SecretSign 28022
 	DamageFactor "JazzProj", 1
 	DamageFactor "JazzProjFire", 1
 	DamageFactor "JazzProjIce", 1
-	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
-	+SHOOTABLE
 	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:
@@ -373,7 +373,6 @@ Actor SecretSign 28022
 	}
 }
 
-
 Actor TubeRemixFan64 : CustomInventory 3972
 {
 	Radius 32
@@ -383,7 +382,7 @@ Actor TubeRemixFan64 : CustomInventory 3972
 	+INVENTORY.AUTOACTIVATE
 	+NOTARGET
 	Inventory.PickupMessage ""
-	Inventory.amount 0
+	Inventory.Amount 0
 	Inventory.MaxAmount 0
 	States
 	{
@@ -425,7 +424,7 @@ Actor TubeRemixFan96 : CustomInventory 3979
 	+INVENTORY.AUTOACTIVATE
 	+NOTARGET
 	Inventory.PickupMessage ""
-	Inventory.amount 0
+	Inventory.Amount 0
 	Inventory.MaxAmount 0
 	States
 	{
@@ -470,11 +469,12 @@ Actor XmasBlockGuy 4081
 	DamageFactor "JazzProj", 1
 	DamageFactor "JazzProjFire", 1
 	DamageFactor "JazzProjIce", 1
-	+SOLID
 	+DONTTHRUST
 	+FLOORCLIP
-	+SHOOTABLE
 	+NOBLOOD
+	+SHOOTABLE
+	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:

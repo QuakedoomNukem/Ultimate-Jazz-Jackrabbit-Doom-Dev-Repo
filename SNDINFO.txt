@@ -410,6 +410,12 @@ $rolloff Ambient/Rain 250 1250
 $pitchshift Ambient/Rain 0
 $limit Ambient/Rain 2
 
+//FIRE - from BoA
+FIRELOOP	FIRELOOP
+$limit FIRELOOP		2
+$rolloff FIRELOOP 160 640
+$volume FIRELOOP 0.4
+
 //Added Sounds
 ARMATTK		ARMATTK
 CDGNSEE		CDGNSEE //this was also used by an undefined sound CTHUPAIN as double

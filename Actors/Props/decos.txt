@@ -1283,7 +1283,6 @@ Actor DevanProp 3899
 	Radius 16
 	Mass 10000
 	+SOLID
-	-SHOOTABLE
 	States
 	{
 	Spawn:
@@ -2287,8 +2286,8 @@ Actor HangingWire1 3986  //NonSOLIDMeat5 Replaces NonSOLIDMeat5 62
 {
 	Height 92
 	Radius 8
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -2528,9 +2527,9 @@ Actor HellStag2 3286
 {
 	Height 120
 	Radius 56
+	+NOGRAVITY
 	+SOLID
 	+SPAWNCEILING
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -2567,9 +2566,9 @@ Actor Helltree 3983 //33
 
 Actor HHPrize1 3364
 {
-	+NOGRAVITY
 	Height 16
 	Radius 16
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -3029,9 +3028,9 @@ Actor JungBambooCeiling1 3448
 {
 	Height 78
 	Radius 4
+	+NOGRAVITY
 	+SOLID
 	+SPAWNCEILING
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -3251,8 +3250,8 @@ Actor JungleWallLantern 3191
 {
 	Height 12
 	Radius 4
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -3472,8 +3471,8 @@ Actor LagunCeilingStump 3879
 {
 	Height 28
 	Radius 10
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	+SPAWNCEILING
 	States
 	{
@@ -3675,9 +3674,9 @@ Actor MarbleraCeilPillar1 3993 //HangTLookingDown Replaces HangTLookingDown 75
 {
 	Height 50
 	Radius 8
-	+SPAWNCEILING
 	+NOGRAVITY
 	+SOLID
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -3933,8 +3932,8 @@ Actor MedivoRemixRockCeil1 4030
 {
 	Height 88
 	Radius 10
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	+SPAWNCEILING
 	States
 	{
@@ -4017,8 +4016,8 @@ Actor Mermaid 3870
 {
 	Height 32
 	Radius 18
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -4059,8 +4058,8 @@ Actor MuckBridge 3794
 {
 	Height 8
 	Radius 8
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -4087,8 +4086,8 @@ Actor MuckGunk1 3464
 	Height 20
 	Radius 18
 	-SOLID
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -4220,9 +4219,9 @@ Actor NSpikeThree 32537
 {
 	Radius 16
 	Height 17
-	+SPAWNCEILING
-	+NOGRAVITY
 	-SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -4274,8 +4273,8 @@ Actor OrbitCurl1 3171
 {
 	Height 72
 	Radius 10
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -4298,8 +4297,8 @@ Actor OrbitLight 3167
 {
 	Height 64
 	Radius 8
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -4312,8 +4311,8 @@ Actor OrbitPillar 3166
 {
 	Height 104
 	Radius 10
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -4377,8 +4376,8 @@ Actor PezSpikeFloor 3466
 Actor PezSpikeCeiling : PezSpikeFloor 3467
 {
 	Height 30
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -4526,9 +4525,9 @@ Actor PrisonRabbitGreen 3263
 {
 	Radius 10
 	Height 50
+	+NOGRAVITY
 	+SOLID
 	+SPAWNCEILING
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -4641,8 +4640,8 @@ Actor PsychPlant 3457
 {
 	Height 32
 	Radius 16
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -4726,8 +4725,8 @@ Actor Pumpkin 3159
 {
 	Height 20
 	Radius 12
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -4897,9 +4896,9 @@ Actor ScrapPipe1 3476
 {
 	Height 58
 	Radius 8
+	+NOGRAVITY
 	+SOLID
 	+SPAWNCEILING
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -5219,9 +5218,9 @@ Actor SlugChain512 3751
 {
 	Height 512
 	Radius 8
+	+NOGRAVITY
 	+SOLID
 	+SPAWNCEILING
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -5230,7 +5229,7 @@ Actor SlugChain512 3751
 	}
 }
 
-Actor slugspike 3488
+Actor SlugSpike 3488
 {
 	Height 64
 	Radius 16
@@ -5632,8 +5631,8 @@ Actor StumpFour 18951
 {
 	Radius 8
 	Height 16
-	+NOBLOCKMAP
 	+MOVEWITHSECTOR
+	+NOBLOCKMAP
 	+SOLID
 	States
 	{
@@ -5777,8 +5776,8 @@ Actor TeleportPodTop 29546
 {
 	Radius 10
 	Height 14
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:

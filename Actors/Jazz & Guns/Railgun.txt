@@ -280,7 +280,6 @@ Actor RailAmmo : Ammo
 
 Actor Gun9PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

@@ -32,6 +32,7 @@ Actor BigRedGem
 	+NOGRAVITY
 	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Spawn:

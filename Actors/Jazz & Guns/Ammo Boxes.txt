@@ -29,6 +29,7 @@ Actor BaseBox
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
+	Species "Breakable"
 	States
 	{
 	Death:
@@ -184,6 +185,8 @@ Actor BoxFrag1
 	-NOGRAVITY
 	+NOBLOOD
 	+RANDOMIZE
+	+THRUSPECIES
+	Species "Breakable"
 	States
 	{
 	Spawn:

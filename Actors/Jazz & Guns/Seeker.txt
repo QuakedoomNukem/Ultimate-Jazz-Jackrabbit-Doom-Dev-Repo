@@ -338,7 +338,6 @@ Actor MissileTrail
 
 Actor Gun5PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

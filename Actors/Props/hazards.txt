@@ -28,16 +28,16 @@ Actor BattleshipsMine 3891
 	Mass 10000
 	Speed 0
 	Health 50
-	Obituary "$OB_BMINE"
-	+NOBLOOD
-	+NOINFIGHTING
-	+RIPPER
-	+FLOATBOB
-	+NOGRAVITY
-	+SOLID
+	MONSTER
 	-COUNTKILL
 	+DONTHARMSPECIES
-	MONSTER
+	+FLOATBOB
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	+RIPPER
+	+SOLID
+	Obituary "$OB_BMINE"
 	States
 	{
 	Spawn:
@@ -65,11 +65,11 @@ Actor BattleshipsMinePiece
 	Speed 25
 	FastSpeed 50
 	Gravity 0.25
+	RenderStyle Add
 	Projectile
 	-NOGRAVITY
 	+NOBLOOD
 	+RANDOMIZE
-	RenderStyle Add
 	States
 	{
 	Spawn:
@@ -128,382 +128,354 @@ Actor CrysilisBoomFX
 	}
 }
 
-Actor FirebombSpawner 3329
+Actor FireBombSpawner 3329
 {
-Height 0
-Radius 0
-Scale 0.10
--SHOOTABLE
--NOINFIGHTING
--lookallaround
--FLOORCLIP
-Obituary "$OB_FBOMB"
-  States
-  {
-  Spawn:
-    TNT1 A 3 A_Look
-    Loop
-  See:
-    TNT1 A 3
-    TNT1 A 0 A_Jump(256, "Missile")
-    TNT1 A 1 A_Chase
-    Loop
-  Melee:
-  Missile:
-    TNT1 C 30 A_FaceTarget
-    TNT1 A 30 A_CustomMissile("FirePest",8,0,0,2,90)
-    Goto See
-  }
+	Height 0
+	Radius 0
+	Scale 0.10
+	-FLOORCLIP //why these inabilities? - ozy81
+	-LOOKALLAROUND
+	-NOINFIGHTING
+	-SHOOTABLE
+	Obituary "$OB_FBOMB"
+	States
+	{
+	Spawn:
+		TNT1 A 3 A_Look
+		Loop
+	See:
+		TNT1 A 3
+		TNT1 A 0 A_Jump(256, "Missile")
+		TNT1 A 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		TNT1 C 30 A_FaceTarget
+		TNT1 A 30 A_CustomMissile("FirePest",8,0,0,2,90)
+		Goto See
+	}
 }
 
 Actor FirePest
 {
-  Radius 6
-  Height 8
-  Damage 2
-  +NOGRAVITY
-  +NOBLOCKMAP
-  +MISSILE
-  +ForceXYBillboard
-  RenderStyle Normal
-  States
-  {
-  Spawn:
-    TNT1 A 0 ThrustThingZ(0, 72, 0, 0)
-    FBMB CD 4 BRIGHT
-    TNT1 A 0 ThrustThingZ(0, 72, 0, 0)
-    FBMB CD 4 BRIGHT
-  Death:
-    TNT1 A 0 A_CustomMissile("FireBombPest",0,0,0,CMF_TRACKOWNER)
-    Stop
-  }
+	Radius 6
+	Height 8
+	Damage 2
+	RenderStyle Normal
+	+FORCEXYBILLBOARD
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		TNT1 A 0 ThrustThingZ(0, 72, 0, 0)
+		FBMB CD 4 BRIGHT
+		TNT1 A 0 ThrustThingZ(0, 72, 0, 0)
+		FBMB CD 4 BRIGHT
+	Death:
+		TNT1 A 0 A_CustomMissile("FireBombPest",0,0,0,CMF_TRACKOWNER)
+		Stop
+	}
 }
 
-Actor FirebombPest
+Actor FireBombPest : FirePest
 {
-  Radius 6
-  Height 8
-  Damage 2
-  Gravity 0.125
-  -NOGRAVITY
-  +NOBLOCKMAP
-  +MISSILE
-  +ForceXYBillboard
-  RenderStyle Normal
-  States
-  {
-  Spawn:
-    FBMB CD 1 BRIGHT
-    FBMB AB 4 BRIGHT
-    FBMB AB 4 BRIGHT
-    FBMB AB 5 BRIGHT
-  Death:
-    FBMB AB 9 BRIGHT
-    Stop
-  }
+	Gravity 0.125
+	-NOGRAVITY
+	+BRIGHT
+	States
+	{
+	Spawn:
+		FBMB CD 1
+		FBMB AB 4
+		FBMB AB 4
+		FBMB AB 5
+	Death:
+		FBMB AB 9
+		Stop
+	}
 }
 
-
-Actor Floorshooter 32528
+Actor FloorShooter 32528
 {
-  Radius 16
-  Height 24
-  Mass 10000000
-  Speed 0
-  +LOOKALLAROUND
-  +FLOORCLIP
-  +NOTARGET
-  +NOINFIGHTING
-  -SHOOTABLE
-  -SOLID
-  Obituary "$OB_FSHOT"
-  States
-  {
-  Spawn:
-    JZPW ABCDEFGHIDEF 1   A_Look
-    Loop
-  See:
-    JZPW ABCDEFGHIDEF 1
-    TNT1 A 0 A_Jump(256, "Missile")
-    JZPW ABCB 1 A_Chase
-    Loop
-  Melee:
-  Missile:
-    JZPW ABCDEF 1 A_FaceTarget
-	JZPW G 0 A_StartSound("TOASTED")
-    JZPW G 1   A_CustomMissile("Floorshot",16,0,0,2,90)
-	JZPW HIGHIGHIGHIGHI 1  
-    Goto See
-  }
+	Radius 16
+	Height 24
+	Mass 10000000
+	Speed 0
+	-SHOOTABLE
+	-SOLID
+	+FLOORCLIP
+	+LOOKALLAROUND
+	+NOINFIGHTING
+	+NOTARGET
+	Obituary "$OB_FSHOT"
+	States
+	{
+	Spawn:
+		JZPW ABCDEFGHIDEF 1 A_Look
+		Loop
+	See:
+		JZPW ABCDEFGHIDEF 1
+		TNT1 A 0 A_Jump(256, "Missile")
+		JZPW ABCB 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		JZPW ABCDEF 1 A_FaceTarget
+		JZPW G 0 A_StartSound("TOASTED")
+		JZPW G 1   A_CustomMissile("FloorShot",16,0,0,2,90)
+		JZPW HIGHIGHIGHIGHI 1  
+		Goto See
+	}
 }
 
-Actor Floorshot
+Actor FloorShot
 {
-  Radius 6
-  Height 6
-  Damage 2
-  Speed 5
-  Scale 0.5
-  +NOGRAVITY
-  +NOBLOCKMAP
-  +MISSILE
-  RenderStyle Add
-  DeathSound "BLSTRHIT"
-  States
-  {
-  Spawn:
-      FLOR A 1 BRIGHT
-	  TNT1 A 0 ThrustThingZ(0,32,0,0)
-      Loop 
-  Death:
-    JBLS EFGH 4 BRIGHT
-    Stop
-  }
+	Radius 6
+	Height 6
+	Damage 2
+	Speed 5
+	Scale 0.5
+	RenderStyle Add
+	+BRIGHT
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	DeathSound "BLSTRHIT"
+	States
+	{
+	Spawn:
+		FLOR A 1
+		TNT1 A 0 ThrustThingZ(0,32,0,0)
+		Loop 
+	Death:
+		JBLS EFGH 4
+		Stop
+	}
 }
 
-Actor CeilingShooter : Floorshooter 3213
+Actor CeilingShooter : FloorShooter 3213
 {
-  +SPAWNCEILING
-  +NOGRAVITY
-  Obituary "$OB_CSHOT"
-  States
-  {
-  Spawn:
-  BCEI ABCDEFGHIDEF 1  A_Look
-    Loop
-  See:
-    BCEI ABCDEFGHIDEF 1
-    TNT1 A 0 A_Jump(256, "Missile")
-    BCEI ABCB 1 A_Chase
-    Loop
-  Melee:
-  Missile:
-  BCEI ABCDEF 1 A_FaceTarget
-  JZPW G 0 A_StartSound("TOASTED")
-    BCEI G 1  A_CustomMissile("Ceilingshot",8,0,0,2,-90)
-	BCEI HIGHIGHIGHIGHI 1  
-    Goto See
-  }
+	+NOGRAVITY
+	+SPAWNCEILING
+	Obituary "$OB_CSHOT"
+	States
+	{
+	Spawn:
+		BCEI ABCDEFGHIDEF 1  A_Look
+		Loop
+	See:
+		BCEI ABCDEFGHIDEF 1
+		TNT1 A 0 A_Jump(256, "Missile")
+		BCEI ABCB 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		BCEI ABCDEF 1 A_FaceTarget
+		JZPW G 0 A_StartSound("TOASTED")
+		BCEI G 1  A_CustomMissile("CeilingShot",8,0,0,2,-90)
+		BCEI HIGHIGHIGHIGHI 1  
+		Goto See
+	}
 }
 
 Actor Ceilingshot
 {
-  Radius 6
-  Height 6
-  Damage 2
-  Speed 5
-  Scale 0.5
-  -NOGRAVITY
-  +NOBLOCKMAP
-  +MISSILE
-  RenderStyle Add
-  DeathSound "BLSTRHIT"
-  States
-  {
-  Spawn:
-      FLOR A 1 BRIGHT
-	  TNT1 A 0 ThrustThingZ(0,-32,0,0)
-      Loop 
-  Death:
-    JBLS EFGH 4 BRIGHT
-    Stop
-  }
+	Radius 6
+	Height 6
+	Damage 2
+	Speed 5
+	Scale 0.5
+	RenderStyle Add
+	-NOGRAVITY
+	+BRIGHT
+	+MISSILE
+	+NOBLOCKMAP
+	DeathSound "BLSTRHIT"
+	States
+	{
+	Spawn:
+		FLOR A 1
+		TNT1 A 0 ThrustThingZ(0,-32,0,0)
+		Loop 
+	Death:
+		JBLS EFGH 4
+		Stop
+	}
 }
 
 Actor JazzBarrel 5120
 {
-Health 20
-  Radius 10
-  Height 28
-  Mass 9999
-  +SOLID
-  +SHOOTABLE
-  +NOBLOOD
-  +ACTIVATEMCROSS
-  +DONTGIB
-  +NOICEDEATH
-  DeathSound "SEEKXPLD"
-  States
-  {
-  Spawn:
-  BARD A -1
-  Stop
-  Death:
-    BARD AAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
-	BARD M 3 BRIGHT A_Scream
-	BARD N 3 BRIGHT A_Explode
-   BARD OPQRS 3 BRIGHT 
-    TNT1 A 0 BRIGHT 
-    Stop
+	Health 20
+	Radius 10
+	Height 28
+	Mass 9999
+	+ACTIVATEMCROSS
+	+DONTGIB
+	+NOBLOOD
+	+NOICEDEATH
+	+SHOOTABLE
+	+SOLID
+	DeathSound "SEEKXPLD"
+	Species "Breakable"
+	States
+	{
+	Spawn:
+		BARD A -1
+		Stop
+	Death:
+		BARD AAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+		BARD M 3 BRIGHT A_Scream
+		BARD N 3 BRIGHT A_Explode
+		BARD OPQRS 3 BRIGHT 
+		TNT1 A 0 BRIGHT 
+		Stop
 	}
 }
 
-
 Actor LabMace 3349
 {
-  Radius 24
-  Height 0
-  Health 300
-  Mass 10000000
-  Speed 0
-  PainChance 200
-  MONSTER
-  +SYNCHRONIZED
-  +NOTARGET
-  +NOINFIGHTING
-  +NOBLOOD
-  -RANDOMIZE
-  +NOGRAVITY
-  +SHOOTABLE
-  -COUNTKILL
-  -CANUSEWALLS
-  +FLOORCLIP
-  Obituary "$OB_MACED"
-  States
-  {
-  Spawn:
-   TNT1 A 0
-	TNT1 A 0 A_CustomMissile("Macelink", 0, 0, 0, 2, 0)
-    TNT1 A 0 A_CustomMissile("Macelink2", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("Macelink3", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("Macelink4", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("Macelink5", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("Mace0", 0, 0, 0, 2, 0)
-    TNT1 AABB 4
-    Goto Spawn+9
-  }
+	Radius 24
+	Height 0
+	Health 300
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	MONSTER
+	-CANUSEWALLS
+	-COUNTKILL
+	-RANDOMIZE
+	+FLOORCLIP
+	+NOBLOOD
+	+NOGRAVITY
+	+NOINFIGHTING
+	+NOTARGET
+	+SHOOTABLE
+	+SYNCHRONIZED
+	Obituary "$OB_MACED"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CustomMissile("Macelink", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("Macelink2", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("Macelink3", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("Macelink4", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("Macelink5", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("Mace0", 0, 0, 0, 2, 0)
+		TNT1 AABB 4
+		Goto Spawn+9
+	}
 }
 
 Actor MaceLink
 {
-Radius 6
-  Height 8
-  Scale 1
-  Projectile
-  SeeSound ""
-  +NOCLIP
-  +RIPPER
-  +ThruActors
-  Damage 1
-  Speed 3
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink", 0, 0, 75)
-    Stop
-  }
+	Radius 6
+	Height 8
+	Damage 1
+	Speed 3
+	Scale 1
+	Projectile
+	+NOCLIP
+	+RIPPER
+	+THRUACTORS
+	SeeSound ""
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor MaceLink2 : MaceLink
 {
-Speed 4
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink2", 0, 0, 75)
-    Stop
-  }
+	Speed 4
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink2", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor MaceLink3 : MaceLink
 {
-Speed 5
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink3", 0, 0, 75)
-    Stop
-  }
+	Speed 5
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink3", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor MaceLink4 : MaceLink
 {
-Speed 6
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink4", 0, 0, 75)
-    Stop
-  }
+	Speed 6
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink4", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor MaceLink5 : MaceLink
 {
-Speed 7
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink5", 0, 0, 75)
-    Stop
-  }
+	Speed 7
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink5", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor MaceLink6 : MaceLink
 {
-Speed 8
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink6", 0, 0, 75)
-    Stop
-  }
+	Speed 8
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink6", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor MaceLink7 : MaceLink
 {
-Speed 9
-  States
-  {
-  Spawn:
-    MACE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("MaceLink7", 0, 0, 75)
-    Stop
-  }
+	Speed 9
+	States
+	{
+	Spawn:
+		MACE XXX 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("MaceLink7", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor Mace0 : MaceLink
 {
-Speed 10
-Radius 64
-  Height 64
-  States
-  {
-  Spawn:
-  MACE AAA 2 BRIGHT 
-	 {
-    A_Explode(8, 64, 0);
-    }
-    TNT1 A 0 A_CustomMissile("Mace0", 0, 0, 75)
-    Stop
-  }
+	Speed 10
+	Radius 64
+	Height 64
+	States
+	{
+	Spawn:
+		MACE AAA 2 BRIGHT A_Explode(1,8,0)
+		TNT1 A 0 A_CustomMissile("Mace0", 0, 0, 75)
+		Stop
+	}
 }
+
 Actor LetniBarrier64 3216
 {
 	Scale 1.0
@@ -580,282 +552,260 @@ Actor LetniBarrier128 : LetniBarrier64 3217
 
 Actor MarbelaraTree 32523
 {
-  Obituary "$OB_MTREE"
-  Mass 1000000
-  Speed 0
-  Radius 12
-  Height 240
-  PainChance 100000
-  bloodcolor ""
-  +FLOORCLIP
-  +SOLID
-  -SHOOTABLE
-  +INVULNERABLE
-  +NOBLOOD
-  +NOINFIGHTING
-  States
-  {
-  Spawn:
-    SMT2 ABCD 1 A_Look
-    Loop
-  See:
-    SMT2 ABCD 1 A_Chase
-    Loop
-  Melee:
-  Missile:
-    SMT2 ABCDABCD 1 A_FaceTarget
-    SMT2 A 1 A_CustomMissile("FlowerBall",32,0,0,0,0)
-	SMT2 BCD 1
-    Goto See
-  }
+	Mass 1000000
+	Speed 0
+	Radius 12
+	Height 240
+	PainChance 100000
+	BloodColor ""
+	-SHOOTABLE
+	+FLOORCLIP
+	+INVULNERABLE
+	+NOBLOOD
+	+NOINFIGHTING
+	+SOLID
+	Obituary "$OB_MTREE"
+	States
+	{
+	Spawn:
+		SMT2 ABCD 1 A_Look
+		Loop
+	See:
+		SMT2 ABCD 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		SMT2 ABCDABCD 1 A_FaceTarget
+		SMT2 A 1 A_CustomMissile("FlowerBall",32,0,0,0,0)
+		SMT2 BCD 1
+		Goto See
+	}
 }
 
 Actor MegaBombSpawner1 3245
 {
-  Radius 16
-  Height 16
-  Mass 10000000
-  Speed 0
-    MONSTER
-  +NOGRAVITY
-  -ISMONSTER
-  +SYNCHRONIZED
-  +NOTARGET
-  +NOINFIGHTING
-  -RANDOMIZE
-  -SHOOTABLE
-  -COUNTKILL
-  -CANUSEWALLS
-  -SOLID
-+DONTHARMSPECIES
-  Obituary "$OB_MEGAB"
-  States
-  {
-  Spawn:
-    TNT1 A 0
-    TNT1 A 96
-    TNT1 A 0 A_StartSound("RFLAUNCH")
-    TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
-    Goto Loopstate
-  Loopstate:
-    TNT1 A 0
-    TNT1 A 64
-    TNT1 A 0 A_StartSound("RFLAUNCH")
-    TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
-    Loop
-  }
+	Radius 16
+	Height 16
+	Mass 10000000
+	Speed 0
+	MONSTER
+	-CANUSEWALLS
+	-COUNTKILL
+	-ISMONSTER
+	-RANDOMIZE
+	-SHOOTABLE
+	-SOLID
+	+DONTHARMSPECIES
+	+NOGRAVITY
+	+NOINFIGHTING
+	+NOTARGET
+	+SYNCHRONIZED
+	Obituary "$OB_MEGAB"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 96
+		TNT1 A 0 A_StartSound("RFLAUNCH")
+		TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
+		Goto Loopstate
+	Loopstate:
+		TNT1 A 0
+		TNT1 A 64
+		TNT1 A 0 A_StartSound("RFLAUNCH")
+		TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
+		Loop
+	}
 }
 
 Actor MegaBombSpawner2 : MegaBombSpawner1 3246
 {
-  Radius 8
-  States
-  {
-  Spawn:
-    TNT1 A 0
-    TNT1 A 96
-    TNT1 A 0 A_StartSound("RFLAUNCH")
-    TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
-    Goto Loopstate
-  Loopstate:
-    TNT1 A 0
-    TNT1 A 96
-    TNT1 A 0 A_StartSound("RFLAUNCH")
-    TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
-    Loop
-  }
+	Radius 8
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 96
+		TNT1 A 0 A_StartSound("RFLAUNCH")
+		TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
+		Goto Loopstate
+	Loopstate:
+		TNT1 A 0
+		TNT1 A 96
+		TNT1 A 0 A_StartSound("RFLAUNCH")
+		TNT1 B 1 A_SpawnItemEx("MegaBaseMissile",16,0,20,15)
+		Loop
+	}
 }
 
 Actor MegaBaseMissile
 {
-  Radius 8
-  Height 8
-  Speed 15
-  Damage 2
-  Projectile
-  +RANDOMIZE
-  +DEHEXPLOSION
-  +ROCKETTRAIL
-  SeeSound "RFLAUNCH"
-  DeathSound "SEEKXPLD"
-  Obituary "$OB_MBMIS"
-  States
-  {
-  Spawn:
-    MABB A 1 BRIGHT
-    Loop
-  Death:
-    RFLE AB 3 BRIGHT
-	RFLE C 3 BRIGHT A_Explode (5,64,0)
-	RFLE DEFGHIJK 3 BRIGHT
-    Stop
-  }
+	Radius 8
+	Height 8
+	Speed 15
+	Damage 2
+	Projectile
+	+BRIGHT
+	+DEHEXPLOSION
+	+RANDOMIZE
+	+ROCKETTRAIL
+	SeeSound "RFLAUNCH"
+	DeathSound "SEEKXPLD"
+	Obituary "$OB_MBMIS"
+	States
+	{
+	Spawn:
+		MABB A 1
+		Loop
+	Death:
+		RFLE AB 3
+		RFLE C 3 A_Explode (5,64,0)
+		RFLE DEFGHIJK 3
+		Stop
+	}
 }
+
 Actor PezMaceSpawner 3888
 {
-  Radius 24
-  Height 0
-  Mass 10000000
-  Speed 0
-  PainChance 200
-  MONSTER
-  +SYNCHRONIZED
-  +NOTARGET
-  +NOINFIGHTING
-  -RANDOMIZE
-  +NOGRAVITY
-  -SHOOTABLE
-  -COUNTKILL
-  -CANUSEWALLS
-  +FLOORCLIP
-+DONTHARMSPECIES
-  Obituary "$OB_MACED"
-  States
-  {
-  Spawn:
-   TNT1 A 0
-	TNT1 A 0 A_CustomMissile("PMacelink", 0, 0, 0, 2, 0)
-    TNT1 A 0 A_CustomMissile("PMacelink2", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("PMacelink3", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("PMacelink4", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("PMacelink5", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("PMacelink6", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("PMacelink7", 0, 0, 0, 2, 0)
-	TNT1 A 0 A_CustomMissile("PMace0", 0, 0, 0, 2, 0)
-    TNT1 AABB 4
-    Goto Spawn+9
-  }
+	Radius 24
+	Height 0
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	MONSTER
+	-CANUSEWALLS
+	-COUNTKILL
+	-RANDOMIZE
+	-SHOOTABLE
+	+DONTHARMSPECIES
+	+FLOORCLIP
+	+NOGRAVITY
+	+NOINFIGHTING
+	+NOTARGET
+	+SYNCHRONIZED
+	Obituary "$OB_MACED"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_CustomMissile("PMacelink", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink2", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink3", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink4", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink5", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink6", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink7", 0, 0, 0, 2, 0)
+		TNT1 A 0 A_CustomMissile("PMace0", 0, 0, 0, 2, 0)
+		TNT1 AABB 4
+		Goto Spawn+9
+	}
 }
 
 Actor PMacelink
 {
-Radius 6
-  Height 8
-  Scale 1
-  Projectile
-  SeeSound ""
-  +NOCLIP
-  +RIPPER
-  +ThruActors
-  Damage 1
-  Speed 3
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink", 0, 0, 75)
-    Stop
-  }
+	Radius 6
+	Height 8
+	Damage 1
+	Speed 3
+	Scale 1
+	Projectile
+	+NOCLIP
+	+RIPPER
+	+THRUACTORS
+	SeeSound ""
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMacelink2 : PMacelink
 {
-Speed 4
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink2", 0, 0, 75)
-    Stop
-  }
+	Speed 4
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink2", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMacelink3 : PMacelink
 {
-Speed 5
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink3", 0, 0, 75)
-    Stop
-  }
+	Speed 5
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink3", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMacelink4 : PMacelink
 {
-Speed 6
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink4", 0, 0, 75)
-    Stop
-  }
+	Speed 6
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink4", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMacelink5 : PMacelink
 {
-Speed 7
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink5", 0, 0, 75)
-    Stop
-  }
+	Speed 7
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink5", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMacelink6 : PMacelink
 {
-Speed 8
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink6", 0, 0, 75)
-    Stop
-  }
+	Speed 8
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink6", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMacelink7 : PMacelink
 {
-Speed 9
-  States
-  {
-  Spawn:
-    PMCE XXX 2 BRIGHT 
-	 {
-    A_Explode(1, 8, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMacelink7", 0, 0, 75)
-    Stop
-  }
+	Speed 9
+	States
+	{
+	Spawn:
+		PMCE XXX 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMacelink7", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PMace0 : PMacelink
 {
-Speed 10
-Radius 64
-  Height 64
-  States
-  {
-  Spawn:
-  PMIN AAA 2 BRIGHT 
-	 {
-    A_Explode(8, 64, 0);
-    }
-    TNT1 A 0 A_CustomMissile("PMace0", 0, 0, 75)
-    Stop
-  }
+	Speed 10
+	Radius 64
+	Height 64
+	States
+	{
+	Spawn:
+		PMIN AAA 2 BRIGHT A_Explode(1, 8, 0)
+		TNT1 A 0 A_CustomMissile("PMace0", 0, 0, 75)
+		Stop
+	}
 }
 
 Actor PowerLine64 32529
@@ -863,24 +813,24 @@ Actor PowerLine64 32529
 	Height 64
 	Radius 18
 	Health 300
-	+SHOOTABLE 
-	-CANPASS
-	+BRIGHT	
-	+NOBLOOD 
-	+NOTAUTOAIMED 
-	+LOOKALLAROUND 
-	+DONTBLAST 
-	+NOTARGETSWITCH 
-	+SOLID
-	+DONTTHRUST
-	+DONTHARMSPECIES
-	+NOINFIGHTING
+	Damage 2
 	MeleeDamage 2
 	MeleeRange 32
-	+OLDRADIUSDMG
-	Damage 2
 	PainChance 0
+	-CANPASS
 	-COUNTKILL
+	+BRIGHT	
+	+DONTBLAST 
+	+DONTHARMSPECIES
+	+DONTTHRUST
+	+LOOKALLAROUND 
+	+NOBLOOD 
+	+NOINFIGHTING
+	+NOTARGETSWITCH 
+	+NOTAUTOAIMED 
+	+OLDRADIUSDMG
+	+SHOOTABLE 
+	+SOLID
 	States
 	{
 	Activated:
@@ -1392,8 +1342,8 @@ Actor PyroBoom
 	DamageType Fire
 	Alpha 0.95
 	Scale 0.75
-	SeeSound "PYRCEXPL"
 	+BRIGHT
+	SeeSound "PYRCEXPL"
 	States
 	{
 	Spawn:

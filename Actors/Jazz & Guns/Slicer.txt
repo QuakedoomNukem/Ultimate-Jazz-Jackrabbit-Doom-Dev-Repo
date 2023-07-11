@@ -261,7 +261,6 @@ Actor SlicerAmmo : Ammo
 
 Actor Gun3PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

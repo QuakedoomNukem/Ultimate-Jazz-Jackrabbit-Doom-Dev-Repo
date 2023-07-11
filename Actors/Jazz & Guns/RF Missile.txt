@@ -278,7 +278,6 @@ Actor JJRocketAmmo : Ammo
 
 Actor Gun6PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

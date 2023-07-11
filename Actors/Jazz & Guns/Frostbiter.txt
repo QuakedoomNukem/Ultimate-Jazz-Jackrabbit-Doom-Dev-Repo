@@ -289,7 +289,6 @@ Actor FreezeBlastTrailPowered : FreezeBlastTrail
 
 Actor Gun8PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

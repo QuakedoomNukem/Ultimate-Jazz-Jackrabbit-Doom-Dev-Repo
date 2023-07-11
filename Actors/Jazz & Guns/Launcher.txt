@@ -315,7 +315,6 @@ Actor Bouncers : Ammo
 
 Actor Gun4PowerUpBox : Gun1PowerUpBox
 {
-	//$Category JJ_Weapons
 	States
 	{
 	Spawn:

@@ -24,9 +24,9 @@ Actor BlackCandleChandelier 502
 {
 	Radius 20
 	Height 55
-	+SPAWNCEILING
 	+NOGRAVITY
 	+SOLID
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -52,8 +52,8 @@ Actor CeilingLantern 4684 //To Be Eliminated
 {
 	Radius 16
 	Height 20
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -100,8 +100,8 @@ Actor ChamTorch 3708
 	Height 16
 	Radius 12
 	+BRIGHT
-	+SOLID
 	+NOGRAVITY
+	+SOLID
 	States
 	{
 	Spawn:
@@ -118,8 +118,8 @@ Actor DStarCeilingStrobe 3411
 	Radius 4
 	-SOLID
 	+BRIGHT
-	+SPAWNCEILING
 	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -175,9 +175,9 @@ Actor DarkRealmLight2 4072
 	Height 23
 	Radius 16
 	+BRIGHT
+	+NOGRAVITY
 	+SOLID
 	+SPAWNCEILING
-	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -219,10 +219,10 @@ Actor FireBowl2 3302
 
 Actor Flame 3282
 {
-	+BRIGHT
-	+FLOORCLIP
 	Height 16
 	Radius 16
+	+BRIGHT
+	+FLOORCLIP
 	States
 	{
 	Spawn:
@@ -331,7 +331,7 @@ Actor JazzTorch 3739
 	Spawn:
 		JJTH A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
 	Spawn2:
-		JJTH ABC 3 BRIGHT
+		JJTH ABC 3
 		Loop
 	}
 }
