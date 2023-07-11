@@ -46,12 +46,10 @@ Actor RFMissile : Weapon
 		Loop
 	Deselect:
 		PLPI A 0 A_Lower
-		PLPI A 1 A_Lower
-		Goto Deselect
+		Loop
 	Select:
 		PLPI A 0 A_Raise
-		PLPI A 1 A_Raise
-		Goto Select
+		Loop
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("Gun6PowerUp", 1, "Powerfire")
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
