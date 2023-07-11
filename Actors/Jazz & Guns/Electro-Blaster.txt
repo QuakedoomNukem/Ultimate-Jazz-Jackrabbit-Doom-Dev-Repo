@@ -47,11 +47,9 @@ Actor ElectroBlaster : Weapon
 		PLPI A 1 A_WeaponReady
 		Loop
 	Deselect:
-		PLPI A 1 A_Lower
 		PLPI A 0 A_Lower
 		Loop
 	Select:
-		PLPI A 1 A_Raise
 		PLPI A 0 A_Raise
 		Loop
 	Fire:
