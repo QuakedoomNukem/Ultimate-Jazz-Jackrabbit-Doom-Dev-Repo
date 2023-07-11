@@ -52,10 +52,10 @@ Actor Toaster : Weapon
 		TNT1 A 0  A_JumpIf(waterlevel>2,"Cannot")
 		Goto Ready+1
 	Deselect:
-		PLPI A 1 A_Lower
+		PLPI A 0 A_Lower
 		Loop
 	Select:
-		PLPI A 1 A_Raise
+		PLPI A 0 A_Raise
 		Loop
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("Gun7PowerUp", 1, "Powerfire")
