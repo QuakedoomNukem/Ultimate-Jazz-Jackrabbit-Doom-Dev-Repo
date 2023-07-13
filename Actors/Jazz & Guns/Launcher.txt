@@ -23,7 +23,7 @@
 Actor Launcher : DoomWeapon
 {
 	//$Category JJ_Weapons
-	Tag "Bouncer"
+	Tag "Launcher"
 	Weapon.AmmoGive 0
 	Weapon.AmmoType1 "Bouncers"
 	Weapon.AmmoUse1 1
