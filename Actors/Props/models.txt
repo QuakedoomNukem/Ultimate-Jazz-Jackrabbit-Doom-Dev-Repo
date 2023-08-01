@@ -37,12 +37,12 @@ Actor RedPadLowModel : CustomInventory 25637
 	Spawn:
 		RPAD A 1
 		Loop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		RPAD A 0 A_SpawnItemEx("RedPadLowModel2")
 		RPAD A 0 A_StartSound("BOING")
 		RPAD A 0 A_TakeInventory("RedPadLowModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		RPAD A 1 ThrustThingZ(0,64,0,0)
 		Stop
 	}
@@ -67,17 +67,17 @@ Actor RedPadHighModel : RedPadLowModel 3813 //3905
 {
 States
 {
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		RPAD A 0 A_SpawnItemEx("RedPadHighModel2")
 		RPAD A 0 A_StartSound("BOING")
 		RPAD A 0 A_TakeInventory("RedPadHighModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		RPAD A 1 ThrustThingZ(0,96,0,0)
 		Stop
 	}
 }
-	
+
 Actor RedPadHighModel2 : RedPadLowModel2
 {
 	States
@@ -100,12 +100,12 @@ Actor GreenPadLowModel : RedPadLowModel 25634 //3906
 	Spawn:
 		GPAD A 1
 		Loop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		GPAD A 0 A_SpawnItemEx("GreenpadLowModel2")
 		GPAD A 0 A_StartSound("BOING")
-		GPAD A 0 A_TakeInventory ("GreenPadLowModel",1)
+		GPAD A 0 A_TakeInventory("GreenPadLowModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		GPAD A 1 ThrustThingZ(0,100,0,0)
 		Stop
 	}
@@ -129,17 +129,17 @@ States
 	Spawn:
 		GPAD A 1
 		Loop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		GPAD A 0 A_SpawnItemEx("GreenpadHighModel2")
 		GPAD A 0 A_StartSound("BOING")
-		GPAD A 0 A_TakeInventory ("GreenPadHighModel",1)
+		GPAD A 0 A_TakeInventory("GreenPadHighModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		GPAD A 1 ThrustThingZ(0,128,0,0)
 		Stop
 	}
 }
-	
+
 Actor GreenPadHighModel2 : RedPadLowModel2
 {
 	States
@@ -162,12 +162,12 @@ Actor BluePadLowModel : RedPadLowModel 25635 //3907
 	Spawn:
 		BPAD A 1
 		Loop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		BPAD A 0 A_SpawnItemEx("BluePadLowModel2")
 		BPAD A 0 A_StartSound("BOING")
-		BPAD A 0 A_TakeInventory ("BluePadLowModel",1)
+		BPAD A 0 A_TakeInventory("BluePadLowModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		BPAD A 1 ThrustThingZ(0,132,0,0)
 		Stop
 	}
@@ -188,17 +188,17 @@ Actor BluePadHighModel : RedPadLowModel 3815
 {
 	States
 	{
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		BPAD A 0 A_SpawnItemEx("BluepadHighModel2")
 		BPAD A 0 A_StartSound("BOING")
-		BPAD A 0 A_TakeInventory ("BluePadHighModel",1)
+		BPAD A 0 A_TakeInventory("BluePadHighModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		BPAD A 1 ThrustThingZ(0,164,0,0)
 		Stop
 	}
 }
-		
+
 Actor BluePadHighModel2 : RedPadLowModel2
 {
 	States
@@ -219,9 +219,9 @@ Actor HoverRedPadModel : CustomInventory 3811
 	+FLOATBOB
 	+NOGRAVITY
 	Inventory.PickupMessage ""
-	Inventory.amount 0
+	Inventory.Amount 0
 	Inventory.MaxAmount 0
-	States  
+	States
 	{
 	Spawn:
 		HSPG A -1
@@ -229,7 +229,7 @@ Actor HoverRedPadModel : CustomInventory 3811
 	HoldAndDestroy:
 		HSPG A 0 A_SpawnItemEx("HoverRedPadModel2")
 		HSPG A 0 A_StartSound("BOING")
-		HSPG A 1 A_TakeInventory ("HoverRedPadModel",1)
+		HSPG A 1 A_TakeInventory("HoverRedPadModel",1)
 		Stop
 	Pickup:
 		HSPG A 1 ThrustThingZ(0,96,0,0)
@@ -257,17 +257,17 @@ Actor HoverRedPadModel2
 
 Actor HoverGreenPadModel : HoverRedPadModel 3812
 {
-	States  
+	States
 	{
 	Spawn:
 		HSPG B -1
 		Stop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		HSPG B 0 A_SpawnItemEx("HoverGreenPadModel2")
 		HSPG B 0 A_StartSound("BOING")
-		HSPG B 0 A_TakeInventory ("HoverGreenPadModel",1)
+		HSPG B 0 A_TakeInventory("HoverGreenPadModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		HSPG B 1 ThrustThingZ(0,128,0,0)
 		Stop
 	}
@@ -286,20 +286,20 @@ Actor HoverGreenPadModel2 : HoverRedPadModel2
 
 Actor HoverPurplePadModel : HoverRedPadModel 3810
 {
-	States  
+	States
 	{
 	Spawn:
 		HSPG C -1
 		Stop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		HSPG C 0 A_SpawnItemEx("HoverPurplePadModel2")
 		HSPG C 0 A_StartSound("BOING")
-		HSPG C 0 A_TakeInventory ("HoverPurplePadModel",1)
+		HSPG C 0 A_TakeInventory("HoverPurplePadModel",1)
 		Stop
-	Pickup: 
+	Pickup:
 		HSPG C 1 ThrustThingZ(0,132,0,0)
 		Stop
-	} 
+	}
 }
 
 Actor HoverPurplePadModel2 : HoverRedPadModel2

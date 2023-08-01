@@ -20,8 +20,9 @@
  * SOFTWARE.
 **/
 
-Actor Caterpillar 3764
+Actor Caterpillar
 {
+	//$Category JJ_Special
 	Radius 56
 	Height 118
 	Mass 100000
@@ -60,7 +61,7 @@ Actor Caterpillar 3764
 		Goto See
 	Pain:
 		CTPR N 3
-		CTPR NOPQNOPQNOPQNOPQNOPQNOPQNOPQNOPQNOPQ 4 A_Pain
+		CTPR NOPQNOPQNOPQNOPQNOPQNOPQNOPQNOPQNOPQ 4 A_Pain //no PainSound defined though - ozy81
 		Goto See
 	}
 }
@@ -69,8 +70,9 @@ Actor Caterpillar 3764
 Actor CaterpillarStop : Inventory {Inventory.MaxAmount 1}
 Actor CaterpillarCount : Inventory {Inventory.MaxAmount 1000}
 
-Actor CaterpillarSmoke : CustomInventory 3765
+Actor CaterpillarSmoke : CustomInventory
 {
+	//$Category JJ_Special
 	Radius 16
 	Height 16
 	Gravity 0.25
@@ -81,7 +83,7 @@ Actor CaterpillarSmoke : CustomInventory 3765
 	+NOTIMEFREEZE
 	+RANDOMIZE
 	+SEEKERMISSILE
-	Inventory.PickupMessage "$PK_SMOKE" 
+	Inventory.PickupMessage "$PK_SMOKE"
 	Inventory.PickupSound ""
 	DeathSound "" //needs one
 	States
@@ -147,11 +149,11 @@ Actor SmokeRings
 	}
 }
 
-Actor CaterpillarEffect : CustomInventory 3765
-{	
+Actor CaterpillarEffect : CustomInventory
+{
 	Radius 16
 	Height 16
-	Inventory.PickupMessage "$PK_SMOKE" 
+	Inventory.PickupMessage "$PK_SMOKE"
 	Inventory.PickupSound "item/powerup"
 	States
 	{
@@ -183,8 +185,9 @@ Actor CaterpillarEffect : CustomInventory 3765
 }
 */
 
-Actor CheckSign 22022
+Actor CheckSign
 {
+	//$Category JJ_Special
 	Radius 16
 	Height 32
 	Health 2
@@ -208,12 +211,12 @@ Actor CheckSign 22022
 		Stop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
-		TNT1 A 0 A_SpawnItemEx("Checksign2")
-		Stop	
+		TNT1 A 0 A_SpawnItemEx("CheckSign2")
+		Stop
 	}
 }
 
-Actor CheckSign2 
+Actor CheckSign2
 {
 	Radius 16
 	Height 32
@@ -229,8 +232,9 @@ Actor CheckSign2
 	}
 }
 
-Actor FountainWater 4066  //Credit to Captain Toenail
+Actor FountainWater //Credit to Captain Toenail
 {
+	//$Category JJ_Special
 	//$Arg0 "Sound"
 	//$Arg0Type 11
 	//$Arg0Enum { 0 = "No"; 1 = "Yes"; }
@@ -238,7 +242,7 @@ Actor FountainWater 4066  //Credit to Captain Toenail
 	Radius 4
 	Alpha 0.7
 	Scale 0.6
-	RenderStyle Translucent	
+	RenderStyle Translucent
 	+NOBLOCKMAP
 	+MOVEWITHSECTOR
 	States
@@ -254,8 +258,9 @@ Actor FountainWater 4066  //Credit to Captain Toenail
 	}
 }
 
-Actor JungrockPad : CustomInventory 3904
+Actor JungrockPad : CustomInventory
 {
+	//$Category JJ_Special
 	Radius 16
 	Height 32
 	+INVENTORY.QUIET
@@ -264,20 +269,20 @@ Actor JungrockPad : CustomInventory 3904
 	+NOGRAVITY
 	+SOLID
 	Inventory.PickupMessage ""
-	Inventory.amount 0
+	Inventory.Amount 0
 	Inventory.MaxAmount 0
-	States  
+	States
 	{
 	Spawn:
 		JRCK A -1
 		Stop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		JRCK A 0 A_SpawnItemEx("JungrockPad2")
 		JRCK A 0 A_StartSound("BOING")
-		JRCK A 0 A_TakeInventory ("JungrockPad",1)
+		JRCK A 0 A_TakeInventory("JungrockPad",1)
 		Stop
-	Pickup: 
-		JRCK A 1  ThrustThingZ(0,64,0,0)
+	Pickup:
+		JRCK A 1 ThrustThingZ(0,64,0,0)
 		Stop
 	}
 }
@@ -292,13 +297,14 @@ Actor JungrockPad2
 	{
 	Spawn:
 		JRCK Q 20
-		JRCK A 0  A_SpawnItemEx("JungrockPad")
+		JRCK A 0 A_SpawnItemEx("JungrockPad")
 		Stop
 	}
 }
 
-Actor RabbitStinkSign2 3947
+Actor RabbitStinkSign2
 {
+	//$Category JJ_Special
 	Radius 16
 	Height 26
 	Health 2
@@ -323,11 +329,11 @@ Actor RabbitStinkSign2 3947
 	Death:
 		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
 		TNT1 A 0 A_SpawnItemEx("RabbitStinkStump2")
-		Stop	
+		Stop
 	}
 }
 
-Actor RabbitStinkStump2 
+Actor RabbitStinkStump2
 {
 	Radius 16
 	Height 32
@@ -343,8 +349,9 @@ Actor RabbitStinkStump2
 	}
 }
 
-Actor SecretSign 28022
+Actor SecretSign
 {
+	//$Category JJ_Special
 	Radius 16
 	Height 32
 	Health 2
@@ -369,12 +376,13 @@ Actor SecretSign 28022
 	Death:
 		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
 		TNT1 A 0 A_SpawnItemEx("Checksign2")
-		Stop	
+		Stop
 	}
 }
 
-Actor TubeRemixFan64 : CustomInventory 3972
+Actor TubeRemixFan64 : CustomInventory
 {
+	//$Category JJ_Special
 	Radius 32
 	Height 56
 	+INVENTORY.QUIET
@@ -389,12 +397,12 @@ Actor TubeRemixFan64 : CustomInventory 3972
 	Spawn:
 		TBRF ABCDEFG 3
 		Loop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		TBRF A 0 A_SpawnItemEx("TubeRemixFanLow2")
-		TBRF A 0   
-		TBRF A 0 A_TakeInventory ("TubeRemixFan64",1)
+		TBRF A 0
+		TBRF A 0 A_TakeInventory("TubeRemixFan64",1)
 		Stop
-	Pickup: 
+	Pickup:
 		TBRF ABCDEFG 3 ThrustThingZ(0,64,0,0)
 		Stop
 	}
@@ -415,8 +423,9 @@ Actor TubeRemixFanLow2
 	}
 }
 
-Actor TubeRemixFan96 : CustomInventory 3979
+Actor TubeRemixFan96 : CustomInventory
 {
+	//$Category JJ_Special
 	Radius 32
 	Height 56
 	+INVENTORY.QUIET
@@ -431,12 +440,12 @@ Actor TubeRemixFan96 : CustomInventory 3979
 	Spawn:
 		TBRF ABCDEFG 3
 		Loop
-	HoldAndDestroy: 
+	HoldAndDestroy:
 		TBRF A 0 A_SpawnItemEx("TubeRemixFan2")
-		TBRF A 0   
+		TBRF A 0
 		TBRF A 0 A_TakeInventory("TubeRemixFan96",1)
 		Stop
-	Pickup: 
+	Pickup:
 		TBRF ABCDEFG 3 ThrustThingZ(0,96,0,0)
 		Stop
 	}
@@ -457,8 +466,9 @@ Actor TubeRemixFan2
 	}
 }
 
-Actor XmasBlockGuy 4081
+Actor XmasBlockGuy
 {
+	//$Category JJ_Special
 	Radius 16
 	Height 32
 	Health 2
@@ -483,11 +493,11 @@ Actor XmasBlockGuy 4081
 	Death:
 		TNT1 A 0 A_SpawnItemEx("JazzPoof",0,0,8,0,0,frandom(4,8))
 		TNT1 A 0 A_SpawnItemEx("BlockGuy2")
-		Stop	
+		Stop
 	}
 }
 
-Actor BlockGuy2 
+Actor BlockGuy2
 {
 	Radius 16
 	Height 32
@@ -503,8 +513,9 @@ Actor BlockGuy2
 	}
 }
 
-Actor TallMedivoTrees 3288
+Actor TallMedivoTrees
 {
+	//$Category JJ_Special
 	Height 952
 	Radius 64
 	+SOLID
@@ -516,8 +527,9 @@ Actor TallMedivoTrees 3288
 	}
 }
 
-Actor BigHellBones 3284
+Actor BigHellBones
 {
+	//$Category JJ_Special
 	Height 192
 	Radius 64
 	States
@@ -528,8 +540,9 @@ Actor BigHellBones 3284
 	}
 }
 
-Actor HellStag1 3285
+Actor HellStag1
 {
+	//$Category JJ_Special
 	Height 120
 	Radius 56
 	+SOLID
@@ -541,8 +554,9 @@ Actor HellStag1 3285
 	}
 }
 
-Actor HellTree2 3280
+Actor HellTree2
 {
+	//$Category JJ_Special
 	Height 160
 	Radius 64
 	+SOLID
@@ -554,8 +568,9 @@ Actor HellTree2 3280
 	}
 }
 
-Actor MedivoCastle 3281
+Actor MedivoCastle
 {
+	//$Category JJ_Special
 	Height 291
 	Radius 64
 	States
@@ -566,8 +581,9 @@ Actor MedivoCastle 3281
 	}
 }
 
-Actor SkyboxDecor1 3311
+Actor SkyboxDecor1
 {
+	//$Category JJ_Special
 	Height 32
 	Radius 32
 	+BRIGHT
@@ -575,12 +591,12 @@ Actor SkyboxDecor1 3311
 	States
 	{
 	Spawn:
-		SKYB A -1 
+		SKYB A -1
 		Stop
 	}
 }
 
-Actor SkyboxDecor2 : SkyboxDecor1 3312
+Actor SkyboxDecor2 : SkyboxDecor1
 {
 	States
 	{
@@ -590,7 +606,7 @@ Actor SkyboxDecor2 : SkyboxDecor1 3312
 	}
 }
 
-Actor SkyboxDecor3 : SkyboxDecor1 3313
+Actor SkyboxDecor3 : SkyboxDecor1
 {
 	States
 	{
@@ -600,7 +616,7 @@ Actor SkyboxDecor3 : SkyboxDecor1 3313
 	}
 }
 
-Actor SkyboxDecor4 : SkyboxDecor1 3314
+Actor SkyboxDecor4 : SkyboxDecor1
 {
 	States
 	{
@@ -610,10 +626,10 @@ Actor SkyboxDecor4 : SkyboxDecor1 3314
 	}
 }
 
-Actor SkyboxDecor5 : SkyboxDecor1 3315
+Actor SkyboxDecor5 : SkyboxDecor1
 {
-States
-{
+	States
+	{
 	Spawn:
 		SKYB E -1
 		Stop
