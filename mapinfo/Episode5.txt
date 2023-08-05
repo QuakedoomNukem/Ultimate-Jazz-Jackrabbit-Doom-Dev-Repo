@@ -1,0 +1,95 @@
+//Episode 5
+
+DefaultMap
+{
+	lightmode = 0 //force Standard mode
+	
+	// Force breaking compatibility options off
+	compat_maskedmidtex = 0
+	compat_trace = 0
+
+	// Force SSAO being disabled in skyboxes
+	disableskyboxao
+
+	allowjump
+	allowcrouch
+	allowfreelook
+}
+
+map E5L1 lookup "E5L1_NAME"
+{
+	author = "$E5L1_SUBTITLE"
+	levelnum = 40
+	next = E5L2
+	secretnext = E5L2
+	sky1 = "CANDSKY", 0
+	cluster = 5
+	music = CANDION
+	exitpic = "XmasInte"
+	enterpic = "INTMAP40"
+}
+
+map E5L2 lookup "E5L2_NAME"
+{
+	author = "$E5L2_SUBTITLE"
+	levelnum = 41
+	next = E5L3
+	secretnext = 3D09
+	sky1 = "BLOXSKY", 0
+	cluster = 5
+	music = BLOXONIUS
+	exitpic = "XmasInte"
+	enterpic = "INTMAP41"
+}
+
+map E5L3 lookup "E5L3_NAME"
+{ 
+	author = "$E5L3_SUBTITLE"
+	levelnum = 42
+    	titlepatch = CWILV51
+	next = MAP43
+	secretnext = MAP43
+	sky1 = "JSKY1", 0
+	cluster = 5
+	music = Holidaius
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}
+
+map MAP44 "Holidaius Mountains"
+{ 
+	levelnum = 44
+	next = MAP45
+	secretnext = MAP45
+	sky1 = "JSKY5", 0
+	cluster = 5
+	music = SILENTNIGHT
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}
+
+map MAP47 "Burrowsville"
+{ 
+	levelnum = 47
+	next = Map47 //MAP48
+	secretnext = Map47 //MAP48
+	sky1 = "JSKY3", 0
+	cluster = 5
+	music = BURROWSVILLE
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}
+
+map E5SL2 lookup "E5SL2_NAME"
+{ 
+	author = "$E5SL2_SUBTITLE"
+	levelnum = 47
+	next = MAP43
+	secretnext = MAP48
+	sky1 = "NAKASKY", 0
+	cluster = 5
+	par = 30
+	music = DIEHARED
+	exitpic = "XmasInte"
+	enterpic = "XmasInte"
+}

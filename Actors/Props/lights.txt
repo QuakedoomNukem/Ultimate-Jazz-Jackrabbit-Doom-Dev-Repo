@@ -20,8 +20,9 @@
  * SOFTWARE.
 **/
 
-Actor BlackCandleChandelier 502
+Actor BlackCandleChandelier
 {
+	//$Category JJ_Lights
 	Radius 20
 	Height 55
 	+NOGRAVITY
@@ -35,8 +36,9 @@ Actor BlackCandleChandelier 502
 	}
 }
 
-Actor CastleCandleOut 3392
+Actor CastleCandleOut
 {
+	//$Category JJ_Lights
 	Height 248
 	Radius 8
 	+SOLID
@@ -48,8 +50,9 @@ Actor CastleCandleOut 3392
 	}
 }
 
-Actor CeilingLantern 4684 //To Be Eliminated
+Actor CeilingLantern //To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 16
 	Height 20
 	+NOGRAVITY
@@ -62,7 +65,7 @@ Actor CeilingLantern 4684 //To Be Eliminated
 	}
 }
 
-Actor CeilingLantern_Animated : CeilingLantern 4685 //To Be Eliminated
+Actor CeilingLantern_Animated : CeilingLantern //To Be Eliminated
 {
 	States
 	{
@@ -73,7 +76,7 @@ Actor CeilingLantern_Animated : CeilingLantern 4685 //To Be Eliminated
 	}
 }
 
-Actor CeilingLanternTall : CeilingLantern 4686 //To Be Eliminated
+Actor CeilingLanternTall : CeilingLantern //To Be Eliminated
 {
 	+BRIGHT
 	States
@@ -84,7 +87,7 @@ Actor CeilingLanternTall : CeilingLantern 4686 //To Be Eliminated
 	}
 }
 
-Actor CeilingLanternTall_Animated : CeilingLantern 4687 //To Be Eliminated
+Actor CeilingLanternTall_Animated : CeilingLantern //To Be Eliminated
 {
 	States
 	{
@@ -95,8 +98,9 @@ Actor CeilingLanternTall_Animated : CeilingLantern 4687 //To Be Eliminated
 	}
 }
 
-Actor ChamTorch 3708
+Actor ChamTorch
 {
+	//$Category JJ_Lights
 	Height 16
 	Radius 12
 	+BRIGHT
@@ -112,8 +116,9 @@ Actor ChamTorch 3708
 	}
 }
 
-Actor DStarCeilingStrobe 3411
+Actor DStarCeilingStrobe
 {
+	//$Category JJ_Lights
 	Height 10
 	Radius 4
 	-SOLID
@@ -128,8 +133,9 @@ Actor DStarCeilingStrobe 3411
 	}
 }
 
-Actor DStarFloorStrobe 3412
+Actor DStarFloorStrobe
 {
+	//$Category JJ_Lights
 	Height 10
 	Radius 4
 	-SOLID
@@ -142,8 +148,9 @@ Actor DStarFloorStrobe 3412
 	}
 }
 
-Actor DStarlight 3409 //To be sectorised
+Actor DStarlight //To be sectorised
 {
+	//$Category JJ_Lights
 	Height 64
 	Radius 16
 	+BRIGHT
@@ -156,8 +163,9 @@ Actor DStarlight 3409 //To be sectorised
 	}
 }
 
-Actor DarkRealmLight1 4071
+Actor DarkRealmLight1
 {
+	//$Category JJ_Lights
 	Height 48
 	Radius 16
 	+BRIGHT
@@ -170,8 +178,9 @@ Actor DarkRealmLight1 4071
 	}
 }
 
-Actor DarkRealmLight2 4072
+Actor DarkRealmLight2
 {
+	//$Category JJ_Lights
 	Height 23
 	Radius 16
 	+BRIGHT
@@ -186,8 +195,9 @@ Actor DarkRealmLight2 4072
 	}
 }
 
-Actor DarkRealmLight3 4073
+Actor DarkRealmLight3
 {
+	//$Category JJ_Lights
 	Height 64
 	Radius 16
 	+BRIGHT
@@ -200,8 +210,9 @@ Actor DarkRealmLight3 4073
 	}
 }
 
-Actor FireBowl2 3302
+Actor FireBowl2
 {
+	//$Category JJ_Lights
 	Height 16
 	Radius 16
 	+BRIGHT
@@ -217,8 +228,9 @@ Actor FireBowl2 3302
 	}
 }
 
-Actor Flame 3282
+Actor Flame
 {
+	//$Category JJ_Lights
 	Height 16
 	Radius 16
 	+BRIGHT
@@ -233,8 +245,9 @@ Actor Flame 3282
 	}
 }
 
-Actor FlameBowl 3283
+Actor FlameBowl
 {
+	//$Category JJ_Lights
 	Height 20
 	Radius 20
 	+BRIGHT
@@ -250,8 +263,9 @@ Actor FlameBowl 3283
 	}
 }
 
-Actor FloorLantern 4680 ////To Be Eliminated
+Actor FloorLantern ////To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 16
 	Height 28
 	+BRIGHT
@@ -263,8 +277,9 @@ Actor FloorLantern 4680 ////To Be Eliminated
 	}
 }
 
-Actor FloorLantern_Animated 4681 ////To Be Eliminated
+Actor FloorLantern_Animated ////To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 16
 	Height 28
 	States
@@ -276,8 +291,9 @@ Actor FloorLantern_Animated 4681 ////To Be Eliminated
 	}
 }
 
-Actor FloorLanternTall 4682 ////To Be Eliminated
+Actor FloorLanternTall ////To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 16
 	Height 28
 	+BRIGHT
@@ -289,8 +305,9 @@ Actor FloorLanternTall 4682 ////To Be Eliminated
 	}
 }
 
-Actor FloorLanternTall_Animated 4683 //To Be Eliminated
+Actor FloorLanternTall_Animated //To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 16
 	Height 28
 	States
@@ -301,9 +318,10 @@ Actor FloorLanternTall_Animated 4683 //To Be Eliminated
 		Loop
 	}
 }
-	
-Actor JazzBrazier 4063
+
+Actor JazzBrazier
 {
+	//$Category JJ_Lights
 	Radius 20
 	Height 82
 	+BRIGHT
@@ -320,8 +338,9 @@ Actor JazzBrazier 4063
 	}
 }
 
-Actor JazzTorch 3739
+Actor JazzTorch
 {
+	//$Category JJ_Lights
 	Height 32
 	Radius 4
 	+BRIGHT
@@ -336,8 +355,9 @@ Actor JazzTorch 3739
 	}
 }
 
-Actor JazzGreenTorch 4111
+Actor JazzGreenTorch
 {
+	//$Category JJ_Lights
 	Height 32
 	Radius 4
 	+BRIGHT
@@ -351,9 +371,10 @@ Actor JazzGreenTorch 4111
 		Loop
 	}
 }
-//To be sectorised
-Actor LabLight1 3331
+
+Actor LabLight1 //To be sectorised
 {
+	//$Category JJ_Lights
 	Height 160
 	Radius 16
 	+BRIGHT
@@ -367,8 +388,7 @@ Actor LabLight1 3331
 	}
 }
 
-//To be sectorised
-Actor LabLight2 : LabLight1 3332
+Actor LabLight2 : LabLight1 //To be sectorised
 {
 	Height 128
 	States
@@ -379,8 +399,9 @@ Actor LabLight2 : LabLight1 3332
 	}
 }
 
-Actor LabStrobe1 3330
+Actor LabStrobe1
 {
+	//$Category JJ_Lights
 	Height 64
 	Radius 4
 	+BRIGHT
@@ -394,8 +415,9 @@ Actor LabStrobe1 3330
 	}
 }
 
-Actor LavaLampRed 3450
+Actor LavaLampRed
 {
+	//$Category JJ_Lights
 	Height 64
 	Radius 8
 	+BRIGHT
@@ -408,7 +430,7 @@ Actor LavaLampRed 3450
 	}
 }
 
-Actor LavaLampGrey : LavaLampRed 3451
+Actor LavaLampGrey : LavaLampRed
 {
 	States
 	{
@@ -418,8 +440,9 @@ Actor LavaLampGrey : LavaLampRed 3451
 	}
 }
 
-Actor Light1 3130 //To Be Eliminated
+Actor Light1 //To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 8
 	Height 64
 	+SOLID
@@ -431,8 +454,9 @@ Actor Light1 3130 //To Be Eliminated
 	}
 }
 
-Actor Light2 3131 //To Be Eliminated
+Actor Light2 //To Be Eliminated
 {
+	//$Category JJ_Lights
 	Radius 6
 	Height 96
 	+SOLID
@@ -444,8 +468,9 @@ Actor Light2 3131 //To Be Eliminated
 	}
 }
 
-Actor LitCandle 3397
+Actor LitCandle
 {
+	//$Category JJ_Lights
 	Height 248
 	Radius 8
 	+BRIGHT
@@ -458,8 +483,9 @@ Actor LitCandle 3397
 	}
 }
 
-Actor MegaLight1 3145
+Actor MegaLight1
 {
+	//$Category JJ_Lights
 	Radius 6
 	Height 64
 	+BRIGHT
@@ -472,7 +498,7 @@ Actor MegaLight1 3145
 	}
 }
 
-Actor MegaLight2 : MegaLight1 3146
+Actor MegaLight2 : MegaLight1
 {
 	Height 96
 	States
@@ -483,7 +509,7 @@ Actor MegaLight2 : MegaLight1 3146
 	}
 }
 
-Actor MegaLight3 : MegaLight1 3147
+Actor MegaLight3 : MegaLight1
 {
 	States
 	{
@@ -493,8 +519,9 @@ Actor MegaLight3 : MegaLight1 3147
 	}
 }
 
-Actor PollutusStrobe 32526
+Actor PollutusStrobe
 {
+	//$Category JJ_Lights
 	Height 64
 	Radius 4
 	+BRIGHT
@@ -508,8 +535,9 @@ Actor PollutusStrobe 32526
 	}
 }
 
-Actor ScrapLight 3481
+Actor ScrapLight
 {
+	//$Category JJ_Lights
 	Height 52
 	Radius 4
 	+NOGRAVITY
@@ -522,8 +550,9 @@ Actor ScrapLight 3481
 	}
 }
 
-Actor ScrapLitRocket 3483
+Actor ScrapLitRocket
 {
+	//$Category JJ_Lights
 	Height 56
 	Radius 20
 	+BRIGHT
@@ -536,8 +565,9 @@ Actor ScrapLitRocket 3483
 	}
 }
 
-Actor TubeRemixStrobeCeiling 3967
+Actor TubeRemixStrobeCeiling
 {
+	//$Category JJ_Lights
 	Height 16
 	Radius 8
 	-SOLID
@@ -552,8 +582,9 @@ Actor TubeRemixStrobeCeiling 3967
 	}
 }
 
-Actor TubeRemixStrobeFloor 3968
+Actor TubeRemixStrobeFloor
 {
+	//$Category JJ_Lights
 	Height 18
 	Radius 7
 	+BRIGHT
@@ -566,8 +597,9 @@ Actor TubeRemixStrobeFloor 3968
 	}
 }
 
-Actor XmasCandionLight 4086
+Actor XmasCandionLight
 {
+	//$Category JJ_Lights
 	Height 105
 	Radius 16
 	+SOLID
@@ -579,8 +611,9 @@ Actor XmasCandionLight 4086
 	}
 }
 
-Actor XmasLantern 4087
+Actor XmasLantern
 {
+	//$Category JJ_Lights
 	Height 64
 	Radius 16
 	+SOLID
