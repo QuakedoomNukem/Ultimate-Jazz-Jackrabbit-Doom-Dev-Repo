@@ -11,9 +11,9 @@ DefaultMap
 	// Force SSAO being disabled in skyboxes
 	disableskyboxao
 
-	allowjump
-	allowcrouch
-	allowfreelook
+	nojump
+	nocrouch
+	nofreelook
 	noclustertext
 }
 
