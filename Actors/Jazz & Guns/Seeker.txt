@@ -237,12 +237,12 @@ Actor HomingMissile : Ammo
 {
 	//$Category JJ_Weapons
 	Inventory.Amount 3
-	Inventory.MaxAmount 100
+	Inventory.MaxAmount 30
 	Inventory.PickupSound "AMMOUP"
 	Inventory.PickupMessage "$PK_AMMO5"
 	Inventory.Icon "HSRKZ0"
 	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
+	Ammo.BackpackMaxAmount 30
 	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY
