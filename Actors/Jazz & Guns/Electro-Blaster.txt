@@ -181,12 +181,12 @@ Actor JJCell : Ammo
 {
 	//$Category JJ_Weapons
 	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
+	Ammo.BackpackMaxAmount 30
 	Inventory.Icon "XELLZ0"
 	Inventory.PickupSound "AMMOUP"
 	Inventory.PickupMessage "$PK_AMMO0"
 	Inventory.Amount 3
-	Inventory.MaxAmount 100
+	Inventory.MaxAmount 30
 	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY
