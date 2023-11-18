@@ -19,7 +19,7 @@ DefaultMap
 map E5L1 lookup "E5L1_NAME"
 {
 	author = "$E5L1_SUBTITLE"
-	levelnum = 40
+	levelnum = 44
 	next = E5L2
 	secretnext = E5L2
 	sky1 = "CANDSKY", 0
@@ -32,7 +32,7 @@ map E5L1 lookup "E5L1_NAME"
 map E5L2 lookup "E5L2_NAME"
 {
 	author = "$E5L2_SUBTITLE"
-	levelnum = 41
+	levelnum = 45
 	next = E5L3
 	secretnext = 3D09
 	sky1 = "BLOXSKY", 0
@@ -45,10 +45,9 @@ map E5L2 lookup "E5L2_NAME"
 map E5L3 lookup "E5L3_NAME"
 { 
 	author = "$E5L3_SUBTITLE"
-	levelnum = 42
-    	titlepatch = CWILV51
-	next = MAP43
-	secretnext = MAP43
+	levelnum = 46
+	next = E5L4
+	secretnext = E5L4
 	sky1 = "JSKY1", 0
 	cluster = 5
 	music = Holidaius
@@ -56,21 +55,22 @@ map E5L3 lookup "E5L3_NAME"
 	enterpic = "XmasInte"
 }
 
-map MAP44 "Holidaius Mountains"
-{ 
-	levelnum = 44
+map E5L4 lookup "E5L4_NAME"
+{
+	author = "$E5L4_SUBTITLE"
+	levelnum = 47
 	next = MAP45
 	secretnext = MAP45
-	sky1 = "JSKY5", 0
+	sky1 = "NIGHT", 0
 	cluster = 5
-	music = SILENTNIGHT
+	music = SilentNight
 	exitpic = "XmasInte"
 	enterpic = "XmasInte"
 }
 
 map MAP47 "Burrowsville"
 { 
-	levelnum = 47
+	levelnum = 48
 	next = Map47 //MAP48
 	secretnext = Map47 //MAP48
 	sky1 = "JSKY3", 0
@@ -83,9 +83,9 @@ map MAP47 "Burrowsville"
 map E5SL2 lookup "E5SL2_NAME"
 { 
 	author = "$E5SL2_SUBTITLE"
-	levelnum = 47
-	next = MAP43
-	secretnext = MAP48
+	levelnum = 67
+	next = E5L4
+	secretnext = E5L4
 	sky1 = "NAKASKY", 0
 	cluster = 5
 	par = 30
