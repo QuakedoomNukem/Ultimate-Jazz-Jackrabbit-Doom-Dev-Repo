@@ -21,7 +21,7 @@
 **/
 
 //PADS
-Actor RedPadLowModel : CustomInventory 25637
+Actor RedPadLowModel : CustomInventory
 {
 	Radius 32
 	Height 16
@@ -53,7 +53,6 @@ Actor RedPadLowModel2
 	Radius 32
 	Height 16
 	-SOLID
-	-BRIGHT
 	States
 	{
 	Spawn:
@@ -63,10 +62,10 @@ Actor RedPadLowModel2
 	}
 }
 
-Actor RedPadHighModel : RedPadLowModel 3813 //3905
+Actor RedPadHighModel : RedPadLowModel
 {
-States
-{
+	States
+	{
 	HoldAndDestroy:
 		RPAD A 0 A_SpawnItemEx("RedPadHighModel2")
 		RPAD A 0 A_StartSound("BOING")
@@ -89,12 +88,11 @@ Actor RedPadHighModel2 : RedPadLowModel2
 	}
 }
 
-Actor GreenPadLowModel : RedPadLowModel 25634 //3906
+Actor GreenPadLowModel : RedPadLowModel
 {
 	Radius 32
 	Height 16
 	-SOLID
-	-BRIGHT
 	States
 	{
 	Spawn:
@@ -122,10 +120,10 @@ Actor GreenPadLowModel2 : RedPadLowModel2
 	}
 }
 
-Actor GreenPadHighModel : RedPadLowModel 3814
+Actor GreenPadHighModel : RedPadLowModel
 {
-States
-{
+	States
+	{
 	Spawn:
 		GPAD A 1
 		Loop
@@ -151,12 +149,11 @@ Actor GreenPadHighModel2 : RedPadLowModel2
 	}
 }
 
-Actor BluePadLowModel : RedPadLowModel 25635 //3907
+Actor BluePadLowModel : RedPadLowModel
 {
 	Radius 32
 	Height 16
 	-SOLID
-	-BRIGHT
 	States
 	{
 	Spawn:
@@ -184,7 +181,7 @@ Actor BluePadLowModel2 : RedPadLowModel2
 	}
 }
 
-Actor BluePadHighModel : RedPadLowModel 3815
+Actor BluePadHighModel : RedPadLowModel
 {
 	States
 	{
@@ -210,14 +207,14 @@ Actor BluePadHighModel2 : RedPadLowModel2
 	}
 }
 
-Actor HoverRedPadModel : CustomInventory 3811
+Actor HoverRedPadModel : CustomInventory
 {
 	+INVENTORY.QUIET
 	+INVENTORY.ALWAYSPICKUP
 	+INVENTORY.AUTOACTIVATE
-	FloatBobStrength 0.2
 	+FLOATBOB
 	+NOGRAVITY
+	FloatBobStrength 0.2
 	Inventory.PickupMessage ""
 	Inventory.Amount 0
 	Inventory.MaxAmount 0
@@ -242,7 +239,6 @@ Actor HoverRedPadModel2
 	Radius 32
 	Height 12
 	FloatBobStrength 0.2
-	-BRIGHT
 	-SOLID
 	+FLOATBOB
 	+NOGRAVITY
@@ -255,7 +251,7 @@ Actor HoverRedPadModel2
 	}
 }
 
-Actor HoverGreenPadModel : HoverRedPadModel 3812
+Actor HoverGreenPadModel : HoverRedPadModel
 {
 	States
 	{
@@ -284,7 +280,7 @@ Actor HoverGreenPadModel2 : HoverRedPadModel2
 	}
 }
 
-Actor HoverPurplePadModel : HoverRedPadModel 3810
+Actor HoverPurplePadModel : HoverRedPadModel
 {
 	States
 	{
@@ -314,14 +310,14 @@ Actor HoverPurplePadModel2 : HoverRedPadModel2
 }
 
 //COOKIES
-Actor CookiemanSpawner : RandomSpawner 4107
+Actor CookiemanSpawner : RandomSpawner
 {
     DropItem "Cookieman01model"
     DropItem "Cookieman02model"
     DropItem "Cookieman03model"
 }
 
-Actor Cookieman01model 4104
+Actor Cookieman01model
 {
 	Height 64
 	Radius 16
@@ -334,7 +330,7 @@ Actor Cookieman01model 4104
 	}
 }
 
-Actor Cookieman02model : Cookieman01model 4105
+Actor Cookieman02model : Cookieman01model
 {
 	States
 	{
@@ -344,7 +340,7 @@ Actor Cookieman02model : Cookieman01model 4105
 	}
 }
 
-Actor Cookieman03model : Cookieman01model 4106
+Actor Cookieman03model : Cookieman01model
 {
 	States
 	{
@@ -355,7 +351,7 @@ Actor Cookieman03model : Cookieman01model 4106
 }
 
 //OTHERS
-Actor MedivoModel 3317
+Actor MedivoModel
 {
 	Height 48
 	Radius 14
@@ -369,7 +365,7 @@ Actor MedivoModel 3317
 	}
 }
 
-Actor MedivoFloorModel : MedivoModel 3319
+Actor MedivoFloorModel : MedivoModel
 {
 	Height 30
 	Radius 12
@@ -381,11 +377,11 @@ Actor MedivoFloorModel : MedivoModel 3319
 	}
 }
 
-Actor MedivoCeilingModel : MedivoModel 3320
+Actor MedivoCeilingModel : MedivoModel
 {
-	+SPAWNCEILING
 	Height 30
 	Radius 12
+	+SPAWNCEILING
 	States
 	{
 	Spawn:

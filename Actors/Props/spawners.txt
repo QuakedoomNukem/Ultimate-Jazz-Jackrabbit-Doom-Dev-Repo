@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-Actor BigMushroomSpawner 3275
+Actor BigMushroomSpawner
 {
 	Height 56
 	Radius 12
@@ -46,7 +46,7 @@ Actor BigMushroomSpawner 3275
 	}
 }
 
-Actor SmallMushroomSpawner : BigMushroomSpawner 3276
+Actor SmallMushroomSpawner : BigMushroomSpawner
 {
 	Height 24
 	Radius 10
@@ -123,7 +123,7 @@ Actor CastleArmourBroke
 	}
 }
 
-Actor CastleArmorSpawner 3393
+Actor CastleArmorSpawner
 {
 	States
 	{
@@ -139,7 +139,7 @@ Actor CastleArmorSpawner 3393
 	}
 }
 
-Actor CocoBunny1 3417
+Actor CocoBunny1
 {
 	Height 64
 	Radius 24
@@ -158,7 +158,7 @@ Actor CocoBunny1 3417
 	}
 }
 
-Actor CocoBunny2 : CocoBunny1 3418
+Actor CocoBunny2 : CocoBunny1
 {
 	Height 72
 	States
@@ -169,7 +169,7 @@ Actor CocoBunny2 : CocoBunny1 3418
 	}
 }
 
-Actor DiamondusFlowerSpawner : SimpleActor 3953 //zscript inheritances
+Actor DiamondusFlowerSpawner : SimpleActor
 {
 	States
 	{
@@ -197,7 +197,7 @@ Actor DiamondusFlowerSpawner : SimpleActor 3953 //zscript inheritances
 	}
 }
 
-Actor DiamondusTreeSpawner : SimpleActor 3952 //zscript inheritances
+Actor DiamondusTreeSpawner : SimpleActor
 {
 	States
 	{
@@ -219,7 +219,7 @@ Actor DiamondusTreeSpawner : SimpleActor 3952 //zscript inheritances
 	}
 }
 
-Actor DreamlandGrassSpawner 31525
+Actor DreamlandGrassSpawner
 {
 	Height 16
 	Radius 8
@@ -241,7 +241,7 @@ Actor DreamlandGrassSpawner 31525
 	}
 }
 
-Actor DreamlandSuckerSpawner 3912
+Actor DreamlandSuckerSpawner
 {
 	Height 64
 	Radius 8
@@ -264,7 +264,7 @@ Actor DreamlandSuckerSpawner 3912
 	}
 }
 
-Actor DreamlandSuckerSpawner2 : DreamlandSuckerSpawner 3914
+Actor DreamlandSuckerSpawner2 : DreamlandSuckerSpawner
 {
 	States
 	{
@@ -286,7 +286,7 @@ Actor DreamlandSuckerSpawner2 : DreamlandSuckerSpawner 3914
 	}
 }
 
-Actor FlowerSpawner 3303
+Actor FlowerSpawner
 {
 	Height 16
 	Radius 8
@@ -308,7 +308,7 @@ Actor FlowerSpawner 3303
 	}
 }
 
-Actor GreenSpikeSpawner : FlowerSpawner 3310
+Actor GreenSpikeSpawner : FlowerSpawner
 {
 	Height 8
 	States
@@ -337,7 +337,7 @@ Actor GreenSpikeSpawner : FlowerSpawner 3310
 	}
 }
 
-Actor JazzStuffTwo 32493
+Actor JazzStuffTwo
 {
 	Radius 10
 	Height 8
@@ -364,7 +364,7 @@ Actor JazzStuffTwo 32493
 	}
 }
 
-Actor LagunicusRockSpawner 3878
+Actor LagunicusRockSpawner
 {
 	Height 8
 	Radius 16
@@ -386,7 +386,7 @@ Actor LagunicusRockSpawner 3878
 	}
 }
 
-Actor LagunicusStarfishSpawner : LagunicusRockSpawner 3877
+Actor LagunicusStarfishSpawner : LagunicusRockSpawner
 {
 	States
 	{
@@ -408,7 +408,7 @@ Actor LagunicusStarfishSpawner : LagunicusRockSpawner 3877
 	}
 }
 
-Actor LoogieSpawner 3795
+Actor LoogieSpawner
 {
 	Radius 8
 	Height 16
@@ -425,7 +425,7 @@ Actor LoogieSpawner 3795
 	}
 }
 
-Actor MedivoRemixFlagSpawner : SimpleActor 4012 //zscript inheritances
+Actor MedivoRemixFlagSpawner : SimpleActor
 {
 	Height 56
 	Radius 4
@@ -447,7 +447,7 @@ Actor MedivoRemixFlagSpawner : SimpleActor 4012 //zscript inheritances
 	}
 }
 
-Actor PoopSpawner 3837
+Actor PoopSpawner
 {
 	Height 0
 	Radius 16
@@ -468,7 +468,7 @@ Actor PoopSpawner 3837
 	}
 }
 
-Actor RaneforesCactusSpawner 3884
+Actor RaneforesCactusSpawner
 {
 	Height 8
 	Radius 16
@@ -490,7 +490,7 @@ Actor RaneforesCactusSpawner 3884
 	}
 }
 
-Actor SpikeBallSpawner 3308
+Actor SpikeBallSpawner
 {
 	Height 8
 	Radius 8
@@ -509,7 +509,7 @@ Actor SpikeBallSpawner 3308
 	}
 }
 
-Actor TubeRemixSkyboxTowers 3971
+Actor TubeRemixSkyboxTowers
 {
 	States
 	{
@@ -528,7 +528,7 @@ Actor TubeRemixSkyboxTowers 3971
 	}
 }
 
-Actor XmasBlockSpawner 4083
+Actor XmasBlockSpawner
 {
 	Height 32
 	Radius 16
