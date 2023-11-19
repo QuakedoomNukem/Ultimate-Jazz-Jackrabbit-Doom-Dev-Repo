@@ -52,7 +52,7 @@ map E5L3 lookup "E5L3_NAME"
 	cluster = 5
 	music = Holidaius
 	exitpic = "XmasInte"
-	enterpic = "XmasInte"
+	enterpic = "INTMAP42"
 }
 
 map E5L4 lookup "E5L4_NAME"
@@ -65,7 +65,7 @@ map E5L4 lookup "E5L4_NAME"
 	cluster = 5
 	music = SilentNight
 	exitpic = "XmasInte"
-	enterpic = "XmasInte"
+	enterpic = "INTMAP42"
 }
 
 map MAP47 "Burrowsville"
