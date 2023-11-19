@@ -38,10 +38,10 @@ Virgilio "Ozymandias81" Virzo
 Additional Programming
 
 Maxim "DoomJedi" Genis
-TBA
+Additional Art
 
 "Talon1024"
-TBA
+Additional Programming
 
 
 Music
