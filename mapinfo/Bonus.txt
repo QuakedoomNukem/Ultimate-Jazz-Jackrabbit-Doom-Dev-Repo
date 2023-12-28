@@ -19,12 +19,11 @@ DefaultMap
 
 map BONUS01 "Bonus Stage 1"
 {
-	levelnum = 71
+	levelnum = 201
 	next = E1L3
 	secretnext = E1L3
 	sky1 = "BONSKY", 0
 	cluster = 66
-	par = 180
 	music = JJ1Bonus
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
@@ -32,12 +31,11 @@ map BONUS01 "Bonus Stage 1"
 
 map BONUS02 "Bonus Stage 2"
 { 
-	levelnum = 72
+	levelnum = 202
 	next = E1L7
 	secretnext = E1L7
 	sky1 = "BONSKY2", 0
 	cluster = 66
-	par = 180
 	music = JJ1Bonus
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
@@ -45,12 +43,11 @@ map BONUS02 "Bonus Stage 2"
 
 map BONUS03 "Bonus Stage 3"
 { 
-	levelnum = 73
+	levelnum = 203
 	next = E2L3
 	secretnext = E2L3
 	sky1 = "BONSKY3", 0
 	cluster = 66
-	par = 180
 	music = JJ1Bonus
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
@@ -58,12 +55,11 @@ map BONUS03 "Bonus Stage 3"
 
 map BONUS04 "Bonus Stage 4"
 { 
-	levelnum = 74
+	levelnum = 204
 	next = E2L6
 	secretnext = E2L6
 	sky1 = "BONSKY4", 0
 	cluster = 66
-	par = 180
 	music = JJ1Bonus
 	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
@@ -71,7 +67,7 @@ map BONUS04 "Bonus Stage 4"
 
 map BONUS05 "Bonus Stage 5"
 { 
-	levelnum = 75
+	levelnum = 205
 	next = E3L3
 	secretnext = E3L3
 	sky1 = "BONSKY5", 0
@@ -83,7 +79,7 @@ map BONUS05 "Bonus Stage 5"
 
 map BONUS06 "Bonus Stage 6"
 { 
-	levelnum = 76
+	levelnum = 206
 	next = E3L9
 	secretnext = E3L9
 	sky1 = "BONSKY6", 0
@@ -95,7 +91,7 @@ map BONUS06 "Bonus Stage 6"
 
 map BONUS07 "Bonus Stage 7"
 { 
-	levelnum = 77
+	levelnum = 207
 	next = E4L2
 	secretnext = E4L2
 	sky1 = "BONSKY7", 0
@@ -107,7 +103,7 @@ map BONUS07 "Bonus Stage 7"
 
 map BONUS08 "Bonus Stage 8"
 { 
-	levelnum = 78
+	levelnum = 208
 	next = E4L9
 	secretnext = E4L9
 	sky1 = "BONSKY8", 0
