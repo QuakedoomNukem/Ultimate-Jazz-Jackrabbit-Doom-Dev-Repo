@@ -624,3 +624,19 @@ Actor XmasLantern
 		Loop
 	}
 }
+
+actor XmasTorch 4139
+{
+	Height 32
+	Radius 4
+	+BRIGHT
+	+SOLID
+	States
+	{
+	Spawn:
+		FRZT A 0 NoDelay A_StartSound("Torch", CHAN_AUTO, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
+	Spawn2:
+		FRZT ABC 3
+		loop
+	}
+}
