@@ -128,7 +128,7 @@ map E2L9 lookup "E2L9_NAME"
 
 map E2SL1 lookup "E2SL1_NAME"
 { 
-	levelnum = 53
+	levelnum = 103
 	next = E2L8
 	secretnext = E2SL2
 	sky1 = "polissky", 0
@@ -141,7 +141,7 @@ map E2SL1 lookup "E2SL1_NAME"
 map E2SL2 lookup "E2SL2_NAME"
 {
 	author = "$E2SL2_SUBTITLE"
-	levelnum = 54
+	levelnum = 104
 	next = E2L8
 	secretnext = E2L8
 	sky1 = "atlissky", 0
