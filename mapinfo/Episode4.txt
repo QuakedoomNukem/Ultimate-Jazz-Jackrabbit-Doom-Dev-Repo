@@ -181,7 +181,7 @@ map E4L13 lookup "E4L13_NAME"
 
 map E4SL1 lookup "E4SL1_NAME"
 { 
-	levelnum = 57
+	levelnum = 107
 	next = E4L7
 	secretnext = E4SL2
 	sky1 = "FRCLSKY", 0
