@@ -25,7 +25,7 @@ hub
 
 map E4SL2 lookup "E4SL2_NAME"
 { 
-	levelnum = 58
+	levelnum = 108
 	cluster = 65
 	sky1 = "HUBSKY", 0
 	music = "HUBTRK"
@@ -35,7 +35,7 @@ map E4SL2 lookup "E4SL2_NAME"
 
 map E4SL2A lookup "E4SL2_NAME"
 { 
-	levelnum = 59
+	levelnum = 109
 	cluster = 65
 	sky1 = "EarthSky", 0
 	music = "EARTHTRCK"
@@ -45,7 +45,7 @@ map E4SL2A lookup "E4SL2_NAME"
 
 map E4SL2B lookup "E4SL2_NAME"
 { 
-	levelnum = 60
+	levelnum = 110
 	cluster = 65
 	sky1 = "FIRESKY", 0
 	music = "FIRETRCK"
@@ -55,7 +55,7 @@ map E4SL2B lookup "E4SL2_NAME"
 
 map E4SL2C lookup "E4SL2_NAME"
 { 
-	levelnum = 61
+	levelnum = 111
 	cluster = 65
 	sky1 = "WATERSKY", 0
 	music = "WATERTRK"
@@ -65,7 +65,7 @@ map E4SL2C lookup "E4SL2_NAME"
 
 map E4SL2D lookup "E4SL2_NAME"
 { 
-	levelnum = 62
+	levelnum = 112
 	cluster = 65
 	sky1 = "WINDSKY", 0
 	music = "WINDTRCK"
@@ -75,7 +75,7 @@ map E4SL2D lookup "E4SL2_NAME"
 
 map E4SL2E lookup "E4SL2_NAME"
 { 
-	levelnum = 63
+	levelnum = 113
 	cluster = 65
 	sky1 = "DARKSKY", 0
 	music = "SHADWTRK"
@@ -85,7 +85,7 @@ map E4SL2E lookup "E4SL2_NAME"
 
 map E4SL2F lookup "E4SL2_NAME"
 { 
-	levelnum = 64
+	levelnum = 114
 	cluster = 65
 	sky1 = "LIGHTSKY", 0
 	music = "LIGHTRCK"
@@ -95,7 +95,7 @@ map E4SL2F lookup "E4SL2_NAME"
 
 map E4SL2G lookup "E4SL2_NAME"
 { 
-	levelnum = 65
+	levelnum = 115
 	next = E4L7
 	secretnext = E4L7
 	cluster = 65
