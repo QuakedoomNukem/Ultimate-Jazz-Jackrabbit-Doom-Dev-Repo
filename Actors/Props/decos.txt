@@ -1183,7 +1183,7 @@ Actor DeadDaisy
 	{
 	Spawn:
 		BUNN A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -1776,7 +1776,7 @@ Actor EasterBasket1
 	}
 }
 
-Actor EasterBasket2 : EasterBasket1
+Actor EasterBasket2 : EasterBasket1 3416
 {
 	Height 28
 	States
@@ -1787,7 +1787,7 @@ Actor EasterBasket2 : EasterBasket1
 	}
 }
 
-Actor EasterBasket3 : EasterBasket1
+Actor EasterBasket3 : EasterBasket1 3419
 {
 	States
 	{
@@ -1797,7 +1797,7 @@ Actor EasterBasket3 : EasterBasket1
 	}
 }
 
-Actor EasterBeet
+Actor EasterBeet 3427
 {
 	Height 28
 	Radius 24
@@ -1810,7 +1810,7 @@ Actor EasterBeet
 	}
 }
 
-Actor EasterCarrotPillar
+Actor EasterCarrotPillar 3425
 {
 	Height 80
 	Radius 12
@@ -1823,7 +1823,7 @@ Actor EasterCarrotPillar
 	}
 }
 
-Actor EasterCarrotCeiling
+Actor EasterCarrotCeiling 3426
 {
 	Height 64
 	Radius 12
@@ -1838,7 +1838,7 @@ Actor EasterCarrotCeiling
 	}
 }
 
-Actor EasterPlant1
+Actor EasterPlant1 3424
 {
 	Height 100
 	Radius 8
@@ -1852,7 +1852,7 @@ Actor EasterPlant1
 	}
 }
 
-Actor EasterPumpkins
+Actor EasterPumpkins 3429
 {
 	Height 24
 	Radius 20
@@ -1865,7 +1865,7 @@ Actor EasterPumpkins
 	}
 }
 
-Actor EasterTree
+Actor EasterTree 3423
 {
 	Height 160
 	Radius 12
@@ -1878,7 +1878,7 @@ Actor EasterTree
 	}
 }
 
-Actor EasterTree1 : EasterTree
+Actor EasterTree1 : EasterTree 3430
 {
 	Height 72
 	States
@@ -1889,7 +1889,7 @@ Actor EasterTree1 : EasterTree
 	}
 }
 
-Actor EasterTree2 : EasterTree
+Actor EasterTree2 : EasterTree 3431
 {
 	Height 28
 	States
@@ -1900,7 +1900,7 @@ Actor EasterTree2 : EasterTree
 	}
 }
 
-Actor EasterTree3 : EasterTree
+Actor EasterTree3 : EasterTree 3432
 {
 	Height 56
 	States
@@ -1911,7 +1911,7 @@ Actor EasterTree3 : EasterTree
 	}
 }
 
-Actor EasterTree4 : EasterTree
+Actor EasterTree4 : EasterTree 3433
 {
 	Height 120
 	Radius 8
@@ -1923,7 +1923,7 @@ Actor EasterTree4 : EasterTree
 	}
 }
 
-Actor EasterusCastle
+Actor EasterusCastle 3929
 {
 	Height 192
 	Radius 16
@@ -1936,7 +1936,7 @@ Actor EasterusCastle
 	}
 }
 
-Actor EasterusStock
+Actor EasterusStock 3930
 {
 	Height 224
 	Radius 16
@@ -1948,7 +1948,7 @@ Actor EasterusStock
 	}
 }
 
-Actor EEFish
+Actor EEFish 3859
 {
 	Height 2
 	Radius 16
@@ -1961,7 +1961,7 @@ Actor EEFish
 	}
 }
 
-Actor EEMermaid
+Actor EEMermaid 3858
 {
 	Height 82
 	Radius 16
@@ -1975,7 +1975,7 @@ Actor EEMermaid
 	}
 }
 
-Actor Egg1
+Actor Egg1 3420
 {
 	Height 16
 	Radius 8
@@ -1988,7 +1988,7 @@ Actor Egg1
 	}
 }
 
-Actor Egg2 : Egg1
+Actor Egg2 : Egg1 3421
 {
 	Height 24
 	States
@@ -1999,7 +1999,7 @@ Actor Egg2 : Egg1
 	}
 }
 
-Actor Egg3 : Egg1
+Actor Egg3 : Egg1 3422
 {
 	Radius 12
 	States
@@ -2010,7 +2010,7 @@ Actor Egg3 : Egg1
 	}
 }
 
-Actor ElectricPillar
+Actor ElectricPillar 3289
 {
 	Height 60
 	Radius 12
@@ -2027,7 +2027,7 @@ Actor ElectricPillar
 	}
 }
 
-Actor EvaEarlong
+Actor EvaEarlong 25629
 {
 	Radius 16
 	Height 52
@@ -2041,7 +2041,7 @@ Actor EvaEarlong
 	}
 }
 
-Actor EvaPillar
+Actor EvaPillar 3396
 {
 	Height 155
 	Radius 24
@@ -2054,7 +2054,7 @@ Actor EvaPillar
 	}
 }
 
-Actor ExitSign
+Actor ExitSign 3984 //Candelabra Replaces Candelabra 35
 {
 	Radius 12
 	Height 30
@@ -2067,7 +2067,7 @@ Actor ExitSign
 	}
 }
 
-Actor ExoticusCeilBlade
+Actor ExoticusCeilBlade 32541
 {
 	Radius 24
 	Height 62
@@ -2082,7 +2082,7 @@ Actor ExoticusCeilBlade
 	}
 }
 
-Actor ExoticusFlBlade
+Actor ExoticusFlBlade 32542
 {
 	Radius 8
 	Height 32
@@ -2095,7 +2095,7 @@ Actor ExoticusFlBlade
 	}
 }
 
-Actor FanolintPlant1
+Actor FanolintPlant1 3218
 {
 	Radius 16
 	Height 48
@@ -2108,7 +2108,7 @@ Actor FanolintPlant1
 	}
 }
 
-Actor FanolintPlant2 : FanolintPlant1
+Actor FanolintPlant2 : FanolintPlant1 3219
 {
 	Radius 12
 	Height 20
@@ -2120,7 +2120,7 @@ Actor FanolintPlant2 : FanolintPlant1
 	}
 }
 
-Actor FanolintPlant3 : FanolintPlant1
+Actor FanolintPlant3 : FanolintPlant1 3220
 {
 	Radius 8
 	States
@@ -2131,7 +2131,7 @@ Actor FanolintPlant3 : FanolintPlant1
 	}
 }
 
-Actor FanolintPlant4 : FanolintPlant1
+Actor FanolintPlant4 : FanolintPlant1 3221
 {
 	Height 8
 	-SOLID
@@ -2143,7 +2143,7 @@ Actor FanolintPlant4 : FanolintPlant1
 	}
 }
 
-Actor FanolintSpike
+Actor FanolintSpike 3222
 {
 	Radius 8
 	Height 16
@@ -2156,7 +2156,7 @@ Actor FanolintSpike
 	}
 }
 
-Actor GardenBush2
+Actor GardenBush2 32488
 {
 	Radius 8
 	Height 32
@@ -2169,7 +2169,7 @@ Actor GardenBush2
 	}
 }
 
-Actor GardenBush3
+Actor GardenBush3 32487
 {
 	Radius 12
 	Height 128
@@ -2182,7 +2182,7 @@ Actor GardenBush3
 	}
 }
 
-Actor GardenTree1
+Actor GardenTree1 32491
 {
 	Radius 12
 	Height 120
@@ -2195,7 +2195,7 @@ Actor GardenTree1
 	}
 }
 
-Actor GardenTree2 : GardenTree1
+Actor GardenTree2 : GardenTree1 32490
 {
 	Height 64
 	States
@@ -2206,7 +2206,7 @@ Actor GardenTree2 : GardenTree1
 	}
 }
 
-Actor GBAStool
+Actor GBAStool 3723
 {
 	Height 24
 	Radius 8
@@ -2219,7 +2219,7 @@ Actor GBAStool
 	}
 }
 
-Actor GiantSpaz
+Actor GiantSpaz 3607
 {
 	Height 64
 	Radius 24
@@ -2232,7 +2232,7 @@ Actor GiantSpaz
 	}
 }
 
-Actor Gossamer
+Actor Gossamer 3785
 {
 	Height 76
 	Radius 16
@@ -2245,7 +2245,7 @@ Actor Gossamer
 	}
 }
 
-Actor GraveStone1
+Actor GraveStone1 3434
 {
 	Height 32
 	Radius 16
@@ -2258,7 +2258,7 @@ Actor GraveStone1
 	}
 }
 
-Actor GraveStone2 : GraveStone1
+Actor GraveStone2 : GraveStone1 3435
 {
 	Height 56
 	States
@@ -2269,7 +2269,7 @@ Actor GraveStone2 : GraveStone1
 	}
 }
 
-Actor GRoomDoll
+Actor GRoomDoll 3208
 {
 	Radius 16
 	Height 16
@@ -2282,7 +2282,7 @@ Actor GRoomDoll
 	}
 }
 
-Actor HangingWire1
+Actor HangingWire1 3986  //NonSOLIDMeat5 Replaces NonSOLIDMeat5 62
 {
 	Height 92
 	Radius 8
@@ -2296,9 +2296,10 @@ Actor HangingWire1
 	}
 }
 
-Actor HangingWire1SOLID : HangingWire1 { +SOLID }
+Actor HangingWire1SOLID : HangingWire1 3987 //Meat5 Replaces Meat5 53
+{ +SOLID }
 
-Actor HangingWire2 : HangingWire1
+Actor HangingWire2 : HangingWire1 3988 //NonSOLIDMeat4 Replaces NonSOLIDMeat4 60
 {
 	Height 76
 	States
@@ -2309,9 +2310,10 @@ Actor HangingWire2 : HangingWire1
 	}
 }
 
-Actor HangingWire2SOLID : HangingWire2 { +SOLID }
+Actor HangingWire2SOLID : HangingWire2 3989 //Meat4 Replaces Meat4 52
+{ +SOLID }
 
-Actor HangingWire3 : HangingWire1
+Actor HangingWire3 : HangingWire1 3991 //HangingCorpse Replaces HangingCorpse 51
 {
 	Height 56
 	States
@@ -2322,9 +2324,10 @@ Actor HangingWire3 : HangingWire1
 	}
 }
 
-Actor HangingWire3SOLID : HangingWire3 { +SOLID }
+Actor HangingWire3SOLID : HangingWire3 3992 //NonSOLIDMeat3 Replaces NonSOLIDMeat3 61
+{ +SOLID }
 
-Actor HansProp
+Actor HansProp 28734
 {
 	Height 104
 	Radius 24
@@ -2337,7 +2340,7 @@ Actor HansProp
 	}
 }
 
-Actor HauntedChimny
+Actor HauntedChimny 3437
 {
 	Height 84
 	Radius 12
@@ -2350,7 +2353,7 @@ Actor HauntedChimny
 	}
 }
 
-Actor HauntedGargoyle
+Actor HauntedGargoyle 3436
 {
 	Height 24
 	Radius 16
@@ -2363,7 +2366,7 @@ Actor HauntedGargoyle
 	}
 }
 
-Actor HauntedPlant1
+Actor HauntedPlant1 3774
 {
 	Height 64
 	Radius 16
@@ -2376,7 +2379,7 @@ Actor HauntedPlant1
 	}
 }
 
-Actor HauntedPlant2
+Actor HauntedPlant2 3775
 {
 	Height 64
 	Radius 16
@@ -2389,7 +2392,7 @@ Actor HauntedPlant2
 	}
 }
 
-Actor HauntedPlant3
+Actor HauntedPlant3 3776
 {
 	Height 32
 	Radius 16
@@ -2402,7 +2405,7 @@ Actor HauntedPlant3
 	}
 }
 
-Actor HauntedPlant4
+Actor HauntedPlant4 3777
 {
 	Height 30
 	Radius 14
@@ -2415,7 +2418,7 @@ Actor HauntedPlant4
 	}
 }
 
-Actor HauntedTree
+Actor HauntedTree 3438
 {
 	Height 420
 	Radius 32
@@ -2428,7 +2431,7 @@ Actor HauntedTree
 	}
 }
 
-Actor HellBody1
+Actor HellBody1 3269
 {
 	Height 0
 	Radius 16
@@ -2437,11 +2440,11 @@ Actor HellBody1
 	{
 	Spawn:
 		JZSK A -1
-		Stop
+		Loop //intended?
 	}
 }
 
-Actor HellBody2 : HellBody1
+Actor HellBody2 : HellBody1 3270
 {
 	Height 24
 	Radius 12
@@ -2450,51 +2453,51 @@ Actor HellBody2 : HellBody1
 	{
 	Spawn:
 		JZSK B -1
-		Stop
+		Loop //intended?
 	}
 }
 
-Actor HellBody3 : HellBody1
+Actor HellBody3 : HellBody1 3271
 {
 	States
 	{
 	Spawn:
 		JZSK C -1
-		Stop
+		Loop //intended?
 	}
 }
 
-Actor HellBody4 : HellBody1
+Actor HellBody4 : HellBody1 3272
 {
 	States
 	{
 	Spawn:
 		JZSK D -1
-		Stop
+		Loop //intended?
 	}
 }
 
-Actor HellBody5 : HellBody1
+Actor HellBody5 : HellBody1 3273
 {
 	States
 	{
 	Spawn:
 		JZSK E -1
-		Stop
+		Loop //intended?
 	}
 }
 
-Actor HellBody6 : HellBody1
+Actor HellBody6 : HellBody1 3274
 {
 	States
 	{
 	Spawn:
 		JZSK F -1
-		Stop
+		Loop //intended?
 	}
 }
 
-Actor HellPillar
+Actor HellPillar 23331 //Techpillar
 {
 	Radius 8
 	Height 128
@@ -2507,7 +2510,7 @@ Actor HellPillar
 	}
 }
 
-Actor HellSkull
+Actor HellSkull 32544
 {
 	Radius 56
 	Height 96
@@ -2520,7 +2523,7 @@ Actor HellSkull
 	}
 }
 
-Actor HellStag2
+Actor HellStag2 3286
 {
 	Height 120
 	Radius 56
@@ -2535,7 +2538,7 @@ Actor HellStag2
 	}
 }
 
-Actor HellStag3 : HellStag2
+Actor HellStag3 : HellStag2 3287
 {
 	Height 90
 	Radius 10
@@ -2547,7 +2550,7 @@ Actor HellStag3 : HellStag2
 	}
 }
 
-Actor Helltree
+Actor Helltree 3983 //33
 {
 	Radius 16
 	Height 128
@@ -2561,7 +2564,7 @@ Actor Helltree
 	}
 }
 
-Actor HHPrize1
+Actor HHPrize1 3364
 {
 	Height 16
 	Radius 16
@@ -2574,7 +2577,7 @@ Actor HHPrize1
 	}
 }
 
-Actor HHPrize2 : HHPrize1
+Actor HHPrize2 : HHPrize1 3365
 {
 	States
 	{
@@ -2584,7 +2587,7 @@ Actor HHPrize2 : HHPrize1
 	}
 }
 
-Actor HocusPocus
+Actor HocusPocus 32540
 {
 	Radius 16
 	Height 30
@@ -2597,7 +2600,7 @@ Actor HocusPocus
 	}
 }
 
-Actor IcarusPlush
+Actor IcarusPlush 3374
 {
 	Height 16
 	Radius 16
@@ -2611,7 +2614,7 @@ Actor IcarusPlush
 	}
 }
 
-Actor IndustriusSign
+Actor IndustriusSign 3195
 {
 	Radius 6
 	Height 96
@@ -2624,7 +2627,7 @@ Actor IndustriusSign
 	}
 }
 
-Actor IndustriusSpike
+Actor IndustriusSpike 3196
 {
 	Radius 8
 	Height 16
@@ -2637,7 +2640,7 @@ Actor IndustriusSpike
 	}
 }
 
-Actor JackInABox
+Actor JackInABox 3606
 {
 	Height 72
 	Radius 20
@@ -2650,7 +2653,7 @@ Actor JackInABox
 	}
 }
 
-Actor JazzFan
+Actor JazzFan 3253
 {
 	Radius 16
 	Height 64
@@ -2663,7 +2666,7 @@ Actor JazzFan
 	}
 }
 
-Actor JazzPillar
+Actor JazzPillar 3395
 {
 	Height 155
 	Radius 24
@@ -2676,7 +2679,7 @@ Actor JazzPillar
 	}
 }
 
-Actor JazzTree1
+Actor JazzTree1 3980 //TorchTree Replaces TorchTree //43
 {
 	Height 112
 	Radius 12
@@ -2689,7 +2692,7 @@ Actor JazzTree1
 	}
 }
 
-Actor JazzTree2 : JazzTree1
+Actor JazzTree2 : JazzTree1 3981 //BigTree Replaces BigTree //54
 {
 	States
 	{
@@ -2699,7 +2702,7 @@ Actor JazzTree2 : JazzTree1
 	}
 }
 
-Actor Jillee
+Actor Jillee 3905
 {
 	Height 64
 	Radius 16
@@ -2713,7 +2716,7 @@ Actor Jillee
 	}
 }
 
-Actor JJALupin
+Actor JJALupin 3838
 {
 	Height 48
 	Radius 12
@@ -2726,7 +2729,7 @@ Actor JJALupin
 	}
 }
 
-Actor JJAAstronaut : JJALupin
+Actor JJAAstronaut : JJALupin 3839
 {
 	Height 40
 	States
@@ -2737,7 +2740,7 @@ Actor JJAAstronaut : JJALupin
 	}
 }
 
-Actor JJAPilot : JJALupin
+Actor JJAPilot : JJALupin 3840
 {
 	Height 36
 	States
@@ -2748,7 +2751,7 @@ Actor JJAPilot : JJALupin
 	}
 }
 
-Actor JJAPolice : JJALupin
+Actor JJAPolice : JJALupin 3841
 {
 	Height 40
 	States
@@ -2759,7 +2762,7 @@ Actor JJAPolice : JJALupin
 	}
 }
 
-Actor JJAPolice2 : JJALupin
+Actor JJAPolice2 : JJALupin 3842
 {
 	Height 32
 	States
@@ -2770,7 +2773,7 @@ Actor JJAPolice2 : JJALupin
 	}
 }
 
-Actor JJAPrisoner : JJALupin
+Actor JJAPrisoner : JJALupin 3843
 {
 	Height 32
 	States
@@ -2781,7 +2784,7 @@ Actor JJAPrisoner : JJALupin
 	}
 }
 
-Actor JJAMajor : JJALupin
+Actor JJAMajor : JJALupin 3844
 {
 	Height 40
 	States
@@ -2815,7 +2818,7 @@ Actor JJAZoe : JJALupin 3846
 	}
 }
 
-Actor JBlack : JJALupin
+Actor JBlack : JJALupin 26557
 {
 	Scale 0.4
 	States
@@ -2826,7 +2829,7 @@ Actor JBlack : JJALupin
 	}
 }
 
-Actor JJThing1
+Actor JJThing1 16126
 {
 	Height 32
 	Radius 6
@@ -2839,7 +2842,7 @@ Actor JJThing1
 	}
 }
 
-Actor JJThing2
+Actor JJThing2 16125
 {
 	Height 192
 	Radius 12
@@ -2852,7 +2855,7 @@ Actor JJThing2
 	}
 }
 
-Actor JJThing3
+Actor JJThing3 16124
 {
 	Height 96
 	Radius 32
@@ -2865,7 +2868,7 @@ Actor JJThing3
 	}
 }
 
-Actor JJThing4
+Actor JJThing4 16123
 {
 	Height 96
 	Radius 32
@@ -2878,7 +2881,7 @@ Actor JJThing4
 	}
 }
 
-Actor JJThing5
+Actor JJThing5 16122
 {
 	Height 32
 	Radius 6
@@ -2891,7 +2894,7 @@ Actor JJThing5
 	}
 }
 
-Actor JJThing6
+Actor JJThing6 16121
 {
 	Height 16
 	Radius 4
@@ -2904,7 +2907,7 @@ Actor JJThing6
 	}
 }
 
-Actor JJThing7
+Actor JJThing7 16120
 {
 	Height 48
 	Radius 4
@@ -2917,7 +2920,7 @@ Actor JJThing7
 	}
 }
 
-Actor JJThing8
+Actor JJThing8 16100
 {
 	Height 16
 	Radius 8
@@ -2930,8 +2933,11 @@ Actor JJThing8
 	}
 }
 
-Actor JJThing9 : JJThing8
+Actor JJThing9 16101
 {
+	Height 16
+	Radius 8
+	+SOLID
 	States
 	{
 	Spawn:
@@ -2940,7 +2946,7 @@ Actor JJThing9 : JJThing8
 	}
 }
 
-Actor JJThing13
+Actor JJThing13 16105
 {
 	Height 80
 	Radius 12
@@ -2953,7 +2959,7 @@ Actor JJThing13
 	}
 }
 
-Actor JJThing20
+Actor JJThing20 16112
 {
 	Height 32
 	Radius 8
@@ -2966,7 +2972,7 @@ Actor JJThing20
 	}
 }
 
-Actor JJThing21
+Actor JJThing21 16113
 {
 	Height 20
 	Radius 10
@@ -2979,7 +2985,7 @@ Actor JJThing21
 	}
 }
 
-Actor JJThing22
+Actor JJThing22 16114
 {
 	Height 72
 	Radius 16
@@ -2992,7 +2998,7 @@ Actor JJThing22
 	}
 }
 
-Actor JJThing25
+Actor JJThing25 16117
 {
 	Height 160
 	Radius 40
@@ -3005,7 +3011,7 @@ Actor JJThing25
 	}
 }
 
-Actor JJThing26
+Actor JJThing26 16118
 {
 	Height 180
 	Radius 8
@@ -3550,7 +3556,7 @@ Actor LongGrass 3621
 	}
 }
 
-Actor Lori 3998
+Actor Lori 3998 //Actor replaces LiveStick 26
 {
 	Radius 16
 	Height 68
@@ -3626,7 +3632,7 @@ Actor Lublubprize 3386
 	}
 }
 
-Actor Major 3982
+Actor Major 3982 //Actor replaces FloatingSkull
 {
 	Radius 16
 	Height 48
@@ -3664,7 +3670,7 @@ Actor MarbCloudB : MarbCloudA 3405
 	}
 }
 
-Actor MarbleraCeilPillar1 3993
+Actor MarbleraCeilPillar1 3993 //HangTLookingDown Replaces HangTLookingDown 75
 {
 	Height 50
 	Radius 8
@@ -3679,7 +3685,7 @@ Actor MarbleraCeilPillar1 3993
 	}
 }
 
-Actor MarbleraCeilPillar2 : MarbleraCeilPillar1 3994
+Actor MarbleraCeilPillar2 : MarbleraCeilPillar1 3994 //HangBNoBrain Replaces HangBNoBrain 74
 {
 	Height 114
 	States
@@ -3690,7 +3696,7 @@ Actor MarbleraCeilPillar2 : MarbleraCeilPillar1 3994
 	}
 }
 
-Actor MarbleraCeilPillar3 : MarbleraCeilPillar1 3995
+Actor MarbleraCeilPillar3 : MarbleraCeilPillar1 3995 //HangNoGuts Replaces HangNoGuts 73
 {
 	Height 82
 	States
@@ -4485,7 +4491,7 @@ Actor PlantOne 18952
 	{
 	Spawn:
 		CRP4 A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -4954,7 +4960,7 @@ Actor ScrapSpike 3734
 	{
 	Spawn:
 		SCSP A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -5346,7 +5352,7 @@ Actor SnowmanProp 3309
 	}
 }
 
-Actor Spaz 3997
+Actor Spaz 3997 //Actor replaces ColonGibs 79
 {
 	Radius 16
 	Height 68
@@ -5366,7 +5372,7 @@ Actor Spike 18953
 	{
 	Spawn:
 		CRP2 A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -5606,7 +5612,7 @@ Actor StumpTwo 25282
 	{
 	Spawn:
 		BUNS A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -5617,7 +5623,7 @@ Actor StumpThree : StumpTwo 18950
 	{
 	Spawn:
 		BUNM A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -5676,7 +5682,7 @@ Actor TallPillarCarrot 3161
 	}
 }
 
-Actor TallPost 4000
+Actor TallPost 4000 //Techno Pillar 25629
 {
 	Radius 8
 	Height 112
@@ -5813,7 +5819,7 @@ Actor TemplePillar2 : TemplePillar1 3493
 	States
 	{
 	Spawn:
-		TEMP E -1
+		temp e -1
 		Stop
 	}
 }
@@ -5908,7 +5914,7 @@ Actor Tiki1 3291
 	{
 	Spawn:
 		TIKI A -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -5918,7 +5924,7 @@ Actor Tiki2 : Tiki1 3292
 	{
 	Spawn:
 		TIKI B -1
-		Stop
+		Loop //intended?
 	}
 }
 
@@ -6590,11 +6596,11 @@ Actor PlantPot 4123
 	}
 }
 
-Actor XmasDownTree 4129
+actor XmasDownTree 4129
 {
-	Height 32
-    Radius 32
-    +SOLID
+	height 32
+    radius 32
+    +Solid
 	States
 	{
 	Spawn:
@@ -6603,7 +6609,7 @@ Actor XmasDownTree 4129
 	}
 }
 
-Actor HolidayCar 4130
+actor HolidayCar 4130
 {
 	Radius 32
 	Height 64
@@ -6612,6 +6618,97 @@ Actor HolidayCar 4130
 	{
 	Spawn:
 		NLCV A -1
+		Stop
+	}
+}
+
+actor Xmashellpost3 4131
+{
+	height 128
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ A -1
+		Stop
+	}
+}
+
+actor Xmashellskull 4132
+{
+	height 128
+    radius 64
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ B -1
+		Stop
+	}
+}
+
+actor Xmashellbones 4133
+{
+	height 128
+    radius 64
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ c -1
+		Stop
+	}
+}
+
+actor Xmashelltree1 4134
+{
+	height 160
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ d -1
+		Stop
+	}
+}
+
+actor Xmashellpost1 4138
+{
+	height 160
+    radius 32
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ e -1
+		Stop
+	}
+}
+
+actor Xmasbonepost2 4136
+{
+	height 128
+    radius 32
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ f -1
+		Stop
+	}
+}
+
+actor Xmashelltree2 4137
+{
+	height 128
+    radius 32
+    +Solid
+	States
+	{
+	Spawn:
+		FRZZ g -1
 		Stop
 	}
 }
