@@ -145,7 +145,6 @@ map E3L11 lookup "E3L11_NAME"
 	secretnext = E3L12
 	sky1 = "JSKY2", 0
 	cluster = 3
-	par = 210
 	music = "CRYSILIS"
 	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP29"
@@ -165,7 +164,7 @@ map E3L12 lookup "E3L12_NAME"
 
 map E3SL1 lookup "E3SL1_NAME"
 { 
-	levelnum = 55
+	levelnum = 105
 	next = E3L6
 	secretnext = E3SL2
 	sky1 = "pollsky", 0
@@ -178,7 +177,7 @@ map E3SL1 lookup "E3SL1_NAME"
 map E3SL2 lookup "E3SL2_NAME"
 {
 	author = "$E3SL2_SUBTITLE"
-	levelnum = 56
+	levelnum = 106
 	next = E3L6
 	secretnext = E3L6
 	sky1 = "dreamsky", 0
