@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2023 BassSlapper89, QuakeDoomNukem, RichardDS90, Ozymandias81, Rolls3D
+ * Copyright (c) 2019-2023 BassSlapper89, QuakeDoomNukem, RichardDS90, Ozymandias81, Rolls3D, CacoBurger
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -386,6 +386,20 @@ Actor MedivoCeilingModel : MedivoModel
 	{
 	Spawn:
 		MEDM C -1
+		Stop
+	}
+}
+
+Actor ROTT_Pad
+{
+	Radius 32
+	Height 24
+	+NOGRAVITY
+	+SOLID
+	States
+	{
+	Spawn:
+		ROPD A -1
 		Stop
 	}
 }

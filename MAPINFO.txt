@@ -547,6 +547,7 @@ DoomEdNums
 	16133 = "JJShell"
 	16203 = "FreezeAmmo"
 	19020 = "SlicerAmmo"
+	20001 = "ROTT_Pad"
 	20002 = "Slicer"
 	22022 = "CheckSign"
 	23331 = "HellPillar"
