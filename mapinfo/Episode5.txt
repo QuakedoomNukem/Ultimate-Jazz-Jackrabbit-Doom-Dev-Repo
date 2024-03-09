@@ -47,7 +47,7 @@ map E5L3 lookup "E5L3_NAME"
 	author = "$E5L3_SUBTITLE"
 	levelnum = 46
 	next = E5L4
-	secretnext = E5L4
+	secretnext = E5SL1
 	sky1 = "JSKY1", 0
 	cluster = 5
 	music = Holidaius
@@ -70,7 +70,7 @@ map E5L4 lookup "E5L4_NAME"
 
 map E5L5 lookup "E5L5_NAME"
 {
-	author = "$E5L4_SUBTITLE"
+	author = "$E5L5_SUBTITLE"
 	levelnum = 48
 	next = E5L6
 	secretnext = E5L6
@@ -81,16 +81,30 @@ map E5L5 lookup "E5L5_NAME"
 	enterpic = "$JAZZ_IN"
 }
 
-map MAP47 "Burrowsville"
+map E5L6 lookup "E5L6_NAME"
 { 
+	author = "$E5L6_SUBTITLE"
 	levelnum = 49
-	next = Map47 //MAP48
-	secretnext = Map47 //MAP48
+	next = Map47
+	secretnext = Map47 
 	sky1 = "JSKY3", 0
 	cluster = 5
 	music = BURROWSVILLE
-	exitpic = "XmasInte"
-	enterpic = "XmasInte"
+	enterpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
+}
+
+map E5SL1 lookup "E5SL1_NAME"
+{ 
+	author = "$E5SL1_SUBTITLE"
+	levelnum = 116
+	next = E5L4
+	secretnext = E5SL2
+	sky1 = "ICE3SKY", 0
+	cluster = 5
+	music = ICEBOX3
+	enterpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
 }
 
 map E5SL2 lookup "E5SL2_NAME"
@@ -102,6 +116,6 @@ map E5SL2 lookup "E5SL2_NAME"
 	sky1 = "NAKASKY", 0
 	cluster = 5
 	music = DIEHARED
-	exitpic = "XmasInte"
-	enterpic = "XmasInte"
+	enterpic = "$JAZZ_IN"
+	enterpic = "$JAZZ_IN"
 }
