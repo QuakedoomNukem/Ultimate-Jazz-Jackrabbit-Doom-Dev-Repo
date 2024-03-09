@@ -217,6 +217,10 @@ E5L4_NAME = "\c[G1]Holidaius Mountains";
 E5L4_SUBTITLE = "";
 E5L5_NAME = "\c[P2]Cold As Heck";
 E5L5_SUBTITLE = "";
+E5L6_NAME = "\c Burrowsville";
+E5L6_SUBTITLE = "";
+E5SL1_NAME = "\c[E3]IceBox3";
+E5SL1_SUBTITLE = "";
 E5SL2_NAME = "\cgDie Hared";
 E5SL2_SUBTITLE = "";
 
