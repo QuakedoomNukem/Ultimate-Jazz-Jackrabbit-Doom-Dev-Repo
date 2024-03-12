@@ -372,8 +372,8 @@ actor BStoneLoot : CustomInventory 4153
 	States
 	{
 	Spawn:
-    LOOT B -1
-    sTOP
+    LOOT A -1
+    Stop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 500)
     Stop
@@ -390,8 +390,8 @@ actor BStoneXyOrb : CustomInventory 4154
 	States
 	{
 	Spawn:
-    XYTNC0 C -1
-    sTOP
+    XYTN A -1
+    Stop
 	Pickup:
 	TNT1 A 0 A_Giveinventory("Points", 5000)
     Stop
