@@ -94,3 +94,15 @@ end
 		Play dspstart
         stopsound      dspstop
 end
+
+:PolyOpen
+		Door 10
+		Play BSWALL
+		nostopcutoff
+end
+
+:PolyOpen
+		Door 11
+		PlayREPEAT WALLMOV
+		STOPSOUND WALLEND
+end

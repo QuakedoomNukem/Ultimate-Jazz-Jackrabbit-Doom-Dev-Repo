@@ -1834,3 +1834,145 @@ pic NAKAOFF tics 0
 warp2 texture TTLMAPBG
 warp texture DREAMSKY
 warp texture PSYSKY
+
+//Icebox 3
+
+texture ice1a
+pic ice1a tics 3
+pic ice1b tics 3
+pic ice1c tics 3
+pic ice1d tics 3
+pic ice1e tics 3
+pic ice1f tics 3
+pic ice1g tics 3
+
+texture ice2a
+pic ice2a tics 3
+pic ice2b tics 3
+pic ice2c tics 3
+pic ice2d tics 3
+pic ice2e tics 3
+pic ice2f tics 3
+pic ice2g tics 3
+pic ice2h tics 3
+pic ice2i tics 3
+pic ice2j tics 3
+
+texture ice3a
+pic ice3a tics 3
+pic ice3b tics 3
+pic ice3c tics 3
+pic ice3d tics 3
+pic ice3e tics 3
+pic ice3f tics 3
+
+TEXTURE ICE355A
+pic ICE355A tics 3
+pic ICE355B tics 3
+pic ICE355C tics 3
+pic ICE355D tics 3
+
+switch doom ICE312A
+on sound SWITCH1N
+pic ICE312B tics 0 
+
+switch doom ICE365A
+on sound SWITCH1N
+pic ICE365B tics 0 
+
+//Rise Of The Triad
+
+texture rott1a
+pic rott1a tics 7
+pic rott1b tics 7
+pic rott1c tics 7
+pic rott1d tics 7
+pic rott1e tics 7
+pic rott1f tics 7
+
+texture rott2a
+pic rott2a tics 7
+pic rott2b tics 7
+pic rott2c tics 7
+pic rott2d tics 7
+
+texture rott3a
+pic rott3a tics 7
+pic rott3b tics 7
+pic rott3c tics 7
+pic rott3d tics 7
+pic rott3e tics 7
+pic rott3f tics 7
+
+texture rott4a
+pic rott4a tics 4
+pic rott4b tics 4
+pic rott4c tics 4
+pic rott4d tics 4
+pic rott4e tics 4
+pic rott4f tics 4
+
+texture rott5a
+pic rott5a tics 7
+pic rott5b tics 7
+pic rott5c tics 7
+pic rott5d tics 7
+
+texture rott6a
+pic rott6a tics 7
+pic rott6b tics 7
+pic rott6c tics 7
+pic rott6d tics 7
+pic rott6e tics 7
+pic rott6f tics 7
+
+texture rott71a
+pic rott71a tics 4
+pic rott71b tics 4
+pic rott71c tics 4
+pic rott71d tics 4
+pic rott71e tics 4
+pic rott71f tics 4
+
+texture rott72a
+pic rott72a tics 4
+pic rott72b tics 4
+pic rott72c tics 4
+pic rott72d tics 4
+pic rott72e tics 4
+pic rott72f tics 4
+
+texture rott8a
+pic rott8a tics 7
+pic rott8b tics 7
+pic rott8c tics 7
+pic rott8d tics 7
+
+texture rott9a
+pic rott9a tics 7
+pic rott9b tics 7
+pic rott9c tics 7
+pic rott9d tics 7
+
+texture rott10a
+pic rott10a tics 7
+pic rott10b tics 7
+pic rott10c tics 7
+pic rott10d tics 7
+pic rott10e tics 7
+pic rott10f tics 7
+
+texture rott11a
+pic rott11a tics 7
+pic rott11b tics 7
+pic rott11c tics 7
+pic rott11d tics 7
+pic rott11e tics 7
+pic rott11f tics 7
+
+texture rott12a
+pic rott12a rand 5 12
+pic rott12b rand 5 12
+pic rott12c rand 5 12
+pic rott12d rand 5 12
+

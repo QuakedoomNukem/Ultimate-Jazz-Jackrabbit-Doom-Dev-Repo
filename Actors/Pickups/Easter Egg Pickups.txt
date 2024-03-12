@@ -363,3 +363,94 @@ Actor SODPickup : CustomInventory
 		Stop
 	}
 }
+
+actor BStoneLoot : CustomInventory 4153
+{
+	Inventory.PickupSound "BSLOOT"
+	Inventory.Pickupmessage "You picked up loot."
+	+CountItem
+	States
+	{
+	Spawn:
+    LOOT B -1
+    sTOP
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 500)
+    Stop
+	}
+}
+
+actor BStoneXyOrb : CustomInventory 4154
+{
+	Inventory.PickupSound  "BSORB"
+	Inventory.Pickupmessage "You picked up a Xylan Orb."
+	+CountItem
+	+Floatbob
+	+NoGravity
+	States
+	{
+	Spawn:
+    XYTNC0 C -1
+    sTOP
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 5000)
+    Stop
+	}
+}
+
+actor RottAnkh1 : CustomInventory 4183
+{
+	Inventory.PickupSound "G_LIFE2"
+	Inventory.Pickupmessage "You picked up a Low Ankh."
+	+CountItem
+	+nOgRAVITY
+	Scale 0.75
+	States
+	{
+	Spawn:
+    RTP2 A 2
+    RTP2 BCDEFGH 2 
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 50)
+    Stop
+	}
+}
+
+actor RottAnkh2 : CustomInventory 4184
+{
+	Inventory.PickupSound "G_LIFE2"
+	Inventory.Pickupmessage "You picked up a Medium Ankh."
+	+CountItem
+	+nOgRAVITY
+	Scale 0.75
+	States
+	{
+	Spawn:
+    RTPU A 2
+    RTPU BCDEFGH 2 
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 150)
+    Stop
+	}
+}
+
+actor RottAnkh3 : CustomInventory 4185
+{
+	Inventory.PickupSound "G_LIFE2"
+	Inventory.Pickupmessage "You picked up a Mega Ankh."
+	+CountItem
+	+nOgRAVITY
+	Scale 0.75
+	States
+	{
+	Spawn:
+    RTP3 A 3
+    RTP3 BCDEFGHIJKLMNOP 2 
+    Loop
+	Pickup:
+	TNT1 A 0 A_Giveinventory("Points", 250)
+    Stop
+	}
+}
