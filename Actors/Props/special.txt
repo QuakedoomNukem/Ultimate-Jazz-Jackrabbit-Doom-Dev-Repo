@@ -635,3 +635,36 @@ Actor SkyboxDecor5 : SkyboxDecor1
 		Stop
 	}
 }
+
+Actor RottSpring : CustomInventory 4172
+{
+     +INVENTORY.QUIET
+     +INVENTORY.ALWAYSPICKUP
+     +INVENTORY.AUTOACTIVATE
+     Inventory.PickupMessage ""
+     inventory.amount 0
+     inventory.maxamount 0
+     scale 0.5
+     States  
+     {
+     spawn:
+	ROTS A 2
+	ROTS B 2
+	ROTS C 2
+	ROTS D 2
+	ROTS C 1
+	ROTS B 1
+	ROTS A -1
+	stop
+
+     HoldAndDestroy: 
+        ROTS A 0  A_SpawnItemex("RottSpring")
+        ROTS A 0  a_playsound("gen/boing")
+     	ROTS A 0  A_TakeInventory ("RottSpring",1)
+     	stop
+ 
+       Pickup: 
+       	ROTS A 1  ThrustThingZ(0,256,0,0)
+		Stop
+    }
+}

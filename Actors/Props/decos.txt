@@ -6706,3 +6706,708 @@ Actor Xmashelltree2 4137
 		Stop
 	}
 }
+
+//Blake Stone Props
+
+actor Bstoneprop1 4152
+{
+	height 56
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG A -1
+		STOP
+	}
+}
+
+actor Bstoneprop4 4155
+{
+	height 32
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG D -1
+		STOP
+	}
+}
+
+actor Bstoneprop5 4156
+{
+	height 64
+    radius 32
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG E -1
+		STOP
+	}
+}
+
+actor Bstoneprop6 4157
+{
+	height 32
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG F -1
+		STOP
+	}
+}
+
+actor Bstoneprop7 4158
+{
+	height 64
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG G -1
+		STOP
+	}
+}
+
+actor Bstoneprop8 4159
+{
+	height 16
+    radius 16
+	+NoGravity
+	+SpawnCeiling
+	States
+	{
+	Spawn:
+		BSEG H -1
+		STOP
+	}
+}
+
+actor Bstoneprop9  4160
+{
+	height 16
+    radius 16
+    +SpawnCeiling
+	+NoGravity
+	States
+	{
+	Spawn:
+		BSEG I -1
+		STOP
+	}
+}
+
+actor Bstoneprop10  4161
+{
+	height 64
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG J -1
+		STOP
+	}
+}
+
+actor Bstoneprop11  4162
+{
+	height 64
+    radius 16
+    +Solid
+	States
+	{
+	Spawn:
+		BSEG K -1
+		STOP
+	}
+}
+
+actor Bstoneprop12  4163
+{
+	height 16
+    radius 16
+	States
+	{
+	Spawn:
+		BSEG L -1
+		STOP
+	}
+}
+
+actor Bstoneprop13  4164
+{
+	height 16
+    radius 16
+	States
+	{
+	Spawn:
+		BSEG M -1
+		STOP
+	}
+}
+
+actor Bstoneprop14  4165
+{
+	height 16
+    radius 16
+	States
+	{
+	Spawn:
+		BSEG N -1
+		STOP
+	}
+}
+
+actor Bstoneprop15  4166
+{
+	height 16
+    radius 16
+	States
+	{
+	Spawn:
+		BSEG O -1
+		STOP
+	}
+}
+
+actor Bstoneprop16 4167
+{
+	height 16
+    radius 16
+	States
+	{
+	Spawn:
+		BSEG P -1
+		STOP
+	}
+}
+
+actor Bstoneprop17 4168
+{
+	height 16
+    radius 16
+	States
+	{
+	Spawn:
+		BSEG Q -1
+		STOP
+	}
+}
+
+
+//Rise Of The Triad Props
+
+actor Rottprop1 4169
+{
+	Tag "Dancing Enforcer"
+	gravity 1000
+	height 56
+    radius 32
+	+SOLID
+	States
+	{
+	Spawn:
+	ROTE G -1
+	Stop
+	
+	Dance:
+	ROTE abcbadefed 4
+	Loop
+	
+	Strut:
+	ROTE GHIJ 4
+	Loop
+	
+	Catch:
+	ROTE KLMN 4
+	ROTE O 8
+	ROTE PQR 4
+	ROTE G 20
+	Goto Spawn
+	}
+}
+
+actor Rottprop2 4170
+{
+	Tag "ROTT Tall Lamp"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT A -1 Bright
+		STOP
+	}
+}
+
+actor Rottprop3 4171
+{
+	Tag "ROTT Triad Banner"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT B -1
+		STOP
+	}
+}
+
+actor Rottprop4 4173
+{
+	Tag "ROTT Potted Plant"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT C -1
+		STOP
+	}
+}
+
+actor Rottprop5 4174
+{
+	Tag "BIG JOHN, YAH"
+	gravity 1000
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT D -1
+		STOP
+	}
+}
+
+actor Rottprop6 4175
+{
+	Tag "Death Monk"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT E -1
+		STOP
+	}
+}
+
+actor Rottprop7 4176
+{
+	Tag "Darian"
+	gravity 1000
+	height 72
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT F -1
+		STOP
+	}
+}
+
+actor Rottprop8 4177
+{
+	Tag "Thi"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT G -1
+		STOP
+	}
+}
+
+actor Rottprop9 4178
+{
+	Tag "Cassat"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT H -1
+		STOP
+	}
+}
+
+actor Rottprop10 4179
+{
+	Tag "Lorelei"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT I -1
+		STOP
+	}
+}
+
+actor Rottprop11 4180
+{
+	Tag "Ian Paul"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT J -1
+		STOP
+	}
+}
+
+actor Rottprop12 4181
+{
+	Tag "Doug"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ROTT K -1
+		STOP
+	}
+}
+
+//eggdungeon
+
+actor edungeon1 4186
+{
+	Tag "CV-01"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		2b2b A -1
+		stop
+	}
+}
+
+actor edungeon2 4187
+{
+	Tag "CV-07"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		avgn A -1
+		stop
+	}
+}
+
+actor edungeon3 4188
+{
+	Tag "AX-3"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ax33 A -1
+		stop
+	}
+}
+
+actor edungeon4 4189
+{
+	Tag "CV-10"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ibel A -1
+		stop
+	}
+}
+
+actor edungeon5 4190
+{
+	Tag "CV-09"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		bran A -1
+		stop
+	}
+}
+
+actor edungeon6 4191
+{
+	Tag "CV-11"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		cv11 A -1
+		stop
+	}
+}
+
+actor edungeon7 4192
+{
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		fce2 A -1
+		stop
+	}
+}
+
+actor edungeon8 4193
+{
+	Tag "CV-03"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		feli A -1
+		stop
+	}
+}
+
+actor edungeon9 4194
+{
+	Tag "CV-02"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		glar A -1
+		stop
+	}
+}
+
+actor edungeon10 4195
+{
+	Tag "H4MM3R"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		hamr A -1
+		stop
+	}
+}
+
+actor edungeon11 4196
+{
+	Tag "CV-14"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		icar A -1
+		stop
+	}
+}
+
+actor edungeon12 4197
+{
+	Tag "CV-12"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		sbsp A -1
+		stop
+	}
+}
+
+actor edungeon13 4198
+{
+	Tag "CV-13"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		sams A -1
+		stop
+	}
+}
+
+actor edungeon14 4199
+{
+	Tag "CV-16"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		kati A -1
+		stop
+	}
+}
+
+actor edungeon15 4200
+{
+	Tag "CV-15"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		kore A -1
+		stop
+	}
+}
+
+actor edungeon16 4201
+{
+	Tag "CV-04"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		crit A -1
+		stop
+	}
+}
+
+actor edungeon17 4202
+{
+	Tag "CV-05"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		yoko A -1
+		stop
+	}
+}
+
+actor edungeon18 4203
+{
+	Tag "CV-17"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		fury A -1
+		stop
+	}
+}
+
+actor edungeon19 4204
+{
+	Tag "CV-18"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		smg4 A -1
+		stop
+	}
+}
+
+actor edungeon20 4205
+{
+	Tag "CV-19"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		sune A -1
+		stop
+	}
+}
+
+actor edungeon21 4206
+{
+	Tag "CV-20"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		ross A -1
+		stop
+	}
+}
+
+actor edungeon22 4207
+{
+	Tag "CV-08"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		cken A -1
+		stop
+	}
+}
+
+actor edungeon23 4208
+{
+	Tag "CV-06"
+	height 56
+    radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		marg A -1
+		stop
+	}
+}

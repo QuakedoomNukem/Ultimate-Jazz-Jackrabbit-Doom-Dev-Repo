@@ -490,6 +490,11 @@ PK_SUARM = "\cnSuper Armor! (200+ AP)";
 PK_SUPCA = "\ciSuper Carrot! (50+ HP)";
 PK_TNT = "\c[D4]TNT";
 PK_TWINK = "Ew... you ate a thousand year old twinkie.";
+PK_LOOT = "\clYou picked up loot.";
+PK_XYORB = "\clYou picked up a Xylan Orb.";
+PK_LF5 = "\clYou picked up a Low Ankh.";
+PK_LF10 = "\clYou picked up a Medium Ankh.";
+PK_LF25 = "\clYou picked up a Mega Ankh.";
 
 //Special
 LH_CAROT = "\ciNever needed a carrot so much until NOW! (25+ HP)";
