@@ -5554,7 +5554,6 @@ Actor StrobeLightBlue 12400
 
 Actor StrobeLightGreen : StrobeLightBlue 12401
 {
-	Height 16
 	States
 	{
 	Spawn:

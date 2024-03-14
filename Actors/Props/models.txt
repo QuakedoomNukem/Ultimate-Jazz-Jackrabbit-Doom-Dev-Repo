@@ -185,6 +185,9 @@ Actor BluePadHighModel : RedPadLowModel
 {
 	States
 	{
+	Spawn:
+		BPAD A 1
+		Loop
 	HoldAndDestroy:
 		BPAD A 0 A_SpawnItemEx("BluepadHighModel2")
 		BPAD A 0 A_StartSound("BOING")
@@ -201,8 +204,8 @@ Actor BluePadHighModel2 : RedPadLowModel2
 	States
 	{
 	Spawn:
-		GPAD B 20
-		GPAD A 0 A_SpawnItemEx("BluepadHighModel")
+		BPAD B 20
+		BPAD A 0 A_SpawnItemEx("BluepadHighModel")
 		Stop
 	}
 }
