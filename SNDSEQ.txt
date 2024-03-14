@@ -95,13 +95,13 @@ end
         stopsound      dspstop
 end
 
-:PolyOpen
+:BlakeWall
 		Door 10
 		Play BSWALL
 		nostopcutoff
 end
 
-:PolyOpen
+:ROTTWall
 		Door 11
 		PlayREPEAT WALLMOV
 		STOPSOUND WALLEND

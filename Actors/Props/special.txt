@@ -659,7 +659,7 @@ Actor RottSpring : CustomInventory 4172
 
      HoldAndDestroy: 
         ROTS A 0  A_SpawnItemex("RottSpring")
-        ROTS A 0  a_playsound("gen/boing")
+        ROTS A 0  a_playsound("RBOING")
      	ROTS A 0  A_TakeInventory ("RottSpring",1)
      	stop
  
