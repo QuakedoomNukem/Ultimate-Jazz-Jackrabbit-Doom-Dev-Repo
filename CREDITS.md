@@ -88,6 +88,24 @@ by
 Ott Aaloe
 Hasso Brück
 
+Rise Of The Triad
+[CCCool]
+by
+Lee Jackson
+[How'd I Do (XP-30 Edit)]
+by
+Noelle Amelie Aman
+
+Blake Stone: Aliens Of Gold
+by
+Bobby Prince
+
+[Back To The Future]
+by 
+Ofshane
+[Enforcer Dance Party Edit]
+by
+Civvie 11
 
 Others
 General Decorate from Realm667:
@@ -108,20 +126,23 @@ Smedis2
 Music Fade Script:
 ReformedJoe
 
-Experimental Automap Code:
-Pieruskwurje
-
 Custom Text Colors:
 Fuzzball
 
 Skill Menu Code:
 AFADoomer
 
+Gravitational Anomaly Disc 3D Model:
+VanDaemon
+
 Introduction file:
 Rifleman (Doomworld)
 
 Piano Cover of Beer from Tyrian:
 Th3Gavst3r (ninsheetmusic)
+
+Jazz Belmont High Quality Rip:
+Xarlable
 
 Special thanks:
 Cliff Bleszinski
