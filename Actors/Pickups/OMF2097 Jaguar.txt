@@ -32,7 +32,7 @@ Actor JaguarRobot : PowerupGiver
 	Inventory.MaxAmount 0
 	Inventory.PickupSound "SECTGEM"
 	Inventory.PickupMessage "$PK_OMF97"
-	Powerup.Duration 9999
+	Powerup.Duration 2147483647
 	Powerup.Type "Robot"
 	States
 	{

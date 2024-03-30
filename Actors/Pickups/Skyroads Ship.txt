@@ -30,7 +30,7 @@ Actor SkyroadShip : PowerupGiver
 	Inventory.MaxAmount 0
 	Inventory.PickupSound "SECTGEM"
 	Inventory.PickupMessage "$PK_SKYRD"
-	Powerup.Duration 1200
+	Powerup.Duration 2147483647
 	Powerup.Type "Ship"
 	States
 	{
