@@ -2,7 +2,7 @@
 gameinfo
 {
 	titlepage = "JAZZTITL"
-	infopage = "WEPBOARD", "TUTBORD1", "TUTBORD2", "Signbord", "THANK", "GOG", "PROMO01", "PROMO02", "PROMO03", "PROMO04", "PROMO05", "PROMO06", "PROMO07", "PROMO08", "PROMO09", "PROMO10", "PROMO11", "PROMO12"
+	infopage = "NOTICE", "WEPBOARD", "TUTBORD1", "TUTBORD2", "Signbord", "THANK", "GOG", "PROMO01", "PROMO02", "PROMO03", "PROMO04", "PROMO05", "PROMO06", "PROMO07", "PROMO08", "PROMO09", "PROMO10", "PROMO11", "PROMO12"
 	playerclasses = "JazzPlayer"
 	fullscreenautoaspect = 3
 	cursorpic = "CURSOR"
