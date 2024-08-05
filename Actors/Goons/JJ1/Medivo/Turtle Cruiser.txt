@@ -41,6 +41,7 @@ Actor TurtleBossBase //so we can put damagetypes separately through inheritances
 	+NOINFIGHTING
 	+NORADIUSDMG
 	+NOTARGET
+	+NOICEDEATH
 	SeeSound "TURTSIGHT"
 	PainSound "TURTPAIN"
 	ActiveSound "TURTACT"

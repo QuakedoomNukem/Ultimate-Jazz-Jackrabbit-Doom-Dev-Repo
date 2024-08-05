@@ -41,6 +41,7 @@ Actor HelmutBaron 4039
 	+NOINFIGHTING
 	+NORADIUSDMG
 	+NOTARGET
+	+NOICEDEATH
 	SeeSound "BIGTURTS"
 	PainSound "BIGTURTP"
 	ActiveSound "TURTACT"

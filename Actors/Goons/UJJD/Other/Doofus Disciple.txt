@@ -38,6 +38,7 @@ Actor ElementGoon5 4037
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	Obituary "$OB_ELEG3"
 	States
 	{

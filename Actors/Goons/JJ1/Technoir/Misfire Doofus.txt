@@ -36,6 +36,7 @@ Actor TechnoirGoon 3830
    +NOINFIGHTING
    +COUNTKILL
     +DONTHARMSPECIES
+	+NOICEDEATH
     SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"

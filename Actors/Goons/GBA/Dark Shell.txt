@@ -49,6 +49,7 @@ Actor DarkShellBoss 4055
 	+NOINFIGHTING
 	+NORADIUSDMG
 	+NOTARGET
+	+NOICEDEATH
 	States
 	{
 	Spawn:

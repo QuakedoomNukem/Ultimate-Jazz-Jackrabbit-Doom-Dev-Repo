@@ -35,6 +35,7 @@ Actor FanolintTank 3223
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "TURTSIGHT"
 	PainSound "TURTPAIN"
 	Obituary "$OB_STANT"

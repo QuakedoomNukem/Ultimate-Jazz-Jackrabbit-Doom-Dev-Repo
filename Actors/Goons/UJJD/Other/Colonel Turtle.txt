@@ -37,6 +37,7 @@ Actor ColTurtle 4124
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "GIANTSEE"
 	PainSound "GIANHURT"
 	ActiveSound "Turtact"

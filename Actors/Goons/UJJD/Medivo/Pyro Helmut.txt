@@ -42,6 +42,7 @@ Actor BossHelmut 30026
   +NOINFIGHTING
   +COUNTKILL
 +DONTHARMSPECIES
++NOICEDEATH
 SeeSound "BIGTURTS"
   PainSound "BIGTURTP"
   ActiveSound "Turtact"

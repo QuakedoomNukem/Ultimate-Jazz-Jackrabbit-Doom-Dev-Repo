@@ -42,6 +42,7 @@ Actor BigBeeBoss 3966
 	+NOGRAVITY
 	+NOICEDEATH
 	+NOINFIGHTING
+	+NOICEDEATH
 	Obituary "$OB_BIGBE"
 	States
 	{

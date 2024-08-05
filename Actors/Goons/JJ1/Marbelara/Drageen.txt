@@ -41,6 +41,7 @@ Actor Dragoon 3295
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "TURTSIGHT"
 	PainSound "TURTPAIN"
 	ActiveSound "TURTACT"

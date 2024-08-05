@@ -39,6 +39,7 @@ Actor CyberDevan 4043
 	+NOBLOOD
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	SeeSound "BIGTURTS"
 	PainSound "BIGTURTP"
 	Obituary "$OB_MINS1"

@@ -37,6 +37,7 @@ Actor DracTurtle 3788
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING 
+	+NOICEDEATH
 	ActiveSound "dog/active"
 	AttackSound "dog/attack"
 	PainSound "dog/pain"

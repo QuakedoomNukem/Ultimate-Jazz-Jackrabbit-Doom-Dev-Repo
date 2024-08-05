@@ -44,6 +44,7 @@ Actor TurtleRobot 3124
 	 +DONTHARMSPECIES
  +COUNTKILL
  +DONTHARMCLASS
+ +NOICEDEATH
 	SeeSound "ROBOTSEE"
 	PainSound "Dent"
 	States 

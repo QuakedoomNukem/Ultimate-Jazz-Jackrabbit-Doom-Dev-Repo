@@ -46,8 +46,9 @@ Actor JungDragonBoss 3834
 		+BOSSDEATH
 		-NOTARGET
 		+MISSILEEVENMORE
-				+COUNTKILL
+		+COUNTKILL
 +DONTHARMSPECIES
++NOICEDEATH
     States
     {
     Spawn:

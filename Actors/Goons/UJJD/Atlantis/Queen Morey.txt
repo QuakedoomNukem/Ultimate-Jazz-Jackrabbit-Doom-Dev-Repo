@@ -38,6 +38,7 @@ Actor AtlantisQueen 3872
    +NOINFIGHTING
    +BOSS
    +DONTHARMSPECIES
+   +NOICEDEATH
    Obituary "$OB_ATQUE"
    States 
    { 

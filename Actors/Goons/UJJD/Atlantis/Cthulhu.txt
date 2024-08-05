@@ -38,6 +38,7 @@ Actor AtlantisBoss
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "SERPSEE"
 	PainSound "SERPPAIN"
 	ActiveSound "SERPACT"

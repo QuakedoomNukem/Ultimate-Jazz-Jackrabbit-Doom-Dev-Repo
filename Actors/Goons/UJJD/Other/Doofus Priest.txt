@@ -38,6 +38,7 @@ Actor ElementGoon6 4042
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	Obituary "$OB_ELEG4"
 	States
 	{

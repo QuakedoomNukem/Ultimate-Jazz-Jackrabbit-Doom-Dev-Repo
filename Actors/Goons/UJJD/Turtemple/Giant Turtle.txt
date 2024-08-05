@@ -36,6 +36,7 @@ Actor GiantTurtle 3902
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "GIANTSEE"
 	PainSound "GIANHURT"
 	ActiveSound "TURTACT"

@@ -31,6 +31,7 @@ Actor BattleshipsCore 3893
 	+NOBLOOD
 	+SHOOTABLE
 	+SOLID
+	+NOICEDEATH
 	States
 	{
 	Spawn:
@@ -68,6 +69,7 @@ Actor BattleshipsCoreBoss 3898
 	+NOBLOOD
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	States
 	{
 	Spawn:

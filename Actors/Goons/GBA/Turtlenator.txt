@@ -42,6 +42,7 @@ Actor MechBoss 31526
 	+BOSS
 	+COUNTKILL
 	+DONTHARMSPECIES
+	+NOICEDEATH
 	SeeSound "mechsee"
 	PainSound "mechpain"
 	DeathSound "mechpain"

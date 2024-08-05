@@ -43,6 +43,7 @@ Actor LagunicusBoss 3883
     +COUNTKILL
 +DONTHARMSPECIES
 +Boss
++NOICEDEATH
   States
   {
   Spawn:

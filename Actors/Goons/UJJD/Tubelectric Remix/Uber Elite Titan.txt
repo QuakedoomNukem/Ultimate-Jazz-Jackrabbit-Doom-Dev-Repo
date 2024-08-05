@@ -35,6 +35,7 @@ Actor UberEliteTurtleGuard 4011
   +SOLID
    +COUNTKILL
  +DONTHARMCLASS
+ +NOICEDEATH
   SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"

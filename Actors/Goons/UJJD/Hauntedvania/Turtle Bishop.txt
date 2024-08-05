@@ -38,6 +38,7 @@ Actor TurtleBishop 3293
   +DONTHARMSPECIES
   +NOINFIGHTING
  +COUNTKILL
+ +NOICEDEATH
   Obituary "$OB_TBISH"
   States
   {

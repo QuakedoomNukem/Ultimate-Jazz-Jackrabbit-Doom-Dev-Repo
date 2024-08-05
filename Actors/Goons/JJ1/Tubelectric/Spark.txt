@@ -39,6 +39,7 @@ Actor Sparks 11914
 	 +NOINFIGHTING
 	 +DONTHARMSPECIES
 	 +COUNTKILL
+	 +NOICEDEATH
 	States
 	{
 	Spawn:

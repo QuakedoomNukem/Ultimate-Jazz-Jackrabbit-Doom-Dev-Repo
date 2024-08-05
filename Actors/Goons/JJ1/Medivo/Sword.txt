@@ -39,6 +39,7 @@ Actor Sword 12345
    +NOINFIGHTING
    +NOICEDEATH
    +COUNTKILL
+   +NOICEDEATH
    SeeSound "SWORDSEE"
    PainSound "SWORDPAN"
    Obituary "$OB_SWORD"

@@ -35,6 +35,7 @@ Actor XmasSnowDog 4090
    +NOBLOOD
    -SOLID
    +NOINFIGHTING
+   +NOICEDEATH
    ActiveSound "doggyact"
   AttackSound "DOGGYATK"
   SeeSound "doggysee"

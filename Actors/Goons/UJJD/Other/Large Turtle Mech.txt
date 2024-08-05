@@ -37,6 +37,7 @@ Actor LargeTurtleMech 31527
 	+NOBLOOD
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	SeeSound "MECHSEE"
 	PainSound "MECHPAIN"
 	DeathSound "MECHPAIN"

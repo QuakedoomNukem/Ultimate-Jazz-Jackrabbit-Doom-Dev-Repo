@@ -43,6 +43,7 @@ Actor ChameleonKingBoss 3732
 	+NOBLOOD
 	+NOINFIGHTING
 	+NORADIUSDMG
+	+NOICEDEATH
 	SeeSound "CHAMBDTH"
 	PainSound "CHAMBDTH" //misstyped sound previously, or was here the intention to not produce Pain sounds? - ozy81
 	DeathSound "CHAMBDTH"

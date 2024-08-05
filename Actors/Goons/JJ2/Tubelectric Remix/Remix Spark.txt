@@ -39,6 +39,7 @@ Actor TubeRemixSparks 3973
 	+NOINFIGHTING
 	+COUNTKILL
 	+DONTHARMCLASS
+	+NOICEDEATH
 	States
 	{
 	Spawn: //spawn these only once

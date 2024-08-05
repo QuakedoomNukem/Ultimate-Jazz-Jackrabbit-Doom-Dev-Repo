@@ -39,6 +39,7 @@ Actor DonPooper 4121
 	+NOBLOOD
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	ActiveSound "Turtact"

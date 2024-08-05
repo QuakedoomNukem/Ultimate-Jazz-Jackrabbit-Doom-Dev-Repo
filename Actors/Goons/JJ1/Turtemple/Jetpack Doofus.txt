@@ -41,6 +41,7 @@ Actor JetpackDoofus 3235
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "TURTSIGHT"
 	PainSound "TURTPAIN"
 	ActiveSound "TURTACT"

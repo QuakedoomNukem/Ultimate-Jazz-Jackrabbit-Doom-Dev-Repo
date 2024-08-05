@@ -32,6 +32,7 @@ Actor XmasUberSnowTurtle 4095
   +FLOORCLIP
   +NOBLOOD
   +NOINFIGHTING
+  +NOICEDEATH
   SeeSound "Turtsight"
   PainSound "Turtpain"
   ActiveSound "Turtact"

@@ -41,6 +41,7 @@ Actor DevanShell 32326
 	+NOBLOOD
 	+NOINFIGHTING
 	+NORADIUSDMG
+	+NOICEDEATH
 	Obituary "$OB_DEVAS"
 	States
 	{

@@ -36,6 +36,7 @@ Actor TechnoirTank 3139
 	+NOICEDEATH
 	+COUNTKILL
 	+DONTHARMSPECIES
+	+NOICEDEATH
 	SeeSound "Turtsight"
 	PainSound "Turtpain"
 	Obituary "$OB_TTANK"

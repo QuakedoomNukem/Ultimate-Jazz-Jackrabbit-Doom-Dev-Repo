@@ -38,6 +38,7 @@ Actor XmasHolidayBoss 4097
 	+FLOORCLIP
     +NOBLOOD
     +NOINFIGHTING
+	+NOICEDEATH
 	States
 	{
 	Spawn:

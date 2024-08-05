@@ -38,6 +38,7 @@ Actor EvilJazz 32527
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
+	+NOICEDEATH
 	Obituary "$OB_EVILJ"
 	States
 	{

@@ -37,6 +37,7 @@ Actor TurtleMech 32525
 	+NOBLOOD
 	+DONTHARMSPECIES
 	+COUNTKILL
+	+NOICEDEATH
 	SeeSound "mechsee"
 	PainSound "mechpain"
 	DeathSound "mechpain"

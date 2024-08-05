@@ -38,6 +38,7 @@ Actor DevanCruiser 32325
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	//SeeSound "jzrbtsee"
 	States
 	{

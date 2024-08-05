@@ -35,6 +35,7 @@ Actor XmasIceGrabber 4088
    +NOBLOOD
    -SOLID
    +NOINFIGHTING
+   +NOICEDEATH
    Obituary "$OB_XICEG"
    States 
    { 

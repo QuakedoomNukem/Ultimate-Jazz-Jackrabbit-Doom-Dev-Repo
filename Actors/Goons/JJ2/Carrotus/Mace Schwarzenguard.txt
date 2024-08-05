@@ -37,6 +37,7 @@ Actor UberGoon 32524
   +NOINFIGHTING
    +COUNTKILL
  +DONTHARMCLASS
+ +NOICEDEATH
   SeeSound "BIGTURTS"
   PainSound "BIGTURTP"
   ActiveSound "Turtact"

@@ -41,6 +41,7 @@ Actor UterusBoss 3294
    +NOINFIGHTING
     +COUNTKILL
  +DONTHARMCLASS
+ +NOICEDEATH
   Obituary "$OB_UTER"
   States
   {

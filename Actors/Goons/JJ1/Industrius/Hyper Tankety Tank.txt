@@ -37,6 +37,7 @@ Actor HyperTank 3212
 	+NOBLOOD
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	SeeSound "TURTSIGHT"
 	PainSound "TURTPAIN"
 	ActiveSound "TURTACTIVE"

@@ -39,6 +39,7 @@ Actor RammingTurtle 3125
 	+FLOORCLIP
 	  +COUNTKILL
 +DONTHARMSPECIES
++NOICEDEATH
 	SeeSound "BIGTURTS"
   PainSound "BIGTURTP"
 	MeleeDamage 1

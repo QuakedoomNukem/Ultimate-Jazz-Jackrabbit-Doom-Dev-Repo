@@ -35,6 +35,7 @@ Actor Megairboss 3808
   +NOBLOOD
     +COUNTKILL
 +DONTHARMSPECIES
++NOICEDEATH
   SeeSound "ROBOTSEE"
   PainSound "Turtpain"
   ActiveSound "Turtact"

@@ -36,6 +36,7 @@ Actor SnowTurtleBoss 4048
 	+NOBLOOD
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	Obituary "$OB_STBOS"
 	States
 	{

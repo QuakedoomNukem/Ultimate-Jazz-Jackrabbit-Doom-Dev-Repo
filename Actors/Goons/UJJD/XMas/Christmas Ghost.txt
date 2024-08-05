@@ -40,6 +40,7 @@ Actor XmasGhost 4041
 	+NOGRAVITY
 	+NOINFIGHTING
 	+SOLID
+	+NOICEDEATH
 	Obituary "$OB_XMAGH"
 	States
 	{

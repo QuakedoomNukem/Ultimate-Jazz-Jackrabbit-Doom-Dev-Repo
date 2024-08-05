@@ -37,6 +37,7 @@ Actor HeavyTitan 32766
 	+FLOORCLIP
 	+NOBLOOD
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "BIGTURTS"
 	PainSound "BIGTURTP"
 	ActiveSound "TURTACT"

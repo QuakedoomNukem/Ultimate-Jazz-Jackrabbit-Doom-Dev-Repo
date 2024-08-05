@@ -36,6 +36,7 @@ Actor Snowman 23006
   +NOBLOOD
   +COUNTKILL
   +DONTHARMSPECIES
+  +NOICEDEATH
   Obituary "$OB_SNOWM"
   States
   {

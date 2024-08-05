@@ -39,6 +39,7 @@ Actor OstrichBoss 3796
   +FLOATBOB
     +COUNTKILL
 +DONTHARMSPECIES
++NOICEDEATH
     SeeSound "Turtsight"
   PainSound "Turtpain"
   States

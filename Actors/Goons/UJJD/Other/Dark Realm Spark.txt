@@ -37,6 +37,7 @@ Actor DarkSparks1 4076
 	+NOBLOOD
 	+NOGRAVITY
 	+NOINFIGHTING
+	+NOICEDEATH
 	SeeSound "SPKSEE"
 	PainSound "SPKPAIN"
 	HitObituary "$HB_DARKS"

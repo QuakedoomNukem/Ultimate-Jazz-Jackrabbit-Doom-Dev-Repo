@@ -38,6 +38,7 @@ Actor JJASaurianGeneral 3852
 	+BOSS
 	+COUNTKILL
 	+DONTHARMSPECIES
+	+NOICEDEATH
 	MONSTER
 	SeeSound "saurboss"
 	PainSound "saurow"
