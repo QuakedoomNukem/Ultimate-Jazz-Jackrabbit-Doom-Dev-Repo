@@ -192,18 +192,6 @@ map E4SL1 lookup "E4SL1_NAME"
 	NoClusterText
 }
 
-//map E4SL2 lookup "E4SL2_NAME"
-//{ 
-//	levelnum = 58
-//	next = E4L7
-//	secretnext = E4L7
-//	cluster = 4
-//	sky1 = "HUBSKY", 0
-//	music = "HUBTRK"
-//	exitpic = "$JAZZ_IN"
-//	enterpic = "$JAZZ_IN"
-//}
-
 cluster 4
   { 
 	Pic = "E4END"
