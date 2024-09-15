@@ -188,7 +188,7 @@ map E4SL1 lookup "E4SL1_NAME"
 	cluster = 4
 	music = "CHELONIA"
 	exitpic = "$JAZZ_IN"
-	enterpic = "$JAZZ_IN"
+	enterpic = "INTMAP57"
 	NoClusterText
 }
 

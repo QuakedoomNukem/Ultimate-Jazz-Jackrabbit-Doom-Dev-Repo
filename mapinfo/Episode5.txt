@@ -25,7 +25,7 @@ map E5L1 lookup "E5L1_NAME"
 	sky1 = "CANDSKY", 0
 	cluster = 5
 	music = CANDION
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP40"
 }
 
@@ -38,7 +38,7 @@ map E5L2 lookup "E5L2_NAME"
 	sky1 = "BLOXSKY", 0
 	cluster = 5
 	music = BLOXONIUS
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP41"
 }
 
@@ -51,7 +51,7 @@ map E5L3 lookup "E5L3_NAME"
 	sky1 = "JSKY1", 0
 	cluster = 5
 	music = Holidaius
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP42"
 }
 
@@ -64,7 +64,7 @@ map E5L4 lookup "E5L4_NAME"
 	sky1 = "NIGHT", 0
 	cluster = 5
 	music = SilentNight
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "INTMAP42"
 }
 
@@ -77,7 +77,7 @@ map E5L5 lookup "E5L5_NAME"
 	sky1 = "FREZSKY", 0
 	cluster = 5
 	music = HellFreeze
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
 }
 
@@ -90,7 +90,7 @@ map E5L6 lookup "E5L6_NAME"
 	sky1 = "JSKY3", 0
 	cluster = 5
 	music = BURROWSVILLE
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
 }
 
@@ -103,8 +103,8 @@ map E5SL1 lookup "E5SL1_NAME"
 	sky1 = "ICE3SKY", 0
 	cluster = 5
 	music = ICEBOX3
-	enterpic = "$JAZZ_IN"
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP59"
 }
 
 map E5SL2 lookup "E5SL2_NAME"
@@ -116,6 +116,6 @@ map E5SL2 lookup "E5SL2_NAME"
 	sky1 = "NAKASKY", 0
 	cluster = 5
 	music = DIEHARED
-	enterpic = "$JAZZ_IN"
+	exitpic = "$JAZZ_IN"
 	enterpic = "$JAZZ_IN"
 }
