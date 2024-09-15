@@ -79,7 +79,6 @@ Actor HeavyTitan 32766
 		Goto See
 	Death:
 		DPOS A 0 A_GiveToTarget("Points",1500)
-		DPOS A 0 A_StartSound("BEEBUZZ", CHAN_AUTO, CHANF_DEFAULT, 1.0, ATTN_NONE) //doesn't last a single second - ozy81
 		DPOS A 0 A_StopSound
 		DPOS A 0 A_Scream
 		DPOS B 2 ThrustThingZ(0, random(2, 8), 0, 0)

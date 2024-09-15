@@ -28,7 +28,7 @@ Actor Flail 3712
 	Health 999
 	Speed 20
 	Height 236
-	Radius 32
+	Radius 80
 	Mass 100
 	PainChance 60
 	MeleeRange 160

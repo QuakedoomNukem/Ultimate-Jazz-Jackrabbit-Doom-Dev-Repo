@@ -28,7 +28,7 @@ Actor SnowTurtleBoss 4048
 	Radius 32
 	Height 128
 	Mass 100000
-	Speed 8
+	Speed 30
 	PainChance 32
 	Damage 20
 	Scale 1.5

@@ -1092,7 +1092,6 @@ Actor BombChair 4122
 	Height 48
 	Radius 16
 	+NOBLOOD
-	+NOGRAVITY
 	+PUSHABLE
 	+SHOOTABLE
 	+SOLID

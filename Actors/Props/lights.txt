@@ -426,7 +426,7 @@ Actor LavaLampRed
 	{
 	Spawn:
 		LLMP ABCDEFGHIJ 3
-		Stop
+		Loop
 	}
 }
 
@@ -436,7 +436,7 @@ Actor LavaLampGrey : LavaLampRed
 	{
 	Spawn:
 		LMP2 ABCDEFGHIJ 3
-		Stop
+		Loop
 	}
 }
 

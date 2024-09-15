@@ -52,7 +52,7 @@ POWERUP POWERUP //misc/p_pkup dsgetpow
 RAPIDFIR RAPIDFIR  //jazz/rapid		JZRAPID
 SECTGEM	SECTGEM
 WEAPNGET WEAPNGET //DSWPNUP
-YUMM YUMM //Carrot/Pickup	Dsyum
+YUMM YUMM2 //Carrot/Pickup	Dsyum
 
 $random FOOD { FOOD1 FOOD2 FOOD3 FOOD4 }
 FOOD1 FOOD1
@@ -255,29 +255,18 @@ MBFGDIE	MBFGDIE //mech/bfgdie
 //////////
 //Player//
 //////////
-$playersound	Jazz	male	*death		JJouch
-$playersound	Jazz	male	*xdeath		JJouch
-$playersound	Jazz	male	*gibbed		JJouch
-$playersound	Jazz	male	*pain100	JJouch
+$playersound	Jazz	male	*death		JJDEATH2
+$playersound	Jazz	male	*xdeath		JJDEATH2
+$playersound	Jazz	male	*gibbed		JJDEATH2
+$playersound	Jazz	male	*pain100	JJOUCH2
 $playersounddup	Jazz	male	*pain75		*pain100
-$playersounddup	Jazz	male	*pain50		*pain100
-$playersounddup	Jazz	male	*pain25		*pain100
+$playersound	Jazz	male	*pain50		JJOUCH3
+$playersound	Jazz	male	*pain25		JJBIGOW
 $playersound	Jazz	male	*grunt		JJLand
 $playersounddup	Jazz	male	*land		*grunt
 $playersound	Jazz	male	*jump		JJjump
-$playersound	Jazz	male	*fist		dspunch
-$playersound	Jazz	male	*usefail	JJnoway
-
-$volume *land 0.75
-$volume *pain100 0.75
-$volume *death 0.75
-$volume *Xdeath 0.75
-$volume *gibbed 0.75
-$volume *pain75 0.75
-$volume *pain50 0.75
-$volume *pain25 0.75
-
-JJOUCH JJOUCH
+$playersound	Jazz	male	*fist		FATPNCH
+$playersound	Jazz	male	*usefail	JJNOWAY2
 
 //////////
 //Menues//
@@ -293,7 +282,7 @@ intermission/tick TOASTED
 intermission/nextstage TOASTED
 intermission/paststats SECTGEM
 
-$random Quitsound { JJOUCH HIPHOPAT RAPIDFIR BOING SPAZSEE WEAPNGET SECTGEM WHATYODO }
+$random Quitsound { JJOUCH3 HIPHOPAT RAPIDFIR BOING SPAZSEE WEAPNGET SECTGEM CMONWSUP }
 
 ///////////////
 //Environment//
@@ -421,8 +410,10 @@ ARMATTK		ARMATTK
 CDGNSEE		CDGNSEE //this was also used by an undefined sound CTHUPAIN as double
 DSSPEARU	DSSPEARU
 EGBJYELL	EGBJYELL
+FLUTE		FLUTE
+JJFAIL		JJFAIL
 JJGLASS		JJGLASS
-OLDTWINK	OLDTWINK
+JUMPPAD		JUMPPAD
 PYRCEXPL	PYRCEXPL
 RVNATT		RVNATT
 RVNSEE		RVNSEE
