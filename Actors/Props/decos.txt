@@ -6667,9 +6667,9 @@ Actor Xmashelltree1 4134
 	}
 }
 
-Actor Xmashellpost1 4138
+Actor Xmasbonepost1 4138
 {
-	Height 160
+	Height 270
     Radius 32
     +SOLID
 	States
@@ -6680,17 +6680,9 @@ Actor Xmashellpost1 4138
 	}
 }
 
-Actor Xmasbonepost2 4136
+Actor Xmasbonepost2 : Xmasbonepost1 4136
 {
-	Height 128
-    Radius 32
-    +SOLID
-	States
-	{
-	Spawn:
-		FRZZ F -1
-		Stop
-	}
+    +XFlip
 }
 
 Actor Xmashelltree2 4137
@@ -6702,6 +6694,38 @@ Actor Xmashelltree2 4137
 	{
 	Spawn:
 		FRZZ G -1
+		Stop
+	}
+}
+
+Actor XmasIcicle1 4147
+{
+	Height 34
+	Radius 3
+	Scale 0.35
+	+NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		FRZZ H -1
+		Stop
+	}
+}
+
+Actor XmasIcicle2 4151
+{
+	Height 45
+	Radius 5
+	Scale 0.5
+	+NOGRAVITY
+	+SOLID
+	+SPAWNCEILING
+	States
+	{
+	Spawn:
+		FRZZ I -1
 		Stop
 	}
 }
