@@ -33,7 +33,6 @@ Actor XmasSnowDog 4090
    MONSTER 
    +FLOORCLIP
    +NOBLOOD
-   -SOLID
    +NOINFIGHTING
    +NOICEDEATH
    ActiveSound "doggyact"

@@ -18,7 +18,6 @@ DefaultMap
 
 map E4L1 lookup "E4L1_NAME"
 {
-	author = "$E4L1_SUBTITLE"
 	levelnum = 31
 	next = E4L2
 	secretnext = BONUS07
@@ -32,7 +31,6 @@ map E4L1 lookup "E4L1_NAME"
 
 map E4L2 lookup "E4L2_NAME"
 {
-	author = "$E4L2_SUBTITLE"
 	levelnum = 32
 	next = E4L3
 	secretnext = E4L3
@@ -45,7 +43,6 @@ map E4L2 lookup "E4L2_NAME"
 
 map E4L3 lookup "E4L3_NAME"
 {
-	author = "$E4L3_SUBTITLE"
 	levelnum = 33
 	next = E4L4
 	secretnext = E4L4
@@ -143,7 +140,6 @@ map E4L10 lookup "E4L10_NAME"
 
 map E4L11 lookup "E4L11_NAME"
 {
-	author = "$E4L11_SUBTITLE"
 	levelnum = 41
 	next = E4L12
 	secretnext = E4L12
@@ -156,7 +152,6 @@ map E4L11 lookup "E4L11_NAME"
 
 map E4L12 lookup "E4L12_NAME"
 {
-	author = "$E4L12_SUBTITLE"
 	levelnum = 42
 	next = E4L13
 	secretnext = E4L13
@@ -169,7 +164,6 @@ map E4L12 lookup "E4L12_NAME"
 
 map E4L13 lookup "E4L13_NAME"
 {
-	author = "$E4L13_SUBTITLE"
 	levelnum = 43
 	next = Endsequence,"GameEnd"
 	sky1 = "RSKY3", 0

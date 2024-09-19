@@ -140,7 +140,6 @@ map E2SL1 lookup "E2SL1_NAME"
 
 map E2SL2 lookup "E2SL2_NAME"
 {
-	author = "$E2SL2_SUBTITLE"
 	levelnum = 104
 	next = E2L8
 	secretnext = E2L8

@@ -176,7 +176,6 @@ map E3SL1 lookup "E3SL1_NAME"
 
 map E3SL2 lookup "E3SL2_NAME"
 {
-	author = "$E3SL2_SUBTITLE"
 	levelnum = 106
 	next = E3L6
 	secretnext = E3L6
