@@ -1,15 +1,20 @@
 # Let's remove these from commits
 
+*.7z
+*.autosave*
 *.backup1
 *.backup2
 *.backup3
 *.bak
 *.dbprefab
 *.dbs
+*.php
+*.psd
 *.rar
+*.tmp
 *.zip
-*.7z
 
 # Then ignore these folders
 
 _stuff/*
+tools/*

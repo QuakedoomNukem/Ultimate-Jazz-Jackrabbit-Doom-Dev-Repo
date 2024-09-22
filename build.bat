@@ -4,9 +4,6 @@ SET "ProgramDirPath=%~dp0"
 REM Start the program
 GOTO :Main
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Spine of the program; this makes sure that the execution works as intended.
@@ -18,9 +15,6 @@ REM Check if Git executable is available on the host
 CALL :GitFeature_DependencyCheck
 CALL :MainMenu
 GOTO :TerminateProcess
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -55,9 +49,6 @@ CALL :PromptUserInput
 REM Inspect the input
 GOTO :MainMenu_STDIN
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Inspect the user's input and execute their desired action
@@ -72,7 +63,7 @@ IF "%STDIN%" EQU "2" (
     GOTO :MainMenu
 )
 IF "%STDIN%" EQU "3" (
-    CALL :CompactProject ZIP DEFLATE 0 NORMAL
+    CALL :CompactProject ZIP COPY 0 NORMAL
     GOTO :MainMenu
 )
 IF /I "%STDIN%" EQU "X" (
@@ -96,9 +87,6 @@ IF "%STDIN%" EQU "" (
     GOTO :MainMenu
 )
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     This function displays a message to the user that the STDIN was illegal and not supported
@@ -111,9 +99,6 @@ ECHO.
 PAUSE
 GOTO :EOF
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     This function captures the standard input from the user.
@@ -121,9 +106,6 @@ REM # ==========================================================================
 :PromptUserInput
 SET /P STDIN=^>^>^>^> 
 GOTO :EOF
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -136,9 +118,6 @@ ECHO ----------------
 ECHO ================
 ECHO.&ECHO.&ECHO.
 GOTO :EOF
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -162,9 +141,6 @@ CALL :CompactProject_WindowsExplorer || EXIT /B 1
 CALL :ProcessingInterface 1
 EXIT /B 0
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Before we compile the project, first make sure that the resources exist - and that there will not be any issues.
@@ -178,10 +154,6 @@ CALL :CompactProject_CheckResources_FilesExists || (EXIT /B 1)
 REM Check the file permission of necessary files
 CALL :CompactProject_CheckResources_FilePermissions || (EXIT /B 1)
 EXIT /B 0
-
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -215,9 +187,6 @@ IF %ErrorBool% EQU True (
 )
 EXIT /B 0
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Check to make sure that the directories are accessible; we do this by viewing the inside of
@@ -242,9 +211,6 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 EXIT /B 0
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Check to see if the required files are accessible by checking if the user can access\read\execute
@@ -265,9 +231,6 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 EXIT /B 0
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Test the internal 7Zip program and check for possible errors.  This can be helpful to detect
@@ -280,9 +243,6 @@ REM # ==========================================================================
 "%ProgramDirPath%tools\7za.exe" 2> NUL 1> NUL
 EXIT /B %ERRORLEVEL%
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Test to see if the {PROJECT_ROOT}\Tools dir. exists on the system and if the user has sufficient
@@ -294,9 +254,6 @@ REM # ==========================================================================
 :CompactProject_CheckResources_CheckPermissions_ToolsDir
 DIR /B "%ProgramDirPath%tools" 2> NUL 1> NUL
 EXIT /B %ERRORLEVEL%
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -320,9 +277,6 @@ REM Allow the user to read the message
 PAUSE
 GOTO :EOF
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Display an error message that some of the resources were not successfully located.
@@ -342,9 +296,6 @@ EXPLORER https://github.com/QuakedoomNukem
 ECHO.
 GOTO :EOF
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Display an error message that there is permission complications and the user needs to resolve.
@@ -360,9 +311,6 @@ ECHO.
 ECHO Please inspect the file permissions or contact your administrator for assistance.
 ECHO.
 GOTO :EOF
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -380,10 +328,6 @@ ECHO.
 ECHO Check to make sure that the path exists and that you have enough permissions.
 ECHO.
 GOTO :EOF
-
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -413,8 +357,6 @@ IF %ERRORLEVEL% GEQ 1 (
     EXIT /B 0
 )
 
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Determine what project filename to use.
@@ -436,9 +378,6 @@ CALL :GitFeature_FetchCommitHash
 REM Avoid redundancy
 IF "%projectName%" NEQ "ujjdoom-%GitCommitHash%" SET "projectName=ujjdoom-%GitCommitHash%"
 GOTO :EOF
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -462,9 +401,6 @@ ECHO If this issue reoccurs please let us know.
 PAUSE
 GOTO :EOF
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Create a new window and highlight the newly created build.
@@ -472,9 +408,6 @@ REM # ==========================================================================
 :CompactProject_WindowsExplorer
 EXPLORER /select,"%ProgramDirPath%..\%projectName%.pk3"
 EXIT /B 0
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -502,9 +435,6 @@ IF %1 EQU 0 (
 )
 EXIT /B 0
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #   Check to see if we can be able to utilize Git features within this program.
@@ -525,9 +455,6 @@ IF %ERRORLEVEL% EQU 1 (
 REM Safe to use git features; found the .git directory and the git executable.
 SET featuresGit=True
 GOTO :EOF
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
@@ -563,9 +490,6 @@ IF %ERRORLEVEL% EQU 1 (
 REM Could not find the git executable
 EXIT /B 1
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #   When the end-user has the source code, it may or may not contain the .git DB directory.
@@ -586,9 +510,6 @@ IF %ERRORLEVEL% EQU 0 (
 REM Could not find the .git directory within the source.
 EXIT /B 1
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Retrieves and returns the HEAD commit hash of the project.
@@ -601,9 +522,6 @@ REM # ==========================================================================
 FOR /F %%a IN ('GIT --git-dir="%ProgramDirPath%.git" rev-parse --short HEAD') DO SET GitCommitHash=%%a
 GOTO :EOF
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     Provide a simple interface and automatically update repository.
@@ -614,9 +532,6 @@ CALL :GitFeature_UpdateBranch_Master
 CALL :ProcessingInterface 1
 EXIT /B 0
 
-
-
-
 REM # ================================================================================================
 REM # Documentation
 REM #     When called, this function will update the master branch of the GIT local repo.
@@ -625,9 +540,6 @@ REM # ==========================================================================
 :GitFeature_UpdateBranch_Master
 GIT --git-dir="%ProgramDirPath%.git" pull origin master
 GOTO :EOF
-
-
-
 
 REM # ================================================================================================
 REM # Documentation
