@@ -32,7 +32,7 @@ Actor ColTurtle 4124
 	PainChance 150
 	MeleeDamage 50
 	MONSTER
-	-COUNTKILL
+	+COUNTKILL
 	+BOSS
 	+FLOORCLIP
 	+NOBLOOD
