@@ -126,6 +126,7 @@
 
 #include "actors/Goons/JJ2/Diamondus Remix/Bee Hive.txt"
 
+#include "actors/Goons/JJ2/Hell/Bubba.txt"
 #include "actors/Goons/JJ2/Hell/Skeleton.txt"
 #include "actors/Goons/JJ2/Hell/Tiny Devil.txt"
 

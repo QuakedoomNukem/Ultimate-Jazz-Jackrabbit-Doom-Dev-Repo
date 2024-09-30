@@ -508,6 +508,7 @@ DoomEdNums
 	4115 = "OldTwinkie"
 	4125 = "GlassSpawner"
 	4139 = "XmasTorch"
+	4244 = "Bubba"
 	4680 = "FloorLantern"
 	4681 = "FloorLantern_Animated"
 	4682 = "FloorLanternTall"
