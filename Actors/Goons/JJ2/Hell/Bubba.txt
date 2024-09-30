@@ -1,0 +1,210 @@
+ACTOR Bubba 4244
+{
+  OBITUARY "%o was blown away by Bubba!"
+  Health 7000
+  Radius 20
+  Height 56
+  Mass 2000
+  Speed 25
+  Alpha 0.50
+  PainChance 10
+  MONSTER
+  +QUICKTORETALIATE
+  +NOBLOOD
+  +FLOORCLIP 
+  +NOTARGET
+  +NEVERTARGET
+  +DROPOFF
+  +BOSS
+  +DONTMORPH
+  +FULLVOLACTIVE
+  +NORADIUSDMG
+  +NOTARGET
+  +FLOORCLIP
+  +BOSSDEATH
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    BUBB A 10 A_Look
+    Loop
+  See:
+    BUBB BBCCDD 4 A_Chase
+    BUBB EE 1 A_Playsound("TurtJump")
+    Loop
+  Missile:
+    BUBT ABCD 0 A_SetInvulnerable
+    BUBB F 0 BRIGHT A_PlaySound("bubbwind")    
+	BUBT EFGHIJKLMNOPQEFGHIJKLMNOPQ 1
+	BUBT EFG 2 
+	BUBT H 1 A_PlaySound("bubbwind")
+	BUBT I 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT J 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT K 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT L 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT M 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT NOP 2 A_Wander   
+	BUBT Q 1 A_PlaySound("bubbwind")
+	BUBT E 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT F 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT H 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT I 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT JKL 2 A_Wander  
+	BUBT M 1 A_PlaySound("bubbwind")
+	BUBT N 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT O 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT P 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT Q 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT E 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT FGH 2 A_Wander
+	BUBT I 1 A_PlaySound("bubbwind")
+	BUBT J 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT K 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT L 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT M 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT N 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT OPQ 2 A_Wander
+	BUBT E 1 A_PlaySound("bubbwind")
+	BUBT F 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT H 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT I 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT J 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT KLM 2 A_Wander
+	BUBT N 1 A_PlaySound("bubbwind")
+	BUBT O 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT P 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT Q 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT E 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT F 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT GHI 2 A_Wander
+	BUBT J 1 A_PlaySound("bubbwind")
+	BUBT K 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT L 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT M 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT N 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT O 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT P 2 A_Wander
+	BUBT Q 1 A_PlaySound("bubbwind")
+	BUBT E 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT F 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT H 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT I 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT JKL 2 A_Wander
+	BUBT M 1 A_PlaySound("bubbwind")
+	BUBT N 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT O 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT P 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT Q 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT E 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT FGH 2 A_Wander
+	BUBT I 1 A_PlaySound("bubbwind")
+	BUBT J 0 A_CustomMissile("BubbaWind",32,0,0,0)
+	BUBT K 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT L 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT M 0 A_CustomMissile("FTFire",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT N 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-32,32),Random(0,360),0,0)
+	BUBT RSTU 1
+	BUBB A 0 A_UnsetInvulnerable
+    Goto Sneeze
+    Sneeze:
+    BUBB F 10 BRIGHT A_FaceTarget
+    BUBB F 8 BRIGHT
+    BUBB F 8 BRIGHT A_FaceTarget  
+    BUBB G 0 A_PlaySound("bubbatk")
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0) 
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0) 
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 8 BRIGHT A_CustomMissile("BubbaWind2",32,0,0,0)
+    BUBB F 10 BRIGHT
+	    BUBB F 10 BRIGHT A_FaceTarget
+    BUBB F 8 BRIGHT
+    BUBB F 8 BRIGHT A_FaceTarget  
+    BUBB G 0 A_PlaySound("bubbatk")
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0) 
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0) 
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 8 BRIGHT A_CustomMissile("BubbaWind2",32,0,0,0)
+    BUBB F 10 BRIGHT
+    BUBB F 10 BRIGHT A_FaceTarget
+    BUBB F 8 BRIGHT
+    BUBB F 8 BRIGHT A_FaceTarget  
+    BUBB G 0 A_PlaySound("bubbatk")
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0) 
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0) 
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FireLizardBall",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 0 A_CustomMissile("FTFire",Random(16,64),Random(-64,64),Random(45,-45),0,0)
+    BUBB G 8 BRIGHT A_CustomMissile("BubbaWind2",32,0,0,0)
+    BUBB F 10 BRIGHT
+    Goto See
+  Death:
+    BUBB A 0 A_Playsound
+    BUBB A 0 A_Scream
+    BUBB A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    BUBB A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    BUBB A 2 A_NoBlocking
+    BUBB A 2
+    BUBB A 0 A_ChangeFlag("FloatBob", 0)
+    BUBB A 0 
+    BUBB A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BUBB A 2
+    BUBB A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BUBB A 2
+    BUBB A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BUBB A 2
+    BUBB A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BUBB AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",5000)
+	Stop
+  }
+}
+
+ACTOR BubbaWind
+{
+  Height 4
+  Speed 50
+  Radius 50 
+  Height 16
+  PROJECTILE
+  +Randomize 
+  states
+  {
+  Spawn:
+    NULL ABCDEFGHIJK 1 A_RadiusThrust(128,255,0)
+    Stop
+  }
+}
+
+ACTOR BubbaWind2
+{
+  Height 4
+  Speed 50
+  Radius 50 
+  Height 16
+  PROJECTILE
+  +Randomize 
+  states
+  {
+  Spawn:  
+    NULL A 0 A_PlaySound("bubbwind")
+	NULL AAAAAAAAAAAAAAAAAA 0 A_RadiusThrust(128,255,0) 
+	NULL A 10
+    Stop
+  }
+}
