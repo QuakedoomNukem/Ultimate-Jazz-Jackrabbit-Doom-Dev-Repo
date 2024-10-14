@@ -97,7 +97,6 @@ map E4SL2G lookup "E4SL2_NAME"
 { 
 	levelnum = 115
 	next = E4L7
-	secretnext = E4L7
 	cluster = 65
 	sky1 = "BOSSSKY", 0
 	music = "FBSSTRK"

@@ -126,6 +126,7 @@
 
 #include "actors/Goons/JJ2/Diamondus Remix/Bee Hive.txt"
 
+#include "actors/Goons/JJ2/Hell/Bilsy.txt"
 #include "actors/Goons/JJ2/Hell/Bubba.txt"
 #include "actors/Goons/JJ2/Hell/Skeleton.txt"
 #include "actors/Goons/JJ2/Hell/Tiny Devil.txt"
@@ -256,6 +257,7 @@
 #include "actors/Goons/UJJD/XMas/Snow Doofus.txt"
 #include "actors/Goons/UJJD/XMas/Snow Mongrel.txt"
 #include "actors/Goons/UJJD/XMas/Snow Schwarzenguard.txt"
+#include "actors/Goons/UJJD/XMas/Xmas Lights Goon.txt"
 
 //Props
 #include "actors/props/decos.txt"

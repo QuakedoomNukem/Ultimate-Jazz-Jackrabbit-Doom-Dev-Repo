@@ -20,7 +20,6 @@ map E2L1 lookup "E2L1_NAME"
 { 
 	levelnum = 10
 	next = E2L2
-	secretnext = E2L2
 	sky1 = "turtsky", 0
 	cluster = 2
 	music = "TURTEMPLE"
@@ -45,7 +44,6 @@ map E2L3 lookup "E2L3_NAME"
 { 
 	levelnum = 12
 	next = E2L4
-	secretnext = E2L4
 	sky1 = "jungsky", 0
 	cluster = 2
 	music = "JUNGROCK"
@@ -57,7 +55,6 @@ map E2L4 lookup "E2L4_NAME"
 { 
 	levelnum = 13
 	next = E2L5
-	secretnext = E2L5
 	sky1 = "MARBSKY2", 0
 	cluster = 2
 	music = "MARBELARA"
@@ -82,7 +79,6 @@ map E2L6 lookup "E2L6_NAME"
 { 
 	levelnum = 16
 	next = E2L7
-	secretnext = E2L7
 	sky1 = "dreemsky", 0
 	cluster = 2
 	music = "DREEMPIPES"
@@ -106,7 +102,6 @@ map E2L8 lookup "E2L8_NAME"
 { 
 	levelnum = 17
 	next = E2L9
-	secretnext = E2L9
 	sky1 = "SCRAPSKY", 0
 	cluster = 2
 	music = "SCRAPARAP"
@@ -118,7 +113,6 @@ map E2L9 lookup "E2L9_NAME"
 { 
 	levelnum = 18
 	next = E3L1
-	secretnext = E3L1
 	sky1 = "megasky", 0
 	cluster = 2
 	music = "MEGAIRBASE"

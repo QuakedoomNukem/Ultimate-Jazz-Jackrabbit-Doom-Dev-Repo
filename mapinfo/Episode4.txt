@@ -33,7 +33,6 @@ map E4L2 lookup "E4L2_NAME"
 {
 	levelnum = 32
 	next = E4L3
-	secretnext = E4L3
 	sky1 = "RSKY3", 0
 	cluster = 4
 	music = "JUNGLE"
@@ -45,7 +44,6 @@ map E4L3 lookup "E4L3_NAME"
 {
 	levelnum = 33
 	next = E4L4
-	secretnext = E4L4
 	sky1 = "Eastsky", 0
 	cluster = 4
 	music = "FROLICK"
@@ -57,7 +55,6 @@ map E4L4 lookup "E4L4_NAME"
 { 
 	levelnum = 34
 	next = E4L5
-	secretnext = E4L5
 	sky1 = "JSKY1", 0
 	cluster = 4
 	music = "COLONIUS"
@@ -69,7 +66,6 @@ map E4L5 lookup "E4L5_NAME"
 { 
 	levelnum = 35
 	next = E4L6
-	secretnext = E4L6
 	sky1 = "townsky", 0
 	cluster = 4
 	music = "STRTWIZE"
@@ -93,7 +89,6 @@ map E4L7 lookup "E4L7_NAME"
 { 
 	levelnum = 37
 	next = E4L8
-	secretnext = E4L8
 	sky1 = "psysky", 0
 	cluster = 4
 	music = "HIPPIE"
@@ -118,7 +113,6 @@ map E4L9 lookup "E4L9_NAME"
 { 
 	levelnum = 39
 	next = E4L10
-	secretnext = E4L10
 	sky1 = "JSKY2", 0
 	cluster = 4
 	music = "TUBREMIX"
@@ -130,7 +124,6 @@ map E4L10 lookup "E4L10_NAME"
 { 
 	levelnum = 40
 	next = E4L11
-	secretnext = E4L11
 	sky1 = "MEDRSKY", 0
 	cluster = 4
 	music = "MEDRIX"
@@ -142,7 +135,6 @@ map E4L11 lookup "E4L11_NAME"
 {
 	levelnum = 41
 	next = E4L12
-	secretnext = E4L12
 	sky1 = "hauntsky", 0
 	cluster = 4
 	music = ""
@@ -154,7 +146,6 @@ map E4L12 lookup "E4L12_NAME"
 {
 	levelnum = 42
 	next = E4L13
-	secretnext = E4L13
 	sky1 = "RSKY3", 0
 	cluster = 4
 	music = "DARKGROOVE"
@@ -165,7 +156,7 @@ map E4L12 lookup "E4L12_NAME"
 map E4L13 lookup "E4L13_NAME"
 {
 	levelnum = 43
-	next = Endsequence,"GameEnd"
+	next = E5L1
 	sky1 = "RSKY3", 0
 	cluster = 4
 	music = "JZDAMNED"
@@ -203,8 +194,5 @@ cluster 4
     "        ",
     "Open your advent calendar for...",
     "        ",
-    "Holiday Hell Hare",
-    "",
-    "Thank you for playing!",
-    "Feel free to give feedback and suggestions!"
+    "Holiday Hell Hare"
     }

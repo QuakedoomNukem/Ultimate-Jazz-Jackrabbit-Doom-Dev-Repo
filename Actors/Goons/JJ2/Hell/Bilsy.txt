@@ -1,0 +1,146 @@
+/*
+ * Copyright (c) 2019-2023 BassSlapper89, QuakeDoomNukem, RichardDS90, Ozymandias81
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
+
+ACTOR Bilsy 4243 
+{
+	Health 7000
+	Radius 20
+	Height 56
+	Mass 1024
+	Speed 35
+	PainChance 32
+	Monster
+	+QUICKTORETALIATE 
+	+FLOORCLIP 
+	+NOTARGET
+	+NEVERTARGET
+  +NOBLOOD
+  +DROPOFF
+  +BOSS
+  +DONTMORPH
+  +FULLVOLACTIVE
+  +NORADIUSDMG
+  +NOTARGET
+  +FLOORCLIP
+  +BOSSDEATH
+  +NOICEDEATH
+	SeeSound "Bilsee"
+	DeathSound "bilsdead"
+	Obituary "$OB_BILSY"
+	States
+	{
+	Spawn:
+		BILS A 4 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_PlaySound("Bilsee", CHAN_AUTO)
+		TNT1 A 0 A_SpawnItemEx("BilsyTeleportFog")
+	See2:
+		TNT1 A 0 A_UnSetShootable
+		TNT1 A 0 A_UnSetSolid
+		TNT1 A 0 A_Chase
+		TNT1 A 2 A_SpawnItemEx("BilsyTrail", 0, 0, 32)
+		TNT1 A 0 A_Chase
+		TNT1 A 2 A_SpawnItemEx("BilsyTrail", 0, 0, 32)
+		TNT1 A 0 A_Chase
+		TNT1 A 2 A_SpawnItemEx("BilsyTrail", 0, 0, 32)
+		TNT1 A 0 A_Chase
+		TNT1 A 2 A_SpawnItemEx("BilsyTrail", 0, 0, 32)
+		Loop
+	Missile:
+		TNT1 A 0 A_PlaySound("Bilsee", CHAN_AUTO)
+		TNT1 A 0 A_SpawnItemEx("BilsyTeleportFog")
+		TNT1 A 0 A_SetShootable
+		TNT1 A 0 A_SetSolid
+		BILS AAA 10 BRIGHT A_FaceTarget
+		BILS B 4 BRIGHT A_FaceTarget
+		BILS C 4 BRIGHT A_FaceTarget
+		BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,15,0,0)
+		BILS C 4 BRIGHT A_FaceTarget
+		BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,0,0,0)
+		BILS C 4 BRIGHT A_FaceTarget
+		BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,15,0,0)
+		BILS C 4 BRIGHT A_FaceTarget
+		BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,15,0,0)
+        BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,0,0,0)
+		BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,15,0,0)
+		BILS D 4 BRIGHT A_CustomMissile ("FireLizardBall",56,0,-15,0,0)
+		TNT1 A 0 A_PlaySound("Bilsee", CHAN_AUTO)
+		TNT1 A 0 A_SpawnItemEx("BilsyTeleportFog")
+		Goto See2
+	Pain:
+		BILS A 3   
+		BILS A 3 A_Pain
+		TNT1 A 0 A_SpawnItemEx("BilsyTeleportFog")
+		TNT1 A 0 A_PlaySound("Bilsee", CHAN_AUTO)
+		Goto See2
+  Death:
+    BILS A 0 A_Playsound
+    BILS A 0 A_Scream
+    BILS A 2 ThrustThingZ(0, random(2, 8), 0, 0)
+    BILS A 0 ThrustThing (random(0, 255), random(2, 8), 0, 0)
+    BILS A 2 A_NoBlocking
+    BILS A 2
+    BILS A 0 A_ChangeFlag("FloatBob", 0)
+    BILS A 0 
+    BILS A 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-15, 15), Random(-15, 15), Random(20, 30), 0, 0, 0, 0, 128)
+    BILS A 2
+    BILS A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BILS A 2
+    BILS A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BILS A 2
+    BILS A 2 A_SpawnItemEx("JetpackZombieExplosion", Random(-20, 20), Random(-20, 20), Random(20, 40), 0, 0, 0, 0, 128)
+    BILS AAAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
+    TNT1 A 0 A_GiveToTarget ("Points",5000)
+	Stop
+  }
+}
+
+ACTOR BilsyTeleportFog
+{
+	Height 78
+	+NOBLOCKMAP
+	+NOGRAVITY
+	RenderStyle Add
+	States
+	{
+	Spawn:
+		FRTF ABCDEFGH 3 Bright
+		Stop
+	}
+}
+
+ACTOR BilsyTrail
+{
+	Height 16
+	Scale 0.5
+	Alpha 0.5
+	+NOBLOCKMAP
+	+NOGRAVITY
+	RenderStyle Add
+	States
+	{
+	Spawn:
+		RBAL ABABABABAB 2 Bright A_FadeOut(0.1)
+		Stop
+	}
+}

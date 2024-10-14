@@ -20,7 +20,6 @@ map E1L1 lookup "E1L1_NAME"
 { 
 	levelnum = 1
 	next = E1L2
-	secretnext = E1L2
 	sky1 = "JSKY1", 0
 	cluster = 1
 	music = "LEARNING"
@@ -45,7 +44,6 @@ map E1L3 lookup "E1L3_NAME"
 {
 	levelnum = 3
 	next = E1L4
-	secretnext = E1L4
 	sky1 = "JSKY1", 0
 	cluster = 1
 	music = "CASTLE"
@@ -57,7 +55,6 @@ map E1L4 lookup "E1L4_NAME"
 {
 	levelnum = 4
 	next = E1L5
-	secretnext = E1L5
 	sky1 = "DIASKY3", 0
 	cluster = 1
 	music = "DIAMONDUS"
@@ -69,7 +66,6 @@ map E1L5 lookup "E1L5_NAME"
 {
 	levelnum = 5
 	next = E1L6
-	secretnext = E1L6
 	sky1 = "JSKY2", 0
 	cluster = 1
 	music = "TUBELECTRIC"
@@ -94,7 +90,6 @@ map E1L7 lookup "E1L7_NAME"
 {
 	levelnum = 7
 	next = E1L8
-	secretnext = E1L8
 	sky1 = "JSKY2", 0
 	cluster = 1
 	music = "LETNI"
@@ -118,7 +113,6 @@ map E1L9 lookup "E1L9_NAME"
 {
 	levelnum = 9
     next = E2L1
-	Secretnext = E2L1
 	sky1 = "JSKY6", 0
 	cluster = 1
 	music = "ORBITUS"

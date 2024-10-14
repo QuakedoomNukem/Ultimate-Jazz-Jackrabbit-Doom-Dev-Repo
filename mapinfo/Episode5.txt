@@ -20,7 +20,6 @@ map E5L1 lookup "E5L1_NAME"
 {
 	levelnum = 44
 	next = E5L2
-	secretnext = E5L2
 	sky1 = "CANDSKY", 0
 	cluster = 5
 	music = CANDION
@@ -32,7 +31,7 @@ map E5L2 lookup "E5L2_NAME"
 {
 	levelnum = 45
 	next = E5L3
-	secretnext = 3D09
+	secretnext = Bonus09
 	sky1 = "BLOXSKY", 0
 	cluster = 5
 	music = BLOXONIUS
@@ -56,7 +55,6 @@ map E5L4 lookup "E5L4_NAME"
 {
 	levelnum = 47
 	next = E5L5
-	secretnext = E5L5
 	sky1 = "NIGHT", 0
 	cluster = 5
 	music = SilentNight
@@ -68,7 +66,6 @@ map E5L5 lookup "E5L5_NAME"
 {
 	levelnum = 48
 	next = E5L6
-	secretnext = E5L6
 	sky1 = "FREZSKY", 0
 	cluster = 5
 	music = HellFreeze
@@ -79,9 +76,8 @@ map E5L5 lookup "E5L5_NAME"
 map E5L6 lookup "E5L6_NAME"
 { 
 	levelnum = 49
-	next = Map47
-	secretnext = Map47 
-	sky1 = "JSKY3", 0
+	next = Endsequence,"GameEnd"
+	sky1 = "Burrsky", 0
 	cluster = 5
 	music = BURROWSVILLE
 	exitpic = "$JAZZ_IN"
