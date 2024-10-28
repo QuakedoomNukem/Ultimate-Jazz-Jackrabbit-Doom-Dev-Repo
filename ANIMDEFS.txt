@@ -1322,12 +1322,6 @@ pic sfal1f tics 1
 pic sfal1g tics 1
 pic sfal1h tics 1
 
-texture SFALL1
-PIC SFALL1 TICS 4
-PIC SFALL2 TICS 4
-PIC SFALL3 TICS 4
-PIC SFALL4 TICS 4
-
 texture slug15a
 pic slug15a tics 1
 pic slug15b tics 1
