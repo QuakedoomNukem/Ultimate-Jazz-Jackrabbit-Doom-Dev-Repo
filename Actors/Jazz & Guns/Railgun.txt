@@ -55,7 +55,7 @@ Actor Railgun : Weapon
 		TNT1 A 0 A_JumpIfInventory("Gun9PowerUp", 1, "Powerfire")
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 1, "Hold1")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 8
 		PLPI A 0 A_Refire
@@ -63,7 +63,7 @@ Actor Railgun : Weapon
 	Hold1:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 2, "Hold2")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 7
 		PLPI A 0 A_Refire
@@ -71,7 +71,7 @@ Actor Railgun : Weapon
 	Hold2:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 3, "Hold3")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 6
 		PLPI A 0 A_Refire
@@ -79,7 +79,7 @@ Actor Railgun : Weapon
 	Hold3:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 4, "Hold4")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 5
 		PLPI A 0 A_Refire
@@ -87,7 +87,7 @@ Actor Railgun : Weapon
 	Hold4:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 5, "Hold5")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 4
 		PLPI A 0 A_Refire
@@ -95,7 +95,7 @@ Actor Railgun : Weapon
 	Hold5:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 6, "Hold6")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 3
 		PLPI A 0 A_Refire
@@ -103,7 +103,7 @@ Actor Railgun : Weapon
 	Hold6:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 7, "Hold7")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 2
 		PLPI A 0 A_Refire
@@ -111,14 +111,14 @@ Actor Railgun : Weapon
 	Hold7:
 		TNT1 A 0 A_JumpIfInventory("RapidFireCount", 8, "Hold8")
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 1
 		PLPI A 0 A_Refire
 		Goto Ready
 	Hold8:
 		TNT1 A 0 A_StartSound("RAILFIRE")
-		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT , 0 , "JazzFirePuff")
+		PLPI B 4 BRIGHT A_RailAttack(250, 0, 1, "Orange", "Yellow", RGF_SILENT | RGF_FULLBRIGHT | FBF_NORANDOM , 0 , "JazzFirePuff")
 		PLPI CA 4
 		PLPI A 0 A_Refire
 		Goto Ready
@@ -256,12 +256,12 @@ Actor RailAmmo : Ammo
 {
 	//$Category JJ_Weapons
 	Inventory.Amount 3
-	Inventory.MaxAmount 100
+	Inventory.MaxAmount 90
 	Inventory.Icon "RAILZ0"
 	Inventory.PickupMessage "$PK_AMMO9"
 	Inventory.PickupSound "AMMOUP"
 	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
+	Ammo.BackpackMaxAmount 90
 	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY

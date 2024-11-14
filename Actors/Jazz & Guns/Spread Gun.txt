@@ -36,6 +36,7 @@ Actor SpreadGun : DoomWeapon
 	DamageFactor 0
 	+FLOATBOB
 	+NOGRAVITY
+	+WEAPON.NOAUTOAIM
 	Obituary "$OB_SPREG"
 	States
 	{

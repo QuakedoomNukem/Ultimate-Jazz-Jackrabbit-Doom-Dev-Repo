@@ -74,7 +74,7 @@ VERYHARD_CONFIRM = "There is no coming back\n"
 					"You really want to\n"
 					"risk your life?\n\n"
 					"\cgModifiers:\n"
-					"\cl1.5x Damage, No Cheats,\n"
+					"\cl1.5x Damage,\n"
 					"3x Enemy Health,\n"
 					"100% Aggressiveness,\n"
 					"Double Ammo";

@@ -252,9 +252,14 @@ Actor BaronStatue
 	States
 	{
 	Spawn:
-		BSTT E -1
+		BSTT A -1
 		Stop
 	}
+}
+
+Actor BaronStatueFlip: BaronStatue
+{
+	+XFlip
 }
 
 Actor BattleShipFlameCeiling
@@ -1673,7 +1678,6 @@ Actor DoomGuyPrize
 {
 	Height 16
 	Radius 16
-	Scale 0.6
 	+NOGRAVITY
 	States
 	{
@@ -3751,6 +3755,7 @@ Actor MBPrize 3357
 
 Actor Meatball 4064
 {
+	Tag "Hell Meatball"
 	Height 56
 	Radius 16
 	+NOGRAVITY
@@ -5951,6 +5956,7 @@ Actor Tomato 3162
 
 Actor TomatoEE : Tomato 4075
 {
+	Tag "Hell Tomato"
 	Height 56
 	Radius 16
 	States
@@ -6726,6 +6732,19 @@ Actor XmasIcicle2 4151
 	{
 	Spawn:
 		FRZZ I -1
+		Stop
+	}
+}
+
+Actor XmasStreetLamp 30029
+{
+	Height 120
+	Radius 16
+	+SOLID
+	States
+	{
+	Spawn:
+		STLM A -1
 		Stop
 	}
 }

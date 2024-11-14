@@ -260,7 +260,6 @@ Actor GoldenTurtle : CustomInventory
 Actor GoodieArmor : ArmorBonus
 {
 	Armor.SaveAmount 1
-	Inventory.Icon "ARM1A0"
 	FloatBobStrength 0.5
 	+BRIGHT
 	+FLOATBOB

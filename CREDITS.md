@@ -148,6 +148,9 @@ Th3Gavst3r (ninsheetmusic)
 Jazz Belmont High Quality Rip:
 Xarlable
 
+MiniDoom II Graphics:
+Calavera Studio (https://jcporcel.gumroad.com/)
+
 Special thanks:
 Cliff Bleszinski
 Arjan Brussee

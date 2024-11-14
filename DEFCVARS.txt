@@ -1,0 +1,46 @@
+version 223
+
+set cl_run "true"
+set disableautosave "0"
+set freelook "true"
+
+set gl_texture_filter "0"
+
+set m_cleanscale "true"
+
+set r_models "true"
+set r_spriteadjust "2"
+
+set name "Jazz"
+set am_backcolor "6c 54 40"
+set am_cdwallcolor "4c 38 20"
+set am_colorset "0"
+set am_drawmapback "1"
+set am_map_secrets "1"
+set am_showitems "true"
+
+set am_showmaplabel "0"
+set am_showmonsters "true"
+set am_showsecrets "true"
+set am_showtime "true"
+
+set am_textured "true"
+set crosshair "1"
+set crosshairon "true"
+set crosshairscale "0.25"
+set dimamount "-1"
+set dimcolor "57 16 4E"
+set displaynametags "0"
+set gl_menu_blur "-1"
+
+set hud_oldscale "true"
+set inter_classic_scaling "true"
+set hud_aspectscale "false"
+
+set show_obituaries "true"
+set ui_screenborder_classic_scaling "true"
+set m_cleanscale "false"
+set wi_cleantextscale "true"
+set wi_percents "true"
+set wi_showtotaltime "true"
+set wipetype "0"

@@ -63,10 +63,11 @@ Actor ArtifactBase : CustomInventory
 Actor Artifact1 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF1"
+	Inventory.PickupSound "INVINCE"
 	States
 	{
 	Spawn:
-		ARTI DEF 3
+		ARTI DE 8
 		Loop
 	}
 }
@@ -74,6 +75,7 @@ Actor Artifact1 : ArtifactBase
 Actor Artifact2 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF2"
+	Inventory.PickupSound "INVINCE"
 	States
 	{
 	Spawn:
@@ -85,6 +87,7 @@ Actor Artifact2 : ArtifactBase
 Actor Artifact3 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF3"
+	Inventory.PickupSound "INVINCE"
 	Scale 0.50
 	States
 	{
@@ -97,6 +100,7 @@ Actor Artifact3 : ArtifactBase
 Actor Artifact4 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF4"
+	Inventory.PickupSound "INVINCE"
 	States
 	{
 	Spawn:
@@ -108,7 +112,8 @@ Actor Artifact4 : ArtifactBase
 Actor Artifact5 : ArtifactBase
 {
 	Inventory.PickupMessage "$PK_ARTF5"
-	Scale 2.0
+	Inventory.PickupSound "INVINCE"
+	Scale 1.7
 	States
 	{
 	Spawn:

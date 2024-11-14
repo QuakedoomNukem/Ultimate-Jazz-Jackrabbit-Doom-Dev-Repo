@@ -32,6 +32,7 @@ Actor LFG2000 : DoomWeapon
 	Weapon.BobStyle Smooth
 	DamageFactor 0
 	+FLOATBOB
+	+WEAPON.NOAUTOAIM
 	Obituary "$OB_WEP1"
 	States
 	{

@@ -1,0 +1,11 @@
+// Must be sorted in identification order (easiest to recognize first!)
+
+IWad
+{
+    Name = "Ultimate Jazz Jackrabbit Doom"
+    Autoname = "JazzJackrabbitDoom"
+    Game = "Doom"
+    Config = "JazzJackrabbitDoom"
+    Mapinfo = "mapinfo/mindefaults.txt"
+    BannerColors = "FF FF 00","22 8B 22"
+}

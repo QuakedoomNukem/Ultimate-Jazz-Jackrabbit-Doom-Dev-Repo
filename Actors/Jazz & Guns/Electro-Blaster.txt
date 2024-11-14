@@ -37,6 +37,7 @@ Actor ElectroBlaster : Weapon
 	Inventory.PickupMessage "$PK_WEAP0"
 	+FLOATBOB
 	+NOGRAVITY
+	+WEAPON.NOAUTOAIM
 	Obituary "$OB_WEP0"
 	States
 	{

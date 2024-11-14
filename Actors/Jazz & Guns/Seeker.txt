@@ -38,6 +38,7 @@ Actor Seeker : Weapon
 	DamageFactor 0
 	+FLOATBOB
 	+NOGRAVITY
+	+WEAPON.NOAUTOAIM
 	Obituary "$OB_WEP5"
 	States
 	{

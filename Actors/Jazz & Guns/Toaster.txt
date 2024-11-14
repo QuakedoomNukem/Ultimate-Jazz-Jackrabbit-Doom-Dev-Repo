@@ -33,6 +33,7 @@ Actor Toaster : Weapon
 	Inventory.PickupSound "WEAPNGET"
 	Inventory.PickupMessage "$PK_WEAP7"
 	DamageFactor 0
+	+WEAPON.NOAUTOAIM
 	+WEAPON.EXPLOSIVE
 	+FLOATBOB
 	+NOGRAVITY

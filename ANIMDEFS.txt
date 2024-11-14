@@ -1805,6 +1805,18 @@ texture UNRL_AT1
 pic UNRL_AT1 tics 12
 pic UNRL_AT2 tics 12
 
+texture UTFOUNT1
+pic UTFOUNT1 tics 4
+pic UTFOUNT2 tics 4
+pic UTFOUNT3 tics 4
+
+switch doom UTJZ_SW1
+on sound SWITCH1N
+pic UTJZ_SW2 tics 0 
+
+Off sound UTJZ_SW2
+pic UTJZ_SW1 tics 0 
+
 //Nakatomi
 
 texture NAKA35A
@@ -1828,6 +1840,10 @@ pic NAKAOFF tics 0
 warp2 texture TTLMAPBG
 warp texture DREAMSKY
 warp texture PSYSKY
+
+warp2 texture UTWATER
+warp2 texture UTBLOOD
+warp2 texture UTLAVA
 
 //Icebox 3
 

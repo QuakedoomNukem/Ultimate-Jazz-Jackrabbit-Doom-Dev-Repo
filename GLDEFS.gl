@@ -2138,3 +2138,20 @@ Object JazzGreentorch
 	frame JJTGB { light JazzGreentorch }
 	frame JJTGC { light JazzGreentorch }
 }
+
+flickerlight Xmastorch
+{
+    color 0.5 0.2 0.6
+    size 32
+    secondarySize 48
+    chance 0.3
+	attenuate 1
+	Offset 0 32 0
+}
+
+Object Xmastorch
+{
+	frame FRZTA { light Xmastorch }
+	frame FRZTB { light Xmastorch }
+	frame FRZTC { light Xmastorch }
+}

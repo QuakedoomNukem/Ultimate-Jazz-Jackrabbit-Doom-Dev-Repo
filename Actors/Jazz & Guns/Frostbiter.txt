@@ -38,6 +38,7 @@ Actor Frostbiter : Weapon
 	DamageFactor 0
 	+FLOATBOB
 	+NOGRAVITY
+	+WEAPON.NOAUTOAIM
 	Obituary "$OB_WEP8"
 	States
 	{
@@ -201,12 +202,12 @@ Actor FreezeAmmo : Ammo
 {
 	//$Category JJ_Weapons
 	Inventory.Amount 3
-	Inventory.MaxAmount 100
+	Inventory.MaxAmount 90
 	Inventory.PickupMessage "$PK_AMMO8"
 	Inventory.PickupSound "AMMOUP"
 	Inventory.Icon "MBLSZ0"
 	Ammo.BackpackAmount 3
-	Ammo.BackpackMaxAmount 100
+	Ammo.BackpackMaxAmount 90
 	FloatBobStrength 0.5
 	+FLOATBOB
 	+NOGRAVITY

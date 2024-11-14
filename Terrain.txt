@@ -75,11 +75,6 @@ floor DREM42A Jazzwater
 floor DREM42B Jazzwater
 floor DREM42C Jazzwater
 
-floor fwater1 Jazzwater
-floor fwater2 Jazzwater
-floor fwater3 Jazzwater
-floor fwater4 Jazzwater
-
 floor JREDLQ1 Jazzwater
 floor JREDLQ2 Jazzwater
 floor JREDLQ3 Jazzwater

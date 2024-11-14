@@ -85,7 +85,6 @@ OptionMenu "JazzGameplayOptions"
 	
 	StaticText "General", 1
 	Option     "Always Run"   , "cl_run"             , "OnOff"
-	Slider     "Aim Assist"     , "Autoaim"            , 0, 35, 1
 	
 	StaticText ""
 	StaticText "AutoSaves", 1
@@ -118,7 +117,7 @@ OptionMenu "JazzControlOptions"
 {
 	Title "$CNTRLMNU_TITLE"
 
-	Submenu "$CNTRLMNU_KEYS"  , "JazzKeybinds"
+	Submenu "$OPTMNU_CONTROLS"  , "JazzKeybinds"
 	Submenu "$OPTMNU_MOUSE"     , "MouseOptions"
 	Submenu "$OPTMNU_JOYSTICK", "JoystickOptions"
 
@@ -221,7 +220,8 @@ OptionMenu "JazzUIOptions"
 	Slider "$HUDMNU_CROSSHAIRSCALE",		"crosshairscale", 0.0, 2.0, 0.05, 2
 	StaticText " "
 	Option "$MISCMNU_CLEANMENU",				"m_cleanscale", "OffOn"
-	StaticText "This option must be turned OFF!", "Yellow"
+	Option "$SCALEMNU_HUDASPECT", 				"hud_aspectscale", "OnOff"
+	StaticText "These options must be turned OFF!", "Yellow"
 	StaticText " "
 	ScaleSlider "$HUDMNU_UISCALE",				"uiscale", 0.0, 8.0, 1.0, "$SCALEMNU_ADAPT"
 	StaticText " "
@@ -274,12 +274,7 @@ OptionMenu "JazzVideoOptions"
 	Command "$VIDMNU_APPLYFS"   , "menu_resolution_commit_changes 1"
 	
 	StaticText " "
-	StaticText "Lighting", 1
-	Option "$GLPREFMNU_SECLIGHTMODE",			gl_lightmode,					"LightingModes"
-	
-	StaticText " "
 	StaticText "Misc", 1
-    Option "$DSPLYMNU_GPUSWITCH", "vid_gpuswitch", "GPUSwitch"
 	Option "$GLTEXMNU_PRECACHETEX"  , "gl_precache"                  , "YesNo"
 
 }
