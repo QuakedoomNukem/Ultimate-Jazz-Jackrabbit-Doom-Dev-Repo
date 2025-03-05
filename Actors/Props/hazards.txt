@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-Actor BattleshipsMine 3891
+Actor BattleshipsMine
 {
 	Tag "Battleship Mine"
 	Height 16
@@ -81,7 +81,7 @@ Actor BattleshipsMinePiece
 	}
 }
 
-Actor CrysilisMine 3350
+Actor CrysilisMine
 {
 	Health 100
 	Radius 12
@@ -123,12 +123,12 @@ Actor CrysilisBoomFX
 	States
 	{
 	Spawn:
-		RFLE ABCDEFGHIJK 1 
+		RFLE ABCDEFGHIJK 1
 		Stop
 	}
 }
 
-Actor FireBombSpawner 3329
+Actor FireBombSpawner
 {
 	Height 0
 	Radius 0
@@ -197,7 +197,7 @@ Actor FireBombPest : FirePest
 	}
 }
 
-Actor FloorShooter 32528
+Actor FloorShooter
 {
 	Radius 16
 	Height 24
@@ -225,7 +225,7 @@ Actor FloorShooter 32528
 		JZPW ABCDEF 1 A_FaceTarget
 		JZPW G 0 A_StartSound("TOASTED")
 		JZPW G 1   A_CustomMissile("FloorShot",16,0,0,2,90)
-		JZPW HIGHIGHIGHIGHI 1  
+		JZPW HIGHIGHIGHIGHI 1
 		Goto See
 	}
 }
@@ -248,14 +248,14 @@ Actor FloorShot
 	Spawn:
 		FLOR A 1
 		TNT1 A 0 ThrustThingZ(0,32,0,0)
-		Loop 
+		Loop
 	Death:
 		JBLS EFGH 4
 		Stop
 	}
 }
 
-Actor CeilingShooter : FloorShooter 3213
+Actor CeilingShooter : FloorShooter
 {
 	+NOGRAVITY
 	+SPAWNCEILING
@@ -275,7 +275,7 @@ Actor CeilingShooter : FloorShooter 3213
 		BCEI ABCDEF 1 A_FaceTarget
 		JZPW G 0 A_StartSound("TOASTED")
 		BCEI G 1  A_CustomMissile("CeilingShot",8,0,0,2,-90)
-		BCEI HIGHIGHIGHIGHI 1  
+		BCEI HIGHIGHIGHIGHI 1
 		Goto See
 	}
 }
@@ -298,14 +298,14 @@ Actor Ceilingshot
 	Spawn:
 		FLOR A 1
 		TNT1 A 0 ThrustThingZ(0,-32,0,0)
-		Loop 
+		Loop
 	Death:
 		JBLS EFGH 4
 		Stop
 	}
 }
 
-Actor JazzBarrel 5120
+Actor JazzBarrel
 {
 	Health 20
 	Radius 10
@@ -328,13 +328,13 @@ Actor JazzBarrel 5120
 		BARD AAAAAAAAAA 0 A_SpawnItemEx("JetpackZombieExplosion", Random(-30, 30), Random(-30, 30), Random(20, 40), 0, 0, 0, 0, 128)
 		BARD M 3 BRIGHT A_Scream
 		BARD N 3 BRIGHT A_Explode
-		BARD OPQRS 3 BRIGHT 
-		TNT1 A 0 BRIGHT 
+		BARD OPQRS 3 BRIGHT
+		TNT1 A 0 BRIGHT
 		Stop
 	}
 }
 
-Actor LabMace 3349
+Actor LabMace
 {
 	Radius 24
 	Height 0
@@ -476,7 +476,7 @@ Actor Mace0 : MaceLink
 	}
 }
 
-Actor LetniBarrier64 3216
+Actor LetniBarrier64
 {
 	Scale 1.0
 	Height 64
@@ -487,29 +487,29 @@ Actor LetniBarrier64 3216
 	MeleeDamage 2
 	MeleeRange 32
 	PainChance 0
-	-CANPASS	
+	-CANPASS
 	-COUNTKILL
-	+DONTBLAST 
+	+DONTBLAST
 	+DONTHARMSPECIES
 	+DONTTHRUST
-	+LOOKALLAROUND 
-	+NOBLOOD 
+	+LOOKALLAROUND
+	+NOBLOOD
 	+NOINFIGHTING
-	+NOTARGETSWITCH 
-	+NOTAUTOAIMED 
+	+NOTARGETSWITCH
+	+NOTAUTOAIMED
 	+OLDRADIUSDMG
-	+SHOOTABLE 
+	+SHOOTABLE
 	+SOLID
 	States
 	{
 	Activated:
 		"####" "#" 0 A_StartSound("SPKBUZZ",CHAN_7)
-		"####" "#" 0 A_SargAttack	
+		"####" "#" 0 A_SargAttack
 		"####" "#" 1 A_Blast(BF_NOIMPACTDAMAGE,255,255,20.0)
 		Goto See
 	Spawn:
 		LBAR A 0 NoDelay A_StartSound("ELECPILL", CHAN_AUTO, CHANF_LOOP|CHANF_LOCAL|CHANF_TRANSIENT, frandom(0.7,1.0), ATTN_STATIC)
-		LBAR A 1 A_Look		
+		LBAR A 1 A_Look
 	See:
 		LBAR A 0 A_Chase("","",CHF_DONTMOVE)
 		LBAR A 0 A_FaceTarget
@@ -523,7 +523,7 @@ Actor LetniBarrier64 3216
 	}
 }
 
-Actor LetniBarrier128 : LetniBarrier64 3217
+Actor LetniBarrier128 : LetniBarrier64
 {
 	Height 128
 	States
@@ -535,7 +535,7 @@ Actor LetniBarrier128 : LetniBarrier64 3217
 		Goto See
 	Spawn:
 		LBAR C 0 NoDelay A_StartSound("ELECPILL", CHAN_AUTO, CHANF_LOOP|CHANF_LOCAL|CHANF_TRANSIENT, frandom(0.7,1.0), ATTN_STATIC)
-		LBAR C 1 A_Look		
+		LBAR C 1 A_Look
 	See:
 		LBAR C 0 A_Chase("","",CHF_DONTMOVE)
 		LBAR C 0 A_FaceTarget
@@ -549,7 +549,7 @@ Actor LetniBarrier128 : LetniBarrier64 3217
 	}
 }
 
-Actor MarbelaraTree 32523
+Actor MarbelaraTree
 {
 	Mass 1000000
 	Speed 0
@@ -581,7 +581,7 @@ Actor MarbelaraTree 32523
 	}
 }
 
-Actor MegaBombSpawner1 3245
+Actor MegaBombSpawner1
 {
 	Radius 16
 	Height 16
@@ -617,7 +617,7 @@ Actor MegaBombSpawner1 3245
 	}
 }
 
-Actor MegaBombSpawner2 : MegaBombSpawner1 3246
+Actor MegaBombSpawner2 : MegaBombSpawner1
 {
 	Radius 8
 	States
@@ -664,7 +664,7 @@ Actor MegaBaseMissile
 	}
 }
 
-Actor PezMaceSpawner 3888
+Actor PezMaceSpawner
 {
 	Radius 24
 	Height 0
@@ -807,7 +807,7 @@ Actor PMace0 : PMacelink
 	}
 }
 
-Actor PowerLine64 32529
+Actor PowerLine64
 {
 	Height 64
 	Radius 18
@@ -818,29 +818,29 @@ Actor PowerLine64 32529
 	PainChance 0
 	-CANPASS
 	-COUNTKILL
-	+BRIGHT	
-	+DONTBLAST 
+	+BRIGHT
+	+DONTBLAST
 	+DONTHARMSPECIES
 	+DONTTHRUST
-	+LOOKALLAROUND 
-	+NOBLOOD 
+	+LOOKALLAROUND
+	+NOBLOOD
 	+NOINFIGHTING
-	+NOTARGETSWITCH 
-	+NOTAUTOAIMED 
+	+NOTARGETSWITCH
+	+NOTAUTOAIMED
 	+OLDRADIUSDMG
-	+SHOOTABLE 
+	+SHOOTABLE
 	+SOLID
 	States
 	{
 	Activated:
-		"####" "#" 0 A_StartSound("SPKBUZZ",CHAN_AUTO)	
+		"####" "#" 0 A_StartSound("SPKBUZZ",CHAN_AUTO)
 		"####" "#" 0 A_SargAttack
 		"####" "#" 1 A_Blast(BF_NOIMPACTDAMAGE,255,255,20.0)
 		Goto See
 	Spawn:
 		TNT1 A 0 A_StartSound("ELECPILL", CHAN_7, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
 		JZEC A 0
-		JZEC A 1 A_Look		
+		JZEC A 1 A_Look
 	See:
 		TNT1 A 0 A_StartSound("ELECPILL", CHAN_7, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
 		JZEC A 0 A_Chase("","",CHF_DONTMOVE)
@@ -850,25 +850,25 @@ Actor PowerLine64 32529
 		Goto See+1
 	Death:
 	    TNT1 A 0 A_StopSound(Chan_7)
-		TNT1 A 0 A_StartSound("SPKBUZZ",CHAN_AUTO)	
+		TNT1 A 0 A_StartSound("SPKBUZZ",CHAN_AUTO)
 		TNT1 AAAAAAA 0 A_SpawnItemEx("PowerlinePiece",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
 		Stop
 	}
 }
 
-Actor PowerLine128 : PowerLine64 32530
+Actor PowerLine128 : PowerLine64
 {
 	Height 128
 	States
 	{
 	Activated:
-		"####" "#" 0 A_StartSound("SPKBUZZ",CHAN_AUTO)	
+		"####" "#" 0 A_StartSound("SPKBUZZ",CHAN_AUTO)
 		"####" "#" 0 A_SargAttack
 		"####" "#" 1 A_Blast(BF_NOIMPACTDAMAGE,255,255,20.0)
 		Goto See
 	Spawn:
 		JZEC D 0 A_StartSound("ELECPILL", CHAN_7, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
-		JZEC D 1 A_Look		
+		JZEC D 1 A_Look
 	See:
 		TNT1 A 0 A_StartSound("ELECPILL", CHAN_7, CHANF_LOOP, frandom(0.7,1.0), ATTN_STATIC)
 		JZEC D 0 A_Chase("","",CHF_DONTMOVE)
@@ -878,12 +878,11 @@ Actor PowerLine128 : PowerLine64 32530
 		Goto See+1
 	Death:
 	TNT1 A 0 A_StopSound(Chan_7)
-		TNT1 A 0 A_StartSound("SPKBUZZ",CHAN_AUTO)	
+		TNT1 A 0 A_StartSound("SPKBUZZ",CHAN_AUTO)
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("PowerlinePiece",0,0,random(8,128),frandom(-5,5),frandom(-5,5),frandom(2,9))
 		Stop
 	}
 }
-
 
 Actor PowerlinePiece
 {
@@ -906,11 +905,11 @@ Actor PowerlinePiece
 		Stop
 	Death:
 		TNT1 A 0
-		Stop	
+		Stop
 	}
 }
 
-Actor SeaMine 32502
+Actor SeaMine
 {
 	Health 20
 	Radius 12
@@ -961,7 +960,7 @@ Actor SeaMineBoomFX
 	}
 }
 
-Actor TechnoirMine 3587
+Actor TechnoirMine
 {
 	Height 16
 	Radius 12
@@ -1021,7 +1020,7 @@ Actor TechnoirMinePiece
 	}
 }
 
-Actor TurtempleBoulderStart : SwitchableDecoration 3819
+Actor TurTempleBoulderStart : SwitchableDecoration
 {
 	Radius 32
 	Height 48
@@ -1035,12 +1034,12 @@ Actor TurtempleBoulderStart : SwitchableDecoration 3819
 		BLDR A -1
 		Stop
 	Active:
-		TNT1 A 1 A_SpawnItemEx("TurtempleBoulder", 0, 0, 0, 10, 0, 0, 0) 
-		Stop   
+		TNT1 A 1 A_SpawnItemEx("TurTempleBoulder", 0, 0, 0, 10, 0, 0, 0)
+		Stop
 	}
 }
 
-Actor TurtempleBoulder
+Actor TurTempleBoulder
 {
 	Speed 15
 	Radius 32
@@ -1063,7 +1062,7 @@ Actor TurtempleBoulder
 		BLDR ABCD 2 A_StartSound("BLDRROL", CHAN_AUTO) //before it was set to CHAN_WEAPON, why?
 		Loop
 	Roll:
-		BLDR BCDA 2 A_Quake(1, 2, 0, 192, "") 
+		BLDR BCDA 2 A_Quake(1, 2, 0, 192, "")
 		Loop
 	Death:
 		TNT1 A 1 A_SpawnItem("BoulderStopped")
@@ -1087,7 +1086,7 @@ Actor BoulderStopped
 	}
 }
 
-Actor BombChair 4122
+Actor BombChair
 {
 	Health 10
 	Mass 100000

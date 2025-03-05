@@ -395,7 +395,11 @@ PK_ARTF5 = "\csI ain't afraid of no Quake.";
 PK_BLGEM = "\clPicked up a \cnblue gem\cl.";
 PK_BONUS = "\clBonus Gem";
 PK_CAROT = "\ciYum! A Carrot! (25+ HP)";
+PK_CBRO = "\ceA bronze coin (+1 Coin)";
+PK_CDIA = "\cvA diamond coin (+20 Coins)";
+PK_CGOL = "\cfA gold coin (+10 Coins)";
 PK_CLIFF = "\cfCliffy B's power! (FULL RESTORE+FULL AMMO)";
+PK_CSIL = "\ccA silver coin (+5 Coins)";
 PK_DRINK = "\cl*Burp";
 PK_ELAIR = "\clPicked up the \cjAir Element\cl.";
 PK_ELDAR = "\clPicked up the \ctDark Element\cl.";
@@ -416,6 +420,10 @@ PK_JJBAK = "Backpack full of ammo!";
 PK_JJINV = "\cfInvulnerability!";
 PK_JJTIM = "It's Turbo Time!";
 PK_JJTUR = "\cfTurbocharge!";
+PK_LF10 = "\clYou picked up a Medium Ankh.";
+PK_LF25 = "\clYou picked up a Mega Ankh.";
+PK_LF5 = "\clYou picked up a Low Ankh.";
+PK_LOOT = "\clYou picked up loot.";
 PK_MONE1 = "\cdMoney Bundle";
 PK_MONE2 = "\cdMoney Bucket (5+ AP)";
 PK_OMF97 = "\cyYou are about to play One Must Fall 2097.";
@@ -433,15 +441,14 @@ PK_SUARM = "\cnSuper Armor! (200+ AP)";
 PK_SUPCA = "\ciSuper Carrot! (50+ HP)";
 PK_TNT = "\c[D4]TNT";
 PK_TWINK = "Ew... you ate a thousand year old twinkie.";
-PK_LOOT = "\clYou picked up loot.";
 PK_XYORB = "\clYou picked up a Xylan Orb.";
-PK_LF5 = "\clYou picked up a Low Ankh.";
-PK_LF10 = "\clYou picked up a Medium Ankh.";
-PK_LF25 = "\clYou picked up a Mega Ankh.";
 
 //Special
 LH_CAROT = "\ciNever needed a carrot so much until NOW! (25+ HP)";
 LH_GBAMK = "\cjPicked up a Medkit Advance that you REALLY need! (50+ HP)";
+
+//Tags
+TAG_C = "Coins";
 
 //Weapons
 PK_AMMO0 = "\ckElectro-Blaster \clAmmo";
