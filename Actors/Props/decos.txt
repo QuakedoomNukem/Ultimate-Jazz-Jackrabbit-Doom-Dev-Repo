@@ -3022,7 +3022,7 @@ Actor JJThing26
 	}
 }
 
-Actor JungBambooCeiling1 3448
+Actor JungBambooCeiling1
 {
 	Height 78
 	Radius 4
@@ -3037,7 +3037,7 @@ Actor JungBambooCeiling1 3448
 	}
 }
 
-Actor JungBambooCeiling2 : JungBambooCeiling1 3449
+Actor JungBambooCeiling2 : JungBambooCeiling1
 {
 	Height 50
 	States
@@ -3061,7 +3061,7 @@ Actor JungFlower1 3440
 	}
 }
 
-Actor JungFlower2 : JungFlower1 3441
+Actor JungFlower2 : JungFlower1
 {
 	States
 	{
@@ -3071,7 +3071,7 @@ Actor JungFlower2 : JungFlower1 3441
 	}
 }
 
-Actor JungFlower3 : JungFlower1 3442
+Actor JungFlower3 : JungFlower1
 {
 	States
 	{
@@ -3081,7 +3081,7 @@ Actor JungFlower3 : JungFlower1 3442
 	}
 }
 
-Actor JungFlower4 : JungFlower1 3443
+Actor JungFlower4 : JungFlower1
 {
 	States
 	{
@@ -3091,7 +3091,7 @@ Actor JungFlower4 : JungFlower1 3443
 	}
 }
 
-Actor JungFlower5 : JungFlower1 3444
+Actor JungFlower5 : JungFlower1
 {
 	States
 	{
@@ -3101,7 +3101,7 @@ Actor JungFlower5 : JungFlower1 3444
 	}
 }
 
-Actor JungFlower6 : JungFlower1 3445
+Actor JungFlower6 : JungFlower1
 {
 	States
 	{
@@ -3110,7 +3110,8 @@ Actor JungFlower6 : JungFlower1 3445
 		Stop
 	}
 }
-Actor JungleBush1 : JungFlower1 3187
+
+Actor JungleBush1 : JungFlower1
 {
 	States
 	{
@@ -3120,7 +3121,7 @@ Actor JungleBush1 : JungFlower1 3187
 	}
 }
 
-Actor JungleBush2 : JungFlower1 3188
+Actor JungleBush2 : JungFlower1
 {
 	States
 	{
@@ -3130,7 +3131,7 @@ Actor JungleBush2 : JungFlower1 3188
 	}
 }
 
-Actor JungleGrass : JungFlower1 3186
+Actor JungleGrass : JungFlower1
 {
 	States
 	{
@@ -3140,7 +3141,7 @@ Actor JungleGrass : JungFlower1 3186
 	}
 }
 
-Actor JungleSpike : JungFlower1 3193
+Actor JungleSpike : JungFlower1
 {
 	Height 12
 	States
@@ -3151,7 +3152,7 @@ Actor JungleSpike : JungFlower1 3193
 	}
 }
 
-Actor JungleTree1 3182
+Actor JungleTree1
 {
 	Height 104
 	Radius 6
@@ -3164,7 +3165,7 @@ Actor JungleTree1 3182
 	}
 }
 
-Actor JungleTree2 3183
+Actor JungleTree2
 {
 	Height 84
 	Radius 16
@@ -3177,7 +3178,7 @@ Actor JungleTree2 3183
 	}
 }
 
-Actor JungleTree3 3184
+Actor JungleTree3
 {
 	Height 84
 	Radius 16
@@ -3190,7 +3191,7 @@ Actor JungleTree3 3184
 	}
 }
 
-Actor JungleTree4 3185
+Actor JungleTree4
 {
 	Height 104
 	Radius 8
@@ -3203,7 +3204,7 @@ Actor JungleTree4 3185
 	}
 }
 
-Actor JungleTree5 3189
+Actor JungleTree5
 {
 	Height 128
 	Radius 16
@@ -3216,7 +3217,7 @@ Actor JungleTree5 3189
 	}
 }
 
-Actor JungleTree6 3190
+Actor JungleTree6
 {
 	Height 128
 	Radius 16
@@ -3229,7 +3230,7 @@ Actor JungleTree6 3190
 	}
 }
 
-Actor JungleTwine 3192
+Actor JungleTwine
 {
 	Height 75
 	Radius 16
@@ -3244,7 +3245,7 @@ Actor JungleTwine 3192
 	}
 }
 
-Actor JungleWallLantern 3191
+Actor JungleWallLantern
 {
 	Height 12
 	Radius 4
@@ -3258,8 +3259,7 @@ Actor JungleWallLantern 3191
 	}
 }
 
-
-Actor JungSpring 3439
+Actor JungSpring
 {
 	Height 32
 	Radius 16
@@ -3272,7 +3272,7 @@ Actor JungSpring 3439
 	}
 }
 
-Actor JzPrize1 3359
+Actor JzPrize1
 {
 	Height 16
 	Radius 16
@@ -3285,7 +3285,7 @@ Actor JzPrize1 3359
 	}
 }
 
-Actor JzPrize2 : JzPrize1 3360
+Actor JzPrize2 : JzPrize1
 {
 	States
 	{
@@ -3295,7 +3295,7 @@ Actor JzPrize2 : JzPrize1 3360
 	}
 }
 
-Actor KamikazeTurtleProp 3738
+Actor KamikazeTurtleProp
 {
 	Height 56
 	Radius 16
@@ -3308,7 +3308,7 @@ Actor KamikazeTurtleProp 3738
 	}
 }
 
-Actor KatanaRobot 10500
+Actor KatanaRobot
 {
 	Radius 16
 	Height 72
@@ -3321,7 +3321,7 @@ Actor KatanaRobot 10500
 	}
 }
 
-Actor KGass 26558
+Actor KGass
 {
 	Height 52
 	Radius 12
@@ -3335,7 +3335,7 @@ Actor KGass 26558
 	}
 }
 
-Actor Kiss 3603
+Actor Kiss
 {
 	Height 28
 	Radius 12
@@ -3348,7 +3348,7 @@ Actor Kiss 3603
 	}
 }
 
-Actor LabFlame 3348
+Actor LabFlame
 {
 	Height 32
 	Radius 7
@@ -3363,7 +3363,7 @@ Actor LabFlame 3348
 	}
 }
 
-Actor LabChain304 3339
+Actor LabChain304
 {
 	Height 304
 	Radius 4
@@ -3378,7 +3378,7 @@ Actor LabChain304 3339
 	}
 }
 
-Actor LabChain544 : LabChain304 3338
+Actor LabChain544 : LabChain304
 {
 	Height 544
 	States
@@ -3389,7 +3389,7 @@ Actor LabChain544 : LabChain304 3338
 	}
 }
 
-Actor LabDecor1 3341
+Actor LabDecor1
 {
 	Height 56
 	Radius 20
@@ -3403,7 +3403,7 @@ Actor LabDecor1 3341
 	}
 }
 
-Actor LabDecor2 : LabDecor1 3340
+Actor LabDecor2 : LabDecor1
 {
 	Height 16
 	Radius 16
@@ -3415,7 +3415,7 @@ Actor LabDecor2 : LabDecor1 3340
 	}
 }
 
-Actor LabDecor3 : LabDecor1 3335
+Actor LabDecor3 : LabDecor1
 {
 	Height 48
 	Radius 36
@@ -3427,7 +3427,7 @@ Actor LabDecor3 : LabDecor1 3335
 	}
 }
 
-Actor LabDecor4 : LabDecor1 3336
+Actor LabDecor4 : LabDecor1
 {
 	Height 48
 	Radius 32
@@ -3439,7 +3439,7 @@ Actor LabDecor4 : LabDecor1 3336
 	}
 }
 
-Actor LabDecor5 : LabDecor1 3337
+Actor LabDecor5 : LabDecor1
 {
 	Height 48
 	Radius 32
@@ -3451,7 +3451,7 @@ Actor LabDecor5 : LabDecor1 3337
 	}
 }
 
-Actor LabKatana 3342
+Actor LabKatana
 {
 	Height 120
 	Radius 16
@@ -3465,7 +3465,7 @@ Actor LabKatana 3342
 	}
 }
 
-Actor LagunCeilingStump 3879
+Actor LagunCeilingStump
 {
 	Height 28
 	Radius 10
@@ -3480,7 +3480,7 @@ Actor LagunCeilingStump 3879
 	}
 }
 
-Actor LagunTree1 3880
+Actor LagunTree1
 {
 	Height 88
 	Radius 8
@@ -3493,7 +3493,7 @@ Actor LagunTree1 3880
 	}
 }
 
-Actor LagunTree2 : LagunTree1 3881
+Actor LagunTree2 : LagunTree1
 {
 	States
 	{
@@ -3503,7 +3503,7 @@ Actor LagunTree2 : LagunTree1 3881
 	}
 }
 
-Actor LavaBubble 3307
+Actor LavaBubble
 {
 	Height 8
 	Radius 8
@@ -3516,7 +3516,7 @@ Actor LavaBubble 3307
 	}
 }
 
-Actor LCDoll 3209
+Actor LCDoll
 {
 	Radius 16
 	Height 16
@@ -3529,7 +3529,7 @@ Actor LCDoll 3209
 	}
 }
 
-Actor Lollipop 3602
+Actor Lollipop
 {
 	Height 56
 	Radius 8
@@ -3542,7 +3542,7 @@ Actor Lollipop 3602
 	}
 }
 
-Actor LongGrass 3621
+Actor LongGrass
 {
 	Height 8
 	Radius 8
@@ -3554,7 +3554,7 @@ Actor LongGrass 3621
 	}
 }
 
-Actor Lori 3998
+Actor Lori
 {
 	Radius 16
 	Height 68
@@ -3566,7 +3566,7 @@ Actor Lori 3998
 	}
 }
 
-Actor LoWangPrize 3369
+Actor LoWangPrize
 {
 	Height 16
 	Radius 16
@@ -3580,7 +3580,7 @@ Actor LoWangPrize 3369
 	}
 }
 
-Actor Lstat 25631
+Actor LStat
 {
 	Radius 16
 	Height 72
@@ -3593,7 +3593,7 @@ Actor Lstat 25631
 	}
 }
 
-Actor LubLubA 32509
+Actor LubLubA
 {
 	Height 52
 	Radius 16
@@ -3607,7 +3607,7 @@ Actor LubLubA 32509
 	}
 }
 
-Actor LubLubB : LubLubA 32510
+Actor LubLubB : LubLubA
 {
 	States
 	{
@@ -3617,7 +3617,7 @@ Actor LubLubB : LubLubA 32510
 	}
 }
 
-Actor Lublubprize 3386
+Actor LubLubPrize
 {
 	Height 16
 	Radius 16
@@ -3630,7 +3630,7 @@ Actor Lublubprize 3386
 	}
 }
 
-Actor Major 3982
+Actor Major
 {
 	Radius 16
 	Height 48
@@ -3643,7 +3643,7 @@ Actor Major 3982
 	}
 }
 
-Actor MarbCloudA 3404
+Actor MarbCloudA
 {
 	Radius 8
 	Height 8
@@ -3658,7 +3658,7 @@ Actor MarbCloudA 3404
 	}
 }
 
-Actor MarbCloudB : MarbCloudA 3405
+Actor MarbCloudB : MarbCloudA
 {
 	States
 	{
@@ -3668,7 +3668,7 @@ Actor MarbCloudB : MarbCloudA 3405
 	}
 }
 
-Actor MarbleraCeilPillar1 3993
+Actor MarbleraCeilPillar1
 {
 	Height 50
 	Radius 8
@@ -3683,7 +3683,7 @@ Actor MarbleraCeilPillar1 3993
 	}
 }
 
-Actor MarbleraCeilPillar2 : MarbleraCeilPillar1 3994
+Actor MarbleraCeilPillar2 : MarbleraCeilPillar1
 {
 	Height 114
 	States
@@ -3694,7 +3694,7 @@ Actor MarbleraCeilPillar2 : MarbleraCeilPillar1 3994
 	}
 }
 
-Actor MarbleraCeilPillar3 : MarbleraCeilPillar1 3995
+Actor MarbleraCeilPillar3 : MarbleraCeilPillar1
 {
 	Height 82
 	States
@@ -3705,7 +3705,7 @@ Actor MarbleraCeilPillar3 : MarbleraCeilPillar1 3995
 	}
 }
 
-Actor MarbelaraMediumPlatform 3327
+Actor MarbelaraMediumPlatform
 {
 	Height 80
 	Radius 12
@@ -3718,7 +3718,7 @@ Actor MarbelaraMediumPlatform 3327
 	}
 }
 
-Actor MarbelaraShortPlatform : MarbelaraMediumPlatform 3326
+Actor MarbelaraShortPlatform : MarbelaraMediumPlatform
 {
 	Height 48
 	States
@@ -3729,7 +3729,7 @@ Actor MarbelaraShortPlatform : MarbelaraMediumPlatform 3326
 	}
 }
 
-Actor MarbelaraTallPlatform : MarbelaraMediumPlatform 3328
+Actor MarbelaraTallPlatform : MarbelaraMediumPlatform
 {
 	Height 144
 	States
@@ -3740,7 +3740,7 @@ Actor MarbelaraTallPlatform : MarbelaraMediumPlatform 3328
 	}
 }
 
-Actor MBPrize 3357
+Actor MBPrize
 {
 	Height 16
 	Radius 16
@@ -3753,7 +3753,7 @@ Actor MBPrize 3357
 	}
 }
 
-Actor Meatball 4064
+Actor Meatball
 {
 	Tag "Hell Meatball"
 	Height 56
@@ -3768,7 +3768,7 @@ Actor Meatball 4064
 	}
 }
 
-Actor MedTree 25641
+Actor MedTree
 {
 	Radius 12
 	Height 12
@@ -3781,7 +3781,7 @@ Actor MedTree 25641
 	}
 }
 
-Actor MedivoRemixCastle 4015
+Actor MedivoRemixCastle
 {
 	Height 256
 	Radius 32
@@ -3794,7 +3794,7 @@ Actor MedivoRemixCastle 4015
 	}
 }
 
-Actor MedivoRemixDoubleFlag 4013
+Actor MedivoRemixDoubleFlag
 {
 	Height 94
 	Radius 4
@@ -3807,7 +3807,7 @@ Actor MedivoRemixDoubleFlag 4013
 	}
 }
 
-Actor MedivoRemixGargoyle 4018
+Actor MedivoRemixGargoyle
 {
 	Height 64
 	Radius 32
@@ -3820,7 +3820,7 @@ Actor MedivoRemixGargoyle 4018
 	}
 }
 
-Actor MedivoRemixGargoyleLeft 4017
+Actor MedivoRemixGargoyleLeft
 {
 	Height 64
 	Radius 32
@@ -3833,7 +3833,7 @@ Actor MedivoRemixGargoyleLeft 4017
 	}
 }
 
-Actor MedivoRemixGargoyleRight : MedivoRemixGargoyleLeft 4016
+Actor MedivoRemixGargoyleRight : MedivoRemixGargoyleLeft
 {
 	States
 	{
@@ -3843,7 +3843,7 @@ Actor MedivoRemixGargoyleRight : MedivoRemixGargoyleLeft 4016
 	}
 }
 
-Actor MedivoRemixGar 4027
+Actor MedivoRemixGar
 {
 	Height 64
 	Radius 32
@@ -3856,7 +3856,7 @@ Actor MedivoRemixGar 4027
 	}
 }
 
-Actor MedivoRemixGarLeft 4026
+Actor MedivoRemixGarLeft
 {
 	Height 64
 	Radius 32
@@ -3869,7 +3869,7 @@ Actor MedivoRemixGarLeft 4026
 	}
 }
 
-Actor MedivoRemixGarRight : MedivoRemixGarLeft 4025
+Actor MedivoRemixGarRight : MedivoRemixGarLeft
 {
 	States
 	{
@@ -3879,7 +3879,7 @@ Actor MedivoRemixGarRight : MedivoRemixGarLeft 4025
 	}
 }
 
-Actor MedivoRemixPillar128 4021
+Actor MedivoRemixPillar128
 {
 	Height 128
 	Radius 16
@@ -3892,7 +3892,7 @@ Actor MedivoRemixPillar128 4021
 	}
 }
 
-Actor MedivoRemixPillar256 : MedivoRemixPillar128 4022
+Actor MedivoRemixPillar256 : MedivoRemixPillar128
 {
 	Height 256
 	States
@@ -3903,7 +3903,7 @@ Actor MedivoRemixPillar256 : MedivoRemixPillar128 4022
 	}
 }
 
-Actor MedivoRemixRock1 4028
+Actor MedivoRemixRock1
 {
 	Height 84
 	Radius 10
@@ -3916,7 +3916,7 @@ Actor MedivoRemixRock1 4028
 	}
 }
 
-Actor MedivoRemixRock2 : MedivoRemixRock1 4029
+Actor MedivoRemixRock2 : MedivoRemixRock1
 {
 	Height 88
 	States
@@ -3927,7 +3927,7 @@ Actor MedivoRemixRock2 : MedivoRemixRock1 4029
 	}
 }
 
-Actor MedivoRemixRockCeil1 4030
+Actor MedivoRemixRockCeil1
 {
 	Height 88
 	Radius 10
@@ -3942,7 +3942,7 @@ Actor MedivoRemixRockCeil1 4030
 	}
 }
 
-Actor MedivoRemixRockCeil2 : MedivoRemixRockCeil1 4031
+Actor MedivoRemixRockCeil2 : MedivoRemixRockCeil1
 {
 	States
 	{
@@ -3952,7 +3952,7 @@ Actor MedivoRemixRockCeil2 : MedivoRemixRockCeil1 4031
 	}
 }
 
-Actor MedivoRemixSkGarLeft 4024
+Actor MedivoRemixSkGarLeft
 {
 	Height 84
 	Radius 32
@@ -3965,7 +3965,7 @@ Actor MedivoRemixSkGarLeft 4024
 	}
 }
 
-Actor MedivoRemixSkGarRight : MedivoRemixSkGarLeft 4023
+Actor MedivoRemixSkGarRight : MedivoRemixSkGarLeft
 {
 	States
 	{
@@ -3975,7 +3975,7 @@ Actor MedivoRemixSkGarRight : MedivoRemixSkGarLeft 4023
 	}
 }
 
-Actor MedivoRemixSkinnyGargoyleLeft 4020
+Actor MedivoRemixSkinnyGargoyleLeft
 {
 	Height 84
 	Radius 32
@@ -3988,7 +3988,7 @@ Actor MedivoRemixSkinnyGargoyleLeft 4020
 	}
 }
 
-Actor MedivoRemixSkinnyGargoyleRight : MedivoRemixSkinnyGargoyleLeft 4019
+Actor MedivoRemixSkinnyGargoyleRight : MedivoRemixSkinnyGargoyleLeft
 {
 	States
 	{
@@ -3998,7 +3998,7 @@ Actor MedivoRemixSkinnyGargoyleRight : MedivoRemixSkinnyGargoyleLeft 4019
 	}
 }
 
-Actor MedivoRemixSpikes 4014
+Actor MedivoRemixSpikes
 {
 	Height 32
 	Radius 16
@@ -4011,7 +4011,7 @@ Actor MedivoRemixSpikes 4014
 	}
 }
 
-Actor Mermaid 3870
+Actor Mermaid
 {
 	Height 32
 	Radius 18
@@ -4025,7 +4025,7 @@ Actor Mermaid 3870
 	}
 }
 
-Actor MSpike 25640
+Actor MSpike
 {
 	Height 32
 	Radius 6
@@ -4038,7 +4038,7 @@ Actor MSpike 25640
 	}
 }
 
-Actor MtPain27 4065
+Actor MtPain27
 {
 	Height 56
 	Radius 16
@@ -4053,7 +4053,7 @@ Actor MtPain27 4065
 	}
 }
 
-Actor MuckBridge 3794
+Actor MuckBridge
 {
 	Height 8
 	Radius 8
@@ -4067,7 +4067,7 @@ Actor MuckBridge 3794
 	}
 }
 
-Actor MuckCactus 3463
+Actor MuckCactus
 {
 	Height 96
 	Radius 8
@@ -4080,7 +4080,7 @@ Actor MuckCactus 3463
 	}
 }
 
-Actor MuckGunk1 3464
+Actor MuckGunk1
 {
 	Height 20
 	Radius 18
@@ -4095,7 +4095,7 @@ Actor MuckGunk1 3464
 	}
 }
 
-Actor MuckGunk2 : MuckGunk1 3465
+Actor MuckGunk2 : MuckGunk1
 {
 	Radius 20
 	States
@@ -4106,7 +4106,7 @@ Actor MuckGunk2 : MuckGunk1 3465
 	}
 }
 
-Actor NokaSign 4010
+Actor NokaSign
 {
 	Height 32
 	Radius 14
@@ -4119,7 +4119,7 @@ Actor NokaSign 4010
 	}
 }
 
-Actor NPC1 3261
+Actor NPC1
 {
 	Radius 12
 	Height 36
@@ -4132,7 +4132,7 @@ Actor NPC1 3261
 	}
 }
 
-Actor NPC2 : NPC1 3256
+Actor NPC2 : NPC1
 {
 	Height 32
 	States
@@ -4143,7 +4143,7 @@ Actor NPC2 : NPC1 3256
 	}
 }
 
-Actor NPC3 : NPC1 3257
+Actor NPC3 : NPC1
 {
 	States
 	{
@@ -4153,7 +4153,7 @@ Actor NPC3 : NPC1 3257
 	}
 }
 
-Actor NPC4 : NPC1 3258
+Actor NPC4 : NPC1
 {
 	Height 48
 	States
@@ -4164,7 +4164,7 @@ Actor NPC4 : NPC1 3258
 	}
 }
 
-Actor NPC5 : NPC1 3259
+Actor NPC5 : NPC1
 {
 	Height 40
 	States
@@ -4175,7 +4175,7 @@ Actor NPC5 : NPC1 3259
 	}
 }
 
-Actor NPC6 : NPC1 3260
+Actor NPC6 : NPC1
 {
 	Height 60
 	States
@@ -4186,7 +4186,7 @@ Actor NPC6 : NPC1 3260
 	}
 }
 
-Actor NSpikeOne 32535
+Actor NSpikeOne
 {
 	Height 46
 	Radius 16
@@ -4201,7 +4201,7 @@ Actor NSpikeOne 32535
 	}
 }
 
-Actor NSpikeTwo 32536
+Actor NSpikeTwo
 {
 	Radius 14
 	Height 32
@@ -4214,7 +4214,7 @@ Actor NSpikeTwo 32536
 	}
 }
 
-Actor NSpikeThree 32537
+Actor NSpikeThree
 {
 	Radius 16
 	Height 17
@@ -4229,7 +4229,7 @@ Actor NSpikeThree 32537
 	}
 }
 
-Actor NSpikeFour 32539
+Actor NSpikeFour
 {
 	Radius 16
 	Height 8
@@ -4242,7 +4242,7 @@ Actor NSpikeFour 32539
 	}
 }
 
-Actor Nstad 3204
+Actor NStad
 {
 	Radius 16
 	Height 180
@@ -4255,7 +4255,7 @@ Actor Nstad 3204
 	}
 }
 
-Actor OLEasterEgg 3927
+Actor OLEasterEgg
 {
 	Height 44
 	Radius 16
@@ -4268,7 +4268,7 @@ Actor OLEasterEgg 3927
 	}
 }
 
-Actor OrbitCurl1 3171
+Actor OrbitCurl1
 {
 	Height 72
 	Radius 10
@@ -4282,7 +4282,7 @@ Actor OrbitCurl1 3171
 	}
 }
 
-Actor OrbitCurl2 : OrbitCurl1 3172
+Actor OrbitCurl2 : OrbitCurl1
 {
 	States
 	{
@@ -4292,7 +4292,7 @@ Actor OrbitCurl2 : OrbitCurl1 3172
 	}
 }
 
-Actor OrbitLight 3167
+Actor OrbitLight
 {
 	Height 64
 	Radius 8
@@ -4306,7 +4306,7 @@ Actor OrbitLight 3167
 	}
 }
 
-Actor OrbitPillar 3166
+Actor OrbitPillar
 {
 	Height 104
 	Radius 10
@@ -4320,7 +4320,7 @@ Actor OrbitPillar 3166
 	}
 }
 
-Actor OrbitSpike 3168
+Actor OrbitSpike
 {
 	Height 16
 	Radius 4
@@ -4333,7 +4333,7 @@ Actor OrbitSpike 3168
 	}
 }
 
-Actor PagbPlush 3373
+Actor PagbPlush
 {
 	Height 16
 	Radius 16
@@ -4346,7 +4346,7 @@ Actor PagbPlush 3373
 	}
 }
 
-Actor Papyrus 3789
+Actor Papyrus
 {
 	Height 96
 	Radius 24
@@ -4359,7 +4359,7 @@ Actor Papyrus 3789
 	}
 }
 
-Actor PezSpikeFloor 3466
+Actor PezSpikeFloor
 {
 	Height 16
 	Radius 16
@@ -4372,7 +4372,7 @@ Actor PezSpikeFloor 3466
 	}
 }
 
-Actor PezSpikeCeiling : PezSpikeFloor 3467
+Actor PezSpikeCeiling : PezSpikeFloor
 {
 	Height 30
 	+NOGRAVITY
@@ -4385,7 +4385,7 @@ Actor PezSpikeCeiling : PezSpikeFloor 3467
 	}
 }
 
-Actor PezStatue 3473
+Actor PezStatue
 {
 	Height 88
 	Radius 12
@@ -4398,7 +4398,7 @@ Actor PezStatue 3473
 	}
 }
 
-Actor PezTree1 3468
+Actor PezTree1
 {
 	Height 92
 	Radius 8
@@ -4411,7 +4411,7 @@ Actor PezTree1 3468
 	}
 }
 
-Actor PezTree2 : PezTree1 3469
+Actor PezTree2 : PezTree1
 {
 	Height 124
 	States
@@ -4422,7 +4422,7 @@ Actor PezTree2 : PezTree1 3469
 	}
 }
 
-Actor PezTree3 : PezTree1 3470
+Actor PezTree3 : PezTree1
 {
 	Height 128
 	States
@@ -4433,7 +4433,7 @@ Actor PezTree3 : PezTree1 3470
 	}
 }
 
-Actor PezTree4 : PezTree1 3471
+Actor PezTree4 : PezTree1
 {
 	Height 256
 	States
@@ -4444,7 +4444,7 @@ Actor PezTree4 : PezTree1 3471
 	}
 }
 
-Actor PezTree5 : PezTree1 3472
+Actor PezTree5 : PezTree1
 {
 	Height 32
 	States
@@ -4455,7 +4455,7 @@ Actor PezTree5 : PezTree1 3472
 	}
 }
 
-Actor PipeMusicSmoke 3763
+Actor PipeMusicSmoke
 {
 	Radius 8
 	Height 16
@@ -4469,7 +4469,7 @@ Actor PipeMusicSmoke 3763
 	}
 }
 
-Actor Pistoolkip 4077
+Actor PisToolkip
 {
 	Height 32
 	Radius 16
@@ -4482,7 +4482,7 @@ Actor Pistoolkip 4077
 	}
 }
 
-Actor PlantOne 18952
+Actor PlantOne
 {
 	Radius 8
 	Height 40
@@ -4494,7 +4494,7 @@ Actor PlantOne 18952
 	}
 }
 
-Actor PMuckCactus 3793
+Actor PMuckCactus
 {
 	Height 92
 	Radius 8
@@ -4507,7 +4507,7 @@ Actor PMuckCactus 3793
 	}
 }
 
-Actor Pole 3610
+Actor Pole
 {
 	Height 56
 	Radius 8
@@ -4520,7 +4520,7 @@ Actor Pole 3610
 	}
 }
 
-Actor PrisonRabbitGreen 3263
+Actor PrisonRabbitGreen
 {
 	Radius 10
 	Height 50
@@ -4535,7 +4535,7 @@ Actor PrisonRabbitGreen 3263
 	}
 }
 
-Actor PrisonRabbitGrey : PrisonRabbitGreen 3266
+Actor PrisonRabbitGrey : PrisonRabbitGreen
 {
 	States
 	{
@@ -4546,7 +4546,7 @@ Actor PrisonRabbitGrey : PrisonRabbitGreen 3266
 }
 
 
-Actor PrisonRabbitOrange : PrisonRabbitGreen 3265
+Actor PrisonRabbitOrange : PrisonRabbitGreen
 {
 	States
 	{
@@ -4556,7 +4556,7 @@ Actor PrisonRabbitOrange : PrisonRabbitGreen 3265
 	}
 }
 
-Actor PrisonRabbitPurple : PrisonRabbitGreen 3264
+Actor PrisonRabbitPurple : PrisonRabbitGreen
 {
 	States
 	{
@@ -4566,7 +4566,7 @@ Actor PrisonRabbitPurple : PrisonRabbitGreen 3264
 	}
 }
 
-Actor PrisonRabbitTeal : PrisonRabbitGreen 3267
+Actor PrisonRabbitTeal : PrisonRabbitGreen
 {
 	States
 	{
@@ -4576,7 +4576,7 @@ Actor PrisonRabbitTeal : PrisonRabbitGreen 3267
 	}
 }
 
-Actor PrisonRabbitWhite : PrisonRabbitGreen 3262
+Actor PrisonRabbitWhite : PrisonRabbitGreen
 {
 	States
 	{
@@ -4586,7 +4586,7 @@ Actor PrisonRabbitWhite : PrisonRabbitGreen 3262
 	}
 }
 
-Actor PsychFlower1 3753
+Actor PsychFlower1
 {
 	Radius 8
 	Height 46
@@ -4599,7 +4599,7 @@ Actor PsychFlower1 3753
 	}
 }
 
-Actor PsychFlower2 3754
+Actor PsychFlower2
 {
 	Radius 8
 	Height 48
@@ -4612,7 +4612,7 @@ Actor PsychFlower2 3754
 	}
 }
 
-Actor PsychGuitar1 3459
+Actor PsychGuitar1
 {
 	Height 80
 	Radius 48
@@ -4625,7 +4625,7 @@ Actor PsychGuitar1 3459
 	}
 }
 
-Actor PsychGuitar2 : PsychGuitar1 3460
+Actor PsychGuitar2 : PsychGuitar1
 {
 	States
 	{
@@ -4649,7 +4649,7 @@ Actor PsychPlant 3457
 	}
 }
 
-Actor Psychplant2 3461
+Actor PsychPlant2
 {
 	Height 352
 	Radius 16
@@ -4661,7 +4661,7 @@ Actor Psychplant2 3461
 	}
 }
 
-Actor PsychPlant3 3462
+Actor PsychPlant3
 {
 	Height 256
 	Radius 8
@@ -4674,7 +4674,7 @@ Actor PsychPlant3 3462
 	}
 }
 
-Actor PsychStump1 3456
+Actor PsychStump1
 {
 	Height 36
 	Radius 12
@@ -4687,7 +4687,7 @@ Actor PsychStump1 3456
 	}
 }
 
-Actor PsychStump2 : PsychStump1 3458
+Actor PsychStump2 : PsychStump1
 {
 	States
 	{
@@ -4697,7 +4697,7 @@ Actor PsychStump2 : PsychStump1 3458
 	}
 }
 
-Actor PsychTree1 3454
+Actor PsychTree1
 {
 	Height 96
 	Radius 32
@@ -4710,7 +4710,7 @@ Actor PsychTree1 3454
 	}
 }
 
-Actor PsychTree2 : PsychTree1 3455
+Actor PsychTree2 : PsychTree1
 {
 	States
 	{
@@ -4720,7 +4720,7 @@ Actor PsychTree2 : PsychTree1 3455
 	}
 }
 
-Actor Pumpkin 3159
+Actor Pumpkin
 {
 	Height 20
 	Radius 12
@@ -4734,7 +4734,7 @@ Actor Pumpkin 3159
 	}
 }
 
-Actor Rabbit 12000
+Actor Rabbit
 {
 	Radius 16
 	Height 8
@@ -4746,7 +4746,7 @@ Actor Rabbit 12000
 	}
 }
 
-Actor RabbitDrum 3608
+Actor RabbitDrum
 {
 	Height 40
 	Radius 16
@@ -4759,7 +4759,7 @@ Actor RabbitDrum 3608
 	}
 }
 
-Actor Rallen 3207
+Actor Rallen
 {
 	Radius 16
 	Height 180
@@ -4772,7 +4772,7 @@ Actor Rallen 3207
 	}
 }
 
-Actor RaneforesGrass 3885
+Actor RaneforesGrass
 {
 	Height 8
 	Radius 16
@@ -4785,7 +4785,7 @@ Actor RaneforesGrass 3885
 	}
 }
 
-Actor RaneforesSwordCeiling 3886
+Actor RaneforesSwordCeiling
 {
 	Height 32
 	Radius 16
@@ -4800,7 +4800,7 @@ Actor RaneforesSwordCeiling 3886
 	}
 }
 
-Actor RaneforesSwordGround 3887
+Actor RaneforesSwordGround
 {
 	Height 8
 	Radius 16
@@ -4813,7 +4813,7 @@ Actor RaneforesSwordGround 3887
 	}
 }
 
-Actor ReeferPlant 3757
+Actor ReeferPlant
 {
 	Height 56
 	Radius 8
@@ -4826,7 +4826,7 @@ Actor ReeferPlant 3757
 	}
 }
 
-Actor ReeferRabbit 3756
+Actor ReeferRabbit
 {
 	Height 42
 	Radius 12
@@ -4839,7 +4839,7 @@ Actor ReeferRabbit 3756
 	}
 }
 
-Actor Rstat 25633
+Actor RStat
 {
 	Radius 16
 	Height 72
@@ -4852,7 +4852,7 @@ Actor Rstat 25633
 	}
 }
 
-Actor Sans 3790
+Actor Sans
 {
 	Height 72
 	Radius 20
@@ -4865,7 +4865,7 @@ Actor Sans 3790
 	}
 }
 
-Actor Scrap1 3474
+Actor Scrap1
 {
 	Height 24
 	Radius 12
@@ -4878,7 +4878,7 @@ Actor Scrap1 3474
 	}
 }
 
-Actor ScrapBigRocket 3475
+Actor ScrapBigRocket
 {
 	Height 64
 	Radius 28
@@ -4891,7 +4891,7 @@ Actor ScrapBigRocket 3475
 	}
 }
 
-Actor ScrapPipe1 3476
+Actor ScrapPipe1
 {
 	Height 58
 	Radius 8
@@ -4906,7 +4906,7 @@ Actor ScrapPipe1 3476
 	}
 }
 
-Actor ScrapPipe2 : ScrapPipe1 3477
+Actor ScrapPipe2 : ScrapPipe1
 {
 	States
 	{
@@ -4916,7 +4916,7 @@ Actor ScrapPipe2 : ScrapPipe1 3477
 	}
 }
 
-Actor ScrapPipe3 : ScrapPipe1 3478
+Actor ScrapPipe3 : ScrapPipe1
 {
 	Height 90
 	States
@@ -4927,7 +4927,7 @@ Actor ScrapPipe3 : ScrapPipe1 3478
 	}
 }
 
-Actor ScrapPipeFloor1 3479
+Actor ScrapPipeFloor1
 {
 	Height 88
 	Radius 4
@@ -4940,7 +4940,7 @@ Actor ScrapPipeFloor1 3479
 	}
 }
 
-Actor ScrapPipeFloor2 : ScrapPipeFloor1 3480
+Actor ScrapPipeFloor2 : ScrapPipeFloor1
 {
 	Height 56
 	States
@@ -4951,7 +4951,7 @@ Actor ScrapPipeFloor2 : ScrapPipeFloor1 3480
 	}
 }
 
-Actor ScrapSpike 3734
+Actor ScrapSpike
 {
 	Height 16
 	Radius 16
@@ -4963,7 +4963,7 @@ Actor ScrapSpike 3734
 	}
 }
 
-Actor ScrapTV 3733
+Actor ScrapTV
 {
 	Height 16
 	Radius 12
@@ -4977,7 +4977,7 @@ Actor ScrapTV 3733
 	}
 }
 
-Actor Sea1 3132
+Actor Sea1
 {
 	Radius 16
 	Height 32
@@ -4990,7 +4990,7 @@ Actor Sea1 3132
 	}
 }
 
-Actor Sea2 3133
+Actor Sea2
 {
 	Radius 12
 	Height 48
@@ -5003,7 +5003,7 @@ Actor Sea2 3133
 	}
 }
 
-Actor Sea3 : Sea2 3134
+Actor Sea3 : Sea2
 {
 	Height 112
 	States
@@ -5014,7 +5014,7 @@ Actor Sea3 : Sea2 3134
 	}
 }
 
-Actor Sea4 : Sea2 3135
+Actor Sea4 : Sea2
 {
 	States
 	{
@@ -5024,7 +5024,7 @@ Actor Sea4 : Sea2 3135
 	}
 }
 
-Actor SeaWeed 32506
+Actor SeaWeed
 {
 	Radius 2
 	Height 2
@@ -5036,7 +5036,7 @@ Actor SeaWeed 32506
 	}
 }
 
-Actor Shell1 3232
+Actor Shell1
 {
 	Radius 56
 	Height 96
@@ -5049,11 +5049,10 @@ Actor Shell1 3232
 	}
 }
 
-Actor Shell2 3233
+Actor Shell2 : Shell1
 {
 	Radius 48
 	Height 84
-	+SOLID
 	States
 	{
 	Spawn:
@@ -5062,11 +5061,10 @@ Actor Shell2 3233
 	}
 }
 
-Actor Shell3 3234
+Actor Shell3 : Shell1
 {
 	Radius 32
 	Height 48
-	+SOLID
 	States
 	{
 	Spawn:
@@ -5075,7 +5073,7 @@ Actor Shell3 3234
 	}
 }
 
-Actor SHTProp 3299
+Actor SHTProp
 {
 	Height 16
 	Radius 16
@@ -5087,7 +5085,7 @@ Actor SHTProp 3299
 	}
 }
 
-Actor Sign 3620
+Actor Sign
 {
 	Radius 8
 	Height 24
@@ -5100,7 +5098,7 @@ Actor Sign 3620
 	}
 }
 
-Actor Signposts 356
+Actor Signposts
 {
 	Radius 8
 	Height 80
@@ -5115,7 +5113,7 @@ Actor Signposts 356
 	}
 }
 
-Actor SilverBot1 3278
+Actor SilverBot1
 {
 	Height 72
 	Radius 16
@@ -5129,7 +5127,7 @@ Actor SilverBot1 3278
 	}
 }
 
-Actor SilverBot2 : SilverBot1 3279
+Actor SilverBot2 : SilverBot1
 {
 	Height 64
 	States
@@ -5140,7 +5138,7 @@ Actor SilverBot2 : SilverBot1 3279
 	}
 }
 
-Actor SkullStake1 3305
+Actor SkullStake1
 {
 	Height 280
 	Radius 8
@@ -5153,7 +5151,7 @@ Actor SkullStake1 3305
 	}
 }
 
-Actor SkullStake2 : SkullStake1 3306
+Actor SkullStake2 : SkullStake1
 {
 	States
 	{
@@ -5163,8 +5161,7 @@ Actor SkullStake2 : SkullStake1 3306
 	}
 }
 
-
-Actor SlugChain1 3484
+Actor SlugChain1
 {
 	Height 128
 	Radius 8
@@ -5178,7 +5175,7 @@ Actor SlugChain1 3484
 	}
 }
 
-Actor SlugChain2 : SlugChain1 3485
+Actor SlugChain2 : SlugChain1
 {
 	Height 256
 	States
@@ -5189,7 +5186,7 @@ Actor SlugChain2 : SlugChain1 3485
 	}
 }
 
-Actor SlugChain3 : SlugChain1 3486
+Actor SlugChain3 : SlugChain1
 {
 	Radius 4
 	States
@@ -5200,7 +5197,7 @@ Actor SlugChain3 : SlugChain1 3486
 	}
 }
 
-Actor SlugChain4 : SlugChain1 3487
+Actor SlugChain4 : SlugChain1
 {
 	Height 256
 	Radius 4
@@ -5213,7 +5210,7 @@ Actor SlugChain4 : SlugChain1 3487
 	}
 }
 
-Actor SlugChain512 3751
+Actor SlugChain512
 {
 	Height 512
 	Radius 8
@@ -5228,7 +5225,7 @@ Actor SlugChain512 3751
 	}
 }
 
-Actor SlugSpike 3488
+Actor SlugSpike
 {
 	Height 64
 	Radius 16
@@ -5241,7 +5238,7 @@ Actor SlugSpike 3488
 	}
 }
 
-Actor SluggionBush 3750
+Actor SluggionBush
 {
 	Height 28
 	Radius 20
@@ -5254,7 +5251,7 @@ Actor SluggionBush 3750
 	}
 }
 
-Actor SluggionVine256 3746
+Actor SluggionVine256
 {
 	Height 256
 	Radius 16
@@ -5268,7 +5265,7 @@ Actor SluggionVine256 3746
 	}
 }
 
-Actor SluggionVine512 : SluggionVine256 3747
+Actor SluggionVine512 : SluggionVine256
 {
 	Height 512
 	States
@@ -5279,7 +5276,7 @@ Actor SluggionVine512 : SluggionVine256 3747
 	}
 }
 
-Actor SluggionVine64 : SluggionVine256 3748
+Actor SluggionVine64 : SluggionVine256
 {
 	Height 64
 	States
@@ -5290,7 +5287,7 @@ Actor SluggionVine64 : SluggionVine256 3748
 	}
 }
 
-Actor SluggionVine128 : SluggionVine256 3749
+Actor SluggionVine128 : SluggionVine256
 {
 	Height 128
 	States
@@ -5301,7 +5298,7 @@ Actor SluggionVine128 : SluggionVine256 3749
 	}
 }
 
-Actor SmallBush1 10702
+Actor SmallBush1
 {
 	Radius 10
 	Height 48
@@ -5314,7 +5311,7 @@ Actor SmallBush1 10702
 	}
 }
 
-Actor SmallTree1 10700
+Actor SmallTree1
 {
 	Radius 14
 	Height 184
@@ -5327,7 +5324,7 @@ Actor SmallTree1 10700
 	}
 }
 
-Actor SmallTree2 : SmallTree1 10701
+Actor SmallTree2 : SmallTree1
 {
 	Height 144
 	States
@@ -5338,7 +5335,7 @@ Actor SmallTree2 : SmallTree1 10701
 	}
 }
 
-Actor SnowmanProp 3309
+Actor SnowmanProp
 {
 	Height 72
 	Radius 16
@@ -5351,7 +5348,7 @@ Actor SnowmanProp 3309
 	}
 }
 
-Actor Spaz 3997
+Actor Spaz
 {
 	Radius 16
 	Height 68
@@ -5363,7 +5360,7 @@ Actor Spaz 3997
 	}
 }
 
-Actor Spike 18953
+Actor Spike
 {
 	Radius 4
 	Height 10
@@ -5375,7 +5372,7 @@ Actor Spike 18953
 	}
 }
 
-Actor SpikeBall 3164
+Actor SpikeBall
 {
 	Height 16
 	Radius 8
@@ -5389,7 +5386,7 @@ Actor SpikeBall 3164
 	}
 }
 
-Actor SpikeGround 25638
+Actor SpikeGround
 {
 	Radius 8
 	Height 28
@@ -5402,11 +5399,9 @@ Actor SpikeGround 25638
 	}
 }
 
-Actor SpikeRoof 25639
+Actor SpikeRoof : SpikeGround
 {
-	Radius 8
 	Height 30
-	-SOLID
 	+NOGRAVITY
 	+SPAWNCEILING
 	States
@@ -5417,7 +5412,7 @@ Actor SpikeRoof 25639
 	}
 }
 
-Actor SSGProp 3298
+Actor SSGProp
 {
 	Height 16
 	Radius 16
@@ -5429,7 +5424,7 @@ Actor SSGProp 3298
 	}
 }
 
-Actor StLight 16128
+Actor StLight
 {
 	Radius 8
 	Height 112
@@ -5442,7 +5437,7 @@ Actor StLight 16128
 	}
 }
 
-Actor StonarPillarShort 3201
+Actor StonarPillarShort
 {
 	Height 96
 	Radius 8
@@ -5455,7 +5450,7 @@ Actor StonarPillarShort 3201
 	}
 }
 
-Actor StonarPillarTall : StonarPillarShort 3202
+Actor StonarPillarTall : StonarPillarShort
 {
 	Height 224
 	States
@@ -5466,7 +5461,7 @@ Actor StonarPillarTall : StonarPillarShort 3202
 	}
 }
 
-Actor StonarSkel1 3151
+Actor StonarSkel1
 {
 	Radius 33
 	Height 103
@@ -5482,7 +5477,7 @@ Actor StonarSkel1 3151
 	}
 }
 
-Actor StonarSkel2 : StonarSkel1 3152
+Actor StonarSkel2 : StonarSkel1
 {
 	Height 123
 	States
@@ -5493,7 +5488,7 @@ Actor StonarSkel2 : StonarSkel1 3152
 	}
 }
 
-Actor StonarSkel3 : StonarSkel1 3153
+Actor StonarSkel3 : StonarSkel1
 {
 	Height 123
 	States
@@ -5504,7 +5499,7 @@ Actor StonarSkel3 : StonarSkel1 3153
 	}
 }
 
-Actor StonarSkull1 3149
+Actor StonarSkull1
 {
 	Radius 24
 	Height 24
@@ -5517,7 +5512,7 @@ Actor StonarSkull1 3149
 	}
 }
 
-Actor StonarSkull2 : StonarSkull1 3150
+Actor StonarSkull2 : StonarSkull1
 {
 	Radius 16
 	Height 18
@@ -5529,7 +5524,7 @@ Actor StonarSkull2 : StonarSkull1 3150
 	}
 }
 
-Actor StonarSpikes 3148
+Actor StonarSpikes
 {
 	Radius 30
 	Height 32
@@ -5542,7 +5537,7 @@ Actor StonarSpikes 3148
 	}
 }
 
-Actor StrobeLightBlue 12400
+Actor StrobeLightBlue
 {
 	Radius 8
 	Height 11
@@ -5557,7 +5552,7 @@ Actor StrobeLightBlue 12400
 	}
 }
 
-Actor StrobeLightGreen : StrobeLightBlue 12401
+Actor StrobeLightGreen : StrobeLightBlue
 {
 	States
 	{
@@ -5567,7 +5562,7 @@ Actor StrobeLightGreen : StrobeLightBlue 12401
 	}
 }
 
-Actor StrobeLightRed : StrobeLightBlue 12402
+Actor StrobeLightRed : StrobeLightBlue
 {
 	States
 	{
@@ -5577,7 +5572,7 @@ Actor StrobeLightRed : StrobeLightBlue 12402
 	}
 }
 
-Actor StrobeLightYellow : StrobeLightBlue 12403
+Actor StrobeLightYellow : StrobeLightBlue
 {
 	States
 	{
@@ -5587,7 +5582,7 @@ Actor StrobeLightYellow : StrobeLightBlue 12403
 	}
 }
 
-Actor Stump 12002
+Actor Stump
 {
 	Radius 12
 	Height 48
@@ -5600,7 +5595,7 @@ Actor Stump 12002
 	}
 }
 
-Actor StumpTwo 25282
+Actor StumpTwo
 {
 	Height 20
 	Radius 8
@@ -5614,7 +5609,7 @@ Actor StumpTwo 25282
 	}
 }
 
-Actor StumpThree : StumpTwo 18950
+Actor StumpThree : StumpTwo
 {
 	Height 16
 	States
@@ -5625,7 +5620,7 @@ Actor StumpThree : StumpTwo 18950
 	}
 }
 
-Actor StumpFour 18951
+Actor StumpFour
 {
 	Radius 8
 	Height 16
@@ -5640,7 +5635,7 @@ Actor StumpFour 18951
 	}
 }
 
-Actor TableChairs 10705
+Actor TableChairs
 {
 	Radius 24
 	Height 24
@@ -5653,7 +5648,7 @@ Actor TableChairs 10705
 	}
 }
 
-Actor Tagg 22295
+Actor Tagg
 {
 	Renderstyle Normal
 	FloatBobStrength 0.5
@@ -5667,7 +5662,7 @@ Actor Tagg 22295
 	}
 }
 
-Actor TallPillarCarrot 3161
+Actor TallPillarCarrot
 {
 	Height 84
 	Radius 12
@@ -5680,7 +5675,7 @@ Actor TallPillarCarrot 3161
 	}
 }
 
-Actor TallPost 4000
+Actor TallPost
 {
 	Radius 8
 	Height 112
@@ -5693,7 +5688,7 @@ Actor TallPost 4000
 	}
 }
 
-Actor TechnoirLight1 3154
+Actor TechnoirLight1
 {
 	Height 96
 	Radius 6
@@ -5707,7 +5702,7 @@ Actor TechnoirLight1 3154
 	}
 }
 
-Actor TechnoirLight2 : TechnoirLight1 3155
+Actor TechnoirLight2 : TechnoirLight1
 {
 	Height 64
 	States
@@ -5718,7 +5713,7 @@ Actor TechnoirLight2 : TechnoirLight1 3155
 	}
 }
 
-Actor TechnoirLight3 : TechnoirLight1 3156
+Actor TechnoirLight3 : TechnoirLight1
 {
 	Height 64
 	States
@@ -5729,7 +5724,7 @@ Actor TechnoirLight3 : TechnoirLight1 3156
 	}
 }
 
-Actor TechNoirMoon 3401
+Actor TechNoirMoon
 {
 	Radius 16
 	Height 16
@@ -5744,7 +5739,7 @@ Actor TechNoirMoon 3401
 	}
 }
 
-Actor TechnoirTower 32505
+Actor TechnoirTower
 {
 	Radius 32
 	Height 112
@@ -5757,7 +5752,7 @@ Actor TechnoirTower 32505
 	}
 }
 
-Actor TeleportPodBottom 29545
+Actor TeleportPodBottom
 {
 	Radius 10
 	Height 14
@@ -5770,7 +5765,7 @@ Actor TeleportPodBottom 29545
 	}
 }
 
-Actor TeleportPodTop 29546
+Actor TeleportPodTop
 {
 	Radius 10
 	Height 14
@@ -5784,7 +5779,7 @@ Actor TeleportPodTop 29546
 	}
 }
 
-Actor TempleCloud 3491
+Actor TempleCloud
 {
 	Height 32
 	Radius 16
@@ -5798,7 +5793,7 @@ Actor TempleCloud 3491
 	}
 }
 
-Actor TemplePillar1 3492
+Actor TemplePillar1
 {
 	Height 64
 	Radius 12
@@ -5811,7 +5806,7 @@ Actor TemplePillar1 3492
 	}
 }
 
-Actor TemplePillar2 : TemplePillar1 3493
+Actor TemplePillar2 : TemplePillar1
 {
 	Height 128
 	States
@@ -5822,7 +5817,7 @@ Actor TemplePillar2 : TemplePillar1 3493
 	}
 }
 
-Actor TemplePlant1 3489
+Actor TemplePlant1
 {
 	Height 16
 	Radius 16
@@ -5835,7 +5830,7 @@ Actor TemplePlant1 3489
 	}
 }
 
-Actor TemplePlant2 : TemplePlant1 3490
+Actor TemplePlant2 : TemplePlant1
 {
 	States
 	{
@@ -5845,7 +5840,7 @@ Actor TemplePlant2 : TemplePlant1 3490
 	}
 }
 
-Actor TempleSpikeBall1 : TemplePlant1 3496
+Actor TempleSpikeBall1 : TemplePlant1
 {
 	States
 	{
@@ -5855,7 +5850,7 @@ Actor TempleSpikeBall1 : TemplePlant1 3496
 	}
 }
 
-Actor TempleSpikeBall2 : TemplePlant1 3497
+Actor TempleSpikeBall2 : TemplePlant1
 {
 	States
 	{
@@ -5865,7 +5860,7 @@ Actor TempleSpikeBall2 : TemplePlant1 3497
 	}
 }
 
-Actor TempleTree1 3494
+Actor TempleTree1
 {
 	Height 56
 	Radius 16
@@ -5878,7 +5873,7 @@ Actor TempleTree1 3494
 	}
 }
 
-Actor TempleTree2 : TempleTree1 3495
+Actor TempleTree2 : TempleTree1
 {
 	Height 44
 	States
@@ -5889,7 +5884,7 @@ Actor TempleTree2 : TempleTree1 3495
 	}
 }
 
-Actor TePrize 3367
+Actor TePrize
 {
 	Height 16
 	Radius 16
@@ -5903,7 +5898,7 @@ Actor TePrize 3367
 	}
 }
 
-Actor Tiki1 3291
+Actor Tiki1
 {
 	Height 180
 	Radius 12
@@ -5916,7 +5911,7 @@ Actor Tiki1 3291
 	}
 }
 
-Actor Tiki2 : Tiki1 3292
+Actor Tiki2 : Tiki1
 {
 	States
 	{
@@ -5926,7 +5921,7 @@ Actor Tiki2 : Tiki1 3292
 	}
 }
 
-Actor Toilet1 290
+Actor Toilet1
 {
 	Radius 10
 	Height 28
@@ -5940,7 +5935,7 @@ Actor Toilet1 290
 	}
 }
 
-Actor Tomato 3162
+Actor Tomato
 {
 	Height 32
 	Radius 20
@@ -5954,7 +5949,7 @@ Actor Tomato 3162
 	}
 }
 
-Actor TomatoEE : Tomato 4075
+Actor TomatoEE : Tomato
 {
 	Tag "Hell Tomato"
 	Height 56
@@ -5967,7 +5962,7 @@ Actor TomatoEE : Tomato 4075
 	}
 }
 
-Actor TownProp1 3935
+Actor TownProp1
 {
 	Height 28
 	Radius 16
@@ -5980,7 +5975,7 @@ Actor TownProp1 3935
 	}
 }
 
-Actor TownProp2 : TownProp1 3936
+Actor TownProp2 : TownProp1
 {
 	Height 32
 	States
@@ -5991,7 +5986,7 @@ Actor TownProp2 : TownProp1 3936
 	}
 }
 
-Actor TownProp3 : TownProp1 3937
+Actor TownProp3 : TownProp1
 {
 	Height 32
 	States
@@ -6002,7 +5997,7 @@ Actor TownProp3 : TownProp1 3937
 	}
 }
 
-Actor TownSign1 3938
+Actor TownSign1 
 {
 	Height 96
 	Radius 4
@@ -6015,7 +6010,7 @@ Actor TownSign1 3938
 	}
 }
 
-Actor TownSign2 : TownSign1 3939
+Actor TownSign2 : TownSign1
 {
 	States
 	{
@@ -6025,7 +6020,7 @@ Actor TownSign2 : TownSign1 3939
 	}
 }
 
-Actor TownSign3 : TownSign1 3940
+Actor TownSign3 : TownSign1
 {
 	States
 	{
@@ -6035,7 +6030,7 @@ Actor TownSign3 : TownSign1 3940
 	}
 }
 
-Actor TownSign4 : TownSign1 3941
+Actor TownSign4 : TownSign1
 {
 	States
 	{
@@ -6045,7 +6040,7 @@ Actor TownSign4 : TownSign1 3941
 	}
 }
 
-Actor TownSign5 : TownSign1 3942
+Actor TownSign5 : TownSign1
 {
 	States
 	{
@@ -6055,7 +6050,7 @@ Actor TownSign5 : TownSign1 3942
 	}
 }
 
-Actor TownSign6 : TownSign1 3943
+Actor TownSign6 : TownSign1
 {
 	States
 	{
@@ -6065,7 +6060,7 @@ Actor TownSign6 : TownSign1 3943
 	}
 }
 
-Actor TownTree1 3944
+Actor TownTree1
 {
 	Height 96
 	Radius 12
@@ -6078,7 +6073,7 @@ Actor TownTree1 3944
 	}
 }
 
-Actor TownTree2 : TownTree1 3945
+Actor TownTree2 : TownTree1
 {
 	Height 40
 	Radius 8
@@ -6090,7 +6085,7 @@ Actor TownTree2 : TownTree1 3945
 	}
 }
 
-Actor TrashMetal 10501
+Actor TrashMetal
 {
 	Height 48
 	Radius 16
@@ -6103,7 +6098,7 @@ Actor TrashMetal 10501
 	}
 }
 
-Actor Tree1 3600
+Actor Tree1
 {
 	Height 280
 	Radius 28
@@ -6116,7 +6111,7 @@ Actor Tree1 3600
 	}
 }
 
-Actor Tree2 : Tree1 3601
+Actor Tree2 : Tree1
 {
 	Height 180
 	States
@@ -6127,7 +6122,7 @@ Actor Tree2 : Tree1 3601
 	}
 }
 
-Actor Tree3 3611
+Actor Tree3
 {
 	Height 72
 	Radius 24
@@ -6140,7 +6135,7 @@ Actor Tree3 3611
 	}
 }
 
-Actor TreeNine 12003
+Actor TreeNine
 {
 	Height 80
 	Radius 16
@@ -6153,7 +6148,7 @@ Actor TreeNine 12003
 	}
 }
 
-Actor TubeRemixBlackCord64 3978
+Actor TubeRemixBlackCord64
 {
 	Height 64
 	Radius 8
@@ -6168,7 +6163,7 @@ Actor TubeRemixBlackCord64 3978
 	}
 }
 
-Actor TubeRemixCeilingBlackCord128 : TubeRemixBlackCord64 3976
+Actor TubeRemixCeilingBlackCord128 : TubeRemixBlackCord64
 {
 	Height 128
 	States
@@ -6179,7 +6174,7 @@ Actor TubeRemixCeilingBlackCord128 : TubeRemixBlackCord64 3976
 	}
 }
 
-Actor TubeRemixCeilingBlackCord192 : TubeRemixBlackCord64 3975
+Actor TubeRemixCeilingBlackCord192 : TubeRemixBlackCord64
 {
 	Height 192
 	States
@@ -6190,7 +6185,7 @@ Actor TubeRemixCeilingBlackCord192 : TubeRemixBlackCord64 3975
 	}
 }
 
-Actor TubeRemixCeilingRedCord64 : TubeRemixBlackCord64 3977
+Actor TubeRemixCeilingRedCord64 : TubeRemixBlackCord64
 {
 	Height 64
 	States
@@ -6201,7 +6196,7 @@ Actor TubeRemixCeilingRedCord64 : TubeRemixBlackCord64 3977
 	}
 }
 
-Actor TubeRemixCeilingRedCord192 : TubeRemixBlackCord64 3974
+Actor TubeRemixCeilingRedCord192 : TubeRemixBlackCord64
 {
 	Height 192
 	Radius 16
@@ -6213,7 +6208,7 @@ Actor TubeRemixCeilingRedCord192 : TubeRemixBlackCord64 3974
 	}
 }
 
-Actor TubeRemixPillar 3969
+Actor TubeRemixPillar
 {
 	Height 64
 	Radius 10
@@ -6227,7 +6222,7 @@ Actor TubeRemixPillar 3969
 	}
 }
 
-Actor TurtempleEasterEgg1 3816
+Actor TurTempleEasterEgg1
 {
 	Height 0
 	Radius 16
@@ -6239,7 +6234,7 @@ Actor TurtempleEasterEgg1 3816
 	}
 }
 
-Actor TurtempleEasterEgg2 : TurtempleEasterEgg1 3817
+Actor TurTempleEasterEgg2 : TurTempleEasterEgg1
 {
 	States
 	{
@@ -6249,7 +6244,7 @@ Actor TurtempleEasterEgg2 : TurtempleEasterEgg1 3817
 	}
 }
 
-Actor TwirlLight 3604
+Actor TwirlLight
 {
 	Height 96
 	Radius 12
@@ -6262,7 +6257,7 @@ Actor TwirlLight 3604
 	}
 }
 
-Actor Umbrella 32501
+Actor Umbrella
 {
 	Radius 8
 	Height 64
@@ -6275,7 +6270,7 @@ Actor Umbrella 32501
 	}
 }
 
-Actor WaterRealmPlant1 4067
+Actor WaterRealmPlant1
 {
 	Height 32
 	Radius 16
@@ -6289,7 +6284,7 @@ Actor WaterRealmPlant1 4067
 	}
 }
 
-Actor WaterRealmPlant2 : WaterRealmPlant1 4068
+Actor WaterRealmPlant2 : WaterRealmPlant1
 {
 	States
 	{
@@ -6299,7 +6294,7 @@ Actor WaterRealmPlant2 : WaterRealmPlant1 4068
 	}
 }
 
-Actor WaterRealmPlant3 : WaterRealmPlant1 4069
+Actor WaterRealmPlant3 : WaterRealmPlant1
 {
 	Height 46
 	+SPAWNCEILING
@@ -6311,7 +6306,7 @@ Actor WaterRealmPlant3 : WaterRealmPlant1 4069
 	}
 }
 
-Actor WBath : SimpleActor 25632 // To Return To
+Actor WBath : SimpleActor // To Return To
 {
 	Radius 16
 	Height 32
@@ -6326,7 +6321,7 @@ Actor WBath : SimpleActor 25632 // To Return To
 	}
 }
 
-Actor WhamPlush 3371
+Actor WhamPlush
 {
 	Height 16
 	Radius 16
@@ -6339,7 +6334,7 @@ Actor WhamPlush 3371
 	}
 }
 
-Actor Wolf3dPrize 3355
+Actor Wolf3dPrize
 {
 	Height 8
 	Radius 8
@@ -6353,7 +6348,7 @@ Actor Wolf3dPrize 3355
 	}
 }
 
-Actor Wolf3dEasterEgg 4052
+Actor Wolf3dEasterEgg
 {
 	Height 56
 	Radius 12
@@ -6367,13 +6362,11 @@ Actor Wolf3dEasterEgg 4052
 	}
 }
 
-Actor Wolf3dLight 4054
+Actor Wolf3dLight : Wolf3dEasterEgg
 {
 	Height 8
 	Radius 8
-	+NOGRAVITY
 	+SPAWNCEILING
-	+SOLID
 	States
 	{
 	Spawn:
@@ -6382,7 +6375,7 @@ Actor Wolf3dLight 4054
 	}
 }
 
-Actor WWPrize1 3361
+Actor WWPrize1
 {
 	Height 16
 	Radius 16
@@ -6395,7 +6388,7 @@ Actor WWPrize1 3361
 	}
 }
 
-Actor WWPrize2 : WWPrize1 3362
+Actor WWPrize2 : WWPrize1
 {
 	States
 	{
@@ -6405,7 +6398,7 @@ Actor WWPrize2 : WWPrize1 3362
 	}
 }
 
-Actor WWPrize3 : WWPrize1 3363
+Actor WWPrize3 : WWPrize1
 {
 	States
 	{
@@ -6415,7 +6408,7 @@ Actor WWPrize3 : WWPrize1 3363
 	}
 }
 
-Actor XmasLollipop2 4098
+Actor XmasLollipop2
 {
 	Height 64
 	Radius 16
@@ -6428,7 +6421,7 @@ Actor XmasLollipop2 4098
 	}
 }
 
-Actor XmasMoon 4080
+Actor XmasMoon
 {
 	Height 32
 	Radius 16
@@ -6441,7 +6434,7 @@ Actor XmasMoon 4080
 	}
 }
 
-Actor XmasPenSpike 4084
+Actor XmasPenSpike
 {
 	Height 32
 	Radius 16
@@ -6454,7 +6447,7 @@ Actor XmasPenSpike 4084
 	}
 }
 
-Actor XmasSpiralThing 4085
+Actor XmasSpiralThing
 {
 	Height 64
 	Radius 16
@@ -6467,7 +6460,7 @@ Actor XmasSpiralThing 4085
 	}
 }
 
-Actor XmasSpoon 4078
+Actor XmasSpoon
 {
 	Height 32
 	Radius 16
@@ -6480,7 +6473,7 @@ Actor XmasSpoon 4078
 	}
 }
 
-Actor XmasToyBall 4082
+Actor XmasToyBall
 {
 	Height 32
 	Radius 16
@@ -6493,7 +6486,7 @@ Actor XmasToyBall 4082
 	}
 }
 
-Actor XmasTreeLights 4099
+Actor XmasTreeLights
 {
 	Height 64
 	Radius 16
@@ -6506,7 +6499,7 @@ Actor XmasTreeLights 4099
 	}
 }
 
-Actor DieHaredTree 4113
+Actor DieHaredTree
 {
 	Height 130
 	Radius 32
@@ -6521,7 +6514,7 @@ Actor DieHaredTree 4113
 	}
 }
 
-Actor DieHaredTree256 : DieHaredTree 4114
+Actor DieHaredTree256 : DieHaredTree
 {
 	Height 256
 	Scale 2.5
@@ -6533,7 +6526,7 @@ Actor DieHaredTree256 : DieHaredTree 4114
 	}
 }
 
-Actor Mirko 4116
+Actor Mirko
 {
 	Height 64
 	Radius 16
@@ -6547,7 +6540,7 @@ Actor Mirko 4116
 	}
 }
 
-Actor Gooby 4117
+Actor Gooby
 {
 	Height 96
 	Radius 16
@@ -6560,7 +6553,7 @@ Actor Gooby 4117
 	}
 }
 
-Actor Dilan : Gooby 4118
+Actor Dilan : Gooby
 {
 	Height 56
 	States
@@ -6571,7 +6564,7 @@ Actor Dilan : Gooby 4118
 	}
 }
 
-Actor Mokey : Gooby 4119
+Actor Mokey : Gooby
 {
 	Height 64
 	States
@@ -6582,7 +6575,7 @@ Actor Mokey : Gooby 4119
 	}
 }
 
-Actor PlantPot 4123
+Actor PlantPot
 {
 	Height 32
 	Radius 16
@@ -6595,7 +6588,7 @@ Actor PlantPot 4123
 	}
 }
 
-Actor XmasDownTree 4129
+Actor XmasDownTree
 {
 	Height 32
     Radius 32
@@ -6608,7 +6601,7 @@ Actor XmasDownTree 4129
 	}
 }
 
-Actor HolidayCar 4130
+Actor HolidayCar
 {
 	Radius 32
 	Height 64
@@ -6621,7 +6614,7 @@ Actor HolidayCar 4130
 	}
 }
 
-Actor Xmashellpost3 4131
+Actor XmasHellpost3
 {
 	Height 128
     Radius 16
@@ -6634,7 +6627,7 @@ Actor Xmashellpost3 4131
 	}
 }
 
-Actor Xmashellskull 4132
+Actor XmasHellSkull
 {
 	Height 128
     Radius 64
@@ -6647,7 +6640,7 @@ Actor Xmashellskull 4132
 	}
 }
 
-Actor Xmashellbones 4133
+Actor XmasHellBones
 {
 	Height 128
     Radius 64
@@ -6660,7 +6653,7 @@ Actor Xmashellbones 4133
 	}
 }
 
-Actor Xmashelltree1 4134
+Actor XmasHellTree1
 {
 	Height 160
     Radius 16
@@ -6673,7 +6666,7 @@ Actor Xmashelltree1 4134
 	}
 }
 
-Actor Xmasbonepost1 4138
+Actor XmasBonePost1
 {
 	Height 270
     Radius 32
@@ -6686,12 +6679,12 @@ Actor Xmasbonepost1 4138
 	}
 }
 
-Actor Xmasbonepost2 : Xmasbonepost1 4136
+Actor XmasBonePost2 : XmasBonePost1
 {
-    +XFlip
+    +XFLIP
 }
 
-Actor Xmashelltree2 4137
+Actor XmasHellTree2
 {
 	Height 128
     Radius 32
@@ -6704,7 +6697,7 @@ Actor Xmashelltree2 4137
 	}
 }
 
-Actor XmasIcicle1 4147
+Actor XmasIcicle1
 {
 	Height 34
 	Radius 3
@@ -6720,14 +6713,11 @@ Actor XmasIcicle1 4147
 	}
 }
 
-Actor XmasIcicle2 4151
+Actor XmasIcicle2 : XmasIcicle1
 {
 	Height 45
 	Radius 5
 	Scale 0.5
-	+NOGRAVITY
-	+SOLID
-	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -6736,7 +6726,7 @@ Actor XmasIcicle2 4151
 	}
 }
 
-Actor XmasStreetLamp 30029
+Actor XmasStreetLamp
 {
 	Height 120
 	Radius 16
@@ -6750,12 +6740,11 @@ Actor XmasStreetLamp 30029
 }
 
 //Blake Stone Props
-
-actor Bstoneprop1 4152
+Actor BStoneProp1 4152
 {
-	height 56
-    radius 16
-    +Solid
+	Height 56
+    Radius 16
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6764,11 +6753,11 @@ actor Bstoneprop1 4152
 	}
 }
 
-actor Bstoneprop4 4155
+Actor Bstoneprop4 4155
 {
-	height 32
-    radius 16
-    +Solid
+	Height 32
+    Radius 16
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6777,11 +6766,11 @@ actor Bstoneprop4 4155
 	}
 }
 
-actor Bstoneprop5 4156
+Actor Bstoneprop5 4156
 {
-	height 64
-    radius 32
-    +Solid
+	Height 64
+    Radius 32
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6790,11 +6779,11 @@ actor Bstoneprop5 4156
 	}
 }
 
-actor Bstoneprop6 4157
+Actor Bstoneprop6 4157
 {
-	height 32
-    radius 16
-    +Solid
+	Height 32
+    Radius 16
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6803,11 +6792,11 @@ actor Bstoneprop6 4157
 	}
 }
 
-actor Bstoneprop7 4158
+Actor Bstoneprop7 4158
 {
-	height 64
-    radius 16
-    +Solid
+	Height 64
+    Radius 16
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6816,12 +6805,12 @@ actor Bstoneprop7 4158
 	}
 }
 
-actor Bstoneprop8 4159
+Actor Bstoneprop8 4159
 {
-	height 16
-    radius 16
-	+NoGravity
-	+SpawnCeiling
+	Height 16
+    Radius 16
+	+NOGRAVITY
+	+SPAWNCEILING
 	States
 	{
 	Spawn:
@@ -6830,12 +6819,12 @@ actor Bstoneprop8 4159
 	}
 }
 
-actor Bstoneprop9  4160
+Actor Bstoneprop9  4160
 {
-	height 16
-    radius 16
-    +SpawnCeiling
-	+NoGravity
+	Height 16
+    Radius 16
+    +SPAWNCEILING
+	+NOGRAVITY
 	States
 	{
 	Spawn:
@@ -6844,11 +6833,11 @@ actor Bstoneprop9  4160
 	}
 }
 
-actor Bstoneprop10  4161
+Actor Bstoneprop10  4161
 {
-	height 64
-    radius 16
-    +Solid
+	Height 64
+    Radius 16
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6857,11 +6846,11 @@ actor Bstoneprop10  4161
 	}
 }
 
-actor Bstoneprop11  4162
+Actor Bstoneprop11  4162
 {
-	height 64
-    radius 16
-    +Solid
+	Height 64
+    Radius 16
+    +SOLID
 	States
 	{
 	Spawn:
@@ -6870,10 +6859,10 @@ actor Bstoneprop11  4162
 	}
 }
 
-actor Bstoneprop12  4163
+Actor Bstoneprop12  4163
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	States
 	{
 	Spawn:
@@ -6882,10 +6871,10 @@ actor Bstoneprop12  4163
 	}
 }
 
-actor Bstoneprop13  4164
+Actor Bstoneprop13  4164
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	States
 	{
 	Spawn:
@@ -6894,10 +6883,10 @@ actor Bstoneprop13  4164
 	}
 }
 
-actor Bstoneprop14  4165
+Actor Bstoneprop14  4165
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	States
 	{
 	Spawn:
@@ -6906,10 +6895,10 @@ actor Bstoneprop14  4165
 	}
 }
 
-actor Bstoneprop15  4166
+Actor Bstoneprop15  4166
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	States
 	{
 	Spawn:
@@ -6918,10 +6907,10 @@ actor Bstoneprop15  4166
 	}
 }
 
-actor Bstoneprop16 4167
+Actor Bstoneprop16 4167
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	States
 	{
 	Spawn:
@@ -6930,10 +6919,10 @@ actor Bstoneprop16 4167
 	}
 }
 
-actor Bstoneprop17 4168
+Actor Bstoneprop17 4168
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	States
 	{
 	Spawn:
@@ -6945,27 +6934,27 @@ actor Bstoneprop17 4168
 
 //Rise Of The Triad Props
 
-actor Rottprop1 4169
+Actor Rottprop1 4169
 {
 	Tag "Dancing Enforcer"
-	gravity 1000
-	height 56
-    radius 32
+	Gravity 1000
+	Height 56
+    Radius 32
 	+SOLID
 	States
 	{
 	Spawn:
 	ROTE G -1
 	Stop
-	
+
 	Dance:
 	ROTE abcbadefed 4
 	Loop
-	
+
 	Strut:
 	ROTE GHIJ 4
 	Loop
-	
+
 	Catch:
 	ROTE KLMN 4
 	ROTE O 8
@@ -6975,11 +6964,11 @@ actor Rottprop1 4169
 	}
 }
 
-actor Rottprop2 4170
+Actor Rottprop2 4170
 {
 	Tag "ROTT Tall Lamp"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -6989,11 +6978,11 @@ actor Rottprop2 4170
 	}
 }
 
-actor Rottprop3 4171
+Actor Rottprop3 4171
 {
 	Tag "ROTT Triad Banner"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7003,11 +6992,11 @@ actor Rottprop3 4171
 	}
 }
 
-actor Rottprop4 4173
+Actor Rottprop4 4173
 {
 	Tag "ROTT Potted Plant"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7017,12 +7006,12 @@ actor Rottprop4 4173
 	}
 }
 
-actor Rottprop5 4174
+Actor Rottprop5 4174
 {
 	Tag "BIG JOHN, YAH"
-	gravity 1000
-	height 56
-    radius 16
+	Gravity 1000
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7032,11 +7021,11 @@ actor Rottprop5 4174
 	}
 }
 
-actor Rottprop6 4175
+Actor Rottprop6 4175
 {
 	Tag "Death Monk"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7046,12 +7035,12 @@ actor Rottprop6 4175
 	}
 }
 
-actor Rottprop7 4176
+Actor Rottprop7 4176
 {
 	Tag "Darian"
-	gravity 1000
-	height 72
-    radius 16
+	Gravity 1000
+	Height 72
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7061,11 +7050,11 @@ actor Rottprop7 4176
 	}
 }
 
-actor Rottprop8 4177
+Actor Rottprop8 4177
 {
 	Tag "Thi"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7075,11 +7064,11 @@ actor Rottprop8 4177
 	}
 }
 
-actor Rottprop9 4178
+Actor Rottprop9 4178
 {
 	Tag "Cassat"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7089,11 +7078,11 @@ actor Rottprop9 4178
 	}
 }
 
-actor Rottprop10 4179
+Actor Rottprop10 4179
 {
 	Tag "Lorelei"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7103,11 +7092,11 @@ actor Rottprop10 4179
 	}
 }
 
-actor Rottprop11 4180
+Actor Rottprop11 4180
 {
 	Tag "Ian Paul"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7117,11 +7106,11 @@ actor Rottprop11 4180
 	}
 }
 
-actor Rottprop12 4181
+Actor Rottprop12 4181
 {
 	Tag "Doug"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7133,11 +7122,11 @@ actor Rottprop12 4181
 
 //eggdungeon
 
-actor edungeon1 4186
+Actor edungeon1 4186
 {
 	Tag "CV-01"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7147,11 +7136,11 @@ actor edungeon1 4186
 	}
 }
 
-actor edungeon2 4187
+Actor edungeon2 4187
 {
 	Tag "CV-07"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7161,11 +7150,11 @@ actor edungeon2 4187
 	}
 }
 
-actor edungeon3 4188
+Actor edungeon3 4188
 {
 	Tag "AX-3"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7175,11 +7164,11 @@ actor edungeon3 4188
 	}
 }
 
-actor edungeon4 4189
+Actor edungeon4 4189
 {
 	Tag "CV-10"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7189,11 +7178,11 @@ actor edungeon4 4189
 	}
 }
 
-actor edungeon5 4190
+Actor edungeon5 4190
 {
 	Tag "CV-09"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7203,11 +7192,11 @@ actor edungeon5 4190
 	}
 }
 
-actor edungeon6 4191
+Actor edungeon6 4191
 {
 	Tag "CV-11"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7217,10 +7206,10 @@ actor edungeon6 4191
 	}
 }
 
-actor edungeon7 4192
+Actor edungeon7 4192
 {
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7230,11 +7219,11 @@ actor edungeon7 4192
 	}
 }
 
-actor edungeon8 4193
+Actor edungeon8 4193
 {
 	Tag "CV-03"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7244,11 +7233,11 @@ actor edungeon8 4193
 	}
 }
 
-actor edungeon9 4194
+Actor edungeon9 4194
 {
 	Tag "CV-02"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7258,11 +7247,11 @@ actor edungeon9 4194
 	}
 }
 
-actor edungeon10 4195
+Actor edungeon10 4195
 {
 	Tag "H4MM3R"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7272,11 +7261,11 @@ actor edungeon10 4195
 	}
 }
 
-actor edungeon11 4196
+Actor edungeon11 4196
 {
 	Tag "CV-14"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7286,11 +7275,11 @@ actor edungeon11 4196
 	}
 }
 
-actor edungeon12 4197
+Actor edungeon12 4197
 {
 	Tag "CV-12"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7300,11 +7289,11 @@ actor edungeon12 4197
 	}
 }
 
-actor edungeon13 4198
+Actor edungeon13 4198
 {
 	Tag "CV-13"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7314,11 +7303,11 @@ actor edungeon13 4198
 	}
 }
 
-actor edungeon14 4199
+Actor edungeon14 4199
 {
 	Tag "CV-16"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7328,11 +7317,11 @@ actor edungeon14 4199
 	}
 }
 
-actor edungeon15 4200
+Actor edungeon15 4200
 {
 	Tag "CV-15"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7342,11 +7331,11 @@ actor edungeon15 4200
 	}
 }
 
-actor edungeon16 4201
+Actor edungeon16 4201
 {
 	Tag "CV-04"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7356,11 +7345,11 @@ actor edungeon16 4201
 	}
 }
 
-actor edungeon17 4202
+Actor edungeon17 4202
 {
 	Tag "CV-05"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7370,11 +7359,11 @@ actor edungeon17 4202
 	}
 }
 
-actor edungeon18 4203
+Actor edungeon18 4203
 {
 	Tag "CV-17"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7384,11 +7373,11 @@ actor edungeon18 4203
 	}
 }
 
-actor edungeon19 4204
+Actor edungeon19 4204
 {
 	Tag "CV-18"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7398,11 +7387,11 @@ actor edungeon19 4204
 	}
 }
 
-actor edungeon20 4205
+Actor edungeon20 4205
 {
 	Tag "CV-19"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7412,11 +7401,11 @@ actor edungeon20 4205
 	}
 }
 
-actor edungeon21 4206
+Actor edungeon21 4206
 {
 	Tag "CV-20"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7426,11 +7415,11 @@ actor edungeon21 4206
 	}
 }
 
-actor edungeon22 4207
+Actor edungeon22 4207
 {
 	Tag "CV-08"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7440,11 +7429,11 @@ actor edungeon22 4207
 	}
 }
 
-actor edungeon23 4208
+Actor edungeon23 4208
 {
 	Tag "CV-06"
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7456,7 +7445,7 @@ actor edungeon23 4208
 
 //Burrows
 
-actor TallBurrowsTrees 4210
+Actor TallBurrowsTrees 4210
 {
   +SOLID
   Height 952
@@ -7469,10 +7458,10 @@ actor TallBurrowsTrees 4210
   }
 }
 
-actor BurrowsChimney 4211
+Actor BurrowsChimney 4211
 {
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7482,10 +7471,10 @@ actor BurrowsChimney 4211
 	}
 }
 
-actor BurrowsSnowman 4212
+Actor BurrowsSnowman 4212
 {
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7495,10 +7484,10 @@ actor BurrowsSnowman 4212
 	}
 }
 
-actor Burrowstree4 4213
+Actor Burrowstree4 4213
 {
-	height 96
-    radius 16
+	Height 96
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7508,10 +7497,10 @@ actor Burrowstree4 4213
 	}
 }
 
-actor Burrowstree5 4214
+Actor Burrowstree5 4214
 {
-	height 32
-    radius 32
+	Height 32
+    Radius 32
 	+SOLID
 	States
 	{
@@ -7521,10 +7510,10 @@ actor Burrowstree5 4214
 	}
 }
 
-actor Burrowsprop1 4215
+Actor Burrowsprop1 4215
 {
-	height 56
-    radius 32
+	Height 56
+    Radius 32
 	+SOLID
 	States
 	{
@@ -7534,10 +7523,10 @@ actor Burrowsprop1 4215
 	}
 }
 
-actor Burrowsprop2 4216
+Actor Burrowsprop2 4216
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7547,10 +7536,10 @@ actor Burrowsprop2 4216
 	}
 }
 
-actor Burrowsprop3 4217
+Actor Burrowsprop3 4217
 {
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7560,12 +7549,12 @@ actor Burrowsprop3 4217
 	}
 }
 
-actor Burrowsprop4 4218
+Actor Burrowsprop4 4218
 {
-	height 56
-    radius 32
-	+SpawnCeiling
-	+NoGravity
+	Height 56
+    Radius 32
+	+SPAWNCEILING
+	+NOGRAVITY
 	+SOLID
 	States
 	{
@@ -7575,12 +7564,12 @@ actor Burrowsprop4 4218
 	}
 }
 
-actor Burrowsprop5 4219
+Actor Burrowsprop5 4219
 {
-	height 64
-    radius 16
-	+SpawnCeiling
-	+NoGravity
+	Height 64
+    Radius 16
+	+SPAWNCEILING
+	+NOGRAVITY
 	+SOLID
 	States
 	{
@@ -7590,10 +7579,10 @@ actor Burrowsprop5 4219
 	}
 }
 
-actor Burrowsprop6 4220
+Actor Burrowsprop6 4220
 {
-	height 128
-    radius 16
+	Height 128
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7603,12 +7592,12 @@ actor Burrowsprop6 4220
 	}
 }
 
-actor Burrowsprop7 4221
+Actor Burrowsprop7 4221
 {
-	height 128
-    radius 32
-    +SpawnCeiling
-	+NoGravity
+	Height 128
+    Radius 32
+    +SPAWNCEILING
+	+NOGRAVITY
 	+SOLID
 	States
 	{
@@ -7618,10 +7607,10 @@ actor Burrowsprop7 4221
 	}
 }
 
-actor Burrowsprop8 4222
+Actor Burrowsprop8 4222
 {
-	height 16
-    radius 16
+	Height 16
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7631,10 +7620,10 @@ actor Burrowsprop8 4222
 	}
 }
 
-actor Burrowsprop9 4223
+Actor Burrowsprop9 4223
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7644,10 +7633,10 @@ actor Burrowsprop9 4223
 	}
 }
 
-actor Burrowsprop10 4224
+Actor Burrowsprop10 4224
 {
-	height 128
-    radius 16
+	Height 128
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7657,10 +7646,10 @@ actor Burrowsprop10 4224
 	}
 }
 
-actor Burrowsprop11 4225
+Actor Burrowsprop11 4225
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7670,10 +7659,10 @@ actor Burrowsprop11 4225
 	}
 }
 
-actor burrprop15 4229
+Actor burrprop15 4229
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7683,10 +7672,10 @@ actor burrprop15 4229
 	}
 }
 
-actor burrprop16 4230
+Actor burrprop16 4230
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7696,10 +7685,10 @@ actor burrprop16 4230
 	}
 }
 
-actor burrprop17 4231
+Actor burrprop17 4231
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	+SOLID
 	+NOGRAVITY
 	States
@@ -7710,10 +7699,10 @@ actor burrprop17 4231
 	}
 }
 
-actor burrprop18 4232
+Actor burrprop18 4232
 {
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7723,10 +7712,10 @@ actor burrprop18 4232
 	}
 }
 
-actor burrprop19 4233
+Actor burrprop19 4233
 {
-	height 32
-    radius 16
+	Height 32
+    Radius 16
 	SCALE 0.50
 	+SOLID
 	+NOGRAVITY
@@ -7738,10 +7727,10 @@ actor burrprop19 4233
 	}
 }
 
-actor burrprop20 4234
+Actor burrprop20 4234
 {
-	height 56
-    radius 16
+	Height 56
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7751,10 +7740,10 @@ actor burrprop20 4234
 	}
 }
 
-actor burrprop21 4235
+Actor burrprop21 4235
 {
-	height 48
-    radius 16
+	Height 48
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7764,10 +7753,10 @@ actor burrprop21 4235
 	}
 }
 
-actor burrprop22 4236
+Actor burrprop22 4236
 {
-	height 48
-    radius 16
+	Height 48
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7777,10 +7766,10 @@ actor burrprop22 4236
 	}
 }
 
-actor burrprop23 4237
+Actor burrprop23 4237
 {
-	height 48
-    radius 16
+	Height 48
+    Radius 16
 	+SOLID
 	States
 	{
@@ -7790,10 +7779,10 @@ actor burrprop23 4237
 	}
 }
 
-actor burrprop24 4238
+Actor burrprop24 4238
 {
-	height 48
-    radius 16
+	Height 48
+    Radius 16
 	scale 2.0
 	+SOLID
 	States
@@ -7804,10 +7793,10 @@ actor burrprop24 4238
 	}
 }
 
-actor burrprop25 4239
+Actor burrprop25 4239
 {
-	height 91
-    radius 32
+	Height 91
+    Radius 32
 	+SOLID
 	States
 	{
@@ -7839,7 +7828,7 @@ Actor Feathers 4240
  }
 }
 
-ACTOR Pyro2Spawner 4241
+Actor Pyro2Spawner 4241
 {
   Radius 16
   Height 16
@@ -7847,7 +7836,7 @@ ACTOR Pyro2Spawner 4241
   Speed 0
   PainChance 200
   Monster
-  +NoGravity
+  +NOGRAVITY
   -ISMONSTER
   +SYNCHRONIZED
   +NOTARGET
