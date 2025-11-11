@@ -5997,7 +5997,7 @@ Actor TownProp3 : TownProp1
 	}
 }
 
-Actor TownSign1 
+Actor TownSign1
 {
 	Height 96
 	Radius 4
@@ -6740,7 +6740,7 @@ Actor XmasStreetLamp
 }
 
 //Blake Stone Props
-Actor BStoneProp1 4152
+Actor BStoneProp1
 {
 	Height 56
     Radius 16
@@ -6753,7 +6753,7 @@ Actor BStoneProp1 4152
 	}
 }
 
-Actor Bstoneprop4 4155
+Actor BStoneProp4
 {
 	Height 32
     Radius 16
@@ -6766,7 +6766,7 @@ Actor Bstoneprop4 4155
 	}
 }
 
-Actor Bstoneprop5 4156
+Actor BStoneProp5
 {
 	Height 64
     Radius 32
@@ -6779,7 +6779,7 @@ Actor Bstoneprop5 4156
 	}
 }
 
-Actor Bstoneprop6 4157
+Actor BStoneProp6
 {
 	Height 32
     Radius 16
@@ -6792,7 +6792,7 @@ Actor Bstoneprop6 4157
 	}
 }
 
-Actor Bstoneprop7 4158
+Actor BStoneProp7
 {
 	Height 64
     Radius 16
@@ -6805,7 +6805,7 @@ Actor Bstoneprop7 4158
 	}
 }
 
-Actor Bstoneprop8 4159
+Actor BStoneProp8
 {
 	Height 16
     Radius 16
@@ -6819,7 +6819,7 @@ Actor Bstoneprop8 4159
 	}
 }
 
-Actor Bstoneprop9  4160
+Actor BStoneProp9
 {
 	Height 16
     Radius 16
@@ -6833,7 +6833,7 @@ Actor Bstoneprop9  4160
 	}
 }
 
-Actor Bstoneprop10  4161
+Actor BStoneProp10
 {
 	Height 64
     Radius 16
@@ -6846,7 +6846,7 @@ Actor Bstoneprop10  4161
 	}
 }
 
-Actor Bstoneprop11  4162
+Actor BStoneProp11
 {
 	Height 64
     Radius 16
@@ -6859,7 +6859,7 @@ Actor Bstoneprop11  4162
 	}
 }
 
-Actor Bstoneprop12  4163
+Actor BStoneProp12
 {
 	Height 16
     Radius 16
@@ -6871,7 +6871,7 @@ Actor Bstoneprop12  4163
 	}
 }
 
-Actor Bstoneprop13  4164
+Actor BStoneProp13
 {
 	Height 16
     Radius 16
@@ -6883,7 +6883,7 @@ Actor Bstoneprop13  4164
 	}
 }
 
-Actor Bstoneprop14  4165
+Actor BStoneProp14
 {
 	Height 16
     Radius 16
@@ -6895,7 +6895,7 @@ Actor Bstoneprop14  4165
 	}
 }
 
-Actor Bstoneprop15  4166
+Actor BStoneProp15
 {
 	Height 16
     Radius 16
@@ -6907,7 +6907,7 @@ Actor Bstoneprop15  4166
 	}
 }
 
-Actor Bstoneprop16 4167
+Actor BStoneProp16
 {
 	Height 16
     Radius 16
@@ -6919,7 +6919,7 @@ Actor Bstoneprop16 4167
 	}
 }
 
-Actor Bstoneprop17 4168
+Actor BStoneProp17
 {
 	Height 16
     Radius 16
@@ -6931,10 +6931,8 @@ Actor Bstoneprop17 4168
 	}
 }
 
-
 //Rise Of The Triad Props
-
-Actor Rottprop1 4169
+Actor RottProp1 4169
 {
 	Tag "Dancing Enforcer"
 	Gravity 1000
@@ -6943,28 +6941,25 @@ Actor Rottprop1 4169
 	+SOLID
 	States
 	{
-	Spawn:
-	ROTE G -1
-	Stop
-
-	Dance:
-	ROTE abcbadefed 4
-	Loop
-
-	Strut:
-	ROTE GHIJ 4
-	Loop
-
-	Catch:
-	ROTE KLMN 4
-	ROTE O 8
-	ROTE PQR 4
-	ROTE G 20
-	Goto Spawn
+		Spawn:
+			ROTE G -1
+			Stop
+		Dance:
+			ROTE ABCBADEFED 4
+			Loop
+		Strut:
+			ROTE GHIJ 4
+			Loop
+		Catch:
+			ROTE KLMN 4
+			ROTE O 8
+			ROTE PQR 4
+			ROTE G 20
+			Goto Spawn
 	}
 }
 
-Actor Rottprop2 4170
+Actor RottProp2 4170
 {
 	Tag "ROTT Tall Lamp"
 	Height 56
@@ -6978,7 +6973,7 @@ Actor Rottprop2 4170
 	}
 }
 
-Actor Rottprop3 4171
+Actor RottProp3 4171
 {
 	Tag "ROTT Triad Banner"
 	Height 56
@@ -6992,7 +6987,7 @@ Actor Rottprop3 4171
 	}
 }
 
-Actor Rottprop4 4173
+Actor RottProp4 4173
 {
 	Tag "ROTT Potted Plant"
 	Height 56
@@ -7006,7 +7001,7 @@ Actor Rottprop4 4173
 	}
 }
 
-Actor Rottprop5 4174
+Actor RottProp5 4174
 {
 	Tag "BIG JOHN, YAH"
 	Gravity 1000
@@ -7021,7 +7016,7 @@ Actor Rottprop5 4174
 	}
 }
 
-Actor Rottprop6 4175
+Actor RottProp6 4175
 {
 	Tag "Death Monk"
 	Height 56
@@ -7035,7 +7030,7 @@ Actor Rottprop6 4175
 	}
 }
 
-Actor Rottprop7 4176
+Actor RottProp7 4176
 {
 	Tag "Darian"
 	Gravity 1000
@@ -7050,7 +7045,7 @@ Actor Rottprop7 4176
 	}
 }
 
-Actor Rottprop8 4177
+Actor RottProp8 4177
 {
 	Tag "Thi"
 	Height 56
@@ -7064,7 +7059,7 @@ Actor Rottprop8 4177
 	}
 }
 
-Actor Rottprop9 4178
+Actor RottProp9 4178
 {
 	Tag "Cassat"
 	Height 56
@@ -7078,7 +7073,7 @@ Actor Rottprop9 4178
 	}
 }
 
-Actor Rottprop10 4179
+Actor RottProp10 4179
 {
 	Tag "Lorelei"
 	Height 56
@@ -7092,7 +7087,7 @@ Actor Rottprop10 4179
 	}
 }
 
-Actor Rottprop11 4180
+Actor RottProp11 4180
 {
 	Tag "Ian Paul"
 	Height 56
@@ -7106,7 +7101,7 @@ Actor Rottprop11 4180
 	}
 }
 
-Actor Rottprop12 4181
+Actor RottProp12 4181
 {
 	Tag "Doug"
 	Height 56
