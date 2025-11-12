@@ -53,6 +53,7 @@ RAPIDFIR RAPIDFIR  //jazz/rapid		JZRAPID
 SECTGEM	SECTGEM
 WEAPNGET WEAPNGET //DSWPNUP
 YUMM YUMM2 //Carrot/Pickup	Dsyum
+PROTOON PROTOON
 
 $random FOOD { FOOD1 FOOD2 FOOD3 FOOD4 }
 FOOD1 FOOD1
@@ -477,3 +478,97 @@ RELASTIC		RELASTIC
 RSHROOM			RSHROOM
 G_LIFE2			G_LIFE2
 GirlyMan		GirlyMan
+
+//Music Volume adjustments (because the default tracker volume is too high)
+//JJ1 Tracks
+$musicvolume 	Battleships -5db
+$musicvolume 	Bloxonius -5db
+$musicvolume 	Candion -5db
+$musicvolume 	Crysilis -5db
+$musicvolume 	Deckstar -5db
+$musicvolume 	Deserto -5db
+$musicvolume 	DesertoSecret -5db
+$musicvolume 	Diamondus -5db
+$musicvolume 	Dreempipes -5db
+$musicvolume 	Exoticus -5db
+$musicvolume 	Fanolint -5db
+$musicvolume 	Holidaius -5db
+$musicvolume 	Industrius -5db
+$musicvolume 	JJ1BONUS -5db
+$musicvolume 	JJ1BOSS -5db
+$musicvolume 	JJ1CLEAR -5db
+$musicvolume 	JJ1END -5db
+$musicvolume 	JJ1TTL -5db
+$musicvolume 	Jungrock -5db
+$musicvolume 	Lagunicus -5db
+$musicvolume 	Letni -5db
+$musicvolume 	Marbelara -5db
+$musicvolume 	Medivo -5db
+$musicvolume 	Megairbase -5db
+$musicvolume 	Muckamok -5db
+$musicvolume 	Nippius -5db
+$musicvolume 	Orbitus -5db
+$musicvolume 	Pezrock -5db
+$musicvolume 	Raneforus -5db
+$musicvolume 	Scraparap -5db
+$musicvolume 	SilentNight -5db
+$musicvolume 	Sluggion -5db
+$musicvolume 	Stonar -5db
+$musicvolume 	Technoir -5db
+$musicvolume 	Tubelectric -5db
+$musicvolume 	Turtemple -5db
+
+//JJ2 Tracks
+$musicvolume 	70SGROVE -5db
+$musicvolume 	Atlantis -5db
+$musicvolume 	Beach -5db
+$musicvolume 	BELMONT -5db
+$musicvolume 	BURROWSVILLE -5db
+$musicvolume 	Carrotus -5db
+$musicvolume 	Castle -5db
+$musicvolume 	COLONIUS -5db
+$musicvolume 	DARKGROOVE -5db
+$musicvolume 	DIAREMIX -5db
+$musicvolume 	Dreamland -5db
+$musicvolume 	Fastrack -5db
+$musicvolume 	FROLICK -5db
+$musicvolume 	HELLFREEZE -5db
+$musicvolume 	HIPPIE -5db
+$musicvolume 	JJ2BONUS -5db
+$musicvolume 	JJ2BOSS1 -5db
+$musicvolume 	JJ2BOSS2 -5db
+$musicvolume 	JJ2CRED -5db
+$musicvolume 	JJ2TITLE -5db
+$musicvolume 	Jungle -5db
+$musicvolume 	JZDAMNED -5db
+$musicvolume 	Labrat -5db
+$musicvolume 	MEDRIX -5db
+$musicvolume 	STRTWIZE -5db
+$musicvolume 	TUBREMIX -5db
+$musicvolume 	Water -5db
+
+//Other Music
+$musicvolume 	EARTHTRCK -5db
+$musicvolume 	FBSSTRK -5db
+$musicvolume 	FIRETRCK -5db
+$musicvolume 	HUBTRK -5db
+$musicvolume 	LIGHTRCK -5db
+$musicvolume 	SHADWTRK -5db
+$musicvolume 	WATERTRK -5db
+$musicvolume 	WINDTRCK -5db
+
+$musicvolume 	CHAMPLNT -3db
+$musicvolume 	CHELONIA -3db
+$musicvolume 	DARKSHELL -3db
+$musicvolume 	ICEBOX3 -3db
+$musicvolume 	INDWASTE -3db
+$musicvolume 	JJGBABOS -3db
+$musicvolume 	WPNDEPOT -3db
+
+$musicvolume 	BELMONTSIIVA -3db
+$musicvolume 	DIEHARED -5db
+$musicvolume 	FOREGONE -5db
+$musicvolume 	JJ3MENU -5db
+$musicvolume 	LEARNING -5db
+$musicvolume 	OMF2097PP -3db
+$musicvolume 	SUPERANDROID -5db

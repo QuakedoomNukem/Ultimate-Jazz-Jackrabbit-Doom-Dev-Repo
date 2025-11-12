@@ -124,7 +124,7 @@ map E1SL1 lookup "E1SL1_NAME"
 {
 	levelnum = 101
 	next = E1L9
-	secretnext = E1SL2
+	secretnext = E1SL2A
 	sky1 = "CHAMSKY", 0
 	cluster = 1
 	music = "CHAMPLNT"
@@ -132,7 +132,21 @@ map E1SL1 lookup "E1SL1_NAME"
 	enterpic = "INTMAP51"
 }
 
+//Version of the map with Doom Monsters
 map E1SL2 lookup "E1SL2_NAME"
+{
+	levelnum = 102
+	next = E1L9
+	secretnext = E1L9
+	sky1 = "RSKY3", 0
+	cluster = 1
+	music = "JJ2Bonus"
+	exitpic = "$JAZZ_IN"
+	enterpic = "INTMAP52"
+}
+
+//Version of the map with JJ Enemies
+map E1SL2A lookup "E1SL2_NAME"
 {
 	levelnum = 102
 	next = E1L9

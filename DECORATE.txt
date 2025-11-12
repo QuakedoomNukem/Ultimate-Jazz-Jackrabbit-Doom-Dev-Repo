@@ -11,7 +11,7 @@
 #include "actors/Jazz & Guns/Railgun.txt"
 #include "actors/Jazz & Guns/Electro-Blaster.txt"
 #include "actors/Jazz & Guns/TNT.txt"
-#include "actors/Jazz & Guns/Ammo Boxes.txt"
+#include "actors/Jazz & Guns/Ammo Crates.txt"
 
 //Self-explanatory, all powerups and pickups
 #include "actors/Pickups/Health & Armor.txt"
