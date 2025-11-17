@@ -291,6 +291,7 @@ OB_OSTRJ = "%o didn't ask if it was Kevin The Ostrich.";
 OB_PETRI = "%o got frozen solid.";
 OB_PLASG = "%o was toasted by a Plasma Schwarzenguard.";
 OB_POTPL = "%o was plucked by a Potted Plant.";
+OB_PYRH2 = "%o tried to dodge a fireball.";
 OB_PYRHE = "%o was burnt to a crisp by a Pyro Helmut.";
 OB_QEARL = "%o was screamed to death by Queen Earlong.";
 OB_QUAKE = "%o was defeated by the Quake Tank.";

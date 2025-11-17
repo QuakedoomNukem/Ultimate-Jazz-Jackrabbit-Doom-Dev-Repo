@@ -6932,7 +6932,7 @@ Actor BStoneProp17
 }
 
 //Rise Of The Triad Props
-Actor RottProp1 4169
+Actor RottProp1
 {
 	Tag "Dancing Enforcer"
 	Gravity 1000
@@ -6959,7 +6959,7 @@ Actor RottProp1 4169
 	}
 }
 
-Actor RottProp2 4170
+Actor RottProp2
 {
 	Tag "ROTT Tall Lamp"
 	Height 56
@@ -6973,7 +6973,7 @@ Actor RottProp2 4170
 	}
 }
 
-Actor RottProp3 4171
+Actor RottProp3
 {
 	Tag "ROTT Triad Banner"
 	Height 56
@@ -6987,7 +6987,7 @@ Actor RottProp3 4171
 	}
 }
 
-Actor RottProp4 4173
+Actor RottProp4
 {
 	Tag "ROTT Potted Plant"
 	Height 56
@@ -7001,7 +7001,7 @@ Actor RottProp4 4173
 	}
 }
 
-Actor RottProp5 4174
+Actor RottProp5
 {
 	Tag "BIG JOHN, YAH"
 	Gravity 1000
@@ -7016,7 +7016,7 @@ Actor RottProp5 4174
 	}
 }
 
-Actor RottProp6 4175
+Actor RottProp6
 {
 	Tag "Death Monk"
 	Height 56
@@ -7030,7 +7030,7 @@ Actor RottProp6 4175
 	}
 }
 
-Actor RottProp7 4176
+Actor RottProp7
 {
 	Tag "Darian"
 	Gravity 1000
@@ -7045,7 +7045,7 @@ Actor RottProp7 4176
 	}
 }
 
-Actor RottProp8 4177
+Actor RottProp8
 {
 	Tag "Thi"
 	Height 56
@@ -7059,7 +7059,7 @@ Actor RottProp8 4177
 	}
 }
 
-Actor RottProp9 4178
+Actor RottProp9
 {
 	Tag "Cassat"
 	Height 56
@@ -7073,7 +7073,7 @@ Actor RottProp9 4178
 	}
 }
 
-Actor RottProp10 4179
+Actor RottProp10
 {
 	Tag "Lorelei"
 	Height 56
@@ -7087,7 +7087,7 @@ Actor RottProp10 4179
 	}
 }
 
-Actor RottProp11 4180
+Actor RottProp11
 {
 	Tag "Ian Paul"
 	Height 56
@@ -7101,7 +7101,7 @@ Actor RottProp11 4180
 	}
 }
 
-Actor RottProp12 4181
+Actor RottProp12
 {
 	Tag "Doug"
 	Height 56
@@ -7117,7 +7117,7 @@ Actor RottProp12 4181
 
 //eggdungeon
 
-Actor edungeon1 4186
+Actor edungeon1
 {
 	Tag "CV-01"
 	Height 56
@@ -7131,7 +7131,7 @@ Actor edungeon1 4186
 	}
 }
 
-Actor edungeon2 4187
+Actor edungeon2
 {
 	Tag "CV-07"
 	Height 56
@@ -7145,7 +7145,7 @@ Actor edungeon2 4187
 	}
 }
 
-Actor edungeon3 4188
+Actor edungeon3
 {
 	Tag "AX-3"
 	Height 56
@@ -7159,7 +7159,7 @@ Actor edungeon3 4188
 	}
 }
 
-Actor edungeon4 4189
+Actor edungeon4
 {
 	Tag "CV-10"
 	Height 56
@@ -7173,7 +7173,7 @@ Actor edungeon4 4189
 	}
 }
 
-Actor edungeon5 4190
+Actor edungeon5
 {
 	Tag "CV-09"
 	Height 56
@@ -7187,7 +7187,7 @@ Actor edungeon5 4190
 	}
 }
 
-Actor edungeon6 4191
+Actor edungeon6
 {
 	Tag "CV-11"
 	Height 56
@@ -7201,7 +7201,7 @@ Actor edungeon6 4191
 	}
 }
 
-Actor edungeon7 4192
+Actor edungeon7
 {
 	Height 56
     Radius 16
@@ -7214,7 +7214,7 @@ Actor edungeon7 4192
 	}
 }
 
-Actor edungeon8 4193
+Actor edungeon8
 {
 	Tag "CV-03"
 	Height 56
@@ -7228,7 +7228,7 @@ Actor edungeon8 4193
 	}
 }
 
-Actor edungeon9 4194
+Actor edungeon9
 {
 	Tag "CV-02"
 	Height 56
@@ -7242,7 +7242,7 @@ Actor edungeon9 4194
 	}
 }
 
-Actor edungeon10 4195
+Actor edungeon10
 {
 	Tag "H4MM3R"
 	Height 56
@@ -7256,7 +7256,7 @@ Actor edungeon10 4195
 	}
 }
 
-Actor edungeon11 4196
+Actor edungeon11
 {
 	Tag "CV-14"
 	Height 56
@@ -7270,7 +7270,7 @@ Actor edungeon11 4196
 	}
 }
 
-Actor edungeon12 4197
+Actor edungeon12
 {
 	Tag "CV-12"
 	Height 56
@@ -7284,7 +7284,7 @@ Actor edungeon12 4197
 	}
 }
 
-Actor edungeon13 4198
+Actor edungeon13
 {
 	Tag "CV-13"
 	Height 56
@@ -7298,7 +7298,7 @@ Actor edungeon13 4198
 	}
 }
 
-Actor edungeon14 4199
+Actor edungeon14
 {
 	Tag "CV-16"
 	Height 56
@@ -7312,7 +7312,7 @@ Actor edungeon14 4199
 	}
 }
 
-Actor edungeon15 4200
+Actor edungeon15
 {
 	Tag "CV-15"
 	Height 56
@@ -7326,7 +7326,7 @@ Actor edungeon15 4200
 	}
 }
 
-Actor edungeon16 4201
+Actor edungeon16
 {
 	Tag "CV-04"
 	Height 56
@@ -7340,7 +7340,7 @@ Actor edungeon16 4201
 	}
 }
 
-Actor edungeon17 4202
+Actor edungeon17
 {
 	Tag "CV-05"
 	Height 56
@@ -7354,7 +7354,7 @@ Actor edungeon17 4202
 	}
 }
 
-Actor edungeon18 4203
+Actor edungeon18
 {
 	Tag "CV-17"
 	Height 56
@@ -7368,7 +7368,7 @@ Actor edungeon18 4203
 	}
 }
 
-Actor edungeon19 4204
+Actor edungeon19
 {
 	Tag "CV-18"
 	Height 56
@@ -7382,7 +7382,7 @@ Actor edungeon19 4204
 	}
 }
 
-Actor edungeon20 4205
+Actor edungeon20
 {
 	Tag "CV-19"
 	Height 56
@@ -7396,7 +7396,7 @@ Actor edungeon20 4205
 	}
 }
 
-Actor edungeon21 4206
+Actor edungeon21
 {
 	Tag "CV-20"
 	Height 56
@@ -7410,7 +7410,7 @@ Actor edungeon21 4206
 	}
 }
 
-Actor edungeon22 4207
+Actor edungeon22
 {
 	Tag "CV-08"
 	Height 56
@@ -7424,7 +7424,7 @@ Actor edungeon22 4207
 	}
 }
 
-Actor edungeon23 4208
+Actor edungeon23
 {
 	Tag "CV-06"
 	Height 56
@@ -7440,20 +7440,20 @@ Actor edungeon23 4208
 
 //Burrows
 
-Actor TallBurrowsTrees 4210
+Actor TallBurrowsTrees
 {
-  +SOLID
-  Height 952
-  Radius 64
-  States
-  {
-  Spawn:
-  BALT A -1 //Skybox
-    Stop
-  }
+	Height 952
+	Radius 64
+	+SOLID
+	States
+	{
+	Spawn:
+		BALT A -1 //Skybox
+		Stop
+	}
 }
 
-Actor BurrowsChimney 4211
+Actor BurrowsChimney
 {
 	Height 56
     Radius 16
@@ -7466,7 +7466,7 @@ Actor BurrowsChimney 4211
 	}
 }
 
-Actor BurrowsSnowman 4212
+Actor BurrowsSnowman
 {
 	Height 56
     Radius 16
@@ -7479,7 +7479,7 @@ Actor BurrowsSnowman 4212
 	}
 }
 
-Actor Burrowstree4 4213
+Actor Burrowstree4
 {
 	Height 96
     Radius 16
@@ -7492,7 +7492,7 @@ Actor Burrowstree4 4213
 	}
 }
 
-Actor Burrowstree5 4214
+Actor Burrowstree5
 {
 	Height 32
     Radius 32
@@ -7505,7 +7505,7 @@ Actor Burrowstree5 4214
 	}
 }
 
-Actor Burrowsprop1 4215
+Actor Burrowsprop1
 {
 	Height 56
     Radius 32
@@ -7518,7 +7518,7 @@ Actor Burrowsprop1 4215
 	}
 }
 
-Actor Burrowsprop2 4216
+Actor Burrowsprop2
 {
 	Height 32
     Radius 16
@@ -7531,7 +7531,7 @@ Actor Burrowsprop2 4216
 	}
 }
 
-Actor Burrowsprop3 4217
+Actor Burrowsprop3
 {
 	Height 56
     Radius 16
@@ -7544,7 +7544,7 @@ Actor Burrowsprop3 4217
 	}
 }
 
-Actor Burrowsprop4 4218
+Actor Burrowsprop4
 {
 	Height 56
     Radius 32
@@ -7559,7 +7559,7 @@ Actor Burrowsprop4 4218
 	}
 }
 
-Actor Burrowsprop5 4219
+Actor Burrowsprop5
 {
 	Height 64
     Radius 16
@@ -7574,7 +7574,7 @@ Actor Burrowsprop5 4219
 	}
 }
 
-Actor Burrowsprop6 4220
+Actor Burrowsprop6
 {
 	Height 128
     Radius 16
@@ -7587,7 +7587,7 @@ Actor Burrowsprop6 4220
 	}
 }
 
-Actor Burrowsprop7 4221
+Actor Burrowsprop7
 {
 	Height 128
     Radius 32
@@ -7602,7 +7602,7 @@ Actor Burrowsprop7 4221
 	}
 }
 
-Actor Burrowsprop8 4222
+Actor Burrowsprop8
 {
 	Height 16
     Radius 16
@@ -7615,7 +7615,7 @@ Actor Burrowsprop8 4222
 	}
 }
 
-Actor Burrowsprop9 4223
+Actor Burrowsprop9
 {
 	Height 32
     Radius 16
@@ -7628,7 +7628,7 @@ Actor Burrowsprop9 4223
 	}
 }
 
-Actor Burrowsprop10 4224
+Actor Burrowsprop10
 {
 	Height 128
     Radius 16
@@ -7641,7 +7641,7 @@ Actor Burrowsprop10 4224
 	}
 }
 
-Actor Burrowsprop11 4225
+Actor Burrowsprop11
 {
 	Height 32
     Radius 16
@@ -7654,7 +7654,7 @@ Actor Burrowsprop11 4225
 	}
 }
 
-Actor burrprop15 4229
+Actor burrprop15
 {
 	Height 32
     Radius 16
@@ -7667,7 +7667,7 @@ Actor burrprop15 4229
 	}
 }
 
-Actor burrprop16 4230
+Actor burrprop16
 {
 	Height 32
     Radius 16
@@ -7680,7 +7680,7 @@ Actor burrprop16 4230
 	}
 }
 
-Actor burrprop17 4231
+Actor burrprop17
 {
 	Height 32
     Radius 16
@@ -7694,7 +7694,7 @@ Actor burrprop17 4231
 	}
 }
 
-Actor burrprop18 4232
+Actor burrprop18
 {
 	Height 56
     Radius 16
@@ -7707,7 +7707,7 @@ Actor burrprop18 4232
 	}
 }
 
-Actor burrprop19 4233
+Actor burrprop19
 {
 	Height 32
     Radius 16
@@ -7722,7 +7722,7 @@ Actor burrprop19 4233
 	}
 }
 
-Actor burrprop20 4234
+Actor burrprop20
 {
 	Height 56
     Radius 16
@@ -7735,7 +7735,7 @@ Actor burrprop20 4234
 	}
 }
 
-Actor burrprop21 4235
+Actor burrprop21
 {
 	Height 48
     Radius 16
@@ -7748,7 +7748,7 @@ Actor burrprop21 4235
 	}
 }
 
-Actor burrprop22 4236
+Actor burrprop22
 {
 	Height 48
     Radius 16
@@ -7761,7 +7761,7 @@ Actor burrprop22 4236
 	}
 }
 
-Actor burrprop23 4237
+Actor burrprop23
 {
 	Height 48
     Radius 16
@@ -7774,11 +7774,11 @@ Actor burrprop23 4237
 	}
 }
 
-Actor burrprop24 4238
+Actor burrprop24
 {
 	Height 48
     Radius 16
-	scale 2.0
+	Scale 2.0
 	+SOLID
 	States
 	{
@@ -7788,7 +7788,7 @@ Actor burrprop24 4238
 	}
 }
 
-Actor burrprop25 4239
+Actor burrprop25
 {
 	Height 91
     Radius 32
@@ -7801,61 +7801,61 @@ Actor burrprop25 4239
 	}
 }
 
-Actor Feathers 4240
+Actor Feathers
 {
-  Speed 1
-  Radius 2
-  Height 2
-  Scale 1
-  Gravity 0.1
-  Projectile
-  -NOGRAVITY
- States
- {
-  Spawn:
-   FEAT AABBCCDDEEDDCCBB 2
-   TNT1 A 0 A_SpawnItemEx("Feathers",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
-   TNT1 A 0 A_CheckFloor ("Death")
-   goto death
-   Death:
-   FEAT Aabbccddeeddccbb -1
-   Stop
- }
+	Speed 1
+	Radius 2
+	Height 2
+	Scale 1
+	Gravity 0.1
+	Projectile
+	-NOGRAVITY
+	States
+	{
+	Spawn:
+		FEAT AABBCCDDEEDDCCBB 2
+		TNT1 A 0 A_SpawnItemEx("Feathers",0,0,random(8,64),frandom(-5,5),frandom(-5,5),frandom(2,9))
+		TNT1 A 0 A_CheckFloor ("Death")
+		goto death
+	Death:
+		FEAT AABBCCDDEEDDCCBB -1
+		Stop
+	}
 }
 
-Actor Pyro2Spawner 4241
+Actor Pyro2Spawner
 {
-  Radius 16
-  Height 16
-  Mass 10000000
-  Speed 0
-  PainChance 200
-  Monster
-  +NOGRAVITY
-  -ISMONSTER
-  +SYNCHRONIZED
-  +NOTARGET
-  +NOINFIGHTING
-  -RANDOMIZE
-  -SHOOTABLE
-  -COUNTKILL
-  -CANUSEWALLS
-  -SOLID
-+DONTHARMSPECIES
-  Obituary "%o tried to dodge a fireball."
-  States
-  {
-  Spawn:
-    TNT1 A 0
-    TNT1 A 96
-    TNT1 A 0 A_playsound ("FIRESHOT")
-    TNT1 B 1 A_SpawnItemEx("FireLizardBall",16,0,20,15)
-    Goto Loopstate
-  Loopstate:
-    TNT1 A 0
-    TNT1 A 64
-    TNT1 A 0 A_playsound ("FIRESHOT")
-    TNT1 B 1 A_SpawnItemEx("FireLizardBall",16,0,20,15)
-    Loop
-  }
+	Radius 16
+	Height 16
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	Monster
+	+DONTHARMSPECIES
+	+NOGRAVITY
+	+NOINFIGHTING
+	+NOTARGET
+	+SYNCHRONIZED
+	-CANUSEWALLS
+	-COUNTKILL
+	-ISMONSTER
+	-RANDOMIZE
+	-SHOOTABLE
+	-SOLID
+	Obituary "$OB_PYRH2"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 96
+		TNT1 A 0 A_playsound ("FIRESHOT")
+		TNT1 B 1 A_SpawnItemEx("FireLizardBall",16,0,20,15)
+		Goto Loopstate
+	Loopstate:
+		TNT1 A 0
+		TNT1 A 64
+		TNT1 A 0 A_playsound ("FIRESHOT")
+		TNT1 B 1 A_SpawnItemEx("FireLizardBall",16,0,20,15)
+		Loop
+	}
 }

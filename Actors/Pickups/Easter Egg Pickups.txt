@@ -369,43 +369,43 @@ Actor SODPickup : CustomInventory
 	}
 }
 
-actor BStoneLoot : CustomInventory 4153
+Actor BStoneLoot : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupSound "BSLOOT"
 	Inventory.Pickupmessage "$PK_LOOT"
-	+CountItem
+	+COUNTITEM
 	States
 	{
 	Spawn:
-    LOOT A -1
-    Stop
+		LOOT A -1
+		Stop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 500)
-    Stop
+		TNT1 A 0 A_Giveinventory("Points", 500)
+		Stop
 	}
 }
 
-actor BStoneXyOrb : CustomInventory 4154
+Actor BStoneXyOrb : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupSound  "BSORB"
 	Inventory.Pickupmessage "$PK_XYORB"
-	+CountItem
-	+Floatbob
-	+NoGravity
+	+COUNTITEM
+	+FLOATBOB
+	+NOGRAVITY
 	States
 	{
 	Spawn:
-    XYTN A -1
-    Stop
+		XYTN A -1
+		Stop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 5000)
-    Stop
+		TNT1 A 0 A_Giveinventory("Points", 5000)
+		Stop
 	}
 }
 
-actor RottAnkh1 : CustomInventory 4183
+Actor RottAnkh1 : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupSound "G_LIFE2"
@@ -415,23 +415,23 @@ actor RottAnkh1 : CustomInventory 4183
 	Height 32
 	Speed 0
 	Health 1
-	SCALE 0.60
-	MASS 1
+	Scale 0.60
+	Mass 1
+	+COUNTITEM
 	+NOGRAVITY
-	+countitem
 	States
 	{
 	Spawn:
-    RTP2 A 2
-    RTP2 BCDEFGH 2 
-    Loop
+		RTP2 A 2
+		RTP2 BCDEFGH 2
+		Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 50)
-    Stop
+		TNT1 A 0 A_Giveinventory("Points", 50)
+		Stop
 	}
 }
 
-actor RottAnkh2 : CustomInventory 4184
+Actor RottAnkh2 : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupSound "G_LIFE2"
@@ -440,23 +440,23 @@ actor RottAnkh2 : CustomInventory 4184
 	Height 32
 	Speed 0
 	Health 1
-	SCALE 0.60
-	MASS 1
+	Scale 0.60
+	Mass 1
+	+COUNTITEM
 	+NOGRAVITY
-	+countitem
 	States
 	{
 	Spawn:
-    RTPU A 2
-    RTPU BCDEFGH 2 
-    Loop
+		RTPU A 2
+		RTPU BCDEFGH 2
+		Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 100)
-    Stop
+		TNT1 A 0 A_Giveinventory("Points", 100)
+		Stop
 	}
 }
 
-actor RottAnkh3 : CustomInventory 4185
+Actor RottAnkh3 : CustomInventory
 {
 	//$Category JJ_EasterEggs
 	Inventory.PickupSound "G_LIFE2"
@@ -465,40 +465,40 @@ actor RottAnkh3 : CustomInventory 4185
 	Height 32
 	Speed 0
 	Health 1
-	SCALE 0.60
-	MASS 1
+	Scale 0.60
+	Mass 1
+	+COUNTITEM
 	+NOGRAVITY
-	+countitem
 	States
 	{
 	Spawn:
-    RTP3 A 3
-    RTP3 BCDEFGHIJKLMNO 2 
-    Loop
+		RTP3 A 3
+		RTP3 BCDEFGHIJKLMNO 2
+		Loop
 	Pickup:
-	TNT1 A 0 A_Giveinventory("Points", 250)
-    Stop
+		TNT1 A 0 A_Giveinventory("Points", 250)
+		Stop
 	}
 }
 
-actor GreatProtoon : CustomInventory 32124
+Actor GreatProtoon : CustomInventory
 {
 	Inventory.PickupSound "PROTOON"
 	Inventory.Pickupmessage "$PK_GPTN"
 	Inventory.Amount 1
 	+BRIGHT
 	+COUNTITEM
-	+NOGRAVITY
 	+FLOATBOB
+	+NOGRAVITY
 	States
 	{
 	Spawn:
-	GPTN A 3 BRIGHT A_SpawnItemEx("AirSparkle")
-	Loop
+		GPTN A 3 BRIGHT A_SpawnItemEx("AirSparkle")
+		Loop
 	Pickup:
 		TNT1 A 0 A_GiveInventory("Points", 200000)
 		TNT1 A 0 A_SpawnItemEx("ItemSparkle")
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ItemSparklePower",0,0,24,frandom(-8,8),frandom(-8,8),frandom(4,8))
-	Stop
+		Stop
 	}
 }
