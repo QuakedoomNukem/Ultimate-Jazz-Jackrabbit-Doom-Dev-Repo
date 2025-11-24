@@ -112,16 +112,5 @@ cluster 5
   { 
 	Pic = "E5END"
     music = "JJ1Bonus"
-    exittext = "Conglatulations! ;P",
-    "What a festive fight against them",
-    "dopey turtles.",
-    "        ",
-    "Now that the holiday is coming",
-    "to an end,",
-    "Time to get ready for a journey",
-    "that you never expected to see.",
-    "        ",
-    "Next stop,",
-    "        ",
-    "The Epic Ending"
+    exittext = lookup, "E5END"
     }

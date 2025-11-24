@@ -162,17 +162,5 @@ cluster 1
 { 
 	Pic = "JazzTITL"
 	music = "JJ1Bonus"
-	exittext = "You have managed to get a head start",
-	"in your long journey, but, you hear rumours",
-	"of some sort of air base that Devan has made.",
-	"You must hurry, as we don't know what ideas",
-	"Devan has in store, complete with a discount.",
-	"Your adventure has begun, the rabbit hole",
-	"is going to get deeper. More nefarious",
-	"foes are waiting for you.",
-	"        ",
-	"Teach those turtles nature intended them",
-	"to be slow in...",
-	"        ",
-	"More Turtle Terror"
+	exittext = lookup, "E1END"
 }

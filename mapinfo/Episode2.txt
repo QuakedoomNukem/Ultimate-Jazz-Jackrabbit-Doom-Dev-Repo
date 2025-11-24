@@ -148,16 +148,5 @@ cluster 2
 { 
 	Pic = "JazzTITL"
 	music = "JJ1Bonus"
-	exittext = "You did it!",
-	"The MegAirBase has been shut down!",
-	"Devan is now on the run, again,",
-	"but you fancy savouring the hunt.",
-	"It's nice to see turtles have the",
-	"ability to run all this time!",
-	"Your pursuit will lead you through strange",
-	"and wonderful worlds.",
-	"        ",
-	"Who knows where you will wind up in...",
-	"        ",
-	"The Chase Is On... Again!"
+	exittext = lookup, "E2END"
 }

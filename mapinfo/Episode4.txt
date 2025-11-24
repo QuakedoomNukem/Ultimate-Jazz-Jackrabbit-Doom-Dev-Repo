@@ -181,18 +181,5 @@ cluster 4
   { 
 	Pic = "E4END"
     music = "JJ1Bonus"
-    exittext = "You did it!",
-    "You managed to go through various worlds,",
-    "just for a shot at Devan...",
-    "You succeeded, even going into hell,",
-    "just for Devan to be waiting for you.",
-    "        ",
-    "And now there has been peace for months.",
-    "Long enough for Xmas to fall,",
-    "but how can you be so sure Xmas",
-    "won't be ruined?",
-    "        ",
-    "Open your advent calendar for...",
-    "        ",
-    "Holiday Hell Hare"
+    exittext = lookup, "E4END"
     }

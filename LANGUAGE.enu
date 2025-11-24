@@ -291,6 +291,7 @@ OB_OSTRJ = "%o didn't ask if it was Kevin The Ostrich.";
 OB_PETRI = "%o got frozen solid.";
 OB_PLASG = "%o was toasted by a Plasma Schwarzenguard.";
 OB_POTPL = "%o was plucked by a Potted Plant.";
+OB_PYRH2 = "%o tried to dodge a fireball.";
 OB_PYRHE = "%o was burnt to a crisp by a Pyro Helmut.";
 OB_QEARL = "%o was screamed to death by Queen Earlong.";
 OB_QUAKE = "%o was defeated by the Quake Tank.";
@@ -442,6 +443,7 @@ PK_SUPCA = "\ciSuper Carrot! (50+ HP)";
 PK_TNT = "\c[D4]TNT";
 PK_TWINK = "Ew... you ate a thousand year old twinkie.";
 PK_XYORB = "\clYou picked up a Xylan Orb.";
+PK_GPTN = "\clYou picked up The Great Protoon.";
 
 //Special
 LH_CAROT = "\ciNever needed a carrot so much until NOW! (25+ HP)";
@@ -451,7 +453,6 @@ LH_GBAMK = "\cjPicked up a Medkit Advance that you REALLY need! (50+ HP)";
 TAG_C = "Coins";
 
 //Weapons
-PK_AMMO0 = "\ckElectro-Blaster \clAmmo";
 PK_AMMO2 = "\cgSpread Gun \clAmmo";
 PK_AMMO3 = "\cjSlicer \clAmmo";
 PK_AMMO4 = "\c[J1]Launcher \clAmmo";
@@ -460,7 +461,7 @@ PK_AMMO6 = "\cqRF Missile \clAmmo";
 PK_AMMO7 = "\cxToaster \clAmmo";
 PK_AMMO8 = "\cwFrostbiter \clAmmo";
 PK_AMMO9 = "\ccRailgun \clAmmo";
-PK_WEAP0 = "Electro-Blaster (Slot 0)";
+PK_AMMO0 = "\ckElectro-Blaster \clAmmo";
 PK_WEAP1 = "Blaster (Slot 1)";
 PK_WEAP2 = "Spread Gun (Slot 2)";
 PK_WEAP3 = "Slicer (Slot 3)";
@@ -468,7 +469,310 @@ PK_WEAP4 = "Launcher (Slot 4)";
 PK_WEAP5 = "Seeker (Slot 5)";
 PK_WEAP6 = "RF Missile (Slot 6)";
 PK_WEAP7 = "Toaster (Slot 7)";
-PK_WEAP8 = "Frostbiter! (Slot 8)";
+PK_WEAP8 = "Frostbiter (Slot 8)";
 PK_WEAP9 = "Railgun (Slot 9)";
+PK_WEAP0 = "Electro-Blaster (Slot 0)";
 
-//Dialogues
+//Episode End Texts
+E1END = 
+	"You have managed to get a head start\n"
+	"in your long journey, but, you hear rumours\n"
+	"of some sort of air base that Devan has made.\n"
+	"You must hurry, as we don't know what ideas\n"
+	"Devan has in store, complete with a discount.\n"
+	"Your adventure has begun, the rabbit hole\n"
+	"is going to get deeper. More nefarious\n"
+	"foes are waiting for you.\n"
+	"        \n"
+	"Teach those turtles nature intended them\n"
+	"to be slow in...\n"
+	"        \n",
+	"More Turtle Terror";
+
+E2END = 
+	"You did it!\n",
+	"The MegAirBase has been shut down!\n"
+	"Devan is now on the run, again,\n"
+	"but you fancy savouring the hunt.\n"
+	"It's nice to see turtles have the\n"
+	"ability to run all this time!\n"
+	"Your pursuit will lead you through strange\n"
+	"and wonderful worlds.\n"
+	"        \n"
+	"Who knows where you will wind up in...\n"
+	"        \n"
+	"The Chase Is On... Again!";
+
+E3END = 
+	"B3! ...Hit!\n",
+	"You just sunk Devan's battleships!\n"
+	"There is almost nowhere for him to run,\n"
+	"now that the battleships are out of\n"
+	"commission.\n"
+	"        \n"
+	"Devan has been located!\n"
+	"In a planet where Doom is the only\n"
+	"known word to describe the planet.\n"
+	"        \n"
+	"What the heck will be in hell?!\n"
+	"Find out in...\n",
+	"        ",
+	"The True Final Clash";
+
+E4END = 
+	"You did it!\n"
+    "You managed to go through various worlds,\n"
+    "just for a shot at Devan...\n"
+    "You succeeded, even going into hell,\n"
+    "just for Devan to be waiting for you.\n"
+    "        \n"
+    "And now there has been peace for months.\n"
+    "Long enough for Xmas to fall,\n"
+    "but how can you be so sure Xmas\n"
+    "won't be ruined?\n"
+    "        \n"
+    "Open your advent calendar for...\n"
+    "        \n"
+    "Holiday Hell Hare";
+
+E5END = 
+	"Conglatulations! ;P\n"
+    "What a festive fight against them\n"
+    "dopey turtles.\n"
+    "        \n"
+    "Now that the holiday is coming\n"
+    "to an end,\n"
+    "time to get ready for a journey\n"
+    "that you never expected to see.\n"
+    "        \n"
+    "Next stop,\n"
+    "        \n"
+    "The Epic Ending";
+
+//Level Scripts (Bonuses)
+SUPERSECRETFOUND = "\cfSuper Secret Level Found!";
+3DBONUS_ALLGEMS = "\cfAll Bonus Gems Bonus! 10000 Points.";
+GOONS_BONUS = "\cfTurtle Soup Bonus! 5000 Points.";
+SECRETS_BONUS = "\cfCuriosity Bonus! 5000 Points.";
+ITEMS_BONUS = "\cfCollector Bonus! 5000 Points.";
+GBA_ITEMS = "\cfCha-Ching Bonus! 5000 Points.";
+E1L3_EXBONUS = "\cfSir Lance-a-Less Bonus! 10000 Points.";
+E1L4_EXBONUS = "\cfRabbits Rule! 10000 Points.";
+E1SL1_GOONS = "\cfInvisible Chameleon Bonus! 5000 Points.";
+E2SL1_GOONS = "\cf65 Million BC Bonus! 5000 Points.";
+E2SL2_GOONS = "\cfFrom Myth to Myth Bonus! 5000 Points.";
+E3L1_EXBONUS = "\cfPot Luck Bonus! 10000 Points.";
+E3SL1_GOONS = "\cfHasta La Vista Bonus! 5000 Points.";
+E4SL2_GOONS = "\cfTurtle Soup Bonus! 1000 Points.";
+E4SL2_SECRETS = "\cfCuriosity Bonus! 1000 Points.";
+E4SL2_ITEMS = "\cfCollector Bonus! 1000 Points.";
+E5L2_EXBONUS = "\cfLe-Gone Bonus! 10000 Points.";
+
+//Level Scripts (Bosses)
+E1L3_BOSS = "Queen Earlong";
+E1L6_BOSSP1 = "Turtle Cruiser";
+E1L6_BOSSP2 = "Turtle Drill";
+E1L9_BOSS = "The Ostrich Steed Brothers";
+E1SL1_BOSS = "Chameleon King";
+E2L3_BOSS = "Jungle Dragon";
+E2L6_BOSS = "Sewer Owl";
+E2L9_BOSS = "Quake Tank";
+E2SL1_BOSS = "Saurian General";
+E2SL2_BOSS1 = "Queen Morey";
+E2SL2_BOSS2 = "Cthulhu";
+E3L3_BOSS = "Orbmarine";
+E3L6_BOSS = "Zoonik";
+E3L12_BOSS = "Evil Jazz";
+E3SL1_BOSS = "The Turtlenator";
+E4L1_BOSS = "Uterus";
+E4L7_BOSS = "Tweedle Dee And Tweedle Dum";
+E4L8_BOSSP1 = "Big Bad Bee";
+E4L8_BOSSP2 = "Big Bad Bee Jr.";
+E4L9_BOSS = "Cyber Devan";
+E4L10_BOSS1 = "Bolly";
+E4L10_BOSS2 = "Helmut Baron Brothers";
+E4L13_BOSSP1 = "Devan Cruiser";
+E4L13_BOSSP2 = "Devan Shell";
+E4SL1_BOSS = "Dark Shell";
+E4SL2_BOSS = "Cyber Devanisher";
+E5L5_BOSS = "Bubba";
+E5L6_BOSS1 = "Schwarzengrinch Brothers";
+E5L6_BOSS2 = "Bilsy";
+E5SL1_BOSS = "Abominable Snow Turtle";
+E5SL2_BOSS1 = "Don Pooper";
+E5SL2_BOSS2 = "Colonel Turtle";
+
+//Level Scripts (Signs)
+E1L1_SIGN0A = "Tip: Tap the fire button rapidly to shoot the blaster faster.";
+E1L1_SIGN0B = "Press Use on sign posts for hints and tips.";
+E1L1_SIGN0C = "Press Use on this computer to finish this map.";
+E1L1_SIGN0D = "One More Switch.";
+E1L1_SIGN0E = "Bars Lowered.";
+E1L1_SIGN1 = "Press the switches to proceed.\nNo need to worry about searching for keys!";
+E1L1_SIGN2 = "Food restores a little bit of health,\nwhile bonus items restore a little bit of armor.";
+E1L1_SIGN3 = "Unlike in V1.9/V2.0,\nany ammo you find immediately gives access\nto the weapon type the ammo uses,\ninstead of needing to find a different gun.";
+E1L1_SIGN4 = "Blast all enemies, get all bonus goodies \nand find all secrets for bonus points!";
+E1L1_SIGN5 = "Instead of the rapid fire power-up with limited time,\nyou now collect rapid fire pickups to gradually increase your fire rate.";
+E1L2_SIGN0A = "   Bars Raised.\n\n\One More Switch.";
+E1L2_SIGN0B = "Break Room Opened.";
+E1L2_SIGN1 = "Some walls hide secrets.\nIf a wall looks odd, check it, you never know.";
+E1L2_SIGN2 = "Sometimes you will need to blast enemies\nin order to open up areas.";
+E1L2_SIGN3 = "A secret gem will take you to a bonus level,\nthey can be found in some levels.";
+E1L2_SIGN4 = "Shoot checksigns to save your game and create a checkpoint.\nMake sure no enemies are around before shooting it.\nAlso, don't use the Seeker and RF when these are around.";
+E1L3_SIGN1 = "You won't be able to make some jumps just by running straight.\nYou will need to strafe-jump: Run diagonally and jump.";
+E1L3_SIGN2 = "Curiosity is rewarding indeed!\nThese pods are teleports!\nStep on them for instant travel!";
+E1L3_SIGN3 = "Some walls can be climbed on, give it a try!";
+E1L4_SIGN0 = "This door opens elsewhere.";
+E1L4_SIGN1 = "I wonder if Solaela has been here yet...";
+E1SL2_SIGN0A = "Press Use to enter.";
+E1SL2_SIGN0B = "You are on the blue team.";
+E1SL2_SIGN0C = "\cnBlue team wins the match.";
+E1SL2_SIGN0D = "Get the red flag to win.";
+E1SL2_SIGN1 = "Today's prize...CliffyB's head!\nTo win this hectic competition,\nplay the 4 arcade games and make it back in one piece.\nGood luck!";
+E2SL1_SIGN0 = "Stand far back.";
+E3L5_SIGN0 = "Sorry, we are closed.";
+E3L11_SIGN0 = "Standby";
+E3L12_SIGN1 = "Destroy the generators to proceed.";
+E3L12_SIGN0A = "Access to The Bridge granted.";
+E3L12_SIGN0B = "Emergency connection between ships established.";
+E3L12_SIGN0C = "Lower Storage Bridges opened.";
+E3L12_SIGN0D = "Upper Storage Bridge opened.";
+E3L12_SIGN0E = "Access to the deeper part of the ship granted.";
+E3L12_SIGN0F = "Core destroyed, door opened.";
+E3L12_SIGN0G = "Core destroyed, access to The Mothership Bridge granted.";
+E3SL1_SIGN0A = "The door on the lower level is now open.";
+E3SL1_SIGN0B = "A nearby door has lowered.";
+E4L5_SIGN1 = "Northwest Hotel";
+E4L5_SIGN2 = "Allen's Groceries";
+E4L5_SIGN3 = "Nick's Cafe";
+E4L5_SIGN4 = "Marbelara Park";
+E4L5_SIGN5 = "Lark Terrace";
+E4L5_SIGN6 = "Lark Terrace Suite";
+E4L5_SIGN7 = "Clifford Terrace";
+E4L5_SIGN8 = "Dodrill Optical";
+E4L5_SIGN9 = "Southeast Manor";
+E4L5_SIGN10 = "Carmack Plaza";
+E4L5_SIGN11 = "Romero Avenue";
+E4L5_SIGN0A = "Head to the Northwest Hotel";
+E4L5_SIGN0B = "Head to Southeast Manor";
+E4L5_SIGN0C = "Head to Romero Avenue";
+E4L5_SIGN0D = "Head to Lark Terrace Suite";
+E4L5_SIGN0E = "Head to Carmack Plaza";
+E4L5_SIGN0F = "Flush your poop away.";
+E4L8_SIGN1 = "Salahmander2 delays projects by playing Beyond The Storm.";
+E4L8_SIGN2 = "Dolphman eats tilesets for dinner.";
+E4L8_SIGN3 = "Drugod likes his hands bloody.";
+E4L8_SIGN4 = "QuakedoomNukem picks noses for fun.";
+E4L8_SIGN5 = "Give Dosgamert a Schultenbrau!";
+E4L8_SIGN6 = "CliffyB says hi! How epic is that?! XP";
+E4L8_SIGN7 = "Ozymandias81 gets psyched for chicken dishes.";
+E4L8_SIGN8 = "Randumb is pretty random.";
+E4L8_SIGN9 = "Rolls3D loves bean burritos.";
+E4L8_SIGN10 = "BassSlapper89 farts a lot.";
+E4L11_SIGN0A = "For surviving Elementopolis,\nyou have triggered an easter egg music track.";
+E4L11_SIGN0B = "It won't budge.";
+E4SL2_SIGN1 = "Welcome to the world of Elementopolis.\n\nIn order for you to continue on with your journey,\nyou must find and collect the six elements of nature,\nand bring them to me, Sir Shellalot.\n\nBest of luck on your quest.";
+E4SL2_SIGN2 = "Place the Element Gems on their pedestals\nto proceed to the exit.";
+E4SL2_SIGN0A = "\cfYou need the \cdEarth Element \cfto proceed.";
+E4SL2_SIGN0B = "\cfYou need the \cgFire Element \cfto proceed.";
+E4SL2_SIGN0C = "\cfYou need the \cnWater Element \cfto proceed.";
+E4SL2_SIGN0D = "\cfYou need the \cjAir Element \cfto proceed.";
+E4SL2_SIGN0E = "\cfYou need the \ctDark Element \cfto proceed.";
+E4SL2_SIGN0F = "Aren't you forgetting something?";
+E4SL2_SIGN0G = "Thank you, Sir Shellalot.";
+E5L3_SIGN1 = "Careful!!\n\nWater down below is freezing.";
+E5SL1_SIGN0A = "Lowering Platform";
+E5SL1_SIGN0B = "Ankhs Left:";
+E5SL1_SIGN0C = "Collect all ankhs to return back to your world.";
+E5SL1_SIGN0D = "A tall pillar has lowered nearby.";
+E5SL2_SIGN0A = "Please Wait";
+E5SL2_SIGN0B = "Go!";
+E5SL2_SIGN0C = "Jump off the plane to finish the map.";
+
+//Level Scripts (Dialogues)
+E1L1_DLG01 = "Yo, prepare to be shell shocked! \nI live, again, and better than ever!";
+E1L1_DLG02 = "You are merely a game in a game now! AHAHAHAHA!";
+E1L1_DLG03 = "Bring it on, Devan! Turtle soup is on me!";
+E1L2_DLG01 = "Take this! Harekind is in your hands!.";
+E1L6_DLG01 = "Greetings, everyone!";
+E1L8_DLG01 = "You are terminated!!";
+E1L9_DLG01 = "Those alien bastards!!";
+E1SL1_DLG01 = "Ah, just in time for lunch!";
+E1SL1_DLG02 = "I'm off the menu, so not today, fatso!";
+E1SL2_DLG01 = "Huh? An arcade?";
+E1SL2_DLG02 = "No time to play with myself.";
+E2L2_DLG01 = "I wonder if they can show me a magic trick.";
+E2L6_DLG01 = "Of course... another crappy sewer map...";
+E2L6_DLG02 = "Sewer Count: 234 whatever...";
+E2SL1_DLG01 = "Ew, this place stinks.";
+E2SL1_DLG02 = "Civvie is going to love this place.";
+E2SL1_DLG03 = "Sewer Count: I lost count. Moving on.";
+E2SL1_DLG04 = "You will never get past me!";
+E2SL1_DLG05 = "In your dreams, gecko.";
+E2SL2_DLG01 = "You will never escape Atlantis, intruder!";
+E2SL2_DLG02 = "You're luggage.";
+E3L2_DLG01 = "Whoa!";
+E3L2_DLG02 = "I thought things were about to get...";
+E3L2_DLG03 = "Serious...";
+E3L6_DLG01 = "Out of my way, reject!";
+E3L6_DLG02 = "I'll show you reject, you relic of the past!";
+E3L8_DLG01 = "It's the Gathering Of Developers, bless them.";
+E3L12_DLG01 = "Hey, Jazz!";
+E3L12_DLG02 = "The progress you've made so far is impressive.";
+E3L12_DLG03 = "That doesn't mean I am defeated yet.";
+E3L12_DLG04 = "Say hello to my most dangerous experiment!";
+E3SL1_DLG01 = "The wrath of the Turtlenator awaits you!";
+E3SL1_DLG02 = "Bring it on! It will be terminated!";
+E3SL1_DLG03 = "As will you.";
+E3SL1_DLG04 = "AHHHHH! You will never stop me, you filthy rodent!";
+E3SL1_DLG05 = "Seriously, another sewer?";
+E3SL1_DLG06 = "This is starting to get old.";
+E3SL1_DLG07 = "Jazz, your existence will be nothing but a thought.";
+E3SL2_DLG01 = "Living in a world of pure imagination...";
+E4L1_DLG01 = "There are sharks in the sea,\nI'm not going any further.";
+E4L1_DLG02 = "Turtle Soup? Your band sucks!!!";
+E4L4_DLG01 = "Door stuck.";
+E4L4_DLG02 = "Uh, what am I getting myself into?";
+E4L4_DLG03 = "Wait, what? It's just ketch-";
+E4L4_DLG04 = "Oh my!";
+E4L4_DLG05 = "Oh hey, Jazz!";
+E4L4_DLG06 = "*sigh*";
+E4L4_DLG07 = "Hi, Cancer Mouse...";
+E4L4_DLG08 = "Cowabunga!";
+E4L4_DLG09 = "The dopefish lives!";
+E4L5_DLG01 = "NOOOOOOOOOOOOOOOO";
+E4L8_DLG01 = "NOT THE BEES!";
+E4L8_DLG02 = "AHHHHHHHHH!";
+E4L8_DLG03 = "ANOTHER ONE?!";
+E4L13_DLG01 = "You will never succeed, Jazz!";
+E4SL1_DLG01 = "Yay! My hero has come to save me.";
+E4SL1_DLG02 = "Nope, I'm just here to fight Dark Shell.";
+E4SL1_DLG03 = "Oh...";
+E4SL1_DLG04 = "What is that?!";
+E4SL1_DLG05 = "Phew, glad that's over with.";
+E4SL1_DLG06 = "How about a kiss for saving me?";
+E4SL1_DLG07 = "Nah, cheap NPCs are not my type.";
+E4SL2_DLG01 = "And welcome to my 100% playthrough...";
+E4SL2_DLG02 = "...of sitting on my glutes, 'cause I don't like platforming.";
+E5L4_DLG01 = "Nope, don't want to go down that rabbit hole.";
+E5L6_DLG01 = "MMM, these cookies are so good.";
+E5L6_DLG02 = "Put that cookie down!";
+E5L6_DLG03 = "NOW!";
+E5L6_DLG04 = "HELLO JAZZ!";
+E5L6_DLG05 = "Shut up.";
+E5L6_DLG06 = "Devan, your girlfriend!";
+E5L6_DLG07 = "Woof!";
+E5SL1_DLG01 = "Oh no...";
+E5SL1_DLG02 = "Another sewer...";
+E5SL1_DLG03 = "Sewer Count: 300";
+E5SL1_DLG04 = "IT'S";
+E5SL1_DLG05 = "ALL";
+E5SL1_DLG06 = "MONKS!";
+E5SL1_DLG07 = "Ohhhhh...";
+E5SL1_DLG08 = "kay...";
+E5SL2_DLG01 = "Heh, girls.";
+E5SL2_DLG02 = "\c[C1]Push this chair down the shaft!";
+E5SL2_DLG03 = "Time for some fireworks!";
+E5SL2_DLG04 = "Yippie Ki-yay!";
+
+//Dialogues (Strife System)

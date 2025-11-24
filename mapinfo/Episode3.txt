@@ -182,18 +182,5 @@ cluster 3
 { 
 	Pic = "JazzTITL"
 	music = "JJ1Bonus"
-	exittext = "B3! ...Hit!",
-	"You just sunk Devan's battleships!",
-	"There is almost nowhere for him to run,",
-	"now that the battleships are out of",
-	"commission.",
-	"        ",
-	"Devan has been located!",
-	"In a planet where Doom is the only",
-	"known word to describe the planet.",
-	"        ",
-	"What the heck will be in hell?!",
-	"Find out in...",
-	"        ",
-	"The True Final Clash"
+	exittext = lookup, "E3END"
 }
