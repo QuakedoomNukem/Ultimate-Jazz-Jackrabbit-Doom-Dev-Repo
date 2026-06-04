@@ -14,6 +14,8 @@ DefaultMap
 	allowjump
 	allowcrouch
 	allowfreelook
+	noinfighting
+	aircontrol = 0.7
 }
 
 map E2L1 lookup "E2L1_NAME"

@@ -16,6 +16,8 @@ DefaultMap
 	allowcrouch
 	allowfreelook
 	noclustertext
+	noinfighting
+	aircontrol = 0.7
 }
 
 cluster 65
